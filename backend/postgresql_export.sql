@@ -1,5 +1,5 @@
 -- XZY Games Database Export for PostgreSQL
--- Generated: 2026-06-22 14:47:09
+-- Generated: 2026-06-22 19:56:21
 -- Target: RunSite PostgreSQL Database
 
 BEGIN;
@@ -2380,7 +2380,7 @@ INSERT INTO category_banners (genre, banner_url, updated_at) VALUES ('Racing', '
 INSERT INTO category_banners (genre, banner_url, updated_at) VALUES ('Adventure', 'http://localhost:5050/uploads/68816b90ac0e4231ab0771fd2b98b242.jpg', '2026-06-13 17:21:43');
 INSERT INTO category_banners (genre, banner_url, updated_at) VALUES ('Horror', 'http://localhost:5050/uploads/b0c7fac19dd0483e9467fc3cedcf5250.jpg', '2026-06-13 17:21:55');
 INSERT INTO category_banners (genre, banner_url, updated_at) VALUES ('Sports', 'http://localhost:5050/uploads/ba62f949e6b446aebad5d377accb823a.jpg', '2026-06-13 17:22:09');
-INSERT INTO category_banners (genre, banner_url, updated_at) VALUES ('Home', '/uploads/8fbd2e166c4048a0bb68294afb4eb2bb.png', '2026-06-22 13:57:23');
+INSERT INTO category_banners (genre, banner_url, updated_at) VALUES ('Home', '/uploads/5721e81df83d4f8182bfbae6f25641af.png', '2026-06-22 15:30:27');
 INSERT INTO category_banners (genre, banner_url, updated_at) VALUES ('Hypervisor', 'http://localhost:5050/uploads/d1dd54f23b25484a98e8f8b0a8f58bd9.png', '2026-06-14 03:56:25');
 INSERT INTO category_banners (genre, banner_url, updated_at) VALUES ('Strategy', 'http://localhost:5050/uploads/4cfc18da0b2641faab976e515b084d71.jpg', '2026-06-14 03:58:45');
 INSERT INTO category_banners (genre, banner_url, updated_at) VALUES ('RPG', 'http://localhost:5050/uploads/d92cce07dea7434da4a8451040c5660f.jpg', '2026-06-14 04:00:45');
@@ -2397,6 +2397,7 @@ INSERT INTO category_banners (genre, banner_url, updated_at) VALUES ('Utilities 
 INSERT INTO category_banners (genre, banner_url, updated_at) VALUES ('MoviesPad', 'http://localhost:5050/uploads/a969093bbe3248928fe8e9e206060d97.png', '2026-06-17 22:41:38');
 INSERT INTO category_banners (genre, banner_url, updated_at) VALUES ('MovieHero', 'http://localhost:5050/uploads/0e675169afc04824aab2b0f0d25b9145.png', '2026-06-17 22:12:55');
 INSERT INTO category_banners (genre, banner_url, updated_at) VALUES ('admin-users', 'http://localhost:5050/uploads/06d58b002601450bbf247bf91b0618a9.jpg', '2026-06-19 12:38:21');
+INSERT INTO category_banners (genre, banner_url, updated_at) VALUES ('GamesHero', '/uploads/fd57249cac2347a7a062cc92805dc079.png', '2026-06-22 15:39:51');
 
 -- Export Requests
 
