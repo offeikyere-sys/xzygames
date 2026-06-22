@@ -1,0 +1,15 @@
+node_modules
+*.db
+*.sql
+!backend/postgresql_export.sql
+.env
+.DS_Store
+dist
+backend/venv/
+# backend/api_keys.json
+.vite/
+.git_disabled/
+*.pyc
+__pycache__/
+backend/api_keys.json 
+backend/uploads/*.mov  

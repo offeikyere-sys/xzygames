@@ -1,0 +1,247 @@
+
+d:\PROJECTS WEBSITES AND SOFTWARES\neo-web\src\components\admin\AdminUsersPage.tsx
+  53:5  error    Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+d:\PROJECTS WEBSITES AND SOFTWARES\neo-web\src\components\admin\AdminUsersPage.tsx:53:5
+  51 |
+  52 |   useEffect(() => {
+> 53 |     fetchUsers()
+     |     ^^^^^^^^^^ Avoid calling setState() directly within an effect
+  54 |   }, [])
+  55 |
+  56 |   const handleDeleteUser = async (userId: number) => {  react-hooks/set-state-in-effect
+  54:6  warning  React Hook useEffect has a missing dependency: 'fetchUsers'. Either include it or remove the dependency array                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       react-hooks/exhaustive-deps
+
+d:\PROJECTS WEBSITES AND SOFTWARES\neo-web\src\components\auth\LoginPage.tsx
+  11:26  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+d:\PROJECTS WEBSITES AND SOFTWARES\neo-web\src\components\auth\SignupPage.tsx
+   11:27  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  113:29  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+d:\PROJECTS WEBSITES AND SOFTWARES\neo-web\src\components\games\BrowseAll.tsx
+    4:73  error  Shadowing of global property 'Infinity'                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               no-shadow-restricted-names
+   31:54  error  'userToken' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 @typescript-eslint/no-unused-vars
+   42:9   error  'isMovie' is assigned a value but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          @typescript-eslint/no-unused-vars
+   46:5   error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+d:\PROJECTS WEBSITES AND SOFTWARES\neo-web\src\components\games\BrowseAll.tsx:46:5
+  44 |   // Fetch items based on typeFilter
+  45 |   useEffect(() => {
+> 46 |     setLoading(true)
+     |     ^^^^^^^^^^ Avoid calling setState() directly within an effect
+  47 |     setExpanded(true)
+  48 |
+  49 |     if (typeFilter === "movie") {                                                                                                                                                        react-hooks/set-state-in-effect
+  165:32  error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+d:\PROJECTS WEBSITES AND SOFTWARES\neo-web\src\components\games\BrowseAll.tsx:165:32
+  163 |   // Set filter based on typeFilter
+  164 |   useEffect(() => {
+> 165 |     if (typeFilter === "game") setFilter("game")
+      |                                ^^^^^^^^^ Avoid calling setState() directly within an effect
+  166 |     else if (typeFilter === "software") setFilter("software")
+  167 |     else if (typeFilter === "movie") setFilter("movie")
+  168 |     else setFilter("all")  react-hooks/set-state-in-effect
+  173:5   error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+d:\PROJECTS WEBSITES AND SOFTWARES\neo-web\src\components\games\BrowseAll.tsx:173:5
+  171 |   // Reset when filter changes
+  172 |   useEffect(() => {
+> 173 |     setVisibleCount(ITEMS_PER_PAGE)
+      |     ^^^^^^^^^^^^^^^ Avoid calling setState() directly within an effect
+  174 |   }, [filter])
+  175 |
+  176 |   const filteredItems = useMemo(() => {                                                                                                                                   react-hooks/set-state-in-effect
+
+d:\PROJECTS WEBSITES AND SOFTWARES\neo-web\src\components\games\CategoryPage.tsx
+   22:23  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  230:34  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  231:38  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+d:\PROJECTS WEBSITES AND SOFTWARES\neo-web\src\components\games\FavoritesPage.tsx
+  44:5  error    Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+d:\PROJECTS WEBSITES AND SOFTWARES\neo-web\src\components\games\FavoritesPage.tsx:44:5
+  42 |
+  43 |   useEffect(() => {
+> 44 |     fetchFavorites()
+     |     ^^^^^^^^^^^^^^ Avoid calling setState() directly within an effect
+  45 |   }, [])
+  46 |
+  47 |   const handleRemoveFavorite = async (gameId: number) => {  react-hooks/set-state-in-effect
+  45:6  warning  React Hook useEffect has a missing dependency: 'fetchFavorites'. Either include it or remove the dependency array                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              react-hooks/exhaustive-deps
+
+d:\PROJECTS WEBSITES AND SOFTWARES\neo-web\src\components\games\GameDetailPage.tsx
+    1:31  error  'useCallback' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  @typescript-eslint/no-unused-vars
+    6:11  error  'CheckCircle' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  @typescript-eslint/no-unused-vars
+   42:7   error  'comments' is assigned a value but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            @typescript-eslint/no-unused-vars
+   77:10  error  'loading' is assigned a value but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             @typescript-eslint/no-unused-vars
+   82:7   error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+d:\PROJECTS WEBSITES AND SOFTWARES\neo-web\src\components\games\GameDetailPage.tsx:82:7
+  80 |   useEffect(() => {
+  81 |     if (game.id) {
+> 82 |       setLoading(true)
+     |       ^^^^^^^^^^ Avoid calling setState() directly within an effect
+  83 |       fetch(apiUrl(`/api/games/${game.id}`))
+  84 |         .then((res) => res.json())
+  85 |         .then((data) => {  react-hooks/set-state-in-effect
+  707:71  error  'i' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            @typescript-eslint/no-unused-vars
+  727:37  error  Empty block statement                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    no-empty
+
+d:\PROJECTS WEBSITES AND SOFTWARES\neo-web\src\components\games\HeroSection.tsx
+  61:7  error  The value assigned to 'activeBannerUrl' is not used in subsequent statements  no-useless-assignment
+  78:5  error  'activeBannerGenre' is assigned a value but never used                        @typescript-eslint/no-unused-vars
+  79:5  error  'activeBannerModalOpen' is assigned a value but never used                    @typescript-eslint/no-unused-vars
+  80:5  error  'setActiveBannerModalOpen' is assigned a value but never used                 @typescript-eslint/no-unused-vars
+
+d:\PROJECTS WEBSITES AND SOFTWARES\neo-web\src\components\games\Navbar.tsx
+  271:30  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  273:42  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  505:30  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  507:42  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+d:\PROJECTS WEBSITES AND SOFTWARES\neo-web\src\components\games\RecentlyViewed.tsx
+  30:5   error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+d:\PROJECTS WEBSITES AND SOFTWARES\neo-web\src\components\games\RecentlyViewed.tsx:30:5
+  28 |
+  29 |   useEffect(() => {
+> 30 |     setItems(getRecentItems())
+     |     ^^^^^^^^ Avoid calling setState() directly within an effect
+  31 |   }, [refreshKey])
+  32 |
+  33 |   const handleClear = () => {  react-hooks/set-state-in-effect
+  36:13  error  Empty block statement                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            no-empty
+
+d:\PROJECTS WEBSITES AND SOFTWARES\neo-web\src\components\games\SearchResults.tsx
+   31:5   error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+d:\PROJECTS WEBSITES AND SOFTWARES\neo-web\src\components\games\SearchResults.tsx:31:5
+  29 |
+  30 |   useEffect(() => {
+> 31 |     setLoading(true)
+     |     ^^^^^^^^^^ Avoid calling setState() directly within an effect
+  32 |     setDisplayCount(12)
+  33 |     
+  34 |     Promise.all([  react-hooks/set-state-in-effect
+  157:39  error  Unexpected any. Specify a different type                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              @typescript-eslint/no-explicit-any
+  158:43  error  Unexpected any. Specify a different type                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              @typescript-eslint/no-explicit-any
+
+d:\PROJECTS WEBSITES AND SOFTWARES\neo-web\src\components\layout\NeoGamesLayout.tsx
+   71:54  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+   81:52  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  172:27  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  175:36  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  292:47  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  435:35  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  640:35  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+d:\PROJECTS WEBSITES AND SOFTWARES\neo-web\src\components\movies\FeaturedMovies.tsx
+  25:25  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+d:\PROJECTS WEBSITES AND SOFTWARES\neo-web\src\components\movies\MovieCard.tsx
+  20:20  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  81:15  error  Empty block statement                     no-empty
+
+d:\PROJECTS WEBSITES AND SOFTWARES\neo-web\src\components\movies\MovieDetailPage.tsx
+   14:25  error  Unexpected any. Specify a different type                  @typescript-eslint/no-explicit-any
+   18:38  error  Unexpected any. Specify a different type                  @typescript-eslint/no-explicit-any
+   21:44  error  Unexpected any. Specify a different type                  @typescript-eslint/no-explicit-any
+   24:28  error  'setDetailRefreshKey' is assigned a value but never used  @typescript-eslint/no-unused-vars
+   56:15  error  Empty block statement                                     no-empty
+   80:13  error  Empty block statement                                     no-empty
+  118:13  error  Empty block statement                                     no-empty
+  384:41  error  Unexpected any. Specify a different type                  @typescript-eslint/no-explicit-any
+  409:50  error  Unexpected any. Specify a different type                  @typescript-eslint/no-explicit-any
+  409:76  error  Unexpected any. Specify a different type                  @typescript-eslint/no-explicit-any
+  410:37  error  Empty block statement                                     no-empty
+
+d:\PROJECTS WEBSITES AND SOFTWARES\neo-web\src\components\movies\TopDownloadsMovies.tsx
+  24:25  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  39:38  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  39:46  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+d:\PROJECTS WEBSITES AND SOFTWARES\neo-web\src\components\robot\FloatingRobot.tsx
+   1:44  error  'useMemo' is defined but never used       @typescript-eslint/no-unused-vars
+  75:41  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  75:52  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+d:\PROJECTS WEBSITES AND SOFTWARES\neo-web\src\components\ui\ImageGallery.tsx
+  21:5  error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+d:\PROJECTS WEBSITES AND SOFTWARES\neo-web\src\components\ui\ImageGallery.tsx:21:5
+  19 |   useEffect(() => {
+  20 |     if (!isOpen) return
+> 21 |     setCurrentIndex(initialIndex)
+     |     ^^^^^^^^^^^^^^^ Avoid calling setState() directly within an effect
+  22 |   }, [isOpen, initialIndex])
+  23 |
+  24 |   const goToNext = useCallback(() => {  react-hooks/set-state-in-effect
+
+d:\PROJECTS WEBSITES AND SOFTWARES\neo-web\src\components\ui\button.tsx
+  67:18  error  Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components  react-refresh/only-export-components
+
+d:\PROJECTS WEBSITES AND SOFTWARES\neo-web\src\lib\ThemeContext.tsx
+  41:17  error  Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components  react-refresh/only-export-components
+
+d:\PROJECTS WEBSITES AND SOFTWARES\neo-web\src\lib\api.ts
+  7:36  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+✖ 67 problems (65 errors, 2 warnings)
+

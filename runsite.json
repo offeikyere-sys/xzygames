@@ -1,0 +1,34 @@
+{
+  "services": [
+    {
+      "type": "web",
+      "name": "xzy-games",
+      "env": "docker",
+      "dockerfilePath": "./Dockerfile",
+      "repo": "https://github.com/offeikyere-sys/xzygames",
+      "branch": "master",
+      "healthCheckPath": "/api/health",
+      "port": 5050,
+      "envVars": [
+        {
+          "key": "DATABASE_URL",
+          "value": "postgresql://xzy_gaming_user:UNvgmaJrj73cPknksHZVihQY@dpg-kgpca7kjly0ylg9yt289.eu-central-postgres.runsite.app/xzy_gaming"
+        },
+        {
+          "key": "ALLOWED_ORIGIN",
+          "value": "*"
+        },
+        {
+          "key": "PUBLIC_URL",
+          "value": ""
+        },
+        {
+          "key": "ADMIN_BACKUP_PASSWORD",
+          "value": ""
+        }
+      ],
+      "numInstances": 1,
+      "plan": "starter"
+    }
+  ]
+}
