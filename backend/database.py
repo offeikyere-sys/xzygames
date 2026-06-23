@@ -34,22 +34,26 @@ class DBWrapper:
     
     def execute(self, query, params=None):
         if DB_TYPE == "postgresql":
-            # Parameter placeholder conversion
+            # Quote reserved SQL keywords used as column names in queries FIRST
+            # 'type' is reserved in PostgreSQL
+            query = query.replace(" type =", ' "type" =')
+            query = query.replace(" type IN", ' "type" IN')
+            query = query.replace(" type,", ' "type",')
+            query = query.replace("(type", '("type"')
+            query = query.replace(" type ", ' "type" ')
+            # 'action' is reserved in PostgreSQL
+            query = query.replace(" action =", ' "action" =')
+            query = query.replace(" action IN", ' "action" IN')
+            query = query.replace(" action,", ' "action",')
+            query = query.replace("(action", '("action"')
+            query = query.replace(" action ", ' "action" ')
+            # Parameter placeholder conversion (must happen after reserved word quoting)
             query = query.replace("?", "%s")
             # Date/time function conversion
             query = query.replace("datetime('now')", "CURRENT_TIMESTAMP")
             query = query.replace("date(created_at)", "DATE(created_at)")
             # Case-insensitive search
             query = query.replace(" LIKE ", " ILIKE ")
-            # Quote reserved SQL keywords used as column names in queries
-            # 'type' is reserved in PostgreSQL
-            query = query.replace(" type =", ' "type" =')
-            query = query.replace(" type ?", ' "type" ?')
-            query = query.replace(" type IN", ' "type" IN')
-            # 'action' is reserved in PostgreSQL
-            query = query.replace(" action =", ' "action" =')
-            query = query.replace(" action IN", ' "action" IN')
-            query = query.replace(" action ?", ' "action" ?')
             # Fix INSERT values for BOOLEAN columns
             # PostgreSQL needs TRUE/FALSE not 1/0 for boolean columns
             if 'INSERT' in query:
