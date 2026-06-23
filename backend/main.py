@@ -1423,30 +1423,35 @@ def make_admin(email: str):
 
 # ============ RESET DATABASE ============
 
-@app.get("/api/reset-database")
-def reset_database():
-    """Drop all tables and recreate them. Use before seeding."""
-    db = get_db()
-    try:
-        if DB_TYPE == "postgresql":
-            # Drop all tables in PostgreSQL (CASCADE handles foreign keys)
-            db.execute("DROP SCHEMA public CASCADE; CREATE SCHEMA public;")
-        else:
-            # SQLite: get all table names and drop them
-            tables = db.execute("SELECT name FROM sqlite_master WHERE type='table'").fetchall()
-            for table in tables:
-                db.execute(f"DROP TABLE IF EXISTS {table['name']}")
-        db.commit()
-        
-        # Recreate tables
-        init_db()
-        
-        return {"message": "Database reset successfully! All tables dropped and recreated."}
-    except Exception as e:
-        db.rollback()
-        raise HTTPException(status_code=500, detail=str(e))
-    finally:
-        db.close()
+    @app.get("/api/reset-database")
+    def reset_database():
+        """Drop all tables and recreate them. Use before seeding."""
+        db = get_db()
+        try:
+            if DB_TYPE == "postgresql":
+                # Drop all tables individually in reverse dependency order
+                tables = db.execute("""
+                    SELECT tablename FROM pg_tables 
+                    WHERE schemaname = 'public' AND tablename != 'spatial_ref_sys'
+                """).fetchall()
+                for table in tables:
+                    db.execute(f"DROP TABLE IF EXISTS {table['tablename']} CASCADE")
+            else:
+                # SQLite: get all table names and drop them
+                tables = db.execute("SELECT name FROM sqlite_master WHERE type='table'").fetchall()
+                for table in tables:
+                    db.execute(f"DROP TABLE IF EXISTS {table['name']}")
+            db.commit()
+            
+            # Recreate tables
+            init_db()
+            
+            return {"message": "Database reset successfully! All tables dropped and recreated."}
+        except Exception as e:
+            db.rollback()
+            raise HTTPException(status_code=500, detail=str(e))
+        finally:
+            db.close()
 
 # ============ ONE-TIME DATABASE SEED ============
 
@@ -1465,9 +1470,10 @@ def seed_database():
         if user_count > 0:
             return {"message": "Database already has data. Import skipped.", "users_found": user_count}
         
-        # Add missing columns to games table (in case schema is old)
+        # Add missing columns to all tables (in case schema is old)
         if DB_TYPE == "postgresql":
-            missing_columns = [
+            # Games table columns
+            missing_columns_games = [
                 "repack_features TEXT",
                 "download_manager_name VARCHAR(255)",
                 "download_manager_url TEXT",
@@ -1477,33 +1483,64 @@ def seed_database():
                 "install_guide_text TEXT",
                 "install_video_url TEXT"
             ]
-            for col in missing_columns:
+            for col in missing_columns_games:
                 col_name = col.split()[0]
                 try:
                     db.execute(f"ALTER TABLE games ADD COLUMN IF NOT EXISTS {col}")
-                    print(f"[SEED] Added column: {col_name}")
+                    print(f"[SEED] Added column to games: {col_name}")
                 except Exception as e:
                     if "already exists" not in str(e).lower():
-                        print(f"[SEED] Column add warning for {col_name}: {e}")
+                        print(f"[SEED] Column add warning for games.{col_name}: {e}")
+            
+            # Users table columns
+            missing_columns_users = [
+                "avatar_url TEXT DEFAULT ''",
+                "supabase_id TEXT DEFAULT ''"
+            ]
+            for col in missing_columns_users:
+                col_name = col.split()[0]
+                try:
+                    db.execute(f"ALTER TABLE users ADD COLUMN IF NOT EXISTS {col}")
+                    print(f"[SEED] Added column to users: {col_name}")
+                except Exception as e:
+                    if "already exists" not in str(e).lower():
+                        print(f"[SEED] Column add warning for users.{col_name}: {e}")
+            
+            # Movies table columns
+            missing_columns_movies = [
+                "cast_name TEXT DEFAULT ''",
+                "series_name TEXT DEFAULT ''"
+            ]
+            for col in missing_columns_movies:
+                col_name = col.split()[0]
+                try:
+                    db.execute(f"ALTER TABLE movies ADD COLUMN IF NOT EXISTS {col}")
+                    print(f"[SEED] Added column to movies: {col_name}")
+                except Exception as e:
+                    if "already exists" not in str(e).lower():
+                        print(f"[SEED] Column add warning for movies.{col_name}: {e}")
             db.commit()
         
-        # Temporarily drop FK constraints to allow import (no superuser needed)
+        # Get FK constraint names dynamically from information_schema
         fk_constraints_dropped = []
         if DB_TYPE == "postgresql":
-            fk_defs = [
-                ("comments", "comments_game_id_fkey", "FOREIGN KEY (game_id) REFERENCES games(id)"),
-                ("comments", "comments_user_id_fkey", "FOREIGN KEY (user_id) REFERENCES users(id)"),
-                ("ratings", "ratings_game_id_fkey", "FOREIGN KEY (game_id) REFERENCES games(id)"),
-                ("ratings", "ratings_user_id_fkey", "FOREIGN KEY (user_id) REFERENCES users(id)"),
-                ("favorites", "favorites_game_id_fkey", "FOREIGN KEY (game_id) REFERENCES games(id)"),
-                ("favorites", "favorites_user_id_fkey", "FOREIGN KEY (user_id) REFERENCES users(id)"),
-                ("tokens", "tokens_user_id_fkey", "FOREIGN KEY (user_id) REFERENCES users(id)"),
-            ]
-            for table_name, constraint_name, fk_def in fk_defs:
+            fk_query = """
+                SELECT tc.table_name, tc.constraint_name, rc.unique_constraint_name
+                FROM information_schema.table_constraints tc
+                JOIN information_schema.referential_constraints rc 
+                    ON tc.constraint_name = rc.constraint_name
+                WHERE tc.constraint_type = 'FOREIGN KEY'
+                    AND tc.table_schema = 'public'
+                    AND tc.table_name IN ('comments', 'ratings', 'favorites', 'tokens')
+            """
+            fk_rows = db.execute(fk_query).fetchall()
+            for fk_row in fk_rows:
+                table_name = fk_row[0]
+                constraint_name = fk_row[1]
                 try:
                     db.execute(f"ALTER TABLE {table_name} DROP CONSTRAINT IF EXISTS {constraint_name}")
-                    fk_constraints_dropped.append((table_name, constraint_name, fk_def))
-                    print(f"[SEED] Dropped FK constraint: {constraint_name}")
+                    fk_constraints_dropped.append((table_name, constraint_name))
+                    print(f"[SEED] Dropped FK constraint: {constraint_name} from {table_name}")
                 except Exception as e:
                     print(f"[SEED] Could not drop {constraint_name}: {e}")
             db.commit()
@@ -1512,28 +1549,19 @@ def seed_database():
         with open(sql_file, 'r', encoding='utf-8') as f:
             sql_content = f.read()
         
-        # Execute SQL file - split by semicolons but handle semicolons inside descriptions
-        # Strategy: remove BEGIN/COMMIT, then split by ';\n' which is the statement terminator pattern
-        sql_content_clean = sql_content.replace('BEGIN;', '').replace('COMMIT;', '')
-        # Process each chunk: remove comment lines, keep only actual SQL
-        statements = []
-        for chunk in sql_content_clean.split(';\n'):
-            # Remove comment lines and empty lines, keep the SQL
-            lines = [line for line in chunk.split('\n') if not line.strip().startswith('--') and line.strip()]
-            if lines:
-                statements.append('\n'.join(lines))
-        
-        executed = 0
-        errors = []
-        for stmt in statements:
-            if stmt:
-                try:
-                    db.execute(stmt)
-                    executed += 1
-                except Exception as e:
-                    errors.append(str(e))
-        
-        db.commit()
+        # Execute SQL as a single transaction (like import_to_postgresql.py does)
+        # This avoids issues with semicolons inside string data
+        try:
+            db.execute(sql_content)
+            db.commit()
+            executed = 1
+            errors = []
+            print("[SEED] SQL file executed successfully as single transaction")
+        except Exception as e:
+            db.rollback()
+            errors = [str(e)]
+            executed = 0
+            print(f"[SEED] Error executing SQL: {e}")
         
         # Clean up orphaned rows and re-add FK constraints
         if DB_TYPE == "postgresql" and fk_constraints_dropped:
@@ -1549,10 +1577,23 @@ def seed_database():
             print("[SEED] Orphaned rows cleaned up")
             
             # Re-add FK constraints
-            for table_name, constraint_name, fk_def in fk_constraints_dropped:
+            for table_name, constraint_name in fk_constraints_dropped:
                 try:
-                    db.execute(f"ALTER TABLE {table_name} ADD CONSTRAINT {constraint_name} {fk_def}")
-                    print(f"[SEED] Re-added FK constraint: {constraint_name}")
+                    # Get the FK definition from information_schema
+                    fk_def_query = f"""
+                        SELECT pg_get_constraintdef('{constraint_name}'::regclass)
+                    """
+                    try:
+                        fk_def_result = db.execute(fk_def_query).fetchone()
+                        fk_def = fk_def_result[0] if fk_def_result else ""
+                    except:
+                        fk_def = ""
+                    
+                    if fk_def:
+                        db.execute(f"ALTER TABLE {table_name} ADD CONSTRAINT {constraint_name} {fk_def}")
+                        print(f"[SEED] Re-added FK constraint: {constraint_name}")
+                    else:
+                        print(f"[SEED] Could not get FK definition for {constraint_name}")
                 except Exception as e:
                     print(f"[SEED] Could not re-add {constraint_name}: {e}")
             db.commit()

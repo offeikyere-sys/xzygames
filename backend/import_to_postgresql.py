@@ -30,20 +30,9 @@ def import_database():
         conn.autocommit = False
         cursor = conn.cursor()
 
-        # Clear existing data (in reverse dependency order)
+        # Clear existing data using TRUNCATE CASCADE (safer and faster)
         print("Clearing existing data...")
-        cursor.execute("DELETE FROM activity_log")
-        cursor.execute("DELETE FROM user_badges")
-        cursor.execute("DELETE FROM weekly_stats")
-        cursor.execute("DELETE FROM favorites")
-        cursor.execute("DELETE FROM ratings")
-        cursor.execute("DELETE FROM comments")
-        cursor.execute("DELETE FROM tokens")
-        cursor.execute("DELETE FROM requests")
-        cursor.execute("DELETE FROM category_banners")
-        cursor.execute("DELETE FROM movies")
-        cursor.execute("DELETE FROM games")
-        cursor.execute("DELETE FROM users")
+        cursor.execute("TRUNCATE TABLE activity_log, user_badges, weekly_stats, favorites, ratings, comments, tokens, requests, category_banners, movies, games, users CASCADE")
         conn.commit()
         print("Existing data cleared.")
 
