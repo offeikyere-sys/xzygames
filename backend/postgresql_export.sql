@@ -1,5 +1,5 @@
 -- XZY Games Database Export for PostgreSQL
--- Generated: 2026-06-22 19:56:21
+-- Generated: 2026-06-23 01:59:14
 -- Target: RunSite PostgreSQL Database
 
 BEGIN;
@@ -302,7 +302,10 @@ Ubisoft Sofia,
 Ubisoft Chengdu, Ubisoft Singapore, Ubisoft
 Languages: RUS/ENG/MULTI14
 Original Size: 160.8 GB
-Repack Size: from 45.9 GB [Selective Download]', 'http://localhost:5050/uploads/d892469c8d1549c3aff4bb9fbbf39f6c.jpg', '', 'https://ts.bzzhr.to/d/u31t4e6ce6pj?v=uN0GoTfxZ3uowxo0iWSrllcruHls3-Uulct-VM4yQUM7ftvA-H6r6mSfWD925_gO7bsT_jKiQ-yjL0Xko78Auc6FuHLaJE1dPmNuIM2RpthiDXpf9MpBrkN6VYiL3hGM8EqDBQXmeRB7Mudy8LkUhVTTE3DvDebCF3DyM-TT7m0Q_lijyZS_4o4qPTROuwyubEabgTI7Sqeqbgi9tDuKcymx2fwJxw', 'https://youtu.be/bAxLxRr9OxU?si=0A4UkW47WKlyLMso', 'http://localhost:5050/uploads/938312438cbb415590f71f0d3a264e58.jpg
+Repack Size: from 45.9 GB [Selective Download]', 'http://localhost:5050/uploads/d892469c8d1549c3aff4bb9fbbf39f6c.jpg', '', 'https://ffdl.cybar.to/dagg6u1exbc7
+https://ffdl.cybar.to/ng1j21yo3plc
+https://ffdl.cybar.to/zse6r3li2onp
+https://ffdl.cybar.to/n198b0o2pl1s', 'https://youtu.be/bAxLxRr9OxU?si=0A4UkW47WKlyLMso', 'http://localhost:5050/uploads/938312438cbb415590f71f0d3a264e58.jpg
 http://localhost:5050/uploads/61f14a404e0a49aeb6cffdf77a374e57.jpg
 http://localhost:5050/uploads/8ad9d6995a31450884ba27213de861f6.png
 http://localhost:5050/uploads/ff54474915204f0bbc5d6611d17d618c.jpg
@@ -311,11 +314,14 @@ http://localhost:5050/uploads/3a5c8ea976c4406080a4cd3a30633b10.jpg
 http://localhost:5050/uploads/7707aa078348419ba7a4bfcb9cd236f1.jpg
 http://localhost:5050/uploads/be6bddcd365e4b5cbd13827df19ce832.jpg
 http://localhost:5050/uploads/482bbc898006423da7de85ca3ca9947b.jpg', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#bfdbfe', 0, 'game', '', '', '', '2026-06-14 03:42:04', '', '', '', '', '', '', '', '');
-INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (22, 'Assassin’s Creed: Odyssey v1.5.6 + DLCs', 'RPG, Adventure', 4.5, 0, 'Genres/Tags: Action, Action RPG, Open world, Stealth, Third-person, 3D
+INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (22, 'Assassin’s Creed: Odyssey v1.5.6 + DLCs', 'RPG, Adventure', 4.5, 1, 'Genres/Tags: Action, Action RPG, Open world, Stealth, Third-person, 3D
 Companies: Ubisoft Quebec, Ubisoft Entertainment
 Languages: RUS/ENG/MULTI15
 Original Size: 122.6 GB
-Repack Size: from 36.1 GB', 'http://localhost:5050/uploads/f74b18c2114240428d4d580383fcb5fd.jpg', '', 'https://ts.bzzhr.to/d/9ijwpud2aubn?v=fmys2W3J2VLdt-D7V41L6JPU1frN-h-o5jYb2MVdiAycDPOKtXtJRkQT-GmBe0dSH67ZSn2gg92pa39aG9Oci9vgu4g6hQKZvulimLLSS8GpP93swJ21nwj8WTz2zcm-EfwU5_L_4iNDjpdwDIMorWTG4GARq9ZZ_3Ub1GFIimTgYX0jUCk3TEAAhaB3uNQdjTRSuEFvLi48MIO6vETngVAMc6Y', 'https://youtu.be/GbLFsOq5ipI?si=u-uWJBo9U6-LG-s5', 'http://localhost:5050/uploads/f028231e83474005b601a4fbe8848dd1.jpg
+Repack Size: from 36.1 GB', 'http://localhost:5050/uploads/f74b18c2114240428d4d580383fcb5fd.jpg', '', 'https://ffdl.cybar.to/kxj05or9shkj
+https://ffdl.cybar.to/54ve5gdu9w5c
+https://ffdl.cybar.to/3fh7ot1cpl55
+https://ffdl.cybar.to/f8cx7x3rr8dp', 'https://youtu.be/GbLFsOq5ipI?si=u-uWJBo9U6-LG-s5', 'http://localhost:5050/uploads/f028231e83474005b601a4fbe8848dd1.jpg
 http://localhost:5050/uploads/b0f3b081d5a345699a68f667461ae260.jpg
 http://localhost:5050/uploads/3365b5f4477447c48425d11dbdc44aeb.jpg
 http://localhost:5050/uploads/a79237cf29d5483e8885ecb5aff1c133.jpg
@@ -940,7 +946,8 @@ Pre-Installed Game
 
 COD Modern Warfare II drops players into an unprecedented global conflict that features the return of the iconic Operators of Task Force 141. From small-scale, high-stakes infiltration tactical ops to highly classified missions, players will deploy alongside friends in a truly immersive experience. Infinity Ward brings fans state-of-the-art gameplay, with all-new gun handling, advanced AI system, a new Gunsmith and a suite of other gameplay and graphical innovations that elevate the franchise to new heights. Worshippers of Cthulhu
 
-Modern Warfare II launches with a globe-trotting single-player campaign, immersive Multiplayer combat, and a narrative-driven, co-op Special Ops experience. You also get access to Call of Duty: Warzone, the all-new Battle Royale experience.', 'http://localhost:5050/uploads/40a3ab6dd2cd44c084be24bc4bec3c39.jpg', '', 'https://ts.bzzhr.to/d/ioc6p3iku6yj?v=mkjWr75azwgU9wTGFZg5oL5Pjl34m2RGHBPH0hY_3SmMNi1q7X1miFJJha7aF8fPHPeY9gI5e447GAEkQf5D1fl-OH0XkUIG8KJAS7zQ8IPzsUrIx97IIT44NBOxmFvEl9VLNK1naANCo8SvvmtacQgULl5CtgK4pLwu54NqM91frL_1Zvsu334T8a0SJB0T0ydH0sSzk4Y0S46qKZPx9TFUxeeqnSZA15gAVgdnPYC-ZNTNViVy', 'https://youtu.be/ztjfwecrY8E?si=_QJ3NSYR1PBYjP-C', 'http://localhost:5050/uploads/fa38906221d54321b696106b4dd87115.jpg
+Modern Warfare II launches with a globe-trotting single-player campaign, immersive Multiplayer combat, and a narrative-driven, co-op Special Ops experience. You also get access to Call of Duty: Warzone, the all-new Battle Royale experience.', 'http://localhost:5050/uploads/40a3ab6dd2cd44c084be24bc4bec3c39.jpg', '', 'https://vikingfile.com/d/LKhlwVBxuu/CoDMW2.FR-GameDrive.Org.rar
+https://vikingfile.com/d/oLH6yDpxbt/fg-optional-bonus-soundtracks.bin', 'https://youtu.be/ztjfwecrY8E?si=_QJ3NSYR1PBYjP-C', 'http://localhost:5050/uploads/fa38906221d54321b696106b4dd87115.jpg
 http://localhost:5050/uploads/1a07043b7652435dae309d6b052421b6.jpg
 http://localhost:5050/uploads/b42d4850587d473eb1e4d25419f21d4d.jpg
 http://localhost:5050/uploads/9d82dff333ed4510bbe8bc42c41fc376.webp', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#84cc16', 0, 'game', '', '', '', '2026-06-16 00:11:12', 'Repack Features
@@ -973,7 +980,8 @@ Cryberpunk 2k77 is an open-action-adventure set in Night City, where you play as
 Night City seems more alive than ever with the free Update 2.1 Take a trip on the fully functional NCART metro system, listen to music while exploring the city with the Radioport, hang out with your partner at V’s apartment, engage in replayable races, ride new vehicles, experience enhanced bike combat and handling, uncover hidden secrets, and much more
 
 CREATE YOUR OWN CRYBERPUNK
-Become an urban criminal with cybernetic upgrades and establish your reputation on the streets of Night City. Night City is jam-packed with activities to do, sights to see, and people to meet. And it is up to you to decide where to go, when to go, and how to get there.', 'http://localhost:5050/uploads/3b7d506cd3ee4416bee66ef4d7085e7f.jpg', '', 'https://ts.bzzhr.to/d/u33dxmmaozb6?v=BtSKWxNoczWqVNvQ4_5kFnZEsSdB6wrkho8qoAzcNVVXT646wk22T6az4J9d_-lYFVcaoBpHOxC0pFBHfokImvHuLg_sZHYYePLIAO--xTEhu-RsoA_PAQobfpAISJOXffTEqWplO-ORBUK-g1s-YynSrCdnMsZoByfmKT5lR1AKvKIzRSzo2SWU2ey7lN8ZtOnfJw2ULr80Vg', 'https://youtu.be/reABCMNGM3w?si=hvw7QfnL9mhyyoZu', 'http://localhost:5050/uploads/5bcd956e745248759994214fbcfaec4e.jpg
+Become an urban criminal with cybernetic upgrades and establish your reputation on the streets of Night City. Night City is jam-packed with activities to do, sights to see, and people to meet. And it is up to you to decide where to go, when to go, and how to get there.', 'http://localhost:5050/uploads/3b7d506cd3ee4416bee66ef4d7085e7f.jpg', '', 'https://vikingfile.com/d/pTenjsJEed/cy2077ii.ER-GameDrive.Org.part1.rar
+https://vikingfile.com/d/4WcCinbQSe/cy2077ii.ER-GameDrive.Org.part2.rar', 'https://youtu.be/reABCMNGM3w?si=hvw7QfnL9mhyyoZu', 'http://localhost:5050/uploads/5bcd956e745248759994214fbcfaec4e.jpg
 http://localhost:5050/uploads/a1a2f1867b1546d8ab4f961edf25f644.jpg
 http://localhost:5050/uploads/097434a58eea48ad91095b44da46410d.jpg
 http://localhost:5050/uploads/a97eb7f6bfe44a42b58a5c57084d7684.jpg
@@ -992,14 +1000,14 @@ HDD space after installation: up to 152.8 GB
 Language can be changed in game settings
 Repack uses XTool library by Razor12911
 At least 4 GB of free RAM (inc. virtual) required for installing this repack', '', '', '', '', '', '', '');
-INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (51, 'Dragons Dogma 2 (2024) ALL DLC  HV', 'Adventure, Hypervisor', 4.5, 0, 'Download Dragon’s Dogma 2 (PC) – Full Game. Prepare for a high-stakes journey as the Arisen in this masterfully realized, narrative-driven action-RPG. In a sprawling open world four times larger than its predecessor, you must navigate the complex geopolitical strife between the kingdoms of Vermund and Battahl. Command a customizable party of Pawns—otherworldly AI companions—and master dynamic vocations to overcome colossal monsters in physics-driven combat where every tactical choice and environmental interaction can turn the tide of your epic destiny.', 'http://localhost:5050/uploads/e2ba5cbecec2463a8ee93e89411e9b48.webp', '', 'https://ffdl.cybar.to/6yvfd6yd8hjp
+INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (51, 'Dragons Dogma 2 (2024) ALL DLC  HV', 'Adventure, Hypervisor', 4.5, 1, 'Download Dragon’s Dogma 2 (PC) – Full Game. Prepare for a high-stakes journey as the Arisen in this masterfully realized, narrative-driven action-RPG. In a sprawling open world four times larger than its predecessor, you must navigate the complex geopolitical strife between the kingdoms of Vermund and Battahl. Command a customizable party of Pawns—otherworldly AI companions—and master dynamic vocations to overcome colossal monsters in physics-driven combat where every tactical choice and environmental interaction can turn the tide of your epic destiny.', 'http://localhost:5050/uploads/e2ba5cbecec2463a8ee93e89411e9b48.webp', '', 'https://ffdl.cybar.to/6yvfd6yd8hjp
 https://ffdl.cybar.to/k7r0nx23fdgz
 https://ffdl.cybar.to/kajxy098yppm', 'https://youtu.be/Ob9pYAlIHZM?si=2rDbdJ0hlT6gxcsl', 'http://localhost:5050/uploads/e55fbe0773d64b6c8bf8f8fec601a2fd.webp
 http://localhost:5050/uploads/b09161cd90e545e4b5df7d8a2f84fa31.webp
 http://localhost:5050/uploads/5e7568ecb12b4578ae34220cfe15a403.webp
 http://localhost:5050/uploads/70e258cce84d45dea5d598d7d22e6091.webp', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#ca8a04', 0, 'game', '', '', '', '2026-06-16 00:20:00', 'Repack Features
 based On my own Steam Files + DenuvoUwU', '', '', '', '', '', '', '');
-INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (52, 'Far Cry New Dawn (2019) ALL DLC +  HD Textures Pack [Hypervisor', 'Action, RPG, Hypervisor', 4.5, 0, 'Download Far Cry® New Dawn Hypervisor (PC) – Full Game. Plunge into a high-stakes struggle for dominance in a transformed, “super-bloom” post-apocalyptic Hope County, Montana, seventeen years after the nuclear collapse. As the captain of the security forces, you must lead the resistance against the Highwaymen—a ruthless scavenger faction led by the twin sisters, Mickey and Lou. Architect your home base at Prosperity, master a deep “light RPG” crafting system to forge makeshift weaponry, and launch daring expeditions across the shattered United States to secure the world’s last remaining resources and reclaim a future from the neon-soaked ruins.', 'http://localhost:5050/uploads/19571650123b4413ab6a2a3385f7a54a.jpg', '', 'https://ffdl.cybar.to/a9ra7yl12ifd
+INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (52, 'Far Cry New Dawn (2019) ALL DLC +  HD Textures Pack [Hypervisor', 'Action, RPG, Hypervisor', 4.5, 2, 'Download Far Cry® New Dawn Hypervisor (PC) – Full Game. Plunge into a high-stakes struggle for dominance in a transformed, “super-bloom” post-apocalyptic Hope County, Montana, seventeen years after the nuclear collapse. As the captain of the security forces, you must lead the resistance against the Highwaymen—a ruthless scavenger faction led by the twin sisters, Mickey and Lou. Architect your home base at Prosperity, master a deep “light RPG” crafting system to forge makeshift weaponry, and launch daring expeditions across the shattered United States to secure the world’s last remaining resources and reclaim a future from the neon-soaked ruins.', 'http://localhost:5050/uploads/19571650123b4413ab6a2a3385f7a54a.jpg', '', 'https://ffdl.cybar.to/a9ra7yl12ifd
 https://ffdl.cybar.to/awc8gvmmwhao', 'https://youtu.be/6eLHk2Eug78?si=Y7Nln16dhW3rrgYe', 'http://localhost:5050/uploads/400b9ccb99ff46259f3b1832dc56104a.webp
 http://localhost:5050/uploads/981faccb14fe474c9b65324e317ccb31.webp
 http://localhost:5050/uploads/c22ad9c93d6c45b789c0dfef2cc6bdd7.webp
@@ -1015,7 +1023,7 @@ Platform: PC
 Game Size: 60 GB
 Released By: RUNE
 Version: v1053.8.1212.1408 (Build 21164271) + DLC + Bonus Content + Languages
-Pre-Installed Game', 'http://localhost:5050/uploads/369fc1b1f957435ba2bd2e2a3970f40d.webp', '', 'https://ts.bzzhr.to/d/ujrrc7fg9kcd?v=JQUn93u2E-btt6JFKd6URCziHa49erEWS1Gk_wolJEhdrVhR-UApPh4F4-fh7chIZovFTpEopoT9fQea_rSrVJq_geTtyad_ZyjyteAfyZA7SqWGbTiR7tY9oyvWIgeUHyMTTnR6vgRgfEPaB--lXz8e8MTU4uMD70K4pKt5Ve52tFTsPj1fXJ49mh4HtoCpFeds1pRXSK8_B6obuzF9_H6J34CppOKYz4RPzLT-n4Ak1p4', 'https://youtu.be/A5gVt028Hww?si=G09uCKRefq46IPNe', 'http://localhost:5050/uploads/c04a5288dc664a04b8b96f8d7d1620b9.jpg
+Pre-Installed Game', 'http://localhost:5050/uploads/369fc1b1f957435ba2bd2e2a3970f40d.webp', '', 'https://vikingfile.com/d/jg7gvaaO05/0005445.ER-GameDrive.Org.rar', 'https://youtu.be/A5gVt028Hww?si=G09uCKRefq46IPNe', 'http://localhost:5050/uploads/c04a5288dc664a04b8b96f8d7d1620b9.jpg
 http://localhost:5050/uploads/0ea8ab3c559e4bb389004ffe3df9c599.jpg
 http://localhost:5050/uploads/387b1efc344641799142edc681ebfb77.jpg
 http://localhost:5050/uploads/2517b1ae96934773a8dd4eb5f3e6692a.jpg
@@ -1035,7 +1043,7 @@ HDD space after installation: up to 66.4 GB
 Language can be changed in game settings
 Repack uses XTool library by Razor12911
 At least 2 GB of free RAM (inc. virtual) required for installing this repack', '', '', '', '', '', '', '');
-INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (54, 'God of War 1', 'RPG, Adventure', 4.5, 0, 'Kratos is a father again. As mentor and protector to Atreus, a son determined to earn his respect, he is forced to deal with and control the rage that has long defined him while out in a very dangerous world with his son. From the marble and columns of ornate Olympus to the gritty forests, gow free direct download mountains and caves of pre-Viking Norse lore, this is a distinctly new realm with its own pantheon of creatures, monsters and gods.
+INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (54, 'God of War 1', 'RPG, Adventure', 4.5, 1, 'Kratos is a father again. As mentor and protector to Atreus, a son determined to earn his respect, he is forced to deal with and control the rage that has long defined him while out in a very dangerous world with his son. From the marble and columns of ornate Olympus to the gritty forests, gow free direct download mountains and caves of pre-Viking Norse lore, this is a distinctly new realm with its own pantheon of creatures, monsters and gods.
 GAME INFO
 Genre: Action, Adventure, RPG
 Developer: Santa Monica Studio
@@ -1043,7 +1051,7 @@ Platform: PC
 Game Size: 35.3 GB
 Released By: FLT (cs.rin.ru for updates)
 Version: v1.0.475.7534 | (Patch v1.0.12) | Full Version
-Pre-Installed Game', 'http://localhost:5050/uploads/0dbb23116db047479336dd3150cc7392.jpg', '', 'https://ts.bzzhr.to/d/lrtuuu7e0e73?v=3mb9oOkpSfv_6lcDMji5LPUrcFpFHWpBNNiUx7cDfHp7rExSzrGyh_OySobqcCmCAvzTro-y1yrZaw_4WU7lO7B0VWX2xpqQuuJWE4zvq1d6G9X6Dgst0ulqTeeNKGJrfwuZn5RX7pVBg9VIjaM9zp-1EwTxdVh-cFVGUDUY0N5roFnHfGmo40AhUz_GIpoaJICJTHRd4y-DAG7cKp46NkKmdw', 'https://youtu.be/K0u_kAWLJOA?si=Atkg0k7pVILmIPZM', 'http://localhost:5050/uploads/17f870e041a54892afa06fd542fd8774.jpg
+Pre-Installed Game', 'http://localhost:5050/uploads/0dbb23116db047479336dd3150cc7392.jpg', '', 'https://gofile.io/d/XK8MrL', 'https://youtu.be/K0u_kAWLJOA?si=Atkg0k7pVILmIPZM', 'http://localhost:5050/uploads/17f870e041a54892afa06fd542fd8774.jpg
 http://localhost:5050/uploads/db49780f5a5449b8a34164a536dfed41.jpg
 http://localhost:5050/uploads/02ad7a5068e146dc8ee53b39d7f579c3.jpg
 http://localhost:5050/uploads/6bab2955f9bc403893529521ed8ddbb9.jpg
@@ -1069,7 +1077,8 @@ Platform: PC
 Game Size: 94 GB
 Released By: RUNE EMU
 Version: v1.0.650.7780 (Build 18048593 | Full Version + All DLCs
-Pre-Installed Game', 'http://localhost:5050/uploads/2f120ce06ada45ef9979d337b6059df9.jpg', '', 'https://ts.bzzhr.to/d/i3t0797hahst?v=VOtOGMA-KtZWvPsHagbhmqorWdQU9zjErTj4qYYg1KJSLFQY54EbLVzwsa83r-2pTon1uPn8ADs44QjpHcVCso-2JLEoVQA_XrTPYarpM8dNHWFUqqYFL7wPxpaM8EA1iDpOLAsbF7czZ06WwHJs3VK-7lmX90wgZZiCa6T40E9gJie8TRQiu0yZFfQA06tbzg8AS4GtWt-odH9I65Th-O6HFApPAws', 'https://youtu.be/hfJ4Km46A-0?si=_5Cunt_xfEtM0hj5', 'http://localhost:5050/uploads/a815f8b09ceb4d978a7c06d5e51161af.jpg
+Pre-Installed Game', 'http://localhost:5050/uploads/2f120ce06ada45ef9979d337b6059df9.jpg', '', 'https://ffdl.cybar.to/q572ldk1o34w
+https://ffdl.cybar.to/eacqjgifguen', 'https://youtu.be/hfJ4Km46A-0?si=_5Cunt_xfEtM0hj5', 'http://localhost:5050/uploads/a815f8b09ceb4d978a7c06d5e51161af.jpg
 http://localhost:5050/uploads/a5b2a0fe9ae342eb9100a5e733f8c632.jpg
 http://localhost:5050/uploads/664e6c6dc3c44ac797d76768c22b94c4.jpg
 http://localhost:5050/uploads/f214f257f31440d2a5e9ebe5cbaca4c2.webp
@@ -1112,7 +1121,8 @@ Platform: PC
 Game Size: 94.5 GB
 Released By: RUNE emu
 Version: v1.0.1013.29 | Full Version
-Pre-Installed Game', 'http://localhost:5050/uploads/0dd7c5d7133641ada88fb2bf2d1c7064.webp', '', 'https://ts.bzzhr.to/d/e0mv8m8vo6d8?v=T-gnB7v1-4G6hiYg94Yp3_vWPAirj1qO-hzn0LuyOdub7uG8xu3Uic7bAK_VVdxfVtazVI99XBw7f8W9nmyC9L3Xx9JFWr54bH-VTgjIh1A7Br3QBU8DCJ8YZg1GUk0XodDgwsxnfJOBxQVhR46YPJBJ9hvT_95r4GsPb4dgYgColoekYlJTWVq5J0BMR2bgVps', 'https://youtu.be/NXTlh31ZWZ4?si=MC7WNA2TkHQAw7W8', 'http://localhost:5050/uploads/ba26c59dcba94720928f62d68c4ed43d.jpg
+Pre-Installed Game', 'http://localhost:5050/uploads/0dd7c5d7133641ada88fb2bf2d1c7064.webp', '', 'https://vikingfile.com/d/J2V67Hs6qB/45gt54g546y.DR-GameDrive.Org.part1.rar
+https://vikingfile.com/d/QpgVjmFdkB/45gt54g546y.DR-GameDrive.Org.part2.rar', 'https://youtu.be/NXTlh31ZWZ4?si=MC7WNA2TkHQAw7W8', 'http://localhost:5050/uploads/ba26c59dcba94720928f62d68c4ed43d.jpg
 http://localhost:5050/uploads/fbdceb85e31c417eb6e7b8534596c6a4.jpg
 http://localhost:5050/uploads/f6891fa3538d4f3da2659f2085df0f89.jpg
 http://localhost:5050/uploads/4bdd70bc73dc419583549bbc343604fa.jpg
@@ -1189,7 +1199,7 @@ A war for control of Marvel’s New York has broken out between a devious energy
 
 A Vibrant New Home
 
-Traverse the snowy streets of his new, vibrant, and bustling neighborhood as Miles searches for a sense of belonging. When the lines blur between his personal and crime-fighting lives, he discovers who he can trust, and what it feels like to truly be home.', 'http://localhost:5050/uploads/bc30b2c84a174b15be1958f41d6166d0.jpg', '', 'https://ts.bzzhr.to/d/67pt5szrjk0h?v=eCbKM8e4VSewsnoNLkSDvbWE3xkp1dYsoEElnZDCrwMgcXP4wQ8vvT6VQ7kTsOjT0xB4lLcnSTGUegfwOR3Rkj3kn_HJlrbb-sGdNZJiSdFGjm_0wW_fSFPZHgZRlYIeazOF8uKvjL2uuqp6GMhyE5hFpzQFHxJK9VYo_2HBcVSm1DBj4d1vmdq5T27K_4REHH2NTyP_fvBg7sXr7BZQlXJiiMdFWBKp5-MpeSO8Ht9zqVysQC3yveE', 'https://youtu.be/3wHL2VIaFcs?si=0b5nlC9foumjHJbH', 'http://localhost:5050/uploads/832b8fd51ef94af3bcd122df879a9ace.jpg
+Traverse the snowy streets of his new, vibrant, and bustling neighborhood as Miles searches for a sense of belonging. When the lines blur between his personal and crime-fighting lives, he discovers who he can trust, and what it feels like to truly be home.', 'http://localhost:5050/uploads/bc30b2c84a174b15be1958f41d6166d0.jpg', '', 'https://ffdl.cybar.to/ser3up07x7pp', 'https://youtu.be/3wHL2VIaFcs?si=0b5nlC9foumjHJbH', 'http://localhost:5050/uploads/832b8fd51ef94af3bcd122df879a9ace.jpg
 http://localhost:5050/uploads/60c5967d94014543ac9465de7b59494c.jpeg
 http://localhost:5050/uploads/12e5df4932744fdabf0a3d2f154d6cd0.jpg', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#09090b', 0, 'game', '', '', '', '2026-06-16 01:07:42', 'Repack Features
 Based on Marvels_Spider-Man_Miles_Morales-FLT ISO release: flt-marvels_spider-man_miles_morales.iso (42,008,958,976 bytes)
@@ -1306,7 +1316,8 @@ Platform: PC
 Game Size: 94.6 GB
 Released By: RUNE + Fixed exe
 Version: v1.526.0.0 | Full Version
-Pre-Installed Game', 'http://localhost:5050/uploads/b85c50b8008744aab1fe86e5bde24895.jpg', '', 'https://ts.bzzhr.to/d/f9wmyj6bwidy?v=--fonLS88KFUS9VRMnmnDHD-NHHHhPdWy2KTlkvgjpnxIUdwnJ4wcfeET8eahyk_dm5b6inxgQ0kv8o18elTTkVZKBsQi2V8t90qgbtO7wyqmbDUU6D07PdF7vhRWX_dPCJV0OCnUVtifcG3SJ3LiHIQl0U5ohWvpsRCRN-Q0-cT2Da8uk5mvFh7qMtX-olvutFE3W6TOZWOz36J7VW5sBBFKxnhwenkmWKun7HDCGw9TQcRX9C1', '', 'http://localhost:5050/uploads/8be7cb7dddd043aba5a9224131adf4f3.jpg
+Pre-Installed Game', 'http://localhost:5050/uploads/b85c50b8008744aab1fe86e5bde24895.jpg', '', 'https://ffdl.cybar.to/hg3uofzuw9cn
+https://ffdl.cybar.to/q6rs90s43je5', '', 'http://localhost:5050/uploads/8be7cb7dddd043aba5a9224131adf4f3.jpg
 http://localhost:5050/uploads/536230058a28419995e77b0ea4fd9b43.jpg
 http://localhost:5050/uploads/3c6208ea8eaa4922bf7a90f6d8f6594a.webp', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#b91c1c', 0, 'game', '', '', '', '2026-06-16 01:17:54', 'Repack Features
 Based on Marvels.Spider-Man.2-RUNE ISO release: rune-marvels.spiderman.2.iso (101,088,722,944 bytes)
@@ -1341,7 +1352,8 @@ Platform: PC
 Game Size: 80 GB
 Released By: Mr_GOLDBERG | Ty Christsnatcher (cs.rin) for updates
 Version: v1.1.5.0 | Full Version + Crash/Shaders Fix applied
-Pre-Installed Game', 'http://localhost:5050/uploads/5b6e3addd21d4752a6589c25e1d62f64.webp', '', 'https://ts.bzzhr.to/d/z409lxi8ia60?v=uX2_KKKytqJhBw3k1kW5YRhZy-q1ziarFDsPzFGVFsMs4Ml2vxDZCjxSzF5yF4JRGriLvI_5txhJRNnY1ZqqFWj1W-ZEjNcTadW4X5z7deGeBC9vgbgVXCr7OsjhIppF2iP1kVXY03DTEHGdTZ8CW-oJqIrk_meL5DdztxA-lFsEyPfK5LfM0QvXiFPLIVQmJczoE5Zveeyths9lk7WM9h3Z6hNvQSBXywUFkZH7In2Z', 'https://youtu.be/WxjeV10H1F0?si=I6t3hZTmv08DkRFa', 'http://localhost:5050/uploads/d7154b7f1b7546d3986d00d14e9e11fa.webp
+Pre-Installed Game', 'http://localhost:5050/uploads/5b6e3addd21d4752a6589c25e1d62f64.webp', '', 'https://vikingfile.com/d/lp9BeXGjq8/g5464hhhhh.ER-GameDrive.Org.part1.rar
+https://vikingfile.com/d/C1fyFRQ1O5/g5464hhhhh.ER-GameDrive.Org.part2.rar', 'https://youtu.be/WxjeV10H1F0?si=I6t3hZTmv08DkRFa', 'http://localhost:5050/uploads/d7154b7f1b7546d3986d00d14e9e11fa.webp
 http://localhost:5050/uploads/264b7417ab3c4935a20a89c08e346306.webp
 http://localhost:5050/uploads/6c668d4029084b66bd2d0b22eadab17a.jpg
 http://localhost:5050/uploads/ec7ae666e75141ea8d97c9ac14eac02c.jpg
@@ -1379,11 +1391,44 @@ From thick jungles to snow-capped mountains, exotic islands to rain-soaked stree
 
 Feel the thrilling gameplay in your hands
 
-Experience haptic feedback and dynamic trigger effects designed for UNCHARTED: Legacy of Thieves Collection by playing with the DualSense controller through a wired connection to your PC. For those that want to brighten things up even more, try out RGB support for Razer Chroma peripherals and Chroma Link compatible devices, as well as for Logitech models. You can also check previous posted game Potionomics.', 'http://localhost:5050/uploads/28db2ea5145f4f0cb2e2218c3f5054f3.jpg', '', 'https://ts.bzzhr.to/d/lnbo0bforf7e?v=5Wbh7nhQakrFvUo0_IQcP0Jgt9C42N9glrLQws_kS-7pztrWAklIjOiUrIbr7Ojw8YNyKL6lB-tCiL1xYFgS89LZ20eDCrgVyVKVc0cdpPp2Bw0wSriEeHyMFsdhH1PVVZ1Piqf_d-vJHsryxda-1_5lar5I5zzOHM9Tm_8XzIIeHcapYTDFGjBD7yfDM8G3gkYXOVrGYgT1XVtjinq4JLEAnF7bcfVMSAVk', 'https://youtu.be/F3Wl-OiZCO4?si=Gx9lfuxspi3nG6Xh', 'http://localhost:5050/uploads/d4523f7b787342bebd6f148a406a41f6.jpg
+Experience haptic feedback and dynamic trigger effects designed for UNCHARTED: Legacy of Thieves Collection by playing with the DualSense controller through a wired connection to your PC. For those that want to brighten things up even more, try out RGB support for Razer Chroma peripherals and Chroma Link compatible devices, as well as for Logitech models. You can also check previous posted game Potionomics.', 'http://localhost:5050/uploads/28db2ea5145f4f0cb2e2218c3f5054f3.jpg', '', 'https://vikingfile.com/d/81Pif0lZTT/sfdf435.ER-GameDrive.Org.rar', 'https://youtu.be/F3Wl-OiZCO4?si=Gx9lfuxspi3nG6Xh', 'http://localhost:5050/uploads/d4523f7b787342bebd6f148a406a41f6.jpg
 http://localhost:5050/uploads/80a487029029461bac1a75d0b174beba.jpg
 http://localhost:5050/uploads/b87ac30e4a7546448041040d5063e88f.jpg
 http://localhost:5050/uploads/70b826e8d46b432dbe9825e7e8696242.jpg', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#eab308', 0, 'game', '', '', '', '2026-06-16 01:24:09', '', '', '', '', '', '', '', '');
-INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (66, 'Watch Dogs 2', 'RPG, Sci-Fi, Open World', 4.5, 0, 'Play as Marcus Holloway, a brilliant young hacker living in the birthplace of the tech revolution, the San Francisco Bay Area. Team up with Dedsec, a notorious group of hackers, to execute the biggest hack in history; take down ctOS 2.0, an invasive operating system being used by criminal masterminds to monitor and manipulate citizens on a massive scale. Get the upper hand with Tobii Eye Tracking. Volcanoids', 'http://localhost:5050/uploads/8945d26cff604119bca6f558fee3a720.jpg', '', 'https://ts.bzzhr.to/d/2u96bsppi26y?v=K5LcxJLWGxmlc6IG_ipdoLGzM-ZnzYHflHiU3kRC7jT2wmLO-dsRLPvvgYnJHZJvK9NVk01oJP7KCs-u4LFYk7bptqtQ7e2eeWvXRDRH6Dk_g_3b1YPNiXga-IzlwtRBK2OnefY04mTE50Q02NyRYB7qjyU3YfbG5NwlPOoXI9DR5cyf_9F4PKDqqfWIpw', 'https://youtu.be/hh9x4NqW0Dw?si=57NSpkS5dDXd2Knu', 'http://localhost:5050/uploads/d7d3e698f9e64285ae37ec94f5ac6ff4.jpg
+INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (66, 'Watch Dogs 2', 'RPG, Sci-Fi, Open World', 4.5, 0, 'Play as Marcus Holloway, a brilliant young hacker living in the birthplace of the tech revolution, the San Francisco Bay Area. Team up with Dedsec, a notorious group of hackers, to execute the biggest hack in history; take down ctOS 2.0, an invasive operating system being used by criminal masterminds to monitor and manipulate citizens on a massive scale. Get the upper hand with Tobii Eye Tracking. Volcanoids', 'http://localhost:5050/uploads/8945d26cff604119bca6f558fee3a720.jpg', '', 'https://fuckingfast.co/g1pdp1kuolm5#Watch_Dogs_2_--_fitgirl-repacks.site_--_.part01.rar
+https://fuckingfast.co/w7m35s4qeg8h#Watch_Dogs_2_--_fitgirl-repacks.site_--_.part02.rar
+https://fuckingfast.co/owmc71qpudho#Watch_Dogs_2_--_fitgirl-repacks.site_--_.part03.rar
+https://fuckingfast.co/j16fnwg7bkdy#Watch_Dogs_2_--_fitgirl-repacks.site_--_.part04.rar
+https://fuckingfast.co/10pj6ut59hib#Watch_Dogs_2_--_fitgirl-repacks.site_--_.part05.rar
+https://fuckingfast.co/q0h0ei4f12sz#Watch_Dogs_2_--_fitgirl-repacks.site_--_.part06.rar
+https://fuckingfast.co/tl9wcfxd1n0u#Watch_Dogs_2_--_fitgirl-repacks.site_--_.part07.rar
+https://fuckingfast.co/oxqtz4i08vee#Watch_Dogs_2_--_fitgirl-repacks.site_--_.part08.rar
+https://fuckingfast.co/hei0rfa1yw9w#Watch_Dogs_2_--_fitgirl-repacks.site_--_.part09.rar
+https://fuckingfast.co/a0ztlumxjeox#Watch_Dogs_2_--_fitgirl-repacks.site_--_.part10.rar
+https://fuckingfast.co/1e05h1l9rmf4#Watch_Dogs_2_--_fitgirl-repacks.site_--_.part11.rar
+https://fuckingfast.co/12vme2t61d7o#Watch_Dogs_2_--_fitgirl-repacks.site_--_.part12.rar
+https://fuckingfast.co/ghcauyznvvx1#Watch_Dogs_2_--_fitgirl-repacks.site_--_.part13.rar
+https://fuckingfast.co/ju8u7mjtrqkh#Watch_Dogs_2_--_fitgirl-repacks.site_--_.part14.rar
+https://fuckingfast.co/ju8u7mjtrqkh#Watch_Dogs_2_--_fitgirl-repacks.site_--_.part14.rar
+https://fuckingfast.co/jx1f2ya9bun8#Watch_Dogs_2_--_fitgirl-repacks.site_--_.part15.rar
+https://fuckingfast.co/iei5x8zwa7bu#Watch_Dogs_2_--_fitgirl-repacks.site_--_.part16.rar
+https://fuckingfast.co/1l2hiwjbb8vn#Watch_Dogs_2_--_fitgirl-repacks.site_--_.part17.rar
+https://fuckingfast.co/1l2hiwjbb8vn#Watch_Dogs_2_--_fitgirl-repacks.site_--_.part17.rar
+https://fuckingfast.co/9y09iog2k5kv#Watch_Dogs_2_--_fitgirl-repacks.site_--_.part18.rar
+https://fuckingfast.co/rszrqxijag3i#Watch_Dogs_2_--_fitgirl-repacks.site_--_.part19.rar
+https://fuckingfast.co/8pwvutgraj06#Watch_Dogs_2_--_fitgirl-repacks.site_--_.part20.rar
+https://fuckingfast.co/dwzs2alusuib#Watch_Dogs_2_--_fitgirl-repacks.site_--_.part21.rar
+https://fuckingfast.co/bmoz9hp3k220#Watch_Dogs_2_--_fitgirl-repacks.site_--_.part22.rar
+https://fuckingfast.co/9l7laipryrp0#Watch_Dogs_2_--_fitgirl-repacks.site_--_.part23.rar
+https://fuckingfast.co/c0y3ebdac2im#Watch_Dogs_2_--_fitgirl-repacks.site_--_.part24.rar
+https://fuckingfast.co/yysrmpzvwnie#Watch_Dogs_2_--_fitgirl-repacks.site_--_.part25.rar
+https://fuckingfast.co/c4vxhg8j02cy#Watch_Dogs_2_--_fitgirl-repacks.site_--_.part26.rar
+https://fuckingfast.co/gaats6lpl49t#Watch_Dogs_2_--_fitgirl-repacks.site_--_.part27.rar
+https://fuckingfast.co/b61pt0k0w0rs#Watch_Dogs_2_--_fitgirl-repacks.site_--_.part28.rar
+https://fuckingfast.co/p1dpdk4jjzk9#Watch_Dogs_2_--_fitgirl-repacks.site_--_.part29.rar
+https://fuckingfast.co/j2p04i3o2tog#Watch_Dogs_2_--_fitgirl-repacks.site_--_.part30.rar
+https://fuckingfast.co/wmcqxf2ifyk8#Watch_Dogs_2_--_fitgirl-repacks.site_--_.part31.rar
+https://fuckingfast.co/ksuf0zypii0w#Watch_Dogs_2_--_fitgirl-repacks.site_--_.part32.rar', 'https://youtu.be/hh9x4NqW0Dw?si=57NSpkS5dDXd2Knu', 'http://localhost:5050/uploads/d7d3e698f9e64285ae37ec94f5ac6ff4.jpg
 http://localhost:5050/uploads/79faa380e9074c0c86c525d007590a74.webp
 http://localhost:5050/uploads/fa1e413330704277a488cfb402e24785.jpg
 http://localhost:5050/uploads/49ed2d549dac4592910238e50dc9146f.jpg
@@ -1818,7 +1863,8 @@ Marvel’s New York is your playground
 The Big Apple comes to life in Marvel’s Spider-Man. Swing through vibrant neighborhoods and catch breathtaking views of iconic Marvel and Manhattan landmarks. Use the environment to defeat villains with epic takedowns in true blockbuster action.
 
 Enjoy The City That Never Sleeps complete content
-Following the events of the main story of Marvel’s Spider-Man Remastered, experience the continuation of Peter Parker’s journey in Marvel’s Spider-Man: The City That Never Sleeps, three story chapters with additional missions and challenges to discover.', 'http://localhost:5050/uploads/78c9a9dd9b8a4c63842274939847253f.webp', '', 'https://ts.bzzhr.to/d/716go6imtzta?v=oepftvCHJmXaoT_CtBsMMQImnUHX3u0z1VtymFX_uqw0tWyPRBhzBLtuE9CMgQyiW5uOHr0W3Dj80Hv7r_fqQVW7ojsNLLLtOE98nDNkLn4kgO6JnaCBlp0nszhpB957f4wfYFKyhd7bc9piMSB5QkirppTl5Ny3QaHSiMVaeKCWFO3qjSBRopSJwOZD1Ds', 'https://youtu.be/q4GdJVvdxss?si=ZRAExlW694R_p2x2', 'http://localhost:5050/uploads/61ddabd354e84a069fd81110e1d96fd3.png
+Following the events of the main story of Marvel’s Spider-Man Remastered, experience the continuation of Peter Parker’s journey in Marvel’s Spider-Man: The City That Never Sleeps, three story chapters with additional missions and challenges to discover.', 'http://localhost:5050/uploads/78c9a9dd9b8a4c63842274939847253f.webp', '', 'https://ffdl.cybar.to/hg3uofzuw9cn
+https://ffdl.cybar.to/q6rs90s43je5', 'https://youtu.be/q4GdJVvdxss?si=ZRAExlW694R_p2x2', 'http://localhost:5050/uploads/61ddabd354e84a069fd81110e1d96fd3.png
 http://localhost:5050/uploads/fccb3d44c29f416fbd3dab3d192449cc.jpeg
 http://localhost:5050/uploads/7cca621c8c5349d08ec2380808a682ed.jpg
 http://localhost:5050/uploads/dbe20dc96b8c41e1acfaf1d568714b5c.jpg
@@ -1831,7 +1877,9 @@ Game Size: 53 GB
 Released By: FLT/ Mr_GOLDBERG CS / InsaneRamZes Ty
 Version: v2.1012.0.0 (Build 12423814) | Full Version + DLC
 Pre-Installed Game', '', '', '', '', '', '', '');
-INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (92, 'Far Cry 6 Ultimate Edition Free', 'Action, Adventure, RPG, Strategy', 4.5, 0, 'Welcome to Yara, a tropical paradise frozen in time. As the dictator of Yara, Antón Castillo is intent on restoring his nation back to its former glory by any means, with his son, Incredibox Diego, following in his bloody footsteps. Their oppressive rule has ignited a revolution. Play as Dani Rojas, a local resident, and fight for the rebellious guerrillas to free Yara Take on the Castillo regime in the most extensive Far Cry game to date as you make your way through jungles, beaches and Esperanza, Yara’s capital. Use an arsenal of weapons and gadgets and a diverse fleet of vehicles to overthrow the ruthless Castillo regime.', 'http://localhost:5050/uploads/5010dc60dc634113a35d2a50cf8f280b.jpg', '', 'https://ts.bzzhr.to/d/yam0smah3pin?v=oRZuiyhkM2hdRwEFnfRD4mWfXqGIIA2rB1PW4QWUrmUGRNtAt-OcZBFvkxs4ql4i5-wNUTE6CMjCMiOBfSkohwfE1-hspL9PhGAkKlMCQCUoHSD0_t5ki9OOp2sDiGasqJVMnDycrYs8N2tsiKt9zXu_D29C2Bf0jvfP1pZmaCxx8iD1qyYovXoNlevW', 'https://youtu.be/-IJuKT1mHO8?si=wtsZMIit2-0fVu02', 'http://localhost:5050/uploads/2335dd965e0644f7aaa138387fe1e8fc.webp
+INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (92, 'Far Cry 6 Ultimate Edition Free', 'Action, Adventure, RPG, Strategy', 4.5, 2, 'Welcome to Yara, a tropical paradise frozen in time. As the dictator of Yara, Antón Castillo is intent on restoring his nation back to its former glory by any means, with his son, Incredibox Diego, following in his bloody footsteps. Their oppressive rule has ignited a revolution. Play as Dani Rojas, a local resident, and fight for the rebellious guerrillas to free Yara Take on the Castillo regime in the most extensive Far Cry game to date as you make your way through jungles, beaches and Esperanza, Yara’s capital. Use an arsenal of weapons and gadgets and a diverse fleet of vehicles to overthrow the ruthless Castillo regime.', 'http://localhost:5050/uploads/5010dc60dc634113a35d2a50cf8f280b.jpg', '', 'https://vikingfile.com/d/D9NBKXCeT5/2369390.B11359732.CSF-Games4U.Org.part1.rar
+https://vikingfile.com/d/gB523b1Iav/2369390.B11359732.CSF-Games4U.Org.part2.rar
+https://vikingfile.com/d/nJgt8kVWYa/2369390.B11359732.CSF-Games4U.Org.part3.rar', 'https://youtu.be/-IJuKT1mHO8?si=wtsZMIit2-0fVu02', 'http://localhost:5050/uploads/2335dd965e0644f7aaa138387fe1e8fc.webp
 http://localhost:5050/uploads/54dec15363b143b3afe950ded655649b.webp
 http://localhost:5050/uploads/c9061217ca7e4573bc878c3a0886121f.jpg', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#ef4444', 0, 'game', '', '', '', '2026-06-17 23:18:07', 'GAME INFO
 Genre: Action, Adventure, Indie, RPG, Strategy
@@ -1843,7 +1891,7 @@ Version: v1.5.0 | Full Version + All DLCs + HD Texture Pack
 Pre-Installed Game', '', '', '', '', '', '', '');
 INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (93, 'Need for Speed Heat Deluxe Edition', 'Racing, Action, Adventure', 4.5, 0, 'A thrilling race experience pits you against a city’s rogue police force as you battle your way into street racing’s elite. Hustle by day and risk it all at night in Need for Speed Heat, a white-knuckle street racer, where the lines of the law fade as the sun starts to set. Survival: Fountain of Youth
 
-By day, Palm City hosts the Speedhunter Showdown, a sanctioned competition where you earn Bank to customize and upgrade your high-performance cars. At night, ramp up the intensity in illicit street races that build your reputation, getting you access to bigger races and better parts. But stay ready – cops are waiting and not all of them play fair.', 'http://localhost:5050/uploads/6894d585c4324ac6becb9428d18498a3.jpg', '', 'https://ts.bzzhr.to/d/n76y3a7ipbwa?v=VG-19tqzbL7qOcAxW4U_XamlPzqQDB-Z8z99L6F4eG9QzU4PHtoN7BAnYtgzbhQcy1SVcIe-3oTJ7mBe5yQPMJy804eJoSyXsv3gyTZHIvsAPZBxpVpnRXlh5ocd6yBHIX3P-62hpp43WfCQ33NFB0xB6TfL1SwPivI6SCKpXyDoU8i1fDfF', '', 'http://localhost:5050/uploads/ce58d91217f84b1f9166ec46ee32b3b6.jpg
+By day, Palm City hosts the Speedhunter Showdown, a sanctioned competition where you earn Bank to customize and upgrade your high-performance cars. At night, ramp up the intensity in illicit street races that build your reputation, getting you access to bigger races and better parts. But stay ready – cops are waiting and not all of them play fair.', 'http://localhost:5050/uploads/6894d585c4324ac6becb9428d18498a3.jpg', '', 'https://vikingfile.com/d/K8BLYXDVql/f45fg.ER-GameDrive.Org.rar', '', 'http://localhost:5050/uploads/ce58d91217f84b1f9166ec46ee32b3b6.jpg
 http://localhost:5050/uploads/4b9921d2fee1487a86256a6d66502784.jpg
 http://localhost:5050/uploads/1e23908626294743a2288e3b2f1e5bd6.jpg
 http://localhost:5050/uploads/d6b9c08d04cf4a25a5c032ea12ca11d2.jpg', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#3b82f6', 0, 'game', '', '', '', '2026-06-17 23:23:47', 'GAME INFO
@@ -1863,7 +1911,23 @@ An Epic Drama Born from a Myth
 A multilayered story told in fragments. An epic drama in which the various thoughts of the characters intersect in the Lands Between.
 Unique Online Play that Loosely Connects You to Others
 In addition to multiplayer, where you can directly connect with other players and travel together, the game supports a unique asynchronous online element that allows you to feel the presence of others.
-DLC Added', 'http://localhost:5050/uploads/7efdf670073449c295e5e21e6591312e.jpg', '', 'https://ts.bzzhr.to/d/u4w8cunxkbrz?v=qe6dHHyiol6zuAVb_97cArbZi9fWatjSeieqY4EPHTcGiwUyex-1Gee2AAYe2zRgoeCThP1WUcWxA_Pow90k-9mZ_dQW43PdQ7Gxr82K3K4NSu5zpBJ7dDajEGXM3y9V_STe3GsmdQMzzDNYcihLeToAhN3RhO9z1HR0ePyQgZH3NyZYUqqI1kFDzEv-I2CPrw', 'https://youtu.be/E3Huy2cdih0?si=aOtyXnMyXr2sz5O-', 'http://localhost:5050/uploads/24626c3368cc4000a09f623021324519.webp
+DLC Added', 'http://localhost:5050/uploads/7efdf670073449c295e5e21e6591312e.jpg', '', 'https://vikingfile.com/d/mo3fqDifna/ERD.ER-GameDrive.Org.part01.rar
+https://vikingfile.com/d/XrA4nHGfhP/ERD.ER-GameDrive.Org.part02.rar
+https://vikingfile.com/d/KLntKlrOaz/ERD.ER-GameDrive.Org.part03.rar
+https://vikingfile.com/d/hQ8KfOAvpG/ERD.ER-GameDrive.Org.part04.rar
+https://vikingfile.com/d/EtyxRLf98y/ERD.ER-GameDrive.Org.part05.rar
+https://vikingfile.com/d/t5uwQzCfhu/ERD.ER-GameDrive.Org.part06.rar
+https://vikingfile.com/d/4yIrjtUpfa/ERD.ER-GameDrive.Org.part07.rar
+https://vikingfile.com/d/9EJ6gOLXb4/ERD.ER-GameDrive.Org.part08.rar
+https://vikingfile.com/d/1cmIPBJ7yy/ERD.ER-GameDrive.Org.part09.rar
+https://vikingfile.com/d/ecJm7Pss4b/ERD.ER-GameDrive.Org.part10.rar
+https://vikingfile.com/d/sQpxhNxoMr/ERD.ER-GameDrive.Org.part11.rar
+https://vikingfile.com/d/CdxaD9xV7C/ERD.ER-GameDrive.Org.part12.rar
+https://vikingfile.com/d/e0mXgSkwd9/ERD.ER-GameDrive.Org.part13.rar
+https://vikingfile.com/d/UBrag3UKEn/ERD.ER-GameDrive.Org.part14.rar
+https://vikingfile.com/d/Ro0kMLRtE0/ERD.ER-GameDrive.Org.part15.rar
+https://vikingfile.com/d/ytqyZMcDSk/ERD.ER-GameDrive.Org.part16.rar
+https://vikingfile.com/d/PT5CxFzN4F/ERD.ER-GameDrive.Org.part17.rar', 'https://youtu.be/E3Huy2cdih0?si=aOtyXnMyXr2sz5O-', 'http://localhost:5050/uploads/24626c3368cc4000a09f623021324519.webp
 http://localhost:5050/uploads/c36a0de612ba416a93f7a82f81a2795e.webp', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#f59e0b', 0, 'game', '', '', '', '2026-06-17 23:55:08', 'GAME INFO
 Genre: Action, RPG
 Developer: FromSoftware Inc
@@ -1876,7 +1940,8 @@ INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_u
 
 Five years have passed since Ellie and Joel’s perilous trek across a ravaged United States. They have found a semblance of peace and stability within a thriving survivor community in Jackson, Wyoming, despite the ever-present dangers of the infected and desperate human factions. However, this fragile tranquility is shattered by a brutal event, propelling Ellie on a relentless quest for justice and a desperate search for closure. Her journey will take her through harrowing landscapes and force her to confront devastating truths, testing the limits of her resilience and morality in a world consumed by loss and violence.
 
-The Last of Us Part II Remastered elevates the original game with a range of enhancements, taking advantage of modern hardware to deliver an unparalleled experience. Enjoy a host of graphical improvements that breathe new life into the game’s beautiful yet perilous environments, with increased detail and visual fidelity. Experience full integration with the PlayStation DualSense controller, utilizing adaptive triggers and haptic feedback to deepen your connection to the gameplay. As you progress through Ellie and Abby’s intertwined stories, earn and collect exciting achievements on Steam, adding another layer of engagement to this unforgettable journey. The game also offers widescreen and Ultrawide support, providing a more expansive and cinematic view of its haunting world. Elroy and the Aliens', 'http://localhost:5050/uploads/0107fb4497b243938a87c97409198b5a.jpg', '', 'https://ts.bzzhr.to/d/1mx0vivs05x4?v=5c5tR183LBgKZqD30mqHlEHaDrgAWrfwcMdYkOiXVIVIC1wBjlpBsbAAtymottG6FTdTpFmj-S7YcAzreh5WXb4qiVezLNgJqf2-qKgmomaZ0mA_XhnRdUvDVLEjF0AJlx9z9b0015MwXdU8PN2Ju7hltmqoD9-I946pr7VhgdV-xyrfNXz8LqkgDlu1vLQ', 'https://youtu.be/-llaUBqovHw?si=tr_MQ4fHvxHHt7ld', 'http://localhost:5050/uploads/a600d141c2474177b7d291950d825d9d.jpg
+The Last of Us Part II Remastered elevates the original game with a range of enhancements, taking advantage of modern hardware to deliver an unparalleled experience. Enjoy a host of graphical improvements that breathe new life into the game’s beautiful yet perilous environments, with increased detail and visual fidelity. Experience full integration with the PlayStation DualSense controller, utilizing adaptive triggers and haptic feedback to deepen your connection to the gameplay. As you progress through Ellie and Abby’s intertwined stories, earn and collect exciting achievements on Steam, adding another layer of engagement to this unforgettable journey. The game also offers widescreen and Ultrawide support, providing a more expansive and cinematic view of its haunting world. Elroy and the Aliens', 'http://localhost:5050/uploads/0107fb4497b243938a87c97409198b5a.jpg', '', 'https://ffdl.cybar.to/ekjo7dmmqm1h
+https://ffdl.cybar.to/l4wleerujihu', 'https://youtu.be/-llaUBqovHw?si=tr_MQ4fHvxHHt7ld', 'http://localhost:5050/uploads/a600d141c2474177b7d291950d825d9d.jpg
 http://localhost:5050/uploads/ae5253370b124f1d8ccd8cd7b11fd8f4.jpg
 http://localhost:5050/uploads/9c3d5dad9cc946e38f67d8fc215e9dec.jpg', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#27272a', 0, 'game', '', '', '', '2026-06-18 00:02:00', 'GAME INFO
 Genre: Action, Adventure
@@ -1886,7 +1951,7 @@ Game Size: 103 GB
 Released By: RUNE
 Version: v1.6.10721.105 (Build 19297819 | Full Version
 Pre-Installed Gam', '', '', '', '', '', '', '');
-INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (96, 'Watch Dogs Digital Deluxe', 'Action', 4.5, 0, 'All it takes is the swipe of a finger. We connect with friends. We buy the latest gadgets and gear. We find out what’s happening in the world. But with that same simple swipe, we cast an increasingly expansive shadow. With each connection, we leave a digital trail that tracks our every move and milestone, our every like and dislike. And it’s not just people. Today, all major cities are networked. Urban infrastructures are monitored and controlled by complex operating systems. In Watch_Dogs, this system is called the Central Operating System (CTOS) and it controls almost every piece of the city’s technology and holds key information on all of the city’s residents.', 'http://localhost:5050/uploads/d5e68dd49e974d39b85a037f2c65efcb.jpg', '', 'https://ts.bzzhr.to/d/tih1vqd4m3nt?v=1Ar8fIQgZlQ5E_Who7ra-IbvX_ZCHENYoA_4oKjpy48BxXX0heGcZAgr34aAe_hI4qak7B5XrDQirDJmOBCszFgANC9wid6ETl_WX8iWKzAPQzv4TfAf2duamEOAYkcNvRi-EAhKpdtUESguI6zMA0rGeHTI-TYxWSK5wKWp-FBBZq4VUD_gtgUL', 'https://youtu.be/kPNXE8fdleY?si=xiCFfpgTKnSAe8n2', 'http://localhost:5050/uploads/c1a53b9c653d4fd59f05bfa461dc02cd.jpg
+INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (96, 'Watch Dogs Digital Deluxe', 'Action', 4.5, 0, 'All it takes is the swipe of a finger. We connect with friends. We buy the latest gadgets and gear. We find out what’s happening in the world. But with that same simple swipe, we cast an increasingly expansive shadow. With each connection, we leave a digital trail that tracks our every move and milestone, our every like and dislike. And it’s not just people. Today, all major cities are networked. Urban infrastructures are monitored and controlled by complex operating systems. In Watch_Dogs, this system is called the Central Operating System (CTOS) and it controls almost every piece of the city’s technology and holds key information on all of the city’s residents.', 'http://localhost:5050/uploads/d5e68dd49e974d39b85a037f2c65efcb.jpg', '', 'https://vikingfile.com/d/2QYtT6f0qQ/243470-Games4u.Org.rar', 'https://youtu.be/kPNXE8fdleY?si=xiCFfpgTKnSAe8n2', 'http://localhost:5050/uploads/c1a53b9c653d4fd59f05bfa461dc02cd.jpg
 http://localhost:5050/uploads/485636489c2f4ef898a65c2dab9c30ca.jpg
 http://localhost:5050/uploads/b952d2c74ee147e18252854c9ab90ca4.jpg', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#52525b', 0, 'game', '', '', '', '2026-06-18 00:10:05', 'GAME INFO
 Genre: Action, Adventure
@@ -1896,7 +1961,9 @@ Game Size: 16.1 GB
 Repack By: RELOADED
 Version: v1.06.329 (Digital Deluxe Edition) | Full  Version (Latest) + all 16 DLCs
 Pre-Installed Game', '', '', '', '', '', '', '');
-INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (97, 'Forza Horizon 5 Premium Edition', 'Racing, Open World', 4.5, 0, 'Your Ultimate Horizon Adventure awaits Explore the vibrant and ever-evolving open world landscapes of Mexico with limitless, fun driving action in hundreds of the world’s greatest cars. Lead breathtaking expeditions across the vibrant and ever-evolving open world landscapes of Mexico with limitless, fun driving action in hundreds of the world’s greatest cars. Explore a world of striking contrast and beauty.', 'http://localhost:5050/uploads/52bbd995da7846a5ba36c6aaf37d2803.jpg', '', 'https://ts.bzzhr.to/d/od5lrbi5f9nr?v=zyGWqLBlS_K-BlDkrNJo3QSIw7ocG7GPHl7C6-SObRpr5h1b0AbxZMaWL0FDrqfuXiEbP4yKNGu8twQ-G8D-Czy8tyunUngkhkZi57TXwsFv4Tht_5RnN2Tt-MBEwO_0b1vrC3nbbIvKz6w66foAsgLPyxTgRym4XFRmKo7udsZHxlMm', '', 'http://localhost:5050/uploads/037d74e8c34143f491c7d33325f39a5f.jpg
+INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (97, 'Forza Horizon 5 Premium Edition', 'Racing, Open World', 4.5, 0, 'Your Ultimate Horizon Adventure awaits Explore the vibrant and ever-evolving open world landscapes of Mexico with limitless, fun driving action in hundreds of the world’s greatest cars. Lead breathtaking expeditions across the vibrant and ever-evolving open world landscapes of Mexico with limitless, fun driving action in hundreds of the world’s greatest cars. Explore a world of striking contrast and beauty.', 'http://localhost:5050/uploads/52bbd995da7846a5ba36c6aaf37d2803.jpg', '', 'https://vikingfile.com/d/enHeTmFpr8/French.doi
+https://vikingfile.com/d/GuYzVOj4Aq/English.doi
+https://vikingfile.com/d/4LfOttw4sv/hh5757.DR-GameDrive.Org.part1.rar', '', 'http://localhost:5050/uploads/037d74e8c34143f491c7d33325f39a5f.jpg
 http://localhost:5050/uploads/a1eb878f600d49d0919de2ac0e424ac2.jpg
 http://localhost:5050/uploads/375500d0075247bbb8571ef539b806f6.jpg
 http://localhost:5050/uploads/d983aded5e914c369fc8b334512b31a9.webp', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#7c3aed', 0, 'game', '', '', '', '2026-06-18 23:32:49', 'Features
@@ -1912,7 +1979,25 @@ Game Size: 171 GB
 Multiplayer By: 0xdeadc0de (OFME)
 Version: v1.688.109.0 | Full Version | All DLCs + Multiplayer
 Pre-Installed Game', '', '', '', '', '', '', '');
-INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (98, 'Call of Duty: Black Ops II', 'Action', 4.5, 0, 'Call of Duty: Black Ops 2 + multiplayer is a traditional first-person shooter that continues the events of the first part. Now you have to continue the war against terrorists, plunge into even more fateful events, and do much, much more The events of the game take place some time after the finale of the first part of “Black Ops”. Well, you will play for David Mason, the son of the protagonist of the previous game, Alex Mason. In his role, you will have to embark on another difficult mission, fight numerous terrorists', 'http://localhost:5050/uploads/5eaea66cb6904f07aec103f63196fcb8.jpg', '', 'https://ts.bzzhr.to/d/b65jhpnucnac?v=oRfH2VSBZat8sj5vI4VsUHJRGq5Oc1eUhcj8H6mJ0rV6nq7DuBdr8xY0TP5b8CDbf-cgc0xyqy8b-K79AnNPP1xE-jMZV36a-oqZGlP0t7IQSHqrfZG6eAJCjCtpO5aULlOMYyx42WPLM8bkJaQmlF8JQ_--sDrkkSDG-6nLARx0DcjjUdul2Q', '', 'http://localhost:5050/uploads/dd54cc9b74ad498d813a220ec7876dcc.jpg
+INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (98, 'Call of Duty: Black Ops II', 'Action', 4.5, 0, 'Call of Duty: Black Ops 2 + multiplayer is a traditional first-person shooter that continues the events of the first part. Now you have to continue the war against terrorists, plunge into even more fateful events, and do much, much more The events of the game take place some time after the finale of the first part of “Black Ops”. Well, you will play for David Mason, the son of the protagonist of the previous game, Alex Mason. In his role, you will have to embark on another difficult mission, fight numerous terrorists', 'http://localhost:5050/uploads/5eaea66cb6904f07aec103f63196fcb8.jpg', '', 'https://fuckingfast.co/2gmb42tcs4sd#Call_of_Duty_-_Black_Ops_2_--_fitgirl-repacks.site_--_.part01.rar
+https://fuckingfast.co/joow5mkn7m1d#Call_of_Duty_-_Black_Ops_2_--_fitgirl-repacks.site_--_.part02.rar
+https://fuckingfast.co/2fyulkxi8vrv#Call_of_Duty_-_Black_Ops_2_--_fitgirl-repacks.site_--_.part03.rar
+https://fuckingfast.co/r9o8vufhvida#Call_of_Duty_-_Black_Ops_2_--_fitgirl-repacks.site_--_.part04.rar
+https://fuckingfast.co/aeg9u98jxv3v#Call_of_Duty_-_Black_Ops_2_--_fitgirl-repacks.site_--_.part05.rar
+https://fuckingfast.co/ckfk3jn94xm6#Call_of_Duty_-_Black_Ops_2_--_fitgirl-repacks.site_--_.part06.rar
+https://fuckingfast.co/h3o0y0uslazz#Call_of_Duty_-_Black_Ops_2_--_fitgirl-repacks.site_--_.part07.rar
+https://fuckingfast.co/4fu7l3jvc3n3#Call_of_Duty_-_Black_Ops_2_--_fitgirl-repacks.site_--_.part08.rar
+https://fuckingfast.co/rhabdgg7vy3n#Call_of_Duty_-_Black_Ops_2_--_fitgirl-repacks.site_--_.part09.rar
+https://fuckingfast.co/ac6vblijbo1c#Call_of_Duty_-_Black_Ops_2_--_fitgirl-repacks.site_--_.part10.rar
+https://fuckingfast.co/loduwc2tzuiz#Call_of_Duty_-_Black_Ops_2_--_fitgirl-repacks.site_--_.part11.rar
+https://fuckingfast.co/00ynj3cohmap#Call_of_Duty_-_Black_Ops_2_--_fitgirl-repacks.site_--_.part12.rar
+https://fuckingfast.co/4olbofnaf7ho#Call_of_Duty_-_Black_Ops_2_--_fitgirl-repacks.site_--_.part13.rar
+https://fuckingfast.co/7ff1lj57pjid#Call_of_Duty_-_Black_Ops_2_--_fitgirl-repacks.site_--_.part14.rar
+https://fuckingfast.co/g0ywxau9ee6g#Call_of_Duty_-_Black_Ops_2_--_fitgirl-repacks.site_--_.part15.rar
+https://fuckingfast.co/l0vcwq11llyw#Call_of_Duty_-_Black_Ops_2_--_fitgirl-repacks.site_--_.part16.rar
+https://fuckingfast.co/vc89w9z1uc68#fg-selective-english.part1.rar
+https://fuckingfast.co/wf2u054fc8s0#fg-selective-english.part2.rar
+https://fuckingfast.co/83b1f2y35rsp#fg-selective-english.part3.rar', '', 'http://localhost:5050/uploads/dd54cc9b74ad498d813a220ec7876dcc.jpg
 http://localhost:5050/uploads/d14ad91bee6746ea8b184598b336e251.jpg', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#09090b', 0, 'game', '', '', '', '2026-06-18 23:38:09', 'GAME INFO
 Genre: Action
 Developer: Treyarch
@@ -1922,8 +2007,9 @@ Released By: PLAZA
 Version: Build 65428 | Full Version
 Pre-Installed Game
 Password: steamrip.com', '', '', '', '', '', '', '');
-INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (99, 'Hogwarts Legacy Deluxe Edition', 'Action, Adventure, RPG', 4.5, 0, 'Hogwarts Legacy is an open-world action RPG set in the world first introduced in the Harry Potter books. Embark on a journey through familiar and new locations as you explore and discover magical beasts, customize your character and craft potions, master spell casting, upgrade talents and become the wizard you want to be. Experience Hogwarts in the 1800s. J.K Rowling pc game hogwarts is here finally.
-Your character is a student who holds the key to an ancient secret that threatens to tear the wizarding world apart. Make allies, battle Dark wizards, and ultimately decide the fate of the wizarding world. Your legacy is what you make of it. Live the Unwritten. DIG – Deep In Galaxies', 'http://localhost:5050/uploads/1ed7fd938b304a78b357674e098083f6.jpg', '', 'https://ts.bzzhr.to/d/sqsvm6qwnpnf?v=urm5Qb6vdu2EOR_zKMRTFMChk8sG2faJfp5BFdaBXWcleD5-Uo-O6x31uHY8kARyEkeN_cfV5XjDyFaun_bjomVul3fmKDiY1rOGZdVmhj2C-zHO1erKoKsneDlksMfZ7YyTXksV2eKcgAwZ4o3czjKqdbMUloassmO9LWIWWa1YpWbxcmyfwUPmvnASdYX6sCUmnzEAcHnZSw', 'https://youtu.be/1O6Qstncpnc?si=A2dgV723bYbgVSF8', 'http://localhost:5050/uploads/bbb4cef8e18748d3b8b481471bd6a945.jpeg
+INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (99, 'Hogwarts Legacy Deluxe Edition', 'Action, Adventure, RPG, Hypervisor', 4.5, 0, 'Hogwarts Legacy is an open-world action RPG set in the world first introduced in the Harry Potter books. Embark on a journey through familiar and new locations as you explore and discover magical beasts, customize your character and craft potions, master spell casting, upgrade talents and become the wizard you want to be. Experience Hogwarts in the 1800s. J.K Rowling pc game hogwarts is here finally.
+Your character is a student who holds the key to an ancient secret that threatens to tear the wizarding world apart. Make allies, battle Dark wizards, and ultimately decide the fate of the wizarding world. Your legacy is what you make of it. Live the Unwritten. DIG – Deep In Galaxies', 'http://localhost:5050/uploads/1ed7fd938b304a78b357674e098083f6.jpg', '', 'https://vikingfile.com/d/l4pr63Ki1R/990080.B20773316.CSF-Games4U.Org.part1.rar
+https://vikingfile.com/d/beBPGQ0wBi/990080.B20773316.CSF-Games4U.Org.part2.rar', 'https://youtu.be/1O6Qstncpnc?si=A2dgV723bYbgVSF8', 'http://localhost:5050/uploads/bbb4cef8e18748d3b8b481471bd6a945.jpeg
 http://localhost:5050/uploads/a52121d4a45e4f93a068014ad1888b9c.jpg
 http://localhost:5050/uploads/17b54c460faa4bfeb0b2c1d200704afb.jpg
 http://localhost:5050/uploads/9bce99fd70684a64a3b987f6958251cf.jpg', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#bfdbfe', 0, 'game', '', '', '', '2026-06-18 23:42:57', 'GAME INFO
@@ -1943,7 +2029,9 @@ Gather your party. Take the adventure online as a party of up to four. Abducted,
 
 Forged with the new Divinity 4.0 engine, Baldur’s Gate 3 gives you unprecedented freedom to explore, experiment, and interact with a thriving world filled with characters, dangers, and deceit. A grand, cinematic narrative brings you closer to your characters than ever before. From shadow-cursed forests, to the magical caverns of the Underdark, to the sprawling city of Baldur’s Gate itself, your actions define the adventure, but your choices define your legacy. You will be remembered.
 
-The Forgotten Realms are a vast, detailed, and diverse world, and there are secrets to be discovered all around you – verticality is a vital part of exploration. Sneak, dip, shove, climb, and jump as you journey from the depths of the Underdark to the glittering rooftops of Baldur’s Gate. Every choice you make drives your story forward, each decision leaving your mark on the world. Define your legacy, nurture relationships and create enemies, and solve problems your way. No two playthroughs will ever be the same.', 'http://localhost:5050/uploads/0599f89132a0473c891925dab99305c8.jpg', '', 'https://ts.bzzhr.to/d/g2c2uubvr8mt?v=ZmN3f4Gi_lYy_3WaSbjp-dG_DeBZIyTlmV-souXJIj6_-C_o_JWAP7Di4bPLqa1H_LpZcNT4NVT0CBL2h0HmWSRJvdaCDjnO149BwAWWfIjSZmYmfhdcUgv4pOWOv1toUrsXLEsJEl82oVooI-AKCH68kng0Q9fIZE0J73_AxjfSgQhhrT9dIklv_xp3VpVj-NU', 'https://youtu.be/1T22wNvoNiU?si=Ntli36jWws55ialW', 'http://localhost:5050/uploads/91db3a2332d4453c9daa7c0d8d859174.webp
+The Forgotten Realms are a vast, detailed, and diverse world, and there are secrets to be discovered all around you – verticality is a vital part of exploration. Sneak, dip, shove, climb, and jump as you journey from the depths of the Underdark to the glittering rooftops of Baldur’s Gate. Every choice you make drives your story forward, each decision leaving your mark on the world. Define your legacy, nurture relationships and create enemies, and solve problems your way. No two playthroughs will ever be the same.', 'http://localhost:5050/uploads/0599f89132a0473c891925dab99305c8.jpg', '', 'https://ffdl.cybar.to/m0wp2x66dq2a
+https://ffdl.cybar.to/urujq9l3j1eo
+https://ffdl.cybar.to/wmeecqrh6l00', 'https://youtu.be/1T22wNvoNiU?si=Ntli36jWws55ialW', 'http://localhost:5050/uploads/91db3a2332d4453c9daa7c0d8d859174.webp
 http://localhost:5050/uploads/11e3eeae357a4034aa2b8969a005c8ac.webp
 http://localhost:5050/uploads/533da9210eae42368162f613c05400c1.webp
 http://localhost:5050/uploads/e760cc92ed074614b2cc9d91c4033a49.webp
@@ -1954,7 +2042,9 @@ Game Size: 123 GB
 Released By: RUNE emu
 Version: v4.1.1.6995620 | Full Version
 Pre-Installed Game', '', '', '', '', '', '', '');
-INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (101, 'Sekiro: Shadows Die Twice', 'Action, Adventure', 4.5, 0, 'Carve your own clever path to vengeance in the critically acclaimed adventure from developer FromSoftware, creators of the Dark Souls series. In Sekiro: Shadows Die Twice you are the ‘one-armed wolf’, a disgraced and disfigured warrior rescued from the brink of death. Bound to protect a young lord who is the descendant of an ancient bloodline, you become the target of many vicious enemies, including the dangerous Ashina clan.', 'http://localhost:5050/uploads/a155333508ee40eb88da90870530b315.jpg', '', 'https://ts.bzzhr.to/d/bpf4xp9ptrlv?v=BerNxzdkDvIIZ_QFWc9jjxDOMmrx604i7oVIL4XXDvl5z2e3XIZLU17ppPJ4iARAebT8iCnkmAPOjPvhHNMVPfITqaanj8c8hqO1PfSVb-B7QGFEH2Mx9tQlsAuknH0fHvG9dXimzViiydsppKNMAJ_h1bIdO6tELW4Gpy8QrNeEFOXdkC1B_v0JR83_VayZSuVCHFS8uaHV8aiVdI4C0SnVKnd0rw', 'https://youtu.be/rXMX4YJ7Lks?si=j0668sF9SPUrbBvu', 'http://localhost:5050/uploads/334f1f7f14744b56b8c937a8db1fea3b.jpg
+INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (101, 'Sekiro: Shadows Die Twice', 'Action, Adventure', 4.5, 0, 'Carve your own clever path to vengeance in the critically acclaimed adventure from developer FromSoftware, creators of the Dark Souls series. In Sekiro: Shadows Die Twice you are the ‘one-armed wolf’, a disgraced and disfigured warrior rescued from the brink of death. Bound to protect a young lord who is the descendant of an ancient bloodline, you become the target of many vicious enemies, including the dangerous Ashina clan.', 'http://localhost:5050/uploads/a155333508ee40eb88da90870530b315.jpg', '', 'https://vikingfile.com/d/HBwtlCZMjL/f34.FR-GameDrive.Org.rar
+https://vikingfile.com/d/aCaLMCuzBR/fg-optional-bonus-content.bin
+https://vikingfile.com/d/v3CbZxsDhX/fg-selective-english.bin', 'https://youtu.be/rXMX4YJ7Lks?si=j0668sF9SPUrbBvu', 'http://localhost:5050/uploads/334f1f7f14744b56b8c937a8db1fea3b.jpg
 http://localhost:5050/uploads/1984c8ecbf4341a28a93f5c0548d8140.jpg
 http://localhost:5050/uploads/698ee459af944eabbc8c59ecffcc0a21.jpg
 http://localhost:5050/uploads/4bf7f5e3c1464c9a957a7892ed001c59.jpg', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#fed7aa', 0, 'game', '', '', '', '2026-06-18 23:53:34', 'GAME INFO
@@ -1965,14 +2055,14 @@ Game Size: 13.2 GB
 Repack By: GOG
 Version: v1.06 (Game of the Year Edition) | Updated Version + 2 DLC
 Pre-Installed Game', '', '', '', '', '', '', '');
-INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (102, 'Red Dead Redemption', 'Action', 4.5, 0, 'Red Dead Redemption Direct Download
+INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (102, 'Red Dead Redemption', 'Action', 4.5, 1, 'Red Dead Redemption Direct Download
 It’s a strange time for PC gamers. After a long 14-year wait, Red Dead Redemption finally arrives on PC, only to be met with a hefty price tag. This is particularly odd considering its more recent and expansive sequel, Red Dead Redemption 2, is currently on sale for a significantly lower price.
 
 While both games offer unique Western experiences, the pricing disparity is hard to ignore. It seems counterintuitive to charge nearly as much for an older game, especially when it’s not even bundled with additional content or significant enhancements. The Smurfs – Dreams
 
 This isn’t the first time Rockstar has taken a similar approach with its PC ports. GTA titles, for instance, often have a lengthy wait before their PC releases, and when they do arrive, they’re usually full price. This practice, along with the occasional technical hiccup, can frustrate many PC gamers.
 
-While Red Dead Redemption is undoubtedly a classic, its pricing strategy raises questions about fair value and consumer expectations. As PC gaming continues to grow, it’s crucial for developers and publishers to strike a balance between nostalgia and modern market practices.', 'http://localhost:5050/uploads/167cd1ae4abf48b29590285b47542148.webp', '', 'https://ts.bzzhr.to/d/hy0e51nhccrk?v=vjSCd2X4CshWZlsnq76evuihysM6x6sPyIGL38Yq-X-12jkmtw8ngDQPWOQFNYtdbdjDG4G3qvGAkF5QNsseFU-EuAVBWJbsSqTCd9unMSh7GpJUyhRwFNXtZZUj1m4HbiT6YR0VUJ9JFM9H4kZmM-k7cVdo93qBsyfk5Z_3', 'https://youtu.be/wumxYqok3bQ?si=kTvdiOuhoTXBIFYH', 'http://localhost:5050/uploads/3fae706588c4444b8e056d7f6960de0e.jpg
+While Red Dead Redemption is undoubtedly a classic, its pricing strategy raises questions about fair value and consumer expectations. As PC gaming continues to grow, it’s crucial for developers and publishers to strike a balance between nostalgia and modern market practices.', 'http://localhost:5050/uploads/167cd1ae4abf48b29590285b47542148.webp', '', 'https://ffdl.cybar.to/7p67cpgwz3tc', 'https://youtu.be/wumxYqok3bQ?si=kTvdiOuhoTXBIFYH', 'http://localhost:5050/uploads/3fae706588c4444b8e056d7f6960de0e.jpg
 http://localhost:5050/uploads/52f2bb9b159e4eee8f5ee7d524624762.jpg
 http://localhost:5050/uploads/20fd3b51d0354577b36c1be4d97d6f5a.webp
 http://localhost:5050/uploads/4bc90dedc7c043509214f9a7a292584c.jpg
@@ -1987,11 +2077,90 @@ Version: v1.0.42.46611 | Full Version
 Pre-Installed Game', '', '', '', '', '', '', '');
 INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (103, 'FIFA 23 Ultimate Edition', 'Sports', 4.5, 0, 'Experience the pinnacle of women’s international football in EA SPORTS FIFA 23 with the FIFA Women’s World Cup Australia and New Zealand 2023 available on June 27th at no additional cost*. Rep your country’s colors and live the tournament in the most immersive EA SPORTS FIFA Women’s World Cup experience yet, complete with each of the 32 qualified nations, custom stadium dressings, cinematics, match presentations, dedicated commentary, and of course, the authentic trophy to hoist at the end. Don Duality
 
-EA SPORTS FIFA 23 brings The World’s Game to the pitch, with HyperMotion2 Technology that delivers even more gameplay realism, both the men’s and women’s FIFA World Cup coming to the game as post-launch updates, the addition of women’s club teams, cross-play features**, and more. Experience unrivaled authenticity with over 19,000 players, 700+ teams, 100 stadiums, and over 30 leagues in FIFA 23.', 'http://localhost:5050/uploads/b9154bc1ba044eaebf9fed4ee65d691d.webp', '', 'https://ts.bzzhr.to/d/zmasjuexf733?v=wGfKCNXOwZfVyl8DUjdYgY4m3WP4mlB-pLJUNdAoZpWEVibsnThT_IUl_pO4I8fmD7E9EIv1DaOz3CHPR19RYt8rllOkeaVYb63ZkzOu2WOPXD25YFsnPcqzitOyzoLRDtNViujs7XMbUkEqdGV6kH9832ZM6JcFO5pt9BWlJtgREw', 'https://youtu.be/o3V-GvvzjE4?si=vKxZ-cYDYfIStSU4', 'http://localhost:5050/uploads/e11371bfeaad41c088174c1941c61451.jpg
+EA SPORTS FIFA 23 brings The World’s Game to the pitch, with HyperMotion2 Technology that delivers even more gameplay realism, both the men’s and women’s FIFA World Cup coming to the game as post-launch updates, the addition of women’s club teams, cross-play features**, and more. Experience unrivaled authenticity with over 19,000 players, 700+ teams, 100 stadiums, and over 30 leagues in FIFA 23.', 'http://localhost:5050/uploads/b9154bc1ba044eaebf9fed4ee65d691d.webp', '', 'https://fuckingfast.co/fpr2096aojov#FIFA_23_--_fitgirl-repacks.site_--_.part01.rar
+https://fuckingfast.co/am9j48jte45d#FIFA_23_--_fitgirl-repacks.site_--_.part02.rar
+https://fuckingfast.co/o6g8e8r99z04#FIFA_23_--_fitgirl-repacks.site_--_.part03.rar
+https://fuckingfast.co/fayocne3v1hc#FIFA_23_--_fitgirl-repacks.site_--_.part04.rar
+https://fuckingfast.co/p1otwpqndryh#FIFA_23_--_fitgirl-repacks.site_--_.part05.rar
+https://fuckingfast.co/x32y6xakxt20#FIFA_23_--_fitgirl-repacks.site_--_.part06.rar
+https://fuckingfast.co/2uyn7jaturz8#FIFA_23_--_fitgirl-repacks.site_--_.part07.rar
+https://fuckingfast.co/i9kwmctl8clk#FIFA_23_--_fitgirl-repacks.site_--_.part08.rar
+https://fuckingfast.co/mzs1ar7idmvo#FIFA_23_--_fitgirl-repacks.site_--_.part09.rar
+https://fuckingfast.co/urhfqnj81fxe#FIFA_23_--_fitgirl-repacks.site_--_.part10.rar
+https://fuckingfast.co/bmrjv2f9xvm4#FIFA_23_--_fitgirl-repacks.site_--_.part11.rar
+https://fuckingfast.co/adu39v8pc1nk#FIFA_23_--_fitgirl-repacks.site_--_.part12.rar
+https://fuckingfast.co/a2z8mb4ww93f#FIFA_23_--_fitgirl-repacks.site_--_.part13.rar
+https://fuckingfast.co/rd0ww6m95uab#FIFA_23_--_fitgirl-repacks.site_--_.part14.rar
+https://fuckingfast.co/vc43dh90mins#FIFA_23_--_fitgirl-repacks.site_--_.part15.rar
+https://fuckingfast.co/4ag0cxprw6mo#FIFA_23_--_fitgirl-repacks.site_--_.part16.rar
+https://fuckingfast.co/emvcatvjylyw#FIFA_23_--_fitgirl-repacks.site_--_.part17.rar
+https://fuckingfast.co/63wqm7m6gzxo#FIFA_23_--_fitgirl-repacks.site_--_.part18.rar
+https://fuckingfast.co/naf8qbao7r0n#FIFA_23_--_fitgirl-repacks.site_--_.part19.rar
+https://fuckingfast.co/kj93un0xcf3y#FIFA_23_--_fitgirl-repacks.site_--_.part20.rar
+https://fuckingfast.co/5lkanzni6fmf#FIFA_23_--_fitgirl-repacks.site_--_.part21.rar
+https://fuckingfast.co/npwumpmmrg5l#FIFA_23_--_fitgirl-repacks.site_--_.part22.rar
+https://fuckingfast.co/zfof1xb842p8#FIFA_23_--_fitgirl-repacks.site_--_.part23.rar
+https://fuckingfast.co/e1jumd9du3dv#FIFA_23_--_fitgirl-repacks.site_--_.part24.rar
+https://fuckingfast.co/fdh8u4qfwdqs#FIFA_23_--_fitgirl-repacks.site_--_.part25.rar
+https://fuckingfast.co/w8ar0se9qqsz#FIFA_23_--_fitgirl-repacks.site_--_.part26.rar
+https://fuckingfast.co/8zm9valetka4#FIFA_23_--_fitgirl-repacks.site_--_.part27.rar
+https://fuckingfast.co/ip7enw79bwrz#FIFA_23_--_fitgirl-repacks.site_--_.part28.rar
+https://fuckingfast.co/j9zy81js5wxa#FIFA_23_--_fitgirl-repacks.site_--_.part29.rar
+https://fuckingfast.co/4e00cbqfn3si#FIFA_23_--_fitgirl-repacks.site_--_.part30.rar
+https://fuckingfast.co/3upsy7ugmge3#FIFA_23_--_fitgirl-repacks.site_--_.part31.rar
+https://fuckingfast.co/r9kzf0ncgzfh#FIFA_23_--_fitgirl-repacks.site_--_.part32.rar
+https://fuckingfast.co/q6ajo981g1fj#FIFA_23_--_fitgirl-repacks.site_--_.part33.rar
+https://fuckingfast.co/deovaupy2qti#FIFA_23_--_fitgirl-repacks.site_--_.part34.rar
+https://fuckingfast.co/3exvxvkl8xno#FIFA_23_--_fitgirl-repacks.site_--_.part35.rar
+https://fuckingfast.co/uclalsz16ywa#FIFA_23_--_fitgirl-repacks.site_--_.part36.rar
+https://fuckingfast.co/kufxujebzeug#FIFA_23_--_fitgirl-repacks.site_--_.part37.rar
+https://fuckingfast.co/ikbz45152kks#FIFA_23_--_fitgirl-repacks.site_--_.part38.rar
+https://fuckingfast.co/lmfo5c4e8j7a#FIFA_23_--_fitgirl-repacks.site_--_.part39.rar
+https://fuckingfast.co/r1c62ml0ypfm#FIFA_23_--_fitgirl-repacks.site_--_.part40.rar
+https://fuckingfast.co/qlowot5dnmtv#FIFA_23_--_fitgirl-repacks.site_--_.part41.rar
+https://fuckingfast.co/bthmn4i5cmkh#FIFA_23_--_fitgirl-repacks.site_--_.part42.rar
+https://fuckingfast.co/nv1z5y7yh3sq#FIFA_23_--_fitgirl-repacks.site_--_.part43.rar
+https://fuckingfast.co/fvwj21ruypbm#FIFA_23_--_fitgirl-repacks.site_--_.part44.rar
+https://fuckingfast.co/5875fqwaaie7#FIFA_23_--_fitgirl-repacks.site_--_.part45.rar
+https://fuckingfast.co/5875fqwaaie7#FIFA_23_--_fitgirl-repacks.site_--_.part45.rar
+https://fuckingfast.co/oc3w7pxm3nky#FIFA_23_--_fitgirl-repacks.site_--_.part47.rar
+https://fuckingfast.co/5urj5kwbpv2s#FIFA_23_--_fitgirl-repacks.site_--_.part48.rar
+https://fuckingfast.co/jgiqmm0vxqtb#FIFA_23_--_fitgirl-repacks.site_--_.part49.rar
+https://fuckingfast.co/xzvzodvsv4te#FIFA_23_--_fitgirl-repacks.site_--_.part50.rar
+https://fuckingfast.co/jn5kcrt9tv60#FIFA_23_--_fitgirl-repacks.site_--_.part51.rar
+https://fuckingfast.co/fwxx3wz3z0rz#FIFA_23_--_fitgirl-repacks.site_--_.part52.rar
+https://fuckingfast.co/877hqbp024hu#FIFA_23_--_fitgirl-repacks.site_--_.part53.rar
+https://fuckingfast.co/8r9yrcrk3r2f#FIFA_23_--_fitgirl-repacks.site_--_.part54.rar
+https://fuckingfast.co/pk3vanyq2f6k#FIFA_23_--_fitgirl-repacks.site_--_.part55.rar
+https://fuckingfast.co/gjcef57g842k#FIFA_23_--_fitgirl-repacks.site_--_.part56.rar
+https://fuckingfast.co/amb8foru4a9h#FIFA_23_--_fitgirl-repacks.site_--_.part57.rar
+https://fuckingfast.co/j1ve2p7r9k9j#FIFA_23_--_fitgirl-repacks.site_--_.part58.rar
+https://fuckingfast.co/jkhh2vhccn5e#FIFA_23_--_fitgirl-repacks.site_--_.part59.rar
+https://fuckingfast.co/bw8im7it81ne#FIFA_23_--_fitgirl-repacks.site_--_.part60.rar
+https://fuckingfast.co/pr5ifhzt3n55#FIFA_23_--_fitgirl-repacks.site_--_.part61.rar
+https://fuckingfast.co/m3jo8gvl9xt5#FIFA_23_--_fitgirl-repacks.site_--_.part62.rar
+https://fuckingfast.co/s5h1r1s6scu1#FIFA_23_--_fitgirl-repacks.site_--_.part63.rar
+https://fuckingfast.co/cpuzkvf4xl21#FIFA_23_--_fitgirl-repacks.site_--_.part64.rar
+https://fuckingfast.co/bcu8lt7ulxu2#FIFA_23_--_fitgirl-repacks.site_--_.part65.rar
+https://fuckingfast.co/doku0lkbxa2o#FIFA_23_--_fitgirl-repacks.site_--_.part66.rar
+https://fuckingfast.co/oxssfrtrpmvm#FIFA_23_--_fitgirl-repacks.site_--_.part67.rar
+https://fuckingfast.co/fm143irmu0re#FIFA_23_--_fitgirl-repacks.site_--_.part68.rar
+https://fuckingfast.co/su2qkk3lgbhy#FIFA_23_--_fitgirl-repacks.site_--_.part69.rar
+https://fuckingfast.co/l8s2jkik78ja#FIFA_23_--_fitgirl-repacks.site_--_.part70.rar
+https://fuckingfast.co/jvel72nydcvz#FIFA_23_--_fitgirl-repacks.site_--_.part71.rar
+https://fuckingfast.co/hpfk43e8izxr#FIFA_23_--_fitgirl-repacks.site_--_.part72.rar
+https://fuckingfast.co/ayvprlf5j42q#FIFA_23_--_fitgirl-repacks.site_--_.part73.rar
+https://fuckingfast.co/5vsvdl1thmsz#FIFA_23_--_fitgirl-repacks.site_--_.part74.rar
+https://fuckingfast.co/9mfc2sblx38v#FIFA_23_--_fitgirl-repacks.site_--_.part75.rar
+https://fuckingfast.co/8n2ymqqdph62#FIFA_23_--_fitgirl-repacks.site_--_.part76.rar
+https://fuckingfast.co/f7ive2okm6di#FIFA_23_--_fitgirl-repacks.site_--_.part77.rar
+https://fuckingfast.co/ryb35bhtrwf7#FIFA_23_--_fitgirl-repacks.site_--_.part78.rar
+https://fuckingfast.co/wpnehwp8o7pf#FIFA_23_--_fitgirl-repacks.site_--_.part79.rar
+https://fuckingfast.co/e0pgh6pew2yn#fg-optional-bonus-osts.bin', 'https://youtu.be/o3V-GvvzjE4?si=vKxZ-cYDYfIStSU4', 'http://localhost:5050/uploads/e11371bfeaad41c088174c1941c61451.jpg
 http://localhost:5050/uploads/96420c72a2634fa9a4e7ea48056cd5d2.jpg
 http://localhost:5050/uploads/22acda0f23db437abd92eaa51ac80561.jpg
 http://localhost:5050/uploads/0533bd28bfa04489bd22f63223f0971f.webp
-http://localhost:5050/uploads/bb2d4d24ee9e4639a367af91c84c09ca.jpg', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#f4f4f5', 0, 'game', '', '', '', '2026-06-19 00:03:47', 'GAME INFO
+http://localhost:5050/uploads/bb2d4d24ee9e4639a367af91c84c09ca.jpg', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#eab308', 0, 'game', '', '', '', '2026-06-19 00:03:47', 'GAME INFO
 Genre: Simulation, Sports
 Developer: EA Canada & EA Romania
 Platform: PC
@@ -2000,7 +2169,8 @@ Released By: MKDEV
 Version: v1.0.82.43747 | Full Version + All DLCs + World Cup LE
 Pre-Installed Game', '', '', '', '', '', '', '');
 INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (104, 'Forza Horizon 4', 'Racing', 4.5, 0, 'Forza Horizon 4 is one of the best racing simulators in our time. You will find a huge open world of Great Britain, an incredible number of licensed tracks, a sea of ​​cars and such gameplay opportunities that have never been in any simulator Dynamic seasons change everything at the world’s greatest automotive festival. Go it alone or team up with others to explore beautiful and historic Britain in a shared open world. Collect, modify and drive over 450 cars. Race, stunt, create and explore – choose your own path to become a Horizon Superstar.
-GAL GUN', 'http://localhost:5050/uploads/39efb14966c844d29bb74cd67dc163e9.jpg', '', 'https://ts.bzzhr.to/d/wfcfmh0efld4?v=rNuFHA_pWAvw-Ik7UXyRmpbMRgFKG6Ti1oorncz67rE4Klh9OU4WleBg99h3SY67xoUBFlm0kqzrmiMaDtXilGuo2m0XdS5isf7LZzzs5G2TQM2Xioi6KftYix01fHklZ3V-lcA9ply9WVQJKXfUK5Yd-9835Qn8tkEcAg', 'https://youtu.be/5xy4n73WOMM?si=5CqX-4UOglF2BJdL', 'http://localhost:5050/uploads/2a5d8b24f5f2407089d6032eb8149a2e.jpg
+GAL GUN', 'http://localhost:5050/uploads/39efb14966c844d29bb74cd67dc163e9.jpg', '', 'https://vikingfile.com/d/C444ixgUqp/n546.ER-GameDrive.Org.part1.rar
+https://vikingfile.com/d/uj7q8XZlDj/n546.ER-GameDrive.Org.part2.rar', 'https://youtu.be/5xy4n73WOMM?si=5CqX-4UOglF2BJdL', 'http://localhost:5050/uploads/2a5d8b24f5f2407089d6032eb8149a2e.jpg
 http://localhost:5050/uploads/61397870ab1c4cfea9168c73de4a229d.webp
 http://localhost:5050/uploads/5cd6b9fc987f4e01ac9359df3cf53593.jpg
 http://localhost:5050/uploads/945d850867664972bde68d50a1504825.jpg', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#fed7aa', 0, 'game', '', '', '', '2026-06-19 00:07:54', 'GAME INFO
@@ -2011,7 +2181,8 @@ Game Size: 94.6 GB
 Multiplayer By: 0xdeadc0de
 Version: v1.478.564.0 (Ultimate Edition) | Full Version (Latest) + all 61 DLCs
 Pre-Installed Game', '', '', '', '', '', '', '');
-INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (105, 'HITMAN 3 Free', 'Action', 4.5, 0, 'Death is waiting. Agent 47 returns in Hitman 3, the spectacular conclusion to the World of Assassins trilogy. From the very beginning, players have access to all locations from the previous two games, and it is also possible to transfer all their progress from the second part, including all items and completed contracts. The third part again offers extensive locations, “sandboxes“, in which the Forty-seventh g seek and eliminate his targets using a variety of methods, while simultaneously trying not to be seen by the guards', 'http://localhost:5050/uploads/3315fe97b094448380fc4c71258aa541.jpg', '', 'https://ts.bzzhr.to/d/460f77z988sq?v=URFAZ2IBnpJdCohNfmwhlCKIy9XZpzFTGZ5HCc33gfblJl75ckXQwhnjS8AhhncpQN2l92a8wsdbGKDHdnWfjPu660vJaNTbs-gfFvAsBSc1JzFlFYVzw7fcjCVWrCee9FqOTys_1iGn1YzDX7unEc6A41KfUSYHW_JZCDom3kKVbl1mR1E', 'https://youtu.be/avAXhnbs69w?si=lT3x5VrmAK2PXVO5', 'http://localhost:5050/uploads/f829360484aa4791a369f7ba5034e738.webp
+INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (105, 'HITMAN 3 Free', 'Action', 4.5, 0, 'Death is waiting. Agent 47 returns in Hitman 3, the spectacular conclusion to the World of Assassins trilogy. From the very beginning, players have access to all locations from the previous two games, and it is also possible to transfer all their progress from the second part, including all items and completed contracts. The third part again offers extensive locations, “sandboxes“, in which the Forty-seventh g seek and eliminate his targets using a variety of methods, while simultaneously trying not to be seen by the guards', 'http://localhost:5050/uploads/3315fe97b094448380fc4c71258aa541.jpg', '', 'https://vikingfile.com/d/7J0haJ3TXH/21432456y5.ER-GameDrive.Org.part1.rar
+https://vikingfile.com/d/6ZCPmDQkmC/21432456y5.ER-GameDrive.Org.part2.rar', 'https://youtu.be/avAXhnbs69w?si=lT3x5VrmAK2PXVO5', 'http://localhost:5050/uploads/f829360484aa4791a369f7ba5034e738.webp
 http://localhost:5050/uploads/27fbf7342a9447a7a0dd1dd417df11b5.jpg
 http://localhost:5050/uploads/0c361748b9134abea88fa7fcf316593d.jpg
 http://localhost:5050/uploads/0a1c565516e24028b220e90d15b3fdc1.webp
@@ -2035,7 +2206,8 @@ Call of Duty: Black Ops III follows up on the events of Call of Duty: Black Ops 
 
 After the Drone Strikes of 2025, ground combat is once again the focus of military strategy, with bi-pedal combat robots and drones fighting alongside human infantry. Elite Black Ops soldiers have been embedded with a direct neural interface (DNI) that let them communicate with robotics and net-connected weaponry, in addition to other cybernetic bio-augmentations such as super-powered prosthetic limbs.
 
-Get Free Stea', 'http://localhost:5050/uploads/85b4ab51703f4b6e9e1c43d59284f17d.png', '', 'https://ts.bzzhr.to/d/09yqw19no4do?v=eCkGS2IJOTkc1Q2yKrM5lwbGK0GniBXxUdQLLzE_oLC5LSIfmpSnlkygNygqx26iXyJ0MQ-WnPGt1pB4t0_G5Uc0MTghDAF_Yzxny1S8MWBSyl271KEG9UxMkdbWbWzx8nyQ19ukup25VN4f5H41P5C9gJl2SgY-jtcR3xDUhICQmGSSlf_KwUDDwYROLA', 'https://youtu.be/qAUYNIDEJ6o?si=oCtkKgonfncR4Ca0', 'http://localhost:5050/uploads/f42c295861f5455199c60caee37395bc.jpg
+Get Free Stea', 'http://localhost:5050/uploads/85b4ab51703f4b6e9e1c43d59284f17d.png', '', 'https://vikingfile.com/d/dFhUmoZGof/04h70175g.FR-GameDrive.Org.rar
+https://vikingfile.com/d/Noho9Mh2tR/fg-optional-zombies-selective-english.bin', 'https://youtu.be/qAUYNIDEJ6o?si=oCtkKgonfncR4Ca0', 'http://localhost:5050/uploads/f42c295861f5455199c60caee37395bc.jpg
 http://localhost:5050/uploads/c0dea38b69b74099b32ef92827515053.jpg
 http://localhost:5050/uploads/3af0d8196d334221ac6b36c347ab69f8.webp
 http://localhost:5050/uploads/38d1719c3de54f44835dfd9665f0a103.webp
@@ -2055,7 +2227,53 @@ Repack By: PROPER
 Version: v100.2.2.124.0 | Full version + all add-ons + Multiplayer (bots / splitscreen) + Zombie mode
 Pre-Installed Game
 GOFILE', '', '', '', '', '', '', '');
-INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (107, 'Devil May Cry 5', 'Action', 4.5, 0, 'The Devil you know returns in this brand new entry in the over-the-top action series available on the PC. Prepare to get downright demonic with this signature blend of high-octane stylized action and otherworldly & original characters the series is known for. Director Hideaki Itsuno and the core team have returned to create the most insane, technically advanced and utterly unmissable action experience of this generation.', 'http://localhost:5050/uploads/e925b180f59d400baec39d7bb78ef40d.jpg', '', 'https://ts.bzzhr.to/d/em6rab3aenfq?v=j_XeEhq1ojfPI9QHFANhwlif59eqCijuPJkFg25nYzAzK6SCcUL7pQ10nU1zNA5LltgLwPDqtJ_LvYCwH-EBY5dv5Q94fetieDSdcXhAp4L-4rzUOaWk2327LC_e4l_v5TDCtUKSNPVGrcOovm1s6B2434WGbKAeK4UH9ZGKbfsWIJ3FWidkKtW8seUb6l-AUiwhgA', 'https://youtu.be/KMSGj9Y2T9Q?si=HRJXKtHnhb9UbGCd', 'http://localhost:5050/uploads/9777cdabce4d4fd49f424d97f7e8833c.jpg
+INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (107, 'Devil May Cry 5', 'Action', 4.5, 0, 'The Devil you know returns in this brand new entry in the over-the-top action series available on the PC. Prepare to get downright demonic with this signature blend of high-octane stylized action and otherworldly & original characters the series is known for. Director Hideaki Itsuno and the core team have returned to create the most insane, technically advanced and utterly unmissable action experience of this generation.', 'http://localhost:5050/uploads/e925b180f59d400baec39d7bb78ef40d.jpg', '', 'https://fuckingfast.co/v1klr6jo2jxk#Devil_May_Cry_5_--_fitgirl-repacks.site_--_.part01.rar
+https://fuckingfast.co/6t126rq5j8lq#Devil_May_Cry_5_--_fitgirl-repacks.site_--_.part02.rar
+https://fuckingfast.co/66sgy8de9rqd#Devil_May_Cry_5_--_fitgirl-repacks.site_--_.part03.rar
+https://fuckingfast.co/6mhsj71k8zi6#Devil_May_Cry_5_--_fitgirl-repacks.site_--_.part04.rar
+https://fuckingfast.co/nx9w0ln38s8t#Devil_May_Cry_5_--_fitgirl-repacks.site_--_.part05.rar
+https://fuckingfast.co/4z2afpof89eo#Devil_May_Cry_5_--_fitgirl-repacks.site_--_.part06.rar
+https://fuckingfast.co/6ueln0j1n2qd#Devil_May_Cry_5_--_fitgirl-repacks.site_--_.part07.rar
+https://fuckingfast.co/cil9gvp9o2nd#Devil_May_Cry_5_--_fitgirl-repacks.site_--_.part08.rar
+https://fuckingfast.co/zqedwivvmdlm#Devil_May_Cry_5_--_fitgirl-repacks.site_--_.part09.rar
+https://fuckingfast.co/3wgpu0cufnyv#Devil_May_Cry_5_--_fitgirl-repacks.site_--_.part10.rar
+https://fuckingfast.co/1xf2juvafg6r#Devil_May_Cry_5_--_fitgirl-repacks.site_--_.part11.rar
+https://fuckingfast.co/cjt5zqke07gb#Devil_May_Cry_5_--_fitgirl-repacks.site_--_.part12.rar
+https://fuckingfast.co/r04ywplgfowe#Devil_May_Cry_5_--_fitgirl-repacks.site_--_.part13.rar
+https://fuckingfast.co/4j1boitv9fjt#Devil_May_Cry_5_--_fitgirl-repacks.site_--_.part14.rar
+https://fuckingfast.co/s8j1a5ivqcg3#Devil_May_Cry_5_--_fitgirl-repacks.site_--_.part15.rar
+https://fuckingfast.co/f1lkgnznfhnh#Devil_May_Cry_5_--_fitgirl-repacks.site_--_.part16.rar
+https://fuckingfast.co/z6vyq92nz66d#Devil_May_Cry_5_--_fitgirl-repacks.site_--_.part17.rar
+https://fuckingfast.co/d679lfodn6dc#Devil_May_Cry_5_--_fitgirl-repacks.site_--_.part18.rar
+https://fuckingfast.co/i019pge5b6g0#Devil_May_Cry_5_--_fitgirl-repacks.site_--_.part19.rar
+https://fuckingfast.co/9cen0oo0awkx#Devil_May_Cry_5_--_fitgirl-repacks.site_--_.part20.rar
+https://fuckingfast.co/dtqxg25fs0z7#Devil_May_Cry_5_--_fitgirl-repacks.site_--_.part21.rar
+https://fuckingfast.co/3oil09d6vf16#Devil_May_Cry_5_--_fitgirl-repacks.site_--_.part22.rar
+https://fuckingfast.co/zktj5khlw7vt#Devil_May_Cry_5_--_fitgirl-repacks.site_--_.part23.rar
+https://fuckingfast.co/ojegi1109ovl#Devil_May_Cry_5_--_fitgirl-repacks.site_--_.part24.rar
+https://fuckingfast.co/yyir9cogjkpo#Devil_May_Cry_5_--_fitgirl-repacks.site_--_.part25.rar
+https://fuckingfast.co/bpxv5x6hvjht#Devil_May_Cry_5_--_fitgirl-repacks.site_--_.part26.rar
+https://fuckingfast.co/fo9mqypwekje#Devil_May_Cry_5_--_fitgirl-repacks.site_--_.part27.rar
+https://fuckingfast.co/6986tio47jkx#Devil_May_Cry_5_--_fitgirl-repacks.site_--_.part28.rar
+https://fuckingfast.co/0nfl9ipn0aby#Devil_May_Cry_5_--_fitgirl-repacks.site_--_.part29.rar
+https://fuckingfast.co/e53zhm8sdjq1#Devil_May_Cry_5_--_fitgirl-repacks.site_--_.part30.rar
+https://fuckingfast.co/sk3uxjcb306h#Devil_May_Cry_5_--_fitgirl-repacks.site_--_.part31.rar
+https://fuckingfast.co/ecyl4hnkz1zw#Devil_May_Cry_5_--_fitgirl-repacks.site_--_.part32.rar
+https://fuckingfast.co/f25wnh3ie1lp#Devil_May_Cry_5_--_fitgirl-repacks.site_--_.part33.rar
+https://fuckingfast.co/ahsrga3i7h63#Devil_May_Cry_5_--_fitgirl-repacks.site_--_.part34.rar
+https://fuckingfast.co/58g144jag10d#Devil_May_Cry_5_--_fitgirl-repacks.site_--_.part35.rar
+https://fuckingfast.co/t70ddfsl3e0o#Devil_May_Cry_5_--_fitgirl-repacks.site_--_.part36.rar
+https://fuckingfast.co/xoa62d48i0we#Devil_May_Cry_5_--_fitgirl-repacks.site_--_.part37.rar
+https://fuckingfast.co/tzch1v3uhzv3#Devil_May_Cry_5_--_fitgirl-repacks.site_--_.part38.rar
+https://fuckingfast.co/1inzf00nahiy#Devil_May_Cry_5_--_fitgirl-repacks.site_--_.part39.rar
+https://fuckingfast.co/8oney1v1fcnn#Devil_May_Cry_5_--_fitgirl-repacks.site_--_.part40.rar
+https://fuckingfast.co/5qdrr74l5ran#Devil_May_Cry_5_--_fitgirl-repacks.site_--_.part42.rar
+https://fuckingfast.co/5qdrr74l5ran#Devil_May_Cry_5_--_fitgirl-repacks.site_--_.part42.rar
+https://fuckingfast.co/j24tlwi6s5dd#Devil_May_Cry_5_--_fitgirl-repacks.site_--_.part44.rar
+https://fuckingfast.co/s62lsh7qycc5#Devil_May_Cry_5_--_fitgirl-repacks.site_--_.part45.rar
+https://fuckingfast.co/dcr1a7tkzvxf#fg-selective-english.bin
+https://fuckingfast.co/q2mtvfqsbzo4#fg-selective-japanese.bin
+https://fuckingfast.co/63al48un5a1d#fg-optional-history-video.bin', 'https://youtu.be/KMSGj9Y2T9Q?si=HRJXKtHnhb9UbGCd', 'http://localhost:5050/uploads/9777cdabce4d4fd49f424d97f7e8833c.jpg
 http://localhost:5050/uploads/887b928471c14e01ac730742ba4535bd.jpg
 http://localhost:5050/uploads/b5e994ef76dd48a1836897079b95daf0.jpg
 http://localhost:5050/uploads/cf1f491815554180a63da67872a78e6f.jpg
@@ -2065,7 +2283,8 @@ Groundbreaking graphics – Developed with Capcom’s in-house proprietary RE en
 Take down the demonic invasion – Battle against epic bosses in adrenaline fueled fights across the over-run Red Grave City all to the beat of a truly killer soundtrack.
 Demon hunter – Nero, one of the series main protagonists and a young demon hunter who has the blood of Sparda, heads to Red Grave City to face the hellish onslaught of demons, with weapons craftswoman and new partner-in-crime, Nico. Nero is also joined by stylish, legendary demon hunter, Dante and the mysterious new character, V.
 DLCs Added', '', '', '', '', '', '', '');
-INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (108, 'ELDEN RING NIGHTREIGN', 'Action, RPG', 4.5, 0, 'ELDEN RING: NIGHTREIGN offers a fresh journey set in the iconic ELDEN RING universe, built as a standalone adventure with a reimagined gameplay approach. Players can team up in three-player co-op to face the encroaching darkness and a host of deadly threats. Each hero comes equipped with unique abilities and traits, adding depth and variety to every encounter. The true strength of the game lies in combining these heroes’ powers to unlock devastating team-based strategies. As you venture into the night, prepare to face evolving dangers that keep every session unpredictable. Tinkerlands', 'http://localhost:5050/uploads/85d826090d294bd1841b4edc264bcd33.jpg', '', 'https://ts.bzzhr.to/d/0lsmt6zm1pbu?v=uYiyGaex46uXCwUYwgcYf5fknGvk6E15Tnt5TyuxDp1VuJgsHhqFDE7zWE4Sw03FPMEhw8UsH-vrjPxKQgAFbc2PtNSyJaY7wnfIlK_DWBB6JTRe0rOzuL9kH3L3R3f57LYsJbBg31MQsdMJ-jerdT6PWIv0YVg-XOuUIBnWxV_A7TxxCTZoCubmLf6UV6faeeF0gRW8GvT5vCFylTxcdw', 'https://youtu.be/Djtsw5k_DNc?si=rv2r6yPcpJmRLhIr', 'http://localhost:5050/uploads/29b552e4db27487aa7031d135d690f64.png
+INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (108, 'ELDEN RING NIGHTREIGN', 'Action, RPG', 4.5, 2, 'ELDEN RING: NIGHTREIGN offers a fresh journey set in the iconic ELDEN RING universe, built as a standalone adventure with a reimagined gameplay approach. Players can team up in three-player co-op to face the encroaching darkness and a host of deadly threats. Each hero comes equipped with unique abilities and traits, adding depth and variety to every encounter. The true strength of the game lies in combining these heroes’ powers to unlock devastating team-based strategies. As you venture into the night, prepare to face evolving dangers that keep every session unpredictable. Tinkerlands', 'http://localhost:5050/uploads/85d826090d294bd1841b4edc264bcd33.jpg', '', 'https://vikingfile.com/d/ocCWFuL65C/f047587g.DR-GameDrive.Org.rar
+https://vikingfile.com/d/ULLDJuMd1M/Optional-Bonus-Content.doi', 'https://youtu.be/Djtsw5k_DNc?si=rv2r6yPcpJmRLhIr', 'http://localhost:5050/uploads/29b552e4db27487aa7031d135d690f64.png
 http://localhost:5050/uploads/8c8f9ddaefdf4746b6047c9f32d0b9e0.webp
 http://localhost:5050/uploads/5ddf7b8aabec483fb441287b0eeb38cc.jpg
 http://localhost:5050/uploads/d294b1672ab7422394d904cc65d0b7c3.jpg', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#1d4ed8', 0, 'game', '', '', '', '2026-06-19 00:28:29', 'GAME INFO
@@ -2076,9 +2295,11 @@ Game Size: 26.6 GB
 Co-op By: OFME
 Version: v1.03.2 + Co-op | Full Version + All DLCs
 Pre-Installed Game', '', '', '', '', '', '', '');
-INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (109, 'Call of Duty WWII', 'Action', 4.5, 0, 'Call of Duty returns to its roots with Call of Duty WW2 – a breathtaking experience that redefines World War II for a new gaming generation. Land in Normandy on D-Day and battle across Europe through iconic locations in history’s most monumental war. Soulash
+INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (109, 'Call of Duty WWII', 'Action', 4.5, 1, 'Call of Duty returns to its roots with Call of Duty WW2 – a breathtaking experience that redefines World War II for a new gaming generation. Land in Normandy on D-Day and battle across Europe through iconic locations in history’s most monumental war. Soulash
 
-Experience classic Call of Duty combat, the bonds of camaraderie, and the unforgiving nature of war against a global power throwing the world into tyranny. Call of Duty: World War 2 creates the definitive World War II next generation experience across three different game modes: Campaign, Multiplayer, and Co-Operative.', 'http://localhost:5050/uploads/735f3b798ec74c6289219906f0798344.jpg', '', 'https://ts.bzzhr.to/d/p1ggzf3mytzs?v=8aqqnK0hUzXifISKk94XVaZ--aNbjf9_e54bbiUyRmAQ7co4gEdq5y50fJYyR9fYSsHxvZ5wGetzlxH8I_Nt5KgTIkgn6F2Erb_niI1ckfOXtvzlTrKRRs1X3IrDSWN8L1JQWCEP66-9h74Lk65TXRkrFDFbQx8X9FZ5QC5zUgOtXF_r1BYMXWBoWok8yKwdk7LrRajVIMo', 'https://youtu.be/D4Q_XYVescc?si=odRQfW4EQTEzpUk_', 'http://localhost:5050/uploads/dbc933bf323845bdacc7dc320dfb9d56.jpg
+Experience classic Call of Duty combat, the bonds of camaraderie, and the unforgiving nature of war against a global power throwing the world into tyranny. Call of Duty: World War 2 creates the definitive World War II next generation experience across three different game modes: Campaign, Multiplayer, and Co-Operative.', 'http://localhost:5050/uploads/735f3b798ec74c6289219906f0798344.jpg', '', 'https://ffdl.cybar.to/7tjruc7xo6fb
+https://ffdl.cybar.to/ckegzfhb6l8c
+https://ffdl.cybar.to/1yimpwsa8t1a', 'https://youtu.be/D4Q_XYVescc?si=odRQfW4EQTEzpUk_', 'http://localhost:5050/uploads/dbc933bf323845bdacc7dc320dfb9d56.jpg
 http://localhost:5050/uploads/d156de5bcbe5499498b0d741b332a0ac.webp
 http://localhost:5050/uploads/f2eaea5ee8e0487cb8837e8fd419044f.webp
 http://localhost:5050/uploads/104c4059c4234eadba76c22bcefe6be3.webp
@@ -2150,7 +2371,9 @@ Fist Meets Fate in TEKKEN 8. Holding a record for the longest-running video game
 
 The new battle system, Heat, dials up the aggressive nature of battles, while maintaining the play feel and tactics unique to the TEKKEN series. The intensity of battles is greatly enhanced by the destructable stages. Unleashing super move-like Rage Arts is sure to enthrall both players and spectators alike. All of these hard-hitting mechanics come together to make TEKKEN 8 the most exciting installment in the series to date!
 
-In the new single-player mode Arcade Quest, craft your own unique avatar and embark on your new TEKKEN life. Battle your way through a variety of rivals across multiple arcades as the story unfolds, all while mastering the basics and practical skills in TEKKEN 8. Unlock a variety of customization items for characters and avatars as you progress.', 'http://localhost:5050/uploads/f19f1dfe1ff64ba4b8ce231a5ef30f9f.webp', '', 'https://ts.bzzhr.to/d/689hqfmas75g?v=dFIWBVhsnT-xjfKohKRliYjrawYQaUM9U-7oPo0ROOTJnIZUtC-luNFX8CMS7xCUCpkIHF9bHQJCd0prS4S6x3JvjqOcKFZrkENKYYxyToaf5bJ6NF8qwylMiGqQGKz9AplyFiF5n9LXZYTqIVCbvvcul-Bbt8-0FqS9Uk-syNx5PXWhYmQ', 'https://youtu.be/2hPuRQz6IlM?si=ABwhugio6rKBciFg', 'http://localhost:5050/uploads/d88b2862a66a4056ae11fc991385971b.png
+In the new single-player mode Arcade Quest, craft your own unique avatar and embark on your new TEKKEN life. Battle your way through a variety of rivals across multiple arcades as the story unfolds, all while mastering the basics and practical skills in TEKKEN 8. Unlock a variety of customization items for characters and avatars as you progress.', 'http://localhost:5050/uploads/f19f1dfe1ff64ba4b8ce231a5ef30f9f.webp', '', 'https://ffdl.cybar.to/956xmnevyy8z
+https://ffdl.cybar.to/64nduqv8wiy5
+https://ffdl.cybar.to/m9g5go4s5ply', 'https://youtu.be/2hPuRQz6IlM?si=ABwhugio6rKBciFg', 'http://localhost:5050/uploads/d88b2862a66a4056ae11fc991385971b.png
 http://localhost:5050/uploads/aab098be2dc244caaec3eff750b076fd.webp
 http://localhost:5050/uploads/701f8269e5614c9bb060be398b85878c.webp
 http://localhost:5050/uploads/c750ecb2b4f6497093c3cdc2d6fea0a3.jpg', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#27272a', 0, 'game', '', '', '', '2026-06-19 01:08:35', 'GAME INFO
@@ -2171,7 +2394,9 @@ The multiplayer experience has been significantly updated, with cross-platform p
 
 Realism mode removes the HUD for an even more immersive experience.
 Ground War mode now supports massive 64-player battles, similar to Cold War.
-Plus, a free-to-play battle royale mode called Warzone was added after launch, which you can also get as a standalone game.', 'http://localhost:5050/uploads/49ebf6919e6a4ea9be07052cee13987f.webp', '', 'https://ts.bzzhr.to/d/kvnkl1n9kl2c?v=3-GrPk9xoMnxGEhF4N15Cc6xf_R0dm8wwegxFmkPe5aI1bS6aQBgBsvXOlQs00TFEKDyZ0VeJNXsLWnElXiertgj-FuIKhANkmKB-66Xg1nVGcDHk1fiOfVbT8kyqIjnUKMRJFgtEtWTWiw7n3BqfNzHDzx39B-K1zZJGx_AaoueIqwTgVgHqdeAvfD0EpUYNYoJmaQDD0bKuVeAWjB8TcYB', 'https://youtu.be/bH1lHCirCGI?si=7hd9KE49bVvP9p_U', 'http://localhost:5050/uploads/8ede6fcaf7f44acf8840cd213d79f031.jpg
+Plus, a free-to-play battle royale mode called Warzone was added after launch, which you can also get as a standalone game.', 'http://localhost:5050/uploads/49ebf6919e6a4ea9be07052cee13987f.webp', '', 'https://ffdl.cybar.to/l6t77ufg6rho
+https://ffdl.cybar.to/zcuadsgeecn7
+https://ffdl.cybar.to/8xu3rr06dofr', 'https://youtu.be/bH1lHCirCGI?si=7hd9KE49bVvP9p_U', 'http://localhost:5050/uploads/8ede6fcaf7f44acf8840cd213d79f031.jpg
 http://localhost:5050/uploads/1b3d499fae1644d2810af91cb4e63514.webp
 http://localhost:5050/uploads/ceee83fae6594045aad127b1d402fd9a.webp
 http://localhost:5050/uploads/90e0770000c14456a66da2aeb3dfe002.webp', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#3f3f46', 0, 'game', '', '', '', '2026-06-19 01:31:11', 'GAME INFO
@@ -2246,7 +2471,7 @@ HDD space after installation: up to 36.6 GB
 Language can be changed in “runtime/media/steam_settings/configs.user.ini” file
 Repack uses XTool library by Razor12911
 At least 4 GB of free RAM (inc. virtual) required for installing this repack', '', '', '', '', '', '', '');
-INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (114, 'Need for Speed Most Wanted Limited Edition', 'Racing', 4.5, 0, 'The open-world action in Need for Speed Most Wanted gives you the freedom to drive your way. Hit jumps and shortcuts, switch cars, lie low, or head for terrain that plays to your vehicle’s unique strengths. Fight your way past cops and rivals using skill, high-end car tech, and tons of nitrous. It’s all about you, your friends, and a wild selection of cars. Let’s see what you can do. Experience nonstop action — No menus, no lobbies, and no restrictions — just intense competition.', 'http://localhost:5050/uploads/fa8fc4eeec494d6aaedaea3256850064.jpg', '', 'https://ts.bzzhr.to/d/ofw9io1em10w?v=4DS21ZxHykP7VJyGRo3Q0Jp3Io3Ie8UIBW-6xfQN-ifTD-intB1h7y84C0qlDn1WDInBV8yXFCT6x1vzpst4CWUL3g4HU2zJdTAuZFt4tu_2-KypgnFtDgEclF91Bw9imlkjPtg_WB6OGpkoG4t5ES1RlR4ncyTnfOz5-C_wRe6HCq186NiQxBJeN7OxX4DxfKr28StwTolb0ZSiQvVO4IutTClhQzxsq7jL7Vu5d5FDyYhPlN9VoVpv712jd5viDP4hzdvWOyRufA', 'https://youtu.be/L7eHnAS3BDE?si=IGhddRjtkwxeG9_y', 'http://localhost:5050/uploads/89e7b2d90dc140f6b3937e6e3b267068.webp
+INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (114, 'Need for Speed Most Wanted Limited Edition', 'Racing', 4.5, 0, 'The open-world action in Need for Speed Most Wanted gives you the freedom to drive your way. Hit jumps and shortcuts, switch cars, lie low, or head for terrain that plays to your vehicle’s unique strengths. Fight your way past cops and rivals using skill, high-end car tech, and tons of nitrous. It’s all about you, your friends, and a wild selection of cars. Let’s see what you can do. Experience nonstop action — No menus, no lobbies, and no restrictions — just intense competition.', 'http://localhost:5050/uploads/fa8fc4eeec494d6aaedaea3256850064.jpg', '', 'https://vikingfile.com/d/WFqbGG1Zp5/rt25797.ER-GameDrive.Org.rar', 'https://youtu.be/L7eHnAS3BDE?si=IGhddRjtkwxeG9_y', 'http://localhost:5050/uploads/89e7b2d90dc140f6b3937e6e3b267068.webp
 http://localhost:5050/uploads/99a961c75dfd468f8b1430999702b7ff.webp
 http://localhost:5050/uploads/c2ef4c3ef50d41bd97434d15842009f3.webp
 http://localhost:5050/uploads/bd3ab842d4434bc79b3ec66a3385db63.jpg', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#ffffff', 0, 'game', '', '', '', '2026-06-19 13:25:09', 'GAME INFO
@@ -2257,7 +2482,11 @@ Game Size: 8.28 GB
 Repack By: FITGIRL
 Version: v1.5.0.0 (Limited Edition) | Full Version + all add-ons
 Pre-Installed Game', '', '', '', '', '', '', '');
-INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (115, 'Mortal Kombat 11', 'Action', 4.5, 0, 'Mortal Kombat 11 is another part of a fighting game dedicated to a deadly battle. This time, even more epic battles, improved graphics and a well-thought-out story mode await you And first of all, I would like to say that this time the game is based on an advanced improved graphics engine, thanks to which the developers managed to create an simply unimaginable atmosphere. Realistic arenas with environments that will be used in battles, a huge number of new combinations, including final ones, realistic animation of characters and faces, in which you can even see emotions – all this is not a complete list of what awaits you in the new game.', 'http://localhost:5050/uploads/08b92b5e4ede4486a89f10a7ca9bd066.webp', '', 'https://ts.bzzhr.to/d/kqg860gm6uqh?v=MjuHUoQcu6WrYhDZOMP718ZI1rZhkcEGw2L1ojWPS-uPhQ4tl6gUI0mCLimTDk18FKMgXlRyKKP2ux4kpmtV4MygLjp_dLqGPv4PQt3_c15WU5oJCoT_SdKZh5P2AJZiXoKekgyCjLAGe65lTDvpKGZ9oL-FZQcsfH0IQoN_uhNVZpB41SakZMezv2S18F-NwXJCjnJS', 'https://youtu.be/UoTams2yc0s?si=Zuajfi0sSf9jrcJz', 'http://localhost:5050/uploads/707e7ab6ec8d4ca5a2c5cd6cdd3eeddd.jpg
+INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (115, 'Mortal Kombat 11', 'Action', 4.5, 0, 'After game installation remove this line from file “Binaries\Retail\steam_emu.ini“, otherwise in-game movies may not be displayed.
+1461160=4K Cinematic Pack (Mortal Kombat 11 4K Cinematic Pack)
+
+Mortal Kombat 11 is another part of a fighting game dedicated to a deadly battle. This time, even more epic battles, improved graphics and a well-thought-out story mode await you And first of all, I would like to say that this time the game is based on an advanced improved graphics engine, thanks to which the developers managed to create an simply unimaginable atmosphere. Realistic arenas with environments that will be used in battles, a huge number of new combinations, including final ones, realistic animation of characters and faces, in which you can even see emotions – all this is not a complete list of what awaits you in the new game.', 'http://localhost:5050/uploads/08b92b5e4ede4486a89f10a7ca9bd066.webp', '', 'https://vikingfile.com/d/Sw8WI6HvGz/dfgii.ER-GameDrive.Org.part1.rar
+https://vikingfile.com/d/Uu4bCB35Ll/dfgii.ER-GameDrive.Org.part2.rar', 'https://youtu.be/UoTams2yc0s?si=Zuajfi0sSf9jrcJz', 'http://localhost:5050/uploads/707e7ab6ec8d4ca5a2c5cd6cdd3eeddd.jpg
 http://localhost:5050/uploads/8df2405874864ec8855d61b35e156f6c.png
 http://localhost:5050/uploads/7028f1a7861d4ffeae6a687009fdddda.webp
 http://localhost:5050/uploads/e4f91f5b1d8a4183bf6fd37e9a4ed8e2.jpg
@@ -2274,7 +2503,7 @@ INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_u
 A Turning Point: Experience Lara Croft’s intense origin story from a young woman to a hardened survivor.
 An All-New Raiding Experience: Explore a mysterious island filled with environmental puzzles, visceral combat, and tombs to discover.
 Fight to Live: Salvage resources, gain experience, and upgrade Lara’s weapons and tools to survive the island’s hostile inhabitants.
-Survive as a Team: Play a variety of multiplayer modes as Lara’s Shipmates or Yamatai’s Scavengers.', 'http://localhost:5050/uploads/24da20f1ddc245caac317504b71a5802.webp', '', 'https://ts.bzzhr.to/d/65fwvxizlizs?v=WP_OZ8BIkTE2XpnBDBcXQE76H7eaACjRgGZYQOdn5-qdaXOM4IbIEFS5Dgr_CusHwPYqdDzOEMKdFr3UHqwmhpuFGRrm8sScegJRGIHqLP1387_uEKyhVigAWU1Zsur9QYn-Fj9fJgTxQfDT6SkIzmDeYJLHSHDeQdbvwLaNyxIYgJgsT84VJAH4mfWOItTo--g', 'https://youtu.be/zF9m91y8Na0?si=2WAzioc3jH3xqZty', 'http://localhost:5050/uploads/0c812e5aecb0413bbab824c28769d965.jpg
+Survive as a Team: Play a variety of multiplayer modes as Lara’s Shipmates or Yamatai’s Scavengers.', 'http://localhost:5050/uploads/24da20f1ddc245caac317504b71a5802.webp', '', 'https://vikingfile.com/d/g0kfw4MWRi/y65uzf.ER-GameDrive.Org.rar', 'https://youtu.be/zF9m91y8Na0?si=2WAzioc3jH3xqZty', 'http://localhost:5050/uploads/0c812e5aecb0413bbab824c28769d965.jpg
 http://localhost:5050/uploads/4a7ad5f4d83c41d2b0301968c3838bac.jpg
 http://localhost:5050/uploads/226b217b63054de4955a5e3215a420df.jpg
 http://localhost:5050/uploads/c4c1858478d8408bb165430fd8d3fb2e.jpg
@@ -2288,7 +2517,7 @@ Game Size: 22.4 GB
 Released By: TENOKE
 Version: v1.01.0.0 | Full Version
 Pre-Installed Game', '', '', '', '', '', '', '');
-INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (117, 'NieR:Automata', 'Action, RPG', 4.5, 0, 'NieR Automata is a cool RPG in which you will fight aliens as a cool, effeminate robot sent by humans to Earth to reclaim it The game takes place many hundreds of years after the original game. The war with aliens was never won, and in the end people were forced to leave Earth and move to the Moon. But no matter how it was, the desire to return back people has not left, and that is why they continue to send detachments of fighters to Earth.', 'http://localhost:5050/uploads/1b8fd7b641714a6f9b6b9a02058bbab8.jpg', '', 'https://ts.bzzhr.to/d/g572kmijds7r?v=0mUpq1k20TFPEfPpYjnbC8a_dRU_rp-rrjxlY2NGOOtgnbaUK8HpvE6Q8fuBySZaZcYZ1s6A7Pwr3HcosUOExqPl04I8cxvFt4QKBZ_gqBLCeJuu0mF-oB3PKpCJLL2wte9lbX7e3d9CqQGJeprhkfGZKqJ1sKNXFs4tusNxjpkQsIolevbKw40RFmf5wjvH', 'https://youtu.be/wJxNhJ8fjFk?si=3Gttb2U3JOpYRv4L', 'http://localhost:5050/uploads/798cbdea71e64801a3c0df9d2b483abc.jpg
+INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (117, 'NieR:Automata', 'Action, RPG', 4.5, 0, 'NieR Automata is a cool RPG in which you will fight aliens as a cool, effeminate robot sent by humans to Earth to reclaim it The game takes place many hundreds of years after the original game. The war with aliens was never won, and in the end people were forced to leave Earth and move to the Moon. But no matter how it was, the desire to return back people has not left, and that is why they continue to send detachments of fighters to Earth.', 'http://localhost:5050/uploads/1b8fd7b641714a6f9b6b9a02058bbab8.jpg', '', 'https://vikingfile.com/d/V6j1MbmTkw/54gfgfghg.ER-GameDrive.Org.rar', 'https://youtu.be/wJxNhJ8fjFk?si=3Gttb2U3JOpYRv4L', 'http://localhost:5050/uploads/798cbdea71e64801a3c0df9d2b483abc.jpg
 http://localhost:5050/uploads/4ac3aa11a43b4c82b6d604a1d1e814f2.jpg
 http://localhost:5050/uploads/23ce9d325ed14e9099cbe46d5a3ae643.webp
 http://localhost:5050/uploads/2716e556276a4eb98cb9b2594b7082f8.jpg
@@ -2300,7 +2529,7 @@ Game Size: 14.8 GB
 Repack By: CPY
 Version: v1.0.1787043 (Game of the YoRHa Edition) | Updated Version + All DLC
 Pre-Installed Game', '', '', '', '', '', '', '');
-INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (118, 'Sleeping Dogs: Definitive Edition', 'Action, Adventure, Racing', 4.5, 0, 'The Definitive Edition of the critically acclaimed, award winning open-world action adventure, reworked, rebuilt and re-mastered for the new generation. Settlement Survival All 24 previously available DLC extensions have been integrated into the game, including the story-extending episode Year of the Snake and the horror-themed Nightmare in North Point. Alongside a wealth of new technological, audio and visual improvements, Hong Kong has never felt so alive.', 'http://localhost:5050/uploads/5258d4ac8ce74ee3b5aa000884c0f4d6.jpg', '', 'https://ts.bzzhr.to/d/jgglyhqzkaqu?v=l6JT08xl2y4ZgSm9vm36PqECyveNbvBm20tt1Mri7qNmHiK5xjYbfyDKBLhP9tE4vhVi6wF0EwmEdsergjtv8ZI263vMwRjHEZC6N7e0jG37jtARaFQDZTSxNNcx3kQwph12CTaFPsWOQS3gtWYhZ2A4NoNwh8xHDf1ZZ2jDpRM996gOCVrxMQ7RHvAQzb-pdmdJ5MnR', 'https://youtu.be/YjM67H0gP7U?si=ptfizaOZiwJg5kBZ', 'http://localhost:5050/uploads/309c9aab0191462cb0da2e88069fba51.jpg
+INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (118, 'Sleeping Dogs: Definitive Edition', 'Action, Adventure, Racing', 4.5, 0, 'The Definitive Edition of the critically acclaimed, award winning open-world action adventure, reworked, rebuilt and re-mastered for the new generation. Settlement Survival All 24 previously available DLC extensions have been integrated into the game, including the story-extending episode Year of the Snake and the horror-themed Nightmare in North Point. Alongside a wealth of new technological, audio and visual improvements, Hong Kong has never felt so alive.', 'http://localhost:5050/uploads/5258d4ac8ce74ee3b5aa000884c0f4d6.jpg', '', 'https://ffdl.cybar.to/t8pupc1plu5l', 'https://youtu.be/YjM67H0gP7U?si=ptfizaOZiwJg5kBZ', 'http://localhost:5050/uploads/309c9aab0191462cb0da2e88069fba51.jpg
 http://localhost:5050/uploads/dc4c0b4ebfb740ed83adf0c80d5b5449.jpg
 http://localhost:5050/uploads/6e0e0551188f4c9889d865ad31007708.jpg
 http://localhost:5050/uploads/e16de2a39b684e3f816a7f54541b6975.jpg
@@ -2333,7 +2562,37 @@ Eikonic Action – Clive utilizes the powers of multiple Eikons in breakneck bat
 From Strength to Strength
 A plethora of powerful swordplay techniques and Eikonic abilities lie within Clive’s remit—and it is up to you to decide which ones you wish to learn or upgrade. If you’re having trouble choosing, upgrades can be unlocked automatically. Grand Theft Auto V Enhanced
 
-Story-focused mode is recommended for those players who are less comfortable with action games and wish to focus more on the game’s story elements. In this mode, Clive will automatically evade some attacks, and epic Eikonic combos can be triggered with simple button presses. Action-focused mode, where Clive’s every action is controlled by the player, is available for those who are confident in their skill—or want to test it.', 'http://localhost:5050/uploads/be301a0df222426d90d180a1a2c7f001.jpg', '', 'https://ts.bzzhr.to/d/s2etw01mwu4l?v=UizyVaQOaG4vzGWKR8-FnQtl6r17t5PoTMJNi3Lv-TOBpDl8RPMZsl3qfVylZ52OCxQ_F1Qa4aBtMZttsoprYm7GxEByJvgBMyK2fC_OD6Q4zfqyW0EGqrrSpcCN9HBtv1L536V5OF3Ux5MPR9BVUiScZHMuHlvbcPeCz1egnME_Ut-RaE3aR656k3JeyNMXy1Rp_q_Sh-4', 'https://youtu.be/gV5rIW1Qums?si=Q8lGQHJl66bnoxX3', 'http://localhost:5050/uploads/98a29d0cd6144b828bf4c174895b5a13.webp
+Story-focused mode is recommended for those players who are less comfortable with action games and wish to focus more on the game’s story elements. In this mode, Clive will automatically evade some attacks, and epic Eikonic combos can be triggered with simple button presses. Action-focused mode, where Clive’s every action is controlled by the player, is available for those who are confident in their skill—or want to test it.', 'http://localhost:5050/uploads/be301a0df222426d90d180a1a2c7f001.jpg', '', 'https://fuckingfast.co/twrqdslyd0a4#Final_Fantasy_XV_--_fitgirl-repacks.site_--_.part01.rar
+https://fuckingfast.co/0i12bbqwlnia#Final_Fantasy_XV_--_fitgirl-repacks.site_--_.part02.rar
+https://fuckingfast.co/a3nap6qbl9ik#Final_Fantasy_XV_--_fitgirl-repacks.site_--_.part03.rar
+https://fuckingfast.co/7wuzkg0hpein#Final_Fantasy_XV_--_fitgirl-repacks.site_--_.part04.rar
+https://fuckingfast.co/wdwno4r68egs#Final_Fantasy_XV_--_fitgirl-repacks.site_--_.part05.rar
+https://fuckingfast.co/yo7rolrvlwn5#Final_Fantasy_XV_--_fitgirl-repacks.site_--_.part06.rar
+https://fuckingfast.co/hr11f7hl117e#Final_Fantasy_XV_--_fitgirl-repacks.site_--_.part07.rar
+https://fuckingfast.co/icqfh9llf2nc#Final_Fantasy_XV_--_fitgirl-repacks.site_--_.part08.rar
+https://fuckingfast.co/5fqotkpq3g42#Final_Fantasy_XV_--_fitgirl-repacks.site_--_.part09.rar
+https://fuckingfast.co/41lv8rjzjsko#Final_Fantasy_XV_--_fitgirl-repacks.site_--_.part10.rar
+https://fuckingfast.co/tetohh1cx8s1#Final_Fantasy_XV_--_fitgirl-repacks.site_--_.part11.rar
+https://fuckingfast.co/opzu6j6tlujh#Final_Fantasy_XV_--_fitgirl-repacks.site_--_.part12.rar
+https://fuckingfast.co/r7km4156hwjx#Final_Fantasy_XV_--_fitgirl-repacks.site_--_.part13.rar
+https://fuckingfast.co/fsjvjqlz82c9#Final_Fantasy_XV_--_fitgirl-repacks.site_--_.part14.rar
+https://fuckingfast.co/aoeqr62ei8rf#Final_Fantasy_XV_--_fitgirl-repacks.site_--_.part15.rar
+https://fuckingfast.co/ntcl7drkfnzc#Final_Fantasy_XV_--_fitgirl-repacks.site_--_.part16.rar
+https://fuckingfast.co/jn5hv98qelkq#Final_Fantasy_XV_--_fitgirl-repacks.site_--_.part17.rar
+https://fuckingfast.co/g60e0dn3yr01#Final_Fantasy_XV_--_fitgirl-repacks.site_--_.part18.rar
+https://fuckingfast.co/j4pm2f8l9hiw#Final_Fantasy_XV_--_fitgirl-repacks.site_--_.part19.rar
+https://fuckingfast.co/9p7xdwzvh4a8#Final_Fantasy_XV_--_fitgirl-repacks.site_--_.part20.rar
+https://fuckingfast.co/83d0trq9dqby#Final_Fantasy_XV_--_fitgirl-repacks.site_--_.part21.rar
+https://fuckingfast.co/83d0trq9dqby#Final_Fantasy_XV_--_fitgirl-repacks.site_--_.part21.rar
+https://fuckingfast.co/i7nrthyvqrkj#Final_Fantasy_XV_--_fitgirl-repacks.site_--_.part22.rar
+https://fuckingfast.co/wlx816yxz9xh#Final_Fantasy_XV_--_fitgirl-repacks.site_--_.part23.rar
+https://fuckingfast.co/krg5olylt8wo#Final_Fantasy_XV_--_fitgirl-repacks.site_--_.part24.rar
+https://fuckingfast.co/3gfog1rcwo7a#Final_Fantasy_XV_--_fitgirl-repacks.site_--_.part25.rar
+https://fuckingfast.co/zkk9m9i6bqiy#fg-optional-bonus-soundtracks.bin
+https://fuckingfast.co/51nyaqdn0nnq#fg-optional-multiplayer-files.bin
+https://fuckingfast.co/1yris3a1na0h#fg-optional-japanese-videos.part1.rar
+https://fuckingfast.co/5uv77lr14ttl#fg-optional-japanese-videos.part2.rar
+https://fuckingfast.co/91ftk5mb559d#fg-optional-japanese-videos.part3.rar', 'https://youtu.be/gV5rIW1Qums?si=Q8lGQHJl66bnoxX3', 'http://localhost:5050/uploads/98a29d0cd6144b828bf4c174895b5a13.webp
 http://localhost:5050/uploads/1997ad655e7344bbb16dd415ebc3de8a.png
 http://localhost:5050/uploads/2582334f1e59489295e4eaec554cf15b.jpg
 http://localhost:5050/uploads/ed690712ae0e48059c1f49c42c6ea113.webp', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#09090b', 0, 'game', '', '', '', '2026-06-19 14:05:31', 'GAME INFO
@@ -2344,6 +2603,81 @@ Game Size: 153 GB
 Released By: RUNE emu
 Version: v1.03 | Full Version
 Pre-Installed Game', '', '', '', '', '', '', '');
+INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (121, 'Solo Leveling: ARISE OVERDRIVE', 'Action, Sci-Fi, Fighting', 4.5, 0, 'Genres/Tags: Action, Slasher, Third-person, 3D
+Companies: Netmarble Neo, Netmarble Games
+Languages: RUS/ENG/MULTI21
+Original Size: 38.6 GB
+Repack Size: 16.7 GB', '/uploads/557856bb33b24d7f87a02d20291f65ce.webp', '', 'https://fuckingfast.co/5llff94ma9ga#Solo_Leveling_ARISE_OVERDRIVE_--_fitgirl-repacks.site_--_.part01.rar
+https://fuckingfast.co/wzpeqn0t2jif#Solo_Leveling_ARISE_OVERDRIVE_--_fitgirl-repacks.site_--_.part02.rar
+https://fuckingfast.co/ltmb33l88s93#Solo_Leveling_ARISE_OVERDRIVE_--_fitgirl-repacks.site_--_.part03.rar
+https://fuckingfast.co/zc9mhbln2wmk#Solo_Leveling_ARISE_OVERDRIVE_--_fitgirl-repacks.site_--_.part04.rar
+https://fuckingfast.co/nbndv0s7e6l2#Solo_Leveling_ARISE_OVERDRIVE_--_fitgirl-repacks.site_--_.part05.rar
+https://fuckingfast.co/ph8yn5zo5oww#Solo_Leveling_ARISE_OVERDRIVE_--_fitgirl-repacks.site_--_.part06.rar
+https://fuckingfast.co/v6tgqabvnb7g#Solo_Leveling_ARISE_OVERDRIVE_--_fitgirl-repacks.site_--_.part07.rar
+https://fuckingfast.co/v6tgqabvnb7g#Solo_Leveling_ARISE_OVERDRIVE_--_fitgirl-repacks.site_--_.part07.rar
+https://fuckingfast.co/cm7dcrnfr993#Solo_Leveling_ARISE_OVERDRIVE_--_fitgirl-repacks.site_--_.part08.rar
+https://fuckingfast.co/evxwakdzpjfw#Solo_Leveling_ARISE_OVERDRIVE_--_fitgirl-repacks.site_--_.part09.rar', 'https://youtu.be/B22MqQQK5eE?si=tlET1s-9fJ1q0pwo', '/uploads/1aa02af0cb944e37b0e01aa74ea51293.webp
+/uploads/d4af9f612407428aba25c3c320f67a2b.webp
+/uploads/ed87c36c33ec4cf58c9d3aabfb3165f0.webp
+/uploads/1c9fca6edfc44cae88fa7fd385967689.jpeg
+/uploads/3b5b527fb3c94320980c51c01f87959b.jpg
+/uploads/0a00d88f81454c2f9c500fb73b1604fc.jpg
+/uploads/5a3183ce066647acb2cacca15d8977d8.webp', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#3b82f6', 0, 'game', '', '', '', '2026-06-23 01:33:05', 'Based on Solo.Leveling.ARISE.OVERDRIVE-RUNE ISO release: rune-solo.leveling.arise.overdrive.iso (41,400,958,976 bytes)
+Game version: v1.1.89; DLCs are NOT working atm
+The game must be installed to a short path, like “D:\SL” to avoid issues related to long filenames
+100% Lossless & MD5 Perfect: all files are identical to originals after installation
+NOTHING ripped, NOTHING re-encoded
+Significantly smaller archive size (compressed from 38.6 to 16.7 GB)
+Installation takes 11-50 minutes (depending on your system)
+After-install integrity check so you could make sure that everything installed properly
+HDD space after installation: 44.9 GB
+Language can be changed in game settings
+Repack uses XTool library by Razor12911
+At least 2 GB of free RAM (inc. virtual) required for installing this repack', '', '', '', '', '', '', '');
+INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (122, 'Watch Dogs Legion', 'Action, RPG, Open World', 4.5, 0, 'Watch Dogs®: Legion (PC-Windows) – Welcome to the Resistance! Plunge into a breathtaking, near-future London on the absolute brink of its downfall. The city has been seized by opportunistic authoritarians: a corrupt private military corporation controls the streets, a ruthless crime syndicate preys on the vulnerable, and a terrifying cyber-terrorist group has framed the hacker collective DedSec for a city-wide catastrophe. It is up to you to recruit, infiltrate, and fight back to liberate the city.
+
+Breaking completely free from traditional open-world design, Watch Dogs: Legion introduces a groundbreaking “Play as Anyone” mechanic. Every single person you see walking through the fully realized, open-world streets of London—from an MI6 spy with a silenced pistol and a stealthy drone expert, to a street-racing getaway driver or even a seemingly harmless sweet old grandmother—has a unique backstory, personality, and specialized skill set.
+
+You can recruit absolutely anyone into your DedSec cell by completing personalized missions to win their loyalty. Once they join, you can seamlessly switch between your operatives to tackle missions your way. Hijack commercial delivery drones, deploy invisible spider-bots, hack the city’s massive security infrastructure, and unleash non-lethal gadgets or lethal firepower depending on your playstyle. But choose your tactics wisely—with the permanent death option turned on, when an operative falls, they are gone for good. Grab your high-speed direct download or get the magnet file via torrent to build your crew, hack the system, and take back London!
+
+How to Download, Extract & Play Watch Dogs Legion on PC
+Download the game and save it to your PC.
+Right-click the downloaded file and select “Extract Here” or “Extract to folder” using WinRAR or any similar tool.
+Wait for the extraction process to complete.
+Once done, open the extracted folder.
+Run bin\WatchDogsLegion.exe to start the game.', '/uploads/31d4a6df99ff49afb499dd523b458559.jpg', '', 'https://vikingfile.com/d/u4jm9I1a2S/2239550.B10340675-GameDrive.Org.part1.rar
+https://vikingfile.com/d/Rlo0b7Fmlm/2239550.B10340675-GameDrive.Org.part2.rar', 'https://youtu.be/srXrGKGAU20?si=vJo_7-rM5KS2-ejj', '/uploads/98d7a151f6f043f4851ce12f4c105c4c.webp
+/uploads/7579b68cb8cd4441a1a0e1045fb47375.jpg
+/uploads/63536d701333454a93f97f9374a43d6b.jpg
+/uploads/bf2677fc53344ce3900ec5cea2710d09.jpg
+/uploads/396ce46247974adb8df11cacc82282f9.jpg', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#0ea5e9', 0, 'game', '', '', '', '2026-06-23 01:39:10', 'ased On my own Steam Files + Electrical_Exit + Alex ASSR + skystar
+
+Steam Version
+
+DLCs:
+
+Watch Dogs: Legion Ubisoft Activation
+Watch Dogs: Legion DLC Bloodline (Watch Dogs Legion : Bloodline)
+Watch Dogs: Legion DLC Bloodline Ubisoft Activation
+Watch Dogs: Legion Season Pass
+Watch Dogs: Legion Season Pass Ubisoft Activation
+Watch Dogs: Legion Ultimate Edition Ubisoft Activation
+Watch Dogs: Legion Deluxe Edition Ubisoft Activation
+Watch Dogs: Legion Gold Edition Ubisoft Activation', '', '', '', '', '', '', '');
+INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (123, 'Need for Speed Unbound', 'Racing, Hypervisor', 4.5, 0, 'Download Need for Speed Unbound (PC) – free full game. Experience the ultimate street racing saga in the complete ElAmigos repack, updated with all Vol. 1-9 content and 2026 performance patches. Use the direct download to outsmart the cops, customize your dream garage with every DLC car pack, and dominate The Grand with precision-tuned rides and signature street style.', '/uploads/95d2f9bebe2b43fbb5e236eac36a6849.webp', '', 'https://vikingfile.com/d/wultxYJO0o/1846380.B16690907.CSF-Games4U.Org.rar
+https://akirabox.com/RMKGJwpn1m1o/file', 'https://youtu.be/H2Y8XCe7F9E?si=5j-hHctP5h-BYofv', '/uploads/23b907a28d0b4c14bfea7d83afd7e854.jpg
+/uploads/15bb4a1d1aaf4140922600fd977cee48.jpg
+/uploads/a7537190dacb45b684d5bdb40c2c857f.jpg
+/uploads/0fa93c2a1c6a4a28963bf9881fc9a309.webp
+/uploads/7291778a365f4a1c8cd3a3a8a4744b97.jpg', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#84cc16', 0, 'game', '', '', '', '2026-06-23 01:48:35', 'Repack Features
+Updated to version 1.0.8.2549 (12.12.2024).
+
+Upload size / to download: 30680MB
+ISO image size: 30680MB
+Number of compressions: only one
+Data recovery: none
+Languages: English, French, Italian, German, Spanish, Polish, Portuguese-Brazil, Arabic, Korean, Japanese, Simplified Chinese, Traditional Chinese
+Dubbing/Audio: English, French, Italian, German, Spanish, Polish, Japanese', '', '', '', '', '', '', '');
 
 -- Export Movies
 INSERT INTO movies (id, title, genre, year, duration, rating, downloads, description, poster_url, backdrop_url, trailer_url, video_url, download_links, screenshots, director, cast_name, series_name, season, episode, color, type, created_at) VALUES (9, 'Michael 2026', 'Drama, Musical, History, Documentary', 2026, '2hrs 7mins', 4.5, 0, 'The early life of musician Michael Jackson, from the discovery of his talent as the lead of the Jackson Five to the artist whose creative ambition fueled a pursuit to become the biggest ente..', 'http://localhost:5050/uploads/301ac68c78664438b1cac176d4ca161b.png', '', 'https://youtu.be/3zOLzsbOleM?si=mN73n6U6ttOhy4os', '', 'https://file-eu-par-2.gofile.io/download/web/6cccaade-d29a-4207-a788-1be24b4a0a8f/Michael.2026.1080p.WEBRip.x264.AAC5.1-YIFY.rar', '', '', '', '', 0, 0, '#f59e0b', 'movie', '2026-06-17 18:48:29');
@@ -2351,6 +2685,8 @@ INSERT INTO movies (id, title, genre, year, duration, rating, downloads, descrip
 
 -- Export Comments
 INSERT INTO comments (id, game_id, user_id, text, created_at) VALUES (1, 18, 2, 'wow', '2026-06-17 19:00:37');
+INSERT INTO comments (id, game_id, user_id, text, created_at) VALUES (2, 9, 2, 'WOW', '2026-06-23 01:57:41');
+INSERT INTO comments (id, game_id, user_id, text, created_at) VALUES (3, 38, 2, 'WOW', '2026-06-23 01:58:01');
 
 -- Export Ratings
 
@@ -2369,6 +2705,165 @@ INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, 
 INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (6, NULL, 'Guest', 'viewed', 'game', 'Internet Download Manager (IDM) 6.42.64', 37, '2026-06-21 22:12:37');
 INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (7, NULL, 'Guest', 'viewed', 'movie', 'Michael 2026', 9, '2026-06-21 22:48:38');
 INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (8, NULL, 'Guest', 'viewed', 'movie', 'Michael 2026', 9, '2026-06-21 22:48:38');
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (9, NULL, 'Guest', 'viewed', 'game', 'Assassin’s Creed Valhalla: Complete Edition v1.7.0 + All DLCs', 21, '2026-06-23 00:45:05');
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (10, NULL, 'Guest', 'viewed', 'game', 'Assassin’s Creed Valhalla: Complete Edition v1.7.0 + All DLCs', 21, '2026-06-23 00:45:05');
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (11, NULL, 'Guest', 'viewed', 'game', 'Assassin’s Creed Valhalla: Complete Edition v1.7.0 + All DLCs', 21, '2026-06-23 00:45:42');
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (12, NULL, 'Guest', 'viewed', 'game', 'Assassin’s Creed: Odyssey v1.5.6 + DLCs', 22, '2026-06-23 00:48:49');
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (13, NULL, 'Guest', 'viewed', 'game', 'Assassin’s Creed: Odyssey v1.5.6 + DLCs', 22, '2026-06-23 00:48:49');
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (14, NULL, 'Guest', 'viewed', 'game', 'Assassin’s Creed: Odyssey v1.5.6 + DLCs', 22, '2026-06-23 00:49:21');
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (15, NULL, 'Guest', 'viewed', 'game', 'Assassin’s Creed: Odyssey v1.5.6 + DLCs', 22, '2026-06-23 00:49:31');
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (16, NULL, 'Guest', 'viewed', 'game', 'Assassin’s Creed: Odyssey v1.5.6 + DLCs', 22, '2026-06-23 00:49:32');
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (17, NULL, 'Guest', 'downloaded', 'game', 'Unknown', 22, '2026-06-23 00:49:35');
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (18, NULL, 'Guest', 'viewed', 'game', 'God of War Ragnarök Digital Deluxe Edition', 55, '2026-06-23 00:50:21');
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (19, NULL, 'Guest', 'viewed', 'game', 'God of War Ragnarök Digital Deluxe Edition', 55, '2026-06-23 00:50:21');
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (20, NULL, 'Guest', 'viewed', 'game', 'God of War Ragnarök Digital Deluxe Edition', 55, '2026-06-23 00:50:36');
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (21, NULL, 'Guest', 'viewed', 'game', 'Grand Theft Auto V Enhanced', 56, '2026-06-23 00:51:13');
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (22, NULL, 'Guest', 'viewed', 'game', 'Grand Theft Auto V Enhanced', 56, '2026-06-23 00:51:13');
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (23, NULL, 'Guest', 'viewed', 'game', 'Grand Theft Auto V Enhanced', 56, '2026-06-23 00:51:26');
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (24, NULL, 'Guest', 'viewed', 'game', 'Cyberpunk 2077    (v2.31)', 50, '2026-06-23 00:52:40');
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (25, NULL, 'Guest', 'viewed', 'game', 'Cyberpunk 2077    (v2.31)', 50, '2026-06-23 00:52:40');
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (26, NULL, 'Guest', 'viewed', 'game', 'Cyberpunk 2077    (v2.31)', 50, '2026-06-23 00:52:53');
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (27, NULL, 'Guest', 'viewed', 'game', 'Dragons Dogma 2 (2024) ALL DLC  HV', 51, '2026-06-23 00:53:38');
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (28, NULL, 'Guest', 'viewed', 'game', 'Dragons Dogma 2 (2024) ALL DLC  HV', 51, '2026-06-23 00:53:38');
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (29, NULL, 'Guest', 'downloaded', 'game', 'Unknown', 51, '2026-06-23 00:53:45');
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (30, NULL, 'Guest', 'viewed', 'game', 'God of War 1', 54, '2026-06-23 00:54:09');
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (31, NULL, 'Guest', 'viewed', 'game', 'God of War 1', 54, '2026-06-23 00:54:09');
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (32, NULL, 'Guest', 'viewed', 'game', 'God of War 1', 54, '2026-06-23 00:54:21');
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (33, NULL, 'Guest', 'downloaded', 'game', 'Unknown', 54, '2026-06-23 00:54:25');
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (34, NULL, 'Guest', 'viewed', 'game', 'Ghost Of Tsushima DIRECTOR’S CUT', 53, '2026-06-23 00:54:47');
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (35, NULL, 'Guest', 'viewed', 'game', 'Ghost Of Tsushima DIRECTOR’S CUT', 53, '2026-06-23 00:54:47');
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (36, NULL, 'Guest', 'viewed', 'game', 'Ghost Of Tsushima DIRECTOR’S CUT', 53, '2026-06-23 00:55:03');
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (37, NULL, 'Guest', 'viewed', 'game', 'Far Cry New Dawn (2019) ALL DLC +  HD Textures Pack [Hypervisor', 52, '2026-06-23 00:55:21');
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (38, NULL, 'Guest', 'viewed', 'game', 'Far Cry New Dawn (2019) ALL DLC +  HD Textures Pack [Hypervisor', 52, '2026-06-23 00:55:21');
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (39, NULL, 'Guest', 'downloaded', 'game', 'Unknown', 52, '2026-06-23 00:57:16');
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (40, NULL, 'Guest', 'viewed', 'game', 'Far Cry 6 Ultimate Edition Free', 92, '2026-06-23 00:57:28');
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (41, NULL, 'Guest', 'viewed', 'game', 'Far Cry 6 Ultimate Edition Free', 92, '2026-06-23 00:57:28');
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (42, NULL, 'Guest', 'downloaded', 'game', 'Unknown', 92, '2026-06-23 00:57:32');
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (43, NULL, 'Guest', 'viewed', 'game', 'Far Cry 6 Ultimate Edition Free', 92, '2026-06-23 00:58:04');
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (44, NULL, 'Guest', 'downloaded', 'game', 'Unknown', 92, '2026-06-23 00:58:07');
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (45, NULL, 'Guest', 'viewed', 'game', 'Far Cry New Dawn (2019) ALL DLC +  HD Textures Pack [Hypervisor', 52, '2026-06-23 00:58:24');
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (46, NULL, 'Guest', 'viewed', 'game', 'Far Cry New Dawn (2019) ALL DLC +  HD Textures Pack [Hypervisor', 52, '2026-06-23 00:58:24');
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (47, NULL, 'Guest', 'downloaded', 'game', 'Unknown', 52, '2026-06-23 00:58:28');
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (48, NULL, 'Guest', 'viewed', 'game', 'Watch Dogs Digital Deluxe', 96, '2026-06-23 00:59:16');
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (49, NULL, 'Guest', 'viewed', 'game', 'Watch Dogs Digital Deluxe', 96, '2026-06-23 00:59:16');
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (50, NULL, 'Guest', 'viewed', 'game', 'Watch Dogs Digital Deluxe', 96, '2026-06-23 00:59:29');
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (51, NULL, 'Guest', 'viewed', 'game', 'Marvel’s Spider-Man Remastered', 91, '2026-06-23 00:59:54');
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (52, NULL, 'Guest', 'viewed', 'game', 'Marvel’s Spider-Man Remastered', 91, '2026-06-23 00:59:54');
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (53, NULL, 'Guest', 'viewed', 'game', 'Marvel’s Spider-Man Remastered', 91, '2026-06-23 01:02:10');
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (54, NULL, 'Guest', 'viewed', 'game', 'Marvel’s Spider-Man Remastered', 91, '2026-06-23 01:02:10');
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (55, NULL, 'Guest', 'viewed', 'game', 'Marvel’s Spider-Man Remastered', 91, '2026-06-23 01:02:25');
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (56, NULL, 'Guest', 'viewed', 'game', 'Marvel’s Spider-Man: Miles Morales', 59, '2026-06-23 01:02:42');
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (57, NULL, 'Guest', 'viewed', 'game', 'Marvel’s Spider-Man: Miles Morales', 59, '2026-06-23 01:02:42');
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (58, NULL, 'Guest', 'viewed', 'game', 'Marvel’s Spider-Man: Miles Morales', 59, '2026-06-23 01:02:53');
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (59, NULL, 'Guest', 'viewed', 'game', 'Marvel’s Spider Man 2', 63, '2026-06-23 01:03:38');
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (60, NULL, 'Guest', 'viewed', 'game', 'Marvel’s Spider Man 2', 63, '2026-06-23 01:03:38');
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (61, NULL, 'Guest', 'viewed', 'game', 'Marvel’s Spider Man 2', 63, '2026-06-23 01:03:52');
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (62, NULL, 'Guest', 'viewed', 'game', 'The Last of Us Part I', 64, '2026-06-23 01:04:10');
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (63, NULL, 'Guest', 'viewed', 'game', 'The Last of Us Part I', 64, '2026-06-23 01:04:10');
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (64, NULL, 'Guest', 'viewed', 'game', 'The Last of Us Part I', 64, '2026-06-23 01:04:25');
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (65, NULL, 'Guest', 'viewed', 'game', 'The Last of Us Part II Remastered', 95, '2026-06-23 01:04:43');
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (66, NULL, 'Guest', 'viewed', 'game', 'The Last of Us Part II Remastered', 95, '2026-06-23 01:04:43');
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (67, NULL, 'Guest', 'viewed', 'game', 'The Last of Us Part II Remastered', 95, '2026-06-23 01:04:55');
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (68, NULL, 'Guest', 'viewed', 'game', 'UNCHARTED: Legacy of Thieves Collection', 65, '2026-06-23 01:05:49');
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (69, NULL, 'Guest', 'viewed', 'game', 'UNCHARTED: Legacy of Thieves Collection', 65, '2026-06-23 01:05:49');
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (70, NULL, 'Guest', 'viewed', 'game', 'UNCHARTED: Legacy of Thieves Collection', 65, '2026-06-23 01:06:56');
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (71, NULL, 'Guest', 'viewed', 'game', 'UNCHARTED: Legacy of Thieves Collection', 65, '2026-06-23 01:06:56');
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (72, NULL, 'Guest', 'viewed', 'game', 'HYPERVISOR  EA SPORTS FC 26', 17, '2026-06-23 01:07:02');
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (73, NULL, 'Guest', 'viewed', 'game', 'HYPERVISOR  EA SPORTS FC 26', 17, '2026-06-23 01:07:03');
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (74, NULL, 'Guest', 'viewed', 'game', 'UNCHARTED: Legacy of Thieves Collection', 65, '2026-06-23 01:07:27');
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (75, NULL, 'Guest', 'viewed', 'game', 'UNCHARTED: Legacy of Thieves Collection', 65, '2026-06-23 01:07:27');
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (76, NULL, 'Guest', 'viewed', 'game', 'UNCHARTED: Legacy of Thieves Collection', 65, '2026-06-23 01:07:42');
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (77, NULL, 'Guest', 'viewed', 'game', 'Need for Speed Heat Deluxe Edition', 93, '2026-06-23 01:08:09');
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (78, NULL, 'Guest', 'viewed', 'game', 'Need for Speed Heat Deluxe Edition', 93, '2026-06-23 01:08:09');
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (79, NULL, 'Guest', 'viewed', 'game', 'Need for Speed Heat Deluxe Edition', 93, '2026-06-23 01:08:25');
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (80, NULL, 'Guest', 'viewed', 'game', 'Elden Ring Deluxe Edition', 94, '2026-06-23 01:08:46');
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (81, NULL, 'Guest', 'viewed', 'game', 'Elden Ring Deluxe Edition', 94, '2026-06-23 01:08:46');
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (82, NULL, 'Guest', 'viewed', 'game', 'Elden Ring Deluxe Edition', 94, '2026-06-23 01:09:01');
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (83, NULL, 'Guest', 'viewed', 'game', 'Forza Horizon 5 Premium Edition', 97, '2026-06-23 01:09:35');
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (84, NULL, 'Guest', 'viewed', 'game', 'Forza Horizon 5 Premium Edition', 97, '2026-06-23 01:09:35');
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (85, NULL, 'Guest', 'viewed', 'game', 'Forza Horizon 5 Premium Edition', 97, '2026-06-23 01:09:48');
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (86, NULL, 'Guest', 'viewed', 'game', 'Forza Horizon 6 v354.221 + 10 DLCs + Multiplayer', 47, '2026-06-23 01:10:00');
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (87, NULL, 'Guest', 'viewed', 'game', 'Forza Horizon 6 v354.221 + 10 DLCs + Multiplayer', 47, '2026-06-23 01:10:00');
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (88, NULL, 'Guest', 'viewed', 'game', 'Hogwarts Legacy Deluxe Edition', 99, '2026-06-23 01:10:20');
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (89, NULL, 'Guest', 'viewed', 'game', 'Hogwarts Legacy Deluxe Edition', 99, '2026-06-23 01:10:21');
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (90, NULL, 'Guest', 'viewed', 'game', 'Hogwarts Legacy Deluxe Edition', 99, '2026-06-23 01:10:50');
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (91, NULL, 'Guest', 'viewed', 'game', 'Baldur’s Gate 3', 100, '2026-06-23 01:11:05');
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (92, NULL, 'Guest', 'viewed', 'game', 'Baldur’s Gate 3', 100, '2026-06-23 01:11:05');
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (93, NULL, 'Guest', 'viewed', 'game', 'Baldur’s Gate 3', 100, '2026-06-23 01:11:16');
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (94, NULL, 'Guest', 'viewed', 'game', 'Sekiro: Shadows Die Twice', 101, '2026-06-23 01:11:41');
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (95, NULL, 'Guest', 'viewed', 'game', 'Sekiro: Shadows Die Twice', 101, '2026-06-23 01:11:41');
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (96, NULL, 'Guest', 'viewed', 'game', 'Sekiro: Shadows Die Twice', 101, '2026-06-23 01:11:51');
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (97, NULL, 'Guest', 'viewed', 'game', 'Red Dead Redemption', 102, '2026-06-23 01:12:09');
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (98, NULL, 'Guest', 'viewed', 'game', 'Red Dead Redemption', 102, '2026-06-23 01:12:09');
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (99, NULL, 'Guest', 'viewed', 'game', 'Red Dead Redemption', 102, '2026-06-23 01:12:19');
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (100, NULL, 'Guest', 'downloaded', 'game', 'Unknown', 102, '2026-06-23 01:12:21');
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (101, NULL, 'Guest', 'viewed', 'game', 'Forza Horizon 4', 104, '2026-06-23 01:12:47');
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (102, NULL, 'Guest', 'viewed', 'game', 'Forza Horizon 4', 104, '2026-06-23 01:12:47');
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (103, NULL, 'Guest', 'viewed', 'game', 'Forza Horizon 4', 104, '2026-06-23 01:12:58');
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (104, NULL, 'Guest', 'viewed', 'game', 'HITMAN 3 Free', 105, '2026-06-23 01:13:13');
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (105, NULL, 'Guest', 'viewed', 'game', 'HITMAN 3 Free', 105, '2026-06-23 01:13:13');
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (106, NULL, 'Guest', 'viewed', 'game', 'HITMAN 3 Free', 105, '2026-06-23 01:13:22');
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (107, NULL, 'Guest', 'viewed', 'game', 'HITMAN 3 Free', 105, '2026-06-23 01:13:50');
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (108, NULL, 'Guest', 'viewed', 'game', 'Call of Duty: Black Ops II', 98, '2026-06-23 01:14:07');
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (109, NULL, 'Guest', 'viewed', 'game', 'Call of Duty: Black Ops II', 98, '2026-06-23 01:14:07');
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (110, NULL, 'Guest', 'viewed', 'game', 'ActionAdventureHorrorShootersSurvival Call of Duty: Black Ops III', 106, '2026-06-23 01:14:34');
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (111, NULL, 'Guest', 'viewed', 'game', 'ActionAdventureHorrorShootersSurvival Call of Duty: Black Ops III', 106, '2026-06-23 01:14:34');
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (112, NULL, 'Guest', 'viewed', 'game', 'ActionAdventureHorrorShootersSurvival Call of Duty: Black Ops III', 106, '2026-06-23 01:14:43');
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (113, NULL, 'Guest', 'viewed', 'game', 'ELDEN RING NIGHTREIGN', 108, '2026-06-23 01:14:59');
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (114, NULL, 'Guest', 'viewed', 'game', 'ELDEN RING NIGHTREIGN', 108, '2026-06-23 01:14:59');
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (115, NULL, 'Guest', 'viewed', 'game', 'ELDEN RING NIGHTREIGN', 108, '2026-06-23 01:15:14');
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (116, NULL, 'Guest', 'downloaded', 'game', 'Unknown', 108, '2026-06-23 01:15:16');
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (117, NULL, 'Guest', 'downloaded', 'game', 'Unknown', 108, '2026-06-23 01:15:27');
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (118, NULL, 'Guest', 'viewed', 'game', 'Call of Duty WWII', 109, '2026-06-23 01:15:50');
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (119, NULL, 'Guest', 'viewed', 'game', 'Call of Duty WWII', 109, '2026-06-23 01:15:50');
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (120, NULL, 'Guest', 'viewed', 'game', 'Call of Duty WWII', 109, '2026-06-23 01:16:00');
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (121, NULL, 'Guest', 'downloaded', 'game', 'Unknown', 109, '2026-06-23 01:16:03');
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (122, NULL, 'Guest', 'viewed', 'game', 'Call of Duty: Modern Warfare 2019', 112, '2026-06-23 01:16:51');
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (123, NULL, 'Guest', 'viewed', 'game', 'Call of Duty: Modern Warfare 2019', 112, '2026-06-23 01:16:51');
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (124, NULL, 'Guest', 'viewed', 'game', 'Call of Duty: Modern Warfare 2019', 112, '2026-06-23 01:17:07');
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (125, NULL, 'Guest', 'viewed', 'game', 'TEKKEN 8', 111, '2026-06-23 01:17:20');
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (126, NULL, 'Guest', 'viewed', 'game', 'TEKKEN 8', 111, '2026-06-23 01:17:20');
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (127, NULL, 'Guest', 'viewed', 'game', 'TEKKEN 8', 111, '2026-06-23 01:17:28');
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (128, NULL, 'Guest', 'viewed', 'game', 'Need for Speed Most Wanted Limited Edition', 114, '2026-06-23 01:17:41');
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (129, NULL, 'Guest', 'viewed', 'game', 'Need for Speed Most Wanted Limited Edition', 114, '2026-06-23 01:17:41');
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (130, NULL, 'Guest', 'viewed', 'game', 'Need for Speed Most Wanted Limited Edition', 114, '2026-06-23 01:17:49');
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (131, NULL, 'Guest', 'viewed', 'game', 'Mortal Kombat 11', 115, '2026-06-23 01:18:01');
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (132, NULL, 'Guest', 'viewed', 'game', 'Mortal Kombat 11', 115, '2026-06-23 01:18:01');
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (133, NULL, 'Guest', 'viewed', 'game', 'Mortal Kombat 11', 115, '2026-06-23 01:19:05');
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (134, NULL, 'Guest', 'viewed', 'game', 'Tomb Raider Definitive Edition', 116, '2026-06-23 01:19:33');
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (135, NULL, 'Guest', 'viewed', 'game', 'Tomb Raider Definitive Edition', 116, '2026-06-23 01:19:33');
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (136, NULL, 'Guest', 'viewed', 'game', 'Tomb Raider Definitive Edition', 116, '2026-06-23 01:19:42');
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (137, NULL, 'Guest', 'viewed', 'game', 'NieR:Automata', 117, '2026-06-23 01:19:56');
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (138, NULL, 'Guest', 'viewed', 'game', 'NieR:Automata', 117, '2026-06-23 01:19:57');
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (139, NULL, 'Guest', 'viewed', 'game', 'NieR:Automata', 117, '2026-06-23 01:20:07');
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (140, NULL, 'Guest', 'viewed', 'game', 'Sleeping Dogs: Definitive Edition', 118, '2026-06-23 01:20:26');
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (141, NULL, 'Guest', 'viewed', 'game', 'Sleeping Dogs: Definitive Edition', 118, '2026-06-23 01:20:26');
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (142, NULL, 'Guest', 'viewed', 'game', 'Sleeping Dogs: Definitive Edition', 118, '2026-06-23 01:20:35');
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (143, NULL, 'Guest', 'viewed', 'game', 'Call of Duty: Modern Warfare II [v9.7 (Campaign) | v9.40 (Multiplayer]', 49, '2026-06-23 01:20:58');
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (144, NULL, 'Guest', 'viewed', 'game', 'Call of Duty: Modern Warfare II [v9.7 (Campaign) | v9.40 (Multiplayer]', 49, '2026-06-23 01:20:58');
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (145, NULL, 'Guest', 'viewed', 'game', 'Call of Duty: Modern Warfare II [v9.7 (Campaign) | v9.40 (Multiplayer]', 49, '2026-06-23 01:21:08');
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (146, NULL, 'Guest', 'viewed', 'game', 'FINAL FANTASY XVI', 120, '2026-06-23 01:21:31');
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (147, NULL, 'Guest', 'viewed', 'game', 'FINAL FANTASY XVI', 120, '2026-06-23 01:21:31');
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (148, NULL, 'Guest', 'viewed', 'game', 'FINAL FANTASY XVI', 120, '2026-06-23 01:22:10');
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (149, NULL, 'Guest', 'viewed', 'game', 'FINAL FANTASY XVI', 120, '2026-06-23 01:22:10');
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (150, NULL, 'Guest', 'viewed', 'game', 'FINAL FANTASY XVI', 120, '2026-06-23 01:22:25');
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (151, NULL, 'Guest', 'viewed', 'game', 'FIFA 23 Ultimate Edition', 103, '2026-06-23 01:22:46');
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (152, NULL, 'Guest', 'viewed', 'game', 'FIFA 23 Ultimate Edition', 103, '2026-06-23 01:22:46');
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (153, NULL, 'Guest', 'viewed', 'game', 'FIFA 23 Ultimate Edition', 103, '2026-06-23 01:23:07');
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (154, NULL, 'Guest', 'viewed', 'game', 'Watch Dogs 2', 66, '2026-06-23 01:23:33');
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (155, NULL, 'Guest', 'viewed', 'game', 'Watch Dogs 2', 66, '2026-06-23 01:23:33');
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (156, NULL, 'Guest', 'viewed', 'game', 'Watch Dogs 2', 66, '2026-06-23 01:23:48');
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (157, NULL, 'Guest', 'viewed', 'game', 'Call of Duty: Black Ops II', 98, '2026-06-23 01:24:05');
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (158, NULL, 'Guest', 'viewed', 'game', 'Call of Duty: Black Ops II', 98, '2026-06-23 01:24:05');
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (159, NULL, 'Guest', 'viewed', 'game', 'Call of Duty: Black Ops II', 98, '2026-06-23 01:24:13');
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (160, NULL, 'Guest', 'viewed', 'game', 'Devil May Cry 5', 107, '2026-06-23 01:24:28');
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (161, NULL, 'Guest', 'viewed', 'game', 'Devil May Cry 5', 107, '2026-06-23 01:24:28');
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (162, NULL, 'Guest', 'viewed', 'game', 'Devil May Cry 5', 107, '2026-06-23 01:24:36');
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (163, NULL, 'Guest', 'viewed', 'movie', 'Michael 2026', 9, '2026-06-23 01:57:29');
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (164, NULL, 'Guest', 'viewed', 'movie', 'Michael 2026', 9, '2026-06-23 01:57:29');
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (165, NULL, 'Guest', 'viewed', 'game', 'Adobe Photoshop 2026 v27.7.0.11', 38, '2026-06-23 01:57:53');
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (166, NULL, 'Guest', 'viewed', 'game', 'Adobe Photoshop 2026 v27.7.0.11', 38, '2026-06-23 01:57:54');
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (167, NULL, 'Guest', 'viewed', 'game', 'Adobe Photoshop 2026 v27.7.0.11', 38, '2026-06-23 01:58:01');
 
 -- Export User Badges
 
