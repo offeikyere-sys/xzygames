@@ -25,7 +25,7 @@ const quickReplies = [
   "Tell me about XZY Games",
 ]
 
-const WELCOME_MESSAGE = "Welcome to XZY Games! I'm your AI assistant powered by Groq AI. How can I help you today?"
+const WELCOME_MESSAGE = "Welcome to XZY Games! I'm your AI assistant powered by D AI. How can I help you today?"
 
 export function AIChatModal({ isOpen, onClose }: AIChatModalProps) {
   const { theme } = useTheme()
@@ -130,7 +130,7 @@ export function AIChatModal({ isOpen, onClose }: AIChatModalProps) {
                 </div>
                 <p className="text-[11px] text-zinc-500 flex items-center gap-1.5 mt-0.5">
                   <Cpu size={12} />
-                  Powered by Groq AI — Ask me anything about the site!
+                  Powered by D AI — Ask me anything about the site!
                 </p>
               </div>
               <button
@@ -262,7 +262,7 @@ export function AIChatModal({ isOpen, onClose }: AIChatModalProps) {
                   ? "text-zinc-500" 
                   : "text-zinc-400"
               }`}>
-                XZY AI is powered by Groq (free tier) — double-click the 3D robot anytime to open this chat
+                XZY AI is powered by D AI — double-click the 3D robot anytime to open this chat
               </p>
             </div>
           </motion.div>
