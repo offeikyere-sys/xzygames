@@ -1429,8 +1429,10 @@ def reset_database():
     db = get_db()
     try:
         if DB_TYPE == "postgresql":
-            # Drop all tables in PostgreSQL (CASCADE handles foreign keys)
+            # DDL statements need autocommit in PostgreSQL (can't run inside transaction)
+            db.conn.autocommit = True
             db.execute("DROP SCHEMA public CASCADE; CREATE SCHEMA public;")
+            db.conn.autocommit = False
         else:
             # SQLite: get all table names and drop them
             tables = db.execute("SELECT name FROM sqlite_master WHERE type='table'").fetchall()
@@ -1443,7 +1445,10 @@ def reset_database():
         
         return {"message": "Database reset successfully! All tables dropped and recreated."}
     except Exception as e:
-        db.rollback()
+        try:
+            db.rollback()
+        except:
+            pass
         raise HTTPException(status_code=500, detail=str(e))
     finally:
         db.close()
@@ -1467,6 +1472,7 @@ def seed_database():
         
         # Add missing columns to games table (in case schema is old)
         if DB_TYPE == "postgresql":
+            db.conn.autocommit = True
             missing_columns = [
                 "repack_features TEXT",
                 "download_manager_name VARCHAR(255)",
@@ -1485,11 +1491,12 @@ def seed_database():
                 except Exception as e:
                     if "already exists" not in str(e).lower():
                         print(f"[SEED] Column add warning for {col_name}: {e}")
-            db.commit()
+            db.conn.autocommit = False
         
         # Temporarily drop FK constraints to allow import (no superuser needed)
         fk_constraints_dropped = []
         if DB_TYPE == "postgresql":
+            db.conn.autocommit = True
             fk_defs = [
                 ("comments", "comments_game_id_fkey", "FOREIGN KEY (game_id) REFERENCES games(id)"),
                 ("comments", "comments_user_id_fkey", "FOREIGN KEY (user_id) REFERENCES users(id)"),
@@ -1506,7 +1513,7 @@ def seed_database():
                     print(f"[SEED] Dropped FK constraint: {constraint_name}")
                 except Exception as e:
                     print(f"[SEED] Could not drop {constraint_name}: {e}")
-            db.commit()
+            db.conn.autocommit = False
             print(f"[SEED] Dropped {len(fk_constraints_dropped)} FK constraints for import")
         
         with open(sql_file, 'r', encoding='utf-8') as f:
