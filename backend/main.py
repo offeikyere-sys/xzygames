@@ -1139,28 +1139,41 @@ def make_admin(email: str):
 @app.get("/api/reset-database")
 def reset_database():
     """Drop all tables and recreate them. Use before seeding."""
-    db = get_db()
-    try:
-        if DB_TYPE == "postgresql":
-            # DDL needs autocommit in PostgreSQL
-            db.conn.autocommit = True
-            db.execute("DROP SCHEMA public CASCADE; CREATE SCHEMA public;")
-            db.conn.autocommit = False
-        else:
+    if DB_TYPE == "postgresql":
+        # DDL needs autocommit in PostgreSQL - use direct connection
+        import psycopg2
+        from urllib.parse import urlparse
+        db_url = os.environ.get("DATABASE_URL", "")
+        if not db_url:
+            raise HTTPException(status_code=500, detail="DATABASE_URL not configured")
+        try:
+            conn = psycopg2.connect(db_url)
+            conn.autocommit = True
+            cursor = conn.cursor()
+            cursor.execute("DROP SCHEMA public CASCADE; CREATE SCHEMA public;")
+            cursor.close()
+            conn.close()
+            init_db()
+            return {"message": "Database reset successfully! All tables dropped and recreated."}
+        except Exception as e:
+            raise HTTPException(status_code=500, detail=f"PostgreSQL error: {str(e)}")
+    else:
+        db = get_db()
+        try:
             tables = db.execute("SELECT name FROM sqlite_master WHERE type='table'").fetchall()
             for table in tables:
                 db.execute(f"DROP TABLE IF EXISTS {table['name']}")
-        db.commit()
-        init_db()
-        return {"message": "Database reset successfully! All tables dropped and recreated."}
-    except Exception as e:
-        try:
-            db.rollback()
-        except:
-            pass
-        raise HTTPException(status_code=500, detail=str(e))
-    finally:
-        db.close()
+            db.commit()
+            init_db()
+            return {"message": "Database reset successfully! All tables dropped and recreated."}
+        except Exception as e:
+            try:
+                db.rollback()
+            except:
+                pass
+            raise HTTPException(status_code=500, detail=str(e))
+        finally:
+            db.close()
 
 # ============ ONE-TIME DATABASE SEED ============
 
@@ -1171,14 +1184,28 @@ def seed_database():
     sql_file = os.path.join(os.path.dirname(__file__), "postgresql_export.sql")
     if not os.path.exists(sql_file):
         raise HTTPException(status_code=404, detail="SQL file not found")
-    db = get_db()
-    try:
-        user_count = db.execute("SELECT COUNT(*) as cnt FROM users").fetchone()["cnt"]
-        if user_count > 0:
-            return {"message": "Database already has data. Import skipped.", "users_found": user_count}
-        
-        if DB_TYPE == "postgresql":
-            db.conn.autocommit = True
+    
+    if DB_TYPE == "postgresql":
+        # Use direct psycopg2 connection for DDL operations
+        import psycopg2
+        db_url = os.environ.get("DATABASE_URL", "")
+        if not db_url:
+            raise HTTPException(status_code=500, detail="DATABASE_URL not configured")
+        conn = None
+        try:
+            conn = psycopg2.connect(db_url)
+            conn.autocommit = True
+            cursor = conn.cursor()
+            
+            # Check if already seeded
+            cursor.execute("SELECT COUNT(*) as cnt FROM users")
+            user_count = cursor.fetchone()[0]
+            if user_count > 0:
+                cursor.close()
+                conn.close()
+                return {"message": "Database already has data. Import skipped.", "users_found": user_count}
+            
+            # Add missing columns
             missing_columns = [
                 "repack_features TEXT", "download_manager_name VARCHAR(255)",
                 "download_manager_url TEXT", "usage_guide TEXT", "troubleshooting TEXT",
@@ -1187,15 +1214,12 @@ def seed_database():
             for col in missing_columns:
                 col_name = col.split()[0]
                 try:
-                    db.execute(f"ALTER TABLE games ADD COLUMN IF NOT EXISTS {col}")
+                    cursor.execute(f"ALTER TABLE games ADD COLUMN IF NOT EXISTS {col}")
                 except Exception as e:
                     if "already exists" not in str(e).lower():
                         print(f"[SEED] Column warning {col_name}: {e}")
-            db.conn.autocommit = False
-        
-        fk_constraints_dropped = []
-        if DB_TYPE == "postgresql":
-            db.conn.autocommit = True
+            
+            # Drop FK constraints for import
             fk_defs = [
                 ("comments", "comments_game_id_fkey", "FOREIGN KEY (game_id) REFERENCES games(id)"),
                 ("comments", "comments_user_id_fkey", "FOREIGN KEY (user_id) REFERENCES users(id)"),
@@ -1207,60 +1231,99 @@ def seed_database():
             ]
             for table_name, constraint_name, fk_def in fk_defs:
                 try:
-                    db.execute(f"ALTER TABLE {table_name} DROP CONSTRAINT IF EXISTS {constraint_name}")
-                    fk_constraints_dropped.append((table_name, constraint_name, fk_def))
+                    cursor.execute(f"ALTER TABLE {table_name} DROP CONSTRAINT IF EXISTS {constraint_name}")
                 except Exception as e:
                     print(f"[SEED] Could not drop {constraint_name}: {e}")
-            db.conn.autocommit = False
-        
-        with open(sql_file, 'r', encoding='utf-8') as f:
-            sql_content = f.read()
-        
-        sql_content_clean = sql_content.replace('BEGIN;', '').replace('COMMIT;', '')
-        statements = []
-        for chunk in sql_content_clean.split(';\n'):
-            lines = [line for line in chunk.split('\n') if not line.strip().startswith('--') and line.strip()]
-            if lines:
-                statements.append('\n'.join(lines))
-        
-        executed = 0
-        errors = []
-        for stmt in statements:
-            if stmt:
+            
+            # Read and execute SQL
+            with open(sql_file, 'r', encoding='utf-8') as f:
+                sql_content = f.read()
+            
+            sql_content_clean = sql_content.replace('BEGIN;', '').replace('COMMIT;', '')
+            statements = []
+            for chunk in sql_content_clean.split(';\n'):
+                lines = [line for line in chunk.split('\n') if not line.strip().startswith('--') and line.strip()]
+                if lines:
+                    statements.append('\n'.join(lines))
+            
+            executed = 0
+            errors = []
+            for stmt in statements:
+                if stmt:
+                    try:
+                        cursor.execute(stmt)
+                        executed += 1
+                    except Exception as e:
+                        errors.append(str(e))
+            
+            # Clean up orphaned data
+            cursor.execute("DELETE FROM comments WHERE game_id NOT IN (SELECT id FROM games)")
+            cursor.execute("DELETE FROM comments WHERE user_id NOT IN (SELECT id FROM users)")
+            cursor.execute("DELETE FROM ratings WHERE game_id NOT IN (SELECT id FROM games)")
+            cursor.execute("DELETE FROM ratings WHERE user_id NOT IN (SELECT id FROM users)")
+            cursor.execute("DELETE FROM favorites WHERE game_id NOT IN (SELECT id FROM games)")
+            cursor.execute("DELETE FROM favorites WHERE user_id NOT IN (SELECT id FROM users)")
+            cursor.execute("DELETE FROM tokens WHERE user_id NOT IN (SELECT id FROM users)")
+            
+            # Re-add FK constraints
+            for table_name, constraint_name, fk_def in fk_defs:
                 try:
-                    db.execute(stmt)
-                    executed += 1
-                except Exception as e:
-                    errors.append(str(e))
-        
-        db.commit()
-        
-        if DB_TYPE == "postgresql" and fk_constraints_dropped:
-            db.execute("DELETE FROM comments WHERE game_id NOT IN (SELECT id FROM games)")
-            db.execute("DELETE FROM comments WHERE user_id NOT IN (SELECT id FROM users)")
-            db.execute("DELETE FROM ratings WHERE game_id NOT IN (SELECT id FROM games)")
-            db.execute("DELETE FROM ratings WHERE user_id NOT IN (SELECT id FROM users)")
-            db.execute("DELETE FROM favorites WHERE game_id NOT IN (SELECT id FROM games)")
-            db.execute("DELETE FROM favorites WHERE user_id NOT IN (SELECT id FROM users)")
-            db.execute("DELETE FROM tokens WHERE user_id NOT IN (SELECT id FROM users)")
-            db.commit()
-            for table_name, constraint_name, fk_def in fk_constraints_dropped:
-                try:
-                    db.execute(f"ALTER TABLE {table_name} ADD CONSTRAINT {constraint_name} {fk_def}")
+                    cursor.execute(f"ALTER TABLE {table_name} ADD CONSTRAINT {constraint_name} {fk_def}")
                 except Exception as e:
                     print(f"[SEED] Could not re-add {constraint_name}: {e}")
+            
+            cursor.close()
+            conn.close()
+            
+            return {
+                "message": "Database seeded successfully!" if not errors else "Database seed completed with errors",
+                "statements_executed": executed,
+                "errors": errors[:10] if errors else []
+            }
+        except Exception as e:
+            if conn:
+                conn.close()
+            raise HTTPException(status_code=500, detail=f"PostgreSQL error: {str(e)}")
+    else:
+        # SQLite fallback
+        db = get_db()
+        try:
+            user_count = db.execute("SELECT COUNT(*) as cnt FROM users").fetchone()["cnt"]
+            if user_count > 0:
+                return {"message": "Database already has data. Import skipped.", "users_found": user_count}
+            
+            with open(sql_file, 'r', encoding='utf-8') as f:
+                sql_content = f.read()
+            
+            sql_content_clean = sql_content.replace('BEGIN;', '').replace('COMMIT;', '')
+            statements = []
+            for chunk in sql_content_clean.split(';\n'):
+                lines = [line for line in chunk.split('\n') if not line.strip().startswith('--') and line.strip()]
+                if lines:
+                    statements.append('\n'.join(lines))
+            
+            executed = 0
+            errors = []
+            for stmt in statements:
+                if stmt:
+                    try:
+                        db.execute(stmt)
+                        executed += 1
+                    except Exception as e:
+                        errors.append(str(e))
+            
             db.commit()
-        
-        return {
-            "message": "Database seeded successfully!" if not errors else "Database seed completed with errors",
-            "statements_executed": executed,
-            "errors": errors[:10] if errors else []
-        }
-    except Exception as e:
-        db.rollback()
-        raise HTTPException(status_code=500, detail=str(e))
-    finally:
-        db.close()
+            
+            return {
+                "message": "Database seeded successfully!" if not errors else "Database seed completed with errors",
+                "statements_executed": executed,
+                "errors": errors[:10] if errors else []
+            }
+        except Exception as e:
+            db.rollback()
+            raise HTTPException(status_code=500, detail=str(e))
+        finally:
+            db.close()
 
 # ============ PUBLIC REQUESTS ============
 
