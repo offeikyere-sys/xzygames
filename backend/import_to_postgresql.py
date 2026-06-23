@@ -15,28 +15,45 @@ SQL_FILE = os.path.join(os.path.dirname(__file__), "postgresql_export.sql")
 def import_database():
     """Import SQL file into PostgreSQL database."""
     if not DATABASE_URL:
-        print("❌ ERROR: DATABASE_URL environment variable not set")
+        print("[ERROR] DATABASE_URL environment variable not set")
         print("   Set it to your PostgreSQL connection string")
         sys.exit(1)
 
     if not os.path.exists(SQL_FILE):
-        print(f"❌ ERROR: SQL file not found: {SQL_FILE}")
+        print(f"[ERROR] SQL file not found: {SQL_FILE}")
         sys.exit(1)
 
     try:
         # Connect to PostgreSQL
-        print(f"🔌 Connecting to PostgreSQL database...")
+        print("Connecting to PostgreSQL database...")
         conn = psycopg2.connect(DATABASE_URL)
         conn.autocommit = False
         cursor = conn.cursor()
 
+        # Clear existing data (in reverse dependency order)
+        print("Clearing existing data...")
+        cursor.execute("DELETE FROM activity_log")
+        cursor.execute("DELETE FROM user_badges")
+        cursor.execute("DELETE FROM weekly_stats")
+        cursor.execute("DELETE FROM favorites")
+        cursor.execute("DELETE FROM ratings")
+        cursor.execute("DELETE FROM comments")
+        cursor.execute("DELETE FROM tokens")
+        cursor.execute("DELETE FROM requests")
+        cursor.execute("DELETE FROM category_banners")
+        cursor.execute("DELETE FROM movies")
+        cursor.execute("DELETE FROM games")
+        cursor.execute("DELETE FROM users")
+        conn.commit()
+        print("Existing data cleared.")
+
         # Read SQL file
-        print(f"📖 Reading SQL file: {SQL_FILE}")
+        print(f"Reading SQL file: {SQL_FILE}")
         with open(SQL_FILE, 'r', encoding='utf-8') as f:
             sql_content = f.read()
 
         # Execute SQL
-        print("⚙️  Executing SQL commands...")
+        print("Executing SQL commands...")
         cursor.execute(sql_content)
         conn.commit()
 
@@ -50,8 +67,8 @@ def import_database():
         cursor.execute("SELECT COUNT(*) FROM movies")
         movie_count = cursor.fetchone()[0]
 
-        print(f"\n✅ Database imported successfully!")
-        print(f"📊 Records imported:")
+        print("\nDatabase imported successfully!")
+        print("Records imported:")
         print(f"   - Users: {user_count}")
         print(f"   - Games: {game_count}")
         print(f"   - Movies: {movie_count}")
@@ -60,12 +77,12 @@ def import_database():
         conn.close()
 
     except psycopg2.Error as e:
-        print(f"❌ PostgreSQL Error: {e}")
+        print(f"PostgreSQL Error: {e}")
         if conn:
             conn.rollback()
         sys.exit(1)
     except Exception as e:
-        print(f"❌ Error: {e}")
+        print(f"Error: {e}")
         sys.exit(1)
 
 if __name__ == "__main__":

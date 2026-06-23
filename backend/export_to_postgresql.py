@@ -60,7 +60,7 @@ def export_database():
             f.write(f"({user_dict['id']}, '{user_dict['name'].replace(chr(39), chr(39)+chr(39))}', '{user_dict['email']}', '{user_dict['password']}', ")
             f.write(f"'{user_dict.get('avatar_color', '#3b82f6')}', {is_admin}, {email_verified}, ")
             f.write(f"'{fix_url(user_dict.get('avatar_url', ''))}', '{user_dict.get('supabase_id', '')}', ")
-            f.write(f"'{user_dict.get('created_at', datetime.now().strftime('%Y-%m-%d %H:%M:%S'))}');\n")
+            f.write(f"'{user_dict.get('created_at', datetime.now().strftime('%Y-%m-%d %H:%M:%S'))}') ON CONFLICT (id) DO NOTHING;\n")
         f.write("\n")
 
         # Export games
@@ -114,7 +114,7 @@ def export_database():
             f.write(f"'{values['version']}', '{values['license_type']}', '{values['created_at']}', ")
             f.write(f"'{values['repack_features']}', '{values['download_manager_name']}', '{values['download_manager_url']}', ")
             f.write(f"'{values['usage_guide']}', '{values['troubleshooting']}', '{values['hypervisor_video_url']}', ")
-            f.write(f"'{values['install_guide_text']}', '{values['install_video_url']}');\n")
+            f.write(f"'{values['install_guide_text']}', '{values['install_video_url']}') ON CONFLICT (id) DO NOTHING;\n")
         f.write("\n")
 
         # Export movies
@@ -154,39 +154,54 @@ def export_database():
             f.write(f"'{values['backdrop_url']}', '{values['trailer_url']}', '{values['video_url']}', ")
             f.write(f"'{values['download_links']}', '{values['screenshots']}', '{values['director']}', ")
             f.write(f"'{values['cast_name']}', '{values['series_name']}', {values['season']}, {values['episode']}, ")
-            f.write(f"'{values['color']}', '{values['type']}', '{values['created_at']}');\n")
+            f.write(f"'{values['color']}', '{values['type']}', '{values['created_at']}') ON CONFLICT (id) DO NOTHING;\n")
         f.write("\n")
 
-        # Export comments
+        # Export comments (only those referencing valid games)
         f.write("-- Export Comments\n")
         cursor.execute("SELECT * FROM comments")
         comments = cursor.fetchall()
+        # Get valid game IDs
+        cursor.execute("SELECT id FROM games")
+        valid_game_ids = {row['id'] for row in cursor.fetchall()}
+        skipped_comments = 0
         for comment in comments:
             comment_dict = dict(comment)
+            if comment_dict['game_id'] not in valid_game_ids:
+                skipped_comments += 1
+                continue
             f.write(f"INSERT INTO comments (id, game_id, user_id, text, created_at) VALUES ")
             f.write(f"({comment_dict['id']}, {comment_dict['game_id']}, {comment_dict['user_id']}, ")
-            f.write(f"'{comment_dict['text'].replace(chr(39), chr(39)+chr(39))}', '{comment_dict['created_at']}');\n")
-        f.write("\n")
+            f.write(f"'{comment_dict['text'].replace(chr(39), chr(39)+chr(39))}', '{comment_dict['created_at']}') ON CONFLICT (id) DO NOTHING;\n")
+        f.write(f"-- Skipped {skipped_comments} comments referencing non-existent games\n\n")
 
-        # Export ratings
+        # Export ratings (only those referencing valid games)
         f.write("-- Export Ratings\n")
         cursor.execute("SELECT * FROM ratings")
         ratings = cursor.fetchall()
+        skipped_ratings = 0
         for rating in ratings:
             rating_dict = dict(rating)
+            if rating_dict['game_id'] not in valid_game_ids:
+                skipped_ratings += 1
+                continue
             f.write(f"INSERT INTO ratings (id, game_id, user_id, rating) VALUES ")
-            f.write(f"({rating_dict['id']}, {rating_dict['game_id']}, {rating_dict['user_id']}, {rating_dict['rating']});\n")
-        f.write("\n")
+            f.write(f"({rating_dict['id']}, {rating_dict['game_id']}, {rating_dict['user_id']}, {rating_dict['rating']}) ON CONFLICT (id) DO NOTHING;\n")
+        f.write(f"-- Skipped {skipped_ratings} ratings referencing non-existent games\n\n")
 
-        # Export favorites
+        # Export favorites (only those referencing valid games)
         f.write("-- Export Favorites\n")
         cursor.execute("SELECT * FROM favorites")
         favorites = cursor.fetchall()
+        skipped_favorites = 0
         for fav in favorites:
             fav_dict = dict(fav)
+            if fav_dict['game_id'] not in valid_game_ids:
+                skipped_favorites += 1
+                continue
             f.write(f"INSERT INTO favorites (id, game_id, user_id, created_at) VALUES ")
-            f.write(f"({fav_dict['id']}, {fav_dict['game_id']}, {fav_dict['user_id']}, '{fav_dict['created_at']}');\n")
-        f.write("\n")
+            f.write(f"({fav_dict['id']}, {fav_dict['game_id']}, {fav_dict['user_id']}, '{fav_dict['created_at']}') ON CONFLICT (id) DO NOTHING;\n")
+        f.write(f"-- Skipped {skipped_favorites} favorites referencing non-existent games\n\n")
 
         # Export tokens
         f.write("-- Export Tokens\n")
@@ -195,7 +210,7 @@ def export_database():
         for token in tokens:
             token_dict = dict(token)
             f.write(f"INSERT INTO tokens (id, user_id, token, created_at) VALUES ")
-            f.write(f"({token_dict['id']}, {token_dict['user_id']}, '{token_dict['token']}', '{token_dict['created_at']}');\n")
+            f.write(f"({token_dict['id']}, {token_dict['user_id']}, '{token_dict['token']}', '{token_dict['created_at']}') ON CONFLICT (id) DO NOTHING;\n")
         f.write("\n")
 
         # Export activity_log
@@ -208,7 +223,7 @@ def export_database():
             f.write(f"INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES ")
             f.write(f"({act_dict['id']}, {user_id}, '{act_dict['user_name'].replace(chr(39), chr(39)+chr(39))}', ")
             f.write(f"'{act_dict['action']}', '{act_dict['item_type']}', '{act_dict['item_name'].replace(chr(39), chr(39)+chr(39))}', ")
-            f.write(f"{act_dict.get('item_id') or 'NULL'}, '{act_dict['created_at']}');\n")
+            f.write(f"{act_dict.get('item_id') or 'NULL'}, '{act_dict['created_at']}') ON CONFLICT (id) DO NOTHING;\n")
         f.write("\n")
 
         # Export user_badges
@@ -219,7 +234,7 @@ def export_database():
             badge_dict = dict(badge)
             f.write(f"INSERT INTO user_badges (id, user_id, badge_type, badge_name, earned_at) VALUES ")
             f.write(f"({badge_dict['id']}, {badge_dict['user_id']}, '{badge_dict['badge_type'].replace(chr(39), chr(39)+chr(39))}', ")
-            f.write(f"'{badge_dict['badge_name'].replace(chr(39), chr(39)+chr(39))}', '{badge_dict['earned_at']}');\n")
+            f.write(f"'{badge_dict['badge_name'].replace(chr(39), chr(39)+chr(39))}', '{badge_dict['earned_at']}') ON CONFLICT (id) DO NOTHING;\n")
         f.write("\n")
 
         # Export weekly_stats
@@ -230,7 +245,7 @@ def export_database():
             stat_dict = dict(stat)
             f.write(f"INSERT INTO weekly_stats (id, user_id, week_start, views_count, downloads_count, ratings_count, comments_count) VALUES ")
             f.write(f"({stat_dict['id']}, {stat_dict['user_id']}, '{stat_dict['week_start']}', ")
-            f.write(f"{stat_dict['views_count']}, {stat_dict['downloads_count']}, {stat_dict['ratings_count']}, {stat_dict['comments_count']});\n")
+            f.write(f"{stat_dict['views_count']}, {stat_dict['downloads_count']}, {stat_dict['ratings_count']}, {stat_dict['comments_count']}) ON CONFLICT (id) DO NOTHING;\n")
         f.write("\n")
 
         # Export category_banners
@@ -240,7 +255,7 @@ def export_database():
         for banner in banners:
             banner_dict = dict(banner)
             f.write(f"INSERT INTO category_banners (genre, banner_url, updated_at) VALUES ")
-            f.write(f"('{banner_dict['genre'].replace(chr(39), chr(39)+chr(39))}', '{fix_url(banner_dict['banner_url'].replace(chr(39), chr(39)+chr(39)))}', '{banner_dict['updated_at']}');\n")
+            f.write(f"('{banner_dict['genre'].replace(chr(39), chr(39)+chr(39))}', '{fix_url(banner_dict['banner_url'].replace(chr(39), chr(39)+chr(39)))}', '{banner_dict['updated_at']}') ON CONFLICT (genre) DO NOTHING;\n")
         f.write("\n")
 
         # Export requests
@@ -252,7 +267,7 @@ def export_database():
             f.write(f"INSERT INTO requests (id, type, title, submitter_name, description, created_at) VALUES ")
             f.write(f"({req_dict['id']}, '{req_dict['type']}', '{req_dict['title'].replace(chr(39), chr(39)+chr(39))}', ")
             f.write(f"'{req_dict['submitter_name'].replace(chr(39), chr(39)+chr(39))}', '{req_dict['description'].replace(chr(39), chr(39)+chr(39))}', ")
-            f.write(f"'{req_dict['created_at']}');\n")
+            f.write(f"'{req_dict['created_at']}') ON CONFLICT (id) DO NOTHING;\n")
         f.write("\n")
 
         f.write("COMMIT;\n")
