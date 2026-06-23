@@ -1487,6 +1487,11 @@ def seed_database():
                         print(f"[SEED] Column add warning for {col_name}: {e}")
             db.commit()
         
+        # Disable foreign key checks during import
+        if DB_TYPE == "postgresql":
+            db.execute("SET session_replication_role = replica")
+            print("[SEED] Foreign key checks disabled")
+        
         with open(sql_file, 'r', encoding='utf-8') as f:
             sql_content = f.read()
         
@@ -1512,6 +1517,12 @@ def seed_database():
                     errors.append(str(e))
         
         db.commit()
+        
+        # Re-enable foreign key checks
+        if DB_TYPE == "postgresql":
+            db.execute("SET session_replication_role = DEFAULT")
+            print("[SEED] Foreign key checks re-enabled")
+        
         return {
             "message": "Database seeded successfully!" if not errors else "Database seed completed with errors", 
             "statements_executed": executed,
@@ -1519,6 +1530,12 @@ def seed_database():
         }
     except Exception as e:
         db.rollback()
+        # Re-enable foreign key checks on error
+        if DB_TYPE == "postgresql":
+            try:
+                db.execute("SET session_replication_role = DEFAULT")
+            except:
+                pass
         raise HTTPException(status_code=500, detail=str(e))
     finally:
         db.close()
