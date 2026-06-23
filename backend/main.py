@@ -1487,10 +1487,27 @@ def seed_database():
                         print(f"[SEED] Column add warning for {col_name}: {e}")
             db.commit()
         
-        # Disable foreign key checks during import
+        # Temporarily drop FK constraints to allow import (no superuser needed)
+        fk_constraints_dropped = []
         if DB_TYPE == "postgresql":
-            db.execute("SET session_replication_role = replica")
-            print("[SEED] Foreign key checks disabled")
+            fk_defs = [
+                ("comments", "comments_game_id_fkey", "FOREIGN KEY (game_id) REFERENCES games(id)"),
+                ("comments", "comments_user_id_fkey", "FOREIGN KEY (user_id) REFERENCES users(id)"),
+                ("ratings", "ratings_game_id_fkey", "FOREIGN KEY (game_id) REFERENCES games(id)"),
+                ("ratings", "ratings_user_id_fkey", "FOREIGN KEY (user_id) REFERENCES users(id)"),
+                ("favorites", "favorites_game_id_fkey", "FOREIGN KEY (game_id) REFERENCES games(id)"),
+                ("favorites", "favorites_user_id_fkey", "FOREIGN KEY (user_id) REFERENCES users(id)"),
+                ("tokens", "tokens_user_id_fkey", "FOREIGN KEY (user_id) REFERENCES users(id)"),
+            ]
+            for table_name, constraint_name, fk_def in fk_defs:
+                try:
+                    db.execute(f"ALTER TABLE {table_name} DROP CONSTRAINT IF EXISTS {constraint_name}")
+                    fk_constraints_dropped.append((table_name, constraint_name, fk_def))
+                    print(f"[SEED] Dropped FK constraint: {constraint_name}")
+                except Exception as e:
+                    print(f"[SEED] Could not drop {constraint_name}: {e}")
+            db.commit()
+            print(f"[SEED] Dropped {len(fk_constraints_dropped)} FK constraints for import")
         
         with open(sql_file, 'r', encoding='utf-8') as f:
             sql_content = f.read()
@@ -1518,10 +1535,28 @@ def seed_database():
         
         db.commit()
         
-        # Re-enable foreign key checks
-        if DB_TYPE == "postgresql":
-            db.execute("SET session_replication_role = DEFAULT")
-            print("[SEED] Foreign key checks re-enabled")
+        # Clean up orphaned rows and re-add FK constraints
+        if DB_TYPE == "postgresql" and fk_constraints_dropped:
+            print("[SEED] Cleaning up orphaned rows before re-adding FK constraints...")
+            db.execute("DELETE FROM comments WHERE game_id NOT IN (SELECT id FROM games)")
+            db.execute("DELETE FROM comments WHERE user_id NOT IN (SELECT id FROM users)")
+            db.execute("DELETE FROM ratings WHERE game_id NOT IN (SELECT id FROM games)")
+            db.execute("DELETE FROM ratings WHERE user_id NOT IN (SELECT id FROM users)")
+            db.execute("DELETE FROM favorites WHERE game_id NOT IN (SELECT id FROM games)")
+            db.execute("DELETE FROM favorites WHERE user_id NOT IN (SELECT id FROM users)")
+            db.execute("DELETE FROM tokens WHERE user_id NOT IN (SELECT id FROM users)")
+            db.commit()
+            print("[SEED] Orphaned rows cleaned up")
+            
+            # Re-add FK constraints
+            for table_name, constraint_name, fk_def in fk_constraints_dropped:
+                try:
+                    db.execute(f"ALTER TABLE {table_name} ADD CONSTRAINT {constraint_name} {fk_def}")
+                    print(f"[SEED] Re-added FK constraint: {constraint_name}")
+                except Exception as e:
+                    print(f"[SEED] Could not re-add {constraint_name}: {e}")
+            db.commit()
+            print("[SEED] FK constraints restored")
         
         return {
             "message": "Database seeded successfully!" if not errors else "Database seed completed with errors", 
@@ -1530,12 +1565,6 @@ def seed_database():
         }
     except Exception as e:
         db.rollback()
-        # Re-enable foreign key checks on error
-        if DB_TYPE == "postgresql":
-            try:
-                db.execute("SET session_replication_role = DEFAULT")
-            except:
-                pass
         raise HTTPException(status_code=500, detail=str(e))
     finally:
         db.close()
