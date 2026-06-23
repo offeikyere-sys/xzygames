@@ -166,7 +166,7 @@ export function NeoGamesLayout() {
     currentPage !== "movie" &&
     currentPage !== "search" &&
     currentPage !== "admin-users"
-  const activeSection: "games" | "software" | "movies" = (isCategoryPage || currentPage === "game" || currentPage === "movie") ? categorySection : (currentPage === "software-browse" || currentPage === "software-view-all" ? "software" : currentPage === "movies-browse" || currentPage === "movies-view-all" ? "movies" : "games")
+  const activeSection: "games" | "software" | "movies" = (isCategoryPage || currentPage === "game" || currentPage === "movie" || currentPage === "search") ? categorySection : (currentPage === "software-browse" || currentPage === "software-view-all" ? "software" : currentPage === "movies-browse" || currentPage === "movies-view-all" ? "movies" : "games")
 
   const handleCategoryClick = (cat: string) => {
     if (cat === "All") {
@@ -263,6 +263,7 @@ export function NeoGamesLayout() {
 
   const handleSearch = (query: string) => {
     setSearchQuery(query)
+    setCategorySection(activeSection)
     setCurrentPage("search")
     window.scrollTo(0, 0)
   }
