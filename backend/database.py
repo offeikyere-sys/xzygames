@@ -35,18 +35,12 @@ class DBWrapper:
     def execute(self, query, params=None):
         if DB_TYPE == "postgresql":
             # Quote reserved SQL keywords used as column names in queries FIRST
-            # 'type' is reserved in PostgreSQL
-            query = query.replace(" type =", ' "type" =')
-            query = query.replace(" type IN", ' "type" IN')
-            query = query.replace(" type,", ' "type",')
-            query = query.replace("(type", '("type"')
-            query = query.replace(" type ", ' "type" ')
-            # 'action' is reserved in PostgreSQL
-            query = query.replace(" action =", ' "action" =')
-            query = query.replace(" action IN", ' "action" IN')
-            query = query.replace(" action,", ' "action",')
-            query = query.replace("(action", '("action"')
-            query = query.replace(" action ", ' "action" ')
+            # Use regex with word boundaries to avoid matching inside other column names
+            import re
+            # 'type' is reserved in PostgreSQL - only match standalone word
+            query = re.sub(r'\btype\b', '"type"', query)
+            # 'action' is reserved in PostgreSQL - only match standalone word
+            query = re.sub(r'\baction\b', '"action"', query)
             # Parameter placeholder conversion (must happen after reserved word quoting)
             query = query.replace("?", "%s")
             # Date/time function conversion
