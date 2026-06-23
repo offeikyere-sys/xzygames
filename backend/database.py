@@ -1,7 +1,3 @@
-#!/usr/bin/env python3
-"""
-Database wrapper that makes SQLite (local) and PostgreSQL (RunSite) work identically.
-"""
 import os
 import sys
 from datetime import datetime
@@ -19,6 +15,9 @@ else:
     # SQLite for local development
     import sqlite3
     DB_TYPE = "sqlite"
+    # Use environment variable or default to path OUTSIDE git repo to prevent data loss
+    # __file__ is at: d:\PROJECTS WEBSITES AND SOFTWARES\neo-web\backend\database.py
+    # We go up 3 levels to get to: d:\PROJECTS WEBSITES AND SOFTWARES
     _base_dir = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
     DB_PATH = os.environ.get('LOCAL_DB_PATH', os.path.join(
         _base_dir, 'SOFTWARES', 'xzy-local-data', 'xzy.db'
@@ -30,48 +29,17 @@ class DBWrapper:
     """Wrapper that makes db.execute() work for both SQLite and PostgreSQL."""
     def __init__(self, conn):
         self.conn = conn
-        self._last_cursor = None
     
     def execute(self, query, params=None):
         if DB_TYPE == "postgresql":
-            # Quote reserved SQL keywords used as column names in queries FIRST
-            # Use lookaround to avoid matching inside compound names like item_type, game_type
-            import re
-            # 'type' is reserved in PostgreSQL - only match when NOT part of a larger identifier
-            query = re.sub(r'(?<![a-zA-Z_])type(?![a-zA-Z_])', '"type"', query)
-            # 'action' is reserved in PostgreSQL - only match when NOT part of a larger identifier
-            query = re.sub(r'(?<![a-zA-Z_])action(?![a-zA-Z_])', '"action"', query)
-            # Parameter placeholder conversion (must happen after reserved word quoting)
             query = query.replace("?", "%s")
-            # Date/time function conversion
             query = query.replace("datetime('now')", "CURRENT_TIMESTAMP")
             query = query.replace("date(created_at)", "DATE(created_at)")
-            # Case-insensitive search
-            query = query.replace(" LIKE ", " ILIKE ")
-            # Fix INSERT values for BOOLEAN columns
-            # PostgreSQL needs TRUE/FALSE not 1/0 for boolean columns
-            if 'INSERT' in query:
-                query = query.replace(", 1)", ", TRUE)")
-                query = query.replace(", 0)", ", FALSE)")
         cursor = self.conn.cursor()
-        self._last_cursor = cursor
-        
         if params:
             cursor.execute(query, params)
         else:
             cursor.execute(query)
-        
-        # Monkey-patch lastrowid onto cursor for PostgreSQL
-        # psycopg2 doesn't have lastrowid, but main.py uses cursor.lastrowid everywhere
-        if DB_TYPE == "postgresql":
-            try:
-                cur = self.conn.cursor()
-                cur.execute("SELECT LASTVAL()")
-                row = cur.fetchone()
-                cursor.lastrowid = row[0] if row else None
-            except:
-                cursor.lastrowid = None
-        
         return cursor
     
     def commit(self):
@@ -298,18 +266,25 @@ def init_db():
             )
         """)
 
-        cursor.execute("SELECT column_name FROM information_schema.columns WHERE table_name = 'games' AND column_name = 'install_guide_text'")
+        # Add missing columns for PostgreSQL
+        cursor.execute("""
+            SELECT column_name FROM information_schema.columns 
+            WHERE table_name = 'games' AND column_name = 'install_guide_text'
+        """)
         if not cursor.fetchone():
             cursor.execute("ALTER TABLE games ADD COLUMN install_guide_text TEXT DEFAULT ''")
             print("Added install_guide_text column to games table")
 
-        cursor.execute("SELECT column_name FROM information_schema.columns WHERE table_name = 'games' AND column_name = 'install_video_url'")
+        cursor.execute("""
+            SELECT column_name FROM information_schema.columns 
+            WHERE table_name = 'games' AND column_name = 'install_video_url'
+        """)
         if not cursor.fetchone():
             cursor.execute("ALTER TABLE games ADD COLUMN install_video_url TEXT DEFAULT ''")
             print("Added install_video_url column to games table")
 
     else:
-        # SQLite table creation
+        # SQLite table creation (original code)
         cursor.execute("""
             CREATE TABLE IF NOT EXISTS users (
                 id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -321,6 +296,8 @@ def init_db():
                 created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
             )
         """)
+        
+        # Add email_verified column if it doesn't exist
         try:
             cursor.execute("ALTER TABLE users ADD COLUMN email_verified INTEGER DEFAULT 0")
         except:
@@ -498,17 +475,21 @@ def init_db():
             )
         """)
 
+        # Add avatar_url column if it doesn't exist
         cursor.execute("PRAGMA table_info(users)")
         user_columns = [col[1] for col in cursor.fetchall()]
         if "avatar_url" not in user_columns:
             cursor.execute("ALTER TABLE users ADD COLUMN avatar_url TEXT DEFAULT ''")
             print("Added avatar_url column to users table")
+        
         if "supabase_id" not in user_columns:
             cursor.execute("ALTER TABLE users ADD COLUMN supabase_id TEXT DEFAULT ''")
             print("Added supabase_id column to users table")
 
+        # Add missing columns to games table
         cursor.execute("PRAGMA table_info(games)")
         columns = [col[1] for col in cursor.fetchall()]
+
         migration_columns = {
             "download_links": "TEXT DEFAULT ''",
             "trailer_url": "TEXT DEFAULT ''",
@@ -526,6 +507,7 @@ def init_db():
             "install_guide_text": "TEXT DEFAULT ''",
             "install_video_url": "TEXT DEFAULT ''",
         }
+
         for col, col_type in migration_columns.items():
             if col not in columns:
                 cursor.execute(f"ALTER TABLE games ADD COLUMN {col} {col_type}")
