@@ -1423,35 +1423,35 @@ def make_admin(email: str):
 
 # ============ RESET DATABASE ============
 
-    @app.get("/api/reset-database")
-    def reset_database():
-        """Drop all tables and recreate them. Use before seeding."""
-        db = get_db()
-        try:
-            if DB_TYPE == "postgresql":
-                # Drop all tables individually in reverse dependency order
-                tables = db.execute("""
-                    SELECT tablename FROM pg_tables 
-                    WHERE schemaname = 'public' AND tablename != 'spatial_ref_sys'
-                """).fetchall()
-                for table in tables:
-                    db.execute(f"DROP TABLE IF EXISTS {table['tablename']} CASCADE")
-            else:
-                # SQLite: get all table names and drop them
-                tables = db.execute("SELECT name FROM sqlite_master WHERE type='table'").fetchall()
-                for table in tables:
-                    db.execute(f"DROP TABLE IF EXISTS {table['name']}")
-            db.commit()
-            
-            # Recreate tables
-            init_db()
-            
-            return {"message": "Database reset successfully! All tables dropped and recreated."}
-        except Exception as e:
-            db.rollback()
-            raise HTTPException(status_code=500, detail=str(e))
-        finally:
-            db.close()
+@app.get("/api/reset-database")
+def reset_database():
+    """Drop all tables and recreate them. Use before seeding."""
+    db = get_db()
+    try:
+        if DB_TYPE == "postgresql":
+            # Drop all tables individually in reverse dependency order
+            tables = db.execute("""
+                SELECT tablename FROM pg_tables 
+                WHERE schemaname = 'public' AND tablename != 'spatial_ref_sys'
+            """).fetchall()
+            for table in tables:
+                db.execute(f"DROP TABLE IF EXISTS {table['tablename']} CASCADE")
+        else:
+            # SQLite: get all table names and drop them
+            tables = db.execute("SELECT name FROM sqlite_master WHERE type='table'").fetchall()
+            for table in tables:
+                db.execute(f"DROP TABLE IF EXISTS {table['name']}")
+        db.commit()
+        
+        # Recreate tables
+        init_db()
+        
+        return {"message": "Database reset successfully! All tables dropped and recreated."}
+    except Exception as e:
+        db.rollback()
+        raise HTTPException(status_code=500, detail=str(e))
+    finally:
+        db.close()
 
 # ============ ONE-TIME DATABASE SEED ============
 
@@ -1465,11 +1465,6 @@ def seed_database():
     
     db = get_db()
     try:
-        # Safety check: only allow import if database is empty (no users)
-        user_count = db.execute("SELECT COUNT(*) as cnt FROM users").fetchone()["cnt"]
-        if user_count > 0:
-            return {"message": "Database already has data. Import skipped.", "users_found": user_count}
-        
         # Add missing columns to all tables (in case schema is old)
         if DB_TYPE == "postgresql":
             # Games table columns
