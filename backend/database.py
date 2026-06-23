@@ -35,12 +35,12 @@ class DBWrapper:
     def execute(self, query, params=None):
         if DB_TYPE == "postgresql":
             # Quote reserved SQL keywords used as column names in queries FIRST
-            # Use regex with word boundaries to avoid matching inside other column names
+            # Use lookaround to avoid matching inside compound names like item_type, game_type
             import re
-            # 'type' is reserved in PostgreSQL - only match standalone word
-            query = re.sub(r'\btype\b', '"type"', query)
-            # 'action' is reserved in PostgreSQL - only match standalone word
-            query = re.sub(r'\baction\b', '"action"', query)
+            # 'type' is reserved in PostgreSQL - only match when NOT part of a larger identifier
+            query = re.sub(r'(?<![a-zA-Z_])type(?![a-zA-Z_])', '"type"', query)
+            # 'action' is reserved in PostgreSQL - only match when NOT part of a larger identifier
+            query = re.sub(r'(?<![a-zA-Z_])action(?![a-zA-Z_])', '"action"', query)
             # Parameter placeholder conversion (must happen after reserved word quoting)
             query = query.replace("?", "%s")
             # Date/time function conversion
