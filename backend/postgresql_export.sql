@@ -1,19 +1,19 @@
 -- XZY Games Database Export for PostgreSQL
--- Generated: 2026-06-23 01:59:14
+-- Generated: 2026-06-23 03:13:05
 -- Target: RunSite PostgreSQL Database
 
 BEGIN;
 
 -- Export Users
 INSERT INTO users (id, name, email, password, avatar_color, is_admin, email_verified, avatar_url, supabase_id, created_at) VALUES (1, 'DANNY', 'offeikyere@gmail.com', '059f6989d610d55f46bd9a235ba098223e5f0054715962995f74037a279cbd79', '#ec4899', TRUE, FALSE, '', '', '2026-06-13 04:48:36');
-INSERT INTO users (id, name, email, password, avatar_color, is_admin, email_verified, avatar_url, supabase_id, created_at) VALUES (2, 'XZY ADMIN', 'danny.exzy@icloud.com', '479ad8ded87e0bfcfcbcae7673d28507b735936586f008213e792925c802e9d6', '#ec4899', TRUE, FALSE, 'http://localhost:5050/uploads/avatar-2-1813d153.png', '', '2026-06-13 05:52:09');
+INSERT INTO users (id, name, email, password, avatar_color, is_admin, email_verified, avatar_url, supabase_id, created_at) VALUES (2, 'XZY ADMIN', 'danny.exzy@icloud.com', '479ad8ded87e0bfcfcbcae7673d28507b735936586f008213e792925c802e9d6', '#ec4899', TRUE, FALSE, '/uploads/avatar-2-1813d153.png', '', '2026-06-13 05:52:09');
 
 -- Export Games
 INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (17, 'HYPERVISOR  EA SPORTS FC 26', 'Sports, Hypervisor', 5.0, 1, 'Genres/Tags: Sports, Soccer, 3D
 Companies: EA Canada, Electronic Arts, EA Romania
 Languages: RUS/ENG/MULTI21
 Original Size: 74.4 GB
-Repack Size: from 49.5 GB', 'http://localhost:5050/uploads/6eda4a3c988c4313ba4fcba1225f41f6.jpg', '', 'https://fuckingfast.co/64k83eckz3ia#EA_SPORTS_FC_26_--_fitgirl-repacks.site_--_.part001.rar
+Repack Size: from 49.5 GB', '/uploads/6eda4a3c988c4313ba4fcba1225f41f6.jpg', '', 'https://fuckingfast.co/64k83eckz3ia#EA_SPORTS_FC_26_--_fitgirl-repacks.site_--_.part001.rar
 https://fuckingfast.co/vcn5wbjgvcfr#EA_SPORTS_FC_26_--_fitgirl-repacks.site_--_.part002.rar
 https://fuckingfast.co/bl815xkuy10e#EA_SPORTS_FC_26_--_fitgirl-repacks.site_--_.part003.rar
 https://fuckingfast.co/47rq90s9kb1u#EA_SPORTS_FC_26_--_fitgirl-repacks.site_--_.part004.rar
@@ -121,13 +121,13 @@ https://fuckingfast.co/wobt4zdzgrd1#fg-optional-french.bin
 https://fuckingfast.co/k3lmevicfp0c#fg-optional-german.bin
 https://fuckingfast.co/waveh3lfkcm8#fg-optional-italian.bin
 https://fuckingfast.co/s4b2pp0ure62#fg-optional-mexican.bin
-https://fuckingfast.co/84cmqlvyktjd#fg-optional-spanish.bin', 'https://youtu.be/TSi0iJYSQ24?si=YxQJ3IA37GxX7G9Z', 'http://localhost:5050/uploads/2052d1301bdb47b9aed2a39146487699.jpg
-http://localhost:5050/uploads/80a2667420024634b085e2f89f5b0ac5.jpg
-http://localhost:5050/uploads/c87553623605468496a014d0562108ac.jpg
-http://localhost:5050/uploads/af40be307422455a996a87bf2c21ff54.jpg
-http://localhost:5050/uploads/bc30b552c7494ba2bc60adadf03bdbf4.jpg
-http://localhost:5050/uploads/572bf2aada9e4fed97a095a04fa05ca5.jpg
-http://localhost:5050/uploads/5f2e4f99d55e4324bd9c31a2c9f87c5c.jpg', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#3b82f6', 0, 'game', '', '', '', '2026-06-13 13:04:28', 'Repack Features
+https://fuckingfast.co/84cmqlvyktjd#fg-optional-spanish.bin', 'https://youtu.be/TSi0iJYSQ24?si=YxQJ3IA37GxX7G9Z', '/uploads/2052d1301bdb47b9aed2a39146487699.jpg
+/uploads/80a2667420024634b085e2f89f5b0ac5.jpg
+/uploads/c87553623605468496a014d0562108ac.jpg
+/uploads/af40be307422455a996a87bf2c21ff54.jpg
+/uploads/bc30b552c7494ba2bc60adadf03bdbf4.jpg
+/uploads/572bf2aada9e4fed97a095a04fa05ca5.jpg
+/uploads/5f2e4f99d55e4324bd9c31a2c9f87c5c.jpg', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#3b82f6', 0, 'game', '', '', '', '2026-06-13 13:04:28', 'Repack Features
 Based on EA Build v1.0.133.58379 release: 74.4 GB
 Hypervisor Bypass (INTEL & AMD) by DenuvOwO + Goldberg emu applied over
 Many antiviruses, including Windows Defender are now marking HV files as rootkits, rendering games unplayable. To avoid it either turn off AV completely, or add source/target installation folders to exclusions
@@ -154,7 +154,7 @@ INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_u
 Company: IO Interactive
 Languages: RUS/ENG/MULTI14
 Original Size: 48.4 GB
-Repack Size: 35.5 GB', 'http://localhost:5050/uploads/5497073c0c34444fbe676c907c430744.jpg', '', 'https://fuckingfast.co/w5phzauyzvob#007_First_Light_CRACKED_--_fitgirl-repacks.site_--_.part01.rar
+Repack Size: 35.5 GB', '/uploads/5497073c0c34444fbe676c907c430744.jpg', '', 'https://fuckingfast.co/w5phzauyzvob#007_First_Light_CRACKED_--_fitgirl-repacks.site_--_.part01.rar
 https://fuckingfast.co/pond72dvy1en#007_First_Light_CRACKED_--_fitgirl-repacks.site_--_.part02.rar
 https://fuckingfast.co/xzvdgn5mvevy#007_First_Light_CRACKED_--_fitgirl-repacks.site_--_.part03.rar
 https://fuckingfast.co/q8ola0qdpfi9#007_First_Light_CRACKED_--_fitgirl-repacks.site_--_.part04.rar
@@ -172,19 +172,19 @@ https://fuckingfast.co/jujr6lxc1nxc#007_First_Light_CRACKED_--_fitgirl-repacks.s
 https://fuckingfast.co/q2lb3d4cbhlf#007_First_Light_CRACKED_--_fitgirl-repacks.site_--_.part16.rar
 https://fuckingfast.co/vl3fk1pa269a#007_First_Light_CRACKED_--_fitgirl-repacks.site_--_.part17.rar
 https://fuckingfast.co/8c4un6njnvpo#007_First_Light_CRACKED_--_fitgirl-repacks.site_--_.part18.rar
-https://fuckingfast.co/8a64bd7q9fyo#007_First_Light_CRACKED_--_fitgirl-repacks.site_--_.part19.rar', 'https://youtu.be/nTUoIyTMw0Q?si=AI-5TmaAjF_2L5tV', 'http://localhost:5050/uploads/e4b6f32f1c5f4e36aff2ddef95ce5a95.jpg
-http://localhost:5050/uploads/e3672e630d954bc2ab67ab7a9b131113.jpg
-http://localhost:5050/uploads/500b34088a2b413da430b45a7a69ab86.jpg
-http://localhost:5050/uploads/20f4a25ca9274a81b40945adfa734a47.jpg
-http://localhost:5050/uploads/7d1ea6668d04403c80f265aee74ff8fa.jpg
-http://localhost:5050/uploads/0651b00032bc42abbdaebec7b2596936.png
-http://localhost:5050/uploads/73331b77a0114bb3b429b5f9ca8e8f0b.jpg
-http://localhost:5050/uploads/2b1f1574db85494e8b5387aaf2f1f093.jpg', 'Windows 10/11 64-bit', 'Intel Core i5-2500 or AMD equivalent', '8 GB RAM', 'NVIDIA GeForce GTX 660 or AMD Radeon HD 7870', '53.3 GB', '', '#ca8a04', 0, 'game', '', '', '', '2026-06-13 16:27:18', '', 'Internet Download Manager', 'https://www.internetdownloadmanager.com/download.html', '', '', '', '', '');
+https://fuckingfast.co/8a64bd7q9fyo#007_First_Light_CRACKED_--_fitgirl-repacks.site_--_.part19.rar', 'https://youtu.be/nTUoIyTMw0Q?si=AI-5TmaAjF_2L5tV', '/uploads/e4b6f32f1c5f4e36aff2ddef95ce5a95.jpg
+/uploads/e3672e630d954bc2ab67ab7a9b131113.jpg
+/uploads/500b34088a2b413da430b45a7a69ab86.jpg
+/uploads/20f4a25ca9274a81b40945adfa734a47.jpg
+/uploads/7d1ea6668d04403c80f265aee74ff8fa.jpg
+/uploads/0651b00032bc42abbdaebec7b2596936.png
+/uploads/73331b77a0114bb3b429b5f9ca8e8f0b.jpg
+/uploads/2b1f1574db85494e8b5387aaf2f1f093.jpg', 'Windows 10/11 64-bit', 'Intel Core i5-2500 or AMD equivalent', '8 GB RAM', 'NVIDIA GeForce GTX 660 or AMD Radeon HD 7870', '53.3 GB', '', '#ca8a04', 0, 'game', '', '', '', '2026-06-13 16:27:18', '', 'Internet Download Manager', 'https://www.internetdownloadmanager.com/download.html', '', '', '', '', '');
 INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (19, 'Assassin’s Creed Mirage: Master Assassin Edition v1.1.1 + 13 DLCs*', 'Adventure, RPG', 4.5, 0, 'Genres/Tags: Action, Stealth, Open world, Third-person, 3D
 Companies: Ubisoft *, Ubisoft Entertainment
 Languages: RUS/ENG/MULTI14
 Original Size: 59.9 GB
-Repack Size: from 24 GB [Selective Download]', 'http://localhost:5050/uploads/42fd9c8e9ab74c8c82e2efba780e4620.jpg', '', 'https://fuckingfast.co/vv1fyko1f0o5#Assassins_Creed_Mirage_--_fitgirl-repacks.site_--_.part01.rar
+Repack Size: from 24 GB [Selective Download]', '/uploads/42fd9c8e9ab74c8c82e2efba780e4620.jpg', '', 'https://fuckingfast.co/vv1fyko1f0o5#Assassins_Creed_Mirage_--_fitgirl-repacks.site_--_.part01.rar
 https://fuckingfast.co/ku8cwyue4hpx#Assassins_Creed_Mirage_--_fitgirl-repacks.site_--_.part02.rar
 https://fuckingfast.co/rmso4r3j926x#Assassins_Creed_Mirage_--_fitgirl-repacks.site_--_.part03.rar
 https://fuckingfast.co/xdj0z97mkkof#Assassins_Creed_Mirage_--_fitgirl-repacks.site_--_.part04.rar
@@ -238,12 +238,12 @@ https://fuckingfast.co/8ar2nf5h2qct#fg-selective-arabic-vo.bin
 https://fuckingfast.co/kvp91bfi1xz3#fg-selective-french-vo.bin
 https://fuckingfast.co/ezy154zehor0#fg-selective-italian-vo.bin
 https://fuckingfast.co/kd11nhdnd1ce#fg-selective-spanish-vo.bin
-https://filecrypt.cc/Container/0ADA1A620C.html', 'https://youtu.be/x55lAlFtXmw?si=IZey65wFuQARQTxB', 'http://localhost:5050/uploads/cfc6bb19364f47369bdf82ba9b897c91.jpg
-http://localhost:5050/uploads/2d95debe429244deb704e428fb84f1b3.jpg
-http://localhost:5050/uploads/ad9f3c9bf18143d3bcbedd0f35bd6076.jpg
-http://localhost:5050/uploads/ef21e5c89fbe4319a073d644dcb5caf0.jpg
-http://localhost:5050/uploads/e35192ebf99c4dfea6837036cd298a28.jpg
-http://localhost:5050/uploads/f1c129cc3e7845a99e0e000e95c755d8.jpg', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '65.3 GB', '', '#3b82f6', 0, 'game', '', '', '', '2026-06-13 18:06:51', 'Repack Features
+https://filecrypt.cc/Container/0ADA1A620C.html', 'https://youtu.be/x55lAlFtXmw?si=IZey65wFuQARQTxB', '/uploads/cfc6bb19364f47369bdf82ba9b897c91.jpg
+/uploads/2d95debe429244deb704e428fb84f1b3.jpg
+/uploads/ad9f3c9bf18143d3bcbedd0f35bd6076.jpg
+/uploads/ef21e5c89fbe4319a073d644dcb5caf0.jpg
+/uploads/e35192ebf99c4dfea6837036cd298a28.jpg
+/uploads/f1c129cc3e7845a99e0e000e95c755d8.jpg', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '65.3 GB', '', '#3b82f6', 0, 'game', '', '', '', '2026-06-13 18:06:51', 'Repack Features
 Based on P2P Assassins.Creed.Mirage.Valley.of.Memory-voices38 release: voices38.acm.the.valley.of.memory.iso (64,002,250,752 bytes)
 Game version: v1.1.1 (the next patch after “Valley of Memory” free update); *13 DLCs are included and activated (Use save unlocker from updates section)
 Bonus OST and ArtBook (305 MB) added, thanks to NoeRIη!
@@ -268,7 +268,7 @@ INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_u
 Companies: Ubisoft Montreal / Ubisoft Entertainment
 Languages: RUS/ENG/MULTI15
 Original Size: 74.7 GB
-Repack Size: from 28.4 GB [Selective Download]', 'http://localhost:5050/uploads/3588b80051aa4f7a9f11556cb65807e3.jpg', '', 'https://fuckingfast.co/ml9n0gfrwwys#Assassins_Creed_Origins_--_fitgirl-repacks.site_--_.part01.rar
+Repack Size: from 28.4 GB [Selective Download]', '/uploads/3588b80051aa4f7a9f11556cb65807e3.jpg', '', 'https://fuckingfast.co/ml9n0gfrwwys#Assassins_Creed_Origins_--_fitgirl-repacks.site_--_.part01.rar
 https://fuckingfast.co/pkf1hakpbkm5#Assassins_Creed_Origins_--_fitgirl-repacks.site_--_.part02.rar
 https://fuckingfast.co/1nc7bleciom6#Assassins_Creed_Origins_--_fitgirl-repacks.site_--_.part03.rar
 https://fuckingfast.co/0uzteugfojt8#Assassins_Creed_Origins_--_fitgirl-repacks.site_--_.part04.rar
@@ -286,15 +286,15 @@ https://fuckingfast.co/e4qhzmtpptrj#Assassins_Creed_Origins_--_fitgirl-repacks.s
 https://fuckingfast.co/262c65oteume#Assassins_Creed_Origins_--_fitgirl-repacks.site_--_.part15.rar
 https://fuckingfast.co/kogfznmq50g6#fg-optional-bonus-soundtracks.bin
 https://fuckingfast.co/t2yks0fqiwyt#fg-optional-spanish-vo.bin
-https://fuckingfast.co/1b3scm88nokd#fg-optional-french-vo.bin', 'https://youtu.be/cK4iAjzAoas?si=KSGWKT5xdGn80K0z', 'http://localhost:5050/uploads/c165cefd574c46e9bbe022f4acd7ec53.jpg
-http://localhost:5050/uploads/0ac668b670994c799d10759e7112c040.jpg
-http://localhost:5050/uploads/ed47ab6c9c7e490e94535460090312b8.jpg
-http://localhost:5050/uploads/da82c8236ec84f7fa40c3188ca8d36f1.jpg
-http://localhost:5050/uploads/2ab761fe500747a7b0c3d34ebe0f36b5.jpg
-http://localhost:5050/uploads/cb472495ea704ada9f509ac288239536.jpg
-http://localhost:5050/uploads/17a71c5211a647738554ec7b58016e86.jpg
-http://localhost:5050/uploads/797756dc47b342469f7886c02d25c6c6.png
-http://localhost:5050/uploads/8aef6adcb62046ef9aa82bd258a5ba11.jpg', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#ca8a04', 0, 'game', '', '', '', '2026-06-14 03:39:08', '', '', '', '', '', '', '', '');
+https://fuckingfast.co/1b3scm88nokd#fg-optional-french-vo.bin', 'https://youtu.be/cK4iAjzAoas?si=KSGWKT5xdGn80K0z', '/uploads/c165cefd574c46e9bbe022f4acd7ec53.jpg
+/uploads/0ac668b670994c799d10759e7112c040.jpg
+/uploads/ed47ab6c9c7e490e94535460090312b8.jpg
+/uploads/da82c8236ec84f7fa40c3188ca8d36f1.jpg
+/uploads/2ab761fe500747a7b0c3d34ebe0f36b5.jpg
+/uploads/cb472495ea704ada9f509ac288239536.jpg
+/uploads/17a71c5211a647738554ec7b58016e86.jpg
+/uploads/797756dc47b342469f7886c02d25c6c6.png
+/uploads/8aef6adcb62046ef9aa82bd258a5ba11.jpg', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#ca8a04', 0, 'game', '', '', '', '2026-06-14 03:39:08', '', '', '', '', '', '', '', '');
 INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (21, 'Assassin’s Creed Valhalla: Complete Edition v1.7.0 + All DLCs', 'Adventure, RPG', 4.5, 0, 'Genres/Tags: Action, RPG, Action RPG, Open world, Third-person, 3D
 Companies: Ubisoft Bucharest, 
 Ubisoft Montreal, 
@@ -302,32 +302,32 @@ Ubisoft Sofia,
 Ubisoft Chengdu, Ubisoft Singapore, Ubisoft
 Languages: RUS/ENG/MULTI14
 Original Size: 160.8 GB
-Repack Size: from 45.9 GB [Selective Download]', 'http://localhost:5050/uploads/d892469c8d1549c3aff4bb9fbbf39f6c.jpg', '', 'https://ffdl.cybar.to/dagg6u1exbc7
+Repack Size: from 45.9 GB [Selective Download]', '/uploads/d892469c8d1549c3aff4bb9fbbf39f6c.jpg', '', 'https://ffdl.cybar.to/dagg6u1exbc7
 https://ffdl.cybar.to/ng1j21yo3plc
 https://ffdl.cybar.to/zse6r3li2onp
-https://ffdl.cybar.to/n198b0o2pl1s', 'https://youtu.be/bAxLxRr9OxU?si=0A4UkW47WKlyLMso', 'http://localhost:5050/uploads/938312438cbb415590f71f0d3a264e58.jpg
-http://localhost:5050/uploads/61f14a404e0a49aeb6cffdf77a374e57.jpg
-http://localhost:5050/uploads/8ad9d6995a31450884ba27213de861f6.png
-http://localhost:5050/uploads/ff54474915204f0bbc5d6611d17d618c.jpg
-http://localhost:5050/uploads/8fff3e96045f47ffac1cd20da29afc94.jpg
-http://localhost:5050/uploads/3a5c8ea976c4406080a4cd3a30633b10.jpg
-http://localhost:5050/uploads/7707aa078348419ba7a4bfcb9cd236f1.jpg
-http://localhost:5050/uploads/be6bddcd365e4b5cbd13827df19ce832.jpg
-http://localhost:5050/uploads/482bbc898006423da7de85ca3ca9947b.jpg', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#bfdbfe', 0, 'game', '', '', '', '2026-06-14 03:42:04', '', '', '', '', '', '', '', '');
+https://ffdl.cybar.to/n198b0o2pl1s', 'https://youtu.be/bAxLxRr9OxU?si=0A4UkW47WKlyLMso', '/uploads/938312438cbb415590f71f0d3a264e58.jpg
+/uploads/61f14a404e0a49aeb6cffdf77a374e57.jpg
+/uploads/8ad9d6995a31450884ba27213de861f6.png
+/uploads/ff54474915204f0bbc5d6611d17d618c.jpg
+/uploads/8fff3e96045f47ffac1cd20da29afc94.jpg
+/uploads/3a5c8ea976c4406080a4cd3a30633b10.jpg
+/uploads/7707aa078348419ba7a4bfcb9cd236f1.jpg
+/uploads/be6bddcd365e4b5cbd13827df19ce832.jpg
+/uploads/482bbc898006423da7de85ca3ca9947b.jpg', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#bfdbfe', 0, 'game', '', '', '', '2026-06-14 03:42:04', '', '', '', '', '', '', '', '');
 INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (22, 'Assassin’s Creed: Odyssey v1.5.6 + DLCs', 'RPG, Adventure', 4.5, 1, 'Genres/Tags: Action, Action RPG, Open world, Stealth, Third-person, 3D
 Companies: Ubisoft Quebec, Ubisoft Entertainment
 Languages: RUS/ENG/MULTI15
 Original Size: 122.6 GB
-Repack Size: from 36.1 GB', 'http://localhost:5050/uploads/f74b18c2114240428d4d580383fcb5fd.jpg', '', 'https://ffdl.cybar.to/kxj05or9shkj
+Repack Size: from 36.1 GB', '/uploads/f74b18c2114240428d4d580383fcb5fd.jpg', '', 'https://ffdl.cybar.to/kxj05or9shkj
 https://ffdl.cybar.to/54ve5gdu9w5c
 https://ffdl.cybar.to/3fh7ot1cpl55
-https://ffdl.cybar.to/f8cx7x3rr8dp', 'https://youtu.be/GbLFsOq5ipI?si=u-uWJBo9U6-LG-s5', 'http://localhost:5050/uploads/f028231e83474005b601a4fbe8848dd1.jpg
-http://localhost:5050/uploads/b0f3b081d5a345699a68f667461ae260.jpg
-http://localhost:5050/uploads/3365b5f4477447c48425d11dbdc44aeb.jpg
-http://localhost:5050/uploads/a79237cf29d5483e8885ecb5aff1c133.jpg
-http://localhost:5050/uploads/a4f05c9cbc7e477eabed344f9efd144b.jpg
-http://localhost:5050/uploads/eadb9ae95a5d4d2395f261b7c289a0ba.jpg
-http://localhost:5050/uploads/b427e0ff69594bcdac8a827029d50d9e.jpg', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#fef08a', 0, 'game', '', '', '', '2026-06-14 03:46:55', 'GAME INFO
+https://ffdl.cybar.to/f8cx7x3rr8dp', 'https://youtu.be/GbLFsOq5ipI?si=u-uWJBo9U6-LG-s5', '/uploads/f028231e83474005b601a4fbe8848dd1.jpg
+/uploads/b0f3b081d5a345699a68f667461ae260.jpg
+/uploads/3365b5f4477447c48425d11dbdc44aeb.jpg
+/uploads/a79237cf29d5483e8885ecb5aff1c133.jpg
+/uploads/a4f05c9cbc7e477eabed344f9efd144b.jpg
+/uploads/eadb9ae95a5d4d2395f261b7c289a0ba.jpg
+/uploads/b427e0ff69594bcdac8a827029d50d9e.jpg', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#fef08a', 0, 'game', '', '', '', '2026-06-14 03:46:55', 'GAME INFO
 Genre: Action, Adventure, RPG
 Developer: Ubisoft
 Platform: PC
@@ -339,7 +339,7 @@ INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_u
 Companies: Ubisoft Philippines, Ubisoft Belgrade, Ubisoft Montreal, Ubisoft Osaka, Ubisoft Bordeaux, Ubisoft Shanghai, Ubisoft Chengdu, Ubisoft Montpellier, Ubisoft Sofia, Ubisoft Bucharest & Craiova, Ubisoft Singapore, Ubisoft Entertainment, Ubisoft Quebec, Ubisoft Ukraine
 Languages: RUS/ENG/MULTI13
 Original Size: 156.6 GB
-Repack Size: from 75.3 GB [Selective Download]', 'http://localhost:5050/uploads/fce8549538fa458d860c95f247f9b8b0.jpg', '', 'https://fuckingfast.co/o5xts07jc1dd#Assassins_Creed_Shadows_--_fitgirl-repacks.site_--_.part001.rar
+Repack Size: from 75.3 GB [Selective Download]', '/uploads/fce8549538fa458d860c95f247f9b8b0.jpg', '', 'https://fuckingfast.co/o5xts07jc1dd#Assassins_Creed_Shadows_--_fitgirl-repacks.site_--_.part001.rar
 https://fuckingfast.co/1ft64tcdb7c3#Assassins_Creed_Shadows_--_fitgirl-repacks.site_--_.part002.rar
 https://fuckingfast.co/mihvsxyfsxd8#Assassins_Creed_Shadows_--_fitgirl-repacks.site_--_.part003.rar
 https://fuckingfast.co/05w73h0b7jdc#Assassins_Creed_Shadows_--_fitgirl-repacks.site_--_.part004.rar
@@ -499,21 +499,21 @@ https://fuckingfast.co/aqoqwga1z85c#Assassins_Creed_Shadows_--_fitgirl-repacks.s
 https://fuckingfast.co/hidlwnbbxflb#Assassins_Creed_Shadows_--_fitgirl-repacks.site_--_.part155.rar
 https://fuckingfast.co/lls1rv0419ti#fg-optional-bonus-soundtracks.bin
 https://fuckingfast.co/sk8fs9dacswl#fg-optional-french-vo.bin
-https://fuckingfast.co/fb3x5x3g7j6o#fg-optional-spanish-vo.bin', 'https://youtu.be/_JzywR97gUs?si=suljey7wC9Lhao1e', 'http://localhost:5050/uploads/99fa2d71f0274812a55ee89a54ed95ce.jpg
-http://localhost:5050/uploads/80ef34d3ee7341f79352cad9c4327528.jpg
-http://localhost:5050/uploads/7073e1365b4645eda3cbe91988d4e1b4.jpg
-http://localhost:5050/uploads/f53a4dc7cbbf4bc2a9534801a0840a9e.jpg
-http://localhost:5050/uploads/85dd34552eb541f1a49cce44ad2bee3b.jpg
-http://localhost:5050/uploads/943572c85e6f41eda0bfd7a692193e69.jpg
-http://localhost:5050/uploads/1c8c909e79174a4c8a18d6ad55fa78bd.jpg
-http://localhost:5050/uploads/8429ec9453b948bda0f648e51b0a3ea8.jpg', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#b91c1c', 0, 'game', '', '', '', '2026-06-14 03:51:54', '', '', '', '', '', '', '', '');
+https://fuckingfast.co/fb3x5x3g7j6o#fg-optional-spanish-vo.bin', 'https://youtu.be/_JzywR97gUs?si=suljey7wC9Lhao1e', '/uploads/99fa2d71f0274812a55ee89a54ed95ce.jpg
+/uploads/80ef34d3ee7341f79352cad9c4327528.jpg
+/uploads/7073e1365b4645eda3cbe91988d4e1b4.jpg
+/uploads/f53a4dc7cbbf4bc2a9534801a0840a9e.jpg
+/uploads/85dd34552eb541f1a49cce44ad2bee3b.jpg
+/uploads/943572c85e6f41eda0bfd7a692193e69.jpg
+/uploads/1c8c909e79174a4c8a18d6ad55fa78bd.jpg
+/uploads/8429ec9453b948bda0f648e51b0a3ea8.jpg', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#b91c1c', 0, 'game', '', '', '', '2026-06-14 03:51:54', '', '', '', '', '', '', '', '');
 INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (37, 'Internet Download Manager (IDM) 6.42.64', 'Utilities & System', 4.5, 0, 'Internet Download Manager (IDM) Free Download (Latest 2026 Crack)
 Free download Internet Download Manager Cracked version lifetime activation + Portable for Windows PC Latest Full version - The fastest download accelerator and video downloader.
 Internet Download Manager or IDM is an advanced download manager software that makes it easier to manage your downloaded files with the intelligent system, this program will speed up the downloading of files with its new technology, and according to the manufacturer, It can download up to 5 times faster than usual.
 
-Video downloading from almost all video streaming platforms is the best feature of Internet Download Manager. IDM lets you download videos from websites like YouTube, Daily Motion, Vimeo, etc. The video download button will appear automatically when you watch videos; click on it and quickly grab the video in your required SD or HD quality.', 'http://localhost:5050/uploads/f10c5d30c1a245f5b5aab7a99828c68c.jpg', '', 'https://download2338.mediafire.com/rp228zra66bg364ndHRa4FR87AJt1BxgzxuqJa_T4jAyutVfqdZeEOfR083v5UqEi_DpmO5GLjbGbyNaxgYK3ZWsmymfXGJbog_GfBP5iQDqhHAqw_S59NuQRAqXcLd3kEwVRLA1P_V9jNEbX5uigSfjQC90oK9HYkgAoEzvACWPeSk/hpz3rrch6lcd1qp/Internet+Download+Manager+6.42+Build+64.rar', '', 'http://localhost:5050/uploads/f38b95d76212446c81b03e42bde777e4.jpg
-http://localhost:5050/uploads/4c04d1b24be342f9a215f888cb7fbaf7.jpg
-http://localhost:5050/uploads/5d3846fc67214c85a7bb0948e263f8bb.jpg', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#1d4ed8', 0, 'software', '', '6.42.64', 'Freemium', '2026-06-14 18:48:59', 'Full compatibility with Internet Explorer, Netscape, Google Chrome, AOL, Opera, Mozilla Firefox, Mozilla Firebird, Avant Browser, MyIE2, and other popular browsers.
+Video downloading from almost all video streaming platforms is the best feature of Internet Download Manager. IDM lets you download videos from websites like YouTube, Daily Motion, Vimeo, etc. The video download button will appear automatically when you watch videos; click on it and quickly grab the video in your required SD or HD quality.', '/uploads/f10c5d30c1a245f5b5aab7a99828c68c.jpg', '', 'https://download2338.mediafire.com/rp228zra66bg364ndHRa4FR87AJt1BxgzxuqJa_T4jAyutVfqdZeEOfR083v5UqEi_DpmO5GLjbGbyNaxgYK3ZWsmymfXGJbog_GfBP5iQDqhHAqw_S59NuQRAqXcLd3kEwVRLA1P_V9jNEbX5uigSfjQC90oK9HYkgAoEzvACWPeSk/hpz3rrch6lcd1qp/Internet+Download+Manager+6.42+Build+64.rar', '', '/uploads/f38b95d76212446c81b03e42bde777e4.jpg
+/uploads/4c04d1b24be342f9a215f888cb7fbaf7.jpg
+/uploads/5d3846fc67214c85a7bb0948e263f8bb.jpg', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#1d4ed8', 0, 'software', '', '6.42.64', 'Freemium', '2026-06-14 18:48:59', 'Full compatibility with Internet Explorer, Netscape, Google Chrome, AOL, Opera, Mozilla Firefox, Mozilla Firebird, Avant Browser, MyIE2, and other popular browsers.
 Download FLV video files from YouTube, Google Video, and MySpaceTV.
 Increase download speed up to 5x by Smart File Splitting System
 Limiting download speed for specific files
@@ -532,7 +532,7 @@ INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_u
 
 The software offers a wide array of tools such as layer-based editing, advanced selection tools, color correction, retouching, and AI-powered enhancements. Its flexible workflow allows users to work on complex projects with multiple layers and effects while maintaining full control over every detail.
 
-Photoshop integrates seamlessly with other Adobe products, making it a central tool in many creative workflows. Whether used for professional photo retouching, social media graphics, or digital painting, Photoshop 2026 provides a stable and feature-rich environment that adapts to both beginners and advanced users.', 'http://localhost:5050/uploads/ac38f464b3eb48beaba8cc14c5dc6530.png', '', 'https://download2263.mediafire.com/aid0fd68fz4gsyIq3McosgwkoSXWGnjm_gAnPnOtHBgA3Ny957lo4Azkk_EuinoLhbIh-YWXPSG7NgcoofpSkn7caPbceUnZ-bdd45ZdZLWQk2ju8YP54kCKJrCOvCX6NUV7J6TC3D0EQ0bykGQDVmnt1votQ2EHmrnC_PuCZ8Uqt4c/f8bc3yxz3wdqt9j/Adobe+Photoshop+2026+%28v27.7.0.11%29+Multilingual.rar', '', 'http://localhost:5050/uploads/4408377ff8f24134a4e6497f403d49cd.png', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#1d4ed8', 0, 'software', '', 'v27.7.0.11', 'Freemium', '2026-06-14 22:18:04', 'Advanced layer-based editing system
+Photoshop integrates seamlessly with other Adobe products, making it a central tool in many creative workflows. Whether used for professional photo retouching, social media graphics, or digital painting, Photoshop 2026 provides a stable and feature-rich environment that adapts to both beginners and advanced users.', '/uploads/ac38f464b3eb48beaba8cc14c5dc6530.png', '', 'https://download2263.mediafire.com/aid0fd68fz4gsyIq3McosgwkoSXWGnjm_gAnPnOtHBgA3Ny957lo4Azkk_EuinoLhbIh-YWXPSG7NgcoofpSkn7caPbceUnZ-bdd45ZdZLWQk2ju8YP54kCKJrCOvCX6NUV7J6TC3D0EQ0bykGQDVmnt1votQ2EHmrnC_PuCZ8Uqt4c/f8bc3yxz3wdqt9j/Adobe+Photoshop+2026+%28v27.7.0.11%29+Multilingual.rar', '', '/uploads/4408377ff8f24134a4e6497f403d49cd.png', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#1d4ed8', 0, 'software', '', 'v27.7.0.11', 'Freemium', '2026-06-14 22:18:04', 'Advanced layer-based editing system
 AI-powered tools for smart selections and enhancements
 Non-destructive editing workflow
 High-quality photo retouching and restoration tools
@@ -546,7 +546,7 @@ Wide plugin and extension support
 Export options for web, print, and social media', '', '', '', '', '', '', '');
 INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (39, 'WinRAR v7.22 Final', 'Utilities & System', 4.5, 0, 'Winrar Full version is an archiving utility that completely supports RAR and ZIP archives and is able to unpack CAB, ARJ, LZH, TAR, GZ, ACE, UUE, BZ2, JAR, ISO, 7Z, Z archives. It consistently makes smaller archives than the competition, saving disk space and transmission costs. WinRAR offers a graphic interactive interface utilizing mouse and menus as well as the command line interface. WinRAR is easier to use than many other archivers with the inclusion of a special “Wizard” mode which allows instant access to the basic archiving functions through a simple question and answer procedure.
 
-Winrar 7 Full version offers you the benefit of industry strength archive encryption using AES (Advanced Encryption Standard) with a key of 128 bits. It supports files and archives up to 8,589 billion gigabytes in size. It also offers the ability to create selfextracting and multivolume archives. With recovery record and recovery volumes, you can reconstruct even physically damaged archives.', 'http://localhost:5050/uploads/3e5795e407e34230b90422a924cd1ac5.jpg', '', 'https://download2327.mediafire.com/6qyzu1wwrepglRYnqrrx40w-vM4SCjVGJtXf_H0AYaBWZ4oSVDgyrMFjVC_-R--52vs_mIr_3rE8FWOW7z1SXx7z1tRwqvDuPHqfBvY8pDVQlFVWpTRhkWi6yJ8vwnYaKVQArbG8OV0R5E_gqDuvd5bfLUEjAK6G-jr_02aPyFg4ylY/5j5b3orclg5xlz1/WinRAR+v7.22+Final.zip', '', 'http://localhost:5050/uploads/13d5adb18f254d3db312aa1f26d17d1c.png', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#b91c1c', 0, 'software', '', '', '', '2026-06-14 22:45:28', 'Encryption, archive comments, logging, etc.
+Winrar 7 Full version offers you the benefit of industry strength archive encryption using AES (Advanced Encryption Standard) with a key of 128 bits. It supports files and archives up to 8,589 billion gigabytes in size. It also offers the ability to create selfextracting and multivolume archives. With recovery record and recovery volumes, you can reconstruct even physically damaged archives.', '/uploads/3e5795e407e34230b90422a924cd1ac5.jpg', '', 'https://download2327.mediafire.com/6qyzu1wwrepglRYnqrrx40w-vM4SCjVGJtXf_H0AYaBWZ4oSVDgyrMFjVC_-R--52vs_mIr_3rE8FWOW7z1SXx7z1tRwqvDuPHqfBvY8pDVQlFVWpTRhkWi6yJ8vwnYaKVQArbG8OV0R5E_gqDuvd5bfLUEjAK6G-jr_02aPyFg4ylY/5j5b3orclg5xlz1/WinRAR+v7.22+Final.zip', '', '/uploads/13d5adb18f254d3db312aa1f26d17d1c.png', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#b91c1c', 0, 'software', '', '', '', '2026-06-14 22:45:28', 'Encryption, archive comments, logging, etc.
 Creation of self-extracting (sfx) archives
 Create, view, extract, and manage archives
 Fully supports RAR and ZIP archives
@@ -558,8 +558,8 @@ Shell integration, drag-n-drop and wizard
 Supports all 32-bit and 64-bit system
 Supports 7Z, ZIP, ACE, CAB, GZ, JAR, etc.
 And so much more', '', '', '', '', '', '', '');
-INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (40, 'Microsoft Office 2021-2024 Professional Plus', 'Productivity & Office', 5.0, 0, 'It is a suite of desktop productivity applications developed by Microsoft for Windows. It includes applications for word processing (Word), spreadsheets (Excel), presentations (PowerPoint), note-taking (OneNote), database management (Access), email (Outlook), and project management (Project). It is available in various editions, including Home & Student, Home & Business, Professional, and Professional Plus.', 'http://localhost:5050/uploads/07062781dd8447dc873f76306386e765.jpg', '', 'https://download2350.mediafire.com/31e0k8ev4gvgaapZ9sqhS9OgX0cl41iyBrZ2fDFKd4kI8CwvvqfLj_4-Tp8bH3aVRMR5iBVI9AposMltNc6R1l9DERXGpdRWOnzzj0qooOsg6V1xxZ_BWgbaLWeCi1fkWhvt3fZ0jOc37mhEjk7RxTif_LT8rwoEu3yZi7TqSqOYipM/o0cduqi1kunkwxa/Microsoft+Office+Professional+Plus+2021-2024+VL+v2604+Build+19929.20136.rar', '', 'http://localhost:5050/uploads/4c44424b7c61417fb89d50b2b95e41d0.jpg
-http://localhost:5050/uploads/dd225939f8414b669726f19d942d0b5c.jpg', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#dc2626', 0, 'software', '', '', '', '2026-06-14 22:49:08', 'Real-time collaboration now supports real-time collaboration on Word, Excel, and PowerPoint documents. This means multiple users can work on the same document simultaneously, and their changes will be saved and visible to everyone else in real-time.
+INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (40, 'Microsoft Office 2021-2024 Professional Plus', 'Productivity & Office', 5.0, 0, 'It is a suite of desktop productivity applications developed by Microsoft for Windows. It includes applications for word processing (Word), spreadsheets (Excel), presentations (PowerPoint), note-taking (OneNote), database management (Access), email (Outlook), and project management (Project). It is available in various editions, including Home & Student, Home & Business, Professional, and Professional Plus.', '/uploads/07062781dd8447dc873f76306386e765.jpg', '', 'https://download2350.mediafire.com/31e0k8ev4gvgaapZ9sqhS9OgX0cl41iyBrZ2fDFKd4kI8CwvvqfLj_4-Tp8bH3aVRMR5iBVI9AposMltNc6R1l9DERXGpdRWOnzzj0qooOsg6V1xxZ_BWgbaLWeCi1fkWhvt3fZ0jOc37mhEjk7RxTif_LT8rwoEu3yZi7TqSqOYipM/o0cduqi1kunkwxa/Microsoft+Office+Professional+Plus+2021-2024+VL+v2604+Build+19929.20136.rar', '', '/uploads/4c44424b7c61417fb89d50b2b95e41d0.jpg
+/uploads/dd225939f8414b669726f19d942d0b5c.jpg', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#dc2626', 0, 'software', '', '', '', '2026-06-14 22:49:08', 'Real-time collaboration now supports real-time collaboration on Word, Excel, and PowerPoint documents. This means multiple users can work on the same document simultaneously, and their changes will be saved and visible to everyone else in real-time.
 AI-powered insights: The software includes several AI-powered insights to help users be more productive. For example, Word can automatically suggest relevant content and images to users as they type, and Excel can automatically identify trends and patterns in data.
 Improved performance and stability: It has also been optimized for performance and stability. This means it should run faster and more reliably than previous versions of Office.
 Intuitive User Interface
@@ -581,7 +581,7 @@ Security and Compliance Features
 The software introduces robust security and compliance features in an era where data security is paramount. Enhanced encryption, data loss prevention, and secure collaboration tools create a more secure digital workspace.', '', '', '', '', '', '', '');
 INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (41, 'Avast Premium Security v26.4.10932 Full version', 'Antivirus & Security', 4.5, 0, 'Avast Premier’s layered approach to security keeps you safer than ever before. Take a peek at all the layers standing between malware and your PC.
 
-Because it blocks all webcam hacking and stops ransomware before it starts, with intelligent cloud-based detection, it protects your PC, home network, and passwords against zero-second threats. It updates your apps automatically and shreds your data permanently when you say so. That’s why you’ve never seen protection like this before.', 'http://localhost:5050/uploads/df222f9415ef4678927a2ccc9f0b7b5b.jpg', '', 'https://download2282.mediafire.com/b6xfgdr0xrggg5n9fhPK_czaSNsRdwLgX_KGaBgcys771vRv6DZdohmKNnMiRbR547S95_KizgJtJ_G-uUaw1XIxyW-rbKXpyaUEjnId1H3EnQk1AgtUql3Pn4NAtZ8PTr6MfxiwKn0QSXO5E9PQN5iPl7wcq6xHVtGWH2m5sT2qFR0/s6gfpw5unyqmnm6/Avast+Premium+Security+26.4.10932+Multilingual.rar', '', 'http://localhost:5050/uploads/ef3b3023cb9246f2bd3c110c337987fe.png', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#d97706', 0, 'software', '', 'v26.4.10932', 'Freemium', '2026-06-14 22:57:41', 'Keep hackers on the other side of the wall with this essential security feature that monitors and controls what goes in and out of your computer.
+Because it blocks all webcam hacking and stops ransomware before it starts, with intelligent cloud-based detection, it protects your PC, home network, and passwords against zero-second threats. It updates your apps automatically and shreds your data permanently when you say so. That’s why you’ve never seen protection like this before.', '/uploads/df222f9415ef4678927a2ccc9f0b7b5b.jpg', '', 'https://download2282.mediafire.com/b6xfgdr0xrggg5n9fhPK_czaSNsRdwLgX_KGaBgcys771vRv6DZdohmKNnMiRbR547S95_KizgJtJ_G-uUaw1XIxyW-rbKXpyaUEjnId1H3EnQk1AgtUql3Pn4NAtZ8PTr6MfxiwKn0QSXO5E9PQN5iPl7wcq6xHVtGWH2m5sT2qFR0/s6gfpw5unyqmnm6/Avast+Premium+Security+26.4.10932+Multilingual.rar', '', '/uploads/ef3b3023cb9246f2bd3c110c337987fe.png', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#d97706', 0, 'software', '', 'v26.4.10932', 'Freemium', '2026-06-14 22:57:41', 'Keep hackers on the other side of the wall with this essential security feature that monitors and controls what goes in and out of your computer.
 Dodge spam and other malicious content, so you can focus on the emails that truly matter.
 Protect yourself from hackers who attempt to hijack your DNS (Domain Name System) settings, redirect you to fake sites, and steal your banking details.
 Automatically detect weaknesses in your home Wi-Fi and strangers piggybacking on your network.
@@ -596,14 +596,14 @@ Put notifications on hold automatically to make the most out of your gaming sess
 Rid your browser of toolbars, add-ons, and other installed extensions without you noticing.', '', '', '', '', '', '', '');
 INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (42, 'VLC Media Player (64-bit)', 'Multimedia & Audio', 4.5, 0, 'VLC Media Player (64-bit)’s biggest strength lies in its remarkable compatibility. It plays almost any audio or video format imaginable, including MP4, AVI, MKV, FLAC, and even DVDs and Blu-rays, without needing any additional codecs. This eliminates the hassle of searching for the right software to play your files.
 
-While VLC Media Player (64-bit) is known for its powerful capabilities, it’s surprisingly user-friendly. Its interface is beautiful and convenient, focusing on straightforward usability that makes it accessible to both beginners and advanced users. The main playback window is well-designed, with controls placed intuitively for easy access to all the essentials. The clean and uncluttered design reduces complexity, while the ability to customize the interface.', 'http://localhost:5050/uploads/5c3f00a034dd4bc7a162a7958df0a5e9.jpg', '', 'https://vlc-media-player.en.lo4d.com/download/mirror-hs1', '', 'http://localhost:5050/uploads/e11491a9b0704969b2d8468d7387c15d.png
-http://localhost:5050/uploads/59fa57ed5f074aa09e0bd2b6a0234922.jpg', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#f97316', 0, 'software', '', '', 'Freemium', '2026-06-14 23:23:57', 'This is much more than a simple player; it’s a full multimedia toolbox. It includes useful features like video and audio filters, subtitle synchronization, and the ability to stream content over a network. However, it''s important to note that advanced options, such as transcoding or applying complex video effects, can be quite resource-intensive on low-end hardware, which could negatively impact overall system performance', '', '', '', '', '', '', '');
+While VLC Media Player (64-bit) is known for its powerful capabilities, it’s surprisingly user-friendly. Its interface is beautiful and convenient, focusing on straightforward usability that makes it accessible to both beginners and advanced users. The main playback window is well-designed, with controls placed intuitively for easy access to all the essentials. The clean and uncluttered design reduces complexity, while the ability to customize the interface.', '/uploads/5c3f00a034dd4bc7a162a7958df0a5e9.jpg', '', 'https://vlc-media-player.en.lo4d.com/download/mirror-hs1', '', '/uploads/e11491a9b0704969b2d8468d7387c15d.png
+/uploads/59fa57ed5f074aa09e0bd2b6a0234922.jpg', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#f97316', 0, 'software', '', '', 'Freemium', '2026-06-14 23:23:57', 'This is much more than a simple player; it’s a full multimedia toolbox. It includes useful features like video and audio filters, subtitle synchronization, and the ability to stream content over a network. However, it''s important to note that advanced options, such as transcoding or applying complex video effects, can be quite resource-intensive on low-end hardware, which could negatively impact overall system performance', '', '', '', '', '', '', '');
 INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (43, 'Adobe-after-effects', 'Design & 3D', 4.5, 0, 'Adobe After Effects is one of the most advanced and highly praised video editing suites available today that features a number of advanced tools for creating impressive motion graphics and cinematic effects.
 
 When getting started with this compositing and visual effects software, you''re greeted with a very complex user interface that has many different options and layouts for video creators. Thankfully, everything doesn''t have to be visible and you can navigate through the effects and tools that are necessary for the project.
 
-Thankfully when starting the application, you have the option to be given a tour of the Adobe After Effects so that new users can get an idea of what tools are available, how to access them and how to get started creating a video project.', 'http://localhost:5050/uploads/4db89202a3c34385a37982f856c218d9.jpg', '', 'https://adobe-after-effects.en.lo4d.com/download/mirror-ex1', '', 'http://localhost:5050/uploads/09513df0c96b448cb084e7d705cedf71.jpg
-http://localhost:5050/uploads/d7d71418230d43c492ddd47a65a5aea1.webp', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#1d4ed8', 0, 'software', '', 'CC 2025 v25.6', 'Freemium', '2026-06-14 23:52:31', '3D Animation: Create stunning animations with text, shapes and logos.
+Thankfully when starting the application, you have the option to be given a tour of the Adobe After Effects so that new users can get an idea of what tools are available, how to access them and how to get started creating a video project.', '/uploads/4db89202a3c34385a37982f856c218d9.jpg', '', 'https://adobe-after-effects.en.lo4d.com/download/mirror-ex1', '', '/uploads/09513df0c96b448cb084e7d705cedf71.jpg
+/uploads/d7d71418230d43c492ddd47a65a5aea1.webp', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#1d4ed8', 0, 'software', '', 'CC 2025 v25.6', 'Freemium', '2026-06-14 23:52:31', '3D Animation: Create stunning animations with text, shapes and logos.
 Animation Presets: Choose from hundreds of animation presets and customize them.
 Audio Editing: Adjust and mix music and sound effects.
 Character Animation: Animate 2D characters with bones and rigging.
@@ -620,9 +620,9 @@ Stabilization: Reduce camera shake and motion blur.
 Virtual Reality: Create immersive VR content with 3D and 360 video.', '', '', '', '', '', '', '');
 INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (44, 'python-3.14.6-amd64', 'Productivity & Office, Development Tools', 4.5, 0, 'Python Programming Language
 
-Python is a high-level, interpreted, general-purpose programming language known for its simple syntax, readability, and versatility. It is widely used by beginners, students, developers, businesses, and researchers for building software, automating tasks, analyzing data, creating websites, developing artificial intelligence systems, and much more.', 'http://localhost:5050/uploads/bfc013576d65461cba3d24478a081e0f.jpg', '', 'https://www.python.org/ftp/python/3.14.6/python-3.14.6-amd64.exe', '', 'http://localhost:5050/uploads/02edd3eda16b4299a6d28b21c243480d.jpg
-http://localhost:5050/uploads/f9075d42b3e8439699a1fac5e718a05a.jpg
-http://localhost:5050/uploads/50708998104f4f21830ac11334dae123.jpg', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#eab308', 0, 'software', '', '3.14.6', 'Freemium', '2026-06-15 00:13:50', 'Easy to Learn and Read – Clean and human-friendly syntax makes coding simpler.
+Python is a high-level, interpreted, general-purpose programming language known for its simple syntax, readability, and versatility. It is widely used by beginners, students, developers, businesses, and researchers for building software, automating tasks, analyzing data, creating websites, developing artificial intelligence systems, and much more.', '/uploads/bfc013576d65461cba3d24478a081e0f.jpg', '', 'https://www.python.org/ftp/python/3.14.6/python-3.14.6-amd64.exe', '', '/uploads/02edd3eda16b4299a6d28b21c243480d.jpg
+/uploads/f9075d42b3e8439699a1fac5e718a05a.jpg
+/uploads/50708998104f4f21830ac11334dae123.jpg', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#eab308', 0, 'software', '', '3.14.6', 'Freemium', '2026-06-15 00:13:50', 'Easy to Learn and Read – Clean and human-friendly syntax makes coding simpler.
 Interpreted Language – Runs code without requiring compilation.
 Cross-Platform – Works on Windows, Linux, and macOS.
 Open Source – Free to use and supported by a large global community.
@@ -631,11 +631,11 @@ Large Standard Library – Includes built-in modules for networking, file handli
 Extensive Package Ecosystem – Thousands of third-party libraries available through pip.
 Database Integration – Supports many database systems including SQL and NoSQL solutions.
 Scalable & Flexible – Suitable for small scripts, desktop apps, web services, and enterprise systems.', '', '', '', '', '', '', '');
-INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (45, 'Stellar Blade Complete Edition v1.4.1', 'Horror, Adventure, Action', 4.5, 0, 'Stellar Blade™ (FitGirl Repack) – Full Game. Architect a high-stakes kinetic offensive in this visceral, post-apocalyptic action-adventure odyssey where professional-grade combat engineering meets the unfiltered weight of human extinction. Master the lethal precision of Eve’s acrobatic repertoire to dominate a landscape of grotesque biological anomalies, orchestrating surgical parries and high-intensity “Beta” energy strikes to dismantle the forces of Earth’s downfall. Navigate the technical hazards of a ruined civilization by utilizing professional-grade aesthetic customization and optimized skill-tree progression, ensuring you maintain a definitive edge while unraveling the twisting mysteries of the global collapse. In this relentless pursuit of terrestrial reclamation, your ability to execute flawless, blistering combat sequences and manage the logistical demands of a fractured world determines if you become the supreme architect of humanity’s rebirth or a permanent casualty of the cosmic void.', 'http://localhost:5050/uploads/a714b505d6f444028b2087df624f271b.jpg', '', 'https://ffdl.cybar.to/qn5e08b8jjyi
-https://ffdl.cybar.to/b6vx68scw7xs', 'https://youtu.be/DSznLWimMlU?si=dGtNWY0md1-I0X5p', 'http://localhost:5050/uploads/96ed349ec09e44ccb69a88276b34a9f3.webp
-http://localhost:5050/uploads/b1834b55ec9d4f9992c021ca4773236b.webp
-http://localhost:5050/uploads/a0f78f7def6f4a9786d6cd5eb5f3f210.webp
-http://localhost:5050/uploads/b97dfd8570074ed1abab30e238197d27.webp', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#09090b', 0, 'game', '', '', '', '2026-06-15 02:02:20', 'Repack Features
+INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (45, 'Stellar Blade Complete Edition v1.4.1', 'Horror, Adventure, Action', 4.5, 0, 'Stellar Blade™ (FitGirl Repack) – Full Game. Architect a high-stakes kinetic offensive in this visceral, post-apocalyptic action-adventure odyssey where professional-grade combat engineering meets the unfiltered weight of human extinction. Master the lethal precision of Eve’s acrobatic repertoire to dominate a landscape of grotesque biological anomalies, orchestrating surgical parries and high-intensity “Beta” energy strikes to dismantle the forces of Earth’s downfall. Navigate the technical hazards of a ruined civilization by utilizing professional-grade aesthetic customization and optimized skill-tree progression, ensuring you maintain a definitive edge while unraveling the twisting mysteries of the global collapse. In this relentless pursuit of terrestrial reclamation, your ability to execute flawless, blistering combat sequences and manage the logistical demands of a fractured world determines if you become the supreme architect of humanity’s rebirth or a permanent casualty of the cosmic void.', '/uploads/a714b505d6f444028b2087df624f271b.jpg', '', 'https://ffdl.cybar.to/qn5e08b8jjyi
+https://ffdl.cybar.to/b6vx68scw7xs', 'https://youtu.be/DSznLWimMlU?si=dGtNWY0md1-I0X5p', '/uploads/96ed349ec09e44ccb69a88276b34a9f3.webp
+/uploads/b1834b55ec9d4f9992c021ca4773236b.webp
+/uploads/a0f78f7def6f4a9786d6cd5eb5f3f210.webp
+/uploads/b97dfd8570074ed1abab30e238197d27.webp', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#09090b', 0, 'game', '', '', '', '2026-06-15 02:02:20', 'Repack Features
 Based on Stellar.Blade-voices38 P2P ISO release: voices38-stellar.blade.iso (62,587,643,904 bytes)
 voices38 crack with Goldberg emu applied over
 Game version: v1.4.1; 7 DLCs are included and activated
@@ -654,7 +654,7 @@ INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_u
 Company: Game Science
 Languages: RUS/ENG/MULTI15
 Original Size: 140.8 GB
-Repack Size: from 94 GB [Selective Download]', 'http://localhost:5050/uploads/a537ac793b834937bc475910693716e5.jpg', '', 'https://fuckingfast.co/tjittnvciyv4#Black_Myth_Wukong_NEW_NON-HV_SETUP_FILES_--_fitgirl-repacks.site_--_.rar
+Repack Size: from 94 GB [Selective Download]', '/uploads/a537ac793b834937bc475910693716e5.jpg', '', 'https://fuckingfast.co/tjittnvciyv4#Black_Myth_Wukong_NEW_NON-HV_SETUP_FILES_--_fitgirl-repacks.site_--_.rar
 
 
 https://fuckingfast.co/ymouzuoekqxm#Black_Myth_Wukong_--_fitgirl-repacks.site_--_.part001.rar
@@ -858,13 +858,13 @@ https://fuckingfast.co/35ryc2pcms20#Black_Myth_Wukong_--_fitgirl-repacks.site_--
 
 https://fuckingfast.co/nxbwx4iaefkw#Black_Myth_Wukong_--_fitgirl-repacks.site_--_.part192.rar
 https://fuckingfast.co/azbyia2ho063#Black_Myth_Wukong_--_fitgirl-repacks.site_--_.part193.rar
-https://fuckingfast.co/ac6bjeb5bbrf#fg-optional-bonus-soundtracks.bin', 'https://youtu.be/pnSsgRJmsCc?si=SpGoCX1uuaV8PsJt', 'http://localhost:5050/uploads/43e580f1e34445358089be0a80075fd4.jpg
-http://localhost:5050/uploads/41b9086bc4e04b008437497f43fa3410.jpg
-http://localhost:5050/uploads/f18ec44475164656a52099e5220bd326.jpg
-http://localhost:5050/uploads/6132cc9a1b92451e925616e73a4f21ae.jpg
-http://localhost:5050/uploads/e1cffbde215b40768e31bdd7456cabd2.jpg
-http://localhost:5050/uploads/9924b9e1bd5d4cb089e6a77ae2531dfc.jpg
-http://localhost:5050/uploads/53722cb8149c4425aab25c40ca327af9.jpg', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#2563eb', 0, 'game', '', '', '', '2026-06-15 02:06:50', 'Based on Black.Myth.Wukong-voices38 P2P ISO release: voices38-black.myth.wukong.iso (143,660,587,008 bytes)
+https://fuckingfast.co/ac6bjeb5bbrf#fg-optional-bonus-soundtracks.bin', 'https://youtu.be/pnSsgRJmsCc?si=SpGoCX1uuaV8PsJt', '/uploads/43e580f1e34445358089be0a80075fd4.jpg
+/uploads/41b9086bc4e04b008437497f43fa3410.jpg
+/uploads/f18ec44475164656a52099e5220bd326.jpg
+/uploads/6132cc9a1b92451e925616e73a4f21ae.jpg
+/uploads/e1cffbde215b40768e31bdd7456cabd2.jpg
+/uploads/9924b9e1bd5d4cb089e6a77ae2531dfc.jpg
+/uploads/53722cb8149c4425aab25c40ca327af9.jpg', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#2563eb', 0, 'game', '', '', '', '2026-06-15 02:06:50', 'Based on Black.Myth.Wukong-voices38 P2P ISO release: voices38-black.myth.wukong.iso (143,660,587,008 bytes)
 3 bonus soundtracks (1.1 GB) added, thanks to SittingOnClouds!
 Game version: v1.0.21.23831; 4 DLCs/Bonuses are included
 100% Lossless & MD5 Perfect: all files are identical to originals after installation
@@ -878,12 +878,12 @@ Language can be changed in game settings
 Repack uses XTool library by Razor12911
 At least 8 GB of free RAM (inc. virtual) required for installing this repack', '', '', '', '', '', '', '');
 INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (47, 'Forza Horizon 6 v354.221 + 10 DLCs + Multiplayer', 'Racing', 4.5, 0, 'About
-Forza Horizon 6 (FitGirl Repack – PC-Windows) – Full Game. Become a racing legend as you drift through the neon-lit streets of Tokyo and speed past the serene landscapes of rural Japan. Featuring an expansive roster of over 550 real-world vehicles and the series’ largest open world to date, this definitive driving adventure delivers breathtaking visuals and unparalleled automotive freedom across the Land of the Rising Sun.', 'http://localhost:5050/uploads/48f807c05eb944e0b84ca6f6ab9da119.webp', '', 'https://ffdl.cybar.to/zbt9ulaz00rx
+Forza Horizon 6 (FitGirl Repack – PC-Windows) – Full Game. Become a racing legend as you drift through the neon-lit streets of Tokyo and speed past the serene landscapes of rural Japan. Featuring an expansive roster of over 550 real-world vehicles and the series’ largest open world to date, this definitive driving adventure delivers breathtaking visuals and unparalleled automotive freedom across the Land of the Rising Sun.', '/uploads/48f807c05eb944e0b84ca6f6ab9da119.webp', '', 'https://ffdl.cybar.to/zbt9ulaz00rx
 https://ffdl.cybar.to/7he95lkuio66
-https://ffdl.cybar.to/irozhqkh0es2', 'https://youtu.be/p1wFbZwegpk?si=cw_ti-WBL47JwoFh', 'http://localhost:5050/uploads/e12ec53783354ad48c45720ddead9c36.webp
-http://localhost:5050/uploads/f250327331c04b4f8eb4c418e052734d.webp
-http://localhost:5050/uploads/0b533b5b52384cc4b51c3a21667bfb0f.webp
-http://localhost:5050/uploads/4d29e14736aa47d9a33ae8d3d1a195cf.webp', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#a855f7', 0, 'game', '', '', '', '2026-06-15 02:11:13', 'Repack Features
+https://ffdl.cybar.to/irozhqkh0es2', 'https://youtu.be/p1wFbZwegpk?si=cw_ti-WBL47JwoFh', '/uploads/e12ec53783354ad48c45720ddead9c36.webp
+/uploads/f250327331c04b4f8eb4c418e052734d.webp
+/uploads/0b533b5b52384cc4b51c3a21667bfb0f.webp
+/uploads/4d29e14736aa47d9a33ae8d3d1a195cf.webp', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#a855f7', 0, 'game', '', '', '', '2026-06-15 02:11:13', 'Repack Features
 Based on Forza.Horizon.6-RUNE ISO release: rune-forza.horizon.6.iso (144,479,354,880 bytes)
 Steam Online Fix by 0xdeadc0de is available in “NoDVD” folder after installation, allowing multiplayer support via Steam (use fake Steam/Microsoft accounts for that). Check “readme.txt” for instructions.
 Game version: v354.221; 10 DLCs are included, but some cars may be locked due to server-checks. Expansions Bundle, Expansion 1, Expansion 2 and Car Pass are either not released or released partially, hence not counted. This is not a Deluxe nor Premium Edition, and it doesn’t matter if other releasers call their packs so, it’s just not truth
@@ -899,7 +899,7 @@ Repack uses XTool library by Razor12911
 At least 2 GB of free RAM (inc. virtual) required for installing this repack', '', '', '', '', '', '', '');
 INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (48, 'Call of Duty Black Ops Cold War v1.34.1.15931218', 'Action', 4.5, 0, 'Call of Duty®: Black Ops Cold War  – Drop into the depths of the global space race and volatile geopolitical battlegrounds of the early 1980s in this direct narrative sequel to the original fan-favorite Call of Duty®: Black Ops. The gripping single-player campaign forces players face-to-face with historical figures and hard truths as they battle across iconic Cold War locales like East Berlin, Vietnam, Turkey, and Soviet KGB headquarters.
 
-As an elite operative, you will hunt down a shadowy Soviet agent codenamed Perseus, who is on a mission to destabilize the global balance of power and alter the course of history. Beyond the cinematic campaign, players can test their skills in an expansive arsenal of 1980s weaponry across a fast-paced multiplayer suite and the next chapter of the legendary, cooperative Dark Aether Zombies mode.', 'http://localhost:5050/uploads/a7c5f8ddbdaf4ec88899904df9fa386a.webp', '', 'https://ffdl.cybar.to/w1u6el2rer32
+As an elite operative, you will hunt down a shadowy Soviet agent codenamed Perseus, who is on a mission to destabilize the global balance of power and alter the course of history. Beyond the cinematic campaign, players can test their skills in an expansive arsenal of 1980s weaponry across a fast-paced multiplayer suite and the next chapter of the legendary, cooperative Dark Aether Zombies mode.', '/uploads/a7c5f8ddbdaf4ec88899904df9fa386a.webp', '', 'https://ffdl.cybar.to/w1u6el2rer32
 https://ffdl.cybar.to/526okk1su1x1
 
 https://ffdl.cybar.to/llicvko8kibs
@@ -907,10 +907,10 @@ https://ffdl.cybar.to/75st6digxqr7
 
 https://ffdl.cybar.to/gkjehkm854a3
 
-https://ffdl.cybar.to/089ey4yrzofq', 'https://youtu.be/aTS9n_m7TW0?si=8aVY5ssUWXbutEod', 'http://localhost:5050/uploads/23db74ac1bd44aa49381375b685e4ed7.webp
-http://localhost:5050/uploads/4e08e7191e164124abc7e65924225910.webp
-http://localhost:5050/uploads/0ccc3440668544db97c5f76c48316c66.webp
-http://localhost:5050/uploads/263d0f2dc0754d2192528573a052b4c3.webp', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#ffffff', 0, 'game', '', '', '', '2026-06-15 02:13:50', 'Repack Features
+https://ffdl.cybar.to/089ey4yrzofq', 'https://youtu.be/aTS9n_m7TW0?si=8aVY5ssUWXbutEod', '/uploads/23db74ac1bd44aa49381375b685e4ed7.webp
+/uploads/4e08e7191e164124abc7e65924225910.webp
+/uploads/0ccc3440668544db97c5f76c48316c66.webp
+/uploads/263d0f2dc0754d2192528573a052b4c3.webp', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#ffffff', 0, 'game', '', '', '', '2026-06-15 02:13:50', 'Repack Features
 Based on Battle.net v1.34.1.15931218 release: 159.1 GB
 .r4v3n+T9 V5 crack applied over. Older V3 & V4 cracks are available in “_Cracks” folder, use them if V5 doesn’t work for you
 Bonus OST in MP3 format (276 MB) added
@@ -946,11 +946,11 @@ Pre-Installed Game
 
 COD Modern Warfare II drops players into an unprecedented global conflict that features the return of the iconic Operators of Task Force 141. From small-scale, high-stakes infiltration tactical ops to highly classified missions, players will deploy alongside friends in a truly immersive experience. Infinity Ward brings fans state-of-the-art gameplay, with all-new gun handling, advanced AI system, a new Gunsmith and a suite of other gameplay and graphical innovations that elevate the franchise to new heights. Worshippers of Cthulhu
 
-Modern Warfare II launches with a globe-trotting single-player campaign, immersive Multiplayer combat, and a narrative-driven, co-op Special Ops experience. You also get access to Call of Duty: Warzone, the all-new Battle Royale experience.', 'http://localhost:5050/uploads/40a3ab6dd2cd44c084be24bc4bec3c39.jpg', '', 'https://vikingfile.com/d/LKhlwVBxuu/CoDMW2.FR-GameDrive.Org.rar
-https://vikingfile.com/d/oLH6yDpxbt/fg-optional-bonus-soundtracks.bin', 'https://youtu.be/ztjfwecrY8E?si=_QJ3NSYR1PBYjP-C', 'http://localhost:5050/uploads/fa38906221d54321b696106b4dd87115.jpg
-http://localhost:5050/uploads/1a07043b7652435dae309d6b052421b6.jpg
-http://localhost:5050/uploads/b42d4850587d473eb1e4d25419f21d4d.jpg
-http://localhost:5050/uploads/9d82dff333ed4510bbe8bc42c41fc376.webp', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#84cc16', 0, 'game', '', '', '', '2026-06-16 00:11:12', 'Repack Features
+Modern Warfare II launches with a globe-trotting single-player campaign, immersive Multiplayer combat, and a narrative-driven, co-op Special Ops experience. You also get access to Call of Duty: Warzone, the all-new Battle Royale experience.', '/uploads/40a3ab6dd2cd44c084be24bc4bec3c39.jpg', '', 'https://vikingfile.com/d/LKhlwVBxuu/CoDMW2.FR-GameDrive.Org.rar
+https://vikingfile.com/d/oLH6yDpxbt/fg-optional-bonus-soundtracks.bin', 'https://youtu.be/ztjfwecrY8E?si=_QJ3NSYR1PBYjP-C', '/uploads/fa38906221d54321b696106b4dd87115.jpg
+/uploads/1a07043b7652435dae309d6b052421b6.jpg
+/uploads/b42d4850587d473eb1e4d25419f21d4d.jpg
+/uploads/9d82dff333ed4510bbe8bc42c41fc376.webp', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#84cc16', 0, 'game', '', '', '', '2026-06-16 00:11:12', 'Repack Features
 Based on P2P v9.7.23096551 SP / v9.40.23226476 MP release with all languages and modes: 147.1 GB, thanks to GAMEDRIVE.ORG!
 Crack by r4v3n + Goldberg (alex47exe’s fork) applied over
 Eight bonus soundtracks (785 MB) added
@@ -980,12 +980,12 @@ Cryberpunk 2k77 is an open-action-adventure set in Night City, where you play as
 Night City seems more alive than ever with the free Update 2.1 Take a trip on the fully functional NCART metro system, listen to music while exploring the city with the Radioport, hang out with your partner at V’s apartment, engage in replayable races, ride new vehicles, experience enhanced bike combat and handling, uncover hidden secrets, and much more
 
 CREATE YOUR OWN CRYBERPUNK
-Become an urban criminal with cybernetic upgrades and establish your reputation on the streets of Night City. Night City is jam-packed with activities to do, sights to see, and people to meet. And it is up to you to decide where to go, when to go, and how to get there.', 'http://localhost:5050/uploads/3b7d506cd3ee4416bee66ef4d7085e7f.jpg', '', 'https://vikingfile.com/d/pTenjsJEed/cy2077ii.ER-GameDrive.Org.part1.rar
-https://vikingfile.com/d/4WcCinbQSe/cy2077ii.ER-GameDrive.Org.part2.rar', 'https://youtu.be/reABCMNGM3w?si=hvw7QfnL9mhyyoZu', 'http://localhost:5050/uploads/5bcd956e745248759994214fbcfaec4e.jpg
-http://localhost:5050/uploads/a1a2f1867b1546d8ab4f961edf25f644.jpg
-http://localhost:5050/uploads/097434a58eea48ad91095b44da46410d.jpg
-http://localhost:5050/uploads/a97eb7f6bfe44a42b58a5c57084d7684.jpg
-http://localhost:5050/uploads/f563457c67d64b15887389172fddaa9b.jpg', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#eab308', 0, 'game', '', '', '', '2026-06-16 00:16:27', 'Repack Features
+Become an urban criminal with cybernetic upgrades and establish your reputation on the streets of Night City. Night City is jam-packed with activities to do, sights to see, and people to meet. And it is up to you to decide where to go, when to go, and how to get there.', '/uploads/3b7d506cd3ee4416bee66ef4d7085e7f.jpg', '', 'https://vikingfile.com/d/pTenjsJEed/cy2077ii.ER-GameDrive.Org.part1.rar
+https://vikingfile.com/d/4WcCinbQSe/cy2077ii.ER-GameDrive.Org.part2.rar', 'https://youtu.be/reABCMNGM3w?si=hvw7QfnL9mhyyoZu', '/uploads/5bcd956e745248759994214fbcfaec4e.jpg
+/uploads/a1a2f1867b1546d8ab4f961edf25f644.jpg
+/uploads/097434a58eea48ad91095b44da46410d.jpg
+/uploads/a97eb7f6bfe44a42b58a5c57084d7684.jpg
+/uploads/f563457c67d64b15887389172fddaa9b.jpg', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#eab308', 0, 'game', '', '', '', '2026-06-16 00:16:27', 'Repack Features
 Based on Steam Build 19260982 from July 17, 2025: 149.1 GB, thanks to AR-81!
 CODEX crack/emu applier over
 Missing bonus content (3.7 GB) added
@@ -1000,18 +1000,18 @@ HDD space after installation: up to 152.8 GB
 Language can be changed in game settings
 Repack uses XTool library by Razor12911
 At least 4 GB of free RAM (inc. virtual) required for installing this repack', '', '', '', '', '', '', '');
-INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (51, 'Dragons Dogma 2 (2024) ALL DLC  HV', 'Adventure, Hypervisor', 4.5, 1, 'Download Dragon’s Dogma 2 (PC) – Full Game. Prepare for a high-stakes journey as the Arisen in this masterfully realized, narrative-driven action-RPG. In a sprawling open world four times larger than its predecessor, you must navigate the complex geopolitical strife between the kingdoms of Vermund and Battahl. Command a customizable party of Pawns—otherworldly AI companions—and master dynamic vocations to overcome colossal monsters in physics-driven combat where every tactical choice and environmental interaction can turn the tide of your epic destiny.', 'http://localhost:5050/uploads/e2ba5cbecec2463a8ee93e89411e9b48.webp', '', 'https://ffdl.cybar.to/6yvfd6yd8hjp
+INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (51, 'Dragons Dogma 2 (2024) ALL DLC  HV', 'Adventure, Hypervisor', 4.5, 1, 'Download Dragon’s Dogma 2 (PC) – Full Game. Prepare for a high-stakes journey as the Arisen in this masterfully realized, narrative-driven action-RPG. In a sprawling open world four times larger than its predecessor, you must navigate the complex geopolitical strife between the kingdoms of Vermund and Battahl. Command a customizable party of Pawns—otherworldly AI companions—and master dynamic vocations to overcome colossal monsters in physics-driven combat where every tactical choice and environmental interaction can turn the tide of your epic destiny.', '/uploads/e2ba5cbecec2463a8ee93e89411e9b48.webp', '', 'https://ffdl.cybar.to/6yvfd6yd8hjp
 https://ffdl.cybar.to/k7r0nx23fdgz
-https://ffdl.cybar.to/kajxy098yppm', 'https://youtu.be/Ob9pYAlIHZM?si=2rDbdJ0hlT6gxcsl', 'http://localhost:5050/uploads/e55fbe0773d64b6c8bf8f8fec601a2fd.webp
-http://localhost:5050/uploads/b09161cd90e545e4b5df7d8a2f84fa31.webp
-http://localhost:5050/uploads/5e7568ecb12b4578ae34220cfe15a403.webp
-http://localhost:5050/uploads/70e258cce84d45dea5d598d7d22e6091.webp', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#ca8a04', 0, 'game', '', '', '', '2026-06-16 00:20:00', 'Repack Features
+https://ffdl.cybar.to/kajxy098yppm', 'https://youtu.be/Ob9pYAlIHZM?si=2rDbdJ0hlT6gxcsl', '/uploads/e55fbe0773d64b6c8bf8f8fec601a2fd.webp
+/uploads/b09161cd90e545e4b5df7d8a2f84fa31.webp
+/uploads/5e7568ecb12b4578ae34220cfe15a403.webp
+/uploads/70e258cce84d45dea5d598d7d22e6091.webp', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#ca8a04', 0, 'game', '', '', '', '2026-06-16 00:20:00', 'Repack Features
 based On my own Steam Files + DenuvoUwU', '', '', '', '', '', '', '');
-INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (52, 'Far Cry New Dawn (2019) ALL DLC +  HD Textures Pack [Hypervisor', 'Action, RPG, Hypervisor', 4.5, 2, 'Download Far Cry® New Dawn Hypervisor (PC) – Full Game. Plunge into a high-stakes struggle for dominance in a transformed, “super-bloom” post-apocalyptic Hope County, Montana, seventeen years after the nuclear collapse. As the captain of the security forces, you must lead the resistance against the Highwaymen—a ruthless scavenger faction led by the twin sisters, Mickey and Lou. Architect your home base at Prosperity, master a deep “light RPG” crafting system to forge makeshift weaponry, and launch daring expeditions across the shattered United States to secure the world’s last remaining resources and reclaim a future from the neon-soaked ruins.', 'http://localhost:5050/uploads/19571650123b4413ab6a2a3385f7a54a.jpg', '', 'https://ffdl.cybar.to/a9ra7yl12ifd
-https://ffdl.cybar.to/awc8gvmmwhao', 'https://youtu.be/6eLHk2Eug78?si=Y7Nln16dhW3rrgYe', 'http://localhost:5050/uploads/400b9ccb99ff46259f3b1832dc56104a.webp
-http://localhost:5050/uploads/981faccb14fe474c9b65324e317ccb31.webp
-http://localhost:5050/uploads/c22ad9c93d6c45b789c0dfef2cc6bdd7.webp
-http://localhost:5050/uploads/94f3490531b047979c32cde20bbd1621.webp', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#3b82f6', 0, 'game', '', '', '', '2026-06-16 00:22:23', 'Repack Features
+INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (52, 'Far Cry New Dawn (2019) ALL DLC +  HD Textures Pack [Hypervisor', 'Action, RPG, Hypervisor', 4.5, 2, 'Download Far Cry® New Dawn Hypervisor (PC) – Full Game. Plunge into a high-stakes struggle for dominance in a transformed, “super-bloom” post-apocalyptic Hope County, Montana, seventeen years after the nuclear collapse. As the captain of the security forces, you must lead the resistance against the Highwaymen—a ruthless scavenger faction led by the twin sisters, Mickey and Lou. Architect your home base at Prosperity, master a deep “light RPG” crafting system to forge makeshift weaponry, and launch daring expeditions across the shattered United States to secure the world’s last remaining resources and reclaim a future from the neon-soaked ruins.', '/uploads/19571650123b4413ab6a2a3385f7a54a.jpg', '', 'https://ffdl.cybar.to/a9ra7yl12ifd
+https://ffdl.cybar.to/awc8gvmmwhao', 'https://youtu.be/6eLHk2Eug78?si=Y7Nln16dhW3rrgYe', '/uploads/400b9ccb99ff46259f3b1832dc56104a.webp
+/uploads/981faccb14fe474c9b65324e317ccb31.webp
+/uploads/c22ad9c93d6c45b789c0dfef2cc6bdd7.webp
+/uploads/94f3490531b047979c32cde20bbd1621.webp', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#3b82f6', 0, 'game', '', '', '', '2026-06-16 00:22:23', 'Repack Features
 based On my own Steam Files + DenuvoUwU', '', '', '', '', '', '', '');
 INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (53, 'Ghost Of Tsushima DIRECTOR’S CUT', 'Adventure, RPG', 4.5, 0, 'In the late 13th century, the Mongol empire has laid waste to entire nations along their campaign to conquer the East. Tsushima Island is all that stands between mainland Japan and a massive Mongol invasion fleet led by the ruthless and cunning general, Khotun Khan.
 
@@ -1023,11 +1023,11 @@ Platform: PC
 Game Size: 60 GB
 Released By: RUNE
 Version: v1053.8.1212.1408 (Build 21164271) + DLC + Bonus Content + Languages
-Pre-Installed Game', 'http://localhost:5050/uploads/369fc1b1f957435ba2bd2e2a3970f40d.webp', '', 'https://vikingfile.com/d/jg7gvaaO05/0005445.ER-GameDrive.Org.rar', 'https://youtu.be/A5gVt028Hww?si=G09uCKRefq46IPNe', 'http://localhost:5050/uploads/c04a5288dc664a04b8b96f8d7d1620b9.jpg
-http://localhost:5050/uploads/0ea8ab3c559e4bb389004ffe3df9c599.jpg
-http://localhost:5050/uploads/387b1efc344641799142edc681ebfb77.jpg
-http://localhost:5050/uploads/2517b1ae96934773a8dd4eb5f3e6692a.jpg
-http://localhost:5050/uploads/0048e236f77b41b2a2c0d3e468050f98.jpg', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#ffffff', 0, 'game', '', '', '', '2026-06-16 00:27:27', 'Repack Features
+Pre-Installed Game', '/uploads/369fc1b1f957435ba2bd2e2a3970f40d.webp', '', 'https://vikingfile.com/d/jg7gvaaO05/0005445.ER-GameDrive.Org.rar', 'https://youtu.be/A5gVt028Hww?si=G09uCKRefq46IPNe', '/uploads/c04a5288dc664a04b8b96f8d7d1620b9.jpg
+/uploads/0ea8ab3c559e4bb389004ffe3df9c599.jpg
+/uploads/387b1efc344641799142edc681ebfb77.jpg
+/uploads/2517b1ae96934773a8dd4eb5f3e6692a.jpg
+/uploads/0048e236f77b41b2a2c0d3e468050f98.jpg', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#ffffff', 0, 'game', '', '', '', '2026-06-16 00:27:27', 'Repack Features
 Based on Ghost.of.Tsushima.DIRECTORS.CUT.MULTi26-RUNE ISO release: rune-ghost.of.tsushima.directors.cut.multi26.iso (63,415,713,792 bytes)
 Game version: v1053.0.0515.2048; Pre-purchase Entitlements DLC is included and activated
 Crackpack with TENOKE/CODEX/FLT/ALI213/Goldberg/0xdeadc0de cracks/emus added, thanks to TENOKE, Masquerade & 0xdeadc0de!
@@ -1051,12 +1051,12 @@ Platform: PC
 Game Size: 35.3 GB
 Released By: FLT (cs.rin.ru for updates)
 Version: v1.0.475.7534 | (Patch v1.0.12) | Full Version
-Pre-Installed Game', 'http://localhost:5050/uploads/0dbb23116db047479336dd3150cc7392.jpg', '', 'https://gofile.io/d/XK8MrL', 'https://youtu.be/K0u_kAWLJOA?si=Atkg0k7pVILmIPZM', 'http://localhost:5050/uploads/17f870e041a54892afa06fd542fd8774.jpg
-http://localhost:5050/uploads/db49780f5a5449b8a34164a536dfed41.jpg
-http://localhost:5050/uploads/02ad7a5068e146dc8ee53b39d7f579c3.jpg
-http://localhost:5050/uploads/6bab2955f9bc403893529521ed8ddbb9.jpg
-http://localhost:5050/uploads/a3e33db774a34278ae958f7c97903339.jpg
-http://localhost:5050/uploads/b225b7515d384e72a5cb987d63672b36.jpg', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#27272a', 0, 'game', '', '', '', '2026-06-16 00:35:22', 'Features
+Pre-Installed Game', '/uploads/0dbb23116db047479336dd3150cc7392.jpg', '', 'https://gofile.io/d/XK8MrL', 'https://youtu.be/K0u_kAWLJOA?si=Atkg0k7pVILmIPZM', '/uploads/17f870e041a54892afa06fd542fd8774.jpg
+/uploads/db49780f5a5449b8a34164a536dfed41.jpg
+/uploads/02ad7a5068e146dc8ee53b39d7f579c3.jpg
+/uploads/6bab2955f9bc403893529521ed8ddbb9.jpg
+/uploads/a3e33db774a34278ae958f7c97903339.jpg
+/uploads/b225b7515d384e72a5cb987d63672b36.jpg', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#27272a', 0, 'game', '', '', '', '2026-06-16 00:35:22', 'Features
 High Fidelity Graphics
 Striking visuals enhanced on PC. Enjoy true 4K resolution, on supported devices, [MU1] with unlocked framerates for peak performance. Dial in your settings via a wide range of graphical presets and options including higher resolution shadows, improved screen space reflections, the addition of GTAO and SSDO, and much more.
 NVIDIA DLSS and Reflex Support
@@ -1077,12 +1077,12 @@ Platform: PC
 Game Size: 94 GB
 Released By: RUNE EMU
 Version: v1.0.650.7780 (Build 18048593 | Full Version + All DLCs
-Pre-Installed Game', 'http://localhost:5050/uploads/2f120ce06ada45ef9979d337b6059df9.jpg', '', 'https://ffdl.cybar.to/q572ldk1o34w
-https://ffdl.cybar.to/eacqjgifguen', 'https://youtu.be/hfJ4Km46A-0?si=_5Cunt_xfEtM0hj5', 'http://localhost:5050/uploads/a815f8b09ceb4d978a7c06d5e51161af.jpg
-http://localhost:5050/uploads/a5b2a0fe9ae342eb9100a5e733f8c632.jpg
-http://localhost:5050/uploads/664e6c6dc3c44ac797d76768c22b94c4.jpg
-http://localhost:5050/uploads/f214f257f31440d2a5e9ebe5cbaca4c2.webp
-http://localhost:5050/uploads/01abb7d349fc4dbfb55ae57381d68bb4.webp', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#d4d4d8', 0, 'game', '', '', '', '2026-06-16 00:39:03', 'Repack Features
+Pre-Installed Game', '/uploads/2f120ce06ada45ef9979d337b6059df9.jpg', '', 'https://ffdl.cybar.to/q572ldk1o34w
+https://ffdl.cybar.to/eacqjgifguen', 'https://youtu.be/hfJ4Km46A-0?si=_5Cunt_xfEtM0hj5', '/uploads/a815f8b09ceb4d978a7c06d5e51161af.jpg
+/uploads/a5b2a0fe9ae342eb9100a5e733f8c632.jpg
+/uploads/664e6c6dc3c44ac797d76768c22b94c4.jpg
+/uploads/f214f257f31440d2a5e9ebe5cbaca4c2.webp
+/uploads/01abb7d349fc4dbfb55ae57381d68bb4.webp', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#d4d4d8', 0, 'game', '', '', '', '2026-06-16 00:39:03', 'Repack Features
 Based on God.of.War.Ragnarok-RUNE ISO release: rune-god.of.war.ragnarok.iso (121,660,866,560 bytes)
 Three Bonus OSTs in MP3 format and original ArtBook in hi-res JPGs (618 MB) added, thanks to NoeRIη! Original mini ArtBook in PDF format is preserved as well
 All DLCs and Bonuses are included
@@ -1121,13 +1121,13 @@ Platform: PC
 Game Size: 94.5 GB
 Released By: RUNE emu
 Version: v1.0.1013.29 | Full Version
-Pre-Installed Game', 'http://localhost:5050/uploads/0dd7c5d7133641ada88fb2bf2d1c7064.webp', '', 'https://vikingfile.com/d/J2V67Hs6qB/45gt54g546y.DR-GameDrive.Org.part1.rar
-https://vikingfile.com/d/QpgVjmFdkB/45gt54g546y.DR-GameDrive.Org.part2.rar', 'https://youtu.be/NXTlh31ZWZ4?si=MC7WNA2TkHQAw7W8', 'http://localhost:5050/uploads/ba26c59dcba94720928f62d68c4ed43d.jpg
-http://localhost:5050/uploads/fbdceb85e31c417eb6e7b8534596c6a4.jpg
-http://localhost:5050/uploads/f6891fa3538d4f3da2659f2085df0f89.jpg
-http://localhost:5050/uploads/4bdd70bc73dc419583549bbc343604fa.jpg
-http://localhost:5050/uploads/cf569a20a2694d1ea17734ec6d5c3e70.jpg
-http://localhost:5050/uploads/3ee8264395644f14952a07c8b62e8e40.jpg', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#c026d3', 0, 'game', '', '', '', '2026-06-16 00:43:28', 'Repack Features
+Pre-Installed Game', '/uploads/0dd7c5d7133641ada88fb2bf2d1c7064.webp', '', 'https://vikingfile.com/d/J2V67Hs6qB/45gt54g546y.DR-GameDrive.Org.part1.rar
+https://vikingfile.com/d/QpgVjmFdkB/45gt54g546y.DR-GameDrive.Org.part2.rar', 'https://youtu.be/NXTlh31ZWZ4?si=MC7WNA2TkHQAw7W8', '/uploads/ba26c59dcba94720928f62d68c4ed43d.jpg
+/uploads/fbdceb85e31c417eb6e7b8534596c6a4.jpg
+/uploads/f6891fa3538d4f3da2659f2085df0f89.jpg
+/uploads/4bdd70bc73dc419583549bbc343604fa.jpg
+/uploads/cf569a20a2694d1ea17734ec6d5c3e70.jpg
+/uploads/3ee8264395644f14952a07c8b62e8e40.jpg', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#c026d3', 0, 'game', '', '', '', '2026-06-16 00:43:28', 'Repack Features
 Based on Steam BuildID 21197051 version: 118.8 GB, thanks to thanks to AR-81!
 Mr.Goldberg SCE emu applied over
 Bonus Content (Brady Guide, Soundtrack/Radio Stations, Satellite Map, Wallpapers & 3 Bonus OSTs (3.2 GB) added, thanks to dremor8484 & ElAmigos!
@@ -1143,10 +1143,10 @@ Use REG-files in “_Language Switcher” folder to change the game GUI language
 Repack uses XTool library by Razor12911
 At least 6 GB of free RAM (inc. virtual) required for installing this repack
 ALWAYS run the game from desktop icon and with admin rights or from “PlayGTAV.bat” from the game root', '', '', '', '', '', '', '');
-INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (57, 'inZOI (2025) v0.7.5 + Island Getaway DLC', 'RPG, Simulation', 4.5, 0, 'Download inZOI (PC) – Full Game. Step into a high-stakes life simulation where “every life becomes a story” in stunning, hyper-realistic detail. Harness powerful, intuitive tools to architect the life of your dreams—from deep character customization to intricate home building—as you guide your ‘Zois’ through a complex web of emotions and relationships. Experience the next generation of digital living as you observe and influence a world driven by a profound and detailed simulation where every choice crafts a unique narrative legacy.', 'http://localhost:5050/uploads/27716d7784184c89b7281e9b396bde6c.webp', '', 'https://ffdl.cybar.to/jc1g8bfbj0yg', 'https://youtu.be/LNWBSArTQmg?si=PCh8Cuuz67H9oIBr', 'http://localhost:5050/uploads/69066be2a4f84f818ca8a4d055df07b1.webp
-http://localhost:5050/uploads/f0e70d788c1c4b65bc1d3a6fa9c9572a.webp
-http://localhost:5050/uploads/90dff71c40434b8fb74b6a8c9cc18d79.webp
-http://localhost:5050/uploads/4cfd63b07f39498c8c981fc4aaecae16.webp', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#3b82f6', 0, 'game', '', '', '', '2026-06-16 00:47:58', 'Repack Features
+INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (57, 'inZOI (2025) v0.7.5 + Island Getaway DLC', 'RPG, Simulation', 4.5, 0, 'Download inZOI (PC) – Full Game. Step into a high-stakes life simulation where “every life becomes a story” in stunning, hyper-realistic detail. Harness powerful, intuitive tools to architect the life of your dreams—from deep character customization to intricate home building—as you guide your ‘Zois’ through a complex web of emotions and relationships. Experience the next generation of digital living as you observe and influence a world driven by a profound and detailed simulation where every choice crafts a unique narrative legacy.', '/uploads/27716d7784184c89b7281e9b396bde6c.webp', '', 'https://ffdl.cybar.to/jc1g8bfbj0yg', 'https://youtu.be/LNWBSArTQmg?si=PCh8Cuuz67H9oIBr', '/uploads/69066be2a4f84f818ca8a4d055df07b1.webp
+/uploads/f0e70d788c1c4b65bc1d3a6fa9c9572a.webp
+/uploads/90dff71c40434b8fb74b6a8c9cc18d79.webp
+/uploads/4cfd63b07f39498c8c981fc4aaecae16.webp', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#3b82f6', 0, 'game', '', '', '', '2026-06-16 00:47:58', 'Repack Features
 based On MY OWN CSF + Goldberg
 
 Island Getaway added', '', '', '', '', '', 'How to Download, Extract & Play inZOI on PC
@@ -1167,9 +1167,9 @@ Platform: PC
 Game Size: 45.6 GB
 Released By: voices38
 Version: Build 20951841
-Pre-Installed Game', 'http://localhost:5050/uploads/2caec86397e547a2a1b1f63c687be9d7.jpg', '', 'https://ts.bzzhr.to/d/3nwmwjvpsgnq?v=JCgJLgPzvw4XAm_EC3OjMxWUA8vJFAUOq4Zh3cL8D7pccvmJeaAVWyrLay52JARH7ZkjUD5mN71ynVDXAgLbMMj8eito0NV7RAElS-xY7T5KvpkBJWZ53YCvBG_Per3VGWZRAkEOj6SentNSxCaC9gF8zg4bXN2LR4WHGvYo9_AwV0UHMsHJ6HPi4iyxcy53jbnMYKybl9NEmdVuDuF33JbmXxeZMMy95i8oa-vxiHIrumEvWMa0Z38', 'https://youtu.be/AMtLTi0koGE?si=5nUWQ-FL4x14AloM', 'http://localhost:5050/uploads/0d442592115e453a81da442cf9b30b51.jpeg
-http://localhost:5050/uploads/bdf58669d86f4feb9872802483e4fd77.jpg
-http://localhost:5050/uploads/20d2b4669844476cb010be6b8d2a3784.jpg', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#991b1b', 0, 'game', '', '', '', '2026-06-16 01:04:22', '', '', '', '', '', '', '', '');
+Pre-Installed Game', '/uploads/2caec86397e547a2a1b1f63c687be9d7.jpg', '', 'https://ts.bzzhr.to/d/3nwmwjvpsgnq?v=JCgJLgPzvw4XAm_EC3OjMxWUA8vJFAUOq4Zh3cL8D7pccvmJeaAVWyrLay52JARH7ZkjUD5mN71ynVDXAgLbMMj8eito0NV7RAElS-xY7T5KvpkBJWZ53YCvBG_Per3VGWZRAkEOj6SentNSxCaC9gF8zg4bXN2LR4WHGvYo9_AwV0UHMsHJ6HPi4iyxcy53jbnMYKybl9NEmdVuDuF33JbmXxeZMMy95i8oa-vxiHIrumEvWMa0Z38', 'https://youtu.be/AMtLTi0koGE?si=5nUWQ-FL4x14AloM', '/uploads/0d442592115e453a81da442cf9b30b51.jpeg
+/uploads/bdf58669d86f4feb9872802483e4fd77.jpg
+/uploads/20d2b4669844476cb010be6b8d2a3784.jpg', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#991b1b', 0, 'game', '', '', '', '2026-06-16 01:04:22', '', '', '', '', '', '', '', '');
 INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (59, 'Marvel’s Spider-Man: Miles Morales', 'RPG, Adventure, Action, Sci-Fi', 4.5, 1, 'Following the events of Marvel’s Spider-Man Remastered, teenager Miles Morales is adjusting to his new home while following in the footsteps of his mentor, Peter Parker, as a new Spider-Man. But when a fierce power struggle threatens to destroy his new home, the aspiring hero realizes that with great power, there must also come great responsibility. To save all of Marvel’s New York, Miles must take up the mantle of Spider-Man and own it. Marvel’s Spider-Man Remastered
 
 The Rise of Miles Morales
@@ -1199,9 +1199,9 @@ A war for control of Marvel’s New York has broken out between a devious energy
 
 A Vibrant New Home
 
-Traverse the snowy streets of his new, vibrant, and bustling neighborhood as Miles searches for a sense of belonging. When the lines blur between his personal and crime-fighting lives, he discovers who he can trust, and what it feels like to truly be home.', 'http://localhost:5050/uploads/bc30b2c84a174b15be1958f41d6166d0.jpg', '', 'https://ffdl.cybar.to/ser3up07x7pp', 'https://youtu.be/3wHL2VIaFcs?si=0b5nlC9foumjHJbH', 'http://localhost:5050/uploads/832b8fd51ef94af3bcd122df879a9ace.jpg
-http://localhost:5050/uploads/60c5967d94014543ac9465de7b59494c.jpeg
-http://localhost:5050/uploads/12e5df4932744fdabf0a3d2f154d6cd0.jpg', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#09090b', 0, 'game', '', '', '', '2026-06-16 01:07:42', 'Repack Features
+Traverse the snowy streets of his new, vibrant, and bustling neighborhood as Miles searches for a sense of belonging. When the lines blur between his personal and crime-fighting lives, he discovers who he can trust, and what it feels like to truly be home.', '/uploads/bc30b2c84a174b15be1958f41d6166d0.jpg', '', 'https://ffdl.cybar.to/ser3up07x7pp', 'https://youtu.be/3wHL2VIaFcs?si=0b5nlC9foumjHJbH', '/uploads/832b8fd51ef94af3bcd122df879a9ace.jpg
+/uploads/60c5967d94014543ac9465de7b59494c.jpeg
+/uploads/12e5df4932744fdabf0a3d2f154d6cd0.jpg', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#09090b', 0, 'game', '', '', '', '2026-06-16 01:07:42', 'Repack Features
 Based on Marvels_Spider-Man_Miles_Morales-FLT ISO release: flt-marvels_spider-man_miles_morales.iso (42,008,958,976 bytes)
 Game version: v1.1116.0.0; Pre-purchase Entitlements DLC is included and activated
 Missing language packs (9.5 GB) added, thanks to CarvingMan!
@@ -1226,10 +1226,10 @@ Reboot and in the loading menu press F7 to disable DSE
 Run “PRAGMATA.exe”
 Play
 Run “VBS.cmd” again and press 3 to revert made changes
-Reboot in the normal, secure mode', 'http://localhost:5050/uploads/7055a49ca0994d2ea97b332f01574f4e.jpg', '', 'https://ffdl.cybar.to/cwfcoeg3ijnj', 'https://youtu.be/l31ey7o1g9s?si=NMClEoyIN_vVtNVO', 'http://localhost:5050/uploads/4f4af9bad5a1490ba54d97454ee83e04.webp
-http://localhost:5050/uploads/80be0fe88dba4c0faf58de7aa5f644d0.webp
-http://localhost:5050/uploads/58c444f6a4e14525a8d734f4135158d0.webp
-http://localhost:5050/uploads/5478d22698f04d0a8c8844634314e21e.webp', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#3b82f6', 0, 'game', '', '', '', '2026-06-16 01:10:21', 'Repack Features
+Reboot in the normal, secure mode', '/uploads/7055a49ca0994d2ea97b332f01574f4e.jpg', '', 'https://ffdl.cybar.to/cwfcoeg3ijnj', 'https://youtu.be/l31ey7o1g9s?si=NMClEoyIN_vVtNVO', '/uploads/4f4af9bad5a1490ba54d97454ee83e04.webp
+/uploads/80be0fe88dba4c0faf58de7aa5f644d0.webp
+/uploads/58c444f6a4e14525a8d734f4135158d0.webp
+/uploads/5478d22698f04d0a8c8844634314e21e.webp', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#3b82f6', 0, 'game', '', '', '', '2026-06-16 01:10:21', 'Repack Features
 Based on Steam BuildID 22357085 release: 34.7 GB
 “The Bounded Soundtrack” added
 Hypervisor Bypass (INTEL & AMD) by DenuvOwO + Goldberg emu + SaveFix applied over
@@ -1254,9 +1254,9 @@ Platform: PC
 Game Size: 116 GB
 Released By: Razor1911
 Version: Build 1491.50 | Ultimate Edition + UE Unlocker
-Pre-Installed Game', 'http://localhost:5050/uploads/b3e0ac02c83b49908d7bc4ee556b59fd.jpg', '', 'https://ts.bzzhr.to/d/ck7nob6r1bcv?v=hN0pWkx29R7B2Eaj5cXgnbbPCjhN1ZQQmsAlgDkvt7ouuR_AuZpiMQY0P42kGV_u5TbCjiP0zzNJ1w_w-eoz772_LnOvPUu1_mfnaPl44mv-ydU79YAXTJ5nkYODsSalwalJAl6I9E7Mz2FmVNrvMzOC91n4MEhihhQUx4cv', 'https://youtu.be/gmA6MrX81z4?si=koYktEEpmC6Qv0dV', 'http://localhost:5050/uploads/4f665d9289b34a8e9c5400f8f3c8e369.jpg
-http://localhost:5050/uploads/a8ea3977691f40d8b073043f507e3286.jpg
-http://localhost:5050/uploads/cfb760373f284d37846dde5c3bcf3d94.webp', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#dc2626', 0, 'game', '', '', '', '2026-06-16 01:12:54', 'Repack Features
+Pre-Installed Game', '/uploads/b3e0ac02c83b49908d7bc4ee556b59fd.jpg', '', 'https://ts.bzzhr.to/d/ck7nob6r1bcv?v=hN0pWkx29R7B2Eaj5cXgnbbPCjhN1ZQQmsAlgDkvt7ouuR_AuZpiMQY0P42kGV_u5TbCjiP0zzNJ1w_w-eoz772_LnOvPUu1_mfnaPl44mv-ydU79YAXTJ5nkYODsSalwalJAl6I9E7Mz2FmVNrvMzOC91n4MEhihhQUx4cv', 'https://youtu.be/gmA6MrX81z4?si=koYktEEpmC6Qv0dV', '/uploads/4f665d9289b34a8e9c5400f8f3c8e369.jpg
+/uploads/a8ea3977691f40d8b073043f507e3286.jpg
+/uploads/cfb760373f284d37846dde5c3bcf3d94.webp', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#dc2626', 0, 'game', '', '', '', '2026-06-16 01:12:54', 'Repack Features
 Based on Red_Dead_Redemption_2_Ultimate_Edition-Razor1911 ISO release: rzr-reddeadredemption2.iso (128,253,820,928 bytes)
 No-intro Launcher.exe applied over, thanks to machine4578! Original Razor’s one preserved for purists in the root folder
 Game version is Build 1491.50
@@ -1281,11 +1281,11 @@ Version: Build 22377325 | Full Version + All DLCs
 Pre-Installed Game
 Survival is just the beginning. Death or Treat Six years have passed since the biological disaster in Raccoon City. Agent Leon S. Kennedy, one of the survivors of the incident, has been sent to rescue the president’s kidnapped daughter. He tracks her to a secluded European village, where there is something terribly wrong with the locals.
 
-And the curtain rises on this story of daring rescue and grueling horror where life and death, terror and catharsis intersect. Featuring modernized gameplay, a reimagined storyline, and vividly detailed graphics, Resident Evil 4 marks the rebirth of an industry juggernaut. Relive the nightmare that revolutionized survival horror.', 'http://localhost:5050/uploads/62394e113ecc4a4c80792c6d95214831.jpg', '', 'https://ts.bzzhr.to/d/f3pa7vkj99er?v=92f5_x-0UV2Np0pu0rMGN5amin32qqIY3gsDhBv44nHfd56Fy8Wb9gcb59kMtu-qC-6HIDuhYZ7vseFxS3lyHTVQTieNZWjk012yDX_fqM9dHYLuKxEOM9vKf_kMtviBcrWRNltI9F_JuPecCbHLrPapK3JfNdYVRUHLhCUC9MwtYUGLmoCn0ow1vnfKgw5E5_wVu4bPlEpKSlVX-V4v0lrj6mzaZ1vWz6F09YkqOgwa', 'https://youtu.be/E69tKrfEQag?si=Pw2njAkINDuo5Zrw', 'http://localhost:5050/uploads/0b99c6c08f274795916e0524dcdca949.jpg
-http://localhost:5050/uploads/c4b44fa22da045cea6ed2c74a67bdffb.webp
-http://localhost:5050/uploads/d2ccec92e5ef477f9de7aa94f6445931.webp
-http://localhost:5050/uploads/ed10e85df54b4858bdcfaef71d9f785f.webp
-http://localhost:5050/uploads/954f3e7a93f8496697b51d16fbcc164e.webp', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#be123c', 0, 'game', '', '', '', '2026-06-16 01:15:28', '', '', '', '', '', '', '', '');
+And the curtain rises on this story of daring rescue and grueling horror where life and death, terror and catharsis intersect. Featuring modernized gameplay, a reimagined storyline, and vividly detailed graphics, Resident Evil 4 marks the rebirth of an industry juggernaut. Relive the nightmare that revolutionized survival horror.', '/uploads/62394e113ecc4a4c80792c6d95214831.jpg', '', 'https://ts.bzzhr.to/d/f3pa7vkj99er?v=92f5_x-0UV2Np0pu0rMGN5amin32qqIY3gsDhBv44nHfd56Fy8Wb9gcb59kMtu-qC-6HIDuhYZ7vseFxS3lyHTVQTieNZWjk012yDX_fqM9dHYLuKxEOM9vKf_kMtviBcrWRNltI9F_JuPecCbHLrPapK3JfNdYVRUHLhCUC9MwtYUGLmoCn0ow1vnfKgw5E5_wVu4bPlEpKSlVX-V4v0lrj6mzaZ1vWz6F09YkqOgwa', 'https://youtu.be/E69tKrfEQag?si=Pw2njAkINDuo5Zrw', '/uploads/0b99c6c08f274795916e0524dcdca949.jpg
+/uploads/c4b44fa22da045cea6ed2c74a67bdffb.webp
+/uploads/d2ccec92e5ef477f9de7aa94f6445931.webp
+/uploads/ed10e85df54b4858bdcfaef71d9f785f.webp
+/uploads/954f3e7a93f8496697b51d16fbcc164e.webp', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#be123c', 0, 'game', '', '', '', '2026-06-16 01:15:28', '', '', '', '', '', '', '', '');
 INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (63, 'Marvel’s Spider Man 2', 'RPG, Adventure, Sci-Fi, Open World', 4.5, 0, 'Mask-up for more thrilling web-slinging heroics as Marvel’s SpiderMan 2 swings onto PC Developed by Insomniac Games in collaboration with Marvel, and optimized for PC by Nixxes Software.
 
 A city under siege!
@@ -1316,10 +1316,10 @@ Platform: PC
 Game Size: 94.6 GB
 Released By: RUNE + Fixed exe
 Version: v1.526.0.0 | Full Version
-Pre-Installed Game', 'http://localhost:5050/uploads/b85c50b8008744aab1fe86e5bde24895.jpg', '', 'https://ffdl.cybar.to/hg3uofzuw9cn
-https://ffdl.cybar.to/q6rs90s43je5', '', 'http://localhost:5050/uploads/8be7cb7dddd043aba5a9224131adf4f3.jpg
-http://localhost:5050/uploads/536230058a28419995e77b0ea4fd9b43.jpg
-http://localhost:5050/uploads/3c6208ea8eaa4922bf7a90f6d8f6594a.webp', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#b91c1c', 0, 'game', '', '', '', '2026-06-16 01:17:54', 'Repack Features
+Pre-Installed Game', '/uploads/b85c50b8008744aab1fe86e5bde24895.jpg', '', 'https://ffdl.cybar.to/hg3uofzuw9cn
+https://ffdl.cybar.to/q6rs90s43je5', '', '/uploads/8be7cb7dddd043aba5a9224131adf4f3.jpg
+/uploads/536230058a28419995e77b0ea4fd9b43.jpg
+/uploads/3c6208ea8eaa4922bf7a90f6d8f6594a.webp', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#b91c1c', 0, 'game', '', '', '', '2026-06-16 01:17:54', 'Repack Features
 Based on Marvels.Spider-Man.2-RUNE ISO release: rune-marvels.spiderman.2.iso (101,088,722,944 bytes)
 Marvels.Spider-Man.2.Language.Pack-RUNE (31,765,439,654 GB) applied over
 Update to v1.131.0.0 (366 MB) added, thanks to ElAmigos! To use it, copy contents of “_Update to v1.131.0” folder to the game root
@@ -1352,12 +1352,12 @@ Platform: PC
 Game Size: 80 GB
 Released By: Mr_GOLDBERG | Ty Christsnatcher (cs.rin) for updates
 Version: v1.1.5.0 | Full Version + Crash/Shaders Fix applied
-Pre-Installed Game', 'http://localhost:5050/uploads/5b6e3addd21d4752a6589c25e1d62f64.webp', '', 'https://vikingfile.com/d/lp9BeXGjq8/g5464hhhhh.ER-GameDrive.Org.part1.rar
-https://vikingfile.com/d/C1fyFRQ1O5/g5464hhhhh.ER-GameDrive.Org.part2.rar', 'https://youtu.be/WxjeV10H1F0?si=I6t3hZTmv08DkRFa', 'http://localhost:5050/uploads/d7154b7f1b7546d3986d00d14e9e11fa.webp
-http://localhost:5050/uploads/264b7417ab3c4935a20a89c08e346306.webp
-http://localhost:5050/uploads/6c668d4029084b66bd2d0b22eadab17a.jpg
-http://localhost:5050/uploads/ec7ae666e75141ea8d97c9ac14eac02c.jpg
-http://localhost:5050/uploads/ab2eedd34d6640e6bc79b27a8e1768a3.jpg', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#f97316', 0, 'game', '', '', '', '2026-06-16 01:20:52', 'Repack Features
+Pre-Installed Game', '/uploads/5b6e3addd21d4752a6589c25e1d62f64.webp', '', 'https://vikingfile.com/d/lp9BeXGjq8/g5464hhhhh.ER-GameDrive.Org.part1.rar
+https://vikingfile.com/d/C1fyFRQ1O5/g5464hhhhh.ER-GameDrive.Org.part2.rar', 'https://youtu.be/WxjeV10H1F0?si=I6t3hZTmv08DkRFa', '/uploads/d7154b7f1b7546d3986d00d14e9e11fa.webp
+/uploads/264b7417ab3c4935a20a89c08e346306.webp
+/uploads/6c668d4029084b66bd2d0b22eadab17a.jpg
+/uploads/ec7ae666e75141ea8d97c9ac14eac02c.jpg
+/uploads/ab2eedd34d6640e6bc79b27a8e1768a3.jpg', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#f97316', 0, 'game', '', '', '', '2026-06-16 01:20:52', 'Repack Features
 Based on Steam BuildID 13777814 release: 78.4 GB, thanks to Ksenia!
 Bonus Content (3 soundtracks, ArtBook, Digital Comic, Unofficial Strategy Guide, 769 MB) added, thanks to NoeRIη!
 CODEX-RUNE crack/emu applied over
@@ -1391,11 +1391,11 @@ From thick jungles to snow-capped mountains, exotic islands to rain-soaked stree
 
 Feel the thrilling gameplay in your hands
 
-Experience haptic feedback and dynamic trigger effects designed for UNCHARTED: Legacy of Thieves Collection by playing with the DualSense controller through a wired connection to your PC. For those that want to brighten things up even more, try out RGB support for Razer Chroma peripherals and Chroma Link compatible devices, as well as for Logitech models. You can also check previous posted game Potionomics.', 'http://localhost:5050/uploads/28db2ea5145f4f0cb2e2218c3f5054f3.jpg', '', 'https://vikingfile.com/d/81Pif0lZTT/sfdf435.ER-GameDrive.Org.rar', 'https://youtu.be/F3Wl-OiZCO4?si=Gx9lfuxspi3nG6Xh', 'http://localhost:5050/uploads/d4523f7b787342bebd6f148a406a41f6.jpg
-http://localhost:5050/uploads/80a487029029461bac1a75d0b174beba.jpg
-http://localhost:5050/uploads/b87ac30e4a7546448041040d5063e88f.jpg
-http://localhost:5050/uploads/70b826e8d46b432dbe9825e7e8696242.jpg', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#eab308', 0, 'game', '', '', '', '2026-06-16 01:24:09', '', '', '', '', '', '', '', '');
-INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (66, 'Watch Dogs 2', 'RPG, Sci-Fi, Open World', 4.5, 0, 'Play as Marcus Holloway, a brilliant young hacker living in the birthplace of the tech revolution, the San Francisco Bay Area. Team up with Dedsec, a notorious group of hackers, to execute the biggest hack in history; take down ctOS 2.0, an invasive operating system being used by criminal masterminds to monitor and manipulate citizens on a massive scale. Get the upper hand with Tobii Eye Tracking. Volcanoids', 'http://localhost:5050/uploads/8945d26cff604119bca6f558fee3a720.jpg', '', 'https://fuckingfast.co/g1pdp1kuolm5#Watch_Dogs_2_--_fitgirl-repacks.site_--_.part01.rar
+Experience haptic feedback and dynamic trigger effects designed for UNCHARTED: Legacy of Thieves Collection by playing with the DualSense controller through a wired connection to your PC. For those that want to brighten things up even more, try out RGB support for Razer Chroma peripherals and Chroma Link compatible devices, as well as for Logitech models. You can also check previous posted game Potionomics.', '/uploads/28db2ea5145f4f0cb2e2218c3f5054f3.jpg', '', 'https://vikingfile.com/d/81Pif0lZTT/sfdf435.ER-GameDrive.Org.rar', 'https://youtu.be/F3Wl-OiZCO4?si=Gx9lfuxspi3nG6Xh', '/uploads/d4523f7b787342bebd6f148a406a41f6.jpg
+/uploads/80a487029029461bac1a75d0b174beba.jpg
+/uploads/b87ac30e4a7546448041040d5063e88f.jpg
+/uploads/70b826e8d46b432dbe9825e7e8696242.jpg', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#eab308', 0, 'game', '', '', '', '2026-06-16 01:24:09', '', '', '', '', '', '', '', '');
+INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (66, 'Watch Dogs 2', 'RPG, Sci-Fi, Open World', 4.5, 0, 'Play as Marcus Holloway, a brilliant young hacker living in the birthplace of the tech revolution, the San Francisco Bay Area. Team up with Dedsec, a notorious group of hackers, to execute the biggest hack in history; take down ctOS 2.0, an invasive operating system being used by criminal masterminds to monitor and manipulate citizens on a massive scale. Get the upper hand with Tobii Eye Tracking. Volcanoids', '/uploads/8945d26cff604119bca6f558fee3a720.jpg', '', 'https://fuckingfast.co/g1pdp1kuolm5#Watch_Dogs_2_--_fitgirl-repacks.site_--_.part01.rar
 https://fuckingfast.co/w7m35s4qeg8h#Watch_Dogs_2_--_fitgirl-repacks.site_--_.part02.rar
 https://fuckingfast.co/owmc71qpudho#Watch_Dogs_2_--_fitgirl-repacks.site_--_.part03.rar
 https://fuckingfast.co/j16fnwg7bkdy#Watch_Dogs_2_--_fitgirl-repacks.site_--_.part04.rar
@@ -1428,13 +1428,13 @@ https://fuckingfast.co/b61pt0k0w0rs#Watch_Dogs_2_--_fitgirl-repacks.site_--_.par
 https://fuckingfast.co/p1dpdk4jjzk9#Watch_Dogs_2_--_fitgirl-repacks.site_--_.part29.rar
 https://fuckingfast.co/j2p04i3o2tog#Watch_Dogs_2_--_fitgirl-repacks.site_--_.part30.rar
 https://fuckingfast.co/wmcqxf2ifyk8#Watch_Dogs_2_--_fitgirl-repacks.site_--_.part31.rar
-https://fuckingfast.co/ksuf0zypii0w#Watch_Dogs_2_--_fitgirl-repacks.site_--_.part32.rar', 'https://youtu.be/hh9x4NqW0Dw?si=57NSpkS5dDXd2Knu', 'http://localhost:5050/uploads/d7d3e698f9e64285ae37ec94f5ac6ff4.jpg
-http://localhost:5050/uploads/79faa380e9074c0c86c525d007590a74.webp
-http://localhost:5050/uploads/fa1e413330704277a488cfb402e24785.jpg
-http://localhost:5050/uploads/49ed2d549dac4592910238e50dc9146f.jpg
-http://localhost:5050/uploads/510aef75ba044f84a85da103a3f1367a.jpg
-http://localhost:5050/uploads/b86fff67bb5d4810a3e267090b612419.jpg
-http://localhost:5050/uploads/112aeb0411c04725b76a4852b46e3f7b.jpg', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#71717a', 0, 'game', '', '', '', '2026-06-16 01:26:53', 'Repack Features
+https://fuckingfast.co/ksuf0zypii0w#Watch_Dogs_2_--_fitgirl-repacks.site_--_.part32.rar', 'https://youtu.be/hh9x4NqW0Dw?si=57NSpkS5dDXd2Knu', '/uploads/d7d3e698f9e64285ae37ec94f5ac6ff4.jpg
+/uploads/79faa380e9074c0c86c525d007590a74.webp
+/uploads/fa1e413330704277a488cfb402e24785.jpg
+/uploads/49ed2d549dac4592910238e50dc9146f.jpg
+/uploads/510aef75ba044f84a85da103a3f1367a.jpg
+/uploads/b86fff67bb5d4810a3e267090b612419.jpg
+/uploads/112aeb0411c04725b76a4852b46e3f7b.jpg', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#71717a', 0, 'game', '', '', '', '2026-06-16 01:26:53', 'Repack Features
 Based on Watch.Dogs.2.MULTi16-PLAZA ISO release: plaza-watch.dogs.2.iso (43,604,344,832 bytes)
 Watch.Dogs.2.MULTi16.Update.v1.17-PLAZA (19.2 GB) and missing Russian files (1.6 GB) added
 Bonus content (Soundtrack, Artworks, Wallpapers) added and available as optional download
@@ -1484,21 +1484,21 @@ Free
 License
 Owner
 
-Copyright © 2026 3uTools', 'http://localhost:5050/uploads/3c87e254e69c4707b125619ff33b7c0c.jpg', '', 'https://dw.uptodown.net/dwn/xFuU8dawtXJBfI8LbaFsIXbWOVBs66Z_PSiErjIjenO37BrBjLdJu28aG8Y7iOl7UaGjgvsW2HTq-6z9rT8N8VcUh2ZIjz-fd0_s1cC-ZkJdJoTnmY3THFttFtNn5jyU/Lqzc_Jnj5n7poetPCuxYnXoE64UiRjcoI2yOYdm-10usrB7tVRZ9-KQ49ndUrQRDmLT4LmHoDKE3XJIg26_tD7Ta5TyZa7FPfIEU-k-ZBjwdScM-22G9j868U_hkBikl/rDBoODgp5j3_PYr2yaetYtBKxIF3150vOeGOsCe-EqlNcpL7TSRC7xQX4vummFH6nB1FB52P_39Fa2wTljD8yA==/3utools-9-06-006.exe', '', 'http://localhost:5050/uploads/0432280c742a42009539d42a47882855.webp
-http://localhost:5050/uploads/bbcab8d1ea1e44a0b4f44cefe1182a36.webp
-http://localhost:5050/uploads/a9e5f5862d9048f99a82cab361b467a3.webp
-http://localhost:5050/uploads/26854d200e2c46358def84c73d6635a9.webp
-http://localhost:5050/uploads/76564104e7c6450c8ac110f25bd69c54.webp
-http://localhost:5050/uploads/f84117ced7ee47b9b13807f1989042f7.webp', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#2563eb', 0, 'software', '', '9.06.006', 'Freemium', '2026-06-17 02:57:33', '', '', '', '', '', '', '', '');
-INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (68, 'Adobe Acrobat Pro 2025 (v25.1.20630) x64 Multilingual', 'Productivity & Office', 4.5, 0, 'Adobe Acrobat Pro is a complete PDF solution for desktop, mobile and web browsers. The program allows you to view, edit and manage PDF files, as well as convert documents into this format, opened in any application that supports the function of sending to print. In addition, any documents in Microsoft Office format, as well as viewed web pages, can be converted to PDF. In documents, you can use any review tools: edits, notes, footnotes, work with graphics.Adobe Acrobat Pro provides an opportunity for team work on documents, modern cloud solutions are available in it, allowing you to access files from mobile devices. This saves all the progress of the previous editing and even the location of the last view.', 'http://localhost:5050/uploads/e75f625a798244358427df15308fe3d3.webp', '', 'https://vikingfile.com/d/Kl5J2nSWTq/brg56gh565.S-GameDrive.Org.rar', '', '', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#b91c1c', 0, 'software', '', 'v25.1.20630', 'Freemium', '2026-06-17 03:03:06', '', '', '', '', '', '', '', '');
+Copyright © 2026 3uTools', '/uploads/3c87e254e69c4707b125619ff33b7c0c.jpg', '', 'https://dw.uptodown.net/dwn/xFuU8dawtXJBfI8LbaFsIXbWOVBs66Z_PSiErjIjenO37BrBjLdJu28aG8Y7iOl7UaGjgvsW2HTq-6z9rT8N8VcUh2ZIjz-fd0_s1cC-ZkJdJoTnmY3THFttFtNn5jyU/Lqzc_Jnj5n7poetPCuxYnXoE64UiRjcoI2yOYdm-10usrB7tVRZ9-KQ49ndUrQRDmLT4LmHoDKE3XJIg26_tD7Ta5TyZa7FPfIEU-k-ZBjwdScM-22G9j868U_hkBikl/rDBoODgp5j3_PYr2yaetYtBKxIF3150vOeGOsCe-EqlNcpL7TSRC7xQX4vummFH6nB1FB52P_39Fa2wTljD8yA==/3utools-9-06-006.exe', '', '/uploads/0432280c742a42009539d42a47882855.webp
+/uploads/bbcab8d1ea1e44a0b4f44cefe1182a36.webp
+/uploads/a9e5f5862d9048f99a82cab361b467a3.webp
+/uploads/26854d200e2c46358def84c73d6635a9.webp
+/uploads/76564104e7c6450c8ac110f25bd69c54.webp
+/uploads/f84117ced7ee47b9b13807f1989042f7.webp', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#2563eb', 0, 'software', '', '9.06.006', 'Freemium', '2026-06-17 02:57:33', '', '', '', '', '', '', '', '');
+INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (68, 'Adobe Acrobat Pro 2025 (v25.1.20630) x64 Multilingual', 'Productivity & Office', 4.5, 0, 'Adobe Acrobat Pro is a complete PDF solution for desktop, mobile and web browsers. The program allows you to view, edit and manage PDF files, as well as convert documents into this format, opened in any application that supports the function of sending to print. In addition, any documents in Microsoft Office format, as well as viewed web pages, can be converted to PDF. In documents, you can use any review tools: edits, notes, footnotes, work with graphics.Adobe Acrobat Pro provides an opportunity for team work on documents, modern cloud solutions are available in it, allowing you to access files from mobile devices. This saves all the progress of the previous editing and even the location of the last view.', '/uploads/e75f625a798244358427df15308fe3d3.webp', '', 'https://vikingfile.com/d/Kl5J2nSWTq/brg56gh565.S-GameDrive.Org.rar', '', '', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#b91c1c', 0, 'software', '', 'v25.1.20630', 'Freemium', '2026-06-17 03:03:06', '', '', '', '', '', '', '', '');
 INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (69, 'Adobe Illustrator 2025 (v29.7.1.8) Multilingual', 'Productivity & Office', 4.5, 0, 'Adobe Illustrator is an industry-standard vector graphics application widely used by designers in various fields of digital graphics, illustration and printing, in the development of all kinds of multimedia resources such as printed materials, web content, interactive media, videos and mobile applications.
 
-Create vector graphics in the program that the pros use. Experience everything from web and mobile graphics to logos, icons, illustrations, packaging design and billboards. Enjoy creative freedom with Adobe Illustrator !', 'http://localhost:5050/uploads/03beb07aa533464e96a95cc01199e19a.webp', '', 'https://vikingfile.com/d/vIfOO021Gv/5g56h5.S-GameDrive.Org.rar', '', '', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#f59e0b', 0, 'software', '', 'v29.7.1.8', 'Freemium', '2026-06-17 03:05:12', '', '', '', '', '', '', '', '');
-INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (70, 'Adobe Lightroom Classic v14.5.0 Multilingual', 'Productivity & Office', 4.5, 0, 'Sometimes photographs cannot convey all those impressions that overwhelmed you at the time of shooting. Thanks to the tools of Adobe Lightroom Classic, you can edit photos on your computer and convey your emotions. Adobe Lightroom Classic provides powerful editing tools and advanced controls to create amazing photos. Add color, make dim photos bright and vibrant, remove stray objects and correct the skew of images. Easily organize all your photos on your desktop and share them in a variety of ways.', 'http://localhost:5050/uploads/239255cc9feb4282943a70083ccafaa1.webp', '', 'https://vikingfile.com/d/q87xLEDWEw/54g45.S-GameDrive.Org.rar', '', '', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#1d4ed8', 0, 'software', '', 'v14.5.0', 'Freemium', '2026-06-17 03:06:29', '', '', '', '', '', '', '', '');
+Create vector graphics in the program that the pros use. Experience everything from web and mobile graphics to logos, icons, illustrations, packaging design and billboards. Enjoy creative freedom with Adobe Illustrator !', '/uploads/03beb07aa533464e96a95cc01199e19a.webp', '', 'https://vikingfile.com/d/vIfOO021Gv/5g56h5.S-GameDrive.Org.rar', '', '', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#f59e0b', 0, 'software', '', 'v29.7.1.8', 'Freemium', '2026-06-17 03:05:12', '', '', '', '', '', '', '', '');
+INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (70, 'Adobe Lightroom Classic v14.5.0 Multilingual', 'Productivity & Office', 4.5, 0, 'Sometimes photographs cannot convey all those impressions that overwhelmed you at the time of shooting. Thanks to the tools of Adobe Lightroom Classic, you can edit photos on your computer and convey your emotions. Adobe Lightroom Classic provides powerful editing tools and advanced controls to create amazing photos. Add color, make dim photos bright and vibrant, remove stray objects and correct the skew of images. Easily organize all your photos on your desktop and share them in a variety of ways.', '/uploads/239255cc9feb4282943a70083ccafaa1.webp', '', 'https://vikingfile.com/d/q87xLEDWEw/54g45.S-GameDrive.Org.rar', '', '', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#1d4ed8', 0, 'software', '', 'v14.5.0', 'Freemium', '2026-06-17 03:06:29', '', '', '', '', '', '', '', '');
 INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (71, 'Adobe Premiere Pro 2026 (v26.0) Multilingual', 'Productivity & Office', 4.5, 0, 'About
-Download Adobe Premiere Pro 2026 (Windows) – free full software with professional video editing tools, advanced timeline controls, AI-powered features, color grading, audio enhancement, motion graphics, and full support for all major video formats for cinematic editing.', 'http://localhost:5050/uploads/81be53188a894b45a4b649bdc7ae6be6.webp', '', '', '', 'http://localhost:5050/uploads/bc6e835c0beb4635b8b1d88cb4bba0e9.png
-http://localhost:5050/uploads/518a0a333c3c48538af3d824230d25d1.png
-http://localhost:5050/uploads/4eb3217fe0bb455bb2f9f46a3a42164c.png', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#1d4ed8', 0, 'software', '', 'v26.0', 'Freemium', '2026-06-17 03:07:38', '', '', '', '', '', '', '', '');
+Download Adobe Premiere Pro 2026 (Windows) – free full software with professional video editing tools, advanced timeline controls, AI-powered features, color grading, audio enhancement, motion graphics, and full support for all major video formats for cinematic editing.', '/uploads/81be53188a894b45a4b649bdc7ae6be6.webp', '', '', '', '/uploads/bc6e835c0beb4635b8b1d88cb4bba0e9.png
+/uploads/518a0a333c3c48538af3d824230d25d1.png
+/uploads/4eb3217fe0bb455bb2f9f46a3a42164c.png', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#1d4ed8', 0, 'software', '', 'v26.0', 'Freemium', '2026-06-17 03:07:38', '', '', '', '', '', '', '', '');
 INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (72, 'Anaconda', 'Action', 4.5, 0, 'Anaconda is a free and open source distribution of the programming languages Python and R, designed to simplify the management of packages and environments in data science, machine learning, and data analytics projects. If you''re looking for a robust and easy-to-use Windows platform, this tool has all kinds of features that will make your life easier while working.
 
 Efficient management of packages and environments
@@ -1521,10 +1521,10 @@ Developer
 Anaconda Inc.
 
 Category
-IDE', 'http://localhost:5050/uploads/162c1cb23d0b442cba27ed0b31bf6821.png', '', 'https://dw.uptodown.net/dwn/wUTbxeCeiopxDw4u7v4hQ3PFMW3ZypPHJAD4uO5nIPIDnZwUGr3B42Zyz1SkQz_f7zoT6l9m3OUhgeDEOQ_Jz22dvpUK7fDOZ1DK0YA_6f7KEyxOsNfeqgP97BKUB0Pt/8kM7comcKgdJrMP-JqfHggl8049X-95xgqTZvCKj5pQwY4PSfcRPprLsquOH8x2WPWc0AWuDcs2iSGXkMDxkBtVG9sP_ER2rpWQMAy7Vt9NODYdQxIOPJOFzNKX0QCQJ/cPSgOckJecMg5ZgzEvsOFYYrOD9gOezJJXLzallaUsnsz0KYLDPCh0XAFVBrBl00FyghlvVk1KVI6GwA0zQ5QA==/anaconda-2025-12-2.exe', '', 'http://localhost:5050/uploads/887bf1a7255e4c5fa9d018255b5c0a18.webp
-http://localhost:5050/uploads/e463e50297724d2494eb50c8c9856aa7.webp
-http://localhost:5050/uploads/7470c356cfa8421ca23bb42129fd9c9b.webp
-http://localhost:5050/uploads/9dceb3e006bf46b8bdacca3a9f6b100d.webp', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#f4f4f5', 0, 'software', '', '', '', '2026-06-17 03:09:04', '', '', '', '', '', '', '', '');
+IDE', '/uploads/162c1cb23d0b442cba27ed0b31bf6821.png', '', 'https://dw.uptodown.net/dwn/wUTbxeCeiopxDw4u7v4hQ3PFMW3ZypPHJAD4uO5nIPIDnZwUGr3B42Zyz1SkQz_f7zoT6l9m3OUhgeDEOQ_Jz22dvpUK7fDOZ1DK0YA_6f7KEyxOsNfeqgP97BKUB0Pt/8kM7comcKgdJrMP-JqfHggl8049X-95xgqTZvCKj5pQwY4PSfcRPprLsquOH8x2WPWc0AWuDcs2iSGXkMDxkBtVG9sP_ER2rpWQMAy7Vt9NODYdQxIOPJOFzNKX0QCQJ/cPSgOckJecMg5ZgzEvsOFYYrOD9gOezJJXLzallaUsnsz0KYLDPCh0XAFVBrBl00FyghlvVk1KVI6GwA0zQ5QA==/anaconda-2025-12-2.exe', '', '/uploads/887bf1a7255e4c5fa9d018255b5c0a18.webp
+/uploads/e463e50297724d2494eb50c8c9856aa7.webp
+/uploads/7470c356cfa8421ca23bb42129fd9c9b.webp
+/uploads/9dceb3e006bf46b8bdacca3a9f6b100d.webp', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#f4f4f5', 0, 'software', '', '', '', '2026-06-17 03:09:04', '', '', '', '', '', '', '', '');
 INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (73, 'AutoCAD 2026', 'Design & 3D', 4.5, 0, 'AutoCAD is an advanced computer-aided design (CAD) app that places the most precise tools in your hands to help you create plans, models, and documentation in both 2D and 3D. Used by millions of architects, engineers, designers, and construction professionals, AutoCAD allows you to design and annotate geometry, work with solids, surfaces, mesh objects, and make precise edits thanks to its powerful commands and intelligent functions.
 
 Automation and efficiency
@@ -1542,12 +1542,12 @@ AutoCAD allows you to configure the workspace the way you want it: Create custom
 How much does AutoCAD cost?
 AutoCAD is a paid tool, but you can use the trial version free for 7 days before deciding whether you want to purchase it or not. Additionally, students and teachers can use it for free for one year to familiarize themselves with the app before using it professionally. When you subscribe, you can install AutoCAD on up to three devices, with just a single user able to access the app at a time.
 
-Download AutoCAD for Windows and create the most precise and advanced designs in both 2D and 3D.', 'http://localhost:5050/uploads/fd6595d8524a48bbacb0d10c1e4628a7.png', '', 'https://dw.uptodown.net/dwn/wUTbxeCeiopxDw4u7v4hQ3PFMW3ZypPHJAD4uO5nIPKxOtxfj0PP4qxm5ffv9cRuAv95AxzCE8qj_b0zTibi5wNQJ1em2QwXAwGyFZRorurb242Nw90Woxyd7-dNeXte/GCzJUqV4wJskOlyQsGKvI9f3bgo3g_ZQpvo9RzXjigUSc1mML5wHMViehuUZKFwrRZsZifq_JbrYYCBe6QpV9JMH_W862stiM5QIqiAK18WVZXcusmCQIuIVWhM8nM7L/0GTc8BizjSwYp9r0qYWbbjGiu-lpKTI_pa6x6-Smxw_k-nDNMvDVwS7pvxfKxViiadQ9f3M5ZGlIBjvFQPmKmw==/autocad-2026.exe', '', 'http://localhost:5050/uploads/3c33862385a2431391e2da8bf3b218d8.webp
-http://localhost:5050/uploads/24bd302723aa4bd7bc6383fa90023a52.webp
-http://localhost:5050/uploads/ac3f8dacda684f23be29afe03c313efe.webp
-http://localhost:5050/uploads/77cf1fd1d5d04b4cb61156e33f8d4284.webp
-http://localhost:5050/uploads/43bc955d91b3440bb33fe5a4fcbc1d5c.webp
-http://localhost:5050/uploads/cf321117ce6d419e999bc716c9b79163.webp', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#ef4444', 0, 'software', '', '2026', 'Freemium', '2026-06-17 03:10:56', '', '', '', '', '', '', '', '');
+Download AutoCAD for Windows and create the most precise and advanced designs in both 2D and 3D.', '/uploads/fd6595d8524a48bbacb0d10c1e4628a7.png', '', 'https://dw.uptodown.net/dwn/wUTbxeCeiopxDw4u7v4hQ3PFMW3ZypPHJAD4uO5nIPKxOtxfj0PP4qxm5ffv9cRuAv95AxzCE8qj_b0zTibi5wNQJ1em2QwXAwGyFZRorurb242Nw90Woxyd7-dNeXte/GCzJUqV4wJskOlyQsGKvI9f3bgo3g_ZQpvo9RzXjigUSc1mML5wHMViehuUZKFwrRZsZifq_JbrYYCBe6QpV9JMH_W862stiM5QIqiAK18WVZXcusmCQIuIVWhM8nM7L/0GTc8BizjSwYp9r0qYWbbjGiu-lpKTI_pa6x6-Smxw_k-nDNMvDVwS7pvxfKxViiadQ9f3M5ZGlIBjvFQPmKmw==/autocad-2026.exe', '', '/uploads/3c33862385a2431391e2da8bf3b218d8.webp
+/uploads/24bd302723aa4bd7bc6383fa90023a52.webp
+/uploads/ac3f8dacda684f23be29afe03c313efe.webp
+/uploads/77cf1fd1d5d04b4cb61156e33f8d4284.webp
+/uploads/43bc955d91b3440bb33fe5a4fcbc1d5c.webp
+/uploads/cf321117ce6d419e999bc716c9b79163.webp', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#ef4444', 0, 'software', '', '2026', 'Freemium', '2026-06-17 03:10:56', '', '', '', '', '', '', '', '');
 INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (74, 'Blender', 'Design & 3D', 4.5, 0, 'Blender is a free and open-source program that allows you to create 3D graphics and animations. Thanks to its versatility, it is used by film and video game professionals as well as amateur artists.
 
 Modeling
@@ -1571,13 +1571,13 @@ In addition to being a powerful 3D modeling and animation program, Blender also 
 Extensions and community
 If you run out of ideas, want to use another project as a base, or want to add new features, you can explore the hundreds of add-ons and content developed by both the community and the official developers. These add-ons allow you to add specific features for disciplines such as architecture and advanced visual effects or create video games. The learning curve is very steep in Blender, but once you have done a few tutorial projects and become familiar with its tools, you''ll be able to achieve spectacular results.
 
-Download Blender if you''re looking for a comprehensive 3D editing program to model, render, texture, light, animate, and produce all kinds of computer-generated 3D scenes.', 'http://localhost:5050/uploads/07222b3cbc79432fa99a1c0bbec4407b.png', '', 'https://dw.uptodown.net/dwn/wUTbxeCeiopxDw4u7v4hQ3PFMW3ZypPHJAD4uO5nIPIN7X1Wst4PqRA6KzgG3djiBC5XdQ127aekZhQpsrbC_u52v-u_LpqOIqzcBsxpL4Fo2lqTQsLTuaEeqb_8dxDO/Fqh8PxIHqGSb-pMOh7B1oXhzvky0HScCNXOSLtn5Leb65S2Xvsjx-Qj-1UzPL8pzITPvTV484ApePtGjYZRpW92rvwAHHpE0LFv-QPMDgu9BGvZZAPGc3OPXG2mMD_fL/hlY5pEGfmhaQpwyUPMflVObaywSNrmyKkVTOT4qJf8J_oJaccAk8-dCuhkN2J3Vu1RKXldFmLqmzCzBPWoRyXA==/blender-5-1-2.msi', '', 'http://localhost:5050/uploads/ba068c2d8e224fc09fa3e72474a93e2e.webp
-http://localhost:5050/uploads/edde41db025b42918d5b2cac8632e260.webp
-http://localhost:5050/uploads/d60631bc0935401e9d9650bef707cff9.webp
-http://localhost:5050/uploads/457628be04d64904ad0cd22bc079cad9.webp
-http://localhost:5050/uploads/85b11ded0f024af9867cf7825b0f5385.webp
-http://localhost:5050/uploads/1df4f0feb3e34e07967cee388c098785.webp
-http://localhost:5050/uploads/ce3ce118e4f248819bbbf4f60b358812.webp', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#eab308', 0, 'software', '', '5.1.2', 'Freemium', '2026-06-17 03:14:32', '', '', '', '', '', '', '', '');
+Download Blender if you''re looking for a comprehensive 3D editing program to model, render, texture, light, animate, and produce all kinds of computer-generated 3D scenes.', '/uploads/07222b3cbc79432fa99a1c0bbec4407b.png', '', 'https://dw.uptodown.net/dwn/wUTbxeCeiopxDw4u7v4hQ3PFMW3ZypPHJAD4uO5nIPIN7X1Wst4PqRA6KzgG3djiBC5XdQ127aekZhQpsrbC_u52v-u_LpqOIqzcBsxpL4Fo2lqTQsLTuaEeqb_8dxDO/Fqh8PxIHqGSb-pMOh7B1oXhzvky0HScCNXOSLtn5Leb65S2Xvsjx-Qj-1UzPL8pzITPvTV484ApePtGjYZRpW92rvwAHHpE0LFv-QPMDgu9BGvZZAPGc3OPXG2mMD_fL/hlY5pEGfmhaQpwyUPMflVObaywSNrmyKkVTOT4qJf8J_oJaccAk8-dCuhkN2J3Vu1RKXldFmLqmzCzBPWoRyXA==/blender-5-1-2.msi', '', '/uploads/ba068c2d8e224fc09fa3e72474a93e2e.webp
+/uploads/edde41db025b42918d5b2cac8632e260.webp
+/uploads/d60631bc0935401e9d9650bef707cff9.webp
+/uploads/457628be04d64904ad0cd22bc079cad9.webp
+/uploads/85b11ded0f024af9867cf7825b0f5385.webp
+/uploads/1df4f0feb3e34e07967cee388c098785.webp
+/uploads/ce3ce118e4f248819bbbf4f60b358812.webp', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#eab308', 0, 'software', '', '5.1.2', 'Freemium', '2026-06-17 03:14:32', '', '', '', '', '', '', '', '');
 INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (75, 'Canva 1.122.0', 'Design & 3D', 4.5, 0, 'Information about Canva 1.122.0
 Basic information
 
@@ -1606,14 +1606,14 @@ Copyright © 2026 Canva
 
 Canva is a very popular image and video creation and editing tool among content creators for social networks. Its multiple functionalities make it possible for you to find all kinds of tools that you can use to create impressive posts and edit your photographs.
 
-Canva for PC has a clean and easy-to-use interface, and the first time you open the app, you''ll see a tutorial that will show you everything it has to offer. Its tools allow you to do everything from creating posts for any social network to editing photos, videos, and even creating a whiteboard where you can place all kinds of GIFs and icons. Canva also has an extensive gallery with tons of filters and other elements, although some require money.', 'http://localhost:5050/uploads/b4047c17d85044b29b5f2b45e9ce84b8.webp', '', 'https://dw.uptodown.net/dwn/wUTbxeCeiopxDw4u7v4hQ3PFMW3ZypPHJAD4uO5nIPJ75-xwVa1HhVWc-N-_6t16z4c9K0bU4BC2x-Tdk8TPLF9k2vRx2L1BaD2U_B1e95x28kCqX1RbIVh5qs7LHNZj/sBBsLnZ7a6cxkTpCMA1ywitcCQcACPcEyWwmtVDU09hGrwOmYzHw0X68DPdDPn2SeMgWv0DWgIvgE3LUJrnal2vTSF-5DzO1EgqLz9X9kx_q6ghTQTNNERz3EasencLS/QyoDGH2yQgViejN23-DhEefu5xHVfcgVsFXDzhIGszKXsaHasNN0-n4_7IgYDObx7jxlmJyMwBwlgr1bmx5k6g==/canva-1-122-0.exe', '', 'http://localhost:5050/uploads/ffcf51837ef84559b4edafdf5b412ab4.webp
-http://localhost:5050/uploads/a802133fd1a04acebe9792cddff55283.webp
-http://localhost:5050/uploads/05f33cb01c334154bddd2a5e0135c5d0.webp
-http://localhost:5050/uploads/816051efd61c41c1bc39c46ca30b4f6f.webp
-http://localhost:5050/uploads/3edfe580147d4ebcbcbfea8c7a94c62f.webp', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#3b82f6', 0, 'software', '', '', 'Freemium', '2026-06-17 03:16:42', '', '', '', '', '', '', '', '');
-INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (76, 'CapCut v5.7.0 PC (Pre-Activated)', 'Design & 3D', 4.5, 0, 'Download CapCut Pc v5.7.0 Crack (Premium Unlocked) to access all premium features, no watermark, and advanced editing tools for free.', 'http://localhost:5050/uploads/090738eac6f34747a3475e96f98497d4.webp', '', 'https://vikingfile.com/d/XcXe4OG8YB/CapCut.5.7.0-GameDrive.Org.rar', '', 'http://localhost:5050/uploads/6c9b1447ede548e0a0613e340b035a01.webp
-http://localhost:5050/uploads/4d7d3333686942f082d83f08edc37c6b.webp
-http://localhost:5050/uploads/65e61f93ab63438ead28903462f938fd.webp', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#ffffff', 0, 'software', '', 'v5.7.0', 'Freemium', '2026-06-17 03:18:34', '', '', '', '', '', '', '', '');
+Canva for PC has a clean and easy-to-use interface, and the first time you open the app, you''ll see a tutorial that will show you everything it has to offer. Its tools allow you to do everything from creating posts for any social network to editing photos, videos, and even creating a whiteboard where you can place all kinds of GIFs and icons. Canva also has an extensive gallery with tons of filters and other elements, although some require money.', '/uploads/b4047c17d85044b29b5f2b45e9ce84b8.webp', '', 'https://dw.uptodown.net/dwn/wUTbxeCeiopxDw4u7v4hQ3PFMW3ZypPHJAD4uO5nIPJ75-xwVa1HhVWc-N-_6t16z4c9K0bU4BC2x-Tdk8TPLF9k2vRx2L1BaD2U_B1e95x28kCqX1RbIVh5qs7LHNZj/sBBsLnZ7a6cxkTpCMA1ywitcCQcACPcEyWwmtVDU09hGrwOmYzHw0X68DPdDPn2SeMgWv0DWgIvgE3LUJrnal2vTSF-5DzO1EgqLz9X9kx_q6ghTQTNNERz3EasencLS/QyoDGH2yQgViejN23-DhEefu5xHVfcgVsFXDzhIGszKXsaHasNN0-n4_7IgYDObx7jxlmJyMwBwlgr1bmx5k6g==/canva-1-122-0.exe', '', '/uploads/ffcf51837ef84559b4edafdf5b412ab4.webp
+/uploads/a802133fd1a04acebe9792cddff55283.webp
+/uploads/05f33cb01c334154bddd2a5e0135c5d0.webp
+/uploads/816051efd61c41c1bc39c46ca30b4f6f.webp
+/uploads/3edfe580147d4ebcbcbfea8c7a94c62f.webp', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#3b82f6', 0, 'software', '', '', 'Freemium', '2026-06-17 03:16:42', '', '', '', '', '', '', '', '');
+INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (76, 'CapCut v5.7.0 PC (Pre-Activated)', 'Design & 3D', 4.5, 0, 'Download CapCut Pc v5.7.0 Crack (Premium Unlocked) to access all premium features, no watermark, and advanced editing tools for free.', '/uploads/090738eac6f34747a3475e96f98497d4.webp', '', 'https://vikingfile.com/d/XcXe4OG8YB/CapCut.5.7.0-GameDrive.Org.rar', '', '/uploads/6c9b1447ede548e0a0613e340b035a01.webp
+/uploads/4d7d3333686942f082d83f08edc37c6b.webp
+/uploads/65e61f93ab63438ead28903462f938fd.webp', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#ffffff', 0, 'software', '', 'v5.7.0', 'Freemium', '2026-06-17 03:18:34', '', '', '', '', '', '', '', '');
 INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (77, 'ChatGPT', 'Action', 4.5, 0, 'ChatGPT is the official app of OpenAI''s popular chatbot. With this desktop version, which is completely free to use, you won''t need to open the web browser every time you want to make a query. Instead, you can quickly access it from Windows by simply double-clicking on an executable (or using a keyboard shortcut).
 
 Easy to configure
@@ -1628,11 +1628,11 @@ More features on desktop
 One of ChatGPT''s new features for desktop is that you can share your screen with the app. This unlocks endless possibilities. ChatGPT can analyze your code, take a look at your graphs, or look for similarities in a photo, all in a matter of seconds. You can even control the app using voice commands. If you prefer not to use your PC''s microphone, there is also a keyboard shortcut that opens the client instantly and allows you to make quick queries.
 
 True AI arrives on Windows
-Download ChatGPT for Windows and enjoy the benefits of the most powerful chatbot on the market on your PC. Thanks to this app you can save a lot of time when carrying out a number of everyday actions, including Internet searches, text or code reviews, and much more, without having to go through the web browser.', 'http://localhost:5050/uploads/5e003d7e61804890b53cbfd372575499.jpg', '', 'https://dw.uptodown.net/dwn/wUTbxeCeiopxDw4u7v4hQ3PFMW3ZypPHJAD4uO5nIPL9poBwIhtFBnmBYZBGvTa-gjg71gqPRRpR0BwD50-QBQpJrjOZQnHuhSde3TWGIrpMr9ed_lXzDo1b-8DPy4Dh/pAmlWtLRBJBsRvvkpuTwIhPJnXpL9BpnpUEGIw7Hxr5_G9yXyQYwpBLfXwRf9l8t21YCOunQByAWhxpRbMUWZzcoiY6e7S_V-T4JnEvBJpF97_E5CpFhqhsuVFENHbGx/OW1g9qRncLFjb6Ab0r2uLCMIn-Th-3dXDcP7o_4T7-3dUWAOBZApKfhQrd4amfmjq5PvS8P8R2-ev1Tow2gTRDxEcCyMJbjPcC232TfMs_4=/chatgpt-2026-514-421-0.msixbundle', '', 'http://localhost:5050/uploads/85b31def920049f894a48ea9512497a3.webp
-http://localhost:5050/uploads/6eaddcfdaa514d02b7e75e444266bcaf.webp
-http://localhost:5050/uploads/f32cf6751dd241b7bd4c0bd4205c99c2.webp
-http://localhost:5050/uploads/2246ccd1c9d04c26b2fd14c9d93a56eb.webp', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#f4f4f5', 0, 'software', '', '', '', '2026-06-17 03:19:55', '', '', '', '', '', '', '', '');
-INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (78, 'Embarcadero Dev-C++', 'Action', 4.5, 0, 'Embarcadero Dev-C++ is a new and improved fork (sponsored by Embarcadero) of Bloodshed Dev-C++ and Orwell Dev-C++. It is a full-featured Integrated Development Environment (IDE) and code editor for the C/C++ programming language. It uses Mingw port of GCC (GNU Compiler Collection) as its compiler. Embarcadero Dev-C++ can also be used in combination with Cygwin or any other GCC based compiler. Embarcadero Dev-C++ is built using the latest version of Embarcadero Delphi. Embarcadero Dev-C++ has a low memory footprint because it is a native Windows application and does not use Electron.', 'http://localhost:5050/uploads/b8040c5abb82438b8623d76aa7db2a69.webp', '', 'https://github.com/Embarcadero/Dev-Cpp/releases/download/v6.3/Embarcadero_Dev-Cpp_6.3_TDM-GCC_9.2_Setup.exe', '', '', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#ef4444', 0, 'software', '', '', '', '2026-06-17 03:21:01', '', '', '', '', '', '', '', '');
+Download ChatGPT for Windows and enjoy the benefits of the most powerful chatbot on the market on your PC. Thanks to this app you can save a lot of time when carrying out a number of everyday actions, including Internet searches, text or code reviews, and much more, without having to go through the web browser.', '/uploads/5e003d7e61804890b53cbfd372575499.jpg', '', 'https://dw.uptodown.net/dwn/wUTbxeCeiopxDw4u7v4hQ3PFMW3ZypPHJAD4uO5nIPL9poBwIhtFBnmBYZBGvTa-gjg71gqPRRpR0BwD50-QBQpJrjOZQnHuhSde3TWGIrpMr9ed_lXzDo1b-8DPy4Dh/pAmlWtLRBJBsRvvkpuTwIhPJnXpL9BpnpUEGIw7Hxr5_G9yXyQYwpBLfXwRf9l8t21YCOunQByAWhxpRbMUWZzcoiY6e7S_V-T4JnEvBJpF97_E5CpFhqhsuVFENHbGx/OW1g9qRncLFjb6Ab0r2uLCMIn-Th-3dXDcP7o_4T7-3dUWAOBZApKfhQrd4amfmjq5PvS8P8R2-ev1Tow2gTRDxEcCyMJbjPcC232TfMs_4=/chatgpt-2026-514-421-0.msixbundle', '', '/uploads/85b31def920049f894a48ea9512497a3.webp
+/uploads/6eaddcfdaa514d02b7e75e444266bcaf.webp
+/uploads/f32cf6751dd241b7bd4c0bd4205c99c2.webp
+/uploads/2246ccd1c9d04c26b2fd14c9d93a56eb.webp', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#f4f4f5', 0, 'software', '', '', '', '2026-06-17 03:19:55', '', '', '', '', '', '', '', '');
+INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (78, 'Embarcadero Dev-C++', 'Action', 4.5, 0, 'Embarcadero Dev-C++ is a new and improved fork (sponsored by Embarcadero) of Bloodshed Dev-C++ and Orwell Dev-C++. It is a full-featured Integrated Development Environment (IDE) and code editor for the C/C++ programming language. It uses Mingw port of GCC (GNU Compiler Collection) as its compiler. Embarcadero Dev-C++ can also be used in combination with Cygwin or any other GCC based compiler. Embarcadero Dev-C++ is built using the latest version of Embarcadero Delphi. Embarcadero Dev-C++ has a low memory footprint because it is a native Windows application and does not use Electron.', '/uploads/b8040c5abb82438b8623d76aa7db2a69.webp', '', 'https://github.com/Embarcadero/Dev-Cpp/releases/download/v6.3/Embarcadero_Dev-Cpp_6.3_TDM-GCC_9.2_Setup.exe', '', '', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#ef4444', 0, 'software', '', '', '', '2026-06-17 03:21:01', '', '', '', '', '', '', '', '');
 INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (79, 'Autodesk Fusion 360', 'Design & 3D', 4.5, 0, 'Fusion 360 is one of the best CAD programs on the market for creating and editing 3D parts and components. With Fusion 360, you can create designs with millimetric precision, then print them in 3D or go directly to manufacturing.
 
 Fusion 360 allows you to choose the material you want to use for manufacturing, such as plastic or metal. You can design circuits and interact with all kinds of objects, as in any CAD software. In addition, you can render your designs in a matter of minutes, making it easy to share images of them outside of the program. You can also share 3D models and make quick annotations or drawings to indicate the modifications that need to be made. Fusion 360 is also connected to the cloud, allowing you to save your designs and make sure you don''t lose them.
@@ -1641,16 +1641,16 @@ When creating designs on Fusion 360, you''ll have a large number of parametric o
 
 Fusion 360 supports importing files in .123dx, .3mf, .dxfs, .f3d, .f3z, .fbx, .ige, .iges, .igs, .obj, .ste, .step, and .stp formats. It also supports exporting files in .3mf, .f3d, .f3z, .fbx, .iam, .ipt, .obj, .skp, .smt, .step, .stl, and .stp formats.
 
-In short, if you''re looking for a CAD modeling program that allows you to create, test, and print a 3D design from just one place, don''t hesitate to download Fusion 360.', 'http://localhost:5050/uploads/14eb920191604709ae9c1fcfa86c09e3.webp', '', 'https://dw.uptodown.net/dwn/wUTbxeCeiopxDw4u7v4hQ3PFMW3ZypPHJAD4uO5nIPJYvN1yl4wChG58sWAd0uaRoeu70sbBHsZpRZ4oNBOGqClcIW4jEypQv-O-Z-rTost5EyYd_AGrQ5lU0Ei_34qh/XCYwAZzInPV9syqw0N0aQbWi15iXSPUVHILiKU1GOp5cND7XI-v1i5lzwLEphdX0xfJsByTJpSzJ0MeAmeqN7cC-QghBPALm5iXejmAma-miq-19SlM5_R5Qm2h5YTCS/h4XCsx_JaeP9YVHK0j9Z6BqcvPeCdvI3wo-ms9dcYbFOSwrFX3kE_KrbNzSSSbmNBAI3qzXhUwAk0kX7fUwQLw==/fusion-360-58-2702-1-0.exe', '', 'http://localhost:5050/uploads/b918a56cb12943f6b392dded98e043e3.webp
-http://localhost:5050/uploads/c6938afcd82f4dd9980ad471ff283229.webp
-http://localhost:5050/uploads/f698e6744105415f89ef44d2522b1ee0.webp
-http://localhost:5050/uploads/669ed2a6e32e4200a7987c0e2bbea68e.webp
-http://localhost:5050/uploads/c8d52d628a3d4242a9fc556ccfe48b56.webp', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#f97316', 0, 'software', '', '58.2702.1.0', 'Freemium', '2026-06-17 03:22:54', '', '', '', '', '', '', '', '');
-INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (80, 'iTunes 12139.10003.61011.0', 'Utilities & System', 4.5, 0, '', 'http://localhost:5050/uploads/f4043a3e2997450cb7c85c1395b83b78.jpg', '', 'https://dw.uptodown.net/dwn/wUTbxeCeiopxDw4u7v4hQ3PFMW3ZypPHJAD4uO5nIPJG6YdP2mPewUsLBxWVjz3mUJuLSTR-eGpWH-qBh6uwc7rE0Ti8WIGch1qIaKjNUC8PtvNmhnMAK4kP7ZWYxG_l/A5uqQpxLjGYeWeCEQm58hgginWshDUXmxFIHt5-0K_uIZO6EUsz-nJcxF_8kn_7f_ZSEssgVk6zapPiK9Ys075Hy0hrfQPv10k3_K-wPw-9ZPFRqbcLyKGhan_mWyZYD/uAH440lF2h6xk-bN8ircBj2h9enbjL3nRQc_scGsjVWIhnMuMjmtDygpBNdFideT4bfi3iqjW54G-iDYn_OpStyWjjEyuXBJXJsVVVmS-c1_cyToTqKUzNcIkm8mQh8l/itunes-64-bit-12139-10003-61011-0.appxbundle', '', 'http://localhost:5050/uploads/7cafb954c0ca40d1ac9fcbf12746e5f6.webp
-http://localhost:5050/uploads/19e88d9ffd904bb684227634e154c408.webp
-http://localhost:5050/uploads/573767d4d94349f4ac40d6dca86a3878.webp
-http://localhost:5050/uploads/9994124bec834641ba7e502f300a0073.webp
-http://localhost:5050/uploads/ae7a357ddc5d4e91bb5dc03f079cd17b.webp', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#7c3aed', 0, 'software', '', '12139.10003.61011.0', '', '2026-06-17 03:26:18', '', '', '', '', '', '', '', '');
+In short, if you''re looking for a CAD modeling program that allows you to create, test, and print a 3D design from just one place, don''t hesitate to download Fusion 360.', '/uploads/14eb920191604709ae9c1fcfa86c09e3.webp', '', 'https://dw.uptodown.net/dwn/wUTbxeCeiopxDw4u7v4hQ3PFMW3ZypPHJAD4uO5nIPJYvN1yl4wChG58sWAd0uaRoeu70sbBHsZpRZ4oNBOGqClcIW4jEypQv-O-Z-rTost5EyYd_AGrQ5lU0Ei_34qh/XCYwAZzInPV9syqw0N0aQbWi15iXSPUVHILiKU1GOp5cND7XI-v1i5lzwLEphdX0xfJsByTJpSzJ0MeAmeqN7cC-QghBPALm5iXejmAma-miq-19SlM5_R5Qm2h5YTCS/h4XCsx_JaeP9YVHK0j9Z6BqcvPeCdvI3wo-ms9dcYbFOSwrFX3kE_KrbNzSSSbmNBAI3qzXhUwAk0kX7fUwQLw==/fusion-360-58-2702-1-0.exe', '', '/uploads/b918a56cb12943f6b392dded98e043e3.webp
+/uploads/c6938afcd82f4dd9980ad471ff283229.webp
+/uploads/f698e6744105415f89ef44d2522b1ee0.webp
+/uploads/669ed2a6e32e4200a7987c0e2bbea68e.webp
+/uploads/c8d52d628a3d4242a9fc556ccfe48b56.webp', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#f97316', 0, 'software', '', '58.2702.1.0', 'Freemium', '2026-06-17 03:22:54', '', '', '', '', '', '', '', '');
+INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (80, 'iTunes 12139.10003.61011.0', 'Utilities & System', 4.5, 0, '', '/uploads/f4043a3e2997450cb7c85c1395b83b78.jpg', '', 'https://dw.uptodown.net/dwn/wUTbxeCeiopxDw4u7v4hQ3PFMW3ZypPHJAD4uO5nIPJG6YdP2mPewUsLBxWVjz3mUJuLSTR-eGpWH-qBh6uwc7rE0Ti8WIGch1qIaKjNUC8PtvNmhnMAK4kP7ZWYxG_l/A5uqQpxLjGYeWeCEQm58hgginWshDUXmxFIHt5-0K_uIZO6EUsz-nJcxF_8kn_7f_ZSEssgVk6zapPiK9Ys075Hy0hrfQPv10k3_K-wPw-9ZPFRqbcLyKGhan_mWyZYD/uAH440lF2h6xk-bN8ircBj2h9enbjL3nRQc_scGsjVWIhnMuMjmtDygpBNdFideT4bfi3iqjW54G-iDYn_OpStyWjjEyuXBJXJsVVVmS-c1_cyToTqKUzNcIkm8mQh8l/itunes-64-bit-12139-10003-61011-0.appxbundle', '', '/uploads/7cafb954c0ca40d1ac9fcbf12746e5f6.webp
+/uploads/19e88d9ffd904bb684227634e154c408.webp
+/uploads/573767d4d94349f4ac40d6dca86a3878.webp
+/uploads/9994124bec834641ba7e502f300a0073.webp
+/uploads/ae7a357ddc5d4e91bb5dc03f079cd17b.webp', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#7c3aed', 0, 'software', '', '12139.10003.61011.0', '', '2026-06-17 03:26:18', '', '', '', '', '', '', '', '');
 INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (81, 'Java JDK 26', 'Action', 4.5, 0, 'The full form of JDK is Java Development Kit. It is a software development environment used for developing Java applications and applets. The JDK is a core component of the Java platform and includes the Java Runtime Environment (JRE), an interpreter/loader (Java), a compiler (javac), an archiver (jar), a documentation generator (Javadoc), and other tools needed for Java development.
 
 Key Components of JDK
@@ -1665,7 +1665,7 @@ Java Interpreter/Loader (java): Loads and interprets the compiled Java bytecode.
 
 Java Archiver (jar): Packages related class libraries into a single JAR file.
 
-Documentation Generator (Javadoc): Automatically generates documentation from source', 'http://localhost:5050/uploads/d80bf0a379a7456e96b31fdd554a7ac4.jpg', '', 'https://download.oracle.com/java/26/latest/jdk-26_windows-x64_bin.exe', '', '', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#f4f4f5', 0, 'software', '', '', '', '2026-06-17 03:29:15', '', '', '', '', '', '', '', '');
+Documentation Generator (Javadoc): Automatically generates documentation from source', '/uploads/d80bf0a379a7456e96b31fdd554a7ac4.jpg', '', 'https://download.oracle.com/java/26/latest/jdk-26_windows-x64_bin.exe', '', '', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#f4f4f5', 0, 'software', '', '', '', '2026-06-17 03:29:15', '', '', '', '', '', '', '', '');
 INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (82, 'WhatsApp Desktop', 'Action', 4.5, 0, 'WhatsApp Desktop is the official WhatsApp client for Windows that lets you use this popular instant messaging tool from the comfort of your desktop. Thanks to this app, you can read and type messages comfortably from your PC without having to look at your Android device or your iPhone every time you receive a new notification. At your disposal are exactly the same features and tools as in the mobile apps.
 
 A very simple way to log in
@@ -1683,13 +1683,13 @@ Privacy management
 Many WhatsApp Desktop users are unaware of the numerous privacy-related options. From the Settings menu, you can choose who you want to see your last seen time or if you want other users to know when you are online. You can also decide who can see your profile pictures and statuses and even lock your user session by setting a special password.
 
 Sending and receiving WhatsApp messages from your PC
-Download WhatsApp Desktop if you''re a regular WhatsApp user. Thanks to this app, you can easily keep talking to your friends, even sitting in front of your PC without your smartphone. Here, you''ll find all the features you need to chat normally on WhatsApp.', 'http://localhost:5050/uploads/5cbffc4159b241fc9dd731aa99a51438.webp', '', 'https://dw.uptodown.net/dwn/wUTbxeCeiopxDw4u7v4hQ3PFMW3ZypPHJAD4uO5nIPIAMIdvv8-QMJUWVG1T9XpB_AXKNQUeX5KPnLOSf-ShvBBAaF08N9k9B6cqrrMRY4h6FK8uq5UU6Z3rLuiplQI2/I0P3p-mRxsiUu8-JVVlyrofQEXAsklSJ9iavQmARhd5WkkoRY1rQS8CaQ5etwMNXq9pDJRHmxSh7l_tyfIM1LPdAbNST-j1L5Ic1Oi-NwEhMmb05_hiyfnW1aciZgGjq/H5_h-UuHfRnt6Af7-X2KJL22ee-xg0_-re6hGKPB6w07nRLNlRRueOvPKkvIG6Y8Jogt7xBhoZ0iKVgw95319HZIDrXHOa5n_67TInOpkhKCecaUk63pPHfMpPvLJXiU/whatsapp-desktop-2-2620-102-0.msixbundle', '', 'http://localhost:5050/uploads/fdeedaaa164e485bb82bb9fac796e705.webp
-http://localhost:5050/uploads/6fda3ed44ffb4e92950b6782f7fe0581.webp
-http://localhost:5050/uploads/45d02c302ba44736b4ac55272f0659df.webp
-http://localhost:5050/uploads/a01b59d2369546f3b720a610e9aeccc5.webp
-http://localhost:5050/uploads/f389974a842e4e668dfd6949ac56d91c.webp
-http://localhost:5050/uploads/3b01651a341c4bc0a19d54137449f0b7.webp
-http://localhost:5050/uploads/a8fc2680367d4c428150ff4f7c931cd7.webp', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#16a34a', 0, 'software', '', '', '', '2026-06-17 03:31:34', '', '', '', '', '', '', '', '');
+Download WhatsApp Desktop if you''re a regular WhatsApp user. Thanks to this app, you can easily keep talking to your friends, even sitting in front of your PC without your smartphone. Here, you''ll find all the features you need to chat normally on WhatsApp.', '/uploads/5cbffc4159b241fc9dd731aa99a51438.webp', '', 'https://dw.uptodown.net/dwn/wUTbxeCeiopxDw4u7v4hQ3PFMW3ZypPHJAD4uO5nIPIAMIdvv8-QMJUWVG1T9XpB_AXKNQUeX5KPnLOSf-ShvBBAaF08N9k9B6cqrrMRY4h6FK8uq5UU6Z3rLuiplQI2/I0P3p-mRxsiUu8-JVVlyrofQEXAsklSJ9iavQmARhd5WkkoRY1rQS8CaQ5etwMNXq9pDJRHmxSh7l_tyfIM1LPdAbNST-j1L5Ic1Oi-NwEhMmb05_hiyfnW1aciZgGjq/H5_h-UuHfRnt6Af7-X2KJL22ee-xg0_-re6hGKPB6w07nRLNlRRueOvPKkvIG6Y8Jogt7xBhoZ0iKVgw95319HZIDrXHOa5n_67TInOpkhKCecaUk63pPHfMpPvLJXiU/whatsapp-desktop-2-2620-102-0.msixbundle', '', '/uploads/fdeedaaa164e485bb82bb9fac796e705.webp
+/uploads/6fda3ed44ffb4e92950b6782f7fe0581.webp
+/uploads/45d02c302ba44736b4ac55272f0659df.webp
+/uploads/a01b59d2369546f3b720a610e9aeccc5.webp
+/uploads/f389974a842e4e668dfd6949ac56d91c.webp
+/uploads/3b01651a341c4bc0a19d54137449f0b7.webp
+/uploads/a8fc2680367d4c428150ff4f7c931cd7.webp', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#16a34a', 0, 'software', '', '', '', '2026-06-17 03:31:34', '', '', '', '', '', '', '', '');
 INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (83, 'MySQL Workbench', 'Productivity & Office', 4.5, 0, 'formation about MySQL Workbench 8.0.44
 Basic information
 
@@ -1712,9 +1712,9 @@ Free
 License
 Owner
 
-Copyright © 2026 Oracle Corporation', 'http://localhost:5050/uploads/d87375c7edd0494bb1e9f6533f6bbacc.png', '', 'https://dw.uptodown.net/dwn/wUTbxeCeiopxDw4u7v4hQ3PFMW3ZypPHJAD4uO5nIPLQUTiA6MXZuwWJsKE-RwChKcd1dGnEXCsLkecz23R_-0H-AHRtUwHld3XrqFmTuxmcwlDWJEi6zJlor-Pea9RX/Gs50wnCM0dmbqT988f_rp5ymP2_pIgk3eexPF6vxRmCyIIupmK-DLe2xkPbH77oxE4PrGV4E0Rf1ABsezYX1DCEvPLqq97Vbr7OJU3PCKffveIkQE_N69BFeRUoqVsWE/qiJQtPOiqEKzxuYC-CFNYsxfwvIhWa1YjYLCF5LQg4rxH3_OFiydybT1YJ8Cg0Vyjr9eN0xN2bYW13x1JlAnzF4lOzQqJE8C_ovQyrtP8Qo=/mysql-workbench-8-0-44.msi', '', 'http://localhost:5050/uploads/2403de98e7c549f89afef00a11bde48e.webp
-http://localhost:5050/uploads/91f199c24f61466db6768d38f5cc9c6b.png
-http://localhost:5050/uploads/015f6cb729b94121915f35e6b6f100f8.png', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#f4f4f5', 0, 'software', '', '', '', '2026-06-17 03:33:02', '', '', '', '', '', '', '', '');
+Copyright © 2026 Oracle Corporation', '/uploads/d87375c7edd0494bb1e9f6533f6bbacc.png', '', 'https://dw.uptodown.net/dwn/wUTbxeCeiopxDw4u7v4hQ3PFMW3ZypPHJAD4uO5nIPLQUTiA6MXZuwWJsKE-RwChKcd1dGnEXCsLkecz23R_-0H-AHRtUwHld3XrqFmTuxmcwlDWJEi6zJlor-Pea9RX/Gs50wnCM0dmbqT988f_rp5ymP2_pIgk3eexPF6vxRmCyIIupmK-DLe2xkPbH77oxE4PrGV4E0Rf1ABsezYX1DCEvPLqq97Vbr7OJU3PCKffveIkQE_N69BFeRUoqVsWE/qiJQtPOiqEKzxuYC-CFNYsxfwvIhWa1YjYLCF5LQg4rxH3_OFiydybT1YJ8Cg0Vyjr9eN0xN2bYW13x1JlAnzF4lOzQqJE8C_ovQyrtP8Qo=/mysql-workbench-8-0-44.msi', '', '/uploads/2403de98e7c549f89afef00a11bde48e.webp
+/uploads/91f199c24f61466db6768d38f5cc9c6b.png
+/uploads/015f6cb729b94121915f35e6b6f100f8.png', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#f4f4f5', 0, 'software', '', '', '', '2026-06-17 03:33:02', '', '', '', '', '', '', '', '');
 INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (84, 'Apache NetBeans', 'Productivity & Office', 4.5, 0, 'Apache NetBeans is a free and open-source development environment (IDE) that allows you to create professional apps with Java, although it also offers support for other languages such as PHP, JavaScript, HTML5, C, C++ and more. Apache NetBeans allows you to write, debug, compile and run your apps from a single platform.
 
 Advanced Java support and integrated tools
@@ -1730,12 +1730,12 @@ Apache NetBeans also allows you to manage your code in a secure and collaborativ
 Extensions, templates and customization
 Another noteworthy advantage of Apache NetBeans is its plugin system, which allows you to adapt the tool to your specific needs. You can install add-ons for additional languages, testing tools, static code analyzers, databases or integrations with other platforms. There is also a wide variety of templates to start projects quickly. In addition to this, you can customize keyboard shortcuts, color themes and environment settings to make your workflow as convenient as possible.
 
-Download Apache NetBeans if you''re looking for a powerful and versatile Java development environment, one which is also robustly supported by the Apache Software Foundation.', 'http://localhost:5050/uploads/4a57e46c4634484a8c6f34c391223f36.png', '', 'https://dw.uptodown.net/dwn/xFuU8dawtXJBfI8LbaFsIXbWOVBs66Z_PSiErjIjenMYlzAQk71r48AqcayH_mVC0O47bn0hAGWZHRkmvAyGrhU8FxevooER0mlhDW3PJt2oWleGcCkV_7yf3rSF2dYR/oy5_1zX9ah5GAtBk1oLTDq-QK-zi3ykbh-tE4JUoI-LvnRV_WY6bZQrjCaiKilcdhZpeJJUcH7dPPdX-jUd-7Jq41JnBlEfw68nX2f016FJb7_sHTvWCyun0vu1PGjsy/FpFoZWObJzQAnuAOYQTf4Gwr3NbIpdij5i0XtW1bmkb_D8V9PVSnm33mXyw5HrEdNrxGm-owicV4XaOzA0lKTA==/apache-netbeans-30.exe', '', 'http://localhost:5050/uploads/07ffabd9b3d34fca99bce5b8b0d72e6e.webp
-http://localhost:5050/uploads/550f485ac5ff427e9c320c59ddef7f60.webp
-http://localhost:5050/uploads/f8e26a0001a142dfb0faf89f47291c97.webp
-http://localhost:5050/uploads/9cf0552d4a5845329f7517d954f965f1.webp
-http://localhost:5050/uploads/0f60a93d55b54e90aa2aa342115316ce.webp
-http://localhost:5050/uploads/4541c1e46e6c45d581748b5bcea25820.webp', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#18181b', 0, 'software', '', '', '', '2026-06-17 03:34:37', '', '', '', '', '', '', '', '');
+Download Apache NetBeans if you''re looking for a powerful and versatile Java development environment, one which is also robustly supported by the Apache Software Foundation.', '/uploads/4a57e46c4634484a8c6f34c391223f36.png', '', 'https://dw.uptodown.net/dwn/xFuU8dawtXJBfI8LbaFsIXbWOVBs66Z_PSiErjIjenMYlzAQk71r48AqcayH_mVC0O47bn0hAGWZHRkmvAyGrhU8FxevooER0mlhDW3PJt2oWleGcCkV_7yf3rSF2dYR/oy5_1zX9ah5GAtBk1oLTDq-QK-zi3ykbh-tE4JUoI-LvnRV_WY6bZQrjCaiKilcdhZpeJJUcH7dPPdX-jUd-7Jq41JnBlEfw68nX2f016FJb7_sHTvWCyun0vu1PGjsy/FpFoZWObJzQAnuAOYQTf4Gwr3NbIpdij5i0XtW1bmkb_D8V9PVSnm33mXyw5HrEdNrxGm-owicV4XaOzA0lKTA==/apache-netbeans-30.exe', '', '/uploads/07ffabd9b3d34fca99bce5b8b0d72e6e.webp
+/uploads/550f485ac5ff427e9c320c59ddef7f60.webp
+/uploads/f8e26a0001a142dfb0faf89f47291c97.webp
+/uploads/9cf0552d4a5845329f7517d954f965f1.webp
+/uploads/0f60a93d55b54e90aa2aa342115316ce.webp
+/uploads/4541c1e46e6c45d581748b5bcea25820.webp', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#18181b', 0, 'software', '', '', '', '2026-06-17 03:34:37', '', '', '', '', '', '', '', '');
 INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (85, 'Telegram Desktop', 'Multimedia & Audio', 4.5, 0, 'Telegram Desktop is the official Telegram app for Windows operating systems that will allow you to use this popular instant messaging tool from your PC''s desktop. In order to use it, however, you will need to have a registered user account, a process that can be completed easily and in just a few seconds using your phone number.
 
 The first time you launch Telegram Desktop, you will have to wait a few seconds for all your conversations and groups to be synchronized. Once this process is finished, you can continue with any conversation you have started in the mobile app. Similarly, you can access all the files, images, and voice memos you shared using the Android or iOS app. Many users, in fact, use Telegram to conveniently send all kinds of files between their desktop computer and their mobile device.
@@ -1747,10 +1747,10 @@ Apart from all its features, Telegram Desktop stands out for the simplicity and 
 
 Telegram Desktop is a must-have program for regular Telegram app users. The client is also very light and consumes very few resources, unlike other similar instant messaging apps, which are much more cumbersome. The only thing you need to be careful with if you suddenly notice that you are running out of space on the hard disk is the Telegram downloads folder, as it is possible to fill it up very quickly without hardly noticing it.
 
-Information about Telegram Desktop 6.9.3', 'http://localhost:5050/uploads/cf3b8060c18d453ab642b71fd6432b9f.png', '', 'https://dw.uptodown.net/dwn/wUTbxeCeiopxDw4u7v4hQ3PFMW3ZypPHJAD4uO5nIPJfPWJmqiEe3PFzcAJ6_XnIkhw0Nronm05JpuIPzn1VM-Irrji6ghtCAJ1QY8qGadUoYcQjw8isYfNYVdpGemSx/XL70E6bAfaVM6G1MZTDrZZKni2ixY3-74qb582XGVHVzZEzvV-EpZ5Ew2raJo07sb9VH7jsBI2aTQKRAi1HWhd7zpdXIe4Lke0VV-oQOKtazgTDDGDXPi-V5TSobeYSg/L6vAJ5kCslOlpce-eUgzas25q6FUz_wp4Y79AGCWtngTv9PBU-8_9xsGgSRph9rli5rP3z7ziI1nCu2lUd4pPOJIt8DAt4Dlpazb173HURQ=/telegram-desktop-6-9-3.exe', '', 'http://localhost:5050/uploads/8b01429329484c74bddec059900346c5.webp
-http://localhost:5050/uploads/64fb96169ec443a593399cf5f804120c.webp
-http://localhost:5050/uploads/2664f03a1b90470da7cd401b00f9715f.webp
-http://localhost:5050/uploads/becd0c624a384ea882d25b82dc5d2006.webp', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#3b82f6', 0, 'software', '', '', '', '2026-06-17 03:36:18', '', '', '', '', '', '', '', '');
+Information about Telegram Desktop 6.9.3', '/uploads/cf3b8060c18d453ab642b71fd6432b9f.png', '', 'https://dw.uptodown.net/dwn/wUTbxeCeiopxDw4u7v4hQ3PFMW3ZypPHJAD4uO5nIPJfPWJmqiEe3PFzcAJ6_XnIkhw0Nronm05JpuIPzn1VM-Irrji6ghtCAJ1QY8qGadUoYcQjw8isYfNYVdpGemSx/XL70E6bAfaVM6G1MZTDrZZKni2ixY3-74qb582XGVHVzZEzvV-EpZ5Ew2raJo07sb9VH7jsBI2aTQKRAi1HWhd7zpdXIe4Lke0VV-oQOKtazgTDDGDXPi-V5TSobeYSg/L6vAJ5kCslOlpce-eUgzas25q6FUz_wp4Y79AGCWtngTv9PBU-8_9xsGgSRph9rli5rP3z7ziI1nCu2lUd4pPOJIt8DAt4Dlpazb173HURQ=/telegram-desktop-6-9-3.exe', '', '/uploads/8b01429329484c74bddec059900346c5.webp
+/uploads/64fb96169ec443a593399cf5f804120c.webp
+/uploads/2664f03a1b90470da7cd401b00f9715f.webp
+/uploads/becd0c624a384ea882d25b82dc5d2006.webp', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#3b82f6', 0, 'software', '', '', '', '2026-06-17 03:36:18', '', '', '', '', '', '', '', '');
 INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (86, 'TikTok 1.0.5.0', 'Multimedia & Audio', 4.5, 0, 'TikTok is the Windows adaptation of the mobile app for the best short, spontaneous and genuine videos. In this app you can find interesting content about anything you like: from sports, movies, music, cat videos and much, much more.
 
 To be able to use TikTok effectively, you need to create your own user account. Once inside TikTok you can start to enjoy some amazing, very creative and interesting content, although you may find some content that you are not interested in. You can drag the mouse up or down to jump to the next video. If some content does not interest you or you think it does not fit your tastes, you can right-click on it and select the "I am not interested in this type of content" drop-down menu. In this way, the TikTok algorithm learns about your tastes and shows you what it considers most interesting for you.
@@ -1758,12 +1758,12 @@ To be able to use TikTok effectively, you need to create your own user account. 
 
 If you want to be a TikTok content creator you just have to enter the video recording section where you can start creating content thanks to all the tools offered by the application.
 
-If you are a fan of TikTok and want to enjoy this app from your Windows device, download this program.', 'http://localhost:5050/uploads/9054d1c5360943699692efe0425b7ebd.webp', '', 'https://dw.uptodown.net/dwn/wUTbxeCeiopxDw4u7v4hQ3PFMW3ZypPHJAD4uO5nIPL9Z_T_2tikC7KhkIDlOH_UbWzXlu9epHKs_AHYUht3d3zS_CTE4hP50mSCLoQcvJf588C8xZmITF60mIclHW6Q/PUzpn233NRWfPn69reHOYm1S7ZF-1bftNMAw2DQdni8OanaWRfF3Sr86OFihCZmSgyf_i7gpsk0_E6XNDyZ6dnsjFRUbLdvyJq_Lp64haNn4DkDF6oX37_VOf7uTj8RC/vsjhakFFU-QBgO1-Fz3Xko8v98lT6AKvM70tVBqM2BXsWKphwp1x2s4i9MQelj48K6KKABXuMWC9-kSirhZqKg==/tiktok-1-0-5-0.msixbundle', '', 'http://localhost:5050/uploads/ff693ab344694858a683d25691ecb6ac.webp
-http://localhost:5050/uploads/b1747635049a443d8ef9efd40edec9d8.webp
-http://localhost:5050/uploads/f98e79604bc548819b894fe38b5837c2.webp
-http://localhost:5050/uploads/3ae508952cf24e61b86a1f9d0e3ec56f.webp
-http://localhost:5050/uploads/32640f6bdbac457d9e00ea3550ff95e4.webp
-http://localhost:5050/uploads/a03e835cb2ee4a729c2c5be70e5cfb55.webp', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#f4f4f5', 0, 'software', '', '', '', '2026-06-17 03:37:52', '', '', '', '', '', '', '', '');
+If you are a fan of TikTok and want to enjoy this app from your Windows device, download this program.', '/uploads/9054d1c5360943699692efe0425b7ebd.webp', '', 'https://dw.uptodown.net/dwn/wUTbxeCeiopxDw4u7v4hQ3PFMW3ZypPHJAD4uO5nIPL9Z_T_2tikC7KhkIDlOH_UbWzXlu9epHKs_AHYUht3d3zS_CTE4hP50mSCLoQcvJf588C8xZmITF60mIclHW6Q/PUzpn233NRWfPn69reHOYm1S7ZF-1bftNMAw2DQdni8OanaWRfF3Sr86OFihCZmSgyf_i7gpsk0_E6XNDyZ6dnsjFRUbLdvyJq_Lp64haNn4DkDF6oX37_VOf7uTj8RC/vsjhakFFU-QBgO1-Fz3Xko8v98lT6AKvM70tVBqM2BXsWKphwp1x2s4i9MQelj48K6KKABXuMWC9-kSirhZqKg==/tiktok-1-0-5-0.msixbundle', '', '/uploads/ff693ab344694858a683d25691ecb6ac.webp
+/uploads/b1747635049a443d8ef9efd40edec9d8.webp
+/uploads/f98e79604bc548819b894fe38b5837c2.webp
+/uploads/3ae508952cf24e61b86a1f9d0e3ec56f.webp
+/uploads/32640f6bdbac457d9e00ea3550ff95e4.webp
+/uploads/a03e835cb2ee4a729c2c5be70e5cfb55.webp', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#f4f4f5', 0, 'software', '', '', '', '2026-06-17 03:37:52', '', '', '', '', '', '', '', '');
 INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (87, 'uTorrent', 'Action', 4.5, 0, 'uTorrent, also known as µTorrent, is a popular torrent downloader. Launched in 2005, uTorrent stands out for its small size and low resource consumption. Thanks to this BitTorrent client you can download files in .torrent or magnet format. These two formats are the most common in P2P clients.
 
 Customize the settings for each torrent
@@ -1784,10 +1784,10 @@ You can also see information related to the tracker for each torrent. A tracker 
 Automatically download content
 uTorrent also allows you to add torrent file searches directly into the program. Thanks to this, you can search for content from platforms that you have previously added. You can also synchronize RSS feeds so that content is added automatically. To protect you from malicious files, uTorrent comes equipped with a malware detection system.
 
-Download uTorrent to enjoy one of the best programs for downloading torrents.', 'http://localhost:5050/uploads/2c1f1bfc32a04e4ebf8ff3435227e5ea.png', '', 'https://dw.uptodown.net/dwn/wUTbxeCeiopxDw4u7v4hQ3PFMW3ZypPHJAD4uO5nIPLumPGvuOuQKCGJxWNslUqUveZ0N_9kQHhNvJyR5R1R8mDSSkCdZ2nW4E97j1XMHxthXmfbg3I-9nJCP0I5z8CL/xOSwYkzSEyWeynJQ2jsk1711iIJFLnkChhSpFMJGW15o2wxk8L0WlkD2dY_CIt2zgGBfqM99w693cjwHl47iDOzO3exJMASsy7OWSDCJDXU-toE9ywwBDShNF2GT6oOF/ZFEipsMphnUlt1YqPmKmEbK4xy3hpFsBlEfswi5TfsovBNG-tHjFz7hVZa-Wr8O-yP3HZUYfzT-vIsI4L6YfUA==/utorrent-3-6-0-47062.exe', '', 'http://localhost:5050/uploads/d290ecc67ca14af1a2bf38e07edfc575.webp
-http://localhost:5050/uploads/65b1e1c1945a4a3cb44242aac331e234.webp
-http://localhost:5050/uploads/0e0634332ed0416f8583ac75837a2c50.webp
-http://localhost:5050/uploads/82516eabd897466b99f5e33b26027cef.webp', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#16a34a', 0, 'software', '', '', '', '2026-06-17 03:39:24', '', '', '', '', '', '', '', '');
+Download uTorrent to enjoy one of the best programs for downloading torrents.', '/uploads/2c1f1bfc32a04e4ebf8ff3435227e5ea.png', '', 'https://dw.uptodown.net/dwn/wUTbxeCeiopxDw4u7v4hQ3PFMW3ZypPHJAD4uO5nIPLumPGvuOuQKCGJxWNslUqUveZ0N_9kQHhNvJyR5R1R8mDSSkCdZ2nW4E97j1XMHxthXmfbg3I-9nJCP0I5z8CL/xOSwYkzSEyWeynJQ2jsk1711iIJFLnkChhSpFMJGW15o2wxk8L0WlkD2dY_CIt2zgGBfqM99w693cjwHl47iDOzO3exJMASsy7OWSDCJDXU-toE9ywwBDShNF2GT6oOF/ZFEipsMphnUlt1YqPmKmEbK4xy3hpFsBlEfswi5TfsovBNG-tHjFz7hVZa-Wr8O-yP3HZUYfzT-vIsI4L6YfUA==/utorrent-3-6-0-47062.exe', '', '/uploads/d290ecc67ca14af1a2bf38e07edfc575.webp
+/uploads/65b1e1c1945a4a3cb44242aac331e234.webp
+/uploads/0e0634332ed0416f8583ac75837a2c50.webp
+/uploads/82516eabd897466b99f5e33b26027cef.webp', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#16a34a', 0, 'software', '', '', '', '2026-06-17 03:39:24', '', '', '', '', '', '', '', '');
 INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (88, 'VirtualDJ', 'Multimedia & Audio', 4.5, 2, 'VirtualDJ is one of the most popular audio and video mixing programs in the world, especially among professional DJs, voice artists, entertainers, and hobbyists of all levels. The tool is highly compatible with hardware drivers, has an advanced audio engine and a wealth of intelligent features that make it a very comprehensive platform for both live sets and studio productions.
 
 All-in-one DJ software
@@ -1801,10 +1801,10 @@ One of VirtualDJ''s most revolutionary features is Stem Separation, which allows
 Plug in all your hardware
 VirtualDJ is compatible with virtually any music-making accessory, as you can connect more than three hundred DJ controllers from leading brands like Pioneer, Numark, Hercules, Reloop, Rane, or Denon, among others. As a result, you can customize the assignment of functions and the backlighting of the buttons. It also includes advanced HID support and the possibility of DVS driver integration if you are working with timecode vinyl.
 
-If you are looking for a good mixing deck to make your professional or amateur DJ sets, download VirtualDJ for free.', 'http://localhost:5050/uploads/651c6a2215c04850a9be241a1d7ec762.jpg', '', 'https://dw.uptodown.net/dwn/wUTbxeCeiopxDw4u7v4hQ3PFMW3ZypPHJAD4uO5nIPJP53lIWZoQ9KkAN4U0Sz8wB3c7bpf6JSARPKJU4vt0ThvkB5OTtoIiCpqXYE5ZhJjmIsipKLRGJBzawfLpJXOd/rCteSW_Rgpo4ALZuRMYGqPKKEkQjexKMNvIMW_jV47rDfLP9a02P7BzxA21G9bQ6vrMq9xQTM-44RUxkx0FTD4s1Pz3GoZrEwbcdPUfvdcBuTr488SjUOM0IaE-UyL51/0yRx0-uvVh2XuTxYJt33gue6DX95ksxnBV73AChTYfYOLvuT5bavyT3qRgoylEf6SZHwhW2fZPvvMzefmSOStw==/virtualdj-2026-build-9295.msi', '', 'http://localhost:5050/uploads/99bb87d693874d2ea130c0a5d320ec23.webp
-http://localhost:5050/uploads/f078e41ee80c496996a4eddf48fd4351.webp
-http://localhost:5050/uploads/34ab1d78aecd4b7abbcc984300ab1a50.webp
-http://localhost:5050/uploads/c4812cbdd8544b4c9bea95d9a70e4005.webp', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#09090b', 0, 'software', '', '', '', '2026-06-17 03:40:55', '', '', '', '', '', '', '', '');
+If you are looking for a good mixing deck to make your professional or amateur DJ sets, download VirtualDJ for free.', '/uploads/651c6a2215c04850a9be241a1d7ec762.jpg', '', 'https://dw.uptodown.net/dwn/wUTbxeCeiopxDw4u7v4hQ3PFMW3ZypPHJAD4uO5nIPJP53lIWZoQ9KkAN4U0Sz8wB3c7bpf6JSARPKJU4vt0ThvkB5OTtoIiCpqXYE5ZhJjmIsipKLRGJBzawfLpJXOd/rCteSW_Rgpo4ALZuRMYGqPKKEkQjexKMNvIMW_jV47rDfLP9a02P7BzxA21G9bQ6vrMq9xQTM-44RUxkx0FTD4s1Pz3GoZrEwbcdPUfvdcBuTr488SjUOM0IaE-UyL51/0yRx0-uvVh2XuTxYJt33gue6DX95ksxnBV73AChTYfYOLvuT5bavyT3qRgoylEf6SZHwhW2fZPvvMzefmSOStw==/virtualdj-2026-build-9295.msi', '', '/uploads/99bb87d693874d2ea130c0a5d320ec23.webp
+/uploads/f078e41ee80c496996a4eddf48fd4351.webp
+/uploads/34ab1d78aecd4b7abbcc984300ab1a50.webp
+/uploads/c4812cbdd8544b4c9bea95d9a70e4005.webp', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#09090b', 0, 'software', '', '', '', '2026-06-17 03:40:55', '', '', '', '', '', '', '', '');
 INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (89, 'Visual Studio Code', 'Productivity & Office', 4.5, 0, 'Developer
 Microsoft
 
@@ -1834,13 +1834,13 @@ Required permissions
 Not applicable
 
 See security and antivirus report
-Download info', 'http://localhost:5050/uploads/5fce4d79cb7943b89b335e9c460a8843.jpg', '', 'https://dw.uptodown.net/dwn/wUTbxeCeiopxDw4u7v4hQ3PFMW3ZypPHJAD4uO5nIPJek84oLtwwjijVYuGTH1y40KnZrom3CHGZ-NSrobPSJzNO-j3_Hwt4fahtXDbNa8DX6ZsVH15F3HbpUtNmvr8B/t4TeX9xwgYEvyUpJ85gWKs3QJrkRjPxg-jDMSrKNc55KkCu2n5Q9q4LkeFs6-ssWQURfsCZ6sN7hlvsCDT-iUIjqCfc2eiOqgAWOTFtuhTvjPx77xExACw7qrcKpFanb/vp5wIABNrTNYZ25Bvr7YOf9AtfhucVcAXVo_7WWzMY9ZaU5f2NWCenVn2dpKy2vDZmieMR9nI4z4lIgfyikTsYmOhVicPUIegi99wlMhwW0=/visual-studio-code-1-124-2.exe', '', 'http://localhost:5050/uploads/435fc77f0dc14a67b6fbb02a2e91e8f1.webp
-http://localhost:5050/uploads/d1c382bcde6d45808fde5493bd0bf64d.webp
-http://localhost:5050/uploads/05abff31a27d4ba9b224688599191e4e.webp
-http://localhost:5050/uploads/4724eec5a1e94bd5b6d101160d08e90b.webp', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#3b82f6', 0, 'software', '', '', 'Freemium', '2026-06-17 03:46:22', '', '', '', '', '', '', '', '');
-INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (90, 'Detroit: Become Human Free', 'Action, Adventure', 4.5, 0, 'Detroit: Become Human, the award-winning video game production from Quantic Dream, is finally available on Steam Featuring world-renowned actors including Jesse Williams (Grey’s Anatomy), Clancy Brown (Carnivale), Lance Henriksen (Aliens), Bryan Dechart (True Blood) and Valorie Curry (Twilight). Detroit 2038. Technology has evolved to a point where human like androids are everywhere. They speak, move and behave like human beings, but they are only machines serving humans.', 'http://localhost:5050/uploads/b1ec293716c64d0c9a24cf2c88a44302.jpg', '', 'https://ts.bzzhr.to/d/jm9rg8ae8koj?v=7FJQoEFTIQt81F8_uKbjcjmgWr5N__C9-XmrEdWT3Y6TyReqp9KJA_rz6_p7Xb1qbAxq6iogPBINAGVQ4WRqExNN-bai9rF5XVOnox7A0coQSFgxJcLzLOXAdOX0x1FlTswUOfqwqBfTSaeiMvnGsOTeK4QjPdkItfH5C2eGm-Y6vW_pNAg7Pal7945aPsffCG2iw5hfFhxCM0091C7n', 'https://youtu.be/8a-EObAhYrg?si=wkkV4F6F7zdqHSKo', 'http://localhost:5050/uploads/60283b849b1b43bb8f39c3a85aa1ec97.jpg
-http://localhost:5050/uploads/eba3d3692aa04aacb57e287b29faddb4.jpg
-http://localhost:5050/uploads/22435f1ab73d4babb0a9efd433011be1.webp', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#0ea5e9', 0, 'game', '', '', '', '2026-06-17 23:07:26', 'GAME INFO
+Download info', '/uploads/5fce4d79cb7943b89b335e9c460a8843.jpg', '', 'https://dw.uptodown.net/dwn/wUTbxeCeiopxDw4u7v4hQ3PFMW3ZypPHJAD4uO5nIPJek84oLtwwjijVYuGTH1y40KnZrom3CHGZ-NSrobPSJzNO-j3_Hwt4fahtXDbNa8DX6ZsVH15F3HbpUtNmvr8B/t4TeX9xwgYEvyUpJ85gWKs3QJrkRjPxg-jDMSrKNc55KkCu2n5Q9q4LkeFs6-ssWQURfsCZ6sN7hlvsCDT-iUIjqCfc2eiOqgAWOTFtuhTvjPx77xExACw7qrcKpFanb/vp5wIABNrTNYZ25Bvr7YOf9AtfhucVcAXVo_7WWzMY9ZaU5f2NWCenVn2dpKy2vDZmieMR9nI4z4lIgfyikTsYmOhVicPUIegi99wlMhwW0=/visual-studio-code-1-124-2.exe', '', '/uploads/435fc77f0dc14a67b6fbb02a2e91e8f1.webp
+/uploads/d1c382bcde6d45808fde5493bd0bf64d.webp
+/uploads/05abff31a27d4ba9b224688599191e4e.webp
+/uploads/4724eec5a1e94bd5b6d101160d08e90b.webp', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#3b82f6', 0, 'software', '', '', 'Freemium', '2026-06-17 03:46:22', '', '', '', '', '', '', '', '');
+INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (90, 'Detroit: Become Human Free', 'Action, Adventure', 4.5, 0, 'Detroit: Become Human, the award-winning video game production from Quantic Dream, is finally available on Steam Featuring world-renowned actors including Jesse Williams (Grey’s Anatomy), Clancy Brown (Carnivale), Lance Henriksen (Aliens), Bryan Dechart (True Blood) and Valorie Curry (Twilight). Detroit 2038. Technology has evolved to a point where human like androids are everywhere. They speak, move and behave like human beings, but they are only machines serving humans.', '/uploads/b1ec293716c64d0c9a24cf2c88a44302.jpg', '', 'https://ts.bzzhr.to/d/jm9rg8ae8koj?v=7FJQoEFTIQt81F8_uKbjcjmgWr5N__C9-XmrEdWT3Y6TyReqp9KJA_rz6_p7Xb1qbAxq6iogPBINAGVQ4WRqExNN-bai9rF5XVOnox7A0coQSFgxJcLzLOXAdOX0x1FlTswUOfqwqBfTSaeiMvnGsOTeK4QjPdkItfH5C2eGm-Y6vW_pNAg7Pal7945aPsffCG2iw5hfFhxCM0091C7n', 'https://youtu.be/8a-EObAhYrg?si=wkkV4F6F7zdqHSKo', '/uploads/60283b849b1b43bb8f39c3a85aa1ec97.jpg
+/uploads/eba3d3692aa04aacb57e287b29faddb4.jpg
+/uploads/22435f1ab73d4babb0a9efd433011be1.webp', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#0ea5e9', 0, 'game', '', '', '', '2026-06-17 23:07:26', 'GAME INFO
 Genre: Action, Adventure
 Developer: Quantic Dream
 Platform: PC
@@ -1863,13 +1863,13 @@ Marvel’s New York is your playground
 The Big Apple comes to life in Marvel’s Spider-Man. Swing through vibrant neighborhoods and catch breathtaking views of iconic Marvel and Manhattan landmarks. Use the environment to defeat villains with epic takedowns in true blockbuster action.
 
 Enjoy The City That Never Sleeps complete content
-Following the events of the main story of Marvel’s Spider-Man Remastered, experience the continuation of Peter Parker’s journey in Marvel’s Spider-Man: The City That Never Sleeps, three story chapters with additional missions and challenges to discover.', 'http://localhost:5050/uploads/78c9a9dd9b8a4c63842274939847253f.webp', '', 'https://ffdl.cybar.to/hg3uofzuw9cn
-https://ffdl.cybar.to/q6rs90s43je5', 'https://youtu.be/q4GdJVvdxss?si=ZRAExlW694R_p2x2', 'http://localhost:5050/uploads/61ddabd354e84a069fd81110e1d96fd3.png
-http://localhost:5050/uploads/fccb3d44c29f416fbd3dab3d192449cc.jpeg
-http://localhost:5050/uploads/7cca621c8c5349d08ec2380808a682ed.jpg
-http://localhost:5050/uploads/dbe20dc96b8c41e1acfaf1d568714b5c.jpg
-http://localhost:5050/uploads/55e05e17cb814e1083a2f91660e74973.jpg
-http://localhost:5050/uploads/730936b70f3f4419a89a38438823bf18.jpg', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#b91c1c', 0, 'game', '', '', '', '2026-06-17 23:11:02', 'GAME INFO
+Following the events of the main story of Marvel’s Spider-Man Remastered, experience the continuation of Peter Parker’s journey in Marvel’s Spider-Man: The City That Never Sleeps, three story chapters with additional missions and challenges to discover.', '/uploads/78c9a9dd9b8a4c63842274939847253f.webp', '', 'https://ffdl.cybar.to/hg3uofzuw9cn
+https://ffdl.cybar.to/q6rs90s43je5', 'https://youtu.be/q4GdJVvdxss?si=ZRAExlW694R_p2x2', '/uploads/61ddabd354e84a069fd81110e1d96fd3.png
+/uploads/fccb3d44c29f416fbd3dab3d192449cc.jpeg
+/uploads/7cca621c8c5349d08ec2380808a682ed.jpg
+/uploads/dbe20dc96b8c41e1acfaf1d568714b5c.jpg
+/uploads/55e05e17cb814e1083a2f91660e74973.jpg
+/uploads/730936b70f3f4419a89a38438823bf18.jpg', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#b91c1c', 0, 'game', '', '', '', '2026-06-17 23:11:02', 'GAME INFO
 Genre: Action, Adventure
 Developer: Insomniac Games, Nixxes Software
 Platform: PC
@@ -1877,11 +1877,11 @@ Game Size: 53 GB
 Released By: FLT/ Mr_GOLDBERG CS / InsaneRamZes Ty
 Version: v2.1012.0.0 (Build 12423814) | Full Version + DLC
 Pre-Installed Game', '', '', '', '', '', '', '');
-INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (92, 'Far Cry 6 Ultimate Edition Free', 'Action, Adventure, RPG, Strategy', 4.5, 2, 'Welcome to Yara, a tropical paradise frozen in time. As the dictator of Yara, Antón Castillo is intent on restoring his nation back to its former glory by any means, with his son, Incredibox Diego, following in his bloody footsteps. Their oppressive rule has ignited a revolution. Play as Dani Rojas, a local resident, and fight for the rebellious guerrillas to free Yara Take on the Castillo regime in the most extensive Far Cry game to date as you make your way through jungles, beaches and Esperanza, Yara’s capital. Use an arsenal of weapons and gadgets and a diverse fleet of vehicles to overthrow the ruthless Castillo regime.', 'http://localhost:5050/uploads/5010dc60dc634113a35d2a50cf8f280b.jpg', '', 'https://vikingfile.com/d/D9NBKXCeT5/2369390.B11359732.CSF-Games4U.Org.part1.rar
+INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (92, 'Far Cry 6 Ultimate Edition Free', 'Action, Adventure, RPG, Strategy', 4.5, 2, 'Welcome to Yara, a tropical paradise frozen in time. As the dictator of Yara, Antón Castillo is intent on restoring his nation back to its former glory by any means, with his son, Incredibox Diego, following in his bloody footsteps. Their oppressive rule has ignited a revolution. Play as Dani Rojas, a local resident, and fight for the rebellious guerrillas to free Yara Take on the Castillo regime in the most extensive Far Cry game to date as you make your way through jungles, beaches and Esperanza, Yara’s capital. Use an arsenal of weapons and gadgets and a diverse fleet of vehicles to overthrow the ruthless Castillo regime.', '/uploads/5010dc60dc634113a35d2a50cf8f280b.jpg', '', 'https://vikingfile.com/d/D9NBKXCeT5/2369390.B11359732.CSF-Games4U.Org.part1.rar
 https://vikingfile.com/d/gB523b1Iav/2369390.B11359732.CSF-Games4U.Org.part2.rar
-https://vikingfile.com/d/nJgt8kVWYa/2369390.B11359732.CSF-Games4U.Org.part3.rar', 'https://youtu.be/-IJuKT1mHO8?si=wtsZMIit2-0fVu02', 'http://localhost:5050/uploads/2335dd965e0644f7aaa138387fe1e8fc.webp
-http://localhost:5050/uploads/54dec15363b143b3afe950ded655649b.webp
-http://localhost:5050/uploads/c9061217ca7e4573bc878c3a0886121f.jpg', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#ef4444', 0, 'game', '', '', '', '2026-06-17 23:18:07', 'GAME INFO
+https://vikingfile.com/d/nJgt8kVWYa/2369390.B11359732.CSF-Games4U.Org.part3.rar', 'https://youtu.be/-IJuKT1mHO8?si=wtsZMIit2-0fVu02', '/uploads/2335dd965e0644f7aaa138387fe1e8fc.webp
+/uploads/54dec15363b143b3afe950ded655649b.webp
+/uploads/c9061217ca7e4573bc878c3a0886121f.jpg', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#ef4444', 0, 'game', '', '', '', '2026-06-17 23:18:07', 'GAME INFO
 Genre: Action, Adventure, Indie, RPG, Strategy
 Developer: Ubisoft Toronto
 Platform: PC
@@ -1891,10 +1891,10 @@ Version: v1.5.0 | Full Version + All DLCs + HD Texture Pack
 Pre-Installed Game', '', '', '', '', '', '', '');
 INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (93, 'Need for Speed Heat Deluxe Edition', 'Racing, Action, Adventure', 4.5, 0, 'A thrilling race experience pits you against a city’s rogue police force as you battle your way into street racing’s elite. Hustle by day and risk it all at night in Need for Speed Heat, a white-knuckle street racer, where the lines of the law fade as the sun starts to set. Survival: Fountain of Youth
 
-By day, Palm City hosts the Speedhunter Showdown, a sanctioned competition where you earn Bank to customize and upgrade your high-performance cars. At night, ramp up the intensity in illicit street races that build your reputation, getting you access to bigger races and better parts. But stay ready – cops are waiting and not all of them play fair.', 'http://localhost:5050/uploads/6894d585c4324ac6becb9428d18498a3.jpg', '', 'https://vikingfile.com/d/K8BLYXDVql/f45fg.ER-GameDrive.Org.rar', '', 'http://localhost:5050/uploads/ce58d91217f84b1f9166ec46ee32b3b6.jpg
-http://localhost:5050/uploads/4b9921d2fee1487a86256a6d66502784.jpg
-http://localhost:5050/uploads/1e23908626294743a2288e3b2f1e5bd6.jpg
-http://localhost:5050/uploads/d6b9c08d04cf4a25a5c032ea12ca11d2.jpg', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#3b82f6', 0, 'game', '', '', '', '2026-06-17 23:23:47', 'GAME INFO
+By day, Palm City hosts the Speedhunter Showdown, a sanctioned competition where you earn Bank to customize and upgrade your high-performance cars. At night, ramp up the intensity in illicit street races that build your reputation, getting you access to bigger races and better parts. But stay ready – cops are waiting and not all of them play fair.', '/uploads/6894d585c4324ac6becb9428d18498a3.jpg', '', 'https://vikingfile.com/d/K8BLYXDVql/f45fg.ER-GameDrive.Org.rar', '', '/uploads/ce58d91217f84b1f9166ec46ee32b3b6.jpg
+/uploads/4b9921d2fee1487a86256a6d66502784.jpg
+/uploads/1e23908626294743a2288e3b2f1e5bd6.jpg
+/uploads/d6b9c08d04cf4a25a5c032ea12ca11d2.jpg', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#3b82f6', 0, 'game', '', '', '', '2026-06-17 23:23:47', 'GAME INFO
 Genre: Action, Adventure, Racing, Sports
 Developer: Ghost Games
 Platform: PC
@@ -1911,7 +1911,7 @@ An Epic Drama Born from a Myth
 A multilayered story told in fragments. An epic drama in which the various thoughts of the characters intersect in the Lands Between.
 Unique Online Play that Loosely Connects You to Others
 In addition to multiplayer, where you can directly connect with other players and travel together, the game supports a unique asynchronous online element that allows you to feel the presence of others.
-DLC Added', 'http://localhost:5050/uploads/7efdf670073449c295e5e21e6591312e.jpg', '', 'https://vikingfile.com/d/mo3fqDifna/ERD.ER-GameDrive.Org.part01.rar
+DLC Added', '/uploads/7efdf670073449c295e5e21e6591312e.jpg', '', 'https://vikingfile.com/d/mo3fqDifna/ERD.ER-GameDrive.Org.part01.rar
 https://vikingfile.com/d/XrA4nHGfhP/ERD.ER-GameDrive.Org.part02.rar
 https://vikingfile.com/d/KLntKlrOaz/ERD.ER-GameDrive.Org.part03.rar
 https://vikingfile.com/d/hQ8KfOAvpG/ERD.ER-GameDrive.Org.part04.rar
@@ -1927,8 +1927,8 @@ https://vikingfile.com/d/e0mXgSkwd9/ERD.ER-GameDrive.Org.part13.rar
 https://vikingfile.com/d/UBrag3UKEn/ERD.ER-GameDrive.Org.part14.rar
 https://vikingfile.com/d/Ro0kMLRtE0/ERD.ER-GameDrive.Org.part15.rar
 https://vikingfile.com/d/ytqyZMcDSk/ERD.ER-GameDrive.Org.part16.rar
-https://vikingfile.com/d/PT5CxFzN4F/ERD.ER-GameDrive.Org.part17.rar', 'https://youtu.be/E3Huy2cdih0?si=aOtyXnMyXr2sz5O-', 'http://localhost:5050/uploads/24626c3368cc4000a09f623021324519.webp
-http://localhost:5050/uploads/c36a0de612ba416a93f7a82f81a2795e.webp', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#f59e0b', 0, 'game', '', '', '', '2026-06-17 23:55:08', 'GAME INFO
+https://vikingfile.com/d/PT5CxFzN4F/ERD.ER-GameDrive.Org.part17.rar', 'https://youtu.be/E3Huy2cdih0?si=aOtyXnMyXr2sz5O-', '/uploads/24626c3368cc4000a09f623021324519.webp
+/uploads/c36a0de612ba416a93f7a82f81a2795e.webp', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#f59e0b', 0, 'game', '', '', '', '2026-06-17 23:55:08', 'GAME INFO
 Genre: Action, RPG
 Developer: FromSoftware Inc
 Platform: PC
@@ -1940,10 +1940,10 @@ INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_u
 
 Five years have passed since Ellie and Joel’s perilous trek across a ravaged United States. They have found a semblance of peace and stability within a thriving survivor community in Jackson, Wyoming, despite the ever-present dangers of the infected and desperate human factions. However, this fragile tranquility is shattered by a brutal event, propelling Ellie on a relentless quest for justice and a desperate search for closure. Her journey will take her through harrowing landscapes and force her to confront devastating truths, testing the limits of her resilience and morality in a world consumed by loss and violence.
 
-The Last of Us Part II Remastered elevates the original game with a range of enhancements, taking advantage of modern hardware to deliver an unparalleled experience. Enjoy a host of graphical improvements that breathe new life into the game’s beautiful yet perilous environments, with increased detail and visual fidelity. Experience full integration with the PlayStation DualSense controller, utilizing adaptive triggers and haptic feedback to deepen your connection to the gameplay. As you progress through Ellie and Abby’s intertwined stories, earn and collect exciting achievements on Steam, adding another layer of engagement to this unforgettable journey. The game also offers widescreen and Ultrawide support, providing a more expansive and cinematic view of its haunting world. Elroy and the Aliens', 'http://localhost:5050/uploads/0107fb4497b243938a87c97409198b5a.jpg', '', 'https://ffdl.cybar.to/ekjo7dmmqm1h
-https://ffdl.cybar.to/l4wleerujihu', 'https://youtu.be/-llaUBqovHw?si=tr_MQ4fHvxHHt7ld', 'http://localhost:5050/uploads/a600d141c2474177b7d291950d825d9d.jpg
-http://localhost:5050/uploads/ae5253370b124f1d8ccd8cd7b11fd8f4.jpg
-http://localhost:5050/uploads/9c3d5dad9cc946e38f67d8fc215e9dec.jpg', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#27272a', 0, 'game', '', '', '', '2026-06-18 00:02:00', 'GAME INFO
+The Last of Us Part II Remastered elevates the original game with a range of enhancements, taking advantage of modern hardware to deliver an unparalleled experience. Enjoy a host of graphical improvements that breathe new life into the game’s beautiful yet perilous environments, with increased detail and visual fidelity. Experience full integration with the PlayStation DualSense controller, utilizing adaptive triggers and haptic feedback to deepen your connection to the gameplay. As you progress through Ellie and Abby’s intertwined stories, earn and collect exciting achievements on Steam, adding another layer of engagement to this unforgettable journey. The game also offers widescreen and Ultrawide support, providing a more expansive and cinematic view of its haunting world. Elroy and the Aliens', '/uploads/0107fb4497b243938a87c97409198b5a.jpg', '', 'https://ffdl.cybar.to/ekjo7dmmqm1h
+https://ffdl.cybar.to/l4wleerujihu', 'https://youtu.be/-llaUBqovHw?si=tr_MQ4fHvxHHt7ld', '/uploads/a600d141c2474177b7d291950d825d9d.jpg
+/uploads/ae5253370b124f1d8ccd8cd7b11fd8f4.jpg
+/uploads/9c3d5dad9cc946e38f67d8fc215e9dec.jpg', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#27272a', 0, 'game', '', '', '', '2026-06-18 00:02:00', 'GAME INFO
 Genre: Action, Adventure
 Developer: Naughty Dog LLC, Nixxes Software, Iron Galaxy Studios
 Platform: PC
@@ -1951,9 +1951,9 @@ Game Size: 103 GB
 Released By: RUNE
 Version: v1.6.10721.105 (Build 19297819 | Full Version
 Pre-Installed Gam', '', '', '', '', '', '', '');
-INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (96, 'Watch Dogs Digital Deluxe', 'Action', 4.5, 0, 'All it takes is the swipe of a finger. We connect with friends. We buy the latest gadgets and gear. We find out what’s happening in the world. But with that same simple swipe, we cast an increasingly expansive shadow. With each connection, we leave a digital trail that tracks our every move and milestone, our every like and dislike. And it’s not just people. Today, all major cities are networked. Urban infrastructures are monitored and controlled by complex operating systems. In Watch_Dogs, this system is called the Central Operating System (CTOS) and it controls almost every piece of the city’s technology and holds key information on all of the city’s residents.', 'http://localhost:5050/uploads/d5e68dd49e974d39b85a037f2c65efcb.jpg', '', 'https://vikingfile.com/d/2QYtT6f0qQ/243470-Games4u.Org.rar', 'https://youtu.be/kPNXE8fdleY?si=xiCFfpgTKnSAe8n2', 'http://localhost:5050/uploads/c1a53b9c653d4fd59f05bfa461dc02cd.jpg
-http://localhost:5050/uploads/485636489c2f4ef898a65c2dab9c30ca.jpg
-http://localhost:5050/uploads/b952d2c74ee147e18252854c9ab90ca4.jpg', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#52525b', 0, 'game', '', '', '', '2026-06-18 00:10:05', 'GAME INFO
+INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (96, 'Watch Dogs Digital Deluxe', 'Action', 4.5, 0, 'All it takes is the swipe of a finger. We connect with friends. We buy the latest gadgets and gear. We find out what’s happening in the world. But with that same simple swipe, we cast an increasingly expansive shadow. With each connection, we leave a digital trail that tracks our every move and milestone, our every like and dislike. And it’s not just people. Today, all major cities are networked. Urban infrastructures are monitored and controlled by complex operating systems. In Watch_Dogs, this system is called the Central Operating System (CTOS) and it controls almost every piece of the city’s technology and holds key information on all of the city’s residents.', '/uploads/d5e68dd49e974d39b85a037f2c65efcb.jpg', '', 'https://vikingfile.com/d/2QYtT6f0qQ/243470-Games4u.Org.rar', 'https://youtu.be/kPNXE8fdleY?si=xiCFfpgTKnSAe8n2', '/uploads/c1a53b9c653d4fd59f05bfa461dc02cd.jpg
+/uploads/485636489c2f4ef898a65c2dab9c30ca.jpg
+/uploads/b952d2c74ee147e18252854c9ab90ca4.jpg', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#52525b', 0, 'game', '', '', '', '2026-06-18 00:10:05', 'GAME INFO
 Genre: Action, Adventure
 Developer: Ubisoft
 Platform: PC
@@ -1961,12 +1961,12 @@ Game Size: 16.1 GB
 Repack By: RELOADED
 Version: v1.06.329 (Digital Deluxe Edition) | Full  Version (Latest) + all 16 DLCs
 Pre-Installed Game', '', '', '', '', '', '', '');
-INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (97, 'Forza Horizon 5 Premium Edition', 'Racing, Open World', 4.5, 0, 'Your Ultimate Horizon Adventure awaits Explore the vibrant and ever-evolving open world landscapes of Mexico with limitless, fun driving action in hundreds of the world’s greatest cars. Lead breathtaking expeditions across the vibrant and ever-evolving open world landscapes of Mexico with limitless, fun driving action in hundreds of the world’s greatest cars. Explore a world of striking contrast and beauty.', 'http://localhost:5050/uploads/52bbd995da7846a5ba36c6aaf37d2803.jpg', '', 'https://vikingfile.com/d/enHeTmFpr8/French.doi
+INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (97, 'Forza Horizon 5 Premium Edition', 'Racing, Open World', 4.5, 0, 'Your Ultimate Horizon Adventure awaits Explore the vibrant and ever-evolving open world landscapes of Mexico with limitless, fun driving action in hundreds of the world’s greatest cars. Lead breathtaking expeditions across the vibrant and ever-evolving open world landscapes of Mexico with limitless, fun driving action in hundreds of the world’s greatest cars. Explore a world of striking contrast and beauty.', '/uploads/52bbd995da7846a5ba36c6aaf37d2803.jpg', '', 'https://vikingfile.com/d/enHeTmFpr8/French.doi
 https://vikingfile.com/d/GuYzVOj4Aq/English.doi
-https://vikingfile.com/d/4LfOttw4sv/hh5757.DR-GameDrive.Org.part1.rar', '', 'http://localhost:5050/uploads/037d74e8c34143f491c7d33325f39a5f.jpg
-http://localhost:5050/uploads/a1eb878f600d49d0919de2ac0e424ac2.jpg
-http://localhost:5050/uploads/375500d0075247bbb8571ef539b806f6.jpg
-http://localhost:5050/uploads/d983aded5e914c369fc8b334512b31a9.webp', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#7c3aed', 0, 'game', '', '', '', '2026-06-18 23:32:49', 'Features
+https://vikingfile.com/d/4LfOttw4sv/hh5757.DR-GameDrive.Org.part1.rar', '', '/uploads/037d74e8c34143f491c7d33325f39a5f.jpg
+/uploads/a1eb878f600d49d0919de2ac0e424ac2.jpg
+/uploads/375500d0075247bbb8571ef539b806f6.jpg
+/uploads/d983aded5e914c369fc8b334512b31a9.webp', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#7c3aed', 0, 'game', '', '', '', '2026-06-18 23:32:49', 'Features
 An endless kaleidoscope of Horizon adventures. Fascinating trips through the incredibly beautiful and distinctive world of Mexico, driving the greatest cars in history, await you.
 A world full of colors The world of beauty and contrasts will open before you. You will visit deserts, dense jungles, historic cities, lost ruins, pristine beaches, deep gorges and a high, snow-covered volcano.
 A world full of adventure. A massive campaign awaits you with hundreds of challenges for every taste. Meet new characters and go through their storylines to the end.
@@ -1979,7 +1979,7 @@ Game Size: 171 GB
 Multiplayer By: 0xdeadc0de (OFME)
 Version: v1.688.109.0 | Full Version | All DLCs + Multiplayer
 Pre-Installed Game', '', '', '', '', '', '', '');
-INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (98, 'Call of Duty: Black Ops II', 'Action', 4.5, 0, 'Call of Duty: Black Ops 2 + multiplayer is a traditional first-person shooter that continues the events of the first part. Now you have to continue the war against terrorists, plunge into even more fateful events, and do much, much more The events of the game take place some time after the finale of the first part of “Black Ops”. Well, you will play for David Mason, the son of the protagonist of the previous game, Alex Mason. In his role, you will have to embark on another difficult mission, fight numerous terrorists', 'http://localhost:5050/uploads/5eaea66cb6904f07aec103f63196fcb8.jpg', '', 'https://fuckingfast.co/2gmb42tcs4sd#Call_of_Duty_-_Black_Ops_2_--_fitgirl-repacks.site_--_.part01.rar
+INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (98, 'Call of Duty: Black Ops II', 'Action', 4.5, 0, 'Call of Duty: Black Ops 2 + multiplayer is a traditional first-person shooter that continues the events of the first part. Now you have to continue the war against terrorists, plunge into even more fateful events, and do much, much more The events of the game take place some time after the finale of the first part of “Black Ops”. Well, you will play for David Mason, the son of the protagonist of the previous game, Alex Mason. In his role, you will have to embark on another difficult mission, fight numerous terrorists', '/uploads/5eaea66cb6904f07aec103f63196fcb8.jpg', '', 'https://fuckingfast.co/2gmb42tcs4sd#Call_of_Duty_-_Black_Ops_2_--_fitgirl-repacks.site_--_.part01.rar
 https://fuckingfast.co/joow5mkn7m1d#Call_of_Duty_-_Black_Ops_2_--_fitgirl-repacks.site_--_.part02.rar
 https://fuckingfast.co/2fyulkxi8vrv#Call_of_Duty_-_Black_Ops_2_--_fitgirl-repacks.site_--_.part03.rar
 https://fuckingfast.co/r9o8vufhvida#Call_of_Duty_-_Black_Ops_2_--_fitgirl-repacks.site_--_.part04.rar
@@ -1997,8 +1997,8 @@ https://fuckingfast.co/g0ywxau9ee6g#Call_of_Duty_-_Black_Ops_2_--_fitgirl-repack
 https://fuckingfast.co/l0vcwq11llyw#Call_of_Duty_-_Black_Ops_2_--_fitgirl-repacks.site_--_.part16.rar
 https://fuckingfast.co/vc89w9z1uc68#fg-selective-english.part1.rar
 https://fuckingfast.co/wf2u054fc8s0#fg-selective-english.part2.rar
-https://fuckingfast.co/83b1f2y35rsp#fg-selective-english.part3.rar', '', 'http://localhost:5050/uploads/dd54cc9b74ad498d813a220ec7876dcc.jpg
-http://localhost:5050/uploads/d14ad91bee6746ea8b184598b336e251.jpg', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#09090b', 0, 'game', '', '', '', '2026-06-18 23:38:09', 'GAME INFO
+https://fuckingfast.co/83b1f2y35rsp#fg-selective-english.part3.rar', '', '/uploads/dd54cc9b74ad498d813a220ec7876dcc.jpg
+/uploads/d14ad91bee6746ea8b184598b336e251.jpg', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#09090b', 0, 'game', '', '', '', '2026-06-18 23:38:09', 'GAME INFO
 Genre: Action
 Developer: Treyarch
 Platform: PC
@@ -2008,11 +2008,11 @@ Version: Build 65428 | Full Version
 Pre-Installed Game
 Password: steamrip.com', '', '', '', '', '', '', '');
 INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (99, 'Hogwarts Legacy Deluxe Edition', 'Action, Adventure, RPG, Hypervisor', 4.5, 0, 'Hogwarts Legacy is an open-world action RPG set in the world first introduced in the Harry Potter books. Embark on a journey through familiar and new locations as you explore and discover magical beasts, customize your character and craft potions, master spell casting, upgrade talents and become the wizard you want to be. Experience Hogwarts in the 1800s. J.K Rowling pc game hogwarts is here finally.
-Your character is a student who holds the key to an ancient secret that threatens to tear the wizarding world apart. Make allies, battle Dark wizards, and ultimately decide the fate of the wizarding world. Your legacy is what you make of it. Live the Unwritten. DIG – Deep In Galaxies', 'http://localhost:5050/uploads/1ed7fd938b304a78b357674e098083f6.jpg', '', 'https://vikingfile.com/d/l4pr63Ki1R/990080.B20773316.CSF-Games4U.Org.part1.rar
-https://vikingfile.com/d/beBPGQ0wBi/990080.B20773316.CSF-Games4U.Org.part2.rar', 'https://youtu.be/1O6Qstncpnc?si=A2dgV723bYbgVSF8', 'http://localhost:5050/uploads/bbb4cef8e18748d3b8b481471bd6a945.jpeg
-http://localhost:5050/uploads/a52121d4a45e4f93a068014ad1888b9c.jpg
-http://localhost:5050/uploads/17b54c460faa4bfeb0b2c1d200704afb.jpg
-http://localhost:5050/uploads/9bce99fd70684a64a3b987f6958251cf.jpg', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#bfdbfe', 0, 'game', '', '', '', '2026-06-18 23:42:57', 'GAME INFO
+Your character is a student who holds the key to an ancient secret that threatens to tear the wizarding world apart. Make allies, battle Dark wizards, and ultimately decide the fate of the wizarding world. Your legacy is what you make of it. Live the Unwritten. DIG – Deep In Galaxies', '/uploads/1ed7fd938b304a78b357674e098083f6.jpg', '', 'https://vikingfile.com/d/l4pr63Ki1R/990080.B20773316.CSF-Games4U.Org.part1.rar
+https://vikingfile.com/d/beBPGQ0wBi/990080.B20773316.CSF-Games4U.Org.part2.rar', 'https://youtu.be/1O6Qstncpnc?si=A2dgV723bYbgVSF8', '/uploads/bbb4cef8e18748d3b8b481471bd6a945.jpeg
+/uploads/a52121d4a45e4f93a068014ad1888b9c.jpg
+/uploads/17b54c460faa4bfeb0b2c1d200704afb.jpg
+/uploads/9bce99fd70684a64a3b987f6958251cf.jpg', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#bfdbfe', 0, 'game', '', '', '', '2026-06-18 23:42:57', 'GAME INFO
 Genre: Action, Adventure, RPG
 Developer: Avalanche Software
 Platform: PC
@@ -2029,25 +2029,25 @@ Gather your party. Take the adventure online as a party of up to four. Abducted,
 
 Forged with the new Divinity 4.0 engine, Baldur’s Gate 3 gives you unprecedented freedom to explore, experiment, and interact with a thriving world filled with characters, dangers, and deceit. A grand, cinematic narrative brings you closer to your characters than ever before. From shadow-cursed forests, to the magical caverns of the Underdark, to the sprawling city of Baldur’s Gate itself, your actions define the adventure, but your choices define your legacy. You will be remembered.
 
-The Forgotten Realms are a vast, detailed, and diverse world, and there are secrets to be discovered all around you – verticality is a vital part of exploration. Sneak, dip, shove, climb, and jump as you journey from the depths of the Underdark to the glittering rooftops of Baldur’s Gate. Every choice you make drives your story forward, each decision leaving your mark on the world. Define your legacy, nurture relationships and create enemies, and solve problems your way. No two playthroughs will ever be the same.', 'http://localhost:5050/uploads/0599f89132a0473c891925dab99305c8.jpg', '', 'https://ffdl.cybar.to/m0wp2x66dq2a
+The Forgotten Realms are a vast, detailed, and diverse world, and there are secrets to be discovered all around you – verticality is a vital part of exploration. Sneak, dip, shove, climb, and jump as you journey from the depths of the Underdark to the glittering rooftops of Baldur’s Gate. Every choice you make drives your story forward, each decision leaving your mark on the world. Define your legacy, nurture relationships and create enemies, and solve problems your way. No two playthroughs will ever be the same.', '/uploads/0599f89132a0473c891925dab99305c8.jpg', '', 'https://ffdl.cybar.to/m0wp2x66dq2a
 https://ffdl.cybar.to/urujq9l3j1eo
-https://ffdl.cybar.to/wmeecqrh6l00', 'https://youtu.be/1T22wNvoNiU?si=Ntli36jWws55ialW', 'http://localhost:5050/uploads/91db3a2332d4453c9daa7c0d8d859174.webp
-http://localhost:5050/uploads/11e3eeae357a4034aa2b8969a005c8ac.webp
-http://localhost:5050/uploads/533da9210eae42368162f613c05400c1.webp
-http://localhost:5050/uploads/e760cc92ed074614b2cc9d91c4033a49.webp
-http://localhost:5050/uploads/4227793fad5c484c870b2b28e8a13d79.jpg', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#3b82f6', 0, 'game', '', '', '', '2026-06-18 23:49:26', 'Genre: Adventure, RPG, Strategy
+https://ffdl.cybar.to/wmeecqrh6l00', 'https://youtu.be/1T22wNvoNiU?si=Ntli36jWws55ialW', '/uploads/91db3a2332d4453c9daa7c0d8d859174.webp
+/uploads/11e3eeae357a4034aa2b8969a005c8ac.webp
+/uploads/533da9210eae42368162f613c05400c1.webp
+/uploads/e760cc92ed074614b2cc9d91c4033a49.webp
+/uploads/4227793fad5c484c870b2b28e8a13d79.jpg', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#3b82f6', 0, 'game', '', '', '', '2026-06-18 23:49:26', 'Genre: Adventure, RPG, Strategy
 Developer: Larian Studios
 Platform: PC
 Game Size: 123 GB
 Released By: RUNE emu
 Version: v4.1.1.6995620 | Full Version
 Pre-Installed Game', '', '', '', '', '', '', '');
-INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (101, 'Sekiro: Shadows Die Twice', 'Action, Adventure', 4.5, 0, 'Carve your own clever path to vengeance in the critically acclaimed adventure from developer FromSoftware, creators of the Dark Souls series. In Sekiro: Shadows Die Twice you are the ‘one-armed wolf’, a disgraced and disfigured warrior rescued from the brink of death. Bound to protect a young lord who is the descendant of an ancient bloodline, you become the target of many vicious enemies, including the dangerous Ashina clan.', 'http://localhost:5050/uploads/a155333508ee40eb88da90870530b315.jpg', '', 'https://vikingfile.com/d/HBwtlCZMjL/f34.FR-GameDrive.Org.rar
+INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (101, 'Sekiro: Shadows Die Twice', 'Action, Adventure', 4.5, 0, 'Carve your own clever path to vengeance in the critically acclaimed adventure from developer FromSoftware, creators of the Dark Souls series. In Sekiro: Shadows Die Twice you are the ‘one-armed wolf’, a disgraced and disfigured warrior rescued from the brink of death. Bound to protect a young lord who is the descendant of an ancient bloodline, you become the target of many vicious enemies, including the dangerous Ashina clan.', '/uploads/a155333508ee40eb88da90870530b315.jpg', '', 'https://vikingfile.com/d/HBwtlCZMjL/f34.FR-GameDrive.Org.rar
 https://vikingfile.com/d/aCaLMCuzBR/fg-optional-bonus-content.bin
-https://vikingfile.com/d/v3CbZxsDhX/fg-selective-english.bin', 'https://youtu.be/rXMX4YJ7Lks?si=j0668sF9SPUrbBvu', 'http://localhost:5050/uploads/334f1f7f14744b56b8c937a8db1fea3b.jpg
-http://localhost:5050/uploads/1984c8ecbf4341a28a93f5c0548d8140.jpg
-http://localhost:5050/uploads/698ee459af944eabbc8c59ecffcc0a21.jpg
-http://localhost:5050/uploads/4bf7f5e3c1464c9a957a7892ed001c59.jpg', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#fed7aa', 0, 'game', '', '', '', '2026-06-18 23:53:34', 'GAME INFO
+https://vikingfile.com/d/v3CbZxsDhX/fg-selective-english.bin', 'https://youtu.be/rXMX4YJ7Lks?si=j0668sF9SPUrbBvu', '/uploads/334f1f7f14744b56b8c937a8db1fea3b.jpg
+/uploads/1984c8ecbf4341a28a93f5c0548d8140.jpg
+/uploads/698ee459af944eabbc8c59ecffcc0a21.jpg
+/uploads/4bf7f5e3c1464c9a957a7892ed001c59.jpg', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#fed7aa', 0, 'game', '', '', '', '2026-06-18 23:53:34', 'GAME INFO
 Genre: Action, Adventure
 Developer: FromSoftware
 Platform: PC
@@ -2062,12 +2062,12 @@ While both games offer unique Western experiences, the pricing disparity is hard
 
 This isn’t the first time Rockstar has taken a similar approach with its PC ports. GTA titles, for instance, often have a lengthy wait before their PC releases, and when they do arrive, they’re usually full price. This practice, along with the occasional technical hiccup, can frustrate many PC gamers.
 
-While Red Dead Redemption is undoubtedly a classic, its pricing strategy raises questions about fair value and consumer expectations. As PC gaming continues to grow, it’s crucial for developers and publishers to strike a balance between nostalgia and modern market practices.', 'http://localhost:5050/uploads/167cd1ae4abf48b29590285b47542148.webp', '', 'https://ffdl.cybar.to/7p67cpgwz3tc', 'https://youtu.be/wumxYqok3bQ?si=kTvdiOuhoTXBIFYH', 'http://localhost:5050/uploads/3fae706588c4444b8e056d7f6960de0e.jpg
-http://localhost:5050/uploads/52f2bb9b159e4eee8f5ee7d524624762.jpg
-http://localhost:5050/uploads/20fd3b51d0354577b36c1be4d97d6f5a.webp
-http://localhost:5050/uploads/4bc90dedc7c043509214f9a7a292584c.jpg
-http://localhost:5050/uploads/76134af76a284689bd1637cec7060ed1.jpg
-http://localhost:5050/uploads/b1f2e7c5663f4019b2a5c9fc831e85e2.jpg', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#dc2626', 0, 'game', '', '', '', '2026-06-18 23:59:36', 'GAME INFO
+While Red Dead Redemption is undoubtedly a classic, its pricing strategy raises questions about fair value and consumer expectations. As PC gaming continues to grow, it’s crucial for developers and publishers to strike a balance between nostalgia and modern market practices.', '/uploads/167cd1ae4abf48b29590285b47542148.webp', '', 'https://ffdl.cybar.to/7p67cpgwz3tc', 'https://youtu.be/wumxYqok3bQ?si=kTvdiOuhoTXBIFYH', '/uploads/3fae706588c4444b8e056d7f6960de0e.jpg
+/uploads/52f2bb9b159e4eee8f5ee7d524624762.jpg
+/uploads/20fd3b51d0354577b36c1be4d97d6f5a.webp
+/uploads/4bc90dedc7c043509214f9a7a292584c.jpg
+/uploads/76134af76a284689bd1637cec7060ed1.jpg
+/uploads/b1f2e7c5663f4019b2a5c9fc831e85e2.jpg', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#dc2626', 0, 'game', '', '', '', '2026-06-18 23:59:36', 'GAME INFO
 Genre: Action
 Developer: Rockstar Games, Double Eleven
 Platform: PC
@@ -2077,7 +2077,7 @@ Version: v1.0.42.46611 | Full Version
 Pre-Installed Game', '', '', '', '', '', '', '');
 INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (103, 'FIFA 23 Ultimate Edition', 'Sports', 4.5, 0, 'Experience the pinnacle of women’s international football in EA SPORTS FIFA 23 with the FIFA Women’s World Cup Australia and New Zealand 2023 available on June 27th at no additional cost*. Rep your country’s colors and live the tournament in the most immersive EA SPORTS FIFA Women’s World Cup experience yet, complete with each of the 32 qualified nations, custom stadium dressings, cinematics, match presentations, dedicated commentary, and of course, the authentic trophy to hoist at the end. Don Duality
 
-EA SPORTS FIFA 23 brings The World’s Game to the pitch, with HyperMotion2 Technology that delivers even more gameplay realism, both the men’s and women’s FIFA World Cup coming to the game as post-launch updates, the addition of women’s club teams, cross-play features**, and more. Experience unrivaled authenticity with over 19,000 players, 700+ teams, 100 stadiums, and over 30 leagues in FIFA 23.', 'http://localhost:5050/uploads/b9154bc1ba044eaebf9fed4ee65d691d.webp', '', 'https://fuckingfast.co/fpr2096aojov#FIFA_23_--_fitgirl-repacks.site_--_.part01.rar
+EA SPORTS FIFA 23 brings The World’s Game to the pitch, with HyperMotion2 Technology that delivers even more gameplay realism, both the men’s and women’s FIFA World Cup coming to the game as post-launch updates, the addition of women’s club teams, cross-play features**, and more. Experience unrivaled authenticity with over 19,000 players, 700+ teams, 100 stadiums, and over 30 leagues in FIFA 23.', '/uploads/b9154bc1ba044eaebf9fed4ee65d691d.webp', '', 'https://fuckingfast.co/fpr2096aojov#FIFA_23_--_fitgirl-repacks.site_--_.part01.rar
 https://fuckingfast.co/am9j48jte45d#FIFA_23_--_fitgirl-repacks.site_--_.part02.rar
 https://fuckingfast.co/o6g8e8r99z04#FIFA_23_--_fitgirl-repacks.site_--_.part03.rar
 https://fuckingfast.co/fayocne3v1hc#FIFA_23_--_fitgirl-repacks.site_--_.part04.rar
@@ -2156,11 +2156,11 @@ https://fuckingfast.co/8n2ymqqdph62#FIFA_23_--_fitgirl-repacks.site_--_.part76.r
 https://fuckingfast.co/f7ive2okm6di#FIFA_23_--_fitgirl-repacks.site_--_.part77.rar
 https://fuckingfast.co/ryb35bhtrwf7#FIFA_23_--_fitgirl-repacks.site_--_.part78.rar
 https://fuckingfast.co/wpnehwp8o7pf#FIFA_23_--_fitgirl-repacks.site_--_.part79.rar
-https://fuckingfast.co/e0pgh6pew2yn#fg-optional-bonus-osts.bin', 'https://youtu.be/o3V-GvvzjE4?si=vKxZ-cYDYfIStSU4', 'http://localhost:5050/uploads/e11371bfeaad41c088174c1941c61451.jpg
-http://localhost:5050/uploads/96420c72a2634fa9a4e7ea48056cd5d2.jpg
-http://localhost:5050/uploads/22acda0f23db437abd92eaa51ac80561.jpg
-http://localhost:5050/uploads/0533bd28bfa04489bd22f63223f0971f.webp
-http://localhost:5050/uploads/bb2d4d24ee9e4639a367af91c84c09ca.jpg', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#eab308', 0, 'game', '', '', '', '2026-06-19 00:03:47', 'GAME INFO
+https://fuckingfast.co/e0pgh6pew2yn#fg-optional-bonus-osts.bin', 'https://youtu.be/o3V-GvvzjE4?si=vKxZ-cYDYfIStSU4', '/uploads/e11371bfeaad41c088174c1941c61451.jpg
+/uploads/96420c72a2634fa9a4e7ea48056cd5d2.jpg
+/uploads/22acda0f23db437abd92eaa51ac80561.jpg
+/uploads/0533bd28bfa04489bd22f63223f0971f.webp
+/uploads/bb2d4d24ee9e4639a367af91c84c09ca.jpg', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#eab308', 0, 'game', '', '', '', '2026-06-19 00:03:47', 'GAME INFO
 Genre: Simulation, Sports
 Developer: EA Canada & EA Romania
 Platform: PC
@@ -2169,11 +2169,11 @@ Released By: MKDEV
 Version: v1.0.82.43747 | Full Version + All DLCs + World Cup LE
 Pre-Installed Game', '', '', '', '', '', '', '');
 INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (104, 'Forza Horizon 4', 'Racing', 4.5, 0, 'Forza Horizon 4 is one of the best racing simulators in our time. You will find a huge open world of Great Britain, an incredible number of licensed tracks, a sea of ​​cars and such gameplay opportunities that have never been in any simulator Dynamic seasons change everything at the world’s greatest automotive festival. Go it alone or team up with others to explore beautiful and historic Britain in a shared open world. Collect, modify and drive over 450 cars. Race, stunt, create and explore – choose your own path to become a Horizon Superstar.
-GAL GUN', 'http://localhost:5050/uploads/39efb14966c844d29bb74cd67dc163e9.jpg', '', 'https://vikingfile.com/d/C444ixgUqp/n546.ER-GameDrive.Org.part1.rar
-https://vikingfile.com/d/uj7q8XZlDj/n546.ER-GameDrive.Org.part2.rar', 'https://youtu.be/5xy4n73WOMM?si=5CqX-4UOglF2BJdL', 'http://localhost:5050/uploads/2a5d8b24f5f2407089d6032eb8149a2e.jpg
-http://localhost:5050/uploads/61397870ab1c4cfea9168c73de4a229d.webp
-http://localhost:5050/uploads/5cd6b9fc987f4e01ac9359df3cf53593.jpg
-http://localhost:5050/uploads/945d850867664972bde68d50a1504825.jpg', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#fed7aa', 0, 'game', '', '', '', '2026-06-19 00:07:54', 'GAME INFO
+GAL GUN', '/uploads/39efb14966c844d29bb74cd67dc163e9.jpg', '', 'https://vikingfile.com/d/C444ixgUqp/n546.ER-GameDrive.Org.part1.rar
+https://vikingfile.com/d/uj7q8XZlDj/n546.ER-GameDrive.Org.part2.rar', 'https://youtu.be/5xy4n73WOMM?si=5CqX-4UOglF2BJdL', '/uploads/2a5d8b24f5f2407089d6032eb8149a2e.jpg
+/uploads/61397870ab1c4cfea9168c73de4a229d.webp
+/uploads/5cd6b9fc987f4e01ac9359df3cf53593.jpg
+/uploads/945d850867664972bde68d50a1504825.jpg', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#fed7aa', 0, 'game', '', '', '', '2026-06-19 00:07:54', 'GAME INFO
 Genre: Racing
 Developer: Playground Games
 Platform: PC
@@ -2181,13 +2181,13 @@ Game Size: 94.6 GB
 Multiplayer By: 0xdeadc0de
 Version: v1.478.564.0 (Ultimate Edition) | Full Version (Latest) + all 61 DLCs
 Pre-Installed Game', '', '', '', '', '', '', '');
-INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (105, 'HITMAN 3 Free', 'Action', 4.5, 0, 'Death is waiting. Agent 47 returns in Hitman 3, the spectacular conclusion to the World of Assassins trilogy. From the very beginning, players have access to all locations from the previous two games, and it is also possible to transfer all their progress from the second part, including all items and completed contracts. The third part again offers extensive locations, “sandboxes“, in which the Forty-seventh g seek and eliminate his targets using a variety of methods, while simultaneously trying not to be seen by the guards', 'http://localhost:5050/uploads/3315fe97b094448380fc4c71258aa541.jpg', '', 'https://vikingfile.com/d/7J0haJ3TXH/21432456y5.ER-GameDrive.Org.part1.rar
-https://vikingfile.com/d/6ZCPmDQkmC/21432456y5.ER-GameDrive.Org.part2.rar', 'https://youtu.be/avAXhnbs69w?si=lT3x5VrmAK2PXVO5', 'http://localhost:5050/uploads/f829360484aa4791a369f7ba5034e738.webp
-http://localhost:5050/uploads/27fbf7342a9447a7a0dd1dd417df11b5.jpg
-http://localhost:5050/uploads/0c361748b9134abea88fa7fcf316593d.jpg
-http://localhost:5050/uploads/0a1c565516e24028b220e90d15b3fdc1.webp
-http://localhost:5050/uploads/e04c2c4fd49148ad9fbb3af3b4fcaefa.webp
-http://localhost:5050/uploads/7f803340669c4ab996cab8e306a8ca65.jpg', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#09090b', 0, 'game', '', '', '', '2026-06-19 00:12:10', 'Features
+INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (105, 'HITMAN 3 Free', 'Action', 4.5, 0, 'Death is waiting. Agent 47 returns in Hitman 3, the spectacular conclusion to the World of Assassins trilogy. From the very beginning, players have access to all locations from the previous two games, and it is also possible to transfer all their progress from the second part, including all items and completed contracts. The third part again offers extensive locations, “sandboxes“, in which the Forty-seventh g seek and eliminate his targets using a variety of methods, while simultaneously trying not to be seen by the guards', '/uploads/3315fe97b094448380fc4c71258aa541.jpg', '', 'https://vikingfile.com/d/7J0haJ3TXH/21432456y5.ER-GameDrive.Org.part1.rar
+https://vikingfile.com/d/6ZCPmDQkmC/21432456y5.ER-GameDrive.Org.part2.rar', 'https://youtu.be/avAXhnbs69w?si=lT3x5VrmAK2PXVO5', '/uploads/f829360484aa4791a369f7ba5034e738.webp
+/uploads/27fbf7342a9447a7a0dd1dd417df11b5.jpg
+/uploads/0c361748b9134abea88fa7fcf316593d.jpg
+/uploads/0a1c565516e24028b220e90d15b3fdc1.webp
+/uploads/e04c2c4fd49148ad9fbb3af3b4fcaefa.webp
+/uploads/7f803340669c4ab996cab8e306a8ca65.jpg', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#09090b', 0, 'game', '', '', '', '2026-06-19 00:12:10', 'Features
 In Hitman 3, the ruthless pro Agent 47 returns for the most important contracts of his career, where every kill changes the world. Embark on an exciting adventure in the World of Assassins and find out how the story of Agent 47 will end. Death awaits.
 Complete contracts around the world on thoughtful maps with countless possibilities. IOI’s legendary Glacier technology will immerse you in the world of Hitman 3, where the story is completely dependent on the player’s actions, and each playthrough is truly unique.
 Hitman 3 is a great excuse to play every part of the World of Assassins trilogy once again. If you already have Hitman 1 and Hitman 2, you can load levels into Hitman 3 from there for free, and your achievements from Hitman 2 will be copied to Hitman 3 immediately after the release of the new part.
@@ -2206,12 +2206,12 @@ Call of Duty: Black Ops III follows up on the events of Call of Duty: Black Ops 
 
 After the Drone Strikes of 2025, ground combat is once again the focus of military strategy, with bi-pedal combat robots and drones fighting alongside human infantry. Elite Black Ops soldiers have been embedded with a direct neural interface (DNI) that let them communicate with robotics and net-connected weaponry, in addition to other cybernetic bio-augmentations such as super-powered prosthetic limbs.
 
-Get Free Stea', 'http://localhost:5050/uploads/85b4ab51703f4b6e9e1c43d59284f17d.png', '', 'https://vikingfile.com/d/dFhUmoZGof/04h70175g.FR-GameDrive.Org.rar
-https://vikingfile.com/d/Noho9Mh2tR/fg-optional-zombies-selective-english.bin', 'https://youtu.be/qAUYNIDEJ6o?si=oCtkKgonfncR4Ca0', 'http://localhost:5050/uploads/f42c295861f5455199c60caee37395bc.jpg
-http://localhost:5050/uploads/c0dea38b69b74099b32ef92827515053.jpg
-http://localhost:5050/uploads/3af0d8196d334221ac6b36c347ab69f8.webp
-http://localhost:5050/uploads/38d1719c3de54f44835dfd9665f0a103.webp
-http://localhost:5050/uploads/88d84f3871aa4cbeb881529a5b8655c0.jpg', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#09090b', 0, 'game', '', '', '', '2026-06-19 00:16:47', 'Features
+Get Free Stea', '/uploads/85b4ab51703f4b6e9e1c43d59284f17d.png', '', 'https://vikingfile.com/d/dFhUmoZGof/04h70175g.FR-GameDrive.Org.rar
+https://vikingfile.com/d/Noho9Mh2tR/fg-optional-zombies-selective-english.bin', 'https://youtu.be/qAUYNIDEJ6o?si=oCtkKgonfncR4Ca0', '/uploads/f42c295861f5455199c60caee37395bc.jpg
+/uploads/c0dea38b69b74099b32ef92827515053.jpg
+/uploads/3af0d8196d334221ac6b36c347ab69f8.webp
+/uploads/38d1719c3de54f44835dfd9665f0a103.webp
+/uploads/88d84f3871aa4cbeb881529a5b8655c0.jpg', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#09090b', 0, 'game', '', '', '', '2026-06-19 00:16:47', 'Features
 20 Vials of Liquid Divinium
 2 All-New Whimsical GobbleGums
 5 Zombies Pack-A-Punch Weapon Camos
@@ -2227,7 +2227,7 @@ Repack By: PROPER
 Version: v100.2.2.124.0 | Full version + all add-ons + Multiplayer (bots / splitscreen) + Zombie mode
 Pre-Installed Game
 GOFILE', '', '', '', '', '', '', '');
-INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (107, 'Devil May Cry 5', 'Action', 4.5, 0, 'The Devil you know returns in this brand new entry in the over-the-top action series available on the PC. Prepare to get downright demonic with this signature blend of high-octane stylized action and otherworldly & original characters the series is known for. Director Hideaki Itsuno and the core team have returned to create the most insane, technically advanced and utterly unmissable action experience of this generation.', 'http://localhost:5050/uploads/e925b180f59d400baec39d7bb78ef40d.jpg', '', 'https://fuckingfast.co/v1klr6jo2jxk#Devil_May_Cry_5_--_fitgirl-repacks.site_--_.part01.rar
+INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (107, 'Devil May Cry 5', 'Action', 4.5, 0, 'The Devil you know returns in this brand new entry in the over-the-top action series available on the PC. Prepare to get downright demonic with this signature blend of high-octane stylized action and otherworldly & original characters the series is known for. Director Hideaki Itsuno and the core team have returned to create the most insane, technically advanced and utterly unmissable action experience of this generation.', '/uploads/e925b180f59d400baec39d7bb78ef40d.jpg', '', 'https://fuckingfast.co/v1klr6jo2jxk#Devil_May_Cry_5_--_fitgirl-repacks.site_--_.part01.rar
 https://fuckingfast.co/6t126rq5j8lq#Devil_May_Cry_5_--_fitgirl-repacks.site_--_.part02.rar
 https://fuckingfast.co/66sgy8de9rqd#Devil_May_Cry_5_--_fitgirl-repacks.site_--_.part03.rar
 https://fuckingfast.co/6mhsj71k8zi6#Devil_May_Cry_5_--_fitgirl-repacks.site_--_.part04.rar
@@ -2273,21 +2273,21 @@ https://fuckingfast.co/j24tlwi6s5dd#Devil_May_Cry_5_--_fitgirl-repacks.site_--_.
 https://fuckingfast.co/s62lsh7qycc5#Devil_May_Cry_5_--_fitgirl-repacks.site_--_.part45.rar
 https://fuckingfast.co/dcr1a7tkzvxf#fg-selective-english.bin
 https://fuckingfast.co/q2mtvfqsbzo4#fg-selective-japanese.bin
-https://fuckingfast.co/63al48un5a1d#fg-optional-history-video.bin', 'https://youtu.be/KMSGj9Y2T9Q?si=HRJXKtHnhb9UbGCd', 'http://localhost:5050/uploads/9777cdabce4d4fd49f424d97f7e8833c.jpg
-http://localhost:5050/uploads/887b928471c14e01ac730742ba4535bd.jpg
-http://localhost:5050/uploads/b5e994ef76dd48a1836897079b95daf0.jpg
-http://localhost:5050/uploads/cf1f491815554180a63da67872a78e6f.jpg
-http://localhost:5050/uploads/b674db88de5d4ad393511ec1644cf23f.webp', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#09090b', 0, 'game', '', '', '', '2026-06-19 00:22:03', 'Features
+https://fuckingfast.co/63al48un5a1d#fg-optional-history-video.bin', 'https://youtu.be/KMSGj9Y2T9Q?si=HRJXKtHnhb9UbGCd', '/uploads/9777cdabce4d4fd49f424d97f7e8833c.jpg
+/uploads/887b928471c14e01ac730742ba4535bd.jpg
+/uploads/b5e994ef76dd48a1836897079b95daf0.jpg
+/uploads/cf1f491815554180a63da67872a78e6f.jpg
+/uploads/b674db88de5d4ad393511ec1644cf23f.webp', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#09090b', 0, 'game', '', '', '', '2026-06-19 00:22:03', 'Features
 High octane stylized action – Featuring three playable characters each with a radically different stylish combat play style as they take on the city overrun with demons
 Groundbreaking graphics – Developed with Capcom’s in-house proprietary RE engine, the series continues to achieve new heights in fidelity with graphics that utilize photorealistic character designs and stunning lighting and environmental effects.
 Take down the demonic invasion – Battle against epic bosses in adrenaline fueled fights across the over-run Red Grave City all to the beat of a truly killer soundtrack.
 Demon hunter – Nero, one of the series main protagonists and a young demon hunter who has the blood of Sparda, heads to Red Grave City to face the hellish onslaught of demons, with weapons craftswoman and new partner-in-crime, Nico. Nero is also joined by stylish, legendary demon hunter, Dante and the mysterious new character, V.
 DLCs Added', '', '', '', '', '', '', '');
-INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (108, 'ELDEN RING NIGHTREIGN', 'Action, RPG', 4.5, 2, 'ELDEN RING: NIGHTREIGN offers a fresh journey set in the iconic ELDEN RING universe, built as a standalone adventure with a reimagined gameplay approach. Players can team up in three-player co-op to face the encroaching darkness and a host of deadly threats. Each hero comes equipped with unique abilities and traits, adding depth and variety to every encounter. The true strength of the game lies in combining these heroes’ powers to unlock devastating team-based strategies. As you venture into the night, prepare to face evolving dangers that keep every session unpredictable. Tinkerlands', 'http://localhost:5050/uploads/85d826090d294bd1841b4edc264bcd33.jpg', '', 'https://vikingfile.com/d/ocCWFuL65C/f047587g.DR-GameDrive.Org.rar
-https://vikingfile.com/d/ULLDJuMd1M/Optional-Bonus-Content.doi', 'https://youtu.be/Djtsw5k_DNc?si=rv2r6yPcpJmRLhIr', 'http://localhost:5050/uploads/29b552e4db27487aa7031d135d690f64.png
-http://localhost:5050/uploads/8c8f9ddaefdf4746b6047c9f32d0b9e0.webp
-http://localhost:5050/uploads/5ddf7b8aabec483fb441287b0eeb38cc.jpg
-http://localhost:5050/uploads/d294b1672ab7422394d904cc65d0b7c3.jpg', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#1d4ed8', 0, 'game', '', '', '', '2026-06-19 00:28:29', 'GAME INFO
+INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (108, 'ELDEN RING NIGHTREIGN', 'Action, RPG', 4.5, 2, 'ELDEN RING: NIGHTREIGN offers a fresh journey set in the iconic ELDEN RING universe, built as a standalone adventure with a reimagined gameplay approach. Players can team up in three-player co-op to face the encroaching darkness and a host of deadly threats. Each hero comes equipped with unique abilities and traits, adding depth and variety to every encounter. The true strength of the game lies in combining these heroes’ powers to unlock devastating team-based strategies. As you venture into the night, prepare to face evolving dangers that keep every session unpredictable. Tinkerlands', '/uploads/85d826090d294bd1841b4edc264bcd33.jpg', '', 'https://vikingfile.com/d/ocCWFuL65C/f047587g.DR-GameDrive.Org.rar
+https://vikingfile.com/d/ULLDJuMd1M/Optional-Bonus-Content.doi', 'https://youtu.be/Djtsw5k_DNc?si=rv2r6yPcpJmRLhIr', '/uploads/29b552e4db27487aa7031d135d690f64.png
+/uploads/8c8f9ddaefdf4746b6047c9f32d0b9e0.webp
+/uploads/5ddf7b8aabec483fb441287b0eeb38cc.jpg
+/uploads/d294b1672ab7422394d904cc65d0b7c3.jpg', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#1d4ed8', 0, 'game', '', '', '', '2026-06-19 00:28:29', 'GAME INFO
 Genre: Action, RPG
 Developer: FromSoftware, Inc.
 Platform: PC
@@ -2297,14 +2297,14 @@ Version: v1.03.2 + Co-op | Full Version + All DLCs
 Pre-Installed Game', '', '', '', '', '', '', '');
 INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (109, 'Call of Duty WWII', 'Action', 4.5, 1, 'Call of Duty returns to its roots with Call of Duty WW2 – a breathtaking experience that redefines World War II for a new gaming generation. Land in Normandy on D-Day and battle across Europe through iconic locations in history’s most monumental war. Soulash
 
-Experience classic Call of Duty combat, the bonds of camaraderie, and the unforgiving nature of war against a global power throwing the world into tyranny. Call of Duty: World War 2 creates the definitive World War II next generation experience across three different game modes: Campaign, Multiplayer, and Co-Operative.', 'http://localhost:5050/uploads/735f3b798ec74c6289219906f0798344.jpg', '', 'https://ffdl.cybar.to/7tjruc7xo6fb
+Experience classic Call of Duty combat, the bonds of camaraderie, and the unforgiving nature of war against a global power throwing the world into tyranny. Call of Duty: World War 2 creates the definitive World War II next generation experience across three different game modes: Campaign, Multiplayer, and Co-Operative.', '/uploads/735f3b798ec74c6289219906f0798344.jpg', '', 'https://ffdl.cybar.to/7tjruc7xo6fb
 https://ffdl.cybar.to/ckegzfhb6l8c
-https://ffdl.cybar.to/1yimpwsa8t1a', 'https://youtu.be/D4Q_XYVescc?si=odRQfW4EQTEzpUk_', 'http://localhost:5050/uploads/dbc933bf323845bdacc7dc320dfb9d56.jpg
-http://localhost:5050/uploads/d156de5bcbe5499498b0d741b332a0ac.webp
-http://localhost:5050/uploads/f2eaea5ee8e0487cb8837e8fd419044f.webp
-http://localhost:5050/uploads/104c4059c4234eadba76c22bcefe6be3.webp
-http://localhost:5050/uploads/e6fd8a902812413b967e1fc837a86635.webp
-http://localhost:5050/uploads/bd368425fdc94c30b5d8de8335ee876c.jpg', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#27272a', 0, 'game', '', '', '', '2026-06-19 00:35:53', 'GAME INFO
+https://ffdl.cybar.to/1yimpwsa8t1a', 'https://youtu.be/D4Q_XYVescc?si=odRQfW4EQTEzpUk_', '/uploads/dbc933bf323845bdacc7dc320dfb9d56.jpg
+/uploads/d156de5bcbe5499498b0d741b332a0ac.webp
+/uploads/f2eaea5ee8e0487cb8837e8fd419044f.webp
+/uploads/104c4059c4234eadba76c22bcefe6be3.webp
+/uploads/e6fd8a902812413b967e1fc837a86635.webp
+/uploads/bd368425fdc94c30b5d8de8335ee876c.jpg', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#27272a', 0, 'game', '', '', '', '2026-06-19 00:35:53', 'GAME INFO
 Genre: Action
 Developer: Sledgehammer Games, Raven Software
 Platform: PC
@@ -2343,7 +2343,7 @@ FL26 includes the all new English commentary v8, it includes new call names for 
 the players/staff faces are available as a separate addon due to the large size, it is highly recommended to download and install the new SP Facepack 26-27 page as it would add a lot of immersion to the game.
 
 - Stadiums
-36 stadiums installed by default in the game, more stadiums are available per region in the SP Stadiums addon page.', 'http://localhost:5050/uploads/90bb3a96b98745bc80b78e52c49ffedb.jpg', '', 'https://download2390.mediafire.com/k3umrhbq7ysgLd74r9Lm4uvKcXapQivxTM6YLKMeN9L2I9684vr5-Qdyvr4l7mizZMcpEQNtalUwO7IxaUgkP5RuPVtf7KlqAd-G_NiGqGdAVWN9CKT9M4lotSi_nBtdBKwlsodl6XDj2Boo6cP6Xx31bFCc6InevmRxnBIssqtWwCE/9yyhs3x69yqq71h/SPFL26.part01.rar
+36 stadiums installed by default in the game, more stadiums are available per region in the SP Stadiums addon page.', '/uploads/90bb3a96b98745bc80b78e52c49ffedb.jpg', '', 'https://download2390.mediafire.com/k3umrhbq7ysgLd74r9Lm4uvKcXapQivxTM6YLKMeN9L2I9684vr5-Qdyvr4l7mizZMcpEQNtalUwO7IxaUgkP5RuPVtf7KlqAd-G_NiGqGdAVWN9CKT9M4lotSi_nBtdBKwlsodl6XDj2Boo6cP6Xx31bFCc6InevmRxnBIssqtWwCE/9yyhs3x69yqq71h/SPFL26.part01.rar
 
 https://download2393.mediafire.com/c652lcf2qrogKkjMmKivC8xhUAqMZi5m2Hsx1BWxR7JSbk3hI3UTFfuW48OVt-UFNhiSe7icIoncNHikuo65yr2KFJhDtJV3IZ_QYOCo3bZYFz2BEOYnsBkljNflAUmxHti72T3sa1o1NVteScty7t0L0cUUZUPgQJ8VDTjjj9to2ho/4dez2tvtud2h26u/SPFL26.part02.rar
 
@@ -2358,11 +2358,11 @@ https://download2432.mediafire.com/a33o9kyw9jwgU7pwTjmmG8337KHjUEp93CZbLgouPURYq
 https://download2442.mediafire.com/ydrpst4iisrgn4YL3p5yzRSvsFXrRV5QMNSVFhjBlgkPQvEoDV14bun1E19ZgtFYcAbo1aFmSr7HM0cwlXV8ZYE68RstiRAOrdkNGMbkp9FSOJVQHJ-SgkR9b4BSf64rlA_7l9T8sUmuBvcWESt-WgyFQ9Ux5et5gz-Rs2TiT--xHy0/1gs6u6cinr6zqbp/SPFL26.part10.rar
 https://download2337.mediafire.com/7qqdyqm5igegDdu218ykW1ZJduTqmaOCKqUI0T29jUJiYzS3plzhi7O0Pk6VJpIFHazJX2ahsYyN8MIuyIesHcl2CTNeYtcAHVL4-2MqQeVzZOAKGExFH1stMoFBxjxHUb4Fuy-Rp08-v1voFnOSKedzWy1iezaBpYCZkPJv3faNT-U/0fghg1a51xsm7uq/SPFL26.part11.rar
 https://download2430.mediafire.com/4qhn1and8org6hAS7BUmHhK0zei7-bXqxNSUdf76A1AcIeXfsmR1y15ZxlIhtYlLMVJgx3yRlh9prvlZVVQs2JejWYf4sheG0Hnlc1HpvLm5qU-Kluze5SvY3r1ijRuQXensooHnw-da7eusaxZcXSKQEyDbbcimm2gvEY-4_KbblN4/6irfnpz12gbcxrq/SPFL26_200.rar
-https://download2435.mediafire.com/x7xyuewf7x7gHSoRYSDL3vlly0-YHv-9eTMLbgJAdDnnlCLepcHHIPe9z3qE5LpsqzngwIdqljOFhNSDg3WIYboduqOnb1ftl1yKN9DvOT2KBEmddqZprm6JEmuKxPouDldI8zcfDyFmLqavyr7iQhNGId47rBjZKw32TKSpXF8BW80/f00bfbg5d29javy/SPFL26_220.rar', 'https://youtu.be/rakoLSS0Jbk?si=-Adq5sGngnY4e3ff', 'http://localhost:5050/uploads/d47cb609f50a48bb8ddd874997b83982.jpg
-http://localhost:5050/uploads/419dd2d6ddd24b5bbaa5247c2de124c3.webp
-http://localhost:5050/uploads/53e60ac8c46c4b4d95e4a5c35cec2b6e.jpg
-http://localhost:5050/uploads/6453be7c1a4841a895d645952ed07785.webp
-http://localhost:5050/uploads/4c1f215ede534adf928faf9ce8107b04.webp', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#b91c1c', 0, 'game', '', '', '', '2026-06-19 00:51:35', '', '', '', '', '', '', '', '');
+https://download2435.mediafire.com/x7xyuewf7x7gHSoRYSDL3vlly0-YHv-9eTMLbgJAdDnnlCLepcHHIPe9z3qE5LpsqzngwIdqljOFhNSDg3WIYboduqOnb1ftl1yKN9DvOT2KBEmddqZprm6JEmuKxPouDldI8zcfDyFmLqavyr7iQhNGId47rBjZKw32TKSpXF8BW80/f00bfbg5d29javy/SPFL26_220.rar', 'https://youtu.be/rakoLSS0Jbk?si=-Adq5sGngnY4e3ff', '/uploads/d47cb609f50a48bb8ddd874997b83982.jpg
+/uploads/419dd2d6ddd24b5bbaa5247c2de124c3.webp
+/uploads/53e60ac8c46c4b4d95e4a5c35cec2b6e.jpg
+/uploads/6453be7c1a4841a895d645952ed07785.webp
+/uploads/4c1f215ede534adf928faf9ce8107b04.webp', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#b91c1c', 0, 'game', '', '', '', '2026-06-19 00:51:35', '', '', '', '', '', '', '', '');
 INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (111, 'TEKKEN 8', 'Action', 4.5, 0, 'GET READY FOR THE NEXT CHAPTER IN THE LEGENDARY FIGHTING GAME FRANCHISE, TEKKEN 8.
 
 Completely redesigned character visuals. Elaborate, highly-detailed models built from the ground and high-fidelity graphics break the limits of new-generation hardware by adding a new weight and atmosphere to TEKKEN’s signature battles. Vivid environments and destructible stages combine to create an overwhelming sense of immersion, creating the ultimate play experience. Cursorblade
@@ -2371,12 +2371,12 @@ Fist Meets Fate in TEKKEN 8. Holding a record for the longest-running video game
 
 The new battle system, Heat, dials up the aggressive nature of battles, while maintaining the play feel and tactics unique to the TEKKEN series. The intensity of battles is greatly enhanced by the destructable stages. Unleashing super move-like Rage Arts is sure to enthrall both players and spectators alike. All of these hard-hitting mechanics come together to make TEKKEN 8 the most exciting installment in the series to date!
 
-In the new single-player mode Arcade Quest, craft your own unique avatar and embark on your new TEKKEN life. Battle your way through a variety of rivals across multiple arcades as the story unfolds, all while mastering the basics and practical skills in TEKKEN 8. Unlock a variety of customization items for characters and avatars as you progress.', 'http://localhost:5050/uploads/f19f1dfe1ff64ba4b8ce231a5ef30f9f.webp', '', 'https://ffdl.cybar.to/956xmnevyy8z
+In the new single-player mode Arcade Quest, craft your own unique avatar and embark on your new TEKKEN life. Battle your way through a variety of rivals across multiple arcades as the story unfolds, all while mastering the basics and practical skills in TEKKEN 8. Unlock a variety of customization items for characters and avatars as you progress.', '/uploads/f19f1dfe1ff64ba4b8ce231a5ef30f9f.webp', '', 'https://ffdl.cybar.to/956xmnevyy8z
 https://ffdl.cybar.to/64nduqv8wiy5
-https://ffdl.cybar.to/m9g5go4s5ply', 'https://youtu.be/2hPuRQz6IlM?si=ABwhugio6rKBciFg', 'http://localhost:5050/uploads/d88b2862a66a4056ae11fc991385971b.png
-http://localhost:5050/uploads/aab098be2dc244caaec3eff750b076fd.webp
-http://localhost:5050/uploads/701f8269e5614c9bb060be398b85878c.webp
-http://localhost:5050/uploads/c750ecb2b4f6497093c3cdc2d6fea0a3.jpg', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#27272a', 0, 'game', '', '', '', '2026-06-19 01:08:35', 'GAME INFO
+https://ffdl.cybar.to/m9g5go4s5ply', 'https://youtu.be/2hPuRQz6IlM?si=ABwhugio6rKBciFg', '/uploads/d88b2862a66a4056ae11fc991385971b.png
+/uploads/aab098be2dc244caaec3eff750b076fd.webp
+/uploads/701f8269e5614c9bb060be398b85878c.webp
+/uploads/c750ecb2b4f6497093c3cdc2d6fea0a3.jpg', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#27272a', 0, 'game', '', '', '', '2026-06-19 01:08:35', 'GAME INFO
 Genre: Action
 Developer: Bandai Namco Studios Inc.
 Platform: PC
@@ -2394,12 +2394,12 @@ The multiplayer experience has been significantly updated, with cross-platform p
 
 Realism mode removes the HUD for an even more immersive experience.
 Ground War mode now supports massive 64-player battles, similar to Cold War.
-Plus, a free-to-play battle royale mode called Warzone was added after launch, which you can also get as a standalone game.', 'http://localhost:5050/uploads/49ebf6919e6a4ea9be07052cee13987f.webp', '', 'https://ffdl.cybar.to/l6t77ufg6rho
+Plus, a free-to-play battle royale mode called Warzone was added after launch, which you can also get as a standalone game.', '/uploads/49ebf6919e6a4ea9be07052cee13987f.webp', '', 'https://ffdl.cybar.to/l6t77ufg6rho
 https://ffdl.cybar.to/zcuadsgeecn7
-https://ffdl.cybar.to/8xu3rr06dofr', 'https://youtu.be/bH1lHCirCGI?si=7hd9KE49bVvP9p_U', 'http://localhost:5050/uploads/8ede6fcaf7f44acf8840cd213d79f031.jpg
-http://localhost:5050/uploads/1b3d499fae1644d2810af91cb4e63514.webp
-http://localhost:5050/uploads/ceee83fae6594045aad127b1d402fd9a.webp
-http://localhost:5050/uploads/90e0770000c14456a66da2aeb3dfe002.webp', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#3f3f46', 0, 'game', '', '', '', '2026-06-19 01:31:11', 'GAME INFO
+https://ffdl.cybar.to/8xu3rr06dofr', 'https://youtu.be/bH1lHCirCGI?si=7hd9KE49bVvP9p_U', '/uploads/8ede6fcaf7f44acf8840cd213d79f031.jpg
+/uploads/1b3d499fae1644d2810af91cb4e63514.webp
+/uploads/ceee83fae6594045aad127b1d402fd9a.webp
+/uploads/90e0770000c14456a66da2aeb3dfe002.webp', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#3f3f46', 0, 'game', '', '', '', '2026-06-19 01:31:11', 'GAME INFO
 Genre: Action
 Developer: Infinity Ward, Beenox, High Moon Studios, Raven Software
 Platform: PC
@@ -2407,7 +2407,7 @@ Game Size: 177 GB
 Released By: V3 (by .r4v3n) | Ty Ksenia, Fitgirl repacks
 Version: v8.67 | Full Version + SinglePlayer Campaign, Multiplayer (with bots), Coop
 Pre-Installed Game', '', '', '', '', '', '', '');
-INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (113, 'HYPERVISOR  Judgment', 'Action, Adventure, Hypervisor', 4.5, 0, '', 'http://localhost:5050/uploads/e46248fae0c14d7e973456914083441a.jpg', '', 'https://fuckingfast.co/kk8odd00lxtn#Judgment_--_fitgirl-repacks.site_--_.part01.rar
+INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (113, 'HYPERVISOR  Judgment', 'Action, Adventure, Hypervisor', 4.5, 0, '', '/uploads/e46248fae0c14d7e973456914083441a.jpg', '', 'https://fuckingfast.co/kk8odd00lxtn#Judgment_--_fitgirl-repacks.site_--_.part01.rar
 https://fuckingfast.co/38gvj3a2pc9b#Judgment_--_fitgirl-repacks.site_--_.part02.rar
 https://fuckingfast.co/4px3ozkyb48z#Judgment_--_fitgirl-repacks.site_--_.part03.rar
 https://fuckingfast.co/pp4livbwk99y#Judgment_--_fitgirl-repacks.site_--_.part04.rar
@@ -2447,12 +2447,12 @@ https://fuckingfast.co/kn965a5fxm1z#Judgment_--_fitgirl-repacks.site_--_.part37.
 https://fuckingfast.co/9j761lx995ob#Judgment_--_fitgirl-repacks.site_--_.part38.rar
 https://fuckingfast.co/du4tyz27p6kn#Judgment_--_fitgirl-repacks.site_--_.part39.rar
 https://fuckingfast.co/1cxgqzt8ywme#Judgment_--_fitgirl-repacks.site_--_.part40.rar
-https://fuckingfast.co/d1jqcjtvaiyd#fg-optional-bonus-soundtracks.bin', 'https://youtu.be/38dK9-y0cbM?si=JdbXDa53T21Ks0DC', 'http://localhost:5050/uploads/71fd029d1fb8450a9ca4aec8a77d33e6.jpg
-http://localhost:5050/uploads/040e223f9618403ea9d297666ed18c90.jpg
-http://localhost:5050/uploads/b402f844a6bb401e94ee2b484700c787.webp
-http://localhost:5050/uploads/d8c8bdda1a874361bf5afa5403c0a58a.jpg
-http://localhost:5050/uploads/316fd0b109eb4509b581ea3cfc82ea7f.jpg
-http://localhost:5050/uploads/f0039d0811d94459ac4eb42ff5fab2e7.jpg', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#09090b', 0, 'game', '', '', '', '2026-06-19 13:04:42', 'Repack Features
+https://fuckingfast.co/d1jqcjtvaiyd#fg-optional-bonus-soundtracks.bin', 'https://youtu.be/38dK9-y0cbM?si=JdbXDa53T21Ks0DC', '/uploads/71fd029d1fb8450a9ca4aec8a77d33e6.jpg
+/uploads/040e223f9618403ea9d297666ed18c90.jpg
+/uploads/b402f844a6bb401e94ee2b484700c787.webp
+/uploads/d8c8bdda1a874361bf5afa5403c0a58a.jpg
+/uploads/316fd0b109eb4509b581ea3cfc82ea7f.jpg
+/uploads/f0039d0811d94459ac4eb42ff5fab2e7.jpg', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#09090b', 0, 'game', '', '', '', '2026-06-19 13:04:42', 'Repack Features
 Based on Steam BuildID 10792091 release: 35.7 GB
 2 Bonus OSTs (JUDGE EYES & LOST JUDGMENT ORIGINAL SOUND TRACK & Original Soundtrack, 560 MB) added, thanks to SittingOnClouds!
 Russian localization by “The Miracle” (292 MB) is available in “_Russian_Localization” folder after installation
@@ -2471,10 +2471,10 @@ HDD space after installation: up to 36.6 GB
 Language can be changed in “runtime/media/steam_settings/configs.user.ini” file
 Repack uses XTool library by Razor12911
 At least 4 GB of free RAM (inc. virtual) required for installing this repack', '', '', '', '', '', '', '');
-INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (114, 'Need for Speed Most Wanted Limited Edition', 'Racing', 4.5, 0, 'The open-world action in Need for Speed Most Wanted gives you the freedom to drive your way. Hit jumps and shortcuts, switch cars, lie low, or head for terrain that plays to your vehicle’s unique strengths. Fight your way past cops and rivals using skill, high-end car tech, and tons of nitrous. It’s all about you, your friends, and a wild selection of cars. Let’s see what you can do. Experience nonstop action — No menus, no lobbies, and no restrictions — just intense competition.', 'http://localhost:5050/uploads/fa8fc4eeec494d6aaedaea3256850064.jpg', '', 'https://vikingfile.com/d/WFqbGG1Zp5/rt25797.ER-GameDrive.Org.rar', 'https://youtu.be/L7eHnAS3BDE?si=IGhddRjtkwxeG9_y', 'http://localhost:5050/uploads/89e7b2d90dc140f6b3937e6e3b267068.webp
-http://localhost:5050/uploads/99a961c75dfd468f8b1430999702b7ff.webp
-http://localhost:5050/uploads/c2ef4c3ef50d41bd97434d15842009f3.webp
-http://localhost:5050/uploads/bd3ab842d4434bc79b3ec66a3385db63.jpg', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#ffffff', 0, 'game', '', '', '', '2026-06-19 13:25:09', 'GAME INFO
+INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (114, 'Need for Speed Most Wanted Limited Edition', 'Racing', 4.5, 0, 'The open-world action in Need for Speed Most Wanted gives you the freedom to drive your way. Hit jumps and shortcuts, switch cars, lie low, or head for terrain that plays to your vehicle’s unique strengths. Fight your way past cops and rivals using skill, high-end car tech, and tons of nitrous. It’s all about you, your friends, and a wild selection of cars. Let’s see what you can do. Experience nonstop action — No menus, no lobbies, and no restrictions — just intense competition.', '/uploads/fa8fc4eeec494d6aaedaea3256850064.jpg', '', 'https://vikingfile.com/d/WFqbGG1Zp5/rt25797.ER-GameDrive.Org.rar', 'https://youtu.be/L7eHnAS3BDE?si=IGhddRjtkwxeG9_y', '/uploads/89e7b2d90dc140f6b3937e6e3b267068.webp
+/uploads/99a961c75dfd468f8b1430999702b7ff.webp
+/uploads/c2ef4c3ef50d41bd97434d15842009f3.webp
+/uploads/bd3ab842d4434bc79b3ec66a3385db63.jpg', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#ffffff', 0, 'game', '', '', '', '2026-06-19 13:25:09', 'GAME INFO
 Genre: Action, Adventure, Racing
 Developer: Criterion Games
 Platform: PC
@@ -2485,13 +2485,13 @@ Pre-Installed Game', '', '', '', '', '', '', '');
 INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (115, 'Mortal Kombat 11', 'Action', 4.5, 0, 'After game installation remove this line from file “Binaries\Retail\steam_emu.ini“, otherwise in-game movies may not be displayed.
 1461160=4K Cinematic Pack (Mortal Kombat 11 4K Cinematic Pack)
 
-Mortal Kombat 11 is another part of a fighting game dedicated to a deadly battle. This time, even more epic battles, improved graphics and a well-thought-out story mode await you And first of all, I would like to say that this time the game is based on an advanced improved graphics engine, thanks to which the developers managed to create an simply unimaginable atmosphere. Realistic arenas with environments that will be used in battles, a huge number of new combinations, including final ones, realistic animation of characters and faces, in which you can even see emotions – all this is not a complete list of what awaits you in the new game.', 'http://localhost:5050/uploads/08b92b5e4ede4486a89f10a7ca9bd066.webp', '', 'https://vikingfile.com/d/Sw8WI6HvGz/dfgii.ER-GameDrive.Org.part1.rar
-https://vikingfile.com/d/Uu4bCB35Ll/dfgii.ER-GameDrive.Org.part2.rar', 'https://youtu.be/UoTams2yc0s?si=Zuajfi0sSf9jrcJz', 'http://localhost:5050/uploads/707e7ab6ec8d4ca5a2c5cd6cdd3eeddd.jpg
-http://localhost:5050/uploads/8df2405874864ec8855d61b35e156f6c.png
-http://localhost:5050/uploads/7028f1a7861d4ffeae6a687009fdddda.webp
-http://localhost:5050/uploads/e4f91f5b1d8a4183bf6fd37e9a4ed8e2.jpg
-http://localhost:5050/uploads/810e14855fab4b1185058b7b04414459.jpg
-http://localhost:5050/uploads/84cedad05b56431fa82e7addf1808cbf.webp', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#3b82f6', 0, 'game', '', '', '', '2026-06-19 13:33:50', 'GAME INFO
+Mortal Kombat 11 is another part of a fighting game dedicated to a deadly battle. This time, even more epic battles, improved graphics and a well-thought-out story mode await you And first of all, I would like to say that this time the game is based on an advanced improved graphics engine, thanks to which the developers managed to create an simply unimaginable atmosphere. Realistic arenas with environments that will be used in battles, a huge number of new combinations, including final ones, realistic animation of characters and faces, in which you can even see emotions – all this is not a complete list of what awaits you in the new game.', '/uploads/08b92b5e4ede4486a89f10a7ca9bd066.webp', '', 'https://vikingfile.com/d/Sw8WI6HvGz/dfgii.ER-GameDrive.Org.part1.rar
+https://vikingfile.com/d/Uu4bCB35Ll/dfgii.ER-GameDrive.Org.part2.rar', 'https://youtu.be/UoTams2yc0s?si=Zuajfi0sSf9jrcJz', '/uploads/707e7ab6ec8d4ca5a2c5cd6cdd3eeddd.jpg
+/uploads/8df2405874864ec8855d61b35e156f6c.png
+/uploads/7028f1a7861d4ffeae6a687009fdddda.webp
+/uploads/e4f91f5b1d8a4183bf6fd37e9a4ed8e2.jpg
+/uploads/810e14855fab4b1185058b7b04414459.jpg
+/uploads/84cedad05b56431fa82e7addf1808cbf.webp', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#3b82f6', 0, 'game', '', '', '', '2026-06-19 13:33:50', 'GAME INFO
 Genre: Action
 Developer: NetherRealm Studios, QLOC, Shiver
 Platform: PC
@@ -2503,13 +2503,13 @@ INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_u
 A Turning Point: Experience Lara Croft’s intense origin story from a young woman to a hardened survivor.
 An All-New Raiding Experience: Explore a mysterious island filled with environmental puzzles, visceral combat, and tombs to discover.
 Fight to Live: Salvage resources, gain experience, and upgrade Lara’s weapons and tools to survive the island’s hostile inhabitants.
-Survive as a Team: Play a variety of multiplayer modes as Lara’s Shipmates or Yamatai’s Scavengers.', 'http://localhost:5050/uploads/24da20f1ddc245caac317504b71a5802.webp', '', 'https://vikingfile.com/d/g0kfw4MWRi/y65uzf.ER-GameDrive.Org.rar', 'https://youtu.be/zF9m91y8Na0?si=2WAzioc3jH3xqZty', 'http://localhost:5050/uploads/0c812e5aecb0413bbab824c28769d965.jpg
-http://localhost:5050/uploads/4a7ad5f4d83c41d2b0301968c3838bac.jpg
-http://localhost:5050/uploads/226b217b63054de4955a5e3215a420df.jpg
-http://localhost:5050/uploads/c4c1858478d8408bb165430fd8d3fb2e.jpg
-http://localhost:5050/uploads/5254b993ed124f4d8e34366293eddccb.jpg
-http://localhost:5050/uploads/e390a3ebf0094d7582af010e97fbced4.jpg
-http://localhost:5050/uploads/8d5c1f0d23474e8a98faade7325208c5.jpg', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#52525b', 0, 'game', '', '', '', '2026-06-19 13:39:40', 'GAME INFO
+Survive as a Team: Play a variety of multiplayer modes as Lara’s Shipmates or Yamatai’s Scavengers.', '/uploads/24da20f1ddc245caac317504b71a5802.webp', '', 'https://vikingfile.com/d/g0kfw4MWRi/y65uzf.ER-GameDrive.Org.rar', 'https://youtu.be/zF9m91y8Na0?si=2WAzioc3jH3xqZty', '/uploads/0c812e5aecb0413bbab824c28769d965.jpg
+/uploads/4a7ad5f4d83c41d2b0301968c3838bac.jpg
+/uploads/226b217b63054de4955a5e3215a420df.jpg
+/uploads/c4c1858478d8408bb165430fd8d3fb2e.jpg
+/uploads/5254b993ed124f4d8e34366293eddccb.jpg
+/uploads/e390a3ebf0094d7582af010e97fbced4.jpg
+/uploads/8d5c1f0d23474e8a98faade7325208c5.jpg', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#52525b', 0, 'game', '', '', '', '2026-06-19 13:39:40', 'GAME INFO
 Genre: Action, Adventure
 Developer: Crystal Dynamics, Eidos-Montréal, Feral Interactive (Mac), Nixxes
 Platform: PC
@@ -2517,11 +2517,11 @@ Game Size: 22.4 GB
 Released By: TENOKE
 Version: v1.01.0.0 | Full Version
 Pre-Installed Game', '', '', '', '', '', '', '');
-INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (117, 'NieR:Automata', 'Action, RPG', 4.5, 0, 'NieR Automata is a cool RPG in which you will fight aliens as a cool, effeminate robot sent by humans to Earth to reclaim it The game takes place many hundreds of years after the original game. The war with aliens was never won, and in the end people were forced to leave Earth and move to the Moon. But no matter how it was, the desire to return back people has not left, and that is why they continue to send detachments of fighters to Earth.', 'http://localhost:5050/uploads/1b8fd7b641714a6f9b6b9a02058bbab8.jpg', '', 'https://vikingfile.com/d/V6j1MbmTkw/54gfgfghg.ER-GameDrive.Org.rar', 'https://youtu.be/wJxNhJ8fjFk?si=3Gttb2U3JOpYRv4L', 'http://localhost:5050/uploads/798cbdea71e64801a3c0df9d2b483abc.jpg
-http://localhost:5050/uploads/4ac3aa11a43b4c82b6d604a1d1e814f2.jpg
-http://localhost:5050/uploads/23ce9d325ed14e9099cbe46d5a3ae643.webp
-http://localhost:5050/uploads/2716e556276a4eb98cb9b2594b7082f8.jpg
-http://localhost:5050/uploads/ed973050e6dc46f29e12e05151220912.jpg', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#09090b', 0, 'game', '', '', '', '2026-06-19 13:45:58', 'GAME INFO
+INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (117, 'NieR:Automata', 'Action, RPG', 4.5, 0, 'NieR Automata is a cool RPG in which you will fight aliens as a cool, effeminate robot sent by humans to Earth to reclaim it The game takes place many hundreds of years after the original game. The war with aliens was never won, and in the end people were forced to leave Earth and move to the Moon. But no matter how it was, the desire to return back people has not left, and that is why they continue to send detachments of fighters to Earth.', '/uploads/1b8fd7b641714a6f9b6b9a02058bbab8.jpg', '', 'https://vikingfile.com/d/V6j1MbmTkw/54gfgfghg.ER-GameDrive.Org.rar', 'https://youtu.be/wJxNhJ8fjFk?si=3Gttb2U3JOpYRv4L', '/uploads/798cbdea71e64801a3c0df9d2b483abc.jpg
+/uploads/4ac3aa11a43b4c82b6d604a1d1e814f2.jpg
+/uploads/23ce9d325ed14e9099cbe46d5a3ae643.webp
+/uploads/2716e556276a4eb98cb9b2594b7082f8.jpg
+/uploads/ed973050e6dc46f29e12e05151220912.jpg', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#09090b', 0, 'game', '', '', '', '2026-06-19 13:45:58', 'GAME INFO
 Genre: Action, RPG
 Developer: Square Enix
 Platform: PC
@@ -2529,23 +2529,23 @@ Game Size: 14.8 GB
 Repack By: CPY
 Version: v1.0.1787043 (Game of the YoRHa Edition) | Updated Version + All DLC
 Pre-Installed Game', '', '', '', '', '', '', '');
-INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (118, 'Sleeping Dogs: Definitive Edition', 'Action, Adventure, Racing', 4.5, 0, 'The Definitive Edition of the critically acclaimed, award winning open-world action adventure, reworked, rebuilt and re-mastered for the new generation. Settlement Survival All 24 previously available DLC extensions have been integrated into the game, including the story-extending episode Year of the Snake and the horror-themed Nightmare in North Point. Alongside a wealth of new technological, audio and visual improvements, Hong Kong has never felt so alive.', 'http://localhost:5050/uploads/5258d4ac8ce74ee3b5aa000884c0f4d6.jpg', '', 'https://ffdl.cybar.to/t8pupc1plu5l', 'https://youtu.be/YjM67H0gP7U?si=ptfizaOZiwJg5kBZ', 'http://localhost:5050/uploads/309c9aab0191462cb0da2e88069fba51.jpg
-http://localhost:5050/uploads/dc4c0b4ebfb740ed83adf0c80d5b5449.jpg
-http://localhost:5050/uploads/6e0e0551188f4c9889d865ad31007708.jpg
-http://localhost:5050/uploads/e16de2a39b684e3f816a7f54541b6975.jpg
-http://localhost:5050/uploads/92f0e46204174537828e5d693218022e.webp
-http://localhost:5050/uploads/28402b6d4d2848c3a62d3a305b5c48d0.webp', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#fed7aa', 0, 'game', '', '', '', '2026-06-19 13:51:06', 'Features
+INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (118, 'Sleeping Dogs: Definitive Edition', 'Action, Adventure, Racing', 4.5, 0, 'The Definitive Edition of the critically acclaimed, award winning open-world action adventure, reworked, rebuilt and re-mastered for the new generation. Settlement Survival All 24 previously available DLC extensions have been integrated into the game, including the story-extending episode Year of the Snake and the horror-themed Nightmare in North Point. Alongside a wealth of new technological, audio and visual improvements, Hong Kong has never felt so alive.', '/uploads/5258d4ac8ce74ee3b5aa000884c0f4d6.jpg', '', 'https://ffdl.cybar.to/t8pupc1plu5l', 'https://youtu.be/YjM67H0gP7U?si=ptfizaOZiwJg5kBZ', '/uploads/309c9aab0191462cb0da2e88069fba51.jpg
+/uploads/dc4c0b4ebfb740ed83adf0c80d5b5449.jpg
+/uploads/6e0e0551188f4c9889d865ad31007708.jpg
+/uploads/e16de2a39b684e3f816a7f54541b6975.jpg
+/uploads/92f0e46204174537828e5d693218022e.webp
+/uploads/28402b6d4d2848c3a62d3a305b5c48d0.webp', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#fed7aa', 0, 'game', '', '', '', '2026-06-19 13:51:06', 'Features
 A mature, gritty undercover cop drama where a wrong decision can blow your cover at any time.
 Explosive action fuelled by a seamless mix of deadly martial arts, intense gunfights and brutal takedowns.
 Epic high-speed thrills: Burn up the streets or tear up the sea in a vast array of exotic cars, superbikes and speedboats.
 Hong Kong is your ultimate playground: Enter illegal street races, gamble on cock fights, or kick back with some karaoke. There are countless ways to entertain yourself in Hong Kong’s diverse districts.', '', '', '', '', '', '', '');
 INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (119, 'Sifu', 'Action', 4.5, 0, 'Sifu is a beat ’em up action-adventure game played from a third-person perspective. The game, which is inspired by Pak Mei kung fu, includes over 150 unique attacks. Basic attack moves can be chained together, though some combos may grant players additional tactical opportunities, such as being able to knock down enemies or stun them. The protagonist and all hostile enemy characters have a “structural gauge”.
 
-When the gauge is completely filled, the guard of these characters will break and they will become vulnerable to finishing attacks. Players can also block strikes, though this will gradually fill their gauge. Alternatively, players can also evade attacks or parry when an enemy is about to land a blow. A successful parry allows the player to stun the enemy or throw them towards a particular direction. The game allows players to take advantage of the environment and improvise new attacks or alter their strategy when facing a stronger opponent.', 'http://localhost:5050/uploads/3ae024aa769843898e5236603caa7c09.jpg', '', 'https://ts.bzzhr.to/d/fx56v77o7kqx?v=MgKdNbDAcu2-M0NVRH9dpfrmNmr01YfOF4eyusT0W8MTYIiR7KspX1M1fPglH222fUmz9GGJRlny5JP5jqMfezgWIWDbsP7r8JtkFl7d4uQS8Fluw7VHXoOp6uXPX84yDJ5IDCImwePZghKkFEl_VH19AiY_2nPzDSCAxmcz', 'https://youtu.be/1FQ1YO3Ks2U?si=EiJEyzldeuLKF33X', 'http://localhost:5050/uploads/456394f8774d408fa093e0ecc6cdacf6.jpg
-http://localhost:5050/uploads/a45754d9a97a459484170068c4bd5e6e.jpg
-http://localhost:5050/uploads/3538e72657234460b78aab456132ebe6.webp
-http://localhost:5050/uploads/328867945c8244aabf1325ede8d57603.png
-http://localhost:5050/uploads/4648cbb2449242498d1c0b62334a513a.webp', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#b91c1c', 0, 'game', '', '', '', '2026-06-19 13:57:00', 'GAME INFO
+When the gauge is completely filled, the guard of these characters will break and they will become vulnerable to finishing attacks. Players can also block strikes, though this will gradually fill their gauge. Alternatively, players can also evade attacks or parry when an enemy is about to land a blow. A successful parry allows the player to stun the enemy or throw them towards a particular direction. The game allows players to take advantage of the environment and improvise new attacks or alter their strategy when facing a stronger opponent.', '/uploads/3ae024aa769843898e5236603caa7c09.jpg', '', 'https://ts.bzzhr.to/d/fx56v77o7kqx?v=MgKdNbDAcu2-M0NVRH9dpfrmNmr01YfOF4eyusT0W8MTYIiR7KspX1M1fPglH222fUmz9GGJRlny5JP5jqMfezgWIWDbsP7r8JtkFl7d4uQS8Fluw7VHXoOp6uXPX84yDJ5IDCImwePZghKkFEl_VH19AiY_2nPzDSCAxmcz', 'https://youtu.be/1FQ1YO3Ks2U?si=EiJEyzldeuLKF33X', '/uploads/456394f8774d408fa093e0ecc6cdacf6.jpg
+/uploads/a45754d9a97a459484170068c4bd5e6e.jpg
+/uploads/3538e72657234460b78aab456132ebe6.webp
+/uploads/328867945c8244aabf1325ede8d57603.png
+/uploads/4648cbb2449242498d1c0b62334a513a.webp', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#b91c1c', 0, 'game', '', '', '', '2026-06-19 13:57:00', 'GAME INFO
 Genre: Action, Casual, Indie
 Developer: Sloclap
 Platform: PC
@@ -2562,7 +2562,7 @@ Eikonic Action – Clive utilizes the powers of multiple Eikons in breakneck bat
 From Strength to Strength
 A plethora of powerful swordplay techniques and Eikonic abilities lie within Clive’s remit—and it is up to you to decide which ones you wish to learn or upgrade. If you’re having trouble choosing, upgrades can be unlocked automatically. Grand Theft Auto V Enhanced
 
-Story-focused mode is recommended for those players who are less comfortable with action games and wish to focus more on the game’s story elements. In this mode, Clive will automatically evade some attacks, and epic Eikonic combos can be triggered with simple button presses. Action-focused mode, where Clive’s every action is controlled by the player, is available for those who are confident in their skill—or want to test it.', 'http://localhost:5050/uploads/be301a0df222426d90d180a1a2c7f001.jpg', '', 'https://fuckingfast.co/twrqdslyd0a4#Final_Fantasy_XV_--_fitgirl-repacks.site_--_.part01.rar
+Story-focused mode is recommended for those players who are less comfortable with action games and wish to focus more on the game’s story elements. In this mode, Clive will automatically evade some attacks, and epic Eikonic combos can be triggered with simple button presses. Action-focused mode, where Clive’s every action is controlled by the player, is available for those who are confident in their skill—or want to test it.', '/uploads/be301a0df222426d90d180a1a2c7f001.jpg', '', 'https://fuckingfast.co/twrqdslyd0a4#Final_Fantasy_XV_--_fitgirl-repacks.site_--_.part01.rar
 https://fuckingfast.co/0i12bbqwlnia#Final_Fantasy_XV_--_fitgirl-repacks.site_--_.part02.rar
 https://fuckingfast.co/a3nap6qbl9ik#Final_Fantasy_XV_--_fitgirl-repacks.site_--_.part03.rar
 https://fuckingfast.co/7wuzkg0hpein#Final_Fantasy_XV_--_fitgirl-repacks.site_--_.part04.rar
@@ -2592,10 +2592,10 @@ https://fuckingfast.co/zkk9m9i6bqiy#fg-optional-bonus-soundtracks.bin
 https://fuckingfast.co/51nyaqdn0nnq#fg-optional-multiplayer-files.bin
 https://fuckingfast.co/1yris3a1na0h#fg-optional-japanese-videos.part1.rar
 https://fuckingfast.co/5uv77lr14ttl#fg-optional-japanese-videos.part2.rar
-https://fuckingfast.co/91ftk5mb559d#fg-optional-japanese-videos.part3.rar', 'https://youtu.be/gV5rIW1Qums?si=Q8lGQHJl66bnoxX3', 'http://localhost:5050/uploads/98a29d0cd6144b828bf4c174895b5a13.webp
-http://localhost:5050/uploads/1997ad655e7344bbb16dd415ebc3de8a.png
-http://localhost:5050/uploads/2582334f1e59489295e4eaec554cf15b.jpg
-http://localhost:5050/uploads/ed690712ae0e48059c1f49c42c6ea113.webp', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#09090b', 0, 'game', '', '', '', '2026-06-19 14:05:31', 'GAME INFO
+https://fuckingfast.co/91ftk5mb559d#fg-optional-japanese-videos.part3.rar', 'https://youtu.be/gV5rIW1Qums?si=Q8lGQHJl66bnoxX3', '/uploads/98a29d0cd6144b828bf4c174895b5a13.webp
+/uploads/1997ad655e7344bbb16dd415ebc3de8a.png
+/uploads/2582334f1e59489295e4eaec554cf15b.jpg
+/uploads/ed690712ae0e48059c1f49c42c6ea113.webp', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#09090b', 0, 'game', '', '', '', '2026-06-19 14:05:31', 'GAME INFO
 Genre: Action, RPG
 Developer: Square Enix
 Platform: PC
@@ -2680,8 +2680,8 @@ Languages: English, French, Italian, German, Spanish, Polish, Portuguese-Brazil,
 Dubbing/Audio: English, French, Italian, German, Spanish, Polish, Japanese', '', '', '', '', '', '', '');
 
 -- Export Movies
-INSERT INTO movies (id, title, genre, year, duration, rating, downloads, description, poster_url, backdrop_url, trailer_url, video_url, download_links, screenshots, director, cast_name, series_name, season, episode, color, type, created_at) VALUES (9, 'Michael 2026', 'Drama, Musical, History, Documentary', 2026, '2hrs 7mins', 4.5, 0, 'The early life of musician Michael Jackson, from the discovery of his talent as the lead of the Jackson Five to the artist whose creative ambition fueled a pursuit to become the biggest ente..', 'http://localhost:5050/uploads/301ac68c78664438b1cac176d4ca161b.png', '', 'https://youtu.be/3zOLzsbOleM?si=mN73n6U6ttOhy4os', '', 'https://file-eu-par-2.gofile.io/download/web/6cccaade-d29a-4207-a788-1be24b4a0a8f/Michael.2026.1080p.WEBRip.x264.AAC5.1-YIFY.rar', '', '', '', '', 0, 0, '#f59e0b', 'movie', '2026-06-17 18:48:29');
-INSERT INTO movies (id, title, genre, year, duration, rating, downloads, description, poster_url, backdrop_url, trailer_url, video_url, download_links, screenshots, director, cast_name, series_name, season, episode, color, type, created_at) VALUES (10, 'Mortal Kombat II 2026', 'Action, Adventure, Sci-Fi', 2026, '1hr 56mins', 4.6, 0, 'The fan favorite champions — now joined by Johnny Cage himself — are pitted against one another in the ultimate battle to defeat the dark rule of Shao Kahn that threatens the very existenc…', 'http://localhost:5050/uploads/56388c3ff24049398b5845c715ecd546.jpg', '', 'https://youtu.be/o7mTgt8Cb80?si=jFYb7xQYosdSYDva', '', 'https://file-na-phx-1.gofile.io/download/web/702a9bd3-be00-4351-910d-48485dd0806b/Mortal.Kombat.II.2026.1080p.WEBRip.x264.AAC-YIFY.rar', '', '', '', '', 0, 0, '#09090b', 'movie', '2026-06-17 19:15:19');
+INSERT INTO movies (id, title, genre, year, duration, rating, downloads, description, poster_url, backdrop_url, trailer_url, video_url, download_links, screenshots, director, cast_name, series_name, season, episode, color, type, created_at) VALUES (9, 'Michael 2026', 'Drama, Musical, History, Documentary', 2026, '2hrs 7mins', 4.5, 0, 'The early life of musician Michael Jackson, from the discovery of his talent as the lead of the Jackson Five to the artist whose creative ambition fueled a pursuit to become the biggest ente..', '/uploads/301ac68c78664438b1cac176d4ca161b.png', '', 'https://youtu.be/3zOLzsbOleM?si=mN73n6U6ttOhy4os', '', 'https://file-eu-par-2.gofile.io/download/web/6cccaade-d29a-4207-a788-1be24b4a0a8f/Michael.2026.1080p.WEBRip.x264.AAC5.1-YIFY.rar', '', '', '', '', 0, 0, '#f59e0b', 'movie', '2026-06-17 18:48:29');
+INSERT INTO movies (id, title, genre, year, duration, rating, downloads, description, poster_url, backdrop_url, trailer_url, video_url, download_links, screenshots, director, cast_name, series_name, season, episode, color, type, created_at) VALUES (10, 'Mortal Kombat II 2026', 'Action, Adventure, Sci-Fi', 2026, '1hr 56mins', 4.6, 0, 'The fan favorite champions — now joined by Johnny Cage himself — are pitted against one another in the ultimate battle to defeat the dark rule of Shao Kahn that threatens the very existenc…', '/uploads/56388c3ff24049398b5845c715ecd546.jpg', '', 'https://youtu.be/o7mTgt8Cb80?si=jFYb7xQYosdSYDva', '', 'https://file-na-phx-1.gofile.io/download/web/702a9bd3-be00-4351-910d-48485dd0806b/Mortal.Kombat.II.2026.1080p.WEBRip.x264.AAC-YIFY.rar', '', '', '', '', 0, 0, '#09090b', 'movie', '2026-06-17 19:15:19');
 
 -- Export Comments
 INSERT INTO comments (id, game_id, user_id, text, created_at) VALUES (1, 18, 2, 'wow', '2026-06-17 19:00:37');
@@ -2870,28 +2870,28 @@ INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, 
 -- Export Weekly Stats
 
 -- Export Category Banners
-INSERT INTO category_banners (genre, banner_url, updated_at) VALUES ('Action', 'http://localhost:5050/uploads/04296a67a9ba49d5892473dc48c265ec.jpg', '2026-06-13 17:20:06');
-INSERT INTO category_banners (genre, banner_url, updated_at) VALUES ('Racing', 'http://localhost:5050/uploads/f5b3e8c744154cf592ab049797297604.jpg', '2026-06-13 17:21:30');
-INSERT INTO category_banners (genre, banner_url, updated_at) VALUES ('Adventure', 'http://localhost:5050/uploads/68816b90ac0e4231ab0771fd2b98b242.jpg', '2026-06-13 17:21:43');
-INSERT INTO category_banners (genre, banner_url, updated_at) VALUES ('Horror', 'http://localhost:5050/uploads/b0c7fac19dd0483e9467fc3cedcf5250.jpg', '2026-06-13 17:21:55');
-INSERT INTO category_banners (genre, banner_url, updated_at) VALUES ('Sports', 'http://localhost:5050/uploads/ba62f949e6b446aebad5d377accb823a.jpg', '2026-06-13 17:22:09');
+INSERT INTO category_banners (genre, banner_url, updated_at) VALUES ('Action', '/uploads/04296a67a9ba49d5892473dc48c265ec.jpg', '2026-06-13 17:20:06');
+INSERT INTO category_banners (genre, banner_url, updated_at) VALUES ('Racing', '/uploads/f5b3e8c744154cf592ab049797297604.jpg', '2026-06-13 17:21:30');
+INSERT INTO category_banners (genre, banner_url, updated_at) VALUES ('Adventure', '/uploads/68816b90ac0e4231ab0771fd2b98b242.jpg', '2026-06-13 17:21:43');
+INSERT INTO category_banners (genre, banner_url, updated_at) VALUES ('Horror', '/uploads/b0c7fac19dd0483e9467fc3cedcf5250.jpg', '2026-06-13 17:21:55');
+INSERT INTO category_banners (genre, banner_url, updated_at) VALUES ('Sports', '/uploads/ba62f949e6b446aebad5d377accb823a.jpg', '2026-06-13 17:22:09');
 INSERT INTO category_banners (genre, banner_url, updated_at) VALUES ('Home', '/uploads/5721e81df83d4f8182bfbae6f25641af.png', '2026-06-22 15:30:27');
-INSERT INTO category_banners (genre, banner_url, updated_at) VALUES ('Hypervisor', 'http://localhost:5050/uploads/d1dd54f23b25484a98e8f8b0a8f58bd9.png', '2026-06-14 03:56:25');
-INSERT INTO category_banners (genre, banner_url, updated_at) VALUES ('Strategy', 'http://localhost:5050/uploads/4cfc18da0b2641faab976e515b084d71.jpg', '2026-06-14 03:58:45');
-INSERT INTO category_banners (genre, banner_url, updated_at) VALUES ('RPG', 'http://localhost:5050/uploads/d92cce07dea7434da4a8451040c5660f.jpg', '2026-06-14 04:00:45');
-INSERT INTO category_banners (genre, banner_url, updated_at) VALUES ('GamesPad', 'http://localhost:5050/uploads/4f0a442a8d6a4109b6dcbd3ed9eac51a.png', '2026-06-14 20:12:27');
-INSERT INTO category_banners (genre, banner_url, updated_at) VALUES ('SoftwarePad', 'http://localhost:5050/uploads/87dbfea1e68f4210ad13cc9982caacef.png', '2026-06-14 20:13:26');
-INSERT INTO category_banners (genre, banner_url, updated_at) VALUES ('SoftwareHero', 'http://localhost:5050/uploads/3fef47777b334f9890f086c15ca686ca.png', '2026-06-14 20:13:48');
-INSERT INTO category_banners (genre, banner_url, updated_at) VALUES ('Antivirus & Security', 'http://localhost:5050/uploads/c1d028da65ed477f914f8e86a4791602.png', '2026-06-14 20:56:20');
-INSERT INTO category_banners (genre, banner_url, updated_at) VALUES ('Browsers', 'http://localhost:5050/uploads/5c38ac9560e64e3189b7abf6debb99a5.png', '2026-06-14 20:56:41');
-INSERT INTO category_banners (genre, banner_url, updated_at) VALUES ('Design & 3D', 'http://localhost:5050/uploads/8947f9e3b74b4e25942a12df4826fcc4.png', '2026-06-14 21:11:57');
-INSERT INTO category_banners (genre, banner_url, updated_at) VALUES ('Development Tools', 'http://localhost:5050/uploads/7aa6d61a69b947c98d31ca2863f6c369.png', '2026-06-14 21:12:16');
-INSERT INTO category_banners (genre, banner_url, updated_at) VALUES ('Multimedia & Audio', 'http://localhost:5050/uploads/fb5cde11585748d0989ea3850a6f4675.png', '2026-06-14 21:12:33');
-INSERT INTO category_banners (genre, banner_url, updated_at) VALUES ('Productivity & Office', 'http://localhost:5050/uploads/ab1ab910f40d48a3b57388c2481cdd23.png', '2026-06-14 21:12:47');
-INSERT INTO category_banners (genre, banner_url, updated_at) VALUES ('Utilities & System', 'http://localhost:5050/uploads/1c695c50d0e54b349cafed4f214431c4.png', '2026-06-14 21:13:44');
-INSERT INTO category_banners (genre, banner_url, updated_at) VALUES ('MoviesPad', 'http://localhost:5050/uploads/a969093bbe3248928fe8e9e206060d97.png', '2026-06-17 22:41:38');
-INSERT INTO category_banners (genre, banner_url, updated_at) VALUES ('MovieHero', 'http://localhost:5050/uploads/0e675169afc04824aab2b0f0d25b9145.png', '2026-06-17 22:12:55');
-INSERT INTO category_banners (genre, banner_url, updated_at) VALUES ('admin-users', 'http://localhost:5050/uploads/06d58b002601450bbf247bf91b0618a9.jpg', '2026-06-19 12:38:21');
+INSERT INTO category_banners (genre, banner_url, updated_at) VALUES ('Hypervisor', '/uploads/d1dd54f23b25484a98e8f8b0a8f58bd9.png', '2026-06-14 03:56:25');
+INSERT INTO category_banners (genre, banner_url, updated_at) VALUES ('Strategy', '/uploads/4cfc18da0b2641faab976e515b084d71.jpg', '2026-06-14 03:58:45');
+INSERT INTO category_banners (genre, banner_url, updated_at) VALUES ('RPG', '/uploads/d92cce07dea7434da4a8451040c5660f.jpg', '2026-06-14 04:00:45');
+INSERT INTO category_banners (genre, banner_url, updated_at) VALUES ('GamesPad', '/uploads/4f0a442a8d6a4109b6dcbd3ed9eac51a.png', '2026-06-14 20:12:27');
+INSERT INTO category_banners (genre, banner_url, updated_at) VALUES ('SoftwarePad', '/uploads/87dbfea1e68f4210ad13cc9982caacef.png', '2026-06-14 20:13:26');
+INSERT INTO category_banners (genre, banner_url, updated_at) VALUES ('SoftwareHero', '/uploads/3fef47777b334f9890f086c15ca686ca.png', '2026-06-14 20:13:48');
+INSERT INTO category_banners (genre, banner_url, updated_at) VALUES ('Antivirus & Security', '/uploads/c1d028da65ed477f914f8e86a4791602.png', '2026-06-14 20:56:20');
+INSERT INTO category_banners (genre, banner_url, updated_at) VALUES ('Browsers', '/uploads/5c38ac9560e64e3189b7abf6debb99a5.png', '2026-06-14 20:56:41');
+INSERT INTO category_banners (genre, banner_url, updated_at) VALUES ('Design & 3D', '/uploads/8947f9e3b74b4e25942a12df4826fcc4.png', '2026-06-14 21:11:57');
+INSERT INTO category_banners (genre, banner_url, updated_at) VALUES ('Development Tools', '/uploads/7aa6d61a69b947c98d31ca2863f6c369.png', '2026-06-14 21:12:16');
+INSERT INTO category_banners (genre, banner_url, updated_at) VALUES ('Multimedia & Audio', '/uploads/fb5cde11585748d0989ea3850a6f4675.png', '2026-06-14 21:12:33');
+INSERT INTO category_banners (genre, banner_url, updated_at) VALUES ('Productivity & Office', '/uploads/ab1ab910f40d48a3b57388c2481cdd23.png', '2026-06-14 21:12:47');
+INSERT INTO category_banners (genre, banner_url, updated_at) VALUES ('Utilities & System', '/uploads/1c695c50d0e54b349cafed4f214431c4.png', '2026-06-14 21:13:44');
+INSERT INTO category_banners (genre, banner_url, updated_at) VALUES ('MoviesPad', '/uploads/a969093bbe3248928fe8e9e206060d97.png', '2026-06-17 22:41:38');
+INSERT INTO category_banners (genre, banner_url, updated_at) VALUES ('MovieHero', '/uploads/0e675169afc04824aab2b0f0d25b9145.png', '2026-06-17 22:12:55');
+INSERT INTO category_banners (genre, banner_url, updated_at) VALUES ('admin-users', '/uploads/06d58b002601450bbf247bf91b0618a9.jpg', '2026-06-19 12:38:21');
 INSERT INTO category_banners (genre, banner_url, updated_at) VALUES ('GamesHero', '/uploads/fd57249cac2347a7a062cc92805dc079.png', '2026-06-22 15:39:51');
 
 -- Export Requests

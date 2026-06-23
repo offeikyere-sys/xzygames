@@ -17,6 +17,22 @@ DB_PATH = os.environ.get('LOCAL_DB_PATH', os.path.join(
 ))
 OUTPUT_FILE = os.path.join(os.path.dirname(__file__), "postgresql_export.sql")
 
+def fix_url(value):
+    """Fix URLs for cross-server compatibility:
+    - http://localhost:5050/uploads/... -> /uploads/...
+    - Local file paths (D:\, C:\, etc.)  -> '' (empty, so fallback shows)
+    - Already valid URLs or empty -> unchanged
+    """
+    if not value:
+        return ''
+    # Convert localhost URLs to relative paths
+    value = value.replace('http://localhost:5050/uploads/', '/uploads/')
+    value = value.replace('http://localhost:3000/uploads/', '/uploads/')
+    # If it's a local file path (not a valid URL), clear it — the frontend will show gradient fallback
+    if value.startswith(('D:\\', 'd:\\', 'C:\\', 'c:\\', '/PICTURES', '/software', '/movies', '/AND', '\\')):
+        return ''
+    return value
+
 def export_database():
     """Export SQLite database to PostgreSQL-compatible SQL file."""
     conn = sqlite3.connect(DB_PATH)
@@ -43,7 +59,7 @@ def export_database():
             f.write(f"INSERT INTO users (id, name, email, password, avatar_color, is_admin, email_verified, avatar_url, supabase_id, created_at) VALUES ")
             f.write(f"({user_dict['id']}, '{user_dict['name'].replace(chr(39), chr(39)+chr(39))}', '{user_dict['email']}', '{user_dict['password']}', ")
             f.write(f"'{user_dict.get('avatar_color', '#3b82f6')}', {is_admin}, {email_verified}, ")
-            f.write(f"'{user_dict.get('avatar_url', '')}', '{user_dict.get('supabase_id', '')}', ")
+            f.write(f"'{fix_url(user_dict.get('avatar_url', ''))}', '{user_dict.get('supabase_id', '')}', ")
             f.write(f"'{user_dict.get('created_at', datetime.now().strftime('%Y-%m-%d %H:%M:%S'))}');\n")
         f.write("\n")
 
@@ -61,11 +77,11 @@ def export_database():
                 'rating': game_dict.get('rating', 0) or 0,
                 'downloads': game_dict.get('downloads', 0) or 0,
                 'description': (game_dict.get('description') or '').replace("'", "''"),
-                'wallpaper_url': (game_dict.get('wallpaper_url') or '').replace("'", "''"),
-                'download_url': (game_dict.get('download_url') or '').replace("'", "''"),
-                'download_links': (game_dict.get('download_links') or '').replace("'", "''"),
-                'trailer_url': (game_dict.get('trailer_url') or '').replace("'", "''"),
-                'screenshots': (game_dict.get('screenshots') or '').replace("'", "''"),
+                'wallpaper_url': fix_url((game_dict.get('wallpaper_url') or '').replace("'", "''")),
+                'download_url': fix_url((game_dict.get('download_url') or '').replace("'", "''")),
+                'download_links': fix_url((game_dict.get('download_links') or '').replace("'", "''")),
+                'trailer_url': fix_url((game_dict.get('trailer_url') or '').replace("'", "''")),
+                'screenshots': fix_url((game_dict.get('screenshots') or '').replace("'", "''")),
                 'os': (game_dict.get('os') or 'Windows 10/11 64-bit').replace("'", "''"),
                 'processor': (game_dict.get('processor') or 'Intel Core i5-8400').replace("'", "''"),
                 'memory': (game_dict.get('memory') or '16 GB RAM').replace("'", "''"),
@@ -81,12 +97,12 @@ def export_database():
                 'created_at': game_dict.get('created_at', datetime.now().strftime('%Y-%m-%d %H:%M:%S')),
                 'repack_features': (game_dict.get('repack_features') or '').replace("'", "''"),
                 'download_manager_name': (game_dict.get('download_manager_name') or '').replace("'", "''"),
-                'download_manager_url': (game_dict.get('download_manager_url') or '').replace("'", "''"),
+                'download_manager_url': fix_url((game_dict.get('download_manager_url') or '').replace("'", "''")),
                 'usage_guide': (game_dict.get('usage_guide') or '').replace("'", "''"),
                 'troubleshooting': (game_dict.get('troubleshooting') or '').replace("'", "''"),
-                'hypervisor_video_url': (game_dict.get('hypervisor_video_url') or '').replace("'", "''"),
+                'hypervisor_video_url': fix_url((game_dict.get('hypervisor_video_url') or '').replace("'", "''")),
                 'install_guide_text': (game_dict.get('install_guide_text') or '').replace("'", "''"),
-                'install_video_url': (game_dict.get('install_video_url') or '').replace("'", "''"),
+                'install_video_url': fix_url((game_dict.get('install_video_url') or '').replace("'", "''")),
             }
             
             f.write(f"INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES ")
@@ -116,12 +132,12 @@ def export_database():
                 'rating': movie_dict.get('rating', 0) or 0,
                 'downloads': movie_dict.get('downloads', 0) or 0,
                 'description': (movie_dict.get('description') or '').replace("'", "''"),
-                'poster_url': (movie_dict.get('poster_url') or '').replace("'", "''"),
-                'backdrop_url': (movie_dict.get('backdrop_url') or '').replace("'", "''"),
-                'trailer_url': (movie_dict.get('trailer_url') or '').replace("'", "''"),
-                'video_url': (movie_dict.get('video_url') or '').replace("'", "''"),
-                'download_links': (movie_dict.get('download_links') or '').replace("'", "''"),
-                'screenshots': (movie_dict.get('screenshots') or '').replace("'", "''"),
+                'poster_url': fix_url((movie_dict.get('poster_url') or '').replace("'", "''")),
+                'backdrop_url': fix_url((movie_dict.get('backdrop_url') or '').replace("'", "''")),
+                'trailer_url': fix_url((movie_dict.get('trailer_url') or '').replace("'", "''")),
+                'video_url': fix_url((movie_dict.get('video_url') or '').replace("'", "''")),
+                'download_links': fix_url((movie_dict.get('download_links') or '').replace("'", "''")),
+                'screenshots': fix_url((movie_dict.get('screenshots') or '').replace("'", "''")),
                 'director': (movie_dict.get('director') or '').replace("'", "''"),
                 'cast_name': (movie_dict.get('cast_name') or '').replace("'", "''"),
                 'series_name': (movie_dict.get('series_name') or '').replace("'", "''"),
@@ -224,7 +240,7 @@ def export_database():
         for banner in banners:
             banner_dict = dict(banner)
             f.write(f"INSERT INTO category_banners (genre, banner_url, updated_at) VALUES ")
-            f.write(f"('{banner_dict['genre'].replace(chr(39), chr(39)+chr(39))}', '{banner_dict['banner_url'].replace(chr(39), chr(39)+chr(39))}', '{banner_dict['updated_at']}');\n")
+            f.write(f"('{banner_dict['genre'].replace(chr(39), chr(39)+chr(39))}', '{fix_url(banner_dict['banner_url'].replace(chr(39), chr(39)+chr(39)))}', '{banner_dict['updated_at']}');\n")
         f.write("\n")
 
         # Export requests
