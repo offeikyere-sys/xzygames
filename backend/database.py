@@ -57,10 +57,23 @@ class DBWrapper:
                 query = query.replace(", 0)", ", FALSE)")
         cursor = self.conn.cursor()
         self._last_cursor = cursor
+        
         if params:
             cursor.execute(query, params)
         else:
             cursor.execute(query)
+        
+        # Monkey-patch lastrowid onto cursor for PostgreSQL
+        # psycopg2 doesn't have lastrowid, but main.py uses cursor.lastrowid everywhere
+        if DB_TYPE == "postgresql":
+            try:
+                cur = self.conn.cursor()
+                cur.execute("SELECT LASTVAL()")
+                row = cur.fetchone()
+                cursor.lastrowid = row[0] if row else None
+            except:
+                cursor.lastrowid = None
+        
         return cursor
     
     def commit(self):
@@ -68,19 +81,6 @@ class DBWrapper:
     
     def close(self):
         self.conn.close()
-    
-    @property
-    def lastrowid(self):
-        """Return last inserted row ID. Works for both SQLite and PostgreSQL."""
-        if DB_TYPE == "postgresql":
-            try:
-                cur = self.conn.cursor()
-                cur.execute("SELECT LASTVAL()")
-                row = cur.fetchone()
-                return row[0] if row else None
-            except:
-                return None
-        return self._last_cursor.lastrowid if self._last_cursor else None
     
     def __getattr__(self, name):
         return getattr(self.conn, name)
