@@ -1,3 +1,7 @@
+#!/usr/bin/env python3
+"""
+Database wrapper that makes SQLite (local) and PostgreSQL (RunSite) work identically.
+"""
 import os
 import sys
 from datetime import datetime
@@ -15,9 +19,6 @@ else:
     # SQLite for local development
     import sqlite3
     DB_TYPE = "sqlite"
-    # Use environment variable or default to path OUTSIDE git repo to prevent data loss
-    # __file__ is at: d:\PROJECTS WEBSITES AND SOFTWARES\neo-web\backend\database.py
-    # We go up 3 levels to get to: d:\PROJECTS WEBSITES AND SOFTWARES
     _base_dir = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
     DB_PATH = os.environ.get('LOCAL_DB_PATH', os.path.join(
         _base_dir, 'SOFTWARES', 'xzy-local-data', 'xzy.db'
@@ -29,16 +30,33 @@ class DBWrapper:
     """Wrapper that makes db.execute() work for both SQLite and PostgreSQL."""
     def __init__(self, conn):
         self.conn = conn
+        self._last_cursor = None
     
     def execute(self, query, params=None):
         if DB_TYPE == "postgresql":
+            # Parameter placeholder conversion
             query = query.replace("?", "%s")
+            # Date/time function conversion
             query = query.replace("datetime('now')", "CURRENT_TIMESTAMP")
             query = query.replace("date(created_at)", "DATE(created_at)")
-            # PostgreSQL LIKE is case-sensitive, SQLite LIKE is case-insensitive
-            # Use ILIKE for PostgreSQL to match SQLite behavior
+            # Case-insensitive search
             query = query.replace(" LIKE ", " ILIKE ")
+            # Quote reserved SQL keywords used as column names in queries
+            # 'type' is reserved in PostgreSQL
+            query = query.replace(" type =", ' "type" =')
+            query = query.replace(" type ?", ' "type" ?')
+            query = query.replace(" type IN", ' "type" IN')
+            # 'action' is reserved in PostgreSQL
+            query = query.replace(" action =", ' "action" =')
+            query = query.replace(" action IN", ' "action" IN')
+            query = query.replace(" action ?", ' "action" ?')
+            # Fix INSERT values for BOOLEAN columns
+            # PostgreSQL needs TRUE/FALSE not 1/0 for boolean columns
+            if 'INSERT' in query:
+                query = query.replace(", 1)", ", TRUE)")
+                query = query.replace(", 0)", ", FALSE)")
         cursor = self.conn.cursor()
+        self._last_cursor = cursor
         if params:
             cursor.execute(query, params)
         else:
@@ -53,16 +71,16 @@ class DBWrapper:
     
     @property
     def lastrowid(self):
-        """Return last inserted row ID. Works for both SQLite (direct) and PostgreSQL (via RETURNING or cursor.description)."""
+        """Return last inserted row ID. Works for both SQLite and PostgreSQL."""
         if DB_TYPE == "postgresql":
-            # For PostgreSQL, use currval or fetch the last value
             try:
-                result = self.conn.cursor()
-                result.execute("SELECT LASTVAL()")
-                return result.fetchone()[0]
+                cur = self.conn.cursor()
+                cur.execute("SELECT LASTVAL()")
+                row = cur.fetchone()
+                return row[0] if row else None
             except:
                 return None
-        return self.conn.cursor().lastrowid
+        return self._last_cursor.lastrowid if self._last_cursor else None
     
     def __getattr__(self, name):
         return getattr(self.conn, name)
@@ -282,25 +300,18 @@ def init_db():
             )
         """)
 
-        # Add missing columns for PostgreSQL
-        cursor.execute("""
-            SELECT column_name FROM information_schema.columns 
-            WHERE table_name = 'games' AND column_name = 'install_guide_text'
-        """)
+        cursor.execute("SELECT column_name FROM information_schema.columns WHERE table_name = 'games' AND column_name = 'install_guide_text'")
         if not cursor.fetchone():
             cursor.execute("ALTER TABLE games ADD COLUMN install_guide_text TEXT DEFAULT ''")
             print("Added install_guide_text column to games table")
 
-        cursor.execute("""
-            SELECT column_name FROM information_schema.columns 
-            WHERE table_name = 'games' AND column_name = 'install_video_url'
-        """)
+        cursor.execute("SELECT column_name FROM information_schema.columns WHERE table_name = 'games' AND column_name = 'install_video_url'")
         if not cursor.fetchone():
             cursor.execute("ALTER TABLE games ADD COLUMN install_video_url TEXT DEFAULT ''")
             print("Added install_video_url column to games table")
 
     else:
-        # SQLite table creation (original code)
+        # SQLite table creation
         cursor.execute("""
             CREATE TABLE IF NOT EXISTS users (
                 id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -312,8 +323,6 @@ def init_db():
                 created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
             )
         """)
-        
-        # Add email_verified column if it doesn't exist
         try:
             cursor.execute("ALTER TABLE users ADD COLUMN email_verified INTEGER DEFAULT 0")
         except:
@@ -491,21 +500,17 @@ def init_db():
             )
         """)
 
-        # Add avatar_url column if it doesn't exist
         cursor.execute("PRAGMA table_info(users)")
         user_columns = [col[1] for col in cursor.fetchall()]
         if "avatar_url" not in user_columns:
             cursor.execute("ALTER TABLE users ADD COLUMN avatar_url TEXT DEFAULT ''")
             print("Added avatar_url column to users table")
-        
         if "supabase_id" not in user_columns:
             cursor.execute("ALTER TABLE users ADD COLUMN supabase_id TEXT DEFAULT ''")
             print("Added supabase_id column to users table")
 
-        # Add missing columns to games table
         cursor.execute("PRAGMA table_info(games)")
         columns = [col[1] for col in cursor.fetchall()]
-
         migration_columns = {
             "download_links": "TEXT DEFAULT ''",
             "trailer_url": "TEXT DEFAULT ''",
@@ -523,7 +528,6 @@ def init_db():
             "install_guide_text": "TEXT DEFAULT ''",
             "install_video_url": "TEXT DEFAULT ''",
         }
-
         for col, col_type in migration_columns.items():
             if col not in columns:
                 cursor.execute(f"ALTER TABLE games ADD COLUMN {col} {col_type}")
