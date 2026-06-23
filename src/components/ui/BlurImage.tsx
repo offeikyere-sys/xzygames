@@ -7,9 +7,10 @@ interface BlurImageProps {
   wrapperClassName?: string
   width?: number
   height?: number
+  onError?: () => void
 }
 
-export function BlurImage({ src, alt, className = "", wrapperClassName = "", width, height }: BlurImageProps) {
+export function BlurImage({ src, alt, className = "", wrapperClassName = "", width, height, onError }: BlurImageProps) {
   const [inView, setInView] = useState(false)
   const wrapperRef = useRef<HTMLDivElement>(null)
 
@@ -39,6 +40,7 @@ export function BlurImage({ src, alt, className = "", wrapperClassName = "", wid
           height={height}
           loading="lazy"
           className={className}
+          onError={onError}
         />
       )}
     </div>
