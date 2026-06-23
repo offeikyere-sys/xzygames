@@ -35,6 +35,9 @@ class DBWrapper:
             query = query.replace("?", "%s")
             query = query.replace("datetime('now')", "CURRENT_TIMESTAMP")
             query = query.replace("date(created_at)", "DATE(created_at)")
+            # PostgreSQL LIKE is case-sensitive, SQLite LIKE is case-insensitive
+            # Use ILIKE for PostgreSQL to match SQLite behavior
+            query = query.replace(" LIKE ", " ILIKE ")
         cursor = self.conn.cursor()
         if params:
             cursor.execute(query, params)
