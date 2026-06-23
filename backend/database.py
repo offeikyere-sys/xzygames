@@ -51,6 +51,19 @@ class DBWrapper:
     def close(self):
         self.conn.close()
     
+    @property
+    def lastrowid(self):
+        """Return last inserted row ID. Works for both SQLite (direct) and PostgreSQL (via RETURNING or cursor.description)."""
+        if DB_TYPE == "postgresql":
+            # For PostgreSQL, use currval or fetch the last value
+            try:
+                result = self.conn.cursor()
+                result.execute("SELECT LASTVAL()")
+                return result.fetchone()[0]
+            except:
+                return None
+        return self.conn.cursor().lastrowid
+    
     def __getattr__(self, name):
         return getattr(self.conn, name)
 

@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react"
 import { motion } from "framer-motion"
-import { Mail, Calendar, ArrowLeft, Heart, Download, User, Save, X, Camera, Settings, CheckCircle } from "lucide-react"
+import { Mail, Calendar, ArrowLeft, Heart, Download, User, Save, X, Camera, Settings } from "lucide-react"
 import { apiUrl } from "@/lib/api"
 import { BlurImage } from "@/components/ui/BlurImage"
 
@@ -22,7 +22,6 @@ const AVATAR_COLORS = ["#3b82f6", "#a855f7", "#10b981", "#ef4444", "#f59e0b", "#
 
 export function ProfilePage({ user, onBack, onLogout, onSettings }: ProfilePageProps) {
   const [editing, setEditing] = useState(false)
-  const [emailVerified, setEmailVerified] = useState<boolean>(false)
   const [name, setName] = useState(user.name)
   const [email, setEmail] = useState(user.email)
   const [password, setPassword] = useState("")
@@ -42,7 +41,6 @@ export function ProfilePage({ user, onBack, onLogout, onSettings }: ProfilePageP
       .then((res) => res.json())
       .then((data) => {
         if (data.avatar_url) setAvatarUrl(data.avatar_url)
-        setEmailVerified(!!data.email_verified)
       })
       .catch(() => {})
   }, [user.token])
@@ -175,28 +173,6 @@ export function ProfilePage({ user, onBack, onLogout, onSettings }: ProfilePageP
           Back to Home
         </motion.button>
 
-        {/* Email verification warning */}
-        {!emailVerified && (
-          <motion.div
-            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="mb-6 p-4 rounded-xl bg-yellow-500/10 border border-yellow-500/20"
-          >
-            <div className="flex items-start gap-3">
-              <div className="p-2 rounded-lg bg-yellow-500/10 shrink-0">
-                <Mail size={16} className="text-yellow-400" />
-              </div>
-              <div className="flex-1">
-                <p className="text-sm font-medium text-yellow-400">Email not verified</p>
-                <p className="text-xs text-yellow-500/70 mt-1">
-                  Please verify your email to enable commenting on games. 
-                  Check your inbox for the verification code or request a new one in settings.
-                </p>
-              </div>
-            </div>
-          </motion.div>
-        )}
-
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -273,7 +249,6 @@ export function ProfilePage({ user, onBack, onLogout, onSettings }: ProfilePageP
                       <div className="flex items-center justify-center sm:justify-start gap-2 mt-2 text-zinc-400">
                         <Mail size={14} />
                         <span className="text-sm">{user.email}</span>
-                        {emailVerified && <CheckCircle size={14} className="text-green-400" />}
                       </div>
                       <div className="flex items-center justify-center sm:justify-start gap-2 mt-1 text-zinc-500"><Calendar size={14} /><span className="text-sm">Joined recently</span></div>
                     </div>
