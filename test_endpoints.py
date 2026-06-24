@@ -3,7 +3,8 @@
 Quick test script to check all API endpoints.
 Run this while backend is running on localhost:5050
 """
-import requests
+import urllib.request
+import urllib.error
 import sys
 
 BASE_URL = "http://localhost:5050"
@@ -32,15 +33,16 @@ failed = 0
 
 for name, endpoint in endpoints:
     try:
-        response = requests.get(f"{BASE_URL}{endpoint}", timeout=5)
-        if response.status_code == 200:
-            print(f"[OK] {name:20s} - Working")
-            passed += 1
-        else:
-            print(f"[FAIL] {name:20s} - Status {response.status_code}")
-            failed += 1
-            errors.append(f"{name} ({endpoint}): HTTP {response.status_code}")
-    except requests.exceptions.ConnectionError:
+        req = urllib.request.Request(f"{BASE_URL}{endpoint}")
+        with urllib.request.urlopen(req, timeout=5) as response:
+            if response.status == 200:
+                print(f"[OK] {name:20s} - Working")
+                passed += 1
+            else:
+                print(f"[FAIL] {name:20s} - Status {response.status}")
+                failed += 1
+                errors.append(f"{name} ({endpoint}): HTTP {response.status}")
+    except urllib.error.URLError as e:
         print(f"[FAIL] {name:20s} - Backend not running")
         print(f"  -> Start backend first: python neo-web/backend/main.py")
         failed += 1
