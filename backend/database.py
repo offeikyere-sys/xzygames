@@ -31,16 +31,25 @@ class DBWrapper:
         self.conn = conn
     
     def execute(self, query, params=None):
+        is_insert = query.strip().upper().startswith("INSERT")
         if DB_TYPE == "postgresql":
             query = query.replace("?", "%s")
             query = query.replace("datetime('now')", "CURRENT_TIMESTAMP")
             query = query.replace("date(created_at)", "DATE(created_at)")
             query = query.replace(" LIKE ", " ILIKE ")
+            # For INSERT queries, add RETURNING id to get the inserted ID
+            if is_insert:
+                query = query + " RETURNING id"
         cursor = self.conn.cursor()
         if params:
             cursor.execute(query, params)
         else:
             cursor.execute(query)
+        # For PostgreSQL INSERT with RETURNING, fetch the ID and set lastrowid
+        if DB_TYPE == "postgresql" and is_insert:
+            result = cursor.fetchone()
+            if result and result[0]:
+                cursor.lastrowid = result[0]
         return cursor
     
     def commit(self):
