@@ -883,9 +883,9 @@ export function NeoGamesLayout() {
 
       <ScrollToTop />
 
-      {/* Live Activity Feed */}
-      {showActivityFeed && <ActivityFeed />}
-      {!showActivityFeed && <ActivityFeedToggle onShow={() => setShowActivityFeed(true)} />}
+      {/* Live Activity Feed (admin only) */}
+      {showActivityFeed && user?.is_admin === 1 && <ActivityFeed />}
+      {!showActivityFeed && user?.is_admin === 1 && <ActivityFeedToggle onShow={() => setShowActivityFeed(true)} />}
 
       {/* Admin Activity Panel (toggle with Konami code: ↑↑↓↓←→←→BA) */}
       {showAdminPanel && user && user.is_admin === 1 && (

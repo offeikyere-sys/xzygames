@@ -29,6 +29,7 @@ class DBWrapper:
     """Wrapper that makes db.execute() work for both SQLite and PostgreSQL."""
     def __init__(self, conn):
         self.conn = conn
+        self._last_insert_id = None
     
     def execute(self, query, params=None):
         is_insert = query.strip().upper().startswith("INSERT")
@@ -51,16 +52,15 @@ class DBWrapper:
             cursor.execute(query, params)
         else:
             cursor.execute(query)
-        # For PostgreSQL INSERT with RETURNING, fetch the ID
-        if DB_TYPE == "postgresql" and is_insert:
-            result = cursor.fetchone()
-            if result and result[0]:
-                # Store in a custom attribute since lastrowid is read-only in psycopg2
-                cursor._last_insert_id = result[0]
+        # Store last insert ID for retrieval after commit
+        self._last_insert_id = None
+        if is_insert:
+            if DB_TYPE == "postgresql":
+                result = cursor.fetchone()
+                if result and result[0]:
+                    self._last_insert_id = result[0]
             else:
-                cursor._last_insert_id = None
-        else:
-            cursor._last_insert_id = None
+                self._last_insert_id = cursor.lastrowid
         return cursor
     
     def commit(self):

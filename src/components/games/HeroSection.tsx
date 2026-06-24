@@ -21,6 +21,7 @@ interface HeroSectionProps {
 
 export function HeroSection({ userToken, isAdmin, activeSection, isHomePage, onBrowse }: HeroSectionProps) {
   const [trailerOpen, setTrailerOpen] = useState(false)
+  const [randomTrailer, setRandomTrailer] = useState<{ trailer_url: string; title: string; item_type: string } | null>(null)
   const [bannerUrl, setBannerUrl] = useState<string | null>(null)
   const [bannerModalOpen, setBannerModalOpen] = useState(false)
   const [softwareBannerUrl, setSoftwareBannerUrl] = useState<string | null>(null)
@@ -34,6 +35,20 @@ export function HeroSection({ userToken, isAdmin, activeSection, isHomePage, onB
 
   const isSoftwarePage = !isHomePage && activeSection === "software"
   const isMoviePage = !isHomePage && activeSection === "movies"
+
+  // Fetch random trailer on mount
+  useEffect(() => {
+    const controller = new AbortController()
+    fetch(apiUrl("/api/random-trailer"), { signal: controller.signal })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data && data.trailer_url) {
+          setRandomTrailer(data)
+        }
+      })
+      .catch(() => {})
+    return () => controller.abort()
+  }, [])
 
   // Fetch banner and stats
   useEffect(() => {
@@ -362,11 +377,12 @@ export function HeroSection({ userToken, isAdmin, activeSection, isHomePage, onB
         <ChevronDown size={16} className="text-zinc-500" />
       </motion.div>
 
-      {/* Trailer Modal */}
+      {/* Trailer Modal - shows a random trailer from the website */}
       <TrailerModal
         isOpen={trailerOpen}
         onClose={() => setTrailerOpen(false)}
-        title={isMoviePage ? "XZY Movies" : isSoftwarePage ? "XZY Software" : "XZY Games"}
+        title={randomTrailer?.title || (isMoviePage ? "XZY Movies" : isSoftwarePage ? "XZY Software" : "XZY Games")}
+        videoUrl={randomTrailer?.trailer_url}
       />
 
       {/* AI Chat Modal */}

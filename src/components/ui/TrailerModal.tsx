@@ -73,8 +73,7 @@ export function TrailerModal({ isOpen, onClose, title, videoUrl }: TrailerModalP
                       <Play size={32} className="text-blue-400 ml-1" />
                     </div>
                     <h3 className="text-lg font-semibold text-white mb-2">{title}</h3>
-                    <p className="text-sm text-zinc-500">Trailer coming soon</p>
-                    <p className="text-xs text-zinc-600 mt-2">Add a YouTube URL when adding the game</p>
+                    <p className="text-sm text-zinc-500">No trailer available</p>
                   </div>
                 </div>
               )}

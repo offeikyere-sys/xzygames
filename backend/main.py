@@ -210,7 +210,7 @@ def verify_signup(req: VerifySignupRequest):
             (req.name, req.email, hash_password(req.password), color, is_admin, True)
         )
         db.commit()
-        user_id = cursor._last_insert_id if hasattr(cursor, '_last_insert_id') else db.execute("SELECT last_insert_rowid()").fetchone()[0]
+        user_id = db._last_insert_id if db._last_insert_id else db.execute("SELECT last_insert_rowid()").fetchone()[0]
         token = create_session_token(user_id, db)
         return {"id": user_id, "name": req.name, "email": req.email, "token": token, "is_admin": is_admin}
     finally:
@@ -397,7 +397,7 @@ def signup(user: UserSignup):
             (user.name, user.email, hash_password(user.password), color, is_admin, True)
         )
         db.commit()
-        user_id = cursor._last_insert_id if hasattr(cursor, '_last_insert_id') else db.execute("SELECT last_insert_rowid()").fetchone()[0]
+        user_id = db._last_insert_id if db._last_insert_id else db.execute("SELECT last_insert_rowid()").fetchone()[0]
         token = create_session_token(user_id, db)
         return {"id": user_id, "name": user.name, "email": user.email, "token": token, "is_admin": is_admin, "email_verified": 1}
     finally:
@@ -805,7 +805,7 @@ def create_game(game: GameUpdate, user_id: int = Depends(require_admin)):
             (game.title or "New Game", game.genre or "Action", game.rating or 0, game.description, game.wallpaper_url, game.download_url, game.download_links or "", game.trailer_url or "", game.screenshots or "", game.color or "#3b82f6", game.os, game.processor, game.memory, game.graphics, game.storage, game.install_guide, game.install_guide_text, game.install_video_url, game.repack_features, game.download_manager_name, game.download_manager_url, game.usage_guide, game.troubleshooting, game.hypervisor_video_url, game.type, game.developer, game.version, game.license_type)
         )
         db.commit()
-        game_id = cursor._last_insert_id if hasattr(cursor, '_last_insert_id') else db.execute("SELECT last_insert_rowid()").fetchone()[0]
+        game_id = db._last_insert_id if db._last_insert_id else db.execute("SELECT last_insert_rowid()").fetchone()[0]
         return {"id": game_id, "message": "Game created"}
     finally:
         db.close()
@@ -929,7 +929,7 @@ def create_movie(movie: MovieUpdate, user_id: int = Depends(require_admin)):
             (movie.title or "New Movie", movie.genre or "Action", movie.year, movie.duration or "", movie.rating or 0, movie.description, movie.poster_url, movie.backdrop_url, movie.trailer_url or "", movie.video_url or "", movie.download_links or "", movie.screenshots or "", movie.color or "#3b82f6", movie.director or "", movie.cast_name or "", movie.series_name or "", movie.season or 0, movie.episode or 0, movie.type or "movie")
         )
         db.commit()
-        movie_id = cursor._last_insert_id if hasattr(cursor, '_last_insert_id') else db.execute("SELECT last_insert_rowid()").fetchone()[0]
+        movie_id = db._last_insert_id if db._last_insert_id else db.execute("SELECT last_insert_rowid()").fetchone()[0]
         return {"id": movie_id, "message": "Movie created"}
     finally:
         db.close()
@@ -1020,7 +1020,7 @@ def add_comment(comment: CommentCreate, user_id: int = Depends(get_user_id)):
             (comment.game_id, user_id, comment.text)
         )
         db.commit()
-        comment_id = cursor._last_insert_id if hasattr(cursor, '_last_insert_id') else db.execute("SELECT last_insert_rowid()").fetchone()[0]
+        comment_id = db._last_insert_id if db._last_insert_id else db.execute("SELECT last_insert_rowid()").fetchone()[0]
         return {"id": comment_id, "message": "Comment added"}
     finally:
         db.close()
@@ -1343,7 +1343,7 @@ def supabase_sync(req: dict, authorization: Optional[str] = Header(None)):
                 (name, email, "", color, False, True, supabase_id, avatar_url)
             )
             db.commit()
-            user_id = cursor._last_insert_id
+            user_id = db._last_insert_id
         
         return {"id": user_id, "name": name, "email": email, "is_admin": 0, "email_verified": True}
     finally:
@@ -1643,7 +1643,7 @@ def create_request(req: RequestCreate):
             (req_type, req.title.strip(), req.submitter_name.strip() or "Anonymous", req.description.strip())
         )
         db.commit()
-        row = db.execute("SELECT * FROM requests WHERE id = ?", (cursor._last_insert_id,)).fetchone()
+        row = db.execute("SELECT * FROM requests WHERE id = ?", (db._last_insert_id,)).fetchone()
         return dict(row)
     finally:
         db.close()
@@ -1662,6 +1662,39 @@ def delete_request(request_id: int, authorization: Optional[str] = Header(None))
         db.execute("DELETE FROM requests WHERE id = ?", (request_id,))
         db.commit()
         return {"message": "Request deleted"}
+    finally:
+        db.close()
+
+# ============ RANDOM TRAILER ============
+
+@app.get("/api/random-trailer")
+def get_random_trailer():
+    """Fetch a random trailer from games or movies that have a trailer_url set."""
+    db = get_db()
+    try:
+        import random
+        # Get games with trailers
+        games = db.execute(
+            "SELECT id, title, trailer_url, 'game' as item_type FROM games WHERE trailer_url IS NOT NULL AND trailer_url != ''"
+        ).fetchall()
+        # Get movies with trailers
+        movies = db.execute(
+            "SELECT id, title, trailer_url, 'movie' as item_type FROM movies WHERE trailer_url IS NOT NULL AND trailer_url != ''"
+        ).fetchall()
+        
+        all_items = [dict(g) for g in games] + [dict(m) for m in movies]
+        
+        if not all_items:
+            return {"trailer_url": None, "title": None, "item_type": None}
+        
+        selected = random.choice(all_items)
+        return {
+            "trailer_url": selected["trailer_url"],
+            "title": selected["title"],
+            "item_type": selected["item_type"]
+        }
+    except Exception as e:
+        return {"trailer_url": None, "title": None, "item_type": None, "error": str(e)}
     finally:
         db.close()
 
