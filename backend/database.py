@@ -35,6 +35,7 @@ class DBWrapper:
             query = query.replace("?", "%s")
             query = query.replace("datetime('now')", "CURRENT_TIMESTAMP")
             query = query.replace("date(created_at)", "DATE(created_at)")
+            query = query.replace(" LIKE ", " ILIKE ")
         cursor = self.conn.cursor()
         if params:
             cursor.execute(query, params)
