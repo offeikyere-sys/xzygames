@@ -4,7 +4,7 @@ import { GameCard } from "./GameCard"
 import { Gamepad2, Monitor, Film, ArrowDown, Compass, Layers, Sparkles, Infinity, ArrowLeft, Search, SortAsc } from "lucide-react"
 import { apiUrl } from "@/lib/api"
 
-const ITEMS_PER_PAGE = 12
+const ITEMS_PER_PAGE = 8
 
 interface ItemInfo {
   id?: number
@@ -43,6 +43,9 @@ export function BrowseAll({ onGameClick, refreshKey, userToken: _userToken, isAd
   useEffect(() => {
     setLoading(true)
     setExpanded(true)
+    
+    // Minimum loading time to prevent skeleton flash (300ms)
+    const minLoadTime = new Promise(resolve => setTimeout(resolve, 300))
 
     if (typeFilter === "movie") {
       fetch(apiUrl("/api/movies"))
@@ -110,6 +113,9 @@ export function BrowseAll({ onGameClick, refreshKey, userToken: _userToken, isAd
         fetch(apiUrl("/api/games?type=software")).then((r) => r.json()).catch(() => []),
         fetch(apiUrl("/api/movies")).then((r) => r.json()).catch(() => []),
       ]).then(([gamesData, softwareData, moviesData]) => {
+        // Wait for minimum load time
+        return minLoadTime.then(() => ({ gamesData, softwareData, moviesData }))
+      }).then(({ gamesData, softwareData, moviesData }) => {
         const games: ItemInfo[] = (gamesData || []).map((g: Record<string, unknown>) => ({
           id: g.id as number,
           title: g.title as string,
