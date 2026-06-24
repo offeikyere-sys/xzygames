@@ -420,10 +420,10 @@ export function NeoGamesLayout() {
         {currentPage === "home" && (
           <motion.div
             key={"home" + refreshKey}
-            initial={{ opacity: 0, filter: "blur(4px) brightness(0.5)" }}
-            animate={{ opacity: 1, filter: "blur(0px) brightness(1)" }}
-            exit={{ opacity: 0, filter: "blur(4px) brightness(0.5)" }}
-            transition={{ duration: 0.4, ease: "easeOut" }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.15 }}
           >
             <HeroSection
               userToken={user?.token}
@@ -491,10 +491,10 @@ export function NeoGamesLayout() {
         {currentPage === "games-browse" && (
           <motion.div
             key={"games-browse" + refreshKey}
-            initial={{ opacity: 0, filter: "blur(4px) brightness(0.5)" }}
-            animate={{ opacity: 1, filter: "blur(0px) brightness(1)" }}
-            exit={{ opacity: 0, filter: "blur(4px) brightness(0.5)" }}
-            transition={{ duration: 0.4, ease: "easeOut" }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.15 }}
           >
             <HeroSection
               userToken={user?.token}
@@ -533,10 +533,10 @@ export function NeoGamesLayout() {
         {currentPage === "software-browse" && (
           <motion.div
             key={"software-browse" + refreshKey}
-            initial={{ opacity: 0, filter: "blur(4px) brightness(0.5)" }}
-            animate={{ opacity: 1, filter: "blur(0px) brightness(1)" }}
-            exit={{ opacity: 0, filter: "blur(4px) brightness(0.5)" }}
-            transition={{ duration: 0.4, ease: "easeOut" }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.15 }}
           >
             <HeroSection
               userToken={user?.token}
@@ -574,10 +574,10 @@ export function NeoGamesLayout() {
         {currentPage === "movies-browse" && (
           <motion.div
             key={"movies-browse" + refreshKey}
-            initial={{ opacity: 0, filter: "blur(4px) brightness(0.5)" }}
-            animate={{ opacity: 1, filter: "blur(0px) brightness(1)" }}
-            exit={{ opacity: 0, filter: "blur(4px) brightness(0.5)" }}
-            transition={{ duration: 0.4, ease: "easeOut" }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.15 }}
           >
             <HeroSection
               userToken={user?.token}
@@ -618,10 +618,10 @@ export function NeoGamesLayout() {
         {currentPage === "games-view-all" && (
           <motion.div
             key={"games-view-all" + refreshKey}
-            initial={{ opacity: 0, filter: "blur(4px) brightness(0.5)" }}
-            animate={{ opacity: 1, filter: "blur(0px) brightness(1)" }}
-            exit={{ opacity: 0, filter: "blur(4px) brightness(0.5)" }}
-            transition={{ duration: 0.4, ease: "easeOut" }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.15 }}
           >
             <BrowseAll
               onGameClick={handleGameClick}
@@ -640,10 +640,10 @@ export function NeoGamesLayout() {
         {currentPage === "software-view-all" && (
           <motion.div
             key={"software-view-all" + refreshKey}
-            initial={{ opacity: 0, filter: "blur(4px) brightness(0.5)" }}
-            animate={{ opacity: 1, filter: "blur(0px) brightness(1)" }}
-            exit={{ opacity: 0, filter: "blur(4px) brightness(0.5)" }}
-            transition={{ duration: 0.4, ease: "easeOut" }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.15 }}
           >
             <BrowseAll
               onGameClick={handleGameClick}
@@ -662,10 +662,10 @@ export function NeoGamesLayout() {
         {currentPage === "movies-view-all" && (
           <motion.div
             key={"movies-view-all" + refreshKey}
-            initial={{ opacity: 0, filter: "blur(4px) brightness(0.5)" }}
-            animate={{ opacity: 1, filter: "blur(0px) brightness(1)" }}
-            exit={{ opacity: 0, filter: "blur(4px) brightness(0.5)" }}
-            transition={{ duration: 0.4, ease: "easeOut" }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.15 }}
           >
             <BrowseAll
               onGameClick={(item: any) => handleMovieClick(item)}
@@ -683,10 +683,10 @@ export function NeoGamesLayout() {
         {currentPage === "login" && (
           <motion.div
             key="login"
-            initial={{ opacity: 0, filter: "blur(4px) brightness(0.5)" }}
-            animate={{ opacity: 1, filter: "blur(0px) brightness(1)" }}
-            exit={{ opacity: 0, filter: "blur(4px) brightness(0.5)" }}
-            transition={{ duration: 0.3, ease: "easeOut" }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.15 }}
           >
             <LoginPage onSwitchToSignup={handleSignup} onBack={handleBackToHome} onLoginSuccess={handleLoginSuccess} />
           </motion.div>
@@ -695,10 +695,10 @@ export function NeoGamesLayout() {
         {currentPage === "signup" && (
           <motion.div
             key="signup"
-            initial={{ opacity: 0, filter: "blur(4px) brightness(0.5)" }}
-            animate={{ opacity: 1, filter: "blur(0px) brightness(1)" }}
-            exit={{ opacity: 0, filter: "blur(4px) brightness(0.5)" }}
-            transition={{ duration: 0.3, ease: "easeOut" }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.15 }}
           >
             <SignupPage onSwitchToSignup={handleLogin} onBack={handleBackToHome} onSignupSuccess={handleLoginSuccess} />
           </motion.div>
@@ -707,10 +707,10 @@ export function NeoGamesLayout() {
         {currentPage === "profile" && user && (
           <motion.div
             key="profile"
-            initial={{ opacity: 0, filter: "blur(4px) brightness(0.5)" }}
-            animate={{ opacity: 1, filter: "blur(0px) brightness(1)" }}
-            exit={{ opacity: 0, filter: "blur(4px) brightness(0.5)" }}
-            transition={{ duration: 0.3, ease: "easeOut" }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.15 }}
           >
             <ProfilePage user={user} onBack={handleBackToHome} onLogout={handleLogout} onSettings={handleSettings} />
           </motion.div>
@@ -719,10 +719,10 @@ export function NeoGamesLayout() {
         {currentPage === "settings" && user && (
           <motion.div
             key="settings"
-            initial={{ opacity: 0, filter: "blur(4px) brightness(0.5)" }}
-            animate={{ opacity: 1, filter: "blur(0px) brightness(1)" }}
-            exit={{ opacity: 0, filter: "blur(4px) brightness(0.5)" }}
-            transition={{ duration: 0.3, ease: "easeOut" }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.15 }}
           >
             <SettingsPage user={user} onBack={handleBackToHome} onLogout={handleLogout} />
           </motion.div>
@@ -731,10 +731,10 @@ export function NeoGamesLayout() {
         {currentPage === "favorites" && user && (
           <motion.div
             key="favorites"
-            initial={{ opacity: 0, filter: "blur(4px) brightness(0.5)" }}
-            animate={{ opacity: 1, filter: "blur(0px) brightness(1)" }}
-            exit={{ opacity: 0, filter: "blur(4px) brightness(0.5)" }}
-            transition={{ duration: 0.3, ease: "easeOut" }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.15 }}
           >
             <FavoritesPage userToken={user.token} onBack={handleBackToHome} onGameClick={handleGameClick} />
             <Footer onNavigate={handleFooterNavigate} />
@@ -751,10 +751,10 @@ export function NeoGamesLayout() {
         {currentPage === "game" && selectedGame && (
           <motion.div
             key="game-detail"
-            initial={{ opacity: 0, filter: "blur(4px) brightness(0.5)" }}
-            animate={{ opacity: 1, filter: "blur(0px) brightness(1)" }}
-            exit={{ opacity: 0, filter: "blur(4px) brightness(0.5)" }}
-            transition={{ duration: 0.4, ease: "easeOut" }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.15 }}
           >
             <GameDetailPage game={selectedGame} onBack={() => {
               if (cameFromSearch) {
@@ -785,10 +785,10 @@ export function NeoGamesLayout() {
         {currentPage === "movie" && selectedMovie && (
           <motion.div
             key="movie-detail"
-            initial={{ opacity: 0, filter: "blur(4px) brightness(0.5)" }}
-            animate={{ opacity: 1, filter: "blur(0px) brightness(1)" }}
-            exit={{ opacity: 0, filter: "blur(4px) brightness(0.5)" }}
-            transition={{ duration: 0.4, ease: "easeOut" }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.15 }}
           >
             <MovieDetailPage 
               movieId={selectedMovie.id} 
@@ -811,10 +811,10 @@ export function NeoGamesLayout() {
         {currentPage === "admin-users" && user && (
           <motion.div
             key="admin-users"
-            initial={{ opacity: 0, filter: "blur(4px) brightness(0.5)" }}
-            animate={{ opacity: 1, filter: "blur(0px) brightness(1)" }}
-            exit={{ opacity: 0, filter: "blur(4px) brightness(0.5)" }}
-            transition={{ duration: 0.3, ease: "easeOut" }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.15 }}
           >
             <AdminUsersPage userToken={user.token} onBack={handleBackToHome} />
           </motion.div>
@@ -823,10 +823,10 @@ export function NeoGamesLayout() {
         {currentPage === "search" && (
           <motion.div
             key="search"
-            initial={{ opacity: 0, filter: "blur(4px) brightness(0.5)" }}
-            animate={{ opacity: 1, filter: "blur(0px) brightness(1)" }}
-            exit={{ opacity: 0, filter: "blur(4px) brightness(0.5)" }}
-            transition={{ duration: 0.3, ease: "easeOut" }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.15 }}
           >
             <SearchResults query={searchQuery} onBack={handleBackToHome} onGameClick={handleGameClick} />
             <Footer />
@@ -852,10 +852,10 @@ export function NeoGamesLayout() {
           currentPage !== "search" && (
           <motion.div
             key={currentPage + refreshKey}
-            initial={{ opacity: 0, filter: "blur(4px) brightness(0.5)" }}
-            animate={{ opacity: 1, filter: "blur(0px) brightness(1)" }}
-            exit={{ opacity: 0, filter: "blur(4px) brightness(0.5)" }}
-            transition={{ duration: 0.4, ease: "easeOut" }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.15 }}
           >
             <CategoryPage
               category={currentPage}
