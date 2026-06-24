@@ -85,6 +85,22 @@ def get_db():
         return DBWrapper(conn)
 
 
+def reset_sequences(db):
+    """Reset PostgreSQL sequences to prevent duplicate key errors after data import."""
+    if DB_TYPE == "postgresql":
+        try:
+            tables = ['activity_log', 'comments', 'ratings', 'favorites', 'tokens', 'requests', 'users', 'games', 'movies']
+            for table in tables:
+                try:
+                    db.execute(f"SELECT setval(pg_get_serial_sequence('{table}', 'id'), COALESCE(MAX(id), 1)) FROM {table}")
+                except Exception as e:
+                    print(f"[SEQ] Could not reset sequence for {table}: {e}")
+            db.commit()
+            print("[SEQ] Database sequences reset successfully")
+        except Exception as e:
+            print(f"[SEQ] Error resetting sequences: {e}")
+            db.rollback()
+
 def init_db():
     """Initialize database tables."""
     conn = get_db()

@@ -274,9 +274,9 @@ def calculate_bayesian_rating(game_id: int, db) -> float:
     baseline = 4.0
     
     if game:
-        baseline = game["rating"] or 4.0
+        baseline = float(game["rating"] or 4.0)
     elif movie:
-        baseline = movie["rating"] or 4.0
+        baseline = float(movie["rating"] or 4.0)
     
     # Get all user ratings for this item
     result = db.execute(
@@ -284,14 +284,15 @@ def calculate_bayesian_rating(game_id: int, db) -> float:
         (game_id,)
     ).fetchone()
     
-    user_avg = result["avg_rating"]
-    num_ratings = result["total"]
+    # Convert Decimal to float for PostgreSQL compatibility
+    user_avg = float(result["avg_rating"] or 0)
+    num_ratings = int(result["total"] or 0)
     
     # Smoothing factor: controls how many ratings before user avg dominates
     # With smoothing=5, it takes ~5 ratings for user avg to have ~50% weight
     smoothing = 5
     
-    if num_ratings and num_ratings > 0 and user_avg:
+    if num_ratings > 0 and user_avg > 0:
         # Bayesian weighted average
         bayesian = (user_avg * num_ratings + baseline * smoothing) / (num_ratings + smoothing)
         # Clamp between 1.0 and 5.0, round to 1 decimal
@@ -1598,6 +1599,10 @@ def seed_database():
                     print(f"[SEED] Could not re-add {constraint_name}: {e}")
             db.commit()
             print("[SEED] FK constraints restored")
+        
+        # Reset sequences to prevent duplicate key errors
+        from database import reset_sequences
+        reset_sequences(db)
         
         return {
             "message": "Database seeded successfully!" if not errors else "Database seed completed with errors", 
