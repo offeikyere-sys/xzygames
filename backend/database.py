@@ -38,6 +38,9 @@ class DBWrapper:
             query = query.replace("datetime('now')", "CURRENT_TIMESTAMP")
             query = query.replace("date(created_at)", "DATE(created_at)")
             query = query.replace(" LIKE ", " ILIKE ")
+            # Convert boolean comparisons for PostgreSQL (BOOLEAN != INTEGER)
+            query = query.replace("used = 0", "used = FALSE")
+            query = query.replace("used = 1", "used = TRUE")
             # For INSERT queries, add RETURNING id to get the inserted ID
             if is_insert:
                 query = query + " RETURNING id"
