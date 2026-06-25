@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react"
 import { motion } from "framer-motion"
-import { Mail, Calendar, ArrowLeft, Heart, Download, User, Save, X, Camera, Settings } from "lucide-react"
+import { Mail, Calendar, ArrowLeft, Heart, Download, User, Save, X, Camera, Settings, Shield, ShieldCheck, ShieldAlert } from "lucide-react"
 import { apiUrl } from "@/lib/api"
 import { BlurImage } from "@/components/ui/BlurImage"
 
@@ -33,6 +33,11 @@ export function ProfilePage({ user, onBack, onLogout, onSettings }: ProfilePageP
   const [saving, setSaving] = useState(false)
   const [stats, setStats] = useState<{ downloads: number; favorites: number; comments: number } | null>(null)
   const [uploading, setUploading] = useState(false)
+  const [emailVerified, setEmailVerified] = useState(false)
+  const [showVerifyEmail, setShowVerifyEmail] = useState(false)
+  const [verifyCode, setVerifyCode] = useState("")
+  const [verifying, setVerifying] = useState(false)
+  const [sendingCode, setSendingCode] = useState(false)
 
   useEffect(() => {
     fetch(apiUrl("/api/auth/me"), {
@@ -41,6 +46,7 @@ export function ProfilePage({ user, onBack, onLogout, onSettings }: ProfilePageP
       .then((res) => res.json())
       .then((data) => {
         if (data.avatar_url) setAvatarUrl(data.avatar_url)
+        setEmailVerified(data.email_verified === 1 || data.email_verified === true)
       })
       .catch(() => {})
   }, [user.token])
@@ -160,6 +166,84 @@ export function ProfilePage({ user, onBack, onLogout, onSettings }: ProfilePageP
     setEditing(false)
   }
 
+  const handleSendVerificationCode = async () => {
+    setSendingCode(true)
+    setError("")
+    try {
+      const res = await fetch(apiUrl("/api/auth/send-verify-email"), {
+        method: "POST",
+        headers: { Authorization: `Bearer ${user.token}` },
+      })
+      const data = await res.json()
+      if (!res.ok) {
+        setError(data.detail || "Failed to send verification code")
+        return
+      }
+      setShowVerifyEmail(true)
+      setSuccess("Verification code sent to your email!")
+      setTimeout(() => setSuccess(""), 3000)
+    } catch {
+      setError("Failed to send verification code")
+    } finally {
+      setSendingCode(false)
+    }
+  }
+
+  const handleVerifyEmail = async (e: React.FormEvent) => {
+    e.preventDefault()
+    setError("")
+    
+    if (!verifyCode.trim() || verifyCode.length !== 6) {
+      setError("Please enter the 6-digit code")
+      return
+    }
+
+    setVerifying(true)
+    try {
+      const res = await fetch(apiUrl("/api/auth/verify-email"), {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Authorization: `Bearer ${user.token}` },
+        body: JSON.stringify({ code: verifyCode.trim() }),
+      })
+      const data = await res.json()
+      if (!res.ok) {
+        setError(data.detail || "Verification failed")
+        return
+      }
+      setEmailVerified(true)
+      setShowVerifyEmail(false)
+      setVerifyCode("")
+      setSuccess("Email verified successfully!")
+      setTimeout(() => setSuccess(""), 3000)
+    } catch {
+      setError("Verification failed")
+    } finally {
+      setVerifying(false)
+    }
+  }
+
+  const handleResendVerificationCode = async () => {
+    setSendingCode(true)
+    setError("")
+    try {
+      const res = await fetch(apiUrl("/api/auth/send-verify-email"), {
+        method: "POST",
+        headers: { Authorization: `Bearer ${user.token}` },
+      })
+      const data = await res.json()
+      if (!res.ok) {
+        setError(data.detail || "Failed to resend code")
+        return
+      }
+      setSuccess("New verification code sent! Check your inbox and spam folder.")
+      setTimeout(() => setSuccess(""), 3000)
+    } catch {
+      setError("Failed to resend code")
+    } finally {
+      setSendingCode(false)
+    }
+  }
+
   return (
     <div className="min-h-screen bg-black pt-20">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
@@ -251,19 +335,68 @@ export function ProfilePage({ user, onBack, onLogout, onSettings }: ProfilePageP
                         <span className="text-sm">{user.email}</span>
                       </div>
                       <div className="flex items-center justify-center sm:justify-start gap-2 mt-1 text-zinc-500"><Calendar size={14} /><span className="text-sm">Joined recently</span></div>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <button onClick={() => setEditing(true)} className="flex items-center gap-2 px-4 py-2 rounded-lg border border-zinc-700/50 text-zinc-400 hover:text-white hover:border-zinc-500 transition-all text-sm shrink-0"><User size={16} />Edit Profile</button>
-                      {onSettings && (
-                        <button onClick={onSettings} className="flex items-center gap-2 px-4 py-2 rounded-lg border border-zinc-700/50 text-zinc-400 hover:text-white hover:border-zinc-500 transition-all text-sm shrink-0"><Settings size={16} />Settings</button>
+                      {emailVerified ? (
+                        <div className="flex items-center justify-center sm:justify-start gap-2 mt-2 text-emerald-400">
+                          <ShieldCheck size={14} />
+                          <span className="text-sm">Email verified</span>
+                        </div>
+                      ) : (
+                        <div className="flex items-center justify-center sm:justify-start gap-2 mt-2 text-amber-400">
+                          <ShieldAlert size={14} />
+                          <span className="text-sm">Email not verified</span>
+                        </div>
                       )}
                     </div>
+                      <div className="flex items-center gap-2">
+                        <button onClick={() => setEditing(true)} className="flex items-center gap-2 px-4 py-2 rounded-lg border border-zinc-700/50 text-zinc-400 hover:text-white hover:border-zinc-500 transition-all text-sm shrink-0"><User size={16} />Edit Profile</button>
+                        {!emailVerified && (
+                          <button 
+                            onClick={handleSendVerificationCode} 
+                            disabled={sendingCode}
+                            className="flex items-center gap-2 px-4 py-2 rounded-lg bg-blue-600/20 border border-blue-500/30 text-blue-400 hover:bg-blue-600/30 transition-all text-sm shrink-0 disabled:opacity-50"
+                          >
+                            <Shield size={16} />
+                            {sendingCode ? "Sending..." : "Verify Email"}
+                          </button>
+                        )}
+                        {onSettings && (
+                          <button onClick={onSettings} className="flex items-center gap-2 px-4 py-2 rounded-lg border border-zinc-700/50 text-zinc-400 hover:text-white hover:border-zinc-500 transition-all text-sm shrink-0"><Settings size={16} />Settings</button>
+                        )}
+                      </div>
                   </div>
                   <div className="flex items-center gap-6 mt-6 justify-center sm:justify-start">
                     <div className="text-center"><div className="text-xl font-bold text-white">{stats?.downloads ?? 0}</div><div className="text-xs text-zinc-500">Downloads</div></div>
                     <div className="text-center"><div className="text-xl font-bold text-white">{stats?.favorites ?? 0}</div><div className="text-xs text-zinc-500">Favorites</div></div>
                     <div className="text-center"><div className="text-xl font-bold text-white">{stats?.comments ?? 0}</div><div className="text-xs text-zinc-500">Comments</div></div>
                   </div>
+                  {!emailVerified && showVerifyEmail && (
+                    <motion.form 
+                      initial={{ opacity: 0, y: 10 }} 
+                      animate={{ opacity: 1, y: 0 }} 
+                      onSubmit={handleVerifyEmail} 
+                      className="mt-4 p-4 rounded-xl bg-amber-500/10 border border-amber-500/20"
+                    >
+                      <p className="text-sm text-amber-400 mb-3">Enter the 6-digit code sent to your email:</p>
+                      <div className="flex items-center gap-2">
+                        <input
+                          type="text"
+                          value={verifyCode}
+                          onChange={(e) => setVerifyCode(e.target.value.replace(/\D/g, '').slice(0, 6))}
+                          placeholder="000000"
+                          maxLength={6}
+                          className="flex-1 px-4 py-2 rounded-lg bg-zinc-800/50 border border-zinc-700/50 text-white text-sm outline-none focus:border-blue-500/50 text-center tracking-widest"
+                        />
+                        <button 
+                          type="submit" 
+                          disabled={verifying}
+                          className="px-4 py-2 rounded-lg bg-blue-600 hover:bg-blue-500 text-white text-sm font-medium transition-all disabled:opacity-50"
+                        >
+                          {verifying ? "Verifying..." : "Verify"}
+                        </button>
+                      </div>
+                    </motion.form>
+                  )}
+
                   <div className="mt-6 flex items-center gap-3 justify-center sm:justify-start">
                     <button onClick={onLogout} className="px-4 py-2 rounded-lg border border-zinc-700/50 text-sm text-zinc-400 hover:text-red-400 hover:border-red-500/30 transition-all">Sign Out</button>
                   </div>

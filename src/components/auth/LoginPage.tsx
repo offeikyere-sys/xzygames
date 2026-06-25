@@ -1,9 +1,9 @@
 import { useState } from "react"
 import { motion } from "framer-motion"
-import { Mail, Lock, Eye, EyeOff, Gamepad2, Loader2, KeyRound } from "lucide-react"
+import { Mail, Lock, Eye, EyeOff, Gamepad2, Loader2, KeyRound, Send, CheckCircle } from "lucide-react"
 import { apiUrl } from "@/lib/api"
 
-type Step = "login" | "forgot" | "reset-sent"
+type Step = "login" | "forgot" | "verify-code" | "reset-success"
 
 export function LoginPage({ onSwitchToSignup, onBack, onLoginSuccess }: {
   onSwitchToSignup: () => void
@@ -17,6 +17,9 @@ export function LoginPage({ onSwitchToSignup, onBack, onLoginSuccess }: {
   const [error, setError] = useState("")
   const [loading, setLoading] = useState(false)
   const [resetSent, setResetSent] = useState(false)
+  const [verifyCode, setVerifyCode] = useState("")
+  const [newPassword, setNewPassword] = useState("")
+  const [confirmNewPassword, setConfirmNewPassword] = useState("")
 
   const handleEmailLogin = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -68,6 +71,52 @@ export function LoginPage({ onSwitchToSignup, onBack, onLoginSuccess }: {
         return
       }
       setResetSent(true)
+      setStep("verify-code")
+    } catch {
+      setError("Something went wrong. Please try again.")
+    } finally {
+      setLoading(false)
+    }
+  }
+
+  const handleVerifyResetCode = async (e: React.FormEvent) => {
+    e.preventDefault()
+    setError("")
+
+    if (!verifyCode.trim() || verifyCode.length !== 6) {
+      setError("Please enter the 6-digit code")
+      return
+    }
+    if (!newPassword) {
+      setError("Please enter a new password")
+      return
+    }
+    if (newPassword.length < 6) {
+      setError("Password must be at least 6 characters")
+      return
+    }
+    if (newPassword !== confirmNewPassword) {
+      setError("Passwords don't match")
+      return
+    }
+
+    setLoading(true)
+    try {
+      const res = await fetch(apiUrl("/api/auth/verify-reset"), {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          email: email.trim(),
+          code: verifyCode.trim(),
+          password: newPassword,
+        }),
+      })
+      const data = await res.json()
+      if (!res.ok) {
+        setError(data.detail || "Failed to reset password")
+        return
+      }
+      setStep("reset-success")
     } catch {
       setError("Something went wrong. Please try again.")
     } finally {
@@ -107,12 +156,14 @@ export function LoginPage({ onSwitchToSignup, onBack, onLoginSuccess }: {
             <h1 className="text-2xl font-bold text-white">
               {step === "login" && "Welcome Back"}
               {step === "forgot" && "Reset Password"}
-              {step === "reset-sent" && "Check Your Email"}
+              {step === "verify-code" && "Enter Reset Code"}
+              {step === "reset-success" && "Password Reset!"}
             </h1>
             <p className="text-sm text-zinc-500 mt-2">
               {step === "login" && "Sign in to continue to XZY Games & Software Hub"}
               {step === "forgot" && "We'll send you a reset code"}
-              {step === "reset-sent" && `We sent a reset code to ${email}`}
+              {step === "verify-code" && `We sent a code to ${email}. Check your inbox.`}
+              {step === "reset-success" && "Your password has been reset successfully."}
             </p>
           </div>
 
@@ -198,40 +249,111 @@ export function LoginPage({ onSwitchToSignup, onBack, onLoginSuccess }: {
 
           {step === "forgot" && (
             <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="space-y-4">
-              {!resetSent ? (
-                <>
-                  <div>
-                    <label className="block text-sm font-medium text-zinc-400 mb-2">Email</label>
-                    <div className="relative">
-                      <Mail size={16} className="absolute left-3 top-1/2 -translate-y-1/2 text-zinc-500" />
-                      <input
-                        type="email"
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
-                        placeholder="you@example.com"
-                        className="w-full pl-10 pr-4 py-3 rounded-xl bg-zinc-800/50 border border-zinc-700/50 text-white placeholder-zinc-500 text-sm outline-none focus:border-blue-500/50 transition-colors"
-                      />
-                    </div>
-                  </div>
-                  <button
-                    onClick={handleForgotPassword}
-                    disabled={loading}
-                    className="w-full py-3 rounded-xl bg-blue-600 hover:bg-blue-500 disabled:bg-zinc-700 text-white font-semibold text-sm transition-all hover:shadow-lg hover:shadow-blue-500/25 flex items-center justify-center gap-2"
-                  >
-                    {loading ? <><Loader2 size={16} className="animate-spin" />Sending...</> : <><KeyRound size={16} />Send Reset Code</>}
-                  </button>
-                </>
-              ) : (
-                <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className="text-center space-y-4">
-                  <div className="w-16 h-16 rounded-full bg-blue-500/10 border border-blue-500/20 flex items-center justify-center mx-auto">
-                    <Mail size={28} className="text-blue-400" />
-                  </div>
-                  <p className="text-sm text-zinc-300">We sent a password reset code to <strong className="text-blue-400">{email}</strong></p>
-                  <p className="text-xs text-zinc-500">Check your inbox and use the code to reset your password.</p>
-                </motion.div>
-              )}
-              <button onClick={() => { setStep("login"); setResetSent(false); setError("") }} className="w-full text-center text-xs text-zinc-500 hover:text-zinc-300 transition-colors">
+              <div>
+                <label className="block text-sm font-medium text-zinc-400 mb-2">Email</label>
+                <div className="relative">
+                  <Mail size={16} className="absolute left-3 top-1/2 -translate-y-1/2 text-zinc-500" />
+                  <input
+                    type="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    placeholder="you@example.com"
+                    className="w-full pl-10 pr-4 py-3 rounded-xl bg-zinc-800/50 border border-zinc-700/50 text-white placeholder-zinc-500 text-sm outline-none focus:border-blue-500/50 transition-colors"
+                  />
+                </div>
+              </div>
+              <button
+                onClick={handleForgotPassword}
+                disabled={loading}
+                className="w-full py-3 rounded-xl bg-blue-600 hover:bg-blue-500 disabled:bg-zinc-700 text-white font-semibold text-sm transition-all hover:shadow-lg hover:shadow-blue-500/25 flex items-center justify-center gap-2"
+              >
+                {loading ? <><Loader2 size={16} className="animate-spin" />Sending...</> : <><KeyRound size={16} />Send Reset Code</>}
+              </button>
+              <button onClick={() => { setStep("login"); setError("") }} className="w-full text-center text-xs text-zinc-500 hover:text-zinc-300 transition-colors">
                 ← Back to Sign In
+              </button>
+            </motion.div>
+          )}
+
+          {step === "verify-code" && (
+            <motion.form
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              onSubmit={handleVerifyResetCode}
+              className="space-y-4"
+            >
+              <div className="p-4 rounded-xl bg-blue-500/10 border border-blue-500/20">
+                <p className="text-sm text-blue-400 text-center">
+                  We sent a 6-digit code to <strong>{email}</strong>. Please check your inbox and spam/junk folder if you can't find it.
+                </p>
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-zinc-400 mb-2">Verification Code</label>
+                <input
+                  type="text"
+                  value={verifyCode}
+                  onChange={(e) => setVerifyCode(e.target.value.replace(/\D/g, '').slice(0, 6))}
+                  placeholder="000000"
+                  maxLength={6}
+                  className="w-full px-4 py-3 rounded-xl bg-zinc-800/50 border border-zinc-700/50 text-white placeholder-zinc-500 text-sm outline-none focus:border-blue-500/50 transition-colors text-center text-2xl tracking-widest"
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-zinc-400 mb-2">New Password</label>
+                <div className="relative">
+                  <Lock size={16} className="absolute left-3 top-1/2 -translate-y-1/2 text-zinc-500" />
+                  <input
+                    type="password"
+                    value={newPassword}
+                    onChange={(e) => setNewPassword(e.target.value)}
+                    placeholder="Minimum 6 characters"
+                    className="w-full pl-10 pr-4 py-3 rounded-xl bg-zinc-800/50 border border-zinc-700/50 text-white placeholder-zinc-500 text-sm outline-none focus:border-blue-500/50 transition-colors"
+                  />
+                </div>
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-zinc-400 mb-2">Confirm New Password</label>
+                <div className="relative">
+                  <Lock size={16} className="absolute left-3 top-1/2 -translate-y-1/2 text-zinc-500" />
+                  <input
+                    type="password"
+                    value={confirmNewPassword}
+                    onChange={(e) => setConfirmNewPassword(e.target.value)}
+                    placeholder="Repeat your new password"
+                    className="w-full pl-10 pr-4 py-3 rounded-xl bg-zinc-800/50 border border-zinc-700/50 text-white placeholder-zinc-500 text-sm outline-none focus:border-blue-500/50 transition-colors"
+                  />
+                </div>
+              </div>
+
+              <button
+                type="submit"
+                disabled={loading}
+                className="w-full py-3 rounded-xl bg-blue-600 hover:bg-blue-500 disabled:bg-zinc-700 text-white font-semibold text-sm transition-all hover:shadow-lg hover:shadow-blue-500/25 flex items-center justify-center gap-2"
+              >
+                {loading ? <><Loader2 size={16} className="animate-spin" />Resetting...</> : <><KeyRound size={16} />Reset Password</>}
+              </button>
+
+              <button onClick={() => { setStep("forgot"); setResetSent(false); setError(""); setVerifyCode(""); setNewPassword(""); setConfirmNewPassword("") }} className="w-full text-center text-xs text-zinc-500 hover:text-zinc-300 transition-colors">
+                ← Back to email
+              </button>
+            </motion.form>
+          )}
+
+          {step === "reset-success" && (
+            <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className="text-center space-y-4">
+              <div className="w-16 h-16 rounded-full bg-green-500/10 border border-green-500/20 flex items-center justify-center mx-auto">
+                <CheckCircle size={28} className="text-green-400" />
+              </div>
+              <p className="text-sm text-zinc-300">Password reset successful!</p>
+              <p className="text-xs text-zinc-500">You can now sign in with your new password.</p>
+              <button
+                onClick={() => { setStep("login"); setError(""); setEmail(""); setPassword("") }}
+                className="w-full py-3 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-semibold text-sm transition-all"
+              >
+                Sign In Now
               </button>
             </motion.div>
           )}

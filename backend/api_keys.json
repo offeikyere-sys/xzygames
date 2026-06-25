@@ -1,3 +1,9 @@
 {
-  "groq": "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"
+  "groq": "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",
+  "smtp": {
+    "server": "smtp-relay.brevo.com",
+    "port": 587,
+    "email": "danny.exzy@icloud.com",
+    "password": "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"
+  }
 }

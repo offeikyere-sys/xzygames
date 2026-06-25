@@ -4,6 +4,9 @@ import hashlib
 import secrets
 import shutil
 import uuid
+import smtplib
+from email.mime.text import MIMEText
+from email.mime.multipart import MIMEMultipart
 from datetime import datetime
 from fastapi import FastAPI, HTTPException, Depends, Header, UploadFile, File
 from fastapi.middleware.cors import CORSMiddleware
@@ -38,6 +41,11 @@ def _get_config(key: str, default: str = ""):
 
 ADMIN_BACKUP_PASSWORD = _get_config("admin_backup_password")
 ALLOWED_ORIGIN = _get_config("allowed_origin", "*")
+# SMTP Configuration for Brevo
+SMTP_SERVER = _get_config("smtp.server", "smtp-relay.brevo.com")
+SMTP_PORT = int(_get_config("smtp.port", "587"))
+SMTP_EMAIL = _get_config("smtp.email", "")
+SMTP_PASSWORD = _get_config("smtp.password", "")
 # Determine the public URL for uploaded files (fallback: relative path)
 PUBLIC_URL = os.environ.get("PUBLIC_URL", "")
 
@@ -127,6 +135,14 @@ class GameUpdate(BaseModel):
 from email_utils import generate_code, send_verification_code
 from datetime import datetime, timedelta
 
+# SMTP config for email_utils
+SMTP_CONFIG = {
+    "server": SMTP_SERVER,
+    "port": SMTP_PORT,
+    "email": SMTP_EMAIL,
+    "password": SMTP_PASSWORD
+}
+
 class SendVerificationRequest(BaseModel):
     email: str
 
@@ -182,7 +198,7 @@ def send_verification(req: SendVerificationRequest):
         
         code = create_verification_code(req.email, "signup", db)
         # Try to send email, but don't fail if email service is not configured
-        send_verification_code(req.email, code, "signup")
+        send_verification_code(req.email, code, "signup", SMTP_CONFIG)
         return {"message": "Verification code sent to your email"}
     finally:
         db.close()
@@ -226,7 +242,7 @@ def send_reset_code(req: SendResetCodeRequest):
             raise HTTPException(status_code=404, detail="No account found with this email")
         
         code = create_verification_code(req.email, "reset", db)
-        sent = send_verification_code(req.email, code, "reset")
+        sent = send_verification_code(req.email, code, "reset", SMTP_CONFIG)
         if not sent:
             raise HTTPException(status_code=500, detail="Failed to send verification email. Check email configuration.")
         return {"message": "Reset code sent to your email"}
@@ -979,10 +995,11 @@ def verify_email_later(req: VerifyEmailLaterRequest, user_id: int = Depends(get_
         user = db.execute("SELECT * FROM users WHERE id = ?", (user_id,)).fetchone()
         if not user:
             raise HTTPException(status_code=404, detail="User not found")
-        if user.get("email_verified"):
+        user_dict = dict(user)
+        if user_dict.get("email_verified"):
             return {"message": "Email already verified"}
 
-        if not verify_code(user["email"], req.code, "signup", db):
+        if not verify_code(user_dict["email"], req.code, "signup", db):
             raise HTTPException(status_code=400, detail="Invalid or expired verification code")
 
         db.execute("UPDATE users SET email_verified = 1 WHERE id = ?", (user_id,))
@@ -999,11 +1016,12 @@ def send_verify_email(user_id: int = Depends(get_user_id)):
         user = db.execute("SELECT * FROM users WHERE id = ?", (user_id,)).fetchone()
         if not user:
             raise HTTPException(status_code=404, detail="User not found")
-        if user.get("email_verified"):
+        user_dict = dict(user)
+        if user_dict.get("email_verified"):
             return {"message": "Email already verified"}
 
-        code = create_verification_code(user["email"], "signup", db)
-        sent = send_verification_code(user["email"], code, "signup")
+        code = create_verification_code(user_dict["email"], "signup", db)
+        sent = send_verification_code(user_dict["email"], code, "signup", SMTP_CONFIG)
         if not sent:
             raise HTTPException(status_code=500, detail="Failed to send verification email")
         return {"message": "Verification code sent to your email"}
@@ -1016,6 +1034,11 @@ def send_verify_email(user_id: int = Depends(get_user_id)):
 def add_comment(comment: CommentCreate, user_id: int = Depends(get_user_id)):
     db = get_db()
     try:
+        # Check if user's email is verified
+        user = db.execute("SELECT email_verified FROM users WHERE id = ?", (user_id,)).fetchone()
+        if not user or not user["email_verified"]:
+            raise HTTPException(status_code=403, detail="Please verify your email before commenting. Check your profile page to verify.")
+        
         cursor = db.execute(
             "INSERT INTO comments (game_id, user_id, text) VALUES (?, ?, ?)",
             (comment.game_id, user_id, comment.text)

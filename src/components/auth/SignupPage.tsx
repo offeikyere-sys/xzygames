@@ -15,6 +15,8 @@ export function SignupPage({ onSwitchToSignup, onBack, onSignupSuccess }: {
   const [error, setError] = useState("")
   const [loading, setLoading] = useState(false)
   const [passwordStrength, setPasswordStrength] = useState(0)
+  const [showVerification, setShowVerification] = useState(false)
+  const [verificationCode, setVerificationCode] = useState("")
 
   const calculateStrength = (pw: string) => {
     let strength = 0
@@ -59,10 +61,46 @@ export function SignupPage({ onSwitchToSignup, onBack, onSignupSuccess }: {
 
     setLoading(true)
     try {
-      const res = await fetch(apiUrl("/api/auth/signup"), {
+      // Send verification code first
+      const res = await fetch(apiUrl("/api/auth/send-verification"), {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name: name.trim(), email: email.trim(), password }),
+        body: JSON.stringify({ email: email.trim() }),
+      })
+      const data = await res.json()
+      if (!res.ok) {
+        setError(data.detail || "Failed to send verification code")
+        return
+      }
+      // Show verification form
+      setShowVerification(true)
+    } catch {
+      setError("Something went wrong. Please try again.")
+    } finally {
+      setLoading(false)
+    }
+  }
+
+  const handleVerifyAndSignup = async (e: React.FormEvent) => {
+    e.preventDefault()
+    setError("")
+
+    if (!verificationCode.trim() || verificationCode.length !== 6) {
+      setError("Please enter the 6-digit verification code")
+      return
+    }
+
+    setLoading(true)
+    try {
+      const res = await fetch(apiUrl("/api/auth/verify-signup"), {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ 
+          name: name.trim(), 
+          email: email.trim(), 
+          password,
+          code: verificationCode.trim()
+        }),
       })
       const data = await res.json()
       if (!res.ok) {
@@ -75,7 +113,7 @@ export function SignupPage({ onSwitchToSignup, onBack, onSignupSuccess }: {
         email: data.email,
         token: data.token,
         is_admin: data.is_admin || 0,
-        email_verified: data.email_verified || 1,
+        email_verified: 1,
       })
     } catch {
       setError("Something went wrong. Please try again.")
@@ -127,91 +165,140 @@ export function SignupPage({ onSwitchToSignup, onBack, onSignupSuccess }: {
             </motion.div>
           )}
 
-          <motion.form
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            onSubmit={handleSubmit}
-            className="space-y-4"
-          >
-            <div>
-              <label className="block text-sm font-medium text-zinc-400 mb-2">Full Name</label>
-              <div className="relative">
-                <User size={16} className="absolute left-3 top-1/2 -translate-y-1/2 text-zinc-500" />
-                <input
-                  type="text"
-                  value={name}
-                  onChange={(e) => setName(e.target.value)}
-                  placeholder="Enter your name"
-                  className="w-full pl-10 pr-4 py-3 rounded-xl bg-zinc-800/50 border border-zinc-700/50 text-white placeholder-zinc-500 text-sm outline-none focus:border-blue-500/50 transition-colors"
-                />
-              </div>
-            </div>
-
-            <div>
-              <label className="block text-sm font-medium text-zinc-400 mb-2">Email</label>
-              <div className="relative">
-                <Mail size={16} className="absolute left-3 top-1/2 -translate-y-1/2 text-zinc-500" />
-                <input
-                  type="email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  placeholder="you@example.com"
-                  className="w-full pl-10 pr-4 py-3 rounded-xl bg-zinc-800/50 border border-zinc-700/50 text-white placeholder-zinc-500 text-sm outline-none focus:border-blue-500/50 transition-colors"
-                />
-              </div>
-            </div>
-
-            <div>
-              <label className="block text-sm font-medium text-zinc-400 mb-2">Password</label>
-              <div className="relative">
-                <Lock size={16} className="absolute left-3 top-1/2 -translate-y-1/2 text-zinc-500" />
-                <input
-                  type="password"
-                  value={password}
-                  onChange={(e) => handlePasswordChange(e.target.value)}
-                  placeholder="Minimum 6 characters"
-                  className="w-full pl-10 pr-4 py-3 rounded-xl bg-zinc-800/50 border border-zinc-700/50 text-white placeholder-zinc-500 text-sm outline-none focus:border-blue-500/50 transition-colors"
-                />
-              </div>
-              {password && (
-                <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="mt-2">
-                  <div className="h-1.5 bg-zinc-800 rounded-full overflow-hidden">
-                    <motion.div className={`h-full ${getStrengthColor()} rounded-full`} initial={{ width: 0 }} animate={{ width: `${(passwordStrength / 5) * 100}%` }} transition={{ duration: 0.3 }} />
-                  </div>
-                  <p className="text-xs text-zinc-500 mt-1">{getStrengthLabel()}</p>
-                </motion.div>
-              )}
-            </div>
-
-            <div>
-              <label className="block text-sm font-medium text-zinc-400 mb-2">Confirm Password</label>
-              <div className="relative">
-                <Lock size={16} className="absolute left-3 top-1/2 -translate-y-1/2 text-zinc-500" />
-                <input
-                  type="password"
-                  value={confirmPassword}
-                  onChange={(e) => setConfirmPassword(e.target.value)}
-                  placeholder="Repeat your password"
-                  className="w-full pl-10 pr-4 py-3 rounded-xl bg-zinc-800/50 border border-zinc-700/50 text-white placeholder-zinc-500 text-sm outline-none focus:border-blue-500/50 transition-colors"
-                />
-              </div>
-            </div>
-
-            <button
-              type="submit"
-              disabled={loading}
-              className="w-full py-3 rounded-xl bg-blue-600 hover:bg-blue-500 disabled:bg-zinc-700 text-white font-semibold text-sm transition-all hover:shadow-lg hover:shadow-blue-500/25 mt-2 flex items-center justify-center gap-2"
+          {!showVerification ? (
+            <motion.form
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              onSubmit={handleSubmit}
+              className="space-y-4"
             >
-              {loading ? <><Loader2 size={16} className="animate-spin" />Creating Account...</> : <><Send size={16} />Create Account</>}
-            </button>
+              <div>
+                <label className="block text-sm font-medium text-zinc-400 mb-2">Full Name</label>
+                <div className="relative">
+                  <User size={16} className="absolute left-3 top-1/2 -translate-y-1/2 text-zinc-500" />
+                  <input
+                    type="text"
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                    placeholder="Enter your name"
+                    className="w-full pl-10 pr-4 py-3 rounded-xl bg-zinc-800/50 border border-zinc-700/50 text-white placeholder-zinc-500 text-sm outline-none focus:border-blue-500/50 transition-colors"
+                  />
+                </div>
+              </div>
 
-            <p className="text-xs text-zinc-500 text-center mt-4">
-              Already have an account?{" "}
-              <button type="button" onClick={onSwitchToSignup} className="text-blue-400 hover:text-blue-300 font-medium transition-colors">
-                Sign In
+              <div>
+                <label className="block text-sm font-medium text-zinc-400 mb-2">Email</label>
+                <div className="relative">
+                  <Mail size={16} className="absolute left-3 top-1/2 -translate-y-1/2 text-zinc-500" />
+                  <input
+                    type="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    placeholder="you@example.com"
+                    className="w-full pl-10 pr-4 py-3 rounded-xl bg-zinc-800/50 border border-zinc-700/50 text-white placeholder-zinc-500 text-sm outline-none focus:border-blue-500/50 transition-colors"
+                  />
+                </div>
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-zinc-400 mb-2">Password</label>
+                <div className="relative">
+                  <Lock size={16} className="absolute left-3 top-1/2 -translate-y-1/2 text-zinc-500" />
+                  <input
+                    type="password"
+                    value={password}
+                    onChange={(e) => handlePasswordChange(e.target.value)}
+                    placeholder="Minimum 6 characters"
+                    className="w-full pl-10 pr-4 py-3 rounded-xl bg-zinc-800/50 border border-zinc-700/50 text-white placeholder-zinc-500 text-sm outline-none focus:border-blue-500/50 transition-colors"
+                  />
+                </div>
+                {password && (
+                  <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="mt-2">
+                    <div className="h-1.5 bg-zinc-800 rounded-full overflow-hidden">
+                      <motion.div className={`h-full ${getStrengthColor()} rounded-full`} initial={{ width: 0 }} animate={{ width: `${(passwordStrength / 5) * 100}%` }} transition={{ duration: 0.3 }} />
+                    </div>
+                    <p className="text-xs text-zinc-500 mt-1">{getStrengthLabel()}</p>
+                  </motion.div>
+                )}
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-zinc-400 mb-2">Confirm Password</label>
+                <div className="relative">
+                  <Lock size={16} className="absolute left-3 top-1/2 -translate-y-1/2 text-zinc-500" />
+                  <input
+                    type="password"
+                    value={confirmPassword}
+                    onChange={(e) => setConfirmPassword(e.target.value)}
+                    placeholder="Repeat your password"
+                    className="w-full pl-10 pr-4 py-3 rounded-xl bg-zinc-800/50 border border-zinc-700/50 text-white placeholder-zinc-500 text-sm outline-none focus:border-blue-500/50 transition-colors"
+                  />
+                </div>
+              </div>
+
+              <button
+                type="submit"
+                disabled={loading}
+                className="w-full py-3 rounded-xl bg-blue-600 hover:bg-blue-500 disabled:bg-zinc-700 text-white font-semibold text-sm transition-all hover:shadow-lg hover:shadow-blue-500/25 mt-2 flex items-center justify-center gap-2"
+              >
+                {loading ? <><Loader2 size={16} className="animate-spin" />Creating Account...</> : <><Send size={16} />Create Account</>}
               </button>
-            </p>
-          </motion.form>
+
+              <p className="text-xs text-zinc-500 text-center mt-4">
+                Already have an account?{" "}
+                <button type="button" onClick={onSwitchToSignup} className="text-blue-400 hover:text-blue-300 font-medium transition-colors">
+                  Sign In
+                </button>
+              </p>
+            </motion.form>
+          ) : (
+            <motion.form
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              onSubmit={handleVerifyAndSignup}
+              className="space-y-4"
+            >
+              <div className="p-4 rounded-xl bg-blue-500/10 border border-blue-500/20">
+                <p className="text-sm text-blue-400 text-center">
+                  We've sent a 6-digit code to <strong>{email}</strong>. Please check your inbox and spam/junk folder if you can't find it.
+                </p>
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-zinc-400 mb-2">Verification Code</label>
+                <div className="relative">
+                  <Send size={16} className="absolute left-3 top-1/2 -translate-y-1/2 text-zinc-500" />
+                  <input
+                    type="text"
+                    value={verificationCode}
+                    onChange={(e) => setVerificationCode(e.target.value.replace(/\D/g, '').slice(0, 6))}
+                    placeholder="Enter 6-digit code"
+                    maxLength={6}
+                    className="w-full pl-10 pr-4 py-3 rounded-xl bg-zinc-800/50 border border-zinc-700/50 text-white placeholder-zinc-500 text-sm outline-none focus:border-blue-500/50 transition-colors text-center text-2xl tracking-widest"
+                  />
+                </div>
+              </div>
+
+              <button
+                type="submit"
+                disabled={loading}
+                className="w-full py-3 rounded-xl bg-blue-600 hover:bg-blue-500 disabled:bg-zinc-700 text-white font-semibold text-sm transition-all hover:shadow-lg hover:shadow-blue-500/25 mt-2 flex items-center justify-center gap-2"
+              >
+                {loading ? <><Loader2 size={16} className="animate-spin" />Verifying...</> : <><Send size={16} />Verify & Create Account</>}
+              </button>
+
+              <button
+                type="button"
+                onClick={() => {
+                  setShowVerification(false)
+                  setVerificationCode("")
+                }}
+                className="w-full py-2 text-sm text-zinc-500 hover:text-white transition-colors"
+              >
+                ← Back to edit email
+              </button>
+            </motion.form>
+          )}
         </div>
       </motion.div>
     </div>

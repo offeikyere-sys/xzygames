@@ -1,103 +1,110 @@
-import os
+import requests
+import json
 import random
-import logging
+import string
 
-logging.basicConfig(level=logging.INFO)
-logger = logging.getLogger(__name__)
+def generate_code(length=6) -> str:
+    """Generate a random 6-digit verification code."""
+    return ''.join(random.choices(string.digits, k=length))
 
-# Read configuration from environment variables with fallback to api_keys.json
-def _get_config(key: str, default: str = ""):
-    """Read from env var first, then fall back to api_keys.json for backward compatibility."""
-    env_var = key.upper()
-    val = os.environ.get(env_var)
-    if val:
-        return val
-    # Fallback to json file
-    try:
-        import json
-        BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-        with open(os.path.join(BASE_DIR, "api_keys.json")) as f:
-            cfg = json.load(f)
-        # Handle nested keys like "email.address"
-        parts = key.split(".")
-        for part in parts:
-            if isinstance(cfg, dict):
-                cfg = cfg.get(part, {})
-        return cfg if isinstance(cfg, str) else str(cfg) if cfg else default
-    except:
-        return default
-
-
-def generate_code(length: int = 6) -> str:
-    """Generate a numeric verification code."""
-    return "".join(str(random.randint(0, 9)) for _ in range(length))
-
-
-def send_verification_code(to_email: str, code: str, purpose: str = "signup") -> bool:
+def send_verification_code(to_email: str, code: str, code_type: str = "signup", smtp_config: dict = None) -> bool:
     """
-    Send a verification code via Resend.
-    Resend free tier can only send to the owner email (offeikyere@gmail.com)
-    unless a custom domain is verified.
-    So we send to the owner and also try the recipient — 
-    the code is always shown on screen in the frontend as a fallback.
-    Returns True if sent successfully, False otherwise.
+    Send a verification code via Brevo API.
+    Returns True if email sent successfully, False otherwise.
     """
-    api_key = _get_config("resend_api_key")
-    owner_email = _get_config("email.address", "offeikyere@gmail.com")
-
-    if not api_key:
-        logger.error("No Resend API key configured")
+    if smtp_config is None:
+        smtp_config = {}
+    
+    api_key = smtp_config.get('password', '')  # Brevo API key
+    sender_email = smtp_config.get('email', '')
+    sender_name = "XZY Games & Software Hub"
+    
+    if not api_key or not sender_email:
+        print(f"[EMAIL] Brevo API not configured. Code for {to_email}: {code}")
         return False
-
-    if purpose == "signup":
-        subject = "XZY Games & Software Hub - Verify Your Email"
-        html_body = f"""
-        <html>
-        <body style="font-family: Arial, sans-serif; background: #000; color: #fff; padding: 20px;">
-            <div style="max-width: 500px; margin: 0 auto; background: #111; border: 1px solid #222; border-radius: 16px; padding: 30px;">
-                <h2 style="color: #3b82f6; margin-bottom: 20px;">XZY Games & Software Hub</h2>
-                <p>New signup request from <strong>{to_email}</strong>. Use this code to complete signup:</p>
-                <div style="text-align: center; font-size: 36px; font-weight: bold; letter-spacing: 8px; color: #3b82f6; margin: 30px 0; padding: 20px; background: #000; border: 1px solid #222; border-radius: 12px;">
-                    {code}
-                </div>
-                <p style="color: #888; font-size: 12px;">This code expires in 10 minutes.</p>
-            </div>
-        </body>
-        </html>
-        """
-    elif purpose == "reset":
-        subject = "XZY Games & Software Hub - Password Reset Code"
-        html_body = f"""
-        <html>
-        <body style="font-family: Arial, sans-serif; background: #000; color: #fff; padding: 20px;">
-            <div style="max-width: 500px; margin: 0 auto; background: #111; border: 1px solid #222; border-radius: 16px; padding: 30px;">
-                <h2 style="color: #3b82f6; margin-bottom: 20px;">XZY Games & Software Hub</h2>
-                <p>Use the code below to reset your password:</p>
-                <div style="text-align: center; font-size: 36px; font-weight: bold; letter-spacing: 8px; color: #3b82f6; margin: 30px 0; padding: 20px; background: #000; border: 1px solid #222; border-radius: 12px;">
-                    {code}
-                </div>
-                <p style="color: #888; font-size: 12px;">This code expires in 10 minutes. If you didn't request this, ignore this email.</p>
-            </div>
-        </body>
-        </html>
-        """
-    else:
-        subject = "XZY Games & Software Hub - Your Code"
-        html_body = f"Your verification code is: {code}"
-
+    
     try:
-        import resend
-        resend.api_key = api_key
-
-        # Send using owner email as sender (must be verified in Resend)
-        r = resend.Emails.send({
-            "from": f"XZY Games <{owner_email}>",
-            "to": [to_email],
+        # Email body (HTML + plain text)
+        if code_type == "signup":
+            html_content = f"""
+            <html>
+            <body style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
+                <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 30px; border-radius: 10px; text-align: center;">
+                    <h1 style="color: white; margin: 0;">XZY Games</h1>
+                    <p style="color: #f0f0f0; margin-top: 10px;">Games, Software & Movies Hub</p>
+                </div>
+                <div style="background: #f9f9f9; padding: 30px; border-radius: 10px; margin-top: 20px;">
+                    <h2 style="color: #333;">Verify Your Email Address</h2>
+                    <p style="color: #666; line-height: 1.6;">Thank you for signing up! Please use the verification code below to complete your registration:</p>
+                    <div style="background: white; border: 2px dashed #667eea; padding: 20px; border-radius: 10px; text-align: center; margin: 20px 0;">
+                        <h1 style="color: #667eea; font-size: 36px; letter-spacing: 8px; margin: 0;">{code}</h1>
+                    </div>
+                    <p style="color: #666; font-size: 14px;">This code will expire in 10 minutes.</p>
+                    <p style="color: #666; font-size: 14px;">If you didn't create an account, please ignore this email.</p>
+                </div>
+                <div style="text-align: center; margin-top: 20px; color: #999; font-size: 12px;">
+                    <p>© 2025 XZY Games & Software Hub. All rights reserved.</p>
+                </div>
+            </body>
+            </html>
+            """
+            subject = "Verify Your Email - XZY Games"
+        else:  # reset
+            html_content = f"""
+            <html>
+            <body style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
+                <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 30px; border-radius: 10px; text-align: center;">
+                    <h1 style="color: white; margin: 0;">XZY Games</h1>
+                    <p style="color: #f0f0f0; margin-top: 10px;">Password Reset Request</p>
+                </div>
+                <div style="background: #f9f9f9; padding: 30px; border-radius: 10px; margin-top: 20px;">
+                    <h2 style="color: #333;">Reset Your Password</h2>
+                    <p style="color: #666; line-height: 1.6;">You requested to reset your password. Use the code below to proceed:</p>
+                    <div style="background: white; border: 2px dashed #667eea; padding: 20px; border-radius: 10px; text-align: center; margin: 20px 0;">
+                        <h1 style="color: #667eea; font-size: 36px; letter-spacing: 8px; margin: 0;">{code}</h1>
+                    </div>
+                    <p style="color: #666; font-size: 14px;">This code will expire in 10 minutes.</p>
+                    <p style="color: #666; font-size: 14px;">If you didn't request a password reset, please ignore this email.</p>
+                </div>
+                <div style="text-align: center; margin-top: 20px; color: #999; font-size: 12px;">
+                    <p>© 2025 XZY Games & Software Hub. All rights reserved.</p>
+                </div>
+            </body>
+            </html>
+            """
+            subject = "Reset Your Password - XZY Games"
+        
+        # Send via Brevo API
+        url = "https://api.brevo.com/v3/smtp/email"
+        headers = {
+            "api-key": api_key,
+            "Content-Type": "application/json"
+        }
+        
+        payload = {
+            "sender": {
+                "name": sender_name,
+                "email": sender_email
+            },
+            "to": [
+                {
+                    "email": to_email,
+                    "name": to_email.split('@')[0]
+                }
+            ],
             "subject": subject,
-            "html": html_body,
-        })
-        logger.info(f"Email sent via Resend to {owner_email} for {to_email}: {r}")
-        return True
+            "htmlContent": html_content
+        }
+        
+        response = requests.post(url, headers=headers, json=payload, timeout=10)
+        
+        if response.status_code in [200, 201]:
+            print(f"[EMAIL] Successfully sent {code_type} code to {to_email}")
+            return True
+        else:
+            print(f"[EMAIL] Brevo API error {response.status_code}: {response.text}")
+            return False
+        
     except Exception as e:
-        logger.error(f"Failed to send email via Resend: {e}")
+        print(f"[EMAIL] Failed to send email to {to_email}: {e}")
         return False

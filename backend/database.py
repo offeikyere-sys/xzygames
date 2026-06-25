@@ -117,6 +117,7 @@ def init_db():
                 avatar_color TEXT DEFAULT '#3b82f6',
                 is_admin BOOLEAN DEFAULT FALSE,
                 email_verified BOOLEAN DEFAULT FALSE,
+                verification_token TEXT DEFAULT '',
                 avatar_url TEXT DEFAULT '',
                 supabase_id TEXT DEFAULT '',
                 created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
@@ -330,6 +331,8 @@ def init_db():
                 password TEXT NOT NULL,
                 avatar_color TEXT DEFAULT '#3b82f6',
                 is_admin INTEGER DEFAULT 0,
+                email_verified INTEGER DEFAULT 0,
+                verification_token TEXT DEFAULT '',
                 created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
             )
         """)
