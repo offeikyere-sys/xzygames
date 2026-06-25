@@ -394,6 +394,14 @@ export function ProfilePage({ user, onBack, onLogout, onSettings }: ProfilePageP
                           {verifying ? "Verifying..." : "Verify"}
                         </button>
                       </div>
+                      <button 
+                        type="button" 
+                        onClick={handleResendVerificationCode}
+                        disabled={sendingCode}
+                        className="mt-2 text-xs text-blue-400 hover:text-blue-300 transition-colors"
+                      >
+                        {sendingCode ? "Sending..." : "Resend code"}
+                      </button>
                     </motion.form>
                   )}
 

@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { motion } from "framer-motion"
-import { Mail, Lock, Eye, EyeOff, Gamepad2, Loader2, KeyRound, Send, CheckCircle } from "lucide-react"
+import { Mail, Lock, Eye, EyeOff, Gamepad2, Loader2, KeyRound, CheckCircle } from "lucide-react"
 import { apiUrl } from "@/lib/api"
 
 type Step = "login" | "forgot" | "verify-code" | "reset-success"
@@ -16,7 +16,6 @@ export function LoginPage({ onSwitchToSignup, onBack, onLoginSuccess }: {
   const [showPassword, setShowPassword] = useState(false)
   const [error, setError] = useState("")
   const [loading, setLoading] = useState(false)
-  const [resetSent, setResetSent] = useState(false)
   const [verifyCode, setVerifyCode] = useState("")
   const [newPassword, setNewPassword] = useState("")
   const [confirmNewPassword, setConfirmNewPassword] = useState("")
@@ -70,7 +69,6 @@ export function LoginPage({ onSwitchToSignup, onBack, onLoginSuccess }: {
         setError(data.detail || "Failed to send reset email")
         return
       }
-      setResetSent(true)
       setStep("verify-code")
     } catch {
       setError("Something went wrong. Please try again.")
@@ -336,7 +334,7 @@ export function LoginPage({ onSwitchToSignup, onBack, onLoginSuccess }: {
                 {loading ? <><Loader2 size={16} className="animate-spin" />Resetting...</> : <><KeyRound size={16} />Reset Password</>}
               </button>
 
-              <button onClick={() => { setStep("forgot"); setResetSent(false); setError(""); setVerifyCode(""); setNewPassword(""); setConfirmNewPassword("") }} className="w-full text-center text-xs text-zinc-500 hover:text-zinc-300 transition-colors">
+              <button onClick={() => { setStep("forgot"); setError(""); setVerifyCode(""); setNewPassword(""); setConfirmNewPassword("") }} className="w-full text-center text-xs text-zinc-500 hover:text-zinc-300 transition-colors">
                 ← Back to email
               </button>
             </motion.form>
