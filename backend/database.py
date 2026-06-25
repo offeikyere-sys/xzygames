@@ -95,7 +95,7 @@ def reset_sequences(db):
             tables = ['activity_log', 'comments', 'ratings', 'favorites', 'tokens', 'requests', 'users', 'games', 'movies']
             for table in tables:
                 try:
-                    db.execute(f"SELECT setval(pg_get_serial_sequence('{table}', 'id'), COALESCE(MAX(id), 1)) FROM {table}")
+                    db.execute(f"SELECT setval(pg_get_serial_sequence('{table}', 'id'), COALESCE(MAX(id), 0) + 1) FROM {table}")
                 except Exception as e:
                     print(f"[SEQ] Could not reset sequence for {table}: {e}")
             db.commit()

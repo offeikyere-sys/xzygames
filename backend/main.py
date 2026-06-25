@@ -226,9 +226,21 @@ def verify_signup(req: VerifySignupRequest):
             (req.name, req.email, hash_password(req.password), color, is_admin, True)
         )
         db.commit()
-        user_id = db._last_insert_id if db._last_insert_id else db.execute("SELECT last_insert_rowid()").fetchone()[0]
+        # Use _last_insert_id from DB wrapper (PostgreSQL: RETURNING id, SQLite: lastrowid)
+        if db._last_insert_id is not None:
+            user_id = db._last_insert_id
+        else:
+            # Fallback - query the last inserted id (works for both DB types)
+            user_id = db.execute("SELECT MAX(id) FROM users").fetchone()[0]
         token = create_session_token(user_id, db)
         return {"id": user_id, "name": req.name, "email": req.email, "token": token, "is_admin": is_admin}
+    except HTTPException:
+        raise
+    except Exception as e:
+        error_str = str(e)
+        if "duplicate key" in error_str.lower() or "UniqueViolation" in error_str:
+            raise HTTPException(status_code=400, detail="This email is already registered. Please login instead.")
+        raise HTTPException(status_code=500, detail=f"Failed to create account: {error_str}")
     finally:
         db.close()
 
@@ -414,7 +426,7 @@ def signup(user: UserSignup):
             (user.name, user.email, hash_password(user.password), color, is_admin, True)
         )
         db.commit()
-        user_id = db._last_insert_id if db._last_insert_id else db.execute("SELECT last_insert_rowid()").fetchone()[0]
+        user_id = db._last_insert_id if db._last_insert_id is not None else db.execute("SELECT MAX(id) FROM users").fetchone()[0]
         token = create_session_token(user_id, db)
         return {"id": user_id, "name": user.name, "email": user.email, "token": token, "is_admin": is_admin, "email_verified": 1}
     finally:
@@ -822,7 +834,7 @@ def create_game(game: GameUpdate, user_id: int = Depends(require_admin)):
             (game.title or "New Game", game.genre or "Action", game.rating or 0, game.description, game.wallpaper_url, game.download_url, game.download_links or "", game.trailer_url or "", game.screenshots or "", game.color or "#3b82f6", game.os, game.processor, game.memory, game.graphics, game.storage, game.install_guide, game.install_guide_text, game.install_video_url, game.repack_features, game.download_manager_name, game.download_manager_url, game.usage_guide, game.troubleshooting, game.hypervisor_video_url, game.type, game.developer, game.version, game.license_type)
         )
         db.commit()
-        game_id = db._last_insert_id if db._last_insert_id else db.execute("SELECT last_insert_rowid()").fetchone()[0]
+        game_id = db._last_insert_id if db._last_insert_id is not None else db.execute("SELECT MAX(id) FROM games").fetchone()[0]
         return {"id": game_id, "message": "Game created"}
     finally:
         db.close()
@@ -946,7 +958,7 @@ def create_movie(movie: MovieUpdate, user_id: int = Depends(require_admin)):
             (movie.title or "New Movie", movie.genre or "Action", movie.year, movie.duration or "", movie.rating or 0, movie.description, movie.poster_url, movie.backdrop_url, movie.trailer_url or "", movie.video_url or "", movie.download_links or "", movie.screenshots or "", movie.color or "#3b82f6", movie.director or "", movie.cast_name or "", movie.series_name or "", movie.season or 0, movie.episode or 0, movie.type or "movie")
         )
         db.commit()
-        movie_id = db._last_insert_id if db._last_insert_id else db.execute("SELECT last_insert_rowid()").fetchone()[0]
+        movie_id = db._last_insert_id if db._last_insert_id is not None else db.execute("SELECT MAX(id) FROM movies").fetchone()[0]
         return {"id": movie_id, "message": "Movie created"}
     finally:
         db.close()
@@ -1044,7 +1056,7 @@ def add_comment(comment: CommentCreate, user_id: int = Depends(get_user_id)):
             (comment.game_id, user_id, comment.text)
         )
         db.commit()
-        comment_id = db._last_insert_id if db._last_insert_id else db.execute("SELECT last_insert_rowid()").fetchone()[0]
+        comment_id = db._last_insert_id if db._last_insert_id is not None else db.execute("SELECT MAX(id) FROM comments").fetchone()[0]
         return {"id": comment_id, "message": "Comment added"}
     finally:
         db.close()

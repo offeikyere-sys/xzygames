@@ -8,6 +8,10 @@ import sys
 import psycopg2
 from psycopg2.extras import DictCursor
 
+# Add parent directory to path so we can import from database.py
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from database import reset_sequences, DB_TYPE
+
 # Database connection from environment variable
 DATABASE_URL = os.environ.get('DATABASE_URL')
 SQL_FILE = os.path.join(os.path.dirname(__file__), "postgresql_export.sql")
@@ -56,6 +60,11 @@ def import_database():
         cursor.execute("SELECT COUNT(*) FROM movies")
         movie_count = cursor.fetchone()[0]
 
+        # Reset PostgreSQL sequences to prevent duplicate key errors on new inserts
+        print("Resetting database sequences...")
+        conn_wrapper = type('DBWrapper', (), {'execute': lambda self, q, p=None: cursor.execute(q.replace('?', '%s') if p else q, p) if p else cursor.execute(q), 'commit': lambda self: conn.commit(), 'rollback': lambda self: conn.rollback()})()
+        reset_sequences(conn_wrapper)
+        
         print("\nDatabase imported successfully!")
         print("Records imported:")
         print(f"   - Users: {user_count}")
