@@ -953,9 +953,9 @@ def create_movie(movie: MovieUpdate, user_id: int = Depends(require_admin)):
     db = get_db()
     try:
         cursor = db.execute(
-            """INSERT INTO movies (title, genre, year, duration, rating, description, poster_url, backdrop_url, trailer_url, video_url, download_links, screenshots, color, director, cast_name, series_name, season, episode, type)
-               VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)""",
-            (movie.title or "New Movie", movie.genre or "Action", movie.year, movie.duration or "", movie.rating or 0, movie.description, movie.poster_url, movie.backdrop_url, movie.trailer_url or "", movie.video_url or "", movie.download_links or "", movie.screenshots or "", movie.color or "#3b82f6", movie.director or "", movie.cast_name or "", movie.series_name or "", movie.season or 0, movie.episode or 0, movie.type or "movie")
+                """INSERT INTO movies (title, genre, year, duration, rating, description, poster_url, backdrop_url, trailer_url, video_url, download_links, screenshots, color, director, cast_name, series_name, season, episode, type)
+                    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)""",
+                (movie.title or "New Movie", movie.genre or "Action", movie.year, movie.duration or "", movie.rating or 0, movie.description, movie.poster_url, movie.backdrop_url, movie.trailer_url or "", movie.video_url or "", movie.download_links or "", movie.screenshots or "", movie.color or "#3b82f6", movie.director or "", movie.cast_name or "", movie.series_name or "", movie.season or 0, movie.episode or 0, movie.type or "movie")
         )
         db.commit()
         movie_id = db._last_insert_id if db._last_insert_id is not None else db.execute("SELECT MAX(id) FROM movies").fetchone()[0]

@@ -392,7 +392,7 @@ def init_db():
                 download_links TEXT DEFAULT '',
                 screenshots TEXT DEFAULT '',
                 director TEXT DEFAULT '',
-                cast TEXT DEFAULT '',
+                cast_name TEXT DEFAULT '',
                 series_name TEXT DEFAULT '',
                 season INTEGER DEFAULT 0,
                 episode INTEGER DEFAULT 0,
