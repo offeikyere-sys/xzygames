@@ -29,6 +29,7 @@ class DBWrapper:
     """Wrapper that makes db.execute() work for both SQLite and PostgreSQL."""
     def __init__(self, conn):
         self.conn = conn
+        self._last_insert_id = None
     
     def execute(self, query, params=None):
         is_insert = query.strip().upper().startswith("INSERT")
@@ -37,19 +38,32 @@ class DBWrapper:
             query = query.replace("datetime('now')", "CURRENT_TIMESTAMP")
             query = query.replace("date(created_at)", "DATE(created_at)")
             query = query.replace(" LIKE ", " ILIKE ")
+            # Convert boolean comparisons for PostgreSQL (BOOLEAN != INTEGER)
+            query = query.replace("used = 0", "used = FALSE")
+            query = query.replace("used = 1", "used = TRUE")
             # For INSERT queries, add RETURNING id to get the inserted ID
             if is_insert:
                 query = query + " RETURNING id"
+            # Convert Python booleans to PostgreSQL-compatible TRUE/FALSE strings
+            if params:
+                params = tuple(
+                    'TRUE' if p is True else 'FALSE' if p is False else p
+                    for p in params
+                )
         cursor = self.conn.cursor()
         if params:
             cursor.execute(query, params)
         else:
             cursor.execute(query)
-        # For PostgreSQL INSERT with RETURNING, fetch the ID and set lastrowid
-        if DB_TYPE == "postgresql" and is_insert:
-            result = cursor.fetchone()
-            if result and result[0]:
-                cursor.lastrowid = result[0]
+        # Store last insert ID for retrieval after commit
+        self._last_insert_id = None
+        if is_insert:
+            if DB_TYPE == "postgresql":
+                result = cursor.fetchone()
+                if result and result[0]:
+                    self._last_insert_id = result[0]
+            else:
+                self._last_insert_id = cursor.lastrowid
         return cursor
     
     def commit(self):
@@ -74,6 +88,22 @@ def get_db():
         return DBWrapper(conn)
 
 
+def reset_sequences(db):
+    """Reset PostgreSQL sequences to prevent duplicate key errors after data import."""
+    if DB_TYPE == "postgresql":
+        try:
+            tables = ['activity_log', 'comments', 'ratings', 'favorites', 'tokens', 'requests', 'users', 'games', 'movies']
+            for table in tables:
+                try:
+                    db.execute(f"SELECT setval(pg_get_serial_sequence('{table}', 'id'), COALESCE(MAX(id), 0) + 1) FROM {table}")
+                except Exception as e:
+                    print(f"[SEQ] Could not reset sequence for {table}: {e}")
+            db.commit()
+            print("[SEQ] Database sequences reset successfully")
+        except Exception as e:
+            print(f"[SEQ] Error resetting sequences: {e}")
+            db.rollback()
+
 def init_db():
     """Initialize database tables."""
     conn = get_db()
@@ -90,6 +120,7 @@ def init_db():
                 avatar_color TEXT DEFAULT '#3b82f6',
                 is_admin BOOLEAN DEFAULT FALSE,
                 email_verified BOOLEAN DEFAULT FALSE,
+                verification_token TEXT DEFAULT '',
                 avatar_url TEXT DEFAULT '',
                 supabase_id TEXT DEFAULT '',
                 created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
@@ -303,6 +334,8 @@ def init_db():
                 password TEXT NOT NULL,
                 avatar_color TEXT DEFAULT '#3b82f6',
                 is_admin INTEGER DEFAULT 0,
+                email_verified INTEGER DEFAULT 0,
+                verification_token TEXT DEFAULT '',
                 created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
             )
         """)
@@ -359,7 +392,7 @@ def init_db():
                 download_links TEXT DEFAULT '',
                 screenshots TEXT DEFAULT '',
                 director TEXT DEFAULT '',
-                cast TEXT DEFAULT '',
+                cast_name TEXT DEFAULT '',
                 series_name TEXT DEFAULT '',
                 season INTEGER DEFAULT 0,
                 episode INTEGER DEFAULT 0,
