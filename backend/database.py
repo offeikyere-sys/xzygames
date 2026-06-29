@@ -556,6 +556,26 @@ def init_db():
                 cursor.execute(f"ALTER TABLE games ADD COLUMN {col} {col_type}")
                 print(f"Added {col} column to games table")
 
+        # ---- SQLite schema migration for movies ----
+        # Some existing local DBs are missing cast_name/series_name columns,
+        # which causes POST /api/movies to crash with:
+        # "sqlite3.OperationalError: table movies has no column named cast_name"
+        cursor.execute("PRAGMA table_info(movies)")
+        movie_columns = [col[1] for col in cursor.fetchall()]
+
+        movie_migration_columns = {
+            "director": "TEXT DEFAULT ''",
+            "cast_name": "TEXT DEFAULT ''",
+            "series_name": "TEXT DEFAULT ''",
+            "season": "INTEGER DEFAULT 0",
+            "episode": "INTEGER DEFAULT 0",
+        }
+
+        for col, col_type in movie_migration_columns.items():
+            if col not in movie_columns:
+                cursor.execute(f"ALTER TABLE movies ADD COLUMN {col} {col_type}")
+                print(f"Added {col} column to movies table")
+
     conn.commit()
     conn.close()
 

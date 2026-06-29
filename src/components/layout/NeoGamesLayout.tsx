@@ -14,6 +14,9 @@ import { FeaturedMovies } from "@/components/movies/FeaturedMovies"
 import { TopDownloadsMovies } from "@/components/movies/TopDownloadsMovies"
 import { Footer } from "@/components/games/Footer"
 import { CategoryPage } from "@/components/games/CategoryPage"
+import { FloatingRobot } from "@/components/robot/FloatingRobot"
+import { AIChatModal } from "@/components/ui/AIChatModal"
+
 import { GameDetailPage } from "@/components/games/GameDetailPage"
 import { RequestsPage } from "@/components/games/RequestsPage"
 import { MovieDetailPage } from "@/components/movies/MovieDetailPage"
@@ -188,20 +191,36 @@ export function NeoGamesLayout() {
 
   const handleGameClick = (game: GameInfo) => {
     setSelectedGame(game)
+
+    // Remember scroll position + where user came from so Back returns them exactly
+    const backKey = `back:${currentPage}`
+    scrollPositions.current[backKey] = window.scrollY
+
     setCameFromSearch(currentPage === "search")
-    setCameFromViewAll(currentPage === "games-view-all" || currentPage === "software-view-all" || currentPage === "movies-view-all")
+    setCameFromViewAll(
+      currentPage === "games-view-all" ||
+        currentPage === "software-view-all" ||
+        currentPage === "movies-view-all"
+    )
     setCategorySection(activeSection)
     setCurrentPage("game")
     window.scrollTo(0, 0)
     addRecentItem(game as any)
   }
 
+
   const handleMovieClick = (movie: any) => {
     setSelectedMovie(movie)
+
+    // Remember scroll position + where user came from so Back returns them exactly
+    const backKey = `back:${currentPage}`
+    scrollPositions.current[backKey] = window.scrollY
+
     setCategorySection("movies")
     setCurrentPage("movie")
     window.scrollTo(0, 0)
   }
+
 
   const handleSectionChange = (section: "games" | "software" | "movies") => {
     setActiveCategory("All")
@@ -357,6 +376,7 @@ export function NeoGamesLayout() {
   const hideNav = currentPage === "login" || currentPage === "signup"
 
   const handleFooterNavigate = (page: string) => {
+
     if (page === "home") {
       setCurrentPage("home")
     } else if (page === "games-browse") {
@@ -390,6 +410,53 @@ export function NeoGamesLayout() {
   const navActiveCategory = currentPage === "games-browse" || currentPage === "software-browse" || currentPage === "movies-browse"
     ? activeCategory
     : currentPage
+
+  const [perfMode, setPerfMode] = useState(false)
+  const [aiChatOpen, setAiChatOpen] = useState(false)
+
+
+  // perfMode is mainly used for CSS overrides; we keep the JS minimal.
+
+
+  useEffect(() => {
+    // Note: keep this logic simple; CSS is the main performance win.
+
+    // Detect mobile / low-end conditions.
+    // (We do not rely only on prefers-reduced-motion, because many users won't enable it.)
+    const w = window as any
+    const mql = window.matchMedia?.('(max-width: 768px)')
+    const reduced = window.matchMedia?.('(prefers-reduced-motion: reduce)')
+
+    const saveData = Boolean(navigator && (navigator as any).connection && (navigator as any).connection.saveData)
+
+    const isMobile = Boolean(mql && mql.matches)
+    const prefersReduced = Boolean(reduced && reduced.matches)
+
+    // Start in perf-mode for mobile OR reduced-motion users.
+    // Also enable for Save-Data.
+    const enabled = isMobile || prefersReduced || saveData
+
+    setPerfMode(enabled)
+
+    // Apply immediately so CSS overrides can take effect without waiting for state.
+    document.documentElement.classList.toggle('perf-mode', enabled)
+
+    const handler = () => {
+      const isMobileNow = Boolean(mql && mql.matches)
+      const prefersReducedNow = Boolean(reduced && reduced.matches)
+      const enabledNow = isMobileNow || prefersReducedNow || saveData
+      setPerfMode(enabledNow)
+      document.documentElement.classList.toggle('perf-mode', enabledNow)
+    }
+
+    if (mql?.addEventListener) mql.addEventListener('change', handler)
+    if (reduced?.addEventListener) reduced.addEventListener('change', handler)
+
+    return () => {
+      if (mql?.removeEventListener) mql.removeEventListener('change', handler)
+      if (reduced?.removeEventListener) reduced.removeEventListener('change', handler)
+    }
+  }, [])
 
   return (
     <div className="min-h-screen bg-black text-white overflow-x-hidden game-themed">
@@ -881,7 +948,10 @@ export function NeoGamesLayout() {
         )}
       </AnimatePresence>
 
+      <FloatingRobot onDoubleClick={() => setAiChatOpen(true)} chatOpen={aiChatOpen} />
+      <AIChatModal isOpen={aiChatOpen} onClose={() => setAiChatOpen(false)} />
       <ScrollToTop />
+
 
       {/* Live Activity Feed (admin only) */}
       {showActivityFeed && user?.is_admin === 1 && <ActivityFeed />}

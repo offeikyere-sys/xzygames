@@ -952,10 +952,41 @@ def get_movie(movie_id: int):
 def create_movie(movie: MovieUpdate, user_id: int = Depends(require_admin)):
     db = get_db()
     try:
+        # Robust insert for old/local SQLite DBs that may be missing some columns.
+        # We build the INSERT statement using only columns that exist.
+        existing_cols = {row["name"] for row in db.execute("PRAGMA table_info(movies)").fetchall()}
+
+        base = {
+            "title": movie.title or "New Movie",
+            "genre": movie.genre or "Action",
+            "year": movie.year,
+            "duration": movie.duration or "",
+            "rating": movie.rating or 0,
+            "description": movie.description,
+            "poster_url": movie.poster_url,
+            "backdrop_url": movie.backdrop_url,
+            "trailer_url": movie.trailer_url or "",
+            "video_url": movie.video_url or "",
+            "download_links": movie.download_links or "",
+            "screenshots": movie.screenshots or "",
+            "color": movie.color or "#3b82f6",
+            "director": movie.director or "",
+            "cast_name": movie.cast_name or "",
+            "series_name": movie.series_name or "",
+            "season": movie.season or 0,
+            "episode": movie.episode or 0,
+            "type": movie.type or "movie",
+        }
+
+        insert_cols = [k for k in base.keys() if k in existing_cols]
+        values = [base[k] for k in insert_cols]
+
+        placeholders = ", ".join(["?"] * len(insert_cols))
+        cols_sql = ", ".join(insert_cols)
+
         cursor = db.execute(
-                """INSERT INTO movies (title, genre, year, duration, rating, description, poster_url, backdrop_url, trailer_url, video_url, download_links, screenshots, color, director, cast_name, series_name, season, episode, type)
-                    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)""",
-                (movie.title or "New Movie", movie.genre or "Action", movie.year, movie.duration or "", movie.rating or 0, movie.description, movie.poster_url, movie.backdrop_url, movie.trailer_url or "", movie.video_url or "", movie.download_links or "", movie.screenshots or "", movie.color or "#3b82f6", movie.director or "", movie.cast_name or "", movie.series_name or "", movie.season or 0, movie.episode or 0, movie.type or "movie")
+            f"INSERT INTO movies ({cols_sql}) VALUES ({placeholders})",
+            tuple(values),
         )
         db.commit()
         movie_id = db._last_insert_id if db._last_insert_id is not None else db.execute("SELECT MAX(id) FROM movies").fetchone()[0]

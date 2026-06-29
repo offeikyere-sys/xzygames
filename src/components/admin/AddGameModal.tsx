@@ -12,7 +12,7 @@ interface AddGameModalProps {
 
 const allGenres = ["Action", "RPG", "Strategy", "Racing", "Horror", "Adventure", "Sports", "Sci-Fi", "Simulation", "Puzzle", "Shooter", "Open World", "Survival", "Fighting", "Arcade", "Casual", "Indie", "Hypervisor"]
 const softwareGenres = ["Antivirus & Security", "Browsers", "Design & 3D", "Development Tools", "Multimedia & Audio", "Productivity & Office", "Utilities & System"]
-const movieGenres = ["Action", "Comedy", "Drama", "Horror", "Thriller", "Sci-Fi", "Romance", "Adventure", "Animation", "Documentary", "Fantasy", "Mystery", "Crime", "Family", "War", "Western", "Musical", "History"]
+const movieGenres = ["Action", "Comedy", "Drama", "Horror", "Thriller", "Sci-Fi", "Romance", "Adventure", "Animation", "Documentary", "Fantasy", "Mystery", "Crime", "Family", "War", "Western", "Musical", "History", "Series", "Seasonal"]
 const colors = [
   "#3b82f6", "#a855f7", "#10b981", "#ef4444", "#f59e0b", "#ec4899", "#06b6d4", "#dc2626", "#f97316", "#84cc16",
   "#2563eb", "#1d4ed8", "#0ea5e9", "#0891b2", "#14b8a6",

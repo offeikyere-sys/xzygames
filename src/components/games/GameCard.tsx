@@ -20,7 +20,6 @@ interface GameCardProps {
 export function GameCard({ title, genre, rating, downloads, image, color, index, gameId, onClick, showDelete, onDelete }: GameCardProps) {
   const [deleting, setDeleting] = useState(false)
   const [confirmOpen, setConfirmOpen] = useState(false)
-  const [imgError, setImgError] = useState(false)
   const cardRef = useRef<HTMLDivElement>(null)
 
   // 3D Tilt values — more pronounced for tactile feel
@@ -110,8 +109,8 @@ export function GameCard({ title, genre, rating, downloads, image, color, index,
       >
         {/* Game Image / Cover */}
         <div className="relative h-56 overflow-hidden">
-          {image && !imgError ? (
-            <BlurImage src={image} alt={title} className="absolute inset-0 w-full h-full object-cover" wrapperClassName="absolute inset-0" onError={() => setImgError(true)} />
+          {image ? (
+            <BlurImage src={image} alt={title} className="absolute inset-0 w-full h-full object-cover" wrapperClassName="absolute inset-0" />
           ) : (
             <>
               <div

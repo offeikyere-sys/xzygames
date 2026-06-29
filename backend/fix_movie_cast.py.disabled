@@ -1,0 +1,72 @@
+import sqlite3
+import os
+
+path = r'd:\PROJECTS WEBSITES AND SOFTWARES\neo-web\backend\database.py'
+
+with open(path, 'r', encoding='utf-8') as f:
+    content = f.read()
+
+if "cast TEXT DEFAULT ''" in content:
+    content = content.replace("cast TEXT DEFAULT ''", "cast_name TEXT DEFAULT ''")
+
+# Find insertion point
+marker = """        )
+        \"\"\"
+
+        cursor.execute(\"\"\"
+"""
+replacement = """        )
+        \"\"\"
+
+        # Migrate existing movies table: rename 'cast' to 'cast_name' if needed
+        try:
+            cursor.execute("ALTER TABLE movies RENAME COLUMN cast TO cast_name")
+            print("[MIGRATE] Renamed movies.cast to movies.cast_name")
+        except Exception:
+            # SQLite < 3.35 doesn't support RENAME COLUMN, or column already renamed
+            cursor.execute("PRAGMA table_info(movies)")
+            columns = [col[1] for col in cursor.fetchall()]
+            if "cast_name" not in columns:
+                cursor.execute("ALTER TABLE movies ADD COLUMN cast_name TEXT DEFAULT ''")
+                print("[MIGRATE] Added movies.cast_name column")
+
+        cursor.execute(\"\"\"
+"""
+
+if marker in content:
+    content = content.replace(marker, replacement, 1)
+    with open(path, 'w', encoding='utf-8') as f:
+        f.write(content)
+    print("Migration script applied successfully")
+else:
+    print("Marker not found, applying fallback replacement")
+    fallback_marker = """        )
+        \"\"\"
+
+        cursor.execute(\"\"\"
+            CREATE TABLE IF NOT EXISTS comments (
+"""
+    fallback_replacement = """        )
+        \"\"\"
+
+        # Migrate existing movies table: rename 'cast' to 'cast_name' if needed
+        try:
+            cursor.execute("ALTER TABLE movies RENAME COLUMN cast TO cast_name")
+            print("[MIGRATE] Renamed movies.cast to movies.cast_name")
+        except Exception:
+            cursor.execute("PRAGMA table_info(movies)")
+            columns = [col[1] for col in cursor.fetchall()]
+            if "cast_name" not in columns:
+                cursor.execute("ALTER TABLE movies ADD COLUMN cast_name TEXT DEFAULT ''")
+                print("[MIGRATE] Added movies.cast_name column")
+
+        cursor.execute(\"\"\"
+            CREATE TABLE IF NOT EXISTS comments (
+"""
+    if fallback_marker in content:
+        content = content.replace(fallback_marker, fallback_replacement, 1)
+        with open(path, 'w', encoding='utf-8') as f:
+            f.write(content)
+        print("Migration script applied via fallback")
+    else:
+        print("Could not find insertion point")
