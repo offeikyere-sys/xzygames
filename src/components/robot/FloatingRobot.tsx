@@ -1,6 +1,5 @@
 import { useState, useCallback, useEffect, useRef } from "react"
 import { motion, useAnimation } from "framer-motion"
-import { SplineScene } from "@/components/ui/splite"
 import { Activity, Wifi, WifiOff } from "lucide-react"
 
 interface Position {
@@ -16,8 +15,7 @@ interface FloatingRobotProps {
 export function FloatingRobot({ onDoubleClick, chatOpen }: FloatingRobotProps) {
   const [isOnline] = useState(true)
   const [brainActivity, setBrainActivity] = useState(0.65)
-  const [splineLoaded, setSplineLoaded] = useState(false)
-  const [splineError, setSplineError] = useState(false)
+  // Removed Spline 3D - using CSS robot instead to fix event capture issues
 
   const [position, setPosition] = useState<Position>({
     x: typeof window !== "undefined" ? window.innerWidth - 400 : 800,
@@ -182,46 +180,52 @@ export function FloatingRobot({ onDoubleClick, chatOpen }: FloatingRobotProps) {
           {/* Invisible click overlay - ensures entire area is clickable */}
           <div className="absolute inset-0 z-10 bg-transparent" />
           
-          {/* Spline 3D Robot with smooth loading */}
-          <div className="w-64 h-64 md:w-72 md:h-64 relative z-0">
-            {!splineLoaded && !splineError && (
-              <motion.div
-                className="w-full h-full flex items-center justify-center"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.3 }}
-              >
-                <div className="relative">
-                  <div className="w-12 h-12 border-3 border-blue-500/20 border-t-blue-500 rounded-full animate-spin" />
-                  <motion.div
-                    className="absolute inset-0 w-12 h-12 rounded-full bg-blue-500/10 blur-xl"
-                    animate={{ scale: [1, 1.2, 1], opacity: [0.3, 0.6, 0.3] }}
-                    transition={{ duration: 1.5, repeat: Infinity }}
-                  />
-                </div>
-              </motion.div>
-            )}
-            {splineError && (
-              <motion.div
-                className="w-full h-full flex items-center justify-center"
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.3 }}
-              >
-                <div className="text-zinc-500 text-sm">Robot unavailable</div>
-              </motion.div>
-            )}
+          {/* CSS-only Robot - no WebGL, no event capture issues */}
+          <div className="w-64 h-64 md:w-72 md:h-64 relative z-0 flex items-center justify-center">
             <motion.div
-              className={`w-full h-full ${splineLoaded ? 'opacity-100' : 'opacity-0'}`}
-              animate={{ opacity: splineLoaded ? 1 : 0 }}
-              transition={{ duration: 0.5, ease: "easeOut" }}
+              className="relative"
+              animate={{
+                y: [0, -10, 0],
+                rotate: [0, 5, -5, 0],
+              }}
+              transition={{
+                duration: 4,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
             >
-              <SplineScene
-                scene="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode"
-                className="w-full h-full"
-                onLoad={() => setSplineLoaded(true)}
-                onError={() => setSplineError(true)}
-              />
+              {/* Robot body */}
+              <div className="w-32 h-32 md:w-40 md:h-40 relative">
+                {/* Glow effect */}
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-500/30 to-purple-500/30 rounded-full blur-2xl" />
+                
+                {/* Robot head */}
+                <div className="relative w-full h-full rounded-full bg-gradient-to-br from-zinc-800 to-zinc-900 border-2 border-blue-500/50 shadow-lg shadow-blue-500/30 flex items-center justify-center">
+                  {/* Eyes */}
+                  <div className="flex gap-3">
+                    <motion.div
+                      className="w-4 h-4 md:w-5 md:h-5 bg-blue-400 rounded-full shadow-lg shadow-blue-400/50"
+                      animate={{ scale: [1, 1.2, 1] }}
+                      transition={{ duration: 2, repeat: Infinity }}
+                    />
+                    <motion.div
+                      className="w-4 h-4 md:w-5 md:h-5 bg-blue-400 rounded-full shadow-lg shadow-blue-400/50"
+                      animate={{ scale: [1, 1.2, 1] }}
+                      transition={{ duration: 2, repeat: Infinity, delay: 0.2 }}
+                    />
+                  </div>
+                  
+                  {/* Antenna */}
+                  <div className="absolute -top-6 left-1/2 -translate-x-1/2">
+                    <div className="w-1 h-6 bg-zinc-600 mx-auto" />
+                    <motion.div
+                      className="w-3 h-3 bg-blue-400 rounded-full shadow-lg shadow-blue-400/50"
+                      animate={{ opacity: [0.5, 1, 0.5] }}
+                      transition={{ duration: 1.5, repeat: Infinity }}
+                    />
+                  </div>
+                </div>
+              </div>
             </motion.div>
           </div>
 
