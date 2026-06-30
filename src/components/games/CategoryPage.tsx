@@ -55,28 +55,58 @@ export function CategoryPage({ category, userToken, isAdmin, onBack, onGameClick
 
   const gamesPerPage = 24
 
-  // Fetch games
+  // Dynamic title based on typeFilter
+  const pageTitle = typeFilter === "movie"
+    ? "Movies"
+    : typeFilter === "software"
+      ? "Software"
+      : "Games"
+
+  const pageSubtitle = typeFilter === "movie"
+    ? "Discover and download amazing movies"
+    : typeFilter === "software"
+      ? "Discover powerful software for every need"
+      : "Discover and download amazing games"
+
+  // Fetch items based on typeFilter (games, software, or movies)
   useEffect(() => {
-    const fetchGames = async () => {
+    const fetchItems = async () => {
+      setLoading(true)
       try {
-        const res = await fetch(apiUrl("/api/games"))
-        const data = await res.json()
-        if (data.success) {
-          setGames(data.games || [])
-          setFilteredGames(data.games || [])
-          
-          // Extract unique genres
-          const uniqueGenres = Array.from(new Set((data.games || []).map((g: Game) => g.genre))).filter(Boolean) as string[]
-          setGenres(["All", ...uniqueGenres.sort()])
+        let endpoint = "/api/games"
+        let params = new URLSearchParams()
+
+        if (typeFilter === "movie") {
+          endpoint = "/api/movies"
+        } else if (typeFilter === "game" || typeFilter === "software") {
+          params.set("type", typeFilter)
         }
+
+        // Pass the category as genre filter (unless it's "All")
+        if (category && category !== "All") {
+          params.set("genre", category)
+        }
+
+        const url = `${apiUrl(endpoint)}${params.toString() ? `?${params.toString()}` : ""}`
+        const res = await fetch(url)
+        const data = await res.json()
+
+        // Backend returns a plain array directly
+        const items = Array.isArray(data) ? data : []
+        setGames(items)
+        setFilteredGames(items)
+
+        // Extract unique genres from fetched items
+        const uniqueGenres = Array.from(new Set(items.map((g: Game) => g.genre))).filter(Boolean) as string[]
+        setGenres(["All", ...uniqueGenres.sort()])
       } catch (error) {
-        console.error("Failed to fetch games:", error)
+        console.error("Failed to fetch items:", error)
       } finally {
         setLoading(false)
       }
     }
-    fetchGames()
-  }, [])
+    fetchItems()
+  }, [typeFilter, category])
 
   // Filter and sort games
   useEffect(() => {
@@ -158,7 +188,7 @@ export function CategoryPage({ category, userToken, isAdmin, onBack, onGameClick
             animate={{ opacity: 1, y: 0 }}
             className="text-4xl sm:text-5xl font-bold text-white mb-4"
           >
-            Games
+            {category && category !== "All" ? category : pageTitle}
           </motion.h1>
           
           <motion.p
@@ -167,7 +197,7 @@ export function CategoryPage({ category, userToken, isAdmin, onBack, onGameClick
             transition={{ delay: 0.1 }}
             className="text-zinc-400 text-lg mb-8"
           >
-            Discover and download amazing games
+            {pageSubtitle}
           </motion.p>
 
           {/* Search Bar */}
@@ -178,13 +208,13 @@ export function CategoryPage({ category, userToken, isAdmin, onBack, onGameClick
             className="relative max-w-2xl"
           >
             <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-zinc-500" size={20} />
-            <input
-              type="text"
-              placeholder="Search games..."
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full pl-12 pr-4 py-4 bg-zinc-900/50 border border-zinc-800 rounded-xl text-white placeholder-zinc-500 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all"
-            />
+          <input
+            type="text"
+            placeholder={`Search ${pageTitle.toLowerCase()}...`}
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+            className="w-full pl-12 pr-4 py-4 bg-zinc-900/50 border border-zinc-800 rounded-xl text-white placeholder-zinc-500 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all"
+          />
             {searchQuery && (
               <button
                 onClick={() => setSearchQuery("")}
@@ -219,7 +249,7 @@ export function CategoryPage({ category, userToken, isAdmin, onBack, onGameClick
         {/* Sort and Filter Controls */}
         <div className="flex items-center justify-between mb-6">
           <p className="text-zinc-400 text-sm">
-            {filteredGames.length} {filteredGames.length === 1 ? "game" : "games"} found
+            {filteredGames.length} {filteredGames.length === 1 ? (typeFilter === "movie" ? "movie" : typeFilter === "software" ? "software" : "game") : (typeFilter === "movie" ? "movies" : typeFilter === "software" ? "software" : "games")} found
           </p>
           
           <div className="flex items-center gap-3">
