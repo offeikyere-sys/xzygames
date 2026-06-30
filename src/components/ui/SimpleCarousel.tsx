@@ -23,12 +23,15 @@ export function SimpleCarousel({ items, cardWidth, onItemClick, renderCard }: Si
     })
   }
 
+  const gap = 16 // matches gap-4
+  const translateX = currentIndex * (cardWidth + gap)
+
   return (
     <div className="relative">
       <div
         ref={carouselRef}
         className="flex gap-4 overflow-hidden"
-        style={{ scrollSnapType: "x mandatory" }}
+        style={{ scrollSnapType: "x mandatory", transform: `translateX(-${translateX}px)` }}
       >
         {items.map((item, index) => (
           <div
