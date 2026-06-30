@@ -213,6 +213,12 @@ export function NeoGamesLayout() {
     const backKey = `back:${currentPage}`
     scrollPositions.current[backKey] = window.scrollY
 
+    setCameFromSearch(currentPage === "search")
+    setCameFromViewAll(
+      currentPage === "games-view-all" ||
+        currentPage === "software-view-all" ||
+        currentPage === "movies-view-all"
+    )
     setCategorySection("movies")
     setCurrentPage("movie")
     window.scrollTo(0, 0)
@@ -854,7 +860,15 @@ export function NeoGamesLayout() {
             <MovieDetailPage 
               movieId={selectedMovie.id} 
               onBack={() => {
-                setCurrentPage("movies-browse")
+                if (cameFromSearch) {
+                  setCameFromSearch(false)
+                  setCurrentPage("search")
+                } else if (cameFromViewAll) {
+                  setCameFromViewAll(false)
+                  setCurrentPage("movies-view-all")
+                } else {
+                  setCurrentPage("movies-browse")
+                }
                 window.scrollTo(0, 0)
               }} 
               userToken={user?.token} 
