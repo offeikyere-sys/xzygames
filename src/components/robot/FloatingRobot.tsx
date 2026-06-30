@@ -15,7 +15,7 @@ interface FloatingRobotProps {
 export function FloatingRobot({ onDoubleClick, chatOpen }: FloatingRobotProps) {
   const [isOnline] = useState(true)
   const [brainActivity, setBrainActivity] = useState(0.65)
-  // Removed Spline 3D - using CSS robot instead to fix event capture issues
+  const [mousePos, setMousePos] = useState({ x: 0, y: 0 })
 
   const [position, setPosition] = useState<Position>({
     x: typeof window !== "undefined" ? window.innerWidth - 400 : 800,
@@ -23,8 +23,6 @@ export function FloatingRobot({ onDoubleClick, chatOpen }: FloatingRobotProps) {
   })
 
   const controls = useAnimation()
-
-  // Performance: if perf-mode is enabled, stop frequent interval updates + heavy animations.
   const [perfMode, setPerfMode] = useState(false)
 
   useEffect(() => {
@@ -33,16 +31,13 @@ export function FloatingRobot({ onDoubleClick, chatOpen }: FloatingRobotProps) {
       setPerfMode(Boolean(enabled))
     }
     update()
-
     const obs = new MutationObserver(() => update())
     if (document?.documentElement) {
       obs.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] })
     }
-
     return () => obs.disconnect()
   }, [])
 
-  // Brain activity simulation (disabled in perf-mode)
   useEffect(() => {
     if (perfMode) return
     const brainInterval = setInterval(() => {
@@ -51,45 +46,35 @@ export function FloatingRobot({ onDoubleClick, chatOpen }: FloatingRobotProps) {
     return () => clearInterval(brainInterval)
   }, [perfMode])
 
-
-// Idle animation sequence: gentle float + periodic wave
   useEffect(() => {
     if (perfMode) {
-      // In perf-mode keep robot stable.
       controls.set({ y: 0, rotate: 0, scale: 1 })
       return
     }
 
     const runSequence = async () => {
-      // Always do gentle float
       await controls.start({
         y: [0, -6, 0],
         transition: { duration: 3, repeat: Infinity, ease: "easeInOut" },
       })
     }
-
     runSequence()
 
-    // Periodic "hello" wave animation every 10 seconds
     const waveInterval = setInterval(async () => {
       await controls.start({
         rotate: [0, -8, 8, -8, 8, 0],
         scale: [1, 1.05, 1],
         transition: { duration: 0.8, ease: "easeInOut" },
       })
-      // Resume floating
       controls.start({
         y: [0, -6, 0],
         transition: { duration: 3, repeat: Infinity, ease: "easeInOut" },
       })
     }, 10000)
 
-    return () => {
-      clearInterval(waveInterval)
-    }
+    return () => clearInterval(waveInterval)
   }, [controls, perfMode])
 
-  // When chat opens, do a little bounce (disabled in perf-mode)
   useEffect(() => {
     if (perfMode) return
     if (chatOpen) {
@@ -101,7 +86,16 @@ export function FloatingRobot({ onDoubleClick, chatOpen }: FloatingRobotProps) {
     }
   }, [chatOpen, controls, perfMode])
 
-  // Custom double-click detector - only triggers on robot element
+  // Track mouse for eye-following
+  useEffect(() => {
+    const handleMouseMove = (e: MouseEvent) => {
+      setMousePos({ x: e.clientX, y: e.clientY })
+    }
+    window.addEventListener('mousemove', handleMouseMove)
+    return () => window.removeEventListener('mousemove', handleMouseMove)
+  }, [])
+
+  // Double-click detector
   const robotRef = useRef<HTMLDivElement>(null)
   const lastClickTime = useRef(0)
   
@@ -113,7 +107,6 @@ export function FloatingRobot({ onDoubleClick, chatOpen }: FloatingRobotProps) {
       const now = Date.now()
       const timeDiff = now - lastClickTime.current
       
-      // Double-click detected: within 400ms
       if (timeDiff < 400 && timeDiff > 0) {
         e.preventDefault()
         e.stopPropagation()
@@ -128,19 +121,12 @@ export function FloatingRobot({ onDoubleClick, chatOpen }: FloatingRobotProps) {
     return () => robotEl.removeEventListener('click', handleClick, true)
   }, [onDoubleClick])
 
-  const handleDragStart = useCallback(() => {
-    // Reset any click tracking
-  }, [])
-
-  const handleDrag = useCallback((_: any, info: any) => {
-    // Allow drag without interfering with double-click
-  }, [])
-
+  const handleDragStart = useCallback(() => {}, [])
+  const handleDrag = useCallback((_: any, info: any) => {}, [])
   const handleDragEnd = useCallback((_: any, info: any) => {
     setPosition({ x: info.point.x, y: info.point.y })
   }, [])
 
-  // Generate stable particle positions once using lazy state initialization
   const [particlePositions] = useState(() => [
     { top: 20 + Math.random() * 60, left: -10 + Math.random() * 20, yOffset: -20 - Math.random() * 20, duration: 3 + Math.random() * 2 },
     { top: 20 + Math.random() * 60, left: -10 + Math.random() * 20, yOffset: -20 - Math.random() * 20, duration: 3 + Math.random() * 2 },
@@ -148,9 +134,12 @@ export function FloatingRobot({ onDoubleClick, chatOpen }: FloatingRobotProps) {
     { top: 20 + Math.random() * 60, left: -10 + Math.random() * 20, yOffset: -20 - Math.random() * 20, duration: 3 + Math.random() * 2 },
   ])
 
+  // Calculate eye movement based on mouse position
+  const eyeOffsetX = Math.max(-3, Math.min(3, (mousePos.x - window.innerWidth / 2) / 300))
+  const eyeOffsetY = Math.max(-3, Math.min(3, (mousePos.y - window.innerHeight / 2) / 300))
+
   return (
     <>
-      {/* Draggable Robot */}
       <motion.div
         drag
         dragMomentum={false}
@@ -164,23 +153,17 @@ export function FloatingRobot({ onDoubleClick, chatOpen }: FloatingRobotProps) {
         animate={controls}
         transition={{ type: "spring", duration: 0.8, bounce: 0.3 }}
       >
-        {/* Ring glow pulse behind robot */}
         <motion.div
           className="absolute -inset-4 rounded-full bg-blue-500/10 blur-2xl pointer-events-none"
           animate={{ scale: [1, 1.15, 1], opacity: [0.2, 0.5, 0.2] }}
           transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
         />
 
-        {/* Robot container - double-click opens AI chat */}
         <div 
           ref={robotRef}
           className="relative cursor-grab active:cursor-grabbing pointer-events-auto"
           style={{ width: '320px', height: '320px' }}
         >
-          {/* Invisible click overlay - ensures entire area is clickable */}
-          <div className="absolute inset-0 z-10 bg-transparent" />
-          
-          {/* CSS-only Robot - no WebGL, no event capture issues */}
           <div className="w-64 h-64 md:w-72 md:h-64 relative z-0 flex items-center justify-center">
             <motion.div
               className="relative"
@@ -194,28 +177,31 @@ export function FloatingRobot({ onDoubleClick, chatOpen }: FloatingRobotProps) {
                 ease: "easeInOut",
               }}
             >
-              {/* Robot body */}
               <div className="w-32 h-32 md:w-40 md:h-40 relative">
-                {/* Glow effect */}
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-500/30 to-purple-500/30 rounded-full blur-2xl" />
                 
-                {/* Robot head */}
                 <div className="relative w-full h-full rounded-full bg-gradient-to-br from-zinc-800 to-zinc-900 border-2 border-blue-500/50 shadow-lg shadow-blue-500/30 flex items-center justify-center">
-                  {/* Eyes */}
                   <div className="flex gap-3">
                     <motion.div
                       className="w-4 h-4 md:w-5 md:h-5 bg-blue-400 rounded-full shadow-lg shadow-blue-400/50"
-                      animate={{ scale: [1, 1.2, 1] }}
-                      transition={{ duration: 2, repeat: Infinity }}
+                      animate={{
+                        scale: [1, 1.2, 1],
+                        x: eyeOffsetX,
+                        y: eyeOffsetY,
+                      }}
+                      transition={{ duration: 0.2 }}
                     />
                     <motion.div
                       className="w-4 h-4 md:w-5 md:h-5 bg-blue-400 rounded-full shadow-lg shadow-blue-400/50"
-                      animate={{ scale: [1, 1.2, 1] }}
-                      transition={{ duration: 2, repeat: Infinity, delay: 0.2 }}
+                      animate={{
+                        scale: [1, 1.2, 1],
+                        x: eyeOffsetX,
+                        y: eyeOffsetY,
+                      }}
+                      transition={{ duration: 0.2, delay: 0.05 }}
                     />
                   </div>
                   
-                  {/* Antenna */}
                   <div className="absolute -top-6 left-1/2 -translate-x-1/2">
                     <div className="w-1 h-6 bg-zinc-600 mx-auto" />
                     <motion.div
@@ -229,7 +215,6 @@ export function FloatingRobot({ onDoubleClick, chatOpen }: FloatingRobotProps) {
             </motion.div>
           </div>
 
-          {/* Floating particles around robot - reduced in perf-mode */}
           {!perfMode && Array.from({ length: 4 }).map((_, i) => {
             const particle = particlePositions[i]
             return (
@@ -255,9 +240,7 @@ export function FloatingRobot({ onDoubleClick, chatOpen }: FloatingRobotProps) {
             )
           })}
 
-          {/* Status badges below robot */}
           <div className="flex items-center justify-center gap-3 mt-1">
-            {/* Online dot */}
             <div className="flex items-center gap-1.5 px-2 py-1 rounded-full bg-black/40 backdrop-blur-sm border border-zinc-800/50">
               <motion.div
                 animate={{ opacity: [0.5, 1, 0.5] }}
@@ -269,12 +252,9 @@ export function FloatingRobot({ onDoubleClick, chatOpen }: FloatingRobotProps) {
                   <WifiOff size={10} className="text-red-400" />
                 )}
               </motion.div>
-              <span className="text-[10px] font-medium text-emerald-400/80">
-                AI
-              </span>
+              <span className="text-[10px] font-medium text-emerald-400/80">AI</span>
             </div>
 
-            {/* Brain activity mini bar */}
             <div className="flex items-center gap-1.5 px-2 py-1 rounded-full bg-black/40 backdrop-blur-sm border border-zinc-800/50">
               <Activity size={10} className="text-blue-400" />
               <div className="w-10 h-1 bg-zinc-800 rounded-full overflow-hidden">
@@ -287,7 +267,6 @@ export function FloatingRobot({ onDoubleClick, chatOpen }: FloatingRobotProps) {
             </div>
           </div>
 
-          {/* Double-click hint (fades out) */}
           {!chatOpen && (
             <motion.div
               className="absolute -top-10 left-1/2 -translate-x-1/2 whitespace-nowrap"
