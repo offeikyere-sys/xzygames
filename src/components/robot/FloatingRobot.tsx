@@ -106,18 +106,19 @@ export function FloatingRobot({ onDoubleClick, chatOpen }: FloatingRobotProps) {
     }
   }, [chatOpen, controls, perfMode])
 
-  // Simple double-click handler - works instantly
+  // Double-click handler - works in any cursor state
   const handleDoubleClick = useCallback((e: React.MouseEvent) => {
     e.stopPropagation()
+    e.preventDefault()
     onDoubleClick()
   }, [onDoubleClick])
 
   const handleDragStart = useCallback(() => {
-    // Allow small movements during drag
+    // Reset any click tracking
   }, [])
 
   const handleDrag = useCallback((_: any, info: any) => {
-    // Track drag but allow some tolerance
+    // Allow drag without interfering with double-click
   }, [])
 
   const handleDragEnd = useCallback((_: any, info: any) => {
@@ -141,8 +142,7 @@ export function FloatingRobot({ onDoubleClick, chatOpen }: FloatingRobotProps) {
         onDragStart={handleDragStart}
         onDrag={handleDrag}
         onDragEnd={handleDragEnd}
-        onDoubleClick={handleDoubleClick}
-        className="fixed z-30 cursor-grab active:cursor-grabbing select-none"
+        className="fixed z-30 select-none pointer-events-none"
         style={{ left: position.x, top: position.y }}
         whileDrag={{ scale: 1.08 }}
         initial={{ scale: 0, opacity: 0 }}
@@ -151,13 +151,16 @@ export function FloatingRobot({ onDoubleClick, chatOpen }: FloatingRobotProps) {
       >
         {/* Ring glow pulse behind robot */}
         <motion.div
-          className="absolute -inset-4 rounded-full bg-blue-500/10 blur-2xl"
+          className="absolute -inset-4 rounded-full bg-blue-500/10 blur-2xl pointer-events-none"
           animate={{ scale: [1, 1.15, 1], opacity: [0.2, 0.5, 0.2] }}
           transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
         />
 
-        {/* Robot container */}
-        <div className="relative">
+        {/* Robot container - only this captures clicks */}
+        <div 
+          className="relative cursor-grab active:cursor-grabbing pointer-events-auto"
+          onDoubleClick={handleDoubleClick}
+        >
           {/* Spline 3D Robot with smooth loading */}
           <div className="w-64 h-64 md:w-72 md:h-64">
             {!splineLoaded && !splineError && (
