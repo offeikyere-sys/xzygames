@@ -8,11 +8,9 @@ interface BlurImageProps {
   width?: number
   height?: number
   onError?: () => void
-  quality?: number
 }
 
-export function BlurImage({ src, alt, className = "", wrapperClassName = "", width, height, onError, quality = 75 }: BlurImageProps) {
-  const [inView, setInView] = useState(false)
+export function BlurImage({ src, alt, className = "", wrapperClassName = "", width, height, onError }: BlurImageProps) {
   const [imageLoaded, setImageLoaded] = useState(false)
   const wrapperRef = useRef<HTMLDivElement>(null)
 
@@ -22,36 +20,31 @@ export function BlurImage({ src, alt, className = "", wrapperClassName = "", wid
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          setInView(true)
+          setImageLoaded(false)
           observer.disconnect()
         }
       },
-      { rootMargin: "200px" }
+      { rootMargin: "50px" }
     )
     observer.observe(el)
     return () => observer.disconnect()
-  }, [])
-
-  // Add quality parameter to image URL for optimization
-  const optimizedSrc = quality < 100 ? `${src}${src.includes('?') ? '&' : '?'}q=${quality}` : src
+  }, [src])
 
   return (
     <div ref={wrapperRef} className={`overflow-hidden ${wrapperClassName}`}>
-      {inView && !imageLoaded && (
+      {!imageLoaded && (
         <div className="absolute inset-0 bg-zinc-900 animate-pulse" />
       )}
-      {inView && (
-        <img
-          src={optimizedSrc}
-          alt={alt}
-          width={width}
-          height={height}
-          loading="lazy"
-          className={`${className} ${!imageLoaded ? 'opacity-0' : 'opacity-100'} transition-opacity duration-300`}
-          onError={onError}
-          onLoad={() => setImageLoaded(true)}
-        />
-      )}
+      <img
+        src={src}
+        alt={alt}
+        width={width}
+        height={height}
+        loading="lazy"
+        className={`${className} ${!imageLoaded ? 'opacity-0' : 'opacity-100'} transition-opacity duration-300`}
+        onError={onError}
+        onLoad={() => setImageLoaded(true)}
+      />
     </div>
   )
 }

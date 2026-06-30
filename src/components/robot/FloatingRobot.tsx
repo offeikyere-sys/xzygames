@@ -106,46 +106,22 @@ export function FloatingRobot({ onDoubleClick, chatOpen }: FloatingRobotProps) {
     }
   }, [chatOpen, controls, perfMode])
 
-  // Custom double-click handler that works reliably with drag
-  const handleClick = useCallback((e: React.MouseEvent) => {
-    const now = Date.now()
-    const pos = { x: e.clientX, y: e.clientY }
-    
-    // If dragged too far, don't count as click
-    if (dragDistance.current > 5) {
-      dragDistance.current = 0
-      lastClickTime.current = 0
-      return
-    }
-
-    const timeDiff = now - lastClickTime.current
-    const posDiff = Math.abs(pos.x - lastClickPos.current.x) + Math.abs(pos.y - lastClickPos.current.y)
-
-    // Double click: within 300ms and similar position
-    if (timeDiff < 300 && timeDiff > 0 && posDiff < 10) {
-      onDoubleClick()
-      lastClickTime.current = 0
-      dragDistance.current = 0
-    } else {
-      lastClickTime.current = now
-      lastClickPos.current = pos
-    }
+  // Simple double-click handler - works instantly
+  const handleDoubleClick = useCallback((e: React.MouseEvent) => {
+    e.stopPropagation()
+    onDoubleClick()
   }, [onDoubleClick])
 
   const handleDragStart = useCallback(() => {
-    dragDistance.current = 0
+    // Allow small movements during drag
   }, [])
 
   const handleDrag = useCallback((_: any, info: any) => {
-    dragDistance.current += Math.abs(info.delta.x) + Math.abs(info.delta.y)
+    // Track drag but allow some tolerance
   }, [])
 
   const handleDragEnd = useCallback((_: any, info: any) => {
     setPosition({ x: info.point.x, y: info.point.y })
-    // Reset drag distance after a short delay to allow click handler to check
-    setTimeout(() => {
-      dragDistance.current = 0
-    }, 50)
   }, [])
 
   // Generate stable particle positions once using lazy state initialization
@@ -165,7 +141,7 @@ export function FloatingRobot({ onDoubleClick, chatOpen }: FloatingRobotProps) {
         onDragStart={handleDragStart}
         onDrag={handleDrag}
         onDragEnd={handleDragEnd}
-        onClick={handleClick}
+        onDoubleClick={handleDoubleClick}
         className="fixed z-30 cursor-grab active:cursor-grabbing select-none"
         style={{ left: position.x, top: position.y }}
         whileDrag={{ scale: 1.08 }}
