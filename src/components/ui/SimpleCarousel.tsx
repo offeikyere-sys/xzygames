@@ -1,249 +1,67 @@
-<<<<<<< HEAD
-import { useState, useRef, useEffect, type ReactNode } from "react"
-import { ChevronLeft, ChevronRight } from "lucide-react"
+"use client"
+
+import { useState, useRef, useEffect } from "react"
 
 interface SimpleCarouselProps {
   items: any[]
-  cardWidth?: number
-  renderCard: (item: any, index: number) => ReactNode
-  onItemClick?: (item: any) => void
-  className?: string
+  cardWidth: number
+  onItemClick: (item: any) => void
+  renderCard: (item: any, index: number) => React.ReactNode
 }
 
-export function SimpleCarousel({
-  items,
-  cardWidth = 300,
-  renderCard,
-  onItemClick,
-  className = "",
-}: SimpleCarouselProps) {
-  const [canScrollLeft, setCanScrollLeft] = useState(false)
-  const [canScrollRight, setCanScrollRight] = useState(true)
-  const [visibleRange, setVisibleRange] = useState({ start: 0, end: 6 })
-  const scrollRef = useRef<HTMLDivElement>(null)
+export function SimpleCarousel({ items, cardWidth, onItemClick, renderCard }: SimpleCarouselProps) {
+  const [currentIndex, setCurrentIndex] = useState(0)
+  const carouselRef = useRef<HTMLDivElement>(null)
 
-  const checkScroll = () => {
-    if (!scrollRef.current) return
-    const { scrollLeft, scrollWidth, clientWidth } = scrollRef.current
-    setCanScrollLeft(scrollLeft > 0)
-    setCanScrollRight(scrollLeft + clientWidth < scrollWidth - 1)
-
-    // Calculate visible range for virtualization
-    const start = Math.max(0, Math.floor(scrollLeft / cardWidth) - 2)
-    const end = Math.min(items.length, Math.ceil((scrollLeft + clientWidth) / cardWidth) + 2)
-    setVisibleRange({ start, end })
-  }
-
-  useEffect(() => {
-    checkScroll()
-    const el = scrollRef.current
-    if (!el) return
-    el.addEventListener("scroll", checkScroll, { passive: true })
-    window.addEventListener("resize", checkScroll)
-    return () => {
-      el.removeEventListener("scroll", checkScroll)
-      window.removeEventListener("resize", checkScroll)
-    }
-  }, [items, cardWidth])
+  const visibleCount = Math.floor((carouselRef.current?.clientWidth || window.innerWidth) / (cardWidth + 16))
+  const maxIndex = Math.max(0, items.length - visibleCount)
 
   const scroll = (direction: "left" | "right") => {
-    if (!scrollRef.current) return
-    const amount = cardWidth * 2
-    scrollRef.current.scrollBy({
-      left: direction === "left" ? -amount : amount,
-      behavior: "smooth",
+    setCurrentIndex((prev) => {
+      const newIndex = direction === "left" ? prev - 1 : prev + 1
+      return Math.max(0, Math.min(newIndex, maxIndex))
     })
   }
 
-  if (items.length === 0) return null
-
-  // Virtualization: only render visible items + buffer
-  const visibleItems = items.slice(visibleRange.start, visibleRange.end)
-
   return (
-    <div className={`relative ${className}`}>
-      {/* Left Arrow */}
-      {canScrollLeft && (
-        <button
-          onClick={() => scroll("left")}
-          className="absolute left-2 top-1/2 -translate-y-1/2 z-20 p-3 rounded-xl bg-zinc-900/90 backdrop-blur-md border border-zinc-700/50 text-white hover:bg-zinc-800 hover:border-blue-500/50 transition-all shadow-lg"
-          aria-label="Scroll left"
-        >
-          <ChevronLeft size={24} />
-        </button>
-      )}
-
-      {/* Scrollable Container */}
+    <div className="relative">
       <div
-        ref={scrollRef}
-        className="flex gap-5 overflow-x-auto scrollbar-hide py-4 px-2"
-        style={{
-          scrollSnapType: "x mandatory",
-          scrollbarWidth: "none",
-          msOverflowStyle: "none",
-        }}
-      >
-        {/* Spacer for items before visible range */}
-        {visibleRange.start > 0 && (
-          <div style={{ width: visibleRange.start * (cardWidth + 20), flexShrink: 0 }} />
-        )}
-        
-        {visibleItems.map((item, idx) => {
-          const actualIndex = visibleRange.start + idx
-          return (
-            <div
-              key={item.id || actualIndex}
-              style={{
-                width: cardWidth,
-                flexShrink: 0,
-                scrollSnapAlign: "start",
-              }}
-              onClick={() => onItemClick?.(item)}
-              className="cursor-pointer"
-            >
-              {renderCard(item, actualIndex)}
-            </div>
-          )
-        })}
-
-        {/* Spacer for items after visible range */}
-        {visibleRange.end < items.length && (
-          <div style={{ width: (items.length - visibleRange.end) * (cardWidth + 20), flexShrink: 0 }} />
-        )}
-      </div>
-
-      {/* Right Arrow */}
-      {canScrollRight && (
-        <button
-          onClick={() => scroll("right")}
-          className="absolute right-2 top-1/2 -translate-y-1/2 z-20 p-3 rounded-xl bg-zinc-900/90 backdrop-blur-md border border-zinc-700/50 text-white hover:bg-zinc-800 hover:border-blue-500/50 transition-all shadow-lg"
-          aria-label="Scroll right"
-        >
-          <ChevronRight size={24} />
-        </button>
-      )}
-
-      {/* Fade edges */}
-      {canScrollLeft && (
-        <div className="absolute left-0 top-0 bottom-0 w-16 bg-gradient-to-r from-black via-black/80 to-transparent pointer-events-none z-10" />
-      )}
-      {canScrollRight && (
-        <div className="absolute right-0 top-0 bottom-0 w-16 bg-gradient-to-l from-black via-black/80 to-transparent pointer-events-none z-10" />
-      )}
-    </div>
-  )
-}
-=======
-import { useState, useRef, useEffect, type ReactNode } from "react"
-import { ChevronLeft, ChevronRight } from "lucide-react"
-
-interface SimpleCarouselProps {
-  items: any[]
-  cardWidth?: number
-  renderCard: (item: any, index: number) => ReactNode
-  onItemClick?: (item: any) => void
-  className?: string
-}
-
-export function SimpleCarousel({
-  items,
-  cardWidth = 300,
-  renderCard,
-  onItemClick,
-  className = "",
-}: SimpleCarouselProps) {
-  const [canScrollLeft, setCanScrollLeft] = useState(false)
-  const [canScrollRight, setCanScrollRight] = useState(true)
-  const scrollRef = useRef<HTMLDivElement>(null)
-
-  const checkScroll = () => {
-    if (!scrollRef.current) return
-    const { scrollLeft, scrollWidth, clientWidth } = scrollRef.current
-    setCanScrollLeft(scrollLeft > 0)
-    setCanScrollRight(scrollLeft + clientWidth < scrollWidth - 1)
-  }
-
-  useEffect(() => {
-    checkScroll()
-    const el = scrollRef.current
-    if (!el) return
-    el.addEventListener("scroll", checkScroll, { passive: true })
-    window.addEventListener("resize", checkScroll)
-    return () => {
-      el.removeEventListener("scroll", checkScroll)
-      window.removeEventListener("resize", checkScroll)
-    }
-  }, [items])
-
-  const scroll = (direction: "left" | "right") => {
-    if (!scrollRef.current) return
-    const amount = cardWidth * 2
-    scrollRef.current.scrollBy({
-      left: direction === "left" ? -amount : amount,
-      behavior: "smooth",
-    })
-  }
-
-  if (items.length === 0) return null
-
-  return (
-    <div className={`relative ${className}`}>
-      {/* Left Arrow */}
-      {canScrollLeft && (
-        <button
-          onClick={() => scroll("left")}
-          className="absolute left-2 top-1/2 -translate-y-1/2 z-20 p-3 rounded-xl bg-zinc-900/90 backdrop-blur-md border border-zinc-700/50 text-white hover:bg-zinc-800 hover:border-blue-500/50 transition-all shadow-lg"
-          aria-label="Scroll left"
-        >
-          <ChevronLeft size={24} />
-        </button>
-      )}
-
-      {/* Scrollable Container */}
-      <div
-        ref={scrollRef}
-        className="flex gap-5 overflow-x-auto scrollbar-hide py-4 px-2"
-        style={{
-          scrollSnapType: "x mandatory",
-          scrollbarWidth: "none",
-          msOverflowStyle: "none",
-        }}
+        ref={carouselRef}
+        className="flex gap-4 overflow-hidden"
+        style={{ scrollSnapType: "x mandatory" }}
       >
         {items.map((item, index) => (
           <div
-            key={item.id || index}
+            key={index}
             style={{
-              width: cardWidth,
-              flexShrink: 0,
+              minWidth: cardWidth,
               scrollSnapAlign: "start",
             }}
-            onClick={() => onItemClick?.(item)}
-            className="cursor-pointer"
+            onClick={() => onItemClick(item)}
           >
             {renderCard(item, index)}
           </div>
         ))}
       </div>
 
-      {/* Right Arrow */}
-      {canScrollRight && (
-        <button
-          onClick={() => scroll("right")}
-          className="absolute right-2 top-1/2 -translate-y-1/2 z-20 p-3 rounded-xl bg-zinc-900/90 backdrop-blur-md border border-zinc-700/50 text-white hover:bg-zinc-800 hover:border-blue-500/50 transition-all shadow-lg"
-          aria-label="Scroll right"
-        >
-          <ChevronRight size={24} />
-        </button>
-      )}
-
-      {/* Fade edges */}
-      {canScrollLeft && (
-        <div className="absolute left-0 top-0 bottom-0 w-16 bg-gradient-to-r from-black via-black/80 to-transparent pointer-events-none z-10" />
-      )}
-      {canScrollRight && (
-        <div className="absolute right-0 top-0 bottom-0 w-16 bg-gradient-to-l from-black via-black/80 to-transparent pointer-events-none z-10" />
+      {maxIndex > 0 && (
+        <>
+          <button
+            onClick={() => scroll("left")}
+            disabled={currentIndex === 0}
+            className="absolute left-0 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/80 text-white p-2 rounded-full disabled:opacity-30"
+          >
+            ←
+          </button>
+          <button
+            onClick={() => scroll("right")}
+            disabled={currentIndex === maxIndex}
+            className="absolute right-0 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/80 text-white p-2 rounded-full disabled:opacity-30"
+          >
+            →
+          </button>
+        </>
       )}
     </div>
   )
 }
->>>>>>> 7c1ffee34b396fd223280ff7eaa1a327684d3d32
