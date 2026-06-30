@@ -143,6 +143,147 @@
   pointer-events: none;
 }
 
+/* ===== PERFORMANCE MODE OVERRIDES ===== */
+.perf-low .neon-grid,
+.perf-medium .neon-grid {
+  display: none;
+}
+
+.perf-low .animate-spotlight,
+.perf-medium .animate-spotlight {
+  display: none;
+}
+
+.perf-low .glow-btn,
+.perf-medium .glow-btn {
+  animation: none;
+}
+
+.perf-low .glow-btn::after,
+.perf-medium .glow-btn::after {
+  display: none;
+}
+
+.perf-low .glow-badge,
+.perf-medium .glow-badge {
+  animation: none;
+}
+
+.perf-low .glow-badge::after,
+.perf-medium .glow-badge::after {
+  display: none;
+}
+
+.perf-low .holo-card::before,
+.perf-medium .holo-card::before {
+  animation: none;
+}
+
+.perf-low .holo-card:hover,
+.perf-medium .holo-card:hover {
+  animation: none;
+  box-shadow: 0 0 15px var(--game-color, #3b82f6);
+}
+
+.perf-low .tilt-card,
+.perf-medium .tilt-card {
+  transform: none !important;
+}
+
+.perf-low .tilt-card-shine,
+.perf-medium .tilt-card-shine {
+  display: none;
+}
+
+.perf-low .tilt-card-glow,
+.perf-medium .tilt-card-glow {
+  display: none;
+}
+
+.perf-low .float-icon,
+.perf-medium .float-icon {
+  animation: none;
+}
+
+.perf-low .cat-btn:hover,
+.perf-medium .cat-btn:hover {
+  transform: none;
+}
+
+.perf-low .gradient-border::before,
+.perf-medium .gradient-border::before {
+  animation: none;
+}
+
+.perf-low .glass-card::before,
+.perf-medium .glass-card::before {
+  animation: none;
+}
+
+.perf-low .glass-card:hover,
+.perf-medium .glass-card:hover {
+  transform: none;
+}
+
+.perf-low .glass-card:hover::before,
+.perf-medium .glass-card:hover::before {
+  opacity: 0;
+}
+
+.perf-low .reveal-3d,
+.perf-medium .reveal-3d {
+  animation: none;
+  opacity: 1;
+  transform: none;
+  filter: none;
+}
+
+.perf-low .carousel-card,
+.perf-medium .carousel-card {
+  transition: none;
+}
+
+.perf-low .bg-black\/60,
+.perf-low .bg-black\/40,
+.perf-low .bg-black\/30,
+.perf-low .bg-black\/20,
+.perf-low .bg-black\/10,
+.perf-medium .bg-black\/60,
+.perf-medium .bg-black\/40,
+.perf-medium .bg-black\/30,
+.perf-medium .bg-black\/20,
+.perf-medium .bg-black\/10 {
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+.perf-low .backdrop-blur-sm,
+.perf-low .backdrop-blur-md,
+.perf-low .backdrop-blur-lg,
+.perf-low .backdrop-blur-xl,
+.perf-medium .backdrop-blur-sm,
+.perf-medium .backdrop-blur-md,
+.perf-medium .backdrop-blur-lg,
+.perf-medium .backdrop-blur-xl {
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+.perf-low .blur-3xl,
+.perf-medium .blur-3xl {
+  filter: blur(8px) !important;
+}
+
+.perf-low .blur-2xl,
+.perf-medium .blur-2xl {
+  filter: blur(4px) !important;
+}
+
+.perf-low .animate-spotlight,
+.perf-medium .animate-spotlight {
+  opacity: 0.3 !important;
+}
+
 /* ===== HOLOGRAPHIC GLASSMORPHISM ===== */
 @property --glass-angle {
   syntax: "<angle>";
@@ -203,6 +344,7 @@
   );
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   mask-composite: exclude;
   animation: glassBorderRotate 6s linear infinite;
   opacity: 0;
@@ -225,9 +367,7 @@
 }
 
 /* Glass navbar — only active in light mode */
-.glass-navbar {
-  /* Dark mode: no glass effect, keep original dark styling */
-}
+/* .glass-navbar dark mode styles are handled by .light .glass-navbar below */
 
 .light .glass-navbar {
   background: rgba(255, 255, 255, 0.65);
@@ -567,6 +707,7 @@
   );
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   mask-composite: exclude;
   animation: gradientRotate 4s linear infinite;
   pointer-events: none;
@@ -982,175 +1123,10 @@ body {
 }
 
 /* Light mode for game card */
-.light .bg-zinc-900\/65 {
-  background-color: rgba(255, 255, 255, 0.65);
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
-}
-
-/* ===== SPLINE 3D CONTAINER ===== */
-.spline-container {
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
-
-.spline-container canvas {
-  pointer-events: none !important;
-}
-
-.spline-container > div {
-  pointer-events: none !important;
-}
-
-/* ===== PERFORMANCE MODE (Low-RAM/Mobile) ===== */
-.perf-mode .neon-grid {
-  animation: none;
-  opacity: 0.5;
-}
-
-.perf-mode .holo-card::before {
-  animation: none;
-  opacity: 0.3;
-}
-
-.perf-mode .holo-card:hover {
-  animation: none;
-  box-shadow: 0 0 15px var(--game-color, #3b82f6);
-}
-
-.perf-mode .glow-btn,
-.perf-mode .glow-badge {
-  animation: none;
-}
-
-.perf-mode .glow-btn:hover,
-.perf-mode .glow-badge:hover {
-  animation: none;
-}
-
-.perf-mode .float-icon {
-  animation: none;
-}
-
-.perf-mode .glass-navbar,
-.perf-mode .glass-card,
-.perf-mode .glass-modal,
-.perf-mode .glass-section {
-  backdrop-filter: blur(8px) !important;
-  -webkit-backdrop-filter: blur(8px) !important;
-}
-
-.perf-mode .backdrop-blur-md,
-.perf-mode .backdrop-blur-sm,
-.perf-mode .backdrop-blur-xl {
-  backdrop-filter: blur(4px) !important;
-  -webkit-backdrop-filter: blur(4px) !important;
-}
-
-.perf-mode .blur-3xl {
-  filter: blur(12px);
-}
-
-.perf-mode .blur-2xl {
-  filter: blur(8px);
-}
-
-.perf-mode .animate-spotlight,
-.perf-mode .animate-ambient,
-.perf-mode .animate-float {
-  animation: none;
-}
-
-.perf-mode .reveal-3d {
-  animation: none;
-  opacity: 1;
-  transform: none;
-  filter: none;
-}
-
-.perf-mode .cat-btn:hover {
-  transform: none;
-}
-
-.perf-mode .cat-btn-active {
-  animation: none;
-  transform: scale(1.05);
-}
-
-.perf-mode .cat-btn-active:hover {
-  transform: scale(1.05);
-}
-
-.perf-mode .holo-shimmer::after,
-.perf-mode .glow-btn::after,
-.perf-mode .glow-badge::after {
-  animation: none;
-  opacity: 0;
-}
-
-.perf-mode .holo-card:hover::after,
-.perf-mode .holo-card:hover .holo-shimmer::after {
-  opacity: 0.5;
-}
-
-.perf-mode .gradient-border::before {
-  animation: none;
-  opacity: 0.5;
-}
-
-.perf-mode .tilt-card,
-.perf-mode .tilt-card-inner {
-  transform: none;
-  transition: none;
-}
-
-.perf-mode .tilt-card-shine {
-  display: none;
-}
-
-.perf-mode .tilt-card-glow {
-  display: none;
-}
-
-/* Mobile-specific optimizations */
-@media (max-width: 768px) {
-  .perf-mode .neon-grid {
-    animation: none;
-    opacity: 0.3;
-  }
-
-  .perf-mode .blur-3xl {
-    filter: blur(8px);
-  }
-
-  .perf-mode .backdrop-blur-md,
-  .perf-mode .backdrop-blur-sm {
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
-  }
-
-  .perf-mode .glass-navbar,
-  .perf-mode .glass-card {
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-  }
-}
-
-/* Reduced motion preferences */
-@media (prefers-reduced-motion: reduce) {
-  .perf-mode .neon-grid,
-  .perf-mode .holo-card::before,
-  .perf-mode .glow-btn,
-  .perf-mode .glow-badge,
-  .perf-mode .float-icon,
-  .perf-mode .gradient-border::before {
-    animation: none !important;
-  }
-
-  .perf-mode .holo-card:hover {
-    animation: none !important;
-  }
+.light .bg-zinc-900\/45 {
+  background-color: rgba(255, 255, 255, 0.45);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
 }
 
 /* Light mode for game card */
@@ -1676,105 +1652,6 @@ body {
 .liquid .min-h-screen.bg-black {
   background: linear-gradient(135deg, #03030a 0%, #070714 100%) !important;
 }
-
-/* =====================================================
-   MOBILE / LOW-END PERFORMANCE MODE
-   Activated by: document.documentElement.classList.toggle('perf-mode', enabled)
-   ===================================================== */
-html.perf-mode {
-  /* Let the GPU do less work */
-  --perf-blur: 0px;
-}
-
-html.perf-mode *,
-html.perf-mode *::before,
-html.perf-mode *::after {
-  /* Disable animations + transitions everywhere */
-  animation-duration: 0.001ms !important;
-  animation-iteration-count: 1 !important;
-  transition-duration: 0.001ms !important;
-  scroll-behavior: auto !important;
-}
-
-/* Kill heavy visual effects */
-html.perf-mode .neon-grid,
-html.perf-mode .neon-grid::after {
-  display: none !important;
-}
-
-html.perf-mode .holo-card::before,
-html.perf-mode .holo-shimmer::after,
-html.perf-mode .glow-btn::after,
-html.perf-mode .glow-badge::after,
-html.perf-mode .glass-card::before,
-html.perf-mode .gradient-border::before {
-  animation: none !important;
-  opacity: 0 !important;
-}
-
-/* Remove backdrop-filter blur */
-html.perf-mode .backdrop-blur-sm,
-html.perf-mode .backdrop-blur-xl,
-html.perf-mode [class*="backdrop-blur"] {
-  backdrop-filter: none !important;
-  -webkit-backdrop-filter: none !important;
-}
-
-/* Disable 3D/tilt/shimmer hover effects */
-html.perf-mode .tilt-card,
-html.perf-mode .tilt-card-inner,
-html.perf-mode .cat-btn,
-html.perf-mode .cat-btn-active,
-html.perf-mode .tilt-card:hover,
-html.perf-mode .tilt-card-glow,
-html.perf-mode .tilt-card:hover .tilt-card-shine,
-html.perf-mode .holo-card {
-  transform: none !important;
-  animation: none !important;
-  box-shadow: none !important;
-}
-
-html.perf-mode .animate-pulse,
-html.perf-mode .animate-ambient,
-html.perf-mode .animate-float,
-html.perf-mode .animate-spotlight,
-html.perf-mode .animate-spin,
-html.perf-mode .animate-bounce,
-html.perf-mode .animate-scroll-ticker {
-  animation: none !important;
-}
-
-/* Extra: stop robot/page hero entrance transforms for low-end */
-html.perf-mode .glow-badge::after,
-html.perf-mode .glow-btn::after {
-  opacity: 0 !important;
-}
-
-html.perf-mode .w-64.h-64,
-html.perf-mode .w-72.h-72,
-html.perf-mode .w-80.h-80 {
-  filter: none !important;
-}
-
-html.perf-mode .animate-pulse,
-html.perf-mode .animate-spin,
-html.perf-mode .animate-bounce {
-  animation: none !important;
-}
-
-/* Reduce blur on liquid theme */
-html.perf-mode .liquid .bg-black,
-
-html.perf-mode .liquid .glass-card,
-html.perf-mode .liquid .glass-modal,
-html.perf-mode .liquid .glass-section,
-html.perf-mode .liquid .glass-input,
-html.perf-mode .liquid nav,
-html.perf-mode .liquid .glass-navbar {
-  backdrop-filter: none !important;
-  -webkit-backdrop-filter: none !important;
-}
-
 
 .liquid .color-swatch.active {
   border-color: rgba(255, 255, 255, 0.7) !important;

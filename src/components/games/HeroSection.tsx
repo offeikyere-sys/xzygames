@@ -1,10 +1,7 @@
 import { useState, useEffect } from "react"
 import { motion } from "framer-motion"
 import { SplineScene } from "@/components/ui/splite"
-// Robot + AIChat are rendered once in NeoGamesLayout (to avoid remounting on navigation)
-
-
-
+import { AIChatModal } from "@/components/ui/AIChatModal"
 import { Spotlight } from "@/components/ui/spotlight"
 import { Particles } from "@/components/ui/Particles"
 import { TrailerModal } from "@/components/ui/TrailerModal"
@@ -13,6 +10,7 @@ import { BlurImage } from "@/components/ui/BlurImage"
 import { GenreBannerModal } from "@/components/admin/GenreBannerModal"
 import { apiUrl } from "@/lib/api"
 import { isVideoUrl } from "@/lib/media"
+import { detectPerformanceMode, getPerformanceClass } from "@/lib/performance"
 
 interface HeroSectionProps {
   userToken?: string
@@ -33,9 +31,9 @@ export function HeroSection({ userToken, isAdmin, activeSection, isHomePage, onB
   const [movieBannerModalOpen, setMovieBannerModalOpen] = useState(false)
   const [gamesBannerUrl, setGamesBannerUrl] = useState<string | null>(null)
   const [gamesBannerModalOpen, setGamesBannerModalOpen] = useState(false)
-
+  const [aiChatOpen, setAiChatOpen] = useState(false)
   const [stats, setStats] = useState<{ games: number; software: number; movies: number; total_downloads: number } | null>(null)
-
+  const [perfMode] = useState(() => detectPerformanceMode())
 
   const isSoftwarePage = !isHomePage && activeSection === "software"
   const isMoviePage = !isHomePage && activeSection === "movies"
@@ -96,8 +94,12 @@ export function HeroSection({ userToken, isAdmin, activeSection, isHomePage, onB
     return `${n}+`
   }
 
+  const perfClass = getPerformanceClass(perfMode)
+  const showHeavyEffects = perfMode === "high"
+  const showMediumEffects = perfMode === "medium" || perfMode === "high"
+
   return (
-    <section className="relative min-h-[120vh] flex items-center overflow-hidden bg-black">
+    <section className={`relative min-h-[120vh] flex items-center overflow-hidden bg-black ${perfClass}`}>
       {/* Banner Background - Supports image & video (live wallpaper) */}
       {activeBannerUrl && (
         <>
@@ -127,25 +129,37 @@ export function HeroSection({ userToken, isAdmin, activeSection, isHomePage, onB
 
       {!activeBannerUrl && (
         <>
-          {/* Ambient glow */}
-          <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-blue-500/8 rounded-full blur-3xl" />
-          <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-purple-500/5 rounded-full blur-3xl" />
+          {/* Particle effects - only in high mode */}
+          {showHeavyEffects && <Particles />}
 
-          {/* Animated Neon Grid */}
-          <div
-            className="neon-grid"
-            ref={(el) => {
-              if (!el) return
-              const handler = (e: MouseEvent) => {
-                const rect = el.getBoundingClientRect()
-                const x = ((e.clientX - rect.left) / rect.width) * 100
-                const y = ((e.clientY - rect.top) / rect.height) * 100
-                el.style.setProperty("--mouse-x", `${x}%`)
-                el.style.setProperty("--mouse-y", `${y}%`)
-              }
-              el.addEventListener("mousemove", handler)
-            }}
-          />
+          {/* Spotlight effect - only in high mode */}
+          {showHeavyEffects && <Spotlight className="-top-40 left-0 md:left-60 md:-top-20" fill="white" />}
+
+          {/* Ambient glow - reduced in medium, removed in low */}
+          {showMediumEffects && (
+            <>
+              <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-blue-500/8 rounded-full blur-3xl" />
+              <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-purple-500/5 rounded-full blur-3xl" />
+            </>
+          )}
+
+          {/* Animated Neon Grid - only in high mode */}
+          {showHeavyEffects && (
+            <div
+              className="neon-grid"
+              ref={(el) => {
+                if (!el) return
+                const handler = (e: MouseEvent) => {
+                  const rect = el.getBoundingClientRect()
+                  const x = ((e.clientX - rect.left) / rect.width) * 100
+                  const y = ((e.clientY - rect.top) / rect.height) * 100
+                  el.style.setProperty("--mouse-x", `${x}%`)
+                  el.style.setProperty("--mouse-y", `${y}%`)
+                }
+                el.addEventListener("mousemove", handler)
+              }}
+            />
+          )}
         </>
       )}
 
@@ -344,19 +358,16 @@ export function HeroSection({ userToken, isAdmin, activeSection, isHomePage, onB
             transition={{ duration: 1, delay: 0.3, ease: "easeOut" }}
             className="flex-1 relative w-full max-w-lg lg:max-w-none"
           >
-              <div
-                className="relative w-full h-[400px] sm:h-[500px] lg:h-[600px] translate-x-6 -translate-y-4 cursor-pointer"
-                title="Double-click the robot to chat with XZY AI"
-              >
-
+            <div
+              className="relative w-full h-[400px] sm:h-[500px] lg:h-[600px] translate-x-6 -translate-y-4 cursor-pointer"
+              onDoubleClick={() => setAiChatOpen(true)}
+              title="Double-click to chat with XZY AI"
+            >
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl animate-pulse" />
-              {/* Hero Robot with smooth loading */}
-              <div className="w-full h-full">
-                <SplineScene
-                  scene="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode"
-                  className="w-full h-full"
-                />
-              </div>
+              <SplineScene
+                scene="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode"
+                className="w-full h-full"
+              />
             </div>
             {/* Double-click hint */}
             <div className="flex justify-center mt-1">
@@ -386,7 +397,8 @@ export function HeroSection({ userToken, isAdmin, activeSection, isHomePage, onB
         videoUrl={randomTrailer?.trailer_url}
       />
 
-
+      {/* AI Chat Modal */}
+      <AIChatModal isOpen={aiChatOpen} onClose={() => setAiChatOpen(false)} />
 
       {/* Banner Manager Modal - Home/Games Hero */}
       <GenreBannerModal

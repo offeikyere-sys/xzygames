@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react"
+import { detectPerformanceMode } from "@/lib/performance"
 
 interface Particle {
   x: number
@@ -11,6 +12,7 @@ interface Particle {
 
 export function Particles() {
   const canvasRef = useRef<HTMLCanvasElement>(null)
+  const perfMode = detectPerformanceMode()
 
   useEffect(() => {
     const canvas = canvasRef.current
@@ -21,7 +23,12 @@ export function Particles() {
 
     let animationId: number
     const particles: Particle[] = []
-    const particleCount = 60
+    
+    // Reduce particle count based on performance mode
+    const particleCount = perfMode === "high" ? 60 : perfMode === "medium" ? 30 : 0
+    
+    // Skip entirely in low mode
+    if (particleCount === 0) return
 
     const resize = () => {
       canvas.width = window.innerWidth
@@ -42,6 +49,9 @@ export function Particles() {
       })
     }
 
+    // Disable particle connections in medium/low mode for better performance
+    const showConnections = perfMode === "high"
+
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height)
 
@@ -61,22 +71,24 @@ export function Particles() {
         ctx.fill()
       })
 
-      // Draw lines between close particles
-      particles.forEach((p1, i) => {
-        particles.slice(i + 1).forEach((p2) => {
-          const dx = p1.x - p2.x
-          const dy = p1.y - p2.y
-          const dist = Math.sqrt(dx * dx + dy * dy)
-          if (dist < 150) {
-            ctx.beginPath()
-            ctx.moveTo(p1.x, p1.y)
-            ctx.lineTo(p2.x, p2.y)
-            ctx.strokeStyle = `rgba(59, 130, 246, ${0.05 * (1 - dist / 150)})`
-            ctx.lineWidth = 0.5
-            ctx.stroke()
-          }
+      // Draw lines between close particles - only in high mode
+      if (showConnections) {
+        particles.forEach((p1, i) => {
+          particles.slice(i + 1).forEach((p2) => {
+            const dx = p1.x - p2.x
+            const dy = p1.y - p2.y
+            const dist = Math.sqrt(dx * dx + dy * dy)
+            if (dist < 150) {
+              ctx.beginPath()
+              ctx.moveTo(p1.x, p1.y)
+              ctx.lineTo(p2.x, p2.y)
+              ctx.strokeStyle = `rgba(59, 130, 246, ${0.05 * (1 - dist / 150)})`
+              ctx.lineWidth = 0.5
+              ctx.stroke()
+            }
+          })
         })
-      })
+      }
 
       animationId = requestAnimationFrame(animate)
     }

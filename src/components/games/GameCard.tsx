@@ -1,7 +1,8 @@
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion"
 import { Download, Star, Clock, Trash2 } from "lucide-react"
-import { useState, useRef, useEffect } from "react"
+import { useState, useRef } from "react"
 import { BlurImage } from "@/components/ui/BlurImage"
+import { detectPerformanceMode } from "@/lib/performance"
 
 interface GameCardProps {
   title: string
@@ -20,43 +21,29 @@ interface GameCardProps {
 export function GameCard({ title, genre, rating, downloads, image, color, index, gameId, onClick, showDelete, onDelete }: GameCardProps) {
   const [deleting, setDeleting] = useState(false)
   const [confirmOpen, setConfirmOpen] = useState(false)
-  const [isMobile, setIsMobile] = useState(false)
-  const [perfMode, setPerfMode] = useState(false)
   const cardRef = useRef<HTMLDivElement>(null)
+  const perfMode = detectPerformanceMode()
 
-  // Detect mobile and perf-mode
-  useEffect(() => {
-    const checkMobile = () => {
-      const mobile = window.innerWidth < 768
-      setIsMobile(mobile)
-    }
-    checkMobile()
-    window.addEventListener('resize', checkMobile)
-    return () => window.removeEventListener('resize', checkMobile)
-  }, [])
-
-  useEffect(() => {
-    const enabled = document?.documentElement?.classList?.contains('perf-mode')
-    setPerfMode(Boolean(enabled))
-  }, [])
-
-  // 3D Tilt values — only on desktop and not in perf-mode
+  // 3D Tilt values — reduced intensity based on performance mode
   const mouseX = useMotionValue(0)
   const mouseY = useMotionValue(0)
 
-  const rotateX = useSpring(useTransform(mouseY, [-0.5, 0.5], [12, -12]), { stiffness: 200, damping: 25 })
-  const rotateY = useSpring(useTransform(mouseX, [-0.5, 0.5], [-12, 12]), { stiffness: 200, damping: 25 })
+  // Adjust tilt intensity based on performance mode
+  const tiltIntensity = perfMode === "high" ? 15 : perfMode === "medium" ? 8 : 0
+  const rotateX = useSpring(useTransform(mouseY, [-0.5, 0.5], [tiltIntensity, -tiltIntensity]), { stiffness: 200, damping: 25 })
+  const rotateY = useSpring(useTransform(mouseX, [-0.5, 0.5], [-tiltIntensity, tiltIntensity]), { stiffness: 200, damping: 25 })
 
-  // Shadow that follows the tilt direction
-  const shadowX = useSpring(useTransform(mouseX, [-0.5, 0.5], [-8, 8]), { stiffness: 200, damping: 25 })
-  const shadowY = useSpring(useTransform(mouseY, [-0.5, 0.5], [8, -8]), { stiffness: 200, damping: 25 })
+  // Shadow that follows the tilt direction - disabled in low mode
+  const shadowIntensity = perfMode === "high" ? 12 : perfMode === "medium" ? 6 : 0
+  const shadowX = useSpring(useTransform(mouseX, [-0.5, 0.5], [-shadowIntensity, shadowIntensity]), { stiffness: 200, damping: 25 })
+  const shadowY = useSpring(useTransform(mouseY, [-0.5, 0.5], [shadowIntensity, -shadowIntensity]), { stiffness: 200, damping: 25 })
 
-  // Shine position follows mouse
+  // Shine position follows mouse - disabled in low/medium mode
+  const showShine = perfMode === "high"
   const shineX = useSpring(useTransform(mouseX, [-0.5, 0.5], [0, 100]), { stiffness: 200, damping: 25 })
   const shineY = useSpring(useTransform(mouseY, [-0.5, 0.5], [0, 100]), { stiffness: 200, damping: 25 })
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
-    if (isMobile || perfMode) return
     if (!cardRef.current) return
     const rect = cardRef.current.getBoundingClientRect()
     const x = (e.clientX - rect.left) / rect.width - 0.5
@@ -66,7 +53,6 @@ export function GameCard({ title, genre, rating, downloads, image, color, index,
   }
 
   const handleMouseLeave = () => {
-    if (isMobile || perfMode) return
     mouseX.set(0)
     mouseY.set(0)
   }
@@ -90,6 +76,8 @@ export function GameCard({ title, genre, rating, downloads, image, color, index,
     setConfirmOpen(false)
   }
 
+  const isLowPerf = perfMode === "low"
+
   return (
     <motion.div
       ref={cardRef}
@@ -97,32 +85,35 @@ export function GameCard({ title, genre, rating, downloads, image, color, index,
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-50px" }}
       transition={{ duration: 0.5, delay: index * 0.1, ease: "easeOut" }}
+      whileHover={isLowPerf ? {} : { scale: 1.03, transition: { duration: 0.3 } }}
       onClick={onClick}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
-      className={`group relative rounded-2xl overflow-hidden bg-zinc-900/50 border border-zinc-800/50 hover:border-zinc-700/50 transition-all cursor-pointer holo-card gradient-border ${isMobile || perfMode ? '' : 'hover:scale-105'}`}
+      className={`group relative rounded-2xl overflow-hidden bg-zinc-900/50 border border-zinc-800/50 hover:border-zinc-700/50 transition-all cursor-pointer holo-card ${isLowPerf ? "" : "gradient-border"}`}
       style={{
-        perspective: isMobile || perfMode ? undefined : 1200,
-        transformStyle: isMobile || perfMode ? undefined : "preserve-3d",
+        perspective: 1200,
+        transformStyle: "preserve-3d",
       }}
     >
-      {/* Dynamic shadow that follows tilt */}
-      <motion.div
-        className="absolute inset-0 rounded-2xl pointer-events-none z-0"
-        style={{
-          boxShadow: useTransform(
-            [shadowX, shadowY],
-            ([sx, sy]) => `${sx}px ${sy}px 30px ${color}30, 0 0 60px ${color}15`
-          ),
-          opacity: 0,
-        }}
-      />
+      {/* Dynamic shadow that follows tilt - hidden in low/medium mode */}
+      {!isLowPerf && (
+        <motion.div
+          className="absolute inset-0 rounded-2xl pointer-events-none z-0"
+          style={{
+            boxShadow: useTransform(
+              [shadowX, shadowY],
+              ([sx, sy]) => `${sx}px ${sy}px 30px ${color}30, 0 0 60px ${color}15`
+            ),
+            opacity: 0,
+          }}
+        />
+      )}
 
       <motion.div
         style={{
-          rotateX: isMobile || perfMode ? undefined : rotateX,
-          rotateY: isMobile || perfMode ? undefined : rotateY,
-          transformStyle: isMobile || perfMode ? undefined : "preserve-3d",
+          rotateX,
+          rotateY,
+          transformStyle: "preserve-3d",
         }}
         className="relative"
       >
@@ -210,8 +201,8 @@ export function GameCard({ title, genre, rating, downloads, image, color, index,
           }}
         />
 
-        {/* Tilt shine overlay — follows mouse (disabled on mobile/perf-mode) */}
-        {!(isMobile || perfMode) && (
+        {/* Tilt shine overlay — follows mouse - only in high mode */}
+        {showShine && (
           <motion.div
             className="absolute inset-0 rounded-2xl pointer-events-none"
             style={{
