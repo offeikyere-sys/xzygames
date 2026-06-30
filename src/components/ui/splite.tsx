@@ -19,12 +19,14 @@ export function SplineScene({ scene, className, onLoad, onError }: SplineScenePr
         </div>
       }
     >
-      <Spline
-        scene={scene}
-        className={className}
-        onLoad={onLoad}
-        onError={onError}
-      />
+      <div className="spline-container">
+        <Spline
+          scene={scene}
+          className={className}
+          onLoad={onLoad}
+          onError={onError}
+        />
+      </div>
     </Suspense>
   )
 }

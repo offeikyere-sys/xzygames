@@ -988,6 +988,21 @@ body {
   -webkit-backdrop-filter: blur(18px);
 }
 
+/* ===== SPLINE 3D CONTAINER ===== */
+.spline-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.spline-container canvas {
+  pointer-events: none !important;
+}
+
+.spline-container > div {
+  pointer-events: none !important;
+}
+
 /* ===== PERFORMANCE MODE (Low-RAM/Mobile) ===== */
 .perf-mode .neon-grid {
   animation: none;
