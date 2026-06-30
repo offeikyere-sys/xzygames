@@ -127,9 +127,6 @@ export function HeroSection({ userToken, isAdmin, activeSection, isHomePage, onB
 
       {!activeBannerUrl && (
         <>
-          {/* Particle effects */}
-          <Particles />
-
           {/* Spotlight effect */}
           <Spotlight className="-top-40 left-0 md:left-60 md:-top-20" fill="white" />
 
@@ -356,10 +353,10 @@ export function HeroSection({ userToken, isAdmin, activeSection, isHomePage, onB
               >
 
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl animate-pulse" />
-              <SplineScene
-                scene="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode"
-                className="w-full h-full"
-              />
+              {/* Robot is rendered by FloatingRobot component in NeoGamesLayout */}
+              <div className="w-full h-full flex items-center justify-center">
+                <div className="text-zinc-600 text-sm">Loading AI Assistant...</div>
+              </div>
             </div>
             {/* Double-click hint */}
             <div className="flex justify-center mt-1">

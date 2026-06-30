@@ -1,6 +1,6 @@
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion"
 import { Download, Star, Clock, Trash2 } from "lucide-react"
-import { useState, useRef } from "react"
+import { useState, useRef, useEffect } from "react"
 import { BlurImage } from "@/components/ui/BlurImage"
 
 interface GameCardProps {
@@ -20,24 +20,43 @@ interface GameCardProps {
 export function GameCard({ title, genre, rating, downloads, image, color, index, gameId, onClick, showDelete, onDelete }: GameCardProps) {
   const [deleting, setDeleting] = useState(false)
   const [confirmOpen, setConfirmOpen] = useState(false)
+  const [isMobile, setIsMobile] = useState(false)
+  const [perfMode, setPerfMode] = useState(false)
   const cardRef = useRef<HTMLDivElement>(null)
 
-  // 3D Tilt values — more pronounced for tactile feel
+  // Detect mobile and perf-mode
+  useEffect(() => {
+    const checkMobile = () => {
+      const mobile = window.innerWidth < 768
+      setIsMobile(mobile)
+    }
+    checkMobile()
+    window.addEventListener('resize', checkMobile)
+    return () => window.removeEventListener('resize', checkMobile)
+  }, [])
+
+  useEffect(() => {
+    const enabled = document?.documentElement?.classList?.contains('perf-mode')
+    setPerfMode(Boolean(enabled))
+  }, [])
+
+  // 3D Tilt values — only on desktop and not in perf-mode
   const mouseX = useMotionValue(0)
   const mouseY = useMotionValue(0)
 
-  const rotateX = useSpring(useTransform(mouseY, [-0.5, 0.5], [15, -15]), { stiffness: 200, damping: 25 })
-  const rotateY = useSpring(useTransform(mouseX, [-0.5, 0.5], [-15, 15]), { stiffness: 200, damping: 25 })
+  const rotateX = useSpring(useTransform(mouseY, [-0.5, 0.5], [12, -12]), { stiffness: 200, damping: 25 })
+  const rotateY = useSpring(useTransform(mouseX, [-0.5, 0.5], [-12, 12]), { stiffness: 200, damping: 25 })
 
   // Shadow that follows the tilt direction
-  const shadowX = useSpring(useTransform(mouseX, [-0.5, 0.5], [-12, 12]), { stiffness: 200, damping: 25 })
-  const shadowY = useSpring(useTransform(mouseY, [-0.5, 0.5], [12, -12]), { stiffness: 200, damping: 25 })
+  const shadowX = useSpring(useTransform(mouseX, [-0.5, 0.5], [-8, 8]), { stiffness: 200, damping: 25 })
+  const shadowY = useSpring(useTransform(mouseY, [-0.5, 0.5], [8, -8]), { stiffness: 200, damping: 25 })
 
   // Shine position follows mouse
   const shineX = useSpring(useTransform(mouseX, [-0.5, 0.5], [0, 100]), { stiffness: 200, damping: 25 })
   const shineY = useSpring(useTransform(mouseY, [-0.5, 0.5], [0, 100]), { stiffness: 200, damping: 25 })
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    if (isMobile || perfMode) return
     if (!cardRef.current) return
     const rect = cardRef.current.getBoundingClientRect()
     const x = (e.clientX - rect.left) / rect.width - 0.5
@@ -47,6 +66,7 @@ export function GameCard({ title, genre, rating, downloads, image, color, index,
   }
 
   const handleMouseLeave = () => {
+    if (isMobile || perfMode) return
     mouseX.set(0)
     mouseY.set(0)
   }
@@ -77,14 +97,14 @@ export function GameCard({ title, genre, rating, downloads, image, color, index,
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-50px" }}
       transition={{ duration: 0.5, delay: index * 0.1, ease: "easeOut" }}
-      whileHover={{ scale: 1.03, transition: { duration: 0.3 } }}
+      whileHover={isMobile || perfMode ? {} : { scale: 1.03, transition: { duration: 0.3 } }}
       onClick={onClick}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
       className="group relative rounded-2xl overflow-hidden bg-zinc-900/50 border border-zinc-800/50 hover:border-zinc-700/50 transition-all cursor-pointer holo-card gradient-border"
       style={{
-        perspective: 1200,
-        transformStyle: "preserve-3d",
+        perspective: isMobile || perfMode ? undefined : 1200,
+        transformStyle: isMobile || perfMode ? undefined : "preserve-3d",
       }}
     >
       {/* Dynamic shadow that follows tilt */}
@@ -101,9 +121,9 @@ export function GameCard({ title, genre, rating, downloads, image, color, index,
 
       <motion.div
         style={{
-          rotateX,
-          rotateY,
-          transformStyle: "preserve-3d",
+          rotateX: isMobile || perfMode ? undefined : rotateX,
+          rotateY: isMobile || perfMode ? undefined : rotateY,
+          transformStyle: isMobile || perfMode ? undefined : "preserve-3d",
         }}
         className="relative"
       >
@@ -191,17 +211,19 @@ export function GameCard({ title, genre, rating, downloads, image, color, index,
           }}
         />
 
-        {/* Tilt shine overlay — follows mouse */}
-        <motion.div
-          className="absolute inset-0 rounded-2xl pointer-events-none"
-          style={{
-            background: useTransform(
-              [shineX, shineY],
-              ([sx, sy]) => `radial-gradient(600px circle at ${sx}% ${sy}%, rgba(255,255,255,0.15), transparent 40%)`
-            ),
-            opacity: 0,
-          }}
-        />
+        {/* Tilt shine overlay — follows mouse (disabled on mobile/perf-mode) */}
+        {!(isMobile || perfMode) && (
+          <motion.div
+            className="absolute inset-0 rounded-2xl pointer-events-none"
+            style={{
+              background: useTransform(
+                [shineX, shineY],
+                ([sx, sy]) => `radial-gradient(600px circle at ${sx}% ${sy}%, rgba(255,255,255,0.15), transparent 40%)`
+              ),
+              opacity: 0,
+            }}
+          />
+        )}
       </motion.div>
 
       {/* Delete Confirmation Popup */}
