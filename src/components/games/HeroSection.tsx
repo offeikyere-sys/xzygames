@@ -353,9 +353,12 @@ export function HeroSection({ userToken, isAdmin, activeSection, isHomePage, onB
               >
 
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl animate-pulse" />
-              {/* Robot is rendered by FloatingRobot component in NeoGamesLayout */}
-              <div className="w-full h-full flex items-center justify-center">
-                <div className="text-zinc-600 text-sm">Loading AI Assistant...</div>
+              {/* Hero Robot with smooth loading */}
+              <div className="w-full h-full">
+                <SplineScene
+                  scene="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode"
+                  className="w-full h-full"
+                />
               </div>
             </div>
             {/* Double-click hint */}
