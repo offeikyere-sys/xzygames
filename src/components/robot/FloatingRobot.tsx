@@ -16,50 +16,22 @@ interface FloatingRobotProps {
 export function FloatingRobot({ onDoubleClick, chatOpen }: FloatingRobotProps) {
   const [isOnline] = useState(true)
   const [brainActivity, setBrainActivity] = useState(0.65)
-
   const [position, setPosition] = useState<Position>({
     x: typeof window !== "undefined" ? window.innerWidth - 400 : 800,
     y: typeof window !== "undefined" ? window.innerHeight / 2 - 200 : 400,
   })
-
   const controls = useAnimation()
 
-  // Performance: if perf-mode is enabled, stop frequent interval updates + heavy animations.
-  const [perfMode, setPerfMode] = useState(false)
-
+  // Brain activity simulation
   useEffect(() => {
-    const update = () => {
-      const enabled = document?.documentElement?.classList?.contains('perf-mode')
-      setPerfMode(Boolean(enabled))
-    }
-    update()
-
-    const obs = new MutationObserver(() => update())
-    if (document?.documentElement) {
-      obs.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] })
-    }
-
-    return () => obs.disconnect()
-  }, [])
-
-  // Brain activity simulation (disabled in perf-mode)
-  useEffect(() => {
-    if (perfMode) return
     const brainInterval = setInterval(() => {
       setBrainActivity(Math.random())
     }, 1500)
     return () => clearInterval(brainInterval)
-  }, [perfMode])
+  }, [])
 
-
-// Idle animation sequence: gentle float + periodic wave
+  // Idle animation sequence: gentle float + periodic wave
   useEffect(() => {
-    if (perfMode) {
-      // In perf-mode keep robot stable.
-      controls.set({ y: 0, rotate: 0, scale: 1 })
-      return
-    }
-
     const runSequence = async () => {
       // Always do gentle float
       await controls.start({
@@ -87,11 +59,10 @@ export function FloatingRobot({ onDoubleClick, chatOpen }: FloatingRobotProps) {
     return () => {
       clearInterval(waveInterval)
     }
-  }, [controls, perfMode])
+  }, [controls])
 
-  // When chat opens, do a little bounce (disabled in perf-mode)
+  // When chat opens, do a little bounce
   useEffect(() => {
-    if (perfMode) return
     if (chatOpen) {
       controls.start({
         scale: [1, 1.1, 1],
@@ -99,7 +70,7 @@ export function FloatingRobot({ onDoubleClick, chatOpen }: FloatingRobotProps) {
         transition: { duration: 0.6, ease: "easeOut" },
       })
     }
-  }, [chatOpen, controls, perfMode])
+  }, [chatOpen, controls])
 
   const handleDragEnd = useCallback((_: any, info: any) => {
     setPosition({ x: info.point.x, y: info.point.y })

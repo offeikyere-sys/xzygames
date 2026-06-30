@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react"
 import { motion } from "framer-motion"
 import { SplineScene } from "@/components/ui/splite"
-
+import { AIChatModal } from "@/components/ui/AIChatModal"
 import { Spotlight } from "@/components/ui/spotlight"
 import { GameCard } from "./GameCard"
 import { MovieCard } from "@/components/movies/MovieCard"
@@ -28,7 +28,7 @@ export function CategoryPage({ category, onBack, onGameClick, userToken, isAdmin
   const [allGames, setAllGames] = useState<Array<{id?: number; title: string; genre: string; rating: number; downloads: number; image: string; color: string}>>([])
   const [bannerUrl, setBannerUrl] = useState<string | null>(null)
   const [bannerModalOpen, setBannerModalOpen] = useState(false)
-
+  const [aiChatOpen, setAiChatOpen] = useState(false)
 
   const isSoftware = typeFilter === "software"
   const isMovie = typeFilter === "movie"
@@ -197,7 +197,7 @@ export function CategoryPage({ category, onBack, onGameClick, userToken, isAdmin
             >
               <div
                 className="relative w-full h-[400px] sm:h-[500px] lg:h-[600px] translate-x-6 -translate-y-4 cursor-pointer"
-
+                onDoubleClick={() => setAiChatOpen(true)}
                 title="Double-click to chat with XZY AI"
               >
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl animate-pulse" />
@@ -260,7 +260,8 @@ export function CategoryPage({ category, onBack, onGameClick, userToken, isAdmin
         </div>
       </section>
 
-
+      {/* AI Chat Modal */}
+      <AIChatModal isOpen={aiChatOpen} onClose={() => setAiChatOpen(false)} />
 
       {/* Genre Banner Modal */}
       {isAdmin && userToken && (

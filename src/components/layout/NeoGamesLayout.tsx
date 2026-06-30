@@ -14,9 +14,6 @@ import { FeaturedMovies } from "@/components/movies/FeaturedMovies"
 import { TopDownloadsMovies } from "@/components/movies/TopDownloadsMovies"
 import { Footer } from "@/components/games/Footer"
 import { CategoryPage } from "@/components/games/CategoryPage"
-import { FloatingRobot } from "@/components/robot/FloatingRobot"
-import { AIChatModal } from "@/components/ui/AIChatModal"
-
 import { GameDetailPage } from "@/components/games/GameDetailPage"
 import { RequestsPage } from "@/components/games/RequestsPage"
 import { MovieDetailPage } from "@/components/movies/MovieDetailPage"
@@ -376,7 +373,6 @@ export function NeoGamesLayout() {
   const hideNav = currentPage === "login" || currentPage === "signup"
 
   const handleFooterNavigate = (page: string) => {
-
     if (page === "home") {
       setCurrentPage("home")
     } else if (page === "games-browse") {
@@ -411,21 +407,18 @@ export function NeoGamesLayout() {
     ? activeCategory
     : currentPage
 
-  // Keep perfMode state so it can be extended later, but mark the variable as intentionally unused.
-  // (CI/build uses TypeScript noUnusedLocals.)
-  const [_perfMode, setPerfMode] = useState(false)
-  const [aiChatOpen, setAiChatOpen] = useState(false)
+  const [perfMode, setPerfMode] = useState(false)
 
   // perfMode is mainly used for CSS overrides; we keep the JS minimal.
 
-  useEffect(() => {
 
+  useEffect(() => {
     // Note: keep this logic simple; CSS is the main performance win.
 
     // Detect mobile / low-end conditions.
     // (We do not rely only on prefers-reduced-motion, because many users won't enable it.)
+    const w = window as any
     const mql = window.matchMedia?.('(max-width: 768px)')
-
     const reduced = window.matchMedia?.('(prefers-reduced-motion: reduce)')
 
     const saveData = Boolean(navigator && (navigator as any).connection && (navigator as any).connection.saveData)
@@ -949,20 +942,7 @@ export function NeoGamesLayout() {
         )}
       </AnimatePresence>
 
-      {currentPage === "home" && (
-        <>
-          <FloatingRobot
-            onDoubleClick={() => {
-              // Open instantly + ensure state is flushed.
-              setAiChatOpen(true)
-            }}
-            chatOpen={aiChatOpen}
-          />
-          <AIChatModal isOpen={aiChatOpen} onClose={() => setAiChatOpen(false)} />
-        </>
-      )}
       <ScrollToTop />
-
 
       {/* Live Activity Feed (admin only) */}
       {showActivityFeed && user?.is_admin === 1 && <ActivityFeed />}

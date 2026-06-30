@@ -203,6 +203,7 @@
   );
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   mask-composite: exclude;
   animation: glassBorderRotate 6s linear infinite;
   opacity: 0;
@@ -225,9 +226,7 @@
 }
 
 /* Glass navbar — only active in light mode */
-.glass-navbar {
-  /* Dark mode: no glass effect, keep original dark styling */
-}
+/* .glass-navbar dark mode styles are handled by .light .glass-navbar below */
 
 .light .glass-navbar {
   background: rgba(255, 255, 255, 0.65);
@@ -567,6 +566,7 @@
   );
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   mask-composite: exclude;
   animation: gradientRotate 4s linear infinite;
   pointer-events: none;
@@ -1511,105 +1511,6 @@ body {
 .liquid .min-h-screen.bg-black {
   background: linear-gradient(135deg, #03030a 0%, #070714 100%) !important;
 }
-
-/* =====================================================
-   MOBILE / LOW-END PERFORMANCE MODE
-   Activated by: document.documentElement.classList.toggle('perf-mode', enabled)
-   ===================================================== */
-html.perf-mode {
-  /* Let the GPU do less work */
-  --perf-blur: 0px;
-}
-
-html.perf-mode *,
-html.perf-mode *::before,
-html.perf-mode *::after {
-  /* Disable animations + transitions everywhere */
-  animation-duration: 0.001ms !important;
-  animation-iteration-count: 1 !important;
-  transition-duration: 0.001ms !important;
-  scroll-behavior: auto !important;
-}
-
-/* Kill heavy visual effects */
-html.perf-mode .neon-grid,
-html.perf-mode .neon-grid::after {
-  display: none !important;
-}
-
-html.perf-mode .holo-card::before,
-html.perf-mode .holo-shimmer::after,
-html.perf-mode .glow-btn::after,
-html.perf-mode .glow-badge::after,
-html.perf-mode .glass-card::before,
-html.perf-mode .gradient-border::before {
-  animation: none !important;
-  opacity: 0 !important;
-}
-
-/* Remove backdrop-filter blur */
-html.perf-mode .backdrop-blur-sm,
-html.perf-mode .backdrop-blur-xl,
-html.perf-mode [class*="backdrop-blur"] {
-  backdrop-filter: none !important;
-  -webkit-backdrop-filter: none !important;
-}
-
-/* Disable 3D/tilt/shimmer hover effects */
-html.perf-mode .tilt-card,
-html.perf-mode .tilt-card-inner,
-html.perf-mode .cat-btn,
-html.perf-mode .cat-btn-active,
-html.perf-mode .tilt-card:hover,
-html.perf-mode .tilt-card-glow,
-html.perf-mode .tilt-card:hover .tilt-card-shine,
-html.perf-mode .holo-card {
-  transform: none !important;
-  animation: none !important;
-  box-shadow: none !important;
-}
-
-html.perf-mode .animate-pulse,
-html.perf-mode .animate-ambient,
-html.perf-mode .animate-float,
-html.perf-mode .animate-spotlight,
-html.perf-mode .animate-spin,
-html.perf-mode .animate-bounce,
-html.perf-mode .animate-scroll-ticker {
-  animation: none !important;
-}
-
-/* Extra: stop robot/page hero entrance transforms for low-end */
-html.perf-mode .glow-badge::after,
-html.perf-mode .glow-btn::after {
-  opacity: 0 !important;
-}
-
-html.perf-mode .w-64.h-64,
-html.perf-mode .w-72.h-72,
-html.perf-mode .w-80.h-80 {
-  filter: none !important;
-}
-
-html.perf-mode .animate-pulse,
-html.perf-mode .animate-spin,
-html.perf-mode .animate-bounce {
-  animation: none !important;
-}
-
-/* Reduce blur on liquid theme */
-html.perf-mode .liquid .bg-black,
-
-html.perf-mode .liquid .glass-card,
-html.perf-mode .liquid .glass-modal,
-html.perf-mode .liquid .glass-section,
-html.perf-mode .liquid .glass-input,
-html.perf-mode .liquid nav,
-html.perf-mode .liquid .glass-navbar {
-  backdrop-filter: none !important;
-  -webkit-backdrop-filter: none !important;
-}
-
 
 .liquid .color-swatch.active {
   border-color: rgba(255, 255, 255, 0.7) !important;
