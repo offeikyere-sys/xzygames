@@ -97,11 +97,10 @@ export function GameCard({ title, genre, rating, downloads, image, color, index,
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-50px" }}
       transition={{ duration: 0.5, delay: index * 0.1, ease: "easeOut" }}
-      whileHover={isMobile || perfMode ? {} : { scale: 1.03, transition: { duration: 0.3 } }}
       onClick={onClick}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
-      className="group relative rounded-2xl overflow-hidden bg-zinc-900/50 border border-zinc-800/50 hover:border-zinc-700/50 transition-all cursor-pointer holo-card gradient-border"
+      className={`group relative rounded-2xl overflow-hidden bg-zinc-900/50 border border-zinc-800/50 hover:border-zinc-700/50 transition-all cursor-pointer holo-card gradient-border ${isMobile || perfMode ? '' : 'hover:scale-105'}`}
       style={{
         perspective: isMobile || perfMode ? undefined : 1200,
         transformStyle: isMobile || perfMode ? undefined : "preserve-3d",

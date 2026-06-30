@@ -18,6 +18,7 @@ export function SimpleCarousel({
 }: SimpleCarouselProps) {
   const [canScrollLeft, setCanScrollLeft] = useState(false)
   const [canScrollRight, setCanScrollRight] = useState(true)
+  const [visibleRange, setVisibleRange] = useState({ start: 0, end: 6 })
   const scrollRef = useRef<HTMLDivElement>(null)
 
   const checkScroll = () => {
@@ -25,6 +26,11 @@ export function SimpleCarousel({
     const { scrollLeft, scrollWidth, clientWidth } = scrollRef.current
     setCanScrollLeft(scrollLeft > 0)
     setCanScrollRight(scrollLeft + clientWidth < scrollWidth - 1)
+
+    // Calculate visible range for virtualization
+    const start = Math.max(0, Math.floor(scrollLeft / cardWidth) - 2)
+    const end = Math.min(items.length, Math.ceil((scrollLeft + clientWidth) / cardWidth) + 2)
+    setVisibleRange({ start, end })
   }
 
   useEffect(() => {
@@ -37,7 +43,7 @@ export function SimpleCarousel({
       el.removeEventListener("scroll", checkScroll)
       window.removeEventListener("resize", checkScroll)
     }
-  }, [items])
+  }, [items, cardWidth])
 
   const scroll = (direction: "left" | "right") => {
     if (!scrollRef.current) return
@@ -49,6 +55,9 @@ export function SimpleCarousel({
   }
 
   if (items.length === 0) return null
+
+  // Virtualization: only render visible items + buffer
+  const visibleItems = items.slice(visibleRange.start, visibleRange.end)
 
   return (
     <div className={`relative ${className}`}>
@@ -73,20 +82,33 @@ export function SimpleCarousel({
           msOverflowStyle: "none",
         }}
       >
-        {items.map((item, index) => (
-          <div
-            key={item.id || index}
-            style={{
-              width: cardWidth,
-              flexShrink: 0,
-              scrollSnapAlign: "start",
-            }}
-            onClick={() => onItemClick?.(item)}
-            className="cursor-pointer"
-          >
-            {renderCard(item, index)}
-          </div>
-        ))}
+        {/* Spacer for items before visible range */}
+        {visibleRange.start > 0 && (
+          <div style={{ width: visibleRange.start * (cardWidth + 20), flexShrink: 0 }} />
+        )}
+        
+        {visibleItems.map((item, idx) => {
+          const actualIndex = visibleRange.start + idx
+          return (
+            <div
+              key={item.id || actualIndex}
+              style={{
+                width: cardWidth,
+                flexShrink: 0,
+                scrollSnapAlign: "start",
+              }}
+              onClick={() => onItemClick?.(item)}
+              className="cursor-pointer"
+            >
+              {renderCard(item, actualIndex)}
+            </div>
+          )
+        })}
+
+        {/* Spacer for items after visible range */}
+        {visibleRange.end < items.length && (
+          <div style={{ width: (items.length - visibleRange.end) * (cardWidth + 20), flexShrink: 0 }} />
+        )}
       </div>
 
       {/* Right Arrow */}

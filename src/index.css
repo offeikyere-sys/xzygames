@@ -982,10 +982,160 @@ body {
 }
 
 /* Light mode for game card */
-.light .bg-zinc-900\/45 {
-  background-color: rgba(255, 255, 255, 0.45);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
+.light .bg-zinc-900\/65 {
+  background-color: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+/* ===== PERFORMANCE MODE (Low-RAM/Mobile) ===== */
+.perf-mode .neon-grid {
+  animation: none;
+  opacity: 0.5;
+}
+
+.perf-mode .holo-card::before {
+  animation: none;
+  opacity: 0.3;
+}
+
+.perf-mode .holo-card:hover {
+  animation: none;
+  box-shadow: 0 0 15px var(--game-color, #3b82f6);
+}
+
+.perf-mode .glow-btn,
+.perf-mode .glow-badge {
+  animation: none;
+}
+
+.perf-mode .glow-btn:hover,
+.perf-mode .glow-badge:hover {
+  animation: none;
+}
+
+.perf-mode .float-icon {
+  animation: none;
+}
+
+.perf-mode .glass-navbar,
+.perf-mode .glass-card,
+.perf-mode .glass-modal,
+.perf-mode .glass-section {
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+}
+
+.perf-mode .backdrop-blur-md,
+.perf-mode .backdrop-blur-sm,
+.perf-mode .backdrop-blur-xl {
+  backdrop-filter: blur(4px) !important;
+  -webkit-backdrop-filter: blur(4px) !important;
+}
+
+.perf-mode .blur-3xl {
+  filter: blur(12px);
+}
+
+.perf-mode .blur-2xl {
+  filter: blur(8px);
+}
+
+.perf-mode .animate-spotlight,
+.perf-mode .animate-ambient,
+.perf-mode .animate-float {
+  animation: none;
+}
+
+.perf-mode .reveal-3d {
+  animation: none;
+  opacity: 1;
+  transform: none;
+  filter: none;
+}
+
+.perf-mode .cat-btn:hover {
+  transform: none;
+}
+
+.perf-mode .cat-btn-active {
+  animation: none;
+  transform: scale(1.05);
+}
+
+.perf-mode .cat-btn-active:hover {
+  transform: scale(1.05);
+}
+
+.perf-mode .holo-shimmer::after,
+.perf-mode .glow-btn::after,
+.perf-mode .glow-badge::after {
+  animation: none;
+  opacity: 0;
+}
+
+.perf-mode .holo-card:hover::after,
+.perf-mode .holo-card:hover .holo-shimmer::after {
+  opacity: 0.5;
+}
+
+.perf-mode .gradient-border::before {
+  animation: none;
+  opacity: 0.5;
+}
+
+.perf-mode .tilt-card,
+.perf-mode .tilt-card-inner {
+  transform: none;
+  transition: none;
+}
+
+.perf-mode .tilt-card-shine {
+  display: none;
+}
+
+.perf-mode .tilt-card-glow {
+  display: none;
+}
+
+/* Mobile-specific optimizations */
+@media (max-width: 768px) {
+  .perf-mode .neon-grid {
+    animation: none;
+    opacity: 0.3;
+  }
+
+  .perf-mode .blur-3xl {
+    filter: blur(8px);
+  }
+
+  .perf-mode .backdrop-blur-md,
+  .perf-mode .backdrop-blur-sm {
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+  }
+
+  .perf-mode .glass-navbar,
+  .perf-mode .glass-card {
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
+}
+
+/* Reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .perf-mode .neon-grid,
+  .perf-mode .holo-card::before,
+  .perf-mode .glow-btn,
+  .perf-mode .glow-badge,
+  .perf-mode .float-icon,
+  .perf-mode .gradient-border::before {
+    animation: none !important;
+  }
+
+  .perf-mode .holo-card:hover {
+    animation: none !important;
+  }
 }
 
 /* Light mode for game card */
