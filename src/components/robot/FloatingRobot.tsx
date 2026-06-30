@@ -1,4 +1,4 @@
-import { useState, useCallback, useEffect } from "react"
+import { useState, useCallback, useEffect, useRef } from "react"
 import { motion, useAnimation } from "framer-motion"
 import { SplineScene } from "@/components/ui/splite"
 import { Activity, Wifi, WifiOff } from "lucide-react"
@@ -16,6 +16,8 @@ interface FloatingRobotProps {
 export function FloatingRobot({ onDoubleClick, chatOpen }: FloatingRobotProps) {
   const [isOnline] = useState(true)
   const [brainActivity, setBrainActivity] = useState(0.65)
+  const [splineLoaded, setSplineLoaded] = useState(false)
+  const [splineError, setSplineError] = useState(false)
 
   const [position, setPosition] = useState<Position>({
     x: typeof window !== "undefined" ? window.innerWidth - 400 : 800,
@@ -23,6 +25,9 @@ export function FloatingRobot({ onDoubleClick, chatOpen }: FloatingRobotProps) {
   })
 
   const controls = useAnimation()
+  const lastClickTime = useRef(0)
+  const lastClickPos = useRef({ x: 0, y: 0 })
+  const dragDistance = useRef(0)
 
   // Performance: if perf-mode is enabled, stop frequent interval updates + heavy animations.
   const [perfMode, setPerfMode] = useState(false)
@@ -101,8 +106,46 @@ export function FloatingRobot({ onDoubleClick, chatOpen }: FloatingRobotProps) {
     }
   }, [chatOpen, controls, perfMode])
 
+  // Custom double-click handler that works reliably with drag
+  const handleClick = useCallback((e: React.MouseEvent) => {
+    const now = Date.now()
+    const pos = { x: e.clientX, y: e.clientY }
+    
+    // If dragged too far, don't count as click
+    if (dragDistance.current > 5) {
+      dragDistance.current = 0
+      lastClickTime.current = 0
+      return
+    }
+
+    const timeDiff = now - lastClickTime.current
+    const posDiff = Math.abs(pos.x - lastClickPos.current.x) + Math.abs(pos.y - lastClickPos.current.y)
+
+    // Double click: within 300ms and similar position
+    if (timeDiff < 300 && timeDiff > 0 && posDiff < 10) {
+      onDoubleClick()
+      lastClickTime.current = 0
+      dragDistance.current = 0
+    } else {
+      lastClickTime.current = now
+      lastClickPos.current = pos
+    }
+  }, [onDoubleClick])
+
+  const handleDragStart = useCallback(() => {
+    dragDistance.current = 0
+  }, [])
+
+  const handleDrag = useCallback((_: any, info: any) => {
+    dragDistance.current += Math.abs(info.delta.x) + Math.abs(info.delta.y)
+  }, [])
+
   const handleDragEnd = useCallback((_: any, info: any) => {
     setPosition({ x: info.point.x, y: info.point.y })
+    // Reset drag distance after a short delay to allow click handler to check
+    setTimeout(() => {
+      dragDistance.current = 0
+    }, 50)
   }, [])
 
   // Generate stable particle positions once using lazy state initialization
@@ -119,8 +162,10 @@ export function FloatingRobot({ onDoubleClick, chatOpen }: FloatingRobotProps) {
       <motion.div
         drag
         dragMomentum={false}
+        onDragStart={handleDragStart}
+        onDrag={handleDrag}
         onDragEnd={handleDragEnd}
-        onDoubleClick={onDoubleClick}
+        onClick={handleClick}
         className="fixed z-30 cursor-grab active:cursor-grabbing select-none"
         style={{ left: position.x, top: position.y }}
         whileDrag={{ scale: 1.08 }}
@@ -137,16 +182,51 @@ export function FloatingRobot({ onDoubleClick, chatOpen }: FloatingRobotProps) {
 
         {/* Robot container */}
         <div className="relative">
-          {/* Spline 3D Robot */}
-          <div className="w-64 h-64 md:w-72 md:h-72">
-            <SplineScene
-              scene="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode"
-              className="w-full h-full"
-            />
+          {/* Spline 3D Robot with smooth loading */}
+          <div className="w-64 h-64 md:w-72 md:h-64">
+            {!splineLoaded && !splineError && (
+              <motion.div
+                className="w-full h-full flex items-center justify-center"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.3 }}
+              >
+                <div className="relative">
+                  <div className="w-12 h-12 border-3 border-blue-500/20 border-t-blue-500 rounded-full animate-spin" />
+                  <motion.div
+                    className="absolute inset-0 w-12 h-12 rounded-full bg-blue-500/10 blur-xl"
+                    animate={{ scale: [1, 1.2, 1], opacity: [0.3, 0.6, 0.3] }}
+                    transition={{ duration: 1.5, repeat: Infinity }}
+                  />
+                </div>
+              </motion.div>
+            )}
+            {splineError && (
+              <motion.div
+                className="w-full h-full flex items-center justify-center"
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.3 }}
+              >
+                <div className="text-zinc-500 text-sm">Robot unavailable</div>
+              </motion.div>
+            )}
+            <motion.div
+              className={`w-full h-full ${splineLoaded ? 'opacity-100' : 'opacity-0'}`}
+              animate={{ opacity: splineLoaded ? 1 : 0 }}
+              transition={{ duration: 0.5, ease: "easeOut" }}
+            >
+              <SplineScene
+                scene="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode"
+                className="w-full h-full"
+                onLoad={() => setSplineLoaded(true)}
+                onError={() => setSplineError(true)}
+              />
+            </motion.div>
           </div>
 
-          {/* Floating particles around robot */}
-          {Array.from({ length: 4 }).map((_, i) => {
+          {/* Floating particles around robot - reduced in perf-mode */}
+          {!perfMode && Array.from({ length: 4 }).map((_, i) => {
             const particle = particlePositions[i]
             return (
               <motion.div
