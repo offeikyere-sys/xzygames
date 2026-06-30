@@ -25,9 +25,6 @@ export function FloatingRobot({ onDoubleClick, chatOpen }: FloatingRobotProps) {
   })
 
   const controls = useAnimation()
-  const lastClickTime = useRef(0)
-  const lastClickPos = useRef({ x: 0, y: 0 })
-  const dragDistance = useRef(0)
 
   // Performance: if perf-mode is enabled, stop frequent interval updates + heavy animations.
   const [perfMode, setPerfMode] = useState(false)
