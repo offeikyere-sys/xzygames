@@ -97,8 +97,13 @@ export function CategoryPage({ category, userToken, isAdmin, onBack, onGameClick
 
         // Backend returns a plain array directly
         const items = Array.isArray(data) ? data : []
-        setGames(items)
-        setFilteredGames(items)
+        // Map API fields to component fields (wallpaper_url/poster_url → image)
+        const mappedItems = items.map((item: any) => ({
+          ...item,
+          image: item.wallpaper_url || item.poster_url || item.image || "",
+        }))
+        setGames(mappedItems)
+        setFilteredGames(mappedItems)
 
         // Extract unique genres from fetched items
         const uniqueGenres = Array.from(new Set(items.map((g: Game) => g.genre))).filter(Boolean) as string[]
@@ -198,7 +203,7 @@ export function CategoryPage({ category, userToken, isAdmin, onBack, onGameClick
   return (
     <div className="min-h-screen bg-black">
       {/* Hero Section with Banner + Search */}
-      <div className="relative pt-20 pb-12">
+      <div className={`relative ${bannerUrl ? "pt-28 pb-20 min-h-[50vh]" : "pt-20 pb-16 min-h-[40vh]"}`}>
         {/* Banner background */}
         {bannerUrl && (
           <>
