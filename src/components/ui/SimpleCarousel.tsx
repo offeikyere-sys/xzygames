@@ -42,23 +42,23 @@ export function SimpleCarousel({ items, cardWidth, onItemClick, renderCard }: Si
 
   return (
     <div className="relative">
-      <div
-        ref={carouselRef}
-        className="flex gap-3 overflow-hidden"
-        style={{ scrollSnapType: "x mandatory", transform: `translateX(-${translateX}px)` }}
-      >
-        {items.map((item, index) => (
-          <div
-            key={index}
-            style={{
-              minWidth: effectiveCardWidth,
-              scrollSnapAlign: "start",
-            }}
-            onClick={() => onItemClick(item)}
-          >
-            {renderCard(item, index)}
-          </div>
-        ))}
+      <div ref={carouselRef} className="overflow-hidden">
+        <div
+          className="flex gap-3"
+          style={{ transform: `translateX(-${translateX}px)` }}
+        >
+          {items.map((item, index) => (
+            <div
+              key={index}
+              style={{
+                minWidth: effectiveCardWidth,
+              }}
+              onClick={() => onItemClick(item)}
+            >
+              {renderCard(item, index)}
+            </div>
+          ))}
+        </div>
       </div>
 
       {maxIndex > 0 && (
