@@ -2,12 +2,14 @@
 
 import { useState, useEffect, useMemo } from "react"
 import { motion } from "framer-motion"
-import { Search, SlidersHorizontal, X, ChevronLeft, ChevronRight } from "lucide-react"
+import { Search, SlidersHorizontal, X, ChevronLeft, ChevronRight, ImageIcon } from "lucide-react"
 import { GameCard } from "@/components/games/GameCard"
 import { SimpleCarousel } from "@/components/ui/SimpleCarousel"
 import { BlurImage } from "@/components/ui/BlurImage"
+import { GenreBannerModal } from "@/components/admin/GenreBannerModal"
 import { apiUrl } from "@/lib/api"
 import { detectPerformanceMode } from "@/lib/performance"
+import { isVideoUrl } from "@/lib/media"
 
 interface Game {
   id: number
@@ -52,6 +54,8 @@ export function CategoryPage({ category, userToken, isAdmin, onBack, onGameClick
   const [totalPages, setTotalPages] = useState(1)
   const [genres, setGenres] = useState<string[]>([])
   const perfMode = detectPerformanceMode()
+  const [bannerUrl, setBannerUrl] = useState<string | null>(null)
+  const [bannerModalOpen, setBannerModalOpen] = useState(false)
 
   const gamesPerPage = 24
 
@@ -107,6 +111,25 @@ export function CategoryPage({ category, userToken, isAdmin, onBack, onGameClick
     }
     fetchItems()
   }, [typeFilter, category])
+
+  // Fetch category banner
+  useEffect(() => {
+    const fetchBanner = async () => {
+      if (!category || category === "All") {
+        setBannerUrl(null)
+        return
+      }
+      try {
+        const res = await fetch(apiUrl(`/api/category-banners/${encodeURIComponent(category)}`))
+        const data = await res.json()
+        setBannerUrl(data.banner_url || null)
+      } catch (error) {
+        console.error("Failed to fetch category banner:", error)
+        setBannerUrl(null)
+      }
+    }
+    fetchBanner()
+  }, [category])
 
   // Filter and sort games
   useEffect(() => {
@@ -168,11 +191,52 @@ export function CategoryPage({ category, userToken, isAdmin, onBack, onGameClick
     }
   }
 
+  const handleBannerUpdated = (url: string | null) => {
+    setBannerUrl(url)
+  }
+
   return (
     <div className="min-h-screen bg-black">
-      {/* Hero Section with Search */}
-      <div className="relative bg-gradient-to-b from-blue-900/20 to-black pt-20 pb-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Hero Section with Banner + Search */}
+      <div className="relative pt-20 pb-12">
+        {/* Banner background */}
+        {bannerUrl && (
+          <>
+            {isVideoUrl(bannerUrl) ? (
+              <video
+                autoPlay
+                muted
+                loop
+                playsInline
+                className="absolute inset-0 w-full h-full object-cover"
+              >
+                <source src={bannerUrl} />
+              </video>
+            ) : (
+              <BlurImage
+                src={bannerUrl}
+                alt={category || pageTitle}
+                className="absolute inset-0 w-full h-full object-cover"
+                wrapperClassName="absolute inset-0"
+              />
+            )}
+            <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-black/80" />
+          </>
+        )}
+
+        {/* Admin edit banner button */}
+        {isAdmin && category && category !== "All" && (
+          <button
+            onClick={() => setBannerModalOpen(true)}
+            className="absolute top-24 right-4 z-20 flex items-center gap-1.5 px-2 py-1 rounded-lg bg-black/60 backdrop-blur-sm border border-zinc-700/50 text-[10px] text-zinc-400 hover:text-white hover:bg-zinc-800 transition-all"
+            title={`Edit ${category} banner`}
+          >
+            <ImageIcon size={12} />
+            {bannerUrl ? "Banner" : "Add"}
+          </button>
+        )}
+
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {onBack && (
             <button
               onClick={onBack}
@@ -335,6 +399,16 @@ export function CategoryPage({ category, userToken, isAdmin, onBack, onGameClick
             )}
           </>
         )}
+
+        {/* Genre Banner Modal */}
+        <GenreBannerModal
+          isOpen={bannerModalOpen}
+          onClose={() => setBannerModalOpen(false)}
+          userToken={userToken || ""}
+          genre={category || ""}
+          currentBannerUrl={bannerUrl}
+          onBannerUpdated={handleBannerUpdated}
+        />
       </div>
     </div>
   )
