@@ -177,9 +177,10 @@ export function FloatingRobot({ onDoubleClick, chatOpen }: FloatingRobotProps) {
         <div 
           ref={robotRef}
           className="relative cursor-grab active:cursor-grabbing pointer-events-auto"
+          style={{ width: '320px', height: '320px' }}
         >
           {/* Invisible click overlay - ensures entire area is clickable */}
-          <div className="absolute inset-0 z-10" />
+          <div className="absolute inset-0 z-10 bg-transparent" />
           
           {/* Spline 3D Robot with smooth loading */}
           <div className="w-64 h-64 md:w-72 md:h-64 relative z-0">
