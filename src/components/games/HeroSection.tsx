@@ -127,9 +127,6 @@ export function HeroSection({ userToken, isAdmin, activeSection, isHomePage, onB
 
       {!activeBannerUrl && (
         <>
-          {/* Spotlight effect */}
-          <Spotlight className="-top-40 left-0 md:left-60 md:-top-20" fill="white" />
-
           {/* Ambient glow */}
           <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-blue-500/8 rounded-full blur-3xl" />
           <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-purple-500/5 rounded-full blur-3xl" />
