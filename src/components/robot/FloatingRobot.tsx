@@ -103,12 +103,12 @@ export function FloatingRobot({ onDoubleClick, chatOpen }: FloatingRobotProps) {
     }
   }, [chatOpen, controls, perfMode])
 
-  // Temporarily removed double-click to diagnose issue
-  // const handleDoubleClick = useCallback((e: React.MouseEvent) => {
-  //   e.stopPropagation()
-  //   e.preventDefault()
-  //   onDoubleClick()
-  // }, [onDoubleClick])
+  // Double-click handler - works instantly
+  const handleDoubleClick = useCallback((e: React.MouseEvent) => {
+    e.stopPropagation()
+    e.preventDefault()
+    onDoubleClick()
+  }, [onDoubleClick])
 
   const handleDragStart = useCallback(() => {
     // Reset any click tracking
@@ -153,9 +153,10 @@ export function FloatingRobot({ onDoubleClick, chatOpen }: FloatingRobotProps) {
           transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
         />
 
-        {/* Robot container - temporarily removed double-click for testing */}
+        {/* Robot container - double-click opens AI chat */}
         <div 
           className="relative cursor-grab active:cursor-grabbing pointer-events-auto"
+          onDoubleClick={handleDoubleClick}
         >
           {/* Spline 3D Robot with smooth loading */}
           <div className="w-64 h-64 md:w-72 md:h-64">
