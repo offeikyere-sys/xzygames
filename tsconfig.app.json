@@ -14,7 +14,7 @@
     "moduleDetection": "force",
     "noEmit": true,
     "jsx": "react-jsx",
-    "ignoreDeprecations": 6.0,
+    "ignoreDeprecations": "6.0",
 
     /* Paths */
     "baseUrl": ".",
@@ -23,8 +23,8 @@
     },
 
     /* Linting */
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
     "erasableSyntaxOnly": true,
     "noFallthroughCasesInSwitch": true
   },

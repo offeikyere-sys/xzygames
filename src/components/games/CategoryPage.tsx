@@ -30,12 +30,17 @@ interface Game {
 }
 
 interface CategoryPageProps {
+  category?: string
   userToken?: string
   isAdmin?: boolean
   onBack?: () => void
+  onGameClick?: (game: Game) => void
+  onDeleteGame?: (gameId: number) => Promise<void>
+  onEditGame?: (game: any) => void
+  typeFilter?: string
 }
 
-export function CategoryPage({ userToken, isAdmin, onBack }: CategoryPageProps) {
+export function CategoryPage({ category, userToken, isAdmin, onBack, onGameClick, onDeleteGame, onEditGame, typeFilter }: CategoryPageProps) {
   const [games, setGames] = useState<Game[]>([])
   const [filteredGames, setFilteredGames] = useState<Game[]>([])
   const [loading, setLoading] = useState(true)
