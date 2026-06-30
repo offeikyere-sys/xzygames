@@ -949,8 +949,12 @@ export function NeoGamesLayout() {
         )}
       </AnimatePresence>
 
-      <FloatingRobot onDoubleClick={() => setAiChatOpen(true)} chatOpen={aiChatOpen} />
-      <AIChatModal isOpen={aiChatOpen} onClose={() => setAiChatOpen(false)} />
+      {currentPage === "home" && (
+        <>
+          <FloatingRobot onDoubleClick={() => setAiChatOpen(true)} chatOpen={aiChatOpen} />
+          <AIChatModal isOpen={aiChatOpen} onClose={() => setAiChatOpen(false)} />
+        </>
+      )}
       <ScrollToTop />
 
 
