@@ -154,27 +154,28 @@ export function MovieDetailPage({ movieId, onBack, userToken, isAdmin, onDeleteM
         </div>
       )}
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-8">
+      <div className="relative z-10 max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 pt-20 sm:pt-28 pb-8">
         {/* Back button */}
         <motion.button
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           onClick={onBack}
-          className="flex items-center gap-2 px-4 py-2 rounded-xl bg-zinc-900/80 backdrop-blur-sm border border-zinc-700/50 text-sm text-zinc-300 hover:text-white hover:bg-zinc-800 transition-all mb-8"
+          className="flex items-center gap-2 px-3 sm:px-4 py-2 rounded-xl bg-zinc-900/80 backdrop-blur-sm border border-zinc-700/50 text-xs sm:text-sm text-zinc-300 hover:text-white hover:bg-zinc-800 transition-all mb-6 sm:mb-8"
         >
-          <ArrowLeft size={16} />
-          Back
+          <ArrowLeft size={14} className="sm:hidden" />
+          <ArrowLeft size={16} className="hidden sm:block" />
+          <span className="sm:hidden">Back</span>
         </motion.button>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8">
           {/* Left: Poster */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
             className="lg:col-span-1"
           >
-            <div className="sticky top-24">
-              <div className="aspect-[2/3] rounded-2xl overflow-hidden border-2 border-zinc-700/50 shadow-2xl">
+            <div className="sticky top-20 sm:top-24">
+              <div className="aspect-[2/3] rounded-2xl overflow-hidden border-2 border-zinc-700/50 shadow-2xl max-w-[280px] sm:max-w-none mx-auto lg:mx-0">
                 {movie.poster_url ? (
                   <BlurImage
                     src={movie.poster_url}
@@ -190,38 +191,44 @@ export function MovieDetailPage({ movieId, onBack, userToken, isAdmin, onDeleteM
               </div>
 
               {/* Action buttons */}
-              <div className="mt-6 space-y-3">
+              <div className="mt-4 sm:mt-6 space-y-2 sm:space-y-3">
                 {movie.trailer_url && (
                   <button
                     onClick={() => setTrailerOpen(true)}
-                    className="w-full flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-red-600 hover:bg-red-500 text-white font-semibold transition-all"
+                    className="w-full flex items-center justify-center gap-2 px-3 sm:px-4 py-2.5 sm:py-3 rounded-xl bg-red-600 hover:bg-red-500 text-white font-semibold text-sm sm:text-base transition-all"
                   >
-                    <Play size={18} />
-                    Watch Trailer
+                    <Play size={16} className="sm:hidden" />
+                    <Play size={18} className="hidden sm:block" />
+                    <span className="sm:hidden">Trailer</span>
+                    <span className="hidden sm:inline">Watch Trailer</span>
                   </button>
                 )}
 
                 {downloadLinks.length > 0 && (
                   <button
                     onClick={handleDownload}
-                    className="w-full flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-semibold transition-all"
+                    className="w-full flex items-center justify-center gap-2 px-3 sm:px-4 py-2.5 sm:py-3 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-semibold text-sm sm:text-base transition-all"
                   >
-                    <Download size={18} />
-                    Download Now
+                    <Download size={16} className="sm:hidden" />
+                    <Download size={18} className="hidden sm:block" />
+                    <span className="sm:hidden">Download</span>
+                    <span className="hidden sm:inline">Download Now</span>
                   </button>
                 )}
 
                 <div className="flex items-center gap-2">
                   <button
                     onClick={handleShare}
-                    className="flex-1 flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl border border-zinc-700/50 text-zinc-300 hover:text-white hover:bg-zinc-800 transition-all text-sm"
+                    className="flex-1 flex items-center justify-center gap-1 sm:gap-2 px-2 sm:px-4 py-2 sm:py-2.5 rounded-xl border border-zinc-700/50 text-zinc-300 hover:text-white hover:bg-zinc-800 transition-all text-xs sm:text-sm"
                   >
-                    <Share2 size={16} />
-                    Share
+                    <Share2 size={14} className="sm:hidden" />
+                    <Share2 size={16} className="hidden sm:block" />
+                    <span className="hidden sm:inline">Share</span>
                   </button>
-                  <button className="flex-1 flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl border border-zinc-700/50 text-zinc-300 hover:text-white hover:bg-zinc-800 transition-all text-sm">
-                    <Heart size={16} />
-                    Favorite
+                  <button className="flex-1 flex items-center justify-center gap-1 sm:gap-2 px-2 sm:px-4 py-2 sm:py-2.5 rounded-xl border border-zinc-700/50 text-zinc-300 hover:text-white hover:bg-zinc-800 transition-all text-xs sm:text-sm">
+                    <Heart size={14} className="sm:hidden" />
+                    <Heart size={16} className="hidden sm:block" />
+                    <span className="hidden sm:inline">Favorite</span>
                   </button>
                 </div>
 
@@ -257,9 +264,9 @@ export function MovieDetailPage({ movieId, onBack, userToken, isAdmin, onDeleteM
           >
             {/* Title and basic info */}
             <div>
-              <h1 className="text-4xl sm:text-5xl font-extrabold text-white mb-4">{movie.title}</h1>
+              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-white mb-3 sm:mb-4">{movie.title}</h1>
               
-              <div className="flex flex-wrap items-center gap-4 text-sm text-zinc-400">
+              <div className="flex flex-wrap items-center gap-2 sm:gap-4 text-xs sm:text-sm text-zinc-400">
                 <div className="flex items-center gap-1">
                   <Calendar size={16} />
                   <span>{movie.year}</span>

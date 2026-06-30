@@ -347,7 +347,7 @@ export function BrowseAll({ onGameClick, refreshKey, userToken: _userToken, isAd
           </div>
         ) : filteredItems.length > 0 ? (
           <>
-            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4">
               <AnimatePresence>
                 {visibleItems.map((item, i) => (
                   <motion.div

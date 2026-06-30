@@ -118,7 +118,7 @@ export function GameCard({ title, genre, rating, downloads, image, color, index,
         className="relative"
       >
         {/* Game Image / Cover */}
-        <div className="relative h-56 overflow-hidden">
+        <div className="relative h-40 sm:h-48 md:h-56 overflow-hidden">
           {image ? (
             <BlurImage src={image} alt={title} className="absolute inset-0 w-full h-full object-cover" wrapperClassName="absolute inset-0" />
           ) : (

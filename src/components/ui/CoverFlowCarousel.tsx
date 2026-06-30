@@ -39,8 +39,9 @@ export function CoverFlowCarousel({
   const trackRef = useRef<HTMLDivElement | null>(null)
 
   const total = items.length
-  const gap = 28
-  const step = cardWidth + gap
+  const gap = 20
+  const effectiveCardWidth = containerWidth > 0 ? Math.min(cardWidth, (containerWidth - 80) / 3) : cardWidth
+  const step = effectiveCardWidth + gap
 
   // Measure container width on mount + resize
   useEffect(() => {
@@ -53,6 +54,9 @@ export function CoverFlowCarousel({
     window.addEventListener("resize", measure)
     return () => window.removeEventListener("resize", measure)
   }, [])
+
+  // Responsive: reduce sides on mobile
+  const SIDES = containerWidth < 640 ? 2 : 3
 
   const goTo = useCallback((index: number) => {
     if (isAnimating) return
@@ -160,7 +164,7 @@ export function CoverFlowCarousel({
       {/* Carousel window */}
       <div
         className="relative w-full overflow-hidden"
-        style={{ height: 420 }}
+        style={{ height: containerWidth < 640 ? 320 : 420 }}
         onPointerDown={handlePointerDown}
         onPointerMove={handlePointerMove}
         onPointerUp={handlePointerUp}
@@ -188,11 +192,12 @@ export function CoverFlowCarousel({
             const absOffset = Math.abs(offset)
             const isActive = globalIndex === activeIndex
 
-            // Enhanced 3D transforms
-            const scale = 1 - absOffset * 0.2
-            const rotateY = offset * 18
-            const zDepth = -absOffset * 100
-            const yOffset = -absOffset * 15
+            // Enhanced 3D transforms - reduced intensity on mobile
+            const intensity = containerWidth < 640 ? 0.6 : 1
+            const scale = 1 - absOffset * 0.2 * intensity
+            const rotateY = offset * 18 * intensity
+            const zDepth = -absOffset * 100 * intensity
+            const yOffset = -absOffset * 15 * intensity
             const opacity = Math.max(0.3, 1 - absOffset * 0.22)
 
             return (
