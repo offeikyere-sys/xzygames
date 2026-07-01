@@ -73,6 +73,7 @@ export function GameDetailPage({ game, onBack, onGameClick, userToken, isAdmin }
   const [_loading, setLoading] = useState(true)
   const [userRating, setUserRating] = useState(0)
   const [dynamicRating, setDynamicRating] = useState(game.rating)
+  const [specTab, setSpecTab] = useState<"min" | "rec" | "high">("rec")
 
   useEffect(() => {
     if (game.id) {
@@ -753,17 +754,64 @@ export function GameDetailPage({ game, onBack, onGameClick, userToken, isAdmin }
           <div className="space-y-6">
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.5 }} className="bg-zinc-900/30 border border-zinc-800/30 rounded-2xl p-6 sticky top-24">
               <h2 className="text-lg font-semibold text-white mb-4 flex items-center gap-2"><Monitor size={18} /> System Requirements</h2>
-              <div className="space-y-4">
+              
+              {/* Tab Switcher */}
+              <div className="flex gap-2 mb-4 p-1 bg-zinc-800/50 rounded-xl">
                 {[
-                  { icon: Monitor, label: "OS", value: "Windows 10/11 64-bit" },
-                  { icon: Cpu, label: "Processor", value: "Intel Core i5-8400" },
-                  { icon: MemoryStick, label: "Memory", value: "16 GB RAM" },
-                  { icon: Shield, label: "Graphics", value: "GTX 1060 / RX 580" },
-                  { icon: HardDrive, label: "Storage", value: "45 GB available" },
+                  { key: "min" as const, label: "Minimum" },
+                  { key: "rec" as const, label: "Recommended" },
+                  { key: "high" as const, label: "High" },
+                ].map(({ key, label }) => (
+                  <button
+                    key={key}
+                    onClick={() => setSpecTab(key)}
+                    className={`flex-1 py-2 px-3 rounded-lg text-xs font-medium transition-all ${
+                      specTab === key
+                        ? "bg-blue-600/20 text-blue-400 border border-blue-500/30"
+                        : "text-zinc-400 hover:text-zinc-200 border border-transparent"
+                    }`}
+                  >
+                    {label}
+                  </button>
+                ))}
+              </div>
+
+              {/* Specs Content */}
+              <div className="space-y-4">
+                {specTab === "min" && [
+                  { icon: Monitor, label: "OS", value: fullGameData?.min_os as string || "Windows 10 64-bit" },
+                  { icon: Cpu, label: "Processor", value: fullGameData?.min_processor as string || "Intel Core i5-8400" },
+                  { icon: MemoryStick, label: "Memory", value: fullGameData?.min_memory as string || "16 GB RAM" },
+                  { icon: Shield, label: "Graphics", value: fullGameData?.min_graphics as string || "GTX 1060 / RX 580" },
+                  { icon: HardDrive, label: "Storage", value: fullGameData?.min_storage as string || "45 GB available" },
                 ].map(({ icon: Icon, label, value }) => (
                   <div key={label} className="flex items-center justify-between py-2 border-b border-zinc-800/30 last:border-0">
                     <div className="flex items-center gap-2 text-zinc-400"><Icon size={14} /><span className="text-sm">{label}</span></div>
-                    <span className="text-sm text-white font-medium">{value}</span>
+                    <span className="text-sm text-white font-medium text-right max-w-[60%]">{value}</span>
+                  </div>
+                ))}
+                {specTab === "rec" && [
+                  { icon: Monitor, label: "OS", value: fullGameData?.os as string || "Windows 10/11 64-bit" },
+                  { icon: Cpu, label: "Processor", value: fullGameData?.processor as string || "Intel Core i5-8400" },
+                  { icon: MemoryStick, label: "Memory", value: fullGameData?.memory as string || "16 GB RAM" },
+                  { icon: Shield, label: "Graphics", value: fullGameData?.graphics as string || "GTX 1060 / RX 580" },
+                  { icon: HardDrive, label: "Storage", value: fullGameData?.storage as string || "45 GB available" },
+                ].map(({ icon: Icon, label, value }) => (
+                  <div key={label} className="flex items-center justify-between py-2 border-b border-zinc-800/30 last:border-0">
+                    <div className="flex items-center gap-2 text-zinc-400"><Icon size={14} /><span className="text-sm">{label}</span></div>
+                    <span className="text-sm text-white font-medium text-right max-w-[60%]">{value}</span>
+                  </div>
+                ))}
+                {specTab === "high" && [
+                  { icon: Monitor, label: "OS", value: fullGameData?.high_os as string || "Windows 11 64-bit" },
+                  { icon: Cpu, label: "Processor", value: fullGameData?.high_processor as string || "Intel Core i9-10900K" },
+                  { icon: MemoryStick, label: "Memory", value: fullGameData?.high_memory as string || "32 GB RAM" },
+                  { icon: Shield, label: "Graphics", value: fullGameData?.high_graphics as string || "RTX 3080 / RX 6900 XT" },
+                  { icon: HardDrive, label: "Storage", value: fullGameData?.high_storage as string || "75 GB NVMe SSD" },
+                ].map(({ icon: Icon, label, value }) => (
+                  <div key={label} className="flex items-center justify-between py-2 border-b border-zinc-800/30 last:border-0">
+                    <div className="flex items-center gap-2 text-zinc-400"><Icon size={14} /><span className="text-sm">{label}</span></div>
+                    <span className="text-sm text-white font-medium text-right max-w-[60%]">{value}</span>
                   </div>
                 ))}
               </div>

@@ -362,6 +362,7 @@ export function CategoryPage({ category, userToken, isAdmin, onBack, onGameClick
                   gameId={game.id}
                   showDelete={isAdmin}
                   onDelete={handleDeleteGame}
+                  onClick={() => onGameClick?.(game)}
                 />
               ))}
             </div>
