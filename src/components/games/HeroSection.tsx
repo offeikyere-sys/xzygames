@@ -15,7 +15,7 @@ import { detectPerformanceMode, getPerformanceClass } from "@/lib/performance"
 interface HeroSectionProps {
   userToken?: string
   isAdmin?: boolean
-  activeSection?: "games" | "software" | "movies"
+  activeSection?: "games" | "software" | "movies" | "os"
   isHomePage?: boolean
   onBrowse?: () => void
 }
@@ -31,12 +31,15 @@ export function HeroSection({ userToken, isAdmin, activeSection, isHomePage, onB
   const [movieBannerModalOpen, setMovieBannerModalOpen] = useState(false)
   const [gamesBannerUrl, setGamesBannerUrl] = useState<string | null>(null)
   const [gamesBannerModalOpen, setGamesBannerModalOpen] = useState(false)
+  const [osBannerUrl, setOsBannerUrl] = useState<string | null>(null)
+  const [osBannerModalOpen, setOsBannerModalOpen] = useState(false)
   const [aiChatOpen, setAiChatOpen] = useState(false)
-  const [stats, setStats] = useState<{ games: number; software: number; movies: number; total_downloads: number } | null>(null)
+  const [stats, setStats] = useState<{ games: number; software: number; movies: number; os: number; total_downloads: number } | null>(null)
   const [perfMode] = useState(() => detectPerformanceMode())
 
   const isSoftwarePage = !isHomePage && activeSection === "software"
   const isMoviePage = !isHomePage && activeSection === "movies"
+  const isOSPage = !isHomePage && activeSection === "os"
 
   // Fetch random trailer on mount
   useEffect(() => {
@@ -54,7 +57,7 @@ export function HeroSection({ userToken, isAdmin, activeSection, isHomePage, onB
 
   // Fetch banner and stats
   useEffect(() => {
-    const bannerGenre = isMoviePage ? "MovieHero" : isSoftwarePage ? "SoftwareHero" : isHomePage ? "Home" : "GamesHero"
+    const bannerGenre = isMoviePage ? "MovieHero" : isSoftwarePage ? "SoftwareHero" : isOSPage ? "OSHero" : isHomePage ? "Home" : "GamesHero"
     fetch(apiUrl(`/api/category-banners/${bannerGenre}`))
       .then((res) => res.json())
       .then((data) => {
@@ -62,6 +65,8 @@ export function HeroSection({ userToken, isAdmin, activeSection, isHomePage, onB
           setMovieBannerUrl(data.banner_url || null)
         } else if (isSoftwarePage) {
           setSoftwareBannerUrl(data.banner_url || null)
+        } else if (isOSPage) {
+          setOsBannerUrl(data.banner_url || null)
         } else if (isHomePage) {
           setBannerUrl(data.banner_url || null)
         } else {
@@ -74,7 +79,7 @@ export function HeroSection({ userToken, isAdmin, activeSection, isHomePage, onB
       .then((res) => res.json())
       .then(setStats)
       .catch(() => {})
-  }, [isSoftwarePage, isMoviePage])
+  }, [isSoftwarePage, isMoviePage, isOSPage])
 
   // Determine which banner to show based on page type
   let activeBannerUrl: string | null = null
@@ -82,6 +87,8 @@ export function HeroSection({ userToken, isAdmin, activeSection, isHomePage, onB
     activeBannerUrl = movieBannerUrl
   } else if (isSoftwarePage) {
     activeBannerUrl = softwareBannerUrl
+  } else if (isOSPage) {
+    activeBannerUrl = osBannerUrl
   } else if (isHomePage) {
     activeBannerUrl = bannerUrl
   } else {
@@ -99,7 +106,7 @@ export function HeroSection({ userToken, isAdmin, activeSection, isHomePage, onB
   const showMediumEffects = perfMode === "medium" || perfMode === "high"
 
   return (
-    <section className={`relative min-h-[100vh] sm:min-h-[120vh] flex items-center overflow-hidden bg-black ${perfClass}`}>
+    <section className={`relative min-h-[100vh] sm:min-h-[100vh] md:min-h-[110vh] flex items-center overflow-hidden bg-black ${perfClass}`}>
       {/* Banner Background - Supports image & video (live wallpaper) */}
       {activeBannerUrl && (
         <>
@@ -118,8 +125,8 @@ export function HeroSection({ userToken, isAdmin, activeSection, isHomePage, onB
           ) : (
             <BlurImage
               src={activeBannerUrl}
-              alt={isMoviePage ? "XZY Movies banner" : isSoftwarePage ? "XZY Software banner" : "XZY Games banner"}
-              className="absolute inset-0 w-full h-full object-cover"
+              alt={isMoviePage ? "XZY Movies banner" : isSoftwarePage ? "XZY Software banner" : isOSPage ? "XZY OS banner" : "XZY Games banner"}
+              className="absolute inset-0 w-full h-full object-cover object-center"
               wrapperClassName="absolute inset-0"
             />
           )}
@@ -211,6 +218,21 @@ export function HeroSection({ userToken, isAdmin, activeSection, isHomePage, onB
             </motion.button>
           )}
 
+          {/* OS Hero Banner Edit */}
+          {isOSPage && (
+            <motion.button
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.5 }}
+              onClick={() => setOsBannerModalOpen(true)}
+              className="absolute top-24 right-4 z-20 flex items-center gap-2 px-3 py-1.5 rounded-xl bg-black/60 backdrop-blur-sm border border-cyan-700/50 text-xs text-cyan-300 hover:text-cyan-200 hover:bg-zinc-800 transition-all"
+              title="Edit OS hero banner"
+            >
+              <ImageIcon size={14} />
+              {osBannerUrl ? "Change OS Banner" : "Add OS Banner"}
+            </motion.button>
+          )}
+
           {/* Movie Hero Banner Edit */}
           {isMoviePage && (
             <motion.button
@@ -246,7 +268,9 @@ export function HeroSection({ userToken, isAdmin, activeSection, isHomePage, onB
                       ? "NEW SOFTWARE ADDED WEEKLY"
                       : activeSection === "movies"
                         ? "NEW MOVIES ADDED WEEKLY"
-                        : "NEW GAMES ADDED WEEKLY"}
+                        : isOSPage
+                          ? "NEW WINDOWS OS ADDED WEEKLY"
+                          : "NEW GAMES ADDED WEEKLY"}
                 </span>
               </div>
             </motion.div>
@@ -262,7 +286,7 @@ export function HeroSection({ userToken, isAdmin, activeSection, isHomePage, onB
               </span>
               <br />
                 <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-500 to-blue-400">
-                  {isHomePage ? "GAMES & SOFTWARE" : activeSection === "software" ? "SOFTWARES" : activeSection === "movies" ? "MOVIES" : "GAMES"}
+                  {isHomePage ? "GAMES & SOFTWARE" : activeSection === "software" ? "SOFTWARES" : activeSection === "movies" ? "MOVIES" : isOSPage ? "OPERATING SYSTEMS" : "GAMES"}
                 </span>
             </motion.h1>
 
@@ -278,7 +302,9 @@ export function HeroSection({ userToken, isAdmin, activeSection, isHomePage, onB
                   ? "Explore. Download. Innovate. Your hub for top-tier software tools and applications. Find what you need and get started instantly."
                   : activeSection === "movies"
                     ? "Watch. Stream. Enjoy. Your destination for the latest movies and series. Discover new titles and enjoy unlimited entertainment."
-                    : "Download. Play. Dominate. Your ultimate destination for the best games. Discover new titles, download instantly, and level up your gaming experience."}
+                    : isOSPage
+                      ? "Download Windows 10 & 11 ISOs. Your source for the latest Microsoft operating systems with installation guides."
+                      : "Download. Play. Dominate. Your ultimate destination for the best games. Discover new titles, download instantly, and level up your gaming experience."}
             </motion.p>
 
             <motion.div
@@ -290,7 +316,7 @@ export function HeroSection({ userToken, isAdmin, activeSection, isHomePage, onB
               <button
                 onClick={() => {
                   const target = document.getElementById(
-                    isHomePage ? "browse-all" : activeSection === "software" ? "featured-software" : "featured-games"
+                    isHomePage ? "browse-all" : activeSection === "software" ? "featured-software" : activeSection === "movies" ? "featured-movies" : isOSPage ? "featured-os" : "featured-games"
                   )
                   if (target) {
                     target.scrollIntoView({ behavior: "smooth" })
@@ -301,7 +327,7 @@ export function HeroSection({ userToken, isAdmin, activeSection, isHomePage, onB
                 className="flex items-center gap-2 px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-semibold text-sm transition-all hover:shadow-lg hover:shadow-blue-500/25 glow-btn"
               >
                 <Download size={18} />
-                {isHomePage ? "Browse All" : activeSection === "software" ? "Browse Software" : activeSection === "movies" ? "Browse Movies" : "Browse Games"}
+                {isHomePage ? "Browse All" : activeSection === "software" ? "Browse Software" : activeSection === "movies" ? "Browse Movies" : isOSPage ? "Browse OS" : "Browse Games"}
               </button>
               <button
                 onClick={() => setTrailerOpen(true)}
@@ -335,6 +361,11 @@ export function HeroSection({ userToken, isAdmin, activeSection, isHomePage, onB
                   : isMoviePage
                   ? [
                       { label: "Movies", value: stats ? formatDownloads(stats.movies) : "..." },
+                      { label: "Downloads", value: stats ? formatDownloads(stats.total_downloads) : "..." },
+                    ]
+                  : isOSPage
+                  ? [
+                      { label: "OS", value: stats ? formatDownloads(stats.os || 0) : "..." },
                       { label: "Downloads", value: stats ? formatDownloads(stats.total_downloads) : "..." },
                     ]
                   : [
@@ -428,6 +459,16 @@ export function HeroSection({ userToken, isAdmin, activeSection, isHomePage, onB
         genre="MovieHero"
         currentBannerUrl={movieBannerUrl}
         onBannerUpdated={(url) => setMovieBannerUrl(url)}
+      />
+
+      {/* Banner Manager Modal - OS Hero */}
+      <GenreBannerModal
+        isOpen={osBannerModalOpen}
+        onClose={() => setOsBannerModalOpen(false)}
+        userToken={userToken || ""}
+        genre="OSHero"
+        currentBannerUrl={osBannerUrl}
+        onBannerUpdated={(url) => setOsBannerUrl(url)}
       />
 
       {/* Banner Manager Modal - Games Hero */}

@@ -12,6 +12,9 @@ import { FeaturedSoftware } from "@/components/games/FeaturedSoftware"
 import { TopSoftware } from "@/components/games/TopSoftware"
 import { FeaturedMovies } from "@/components/movies/FeaturedMovies"
 import { TopDownloadsMovies } from "@/components/movies/TopDownloadsMovies"
+import { FeaturedOS } from "@/components/os/FeaturedOS"
+import { TopOS } from "@/components/os/TopOS"
+import { OSDetailPage } from "@/components/os/OSDetailPage"
 import { Footer } from "@/components/games/Footer"
 import { CategoryPage } from "@/components/games/CategoryPage"
 import { GameDetailPage } from "@/components/games/GameDetailPage"
@@ -40,6 +43,9 @@ type Page =
   | "games-view-all"
   | "software-view-all"
   | "movies-view-all"
+  | "os-browse"
+  | "os-view-all"
+  | "os-detail"
   | "login"
   | "signup"
   | "profile"
@@ -109,7 +115,7 @@ export function NeoGamesLayout() {
   }, [])
 
   // Remember the section user was browsing so category page can go back correctly
-  const [categorySection, setCategorySection] = useState<"games" | "software" | "movies">("games")
+  const [categorySection, setCategorySection] = useState<"games" | "software" | "movies" | "os">("games")
 
   // Konami code easter egg
   useEffect(() => {
@@ -148,25 +154,17 @@ export function NeoGamesLayout() {
     }
   }, [currentPage])
 
-  // Determine if we're in games or software browsing mode
-  const isCategoryPage = currentPage !== "home" &&
-    currentPage !== "games-browse" &&
-    currentPage !== "software-browse" &&
-    currentPage !== "movies-browse" &&
-    currentPage !== "games-view-all" &&
-    currentPage !== "software-view-all" &&
-    currentPage !== "movies-view-all" &&
-    currentPage !== "login" &&
-    currentPage !== "signup" &&
-    currentPage !== "profile" &&
-    currentPage !== "settings" &&
-    currentPage !== "favorites" &&
-    currentPage !== "requests" &&
-    currentPage !== "game" &&
-    currentPage !== "movie" &&
-    currentPage !== "search" &&
-    currentPage !== "admin-users"
-  const activeSection: "games" | "software" | "movies" = (isCategoryPage || currentPage === "game" || currentPage === "movie" || currentPage === "search") ? categorySection : (currentPage === "software-browse" || currentPage === "software-view-all" ? "software" : currentPage === "movies-browse" || currentPage === "movies-view-all" ? "movies" : "games")
+  // Determine the active section based on current page
+  const activeSection: "games" | "software" | "movies" | "os" =
+    currentPage === "game" || currentPage === "movie" || currentPage === "search" || currentPage === "os-detail"
+      ? categorySection
+      : currentPage === "software-browse" || currentPage === "software-view-all"
+        ? "software"
+        : currentPage === "movies-browse" || currentPage === "movies-view-all"
+          ? "movies"
+          : currentPage === "os-browse" || currentPage === "os-view-all"
+            ? "os"
+            : "games"
 
   const handleCategoryClick = (cat: string) => {
     if (cat === "All") {
@@ -175,13 +173,21 @@ export function NeoGamesLayout() {
         setCurrentPage("software-browse")
       } else if (categorySection === "movies") {
         setCurrentPage("movies-browse")
+      } else if (categorySection === "os") {
+        setCurrentPage("os-browse")
       } else {
         setCurrentPage("games-browse")
       }
     } else {
       setActiveCategory(cat)
       setCategorySection(activeSection)
-      setCurrentPage(cat)
+      // For OS categories, navigate to os-browse page (which will filter via activeCategory)
+      // For games/software/movies, use the old behavior
+      if (activeSection === "os") {
+        setCurrentPage("os-browse")
+      } else {
+        setCurrentPage(cat)
+      }
     }
     window.scrollTo(0, 0)
   }
@@ -197,7 +203,8 @@ export function NeoGamesLayout() {
     setCameFromViewAll(
       currentPage === "games-view-all" ||
         currentPage === "software-view-all" ||
-        currentPage === "movies-view-all"
+        currentPage === "movies-view-all" ||
+        currentPage === "os-view-all"
     )
     setCategorySection(activeSection)
     setCurrentPage("game")
@@ -225,15 +232,17 @@ export function NeoGamesLayout() {
   }
 
 
-  const handleSectionChange = (section: "games" | "software" | "movies") => {
+  const handleSectionChange = (section: "games" | "software" | "movies" | "os") => {
     setActiveCategory("All")
     setCategorySection(section)
     if (section === "games") {
       setCurrentPage("games-browse")
     } else if (section === "software") {
       setCurrentPage("software-browse")
-    } else {
+    } else if (section === "movies") {
       setCurrentPage("movies-browse")
+    } else {
+      setCurrentPage("os-browse")
     }
     window.scrollTo(0, 0)
   }
@@ -256,6 +265,13 @@ export function NeoGamesLayout() {
     setActiveCategory("All")
     setCategorySection("movies")
     setCurrentPage("movies-browse")
+    window.scrollTo(0, 0)
+  }
+
+  const handleBrowseOS = () => {
+    setActiveCategory("All")
+    setCategorySection("os")
+    setCurrentPage("os-browse")
     window.scrollTo(0, 0)
   }
 
@@ -361,6 +377,21 @@ export function NeoGamesLayout() {
     }
   }, [user])
 
+  const handleDeleteOS = useCallback(async (osId: number) => {
+    if (!user?.token) return
+    try {
+      const res = await fetch(apiUrl(`/api/os/${osId}`), {
+        method: "DELETE",
+        headers: { Authorization: `Bearer ${user.token}` },
+      })
+      if (res.ok) {
+        setRefreshKey((k) => k + 1)
+      }
+    } catch {
+      // silently fail
+    }
+  }, [user])
+
   const handleDeleteMovie = useCallback(async (movieId: number) => {
     if (!user?.token) return
     try {
@@ -399,6 +430,12 @@ export function NeoGamesLayout() {
       setCurrentPage("software-view-all")
     } else if (page === "movies-view-all") {
       setCurrentPage("movies-view-all")
+    } else if (page === "os-browse") {
+      setActiveCategory("All")
+      setCategorySection("os")
+      setCurrentPage("os-browse")
+    } else if (page === "os-view-all") {
+      setCurrentPage("os-view-all")
     } else {
       // It's a category name — navigate to it
       setActiveCategory(page)
@@ -409,7 +446,7 @@ export function NeoGamesLayout() {
   }
 
   // For navbar: the active category label shown is different for browse pages
-  const navActiveCategory = currentPage === "games-browse" || currentPage === "software-browse" || currentPage === "movies-browse"
+  const navActiveCategory = currentPage === "games-browse" || currentPage === "software-browse" || currentPage === "movies-browse" || currentPage === "os-browse"
     ? activeCategory
     : currentPage
 
@@ -505,7 +542,7 @@ export function NeoGamesLayout() {
             {/* Section Pads - only on home page */}
             <section className="py-16 bg-black">
               <div className="max-w-[90rem] mx-auto px-4 sm:px-6 lg:px-8">
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                   <SectionPad
                     type="games"
                     onBrowse={handleBrowseGames}
@@ -521,6 +558,12 @@ export function NeoGamesLayout() {
                   <SectionPad
                     type="movies"
                     onBrowse={handleBrowseMovies}
+                    isAdmin={user?.is_admin === 1}
+                    userToken={user?.token}
+                  />
+                  <SectionPad
+                    type="os"
+                    onBrowse={handleBrowseOS}
                     isAdmin={user?.is_admin === 1}
                     userToken={user?.token}
                   />
@@ -697,6 +740,7 @@ export function NeoGamesLayout() {
               isAdmin={user?.is_admin === 1}
               onDeleteGame={handleDeleteGame}
               typeFilter="game"
+              activeCategory={activeCategory}
               onBack={() => setCurrentPage("games-browse")}
             />
             <Footer onNavigate={handleFooterNavigate} />
@@ -719,7 +763,145 @@ export function NeoGamesLayout() {
               isAdmin={user?.is_admin === 1}
               onDeleteGame={handleDeleteGame}
               typeFilter="software"
+              activeCategory={activeCategory}
               onBack={() => setCurrentPage("software-browse")}
+            />
+            <Footer onNavigate={handleFooterNavigate} />
+          </motion.div>
+        )}
+
+        {/* ===== OS BROWSE PAGE ===== */}
+        {currentPage === "os-browse" && (
+          <motion.div
+            key={"os-browse" + refreshKey}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.15 }}
+          >
+            <HeroSection
+              userToken={user?.token}
+              isAdmin={user?.is_admin === 1}
+              activeSection={activeSection}
+              isHomePage={false}
+              onBrowse={() => {
+                document.getElementById("featured-os")?.scrollIntoView({ behavior: "smooth" })
+              }}
+            />
+
+            {/* OS sections */}
+            <FeaturedOS
+              onOSClick={(item: any) => {
+                setSelectedGame({
+                  id: item.id,
+                  title: item.title,
+                  genre: item.genre,
+                  rating: item.rating,
+                  downloads: item.downloads,
+                  color: item.color,
+                })
+                setCategorySection("os")
+                setCurrentPage("os-detail")
+                window.scrollTo(0, 0)
+              }}
+              refreshKey={refreshKey}
+              userToken={user?.token}
+              isAdmin={user?.is_admin === 1}
+              onDeleteOS={handleDeleteOS}
+              onViewAll={() => { setCurrentPage("os-view-all"); window.scrollTo(0, 0) }}
+              activeCategory={activeCategory}
+            />
+            <TopOS
+              onOSClick={(item: any) => {
+                setSelectedGame({
+                  id: item.id,
+                  title: item.title,
+                  genre: item.genre,
+                  rating: item.rating,
+                  downloads: item.downloads,
+                  color: item.color,
+                })
+                setCategorySection("os")
+                setCurrentPage("os-detail")
+                window.scrollTo(0, 0)
+              }}
+              refreshKey={refreshKey}
+              userToken={user?.token}
+              isAdmin={user?.is_admin === 1}
+              onDeleteOS={handleDeleteOS}
+              onViewAll={() => { setCurrentPage("os-view-all"); window.scrollTo(0, 0) }}
+              activeCategory={activeCategory}
+            />
+
+            <Footer onNavigate={handleFooterNavigate} />
+          </motion.div>
+        )}
+
+        {/* ===== OS VIEW ALL PAGE ===== */}
+        {currentPage === "os-view-all" && (
+          <motion.div
+            key={"os-view-all" + refreshKey}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.15 }}
+          >
+            <BrowseAll
+              onGameClick={(item: any) => {
+                setSelectedGame({
+                  id: item.id,
+                  title: item.title,
+                  genre: item.genre,
+                  rating: item.rating,
+                  downloads: item.downloads,
+                  color: item.color,
+                })
+                setCategorySection("os")
+                setCurrentPage("os-detail")
+                window.scrollTo(0, 0)
+              }}
+              refreshKey={refreshKey}
+              userToken={user?.token}
+              isAdmin={user?.is_admin === 1}
+              onDeleteGame={handleDeleteOS}
+              typeFilter="os"
+              activeCategory={activeCategory}
+              onBack={() => setCurrentPage("os-browse")}
+            />
+            <Footer onNavigate={handleFooterNavigate} />
+          </motion.div>
+        )}
+
+        {/* ===== OS DETAIL PAGE ===== */}
+        {currentPage === "os-detail" && selectedGame && (
+          <motion.div
+            key="os-detail"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.15 }}
+          >
+            <OSDetailPage
+              os={{
+                id: selectedGame.id,
+                title: selectedGame.title,
+                version: selectedGame.genre.split(" ").pop() || "24H2",
+                genre: selectedGame.genre.split(" ")[0] || "Windows 11",
+                rating: selectedGame.rating,
+                downloads: selectedGame.downloads,
+                color: selectedGame.color,
+              }}
+              onBack={() => {
+                if (cameFromViewAll) {
+                  setCameFromViewAll(false)
+                  setCurrentPage("os-view-all")
+                } else {
+                  setCurrentPage("os-browse")
+                }
+                window.scrollTo(0, 0)
+              }}
+              userToken={user?.token}
+              isAdmin={user?.is_admin === 1}
             />
             <Footer onNavigate={handleFooterNavigate} />
           </motion.div>
@@ -916,6 +1098,9 @@ export function NeoGamesLayout() {
           currentPage !== "games-view-all" &&
           currentPage !== "software-view-all" &&
           currentPage !== "movies-view-all" &&
+          currentPage !== "os-browse" &&
+          currentPage !== "os-view-all" &&
+          currentPage !== "os-detail" &&
           currentPage !== "login" &&
           currentPage !== "signup" &&
           currentPage !== "profile" &&
@@ -924,7 +1109,8 @@ export function NeoGamesLayout() {
           currentPage !== "requests" &&
           currentPage !== "game" &&
           currentPage !== "movie" &&
-          currentPage !== "search" && (
+          currentPage !== "search" &&
+          currentPage !== "admin-users" && (
           <motion.div
             key={currentPage + refreshKey}
             initial={{ opacity: 0 }}

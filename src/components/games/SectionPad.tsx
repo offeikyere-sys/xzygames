@@ -7,7 +7,7 @@ import { apiUrl } from "@/lib/api"
 import { isVideoUrl } from "@/lib/media"
 
 interface SectionPadProps {
-  type: "games" | "software" | "movies"
+  type: "games" | "software" | "movies" | "os"
   onBrowse: () => void
   isAdmin?: boolean
   userToken?: string
@@ -22,7 +22,8 @@ export function SectionPad({ type, onBrowse, isAdmin, userToken }: SectionPadPro
 
   const isGames = type === "games"
   const isMovies = type === "movies"
-  const bannerGenre = isGames ? "GamesPad" : isMovies ? "MoviesPad" : "SoftwarePad"
+  const isOS = type === "os"
+  const bannerGenre = isGames ? "GamesPad" : isMovies ? "MoviesPad" : isOS ? "OSPad" : "SoftwarePad"
 
   // 3D Tilt values
   const mouseX = useMotionValue(0)
@@ -99,15 +100,19 @@ export function SectionPad({ type, onBrowse, isAdmin, userToken }: SectionPadPro
           ? "border-blue-500/20 hover:border-blue-500/50"
           : isMovies
             ? "border-purple-500/20 hover:border-purple-500/50"
-            : "border-emerald-500/20 hover:border-emerald-500/50"
+            : isOS
+              ? "border-cyan-500/20 hover:border-cyan-500/50"
+              : "border-emerald-500/20 hover:border-emerald-500/50"
         }
         ${!bannerUrl && (isGames
           ? "bg-gradient-to-br from-blue-900/30 via-zinc-900/80 to-purple-900/20"
           : isMovies
             ? "bg-gradient-to-br from-purple-900/30 via-zinc-900/80 to-pink-900/20"
-            : "bg-gradient-to-br from-emerald-900/30 via-zinc-900/80 to-teal-900/20"
+            : isOS
+              ? "bg-gradient-to-br from-cyan-900/30 via-zinc-900/80 to-blue-900/20"
+              : "bg-gradient-to-br from-emerald-900/30 via-zinc-900/80 to-teal-900/20"
         )}
-        ${hovered ? (isGames ? "shadow-2xl shadow-blue-500/15" : isMovies ? "shadow-2xl shadow-purple-500/15" : "shadow-2xl shadow-emerald-500/15") : ""}
+        ${hovered ? (isGames ? "shadow-2xl shadow-blue-500/15" : isMovies ? "shadow-2xl shadow-purple-500/15" : isOS ? "shadow-2xl shadow-cyan-500/15" : "shadow-2xl shadow-emerald-500/15") : ""}
       `}
     >
       {/* Banner background - Supports image & video */}
@@ -126,7 +131,7 @@ export function SectionPad({ type, onBrowse, isAdmin, userToken }: SectionPadPro
           ) : (
             <BlurImage
               src={bannerUrl}
-              alt={isGames ? "Games" : isMovies ? "Movies" : "Software"}
+              alt={isGames ? "Games" : isMovies ? "Movies" : isOS ? "OS" : "Software"}
               className="absolute inset-0 w-full h-full object-cover scale-105 transition-transform duration-700 group-hover:scale-110"
               wrapperClassName="absolute inset-0"
             />
@@ -141,14 +146,14 @@ export function SectionPad({ type, onBrowse, isAdmin, userToken }: SectionPadPro
           <motion.div
             className={`absolute -top-20 -right-20 w-72 h-72 rounded-full blur-3xl transition-opacity duration-500 ${
               hovered ? "opacity-60" : "opacity-20"
-            } ${isGames ? "bg-blue-500/30" : isMovies ? "bg-purple-500/30" : "bg-emerald-500/30"}`}
+            } ${isGames ? "bg-blue-500/30" : isMovies ? "bg-purple-500/30" : isOS ? "bg-cyan-500/30" : "bg-emerald-500/30"}`}
             animate={hovered ? { scale: 1.2 } : { scale: 1 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           />
           <motion.div
             className={`absolute -bottom-20 -left-20 w-72 h-72 rounded-full blur-3xl transition-opacity duration-500 ${
               hovered ? "opacity-60" : "opacity-20"
-            } ${isGames ? "bg-purple-500/30" : isMovies ? "bg-pink-500/30" : "bg-teal-500/30"}`}
+            } ${isGames ? "bg-purple-500/30" : isMovies ? "bg-pink-500/30" : isOS ? "bg-blue-500/30" : "bg-teal-500/30"}`}
             animate={hovered ? { scale: 1.2 } : { scale: 1 }}
             transition={{ duration: 0.8, delay: 0.1, ease: "easeOut" }}
           />
@@ -170,7 +175,7 @@ export function SectionPad({ type, onBrowse, isAdmin, userToken }: SectionPadPro
         <button
           onClick={() => setBannerModalOpen(true)}
           className="pad-banner-btn absolute top-3 right-3 z-20 flex items-center gap-1.5 px-2 py-1 rounded-lg bg-black/60 backdrop-blur-sm border border-zinc-700/50 text-[10px] text-zinc-400 hover:text-white hover:bg-zinc-800 transition-all"
-          title={`Edit ${isGames ? "games" : isMovies ? "movies" : "software"} pad banner`}
+          title={`Edit ${isGames ? "games" : isMovies ? "movies" : isOS ? "OS" : "software"} pad banner`}
         >
           <ImageIcon size={12} />
           {bannerUrl ? "Banner" : "Add"}
@@ -184,14 +189,16 @@ export function SectionPad({ type, onBrowse, isAdmin, userToken }: SectionPadPro
           transition={{ duration: 0.6, ease: "easeOut" }}
           className={`w-24 h-24 sm:w-28 sm:h-28 rounded-2xl flex items-center justify-center mb-5 border transition-all duration-300 ${
             isGames
-              ? "bg-blue-500/20 border-blue-500/30 text-blue-400 group-hover:shadow-xl group-hover:shadow-blue-500/30 group-hover:border-blue-400/50"
-              : isMovies
-                ? "bg-purple-500/20 border-purple-500/30 text-purple-400 group-hover:shadow-xl group-hover:shadow-purple-500/30 group-hover:border-purple-400/50"
+            ? "bg-blue-500/20 border-blue-500/30 text-blue-400 group-hover:shadow-xl group-hover:shadow-blue-500/30 group-hover:border-blue-400/50"
+            : isMovies
+              ? "bg-purple-500/20 border-purple-500/30 text-purple-400 group-hover:shadow-xl group-hover:shadow-purple-500/30 group-hover:border-purple-400/50"
+              : isOS
+                ? "bg-cyan-500/20 border-cyan-500/30 text-cyan-400 group-hover:shadow-xl group-hover:shadow-cyan-500/30 group-hover:border-cyan-400/50"
                 : "bg-emerald-500/20 border-emerald-500/30 text-emerald-400 group-hover:shadow-xl group-hover:shadow-emerald-500/30 group-hover:border-emerald-400/50"
           }`}
           style={{ transformStyle: "preserve-3d", transform: hovered ? "translateZ(30px)" : "translateZ(0px)" }}
         >
-          {isGames ? <Gamepad2 size={52} /> : isMovies ? <Film size={52} /> : <Monitor size={52} />}
+        {isGames ? <Gamepad2 size={52} /> : isMovies ? <Film size={52} /> : isOS ? <Monitor size={52} /> : <Monitor size={52} />}
         </motion.div>
 
         {/* Title */}
@@ -199,11 +206,11 @@ export function SectionPad({ type, onBrowse, isAdmin, userToken }: SectionPadPro
           animate={hovered ? { scale: 1.05 } : { scale: 1 }}
           transition={{ duration: 0.3 }}
           className={`text-4xl sm:text-5xl font-black tracking-tight mb-2 transition-colors duration-300 ${
-            isGames ? "text-blue-300 group-hover:text-blue-200" : isMovies ? "text-purple-300 group-hover:text-purple-200" : "text-emerald-300 group-hover:text-emerald-200"
+            isGames ? "text-blue-300 group-hover:text-blue-200" : isMovies ? "text-purple-300 group-hover:text-purple-200" : isOS ? "text-cyan-300 group-hover:text-cyan-200" : "text-emerald-300 group-hover:text-emerald-200"
           }`}
           style={{ transformStyle: "preserve-3d", transform: hovered ? "translateZ(20px)" : "translateZ(0px)" }}
         >
-          {isGames ? "GAMES" : isMovies ? "MOVIES" : "SOFTWARE"}
+          {isGames ? "GAMES" : isMovies ? "MOVIES" : isOS ? "WINDOWS" : "SOFTWARE"}
         </motion.h2>
 
         {/* Subtitle */}
@@ -217,7 +224,9 @@ export function SectionPad({ type, onBrowse, isAdmin, userToken }: SectionPadPro
             ? "Browse 500+ free games across all genres"
             : isMovies
               ? "Watch and download the latest movies"
-              : "Discover powerful software for every need"
+              : isOS
+                ? "Download Windows 10 & 11 ISOs"
+                : "Discover powerful software for every need"
           }
         </motion.p>
 
@@ -231,11 +240,13 @@ export function SectionPad({ type, onBrowse, isAdmin, userToken }: SectionPadPro
               ? "bg-blue-600 hover:bg-blue-500 text-white shadow-lg shadow-blue-500/30"
               : isMovies
                 ? "bg-purple-600 hover:bg-purple-500 text-white shadow-lg shadow-purple-500/30"
-                : "bg-emerald-600 hover:bg-emerald-500 text-white shadow-lg shadow-emerald-500/30"
+                : isOS
+                  ? "bg-cyan-600 hover:bg-cyan-500 text-white shadow-lg shadow-cyan-500/30"
+                  : "bg-emerald-600 hover:bg-emerald-500 text-white shadow-lg shadow-emerald-500/30"
           }`}
           style={{ transformStyle: "preserve-3d", transform: hovered ? "translateZ(25px)" : "translateZ(0px)" }}
         >
-          Browse {isGames ? "Games" : isMovies ? "Movies" : "Software"}
+          Browse {isGames ? "Games" : isMovies ? "Movies" : isOS ? "Windows" : "Software"}
           <motion.div
             animate={hovered ? { x: [0, 4, 0] } : { x: 0 }}
             transition={{ duration: 0.8, repeat: Infinity, ease: "easeInOut" }}
@@ -254,7 +265,9 @@ export function SectionPad({ type, onBrowse, isAdmin, userToken }: SectionPadPro
             ? "linear-gradient(135deg, rgba(59,130,246,0.2), transparent, rgba(168,85,247,0.2))"
             : isMovies
               ? "linear-gradient(135deg, rgba(168,85,247,0.2), transparent, rgba(236,72,153,0.2))"
-              : "linear-gradient(135deg, rgba(16,185,129,0.2), transparent, rgba(20,184,166,0.2))",
+              : isOS
+                ? "linear-gradient(135deg, rgba(6,182,212,0.2), transparent, rgba(59,130,246,0.2))"
+                : "linear-gradient(135deg, rgba(16,185,129,0.2), transparent, rgba(20,184,166,0.2))",
         }}
       />
 
@@ -262,17 +275,17 @@ export function SectionPad({ type, onBrowse, isAdmin, userToken }: SectionPadPro
       <div className="absolute top-4 right-4 flex gap-1.5">
         <motion.div
           animate={hovered ? { scale: 1.3, opacity: 0.7 } : { scale: 1, opacity: 0.4 }}
-          className={`w-2 h-2 rounded-full ${isGames ? "bg-blue-500" : isMovies ? "bg-purple-500" : "bg-emerald-500"}`}
+          className={`w-2 h-2 rounded-full ${isGames ? "bg-blue-500" : isMovies ? "bg-purple-500" : isOS ? "bg-cyan-500" : "bg-emerald-500"}`}
         />
         <motion.div
           animate={hovered ? { scale: 1.3, opacity: 0.7 } : { scale: 1, opacity: 0.4 }}
           transition={{ delay: 0.1 }}
-          className={`w-2 h-2 rounded-full ${isGames ? "bg-purple-500" : isMovies ? "bg-pink-500" : "bg-teal-500"}`}
+          className={`w-2 h-2 rounded-full ${isGames ? "bg-purple-500" : isMovies ? "bg-pink-500" : isOS ? "bg-blue-500" : "bg-teal-500"}`}
         />
         <motion.div
           animate={hovered ? { scale: 1.3, opacity: 0.7 } : { scale: 1, opacity: 0.4 }}
           transition={{ delay: 0.2 }}
-          className={`w-2 h-2 rounded-full ${isGames ? "bg-blue-500" : isMovies ? "bg-purple-500" : "bg-emerald-500"}`}
+          className={`w-2 h-2 rounded-full ${isGames ? "bg-blue-500" : isMovies ? "bg-purple-500" : isOS ? "bg-cyan-500" : "bg-emerald-500"}`}
         />
       </div>
 

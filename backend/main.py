@@ -565,8 +565,10 @@ def get_stats():
         games_count = db.execute("SELECT COUNT(*) as cnt FROM games WHERE type = 'game'").fetchone()["cnt"]
         software_count = db.execute("SELECT COUNT(*) as cnt FROM games WHERE type = 'software'").fetchone()["cnt"]
         movies_count = db.execute("SELECT COUNT(*) as cnt FROM movies").fetchone()["cnt"]
+        os_count = db.execute("SELECT COUNT(*) as cnt FROM operating_systems").fetchone()["cnt"]
         total_downloads = db.execute("SELECT COALESCE(SUM(downloads), 0) as total FROM games").fetchone()["total"]
-        return {"games": games_count, "software": software_count, "movies": movies_count, "total_downloads": total_downloads}
+        os_downloads = db.execute("SELECT COALESCE(SUM(downloads), 0) as total FROM operating_systems").fetchone()["total"]
+        return {"games": games_count, "software": software_count, "movies": movies_count, "os": os_count, "total_downloads": total_downloads + os_downloads}
     finally:
         db.close()
 
@@ -1022,6 +1024,157 @@ def delete_movie(movie_id: int, user_id: int = Depends(require_admin)):
         db.execute("DELETE FROM movies WHERE id = ?", (movie_id,))
         db.commit()
         return {"message": "Movie deleted"}
+    finally:
+        db.close()
+
+# ============ OPERATING SYSTEMS ENDPOINTS ============
+
+class OSCreate(BaseModel):
+    title: str = "New Windows"
+    version: str = "24H2"
+    build_info: str = ""
+    genre: str = "Windows 11"
+    rating: float = 0
+    description: Optional[str] = None
+    wallpaper_url: Optional[str] = None
+    download_links: Optional[str] = None
+    trailer_url: Optional[str] = None
+    screenshots: Optional[str] = None
+    install_guide_text: Optional[str] = None
+    install_video_url: Optional[str] = None
+    color: Optional[str] = None
+
+class OSUpdate(BaseModel):
+    title: Optional[str] = None
+    version: Optional[str] = None
+    build_info: Optional[str] = None
+    genre: Optional[str] = None
+    rating: Optional[float] = None
+    description: Optional[str] = None
+    wallpaper_url: Optional[str] = None
+    download_links: Optional[str] = None
+    trailer_url: Optional[str] = None
+    screenshots: Optional[str] = None
+    install_guide_text: Optional[str] = None
+    install_video_url: Optional[str] = None
+    color: Optional[str] = None
+
+@app.get("/api/os")
+def get_os(genre: Optional[str] = None, version: Optional[str] = None):
+    db = get_db()
+    try:
+        query = "SELECT * FROM operating_systems"
+        conditions = []
+        params = []
+
+        if genre and genre != "All":
+            conditions.append("genre LIKE ?")
+            params.append(f"%{genre}%")
+
+        if version and version != "All":
+            conditions.append("version = ?")
+            params.append(version)
+
+        if conditions:
+            query += " WHERE " + " AND ".join(conditions)
+
+        query += " ORDER BY downloads DESC"
+        items = db.execute(query, params).fetchall()
+        return [dict(g) for g in items]
+    finally:
+        db.close()
+
+@app.get("/api/os/search")
+def search_os(q: str = ""):
+    db = get_db()
+    try:
+        if q:
+            words = q.strip().split()
+            conditions = []
+            params = []
+            for word in words:
+                conditions.append("(title LIKE ? OR genre LIKE ? OR version LIKE ?)")
+                params.extend([f"%{word}%", f"%{word}%", f"%{word}%"])
+            where_clause = " AND ".join(conditions)
+            items = db.execute(
+                f"SELECT * FROM operating_systems WHERE {where_clause} ORDER BY downloads DESC",
+                params
+            ).fetchall()
+        else:
+            items = db.execute("SELECT * FROM operating_systems ORDER BY downloads DESC").fetchall()
+        return [dict(g) for g in items]
+    finally:
+        db.close()
+
+@app.get("/api/os/{os_id}")
+def get_os_detail(os_id: int):
+    db = get_db()
+    try:
+        item = db.execute("SELECT * FROM operating_systems WHERE id = ?", (os_id,)).fetchone()
+        if not item:
+            raise HTTPException(status_code=404, detail="OS not found")
+        return dict(item)
+    finally:
+        db.close()
+
+@app.post("/api/os")
+def create_os(os: OSCreate, user_id: int = Depends(require_admin)):
+    db = get_db()
+    try:
+        cursor = db.execute(
+            """INSERT INTO operating_systems (title, version, build_info, genre, rating, description, wallpaper_url, download_links, trailer_url, screenshots, install_guide_text, install_video_url, color)
+               VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)""",
+            (os.title, os.version, os.build_info, os.genre, os.rating or 0, os.description, os.wallpaper_url, os.download_links or "", os.trailer_url or "", os.screenshots or "", os.install_guide_text, os.install_video_url, os.color or "#0078d4")
+        )
+        db.commit()
+        os_id = db._last_insert_id if db._last_insert_id is not None else db.execute("SELECT MAX(id) FROM operating_systems").fetchone()[0]
+        return {"id": os_id, "message": "OS created"}
+    finally:
+        db.close()
+
+@app.put("/api/os/{os_id}")
+def update_os(os_id: int, os: OSUpdate, user_id: int = Depends(require_admin)):
+    db = get_db()
+    try:
+        existing = db.execute("SELECT * FROM operating_systems WHERE id = ?", (os_id,)).fetchone()
+        if not existing:
+            raise HTTPException(status_code=404, detail="OS not found")
+        fields = []
+        values = []
+        for key, value in os.model_dump(exclude_unset=True).items():
+            if value is not None:
+                fields.append(f"{key} = ?")
+                values.append(value)
+        if fields:
+            values.append(os_id)
+            db.execute(f"UPDATE operating_systems SET {', '.join(fields)} WHERE id = ?", values)
+            db.commit()
+        return {"message": "OS updated"}
+    finally:
+        db.close()
+
+@app.delete("/api/os/{os_id}")
+def delete_os(os_id: int, user_id: int = Depends(require_admin)):
+    db = get_db()
+    try:
+        db.execute("DELETE FROM operating_systems WHERE id = ?", (os_id,))
+        db.commit()
+        return {"message": "OS deleted"}
+    finally:
+        db.close()
+
+@app.post("/api/os/{os_id}/download")
+def track_os_download(os_id: int):
+    """Increment the download count when a user clicks a download link"""
+    db = get_db()
+    try:
+        item = db.execute("SELECT id, downloads FROM operating_systems WHERE id = ?", (os_id,)).fetchone()
+        if not item:
+            raise HTTPException(status_code=404, detail="OS not found")
+        db.execute("UPDATE operating_systems SET downloads = downloads + 1 WHERE id = ?", (os_id,))
+        db.commit()
+        new_count = db.execute("SELECT downloads FROM operating_systems WHERE id = ?", (os_id,)).fetchone()["downloads"]
+        return {"message": "Download counted", "downloads": new_count}
     finally:
         db.close()
 

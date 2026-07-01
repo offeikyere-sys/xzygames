@@ -1,6 +1,6 @@
 import { useState, useRef } from "react"
 import { motion, AnimatePresence } from "framer-motion"
-import { X, Plus, Gamepad2, Monitor, Film, Upload, Image as ImageIcon } from "lucide-react"
+import { X, Plus, Gamepad2, Monitor, Film, Upload, Image as ImageIcon, Disc3 } from "lucide-react"
 import { apiUrl } from "@/lib/api"
 
 interface AddGameModalProps {
@@ -13,6 +13,8 @@ interface AddGameModalProps {
 const allGenres = ["Action", "RPG", "Strategy", "Racing", "Horror", "Adventure", "Sports", "Sci-Fi", "Simulation", "Puzzle", "Shooter", "Open World", "Survival", "Fighting", "Arcade", "Casual", "Indie", "Hypervisor"]
 const softwareGenres = ["Antivirus & Security", "Browsers", "Design & 3D", "Development Tools", "Multimedia & Audio", "Productivity & Office", "Utilities & System"]
 const movieGenres = ["Action", "Comedy", "Drama", "Horror", "Thriller", "Sci-Fi", "Romance", "Adventure", "Animation", "Documentary", "Fantasy", "Mystery", "Crime", "Family", "War", "Western", "Musical", "History", "Series", "Seasonal"]
+const osGenres = ["Windows 11", "Windows 10"]
+const osVersions = ["22H2", "23H2", "24H2", "25H2", "26H2"]
 const colors = [
   "#3b82f6", "#a855f7", "#10b981", "#ef4444", "#f59e0b", "#ec4899", "#06b6d4", "#dc2626", "#f97316", "#84cc16",
   "#2563eb", "#1d4ed8", "#0ea5e9", "#0891b2", "#14b8a6",
@@ -27,7 +29,7 @@ const colors = [
 const licenseTypes = ["Freemium", "Free Trial", "Free", "Subscription", "Shareware"]
 
 export function AddGameModal({ isOpen, onClose, onGameAdded, userToken }: AddGameModalProps) {
-  const [itemType, setItemType] = useState<"game" | "software" | "movie">("game")
+  const [itemType, setItemType] = useState<"game" | "software" | "movie" | "os">("game")
   const [title, setTitle] = useState("")
   const [selectedGenres, setSelectedGenres] = useState<string[]>([])
   const [description, setDescription] = useState("")
@@ -51,6 +53,9 @@ export function AddGameModal({ isOpen, onClose, onGameAdded, userToken }: AddGam
   const [movieDuration, setMovieDuration] = useState("")
   const [director, setDirector] = useState("")
   const [cast, setCast] = useState("")
+  // OS-specific fields
+  const [osVersion, setOsVersion] = useState("24H2")
+  const [osBuildInfo, setOsBuildInfo] = useState("")
   const [error, setError] = useState("")
   const [loading, setLoading] = useState(false)
   const [bannerFile, setBannerFile] = useState<File | null>(null)
@@ -86,11 +91,12 @@ export function AddGameModal({ isOpen, onClose, onGameAdded, userToken }: AddGam
     setColor("#3b82f6"); setRating("4.5")
     setDeveloper(""); setVersion(""); setLicenseType("")
     setMovieYear(""); setMovieDuration(""); setDirector(""); setCast("")
+    setOsVersion("24H2"); setOsBuildInfo("")
     setBannerFile(null); setBannerPreview(""); setScreenshotFiles([]); setScreenshotPreviews([])
   }
 
   const handleSubmit = async () => {
-    const label = itemType === "game" ? "Game" : itemType === "software" ? "Software" : "Movie"
+    const label = itemType === "game" ? "Game" : itemType === "software" ? "Software" : itemType === "movie" ? "Movie" : "OS"
     if (!title.trim()) { setError(`${label} title is required`); return }
     setError(""); setLoading(true)
     try {
@@ -118,14 +124,18 @@ export function AddGameModal({ isOpen, onClose, onGameAdded, userToken }: AddGam
         color, rating: parseFloat(rating) || 0,
         type: itemType,
         developer: itemType === "software" ? (developer.trim() || null) : null,
-        version: itemType === "software" ? (version.trim() || null) : null,
+        version: itemType === "software" ? (version.trim() || null) : itemType === "os" ? osVersion : null,
         license_type: itemType === "software" ? (licenseType || null) : null,
         year: itemType === "movie" ? (movieYear.trim() || null) : null,
         duration: itemType === "movie" ? (movieDuration.trim() || null) : null,
         director: itemType === "movie" ? (director.trim() || null) : null,
         cast: itemType === "movie" ? (cast.trim() || null) : null,
+        // OS-specific fields
+        build_info: itemType === "os" ? (osBuildInfo.trim() || null) : null,
+        install_guide_text: itemType === "os" ? (installGuideText.trim() || null) : null,
+        install_video_url: itemType === "os" ? (installVideoUrl.trim() || null) : null,
       }
-      const endpoint = itemType === "movie" ? "/api/movies" : "/api/games"
+      const endpoint = itemType === "movie" ? "/api/movies" : itemType === "os" ? "/api/os" : "/api/games"
       const res = await fetch(apiUrl(endpoint), { method: "POST", headers: { "Content-Type": "application/json", Authorization: `Bearer ${userToken}` }, body: JSON.stringify(body) })
       if (res.status === 401) { setError("Session expired. Please sign out and sign back in."); return }
       if (!res.ok) { const d = await res.json(); setError(d.detail || `Failed to add ${label.toLowerCase()}`); return }
@@ -137,6 +147,7 @@ export function AddGameModal({ isOpen, onClose, onGameAdded, userToken }: AddGam
 
   const isSoftware = itemType === "software"
   const isMovie = itemType === "movie"
+  const isOS = itemType === "os"
   const hasGuideContent = selectedGenres.includes("Hypervisor") || usageGuide || troubleshooting || hypervisorVideoUrl || showGuideFields
 
   return (
@@ -146,13 +157,13 @@ export function AddGameModal({ isOpen, onClose, onGameAdded, userToken }: AddGam
           <motion.div initial={{ scale: 0.9, opacity: 0, y: 20 }} animate={{ scale: 1, opacity: 1, y: 0 }} exit={{ scale: 0.9, opacity: 0, y: 20 }} transition={{ type: "spring", damping: 25, stiffness: 300 }} className="w-full max-w-lg bg-zinc-900/95 border border-zinc-800/50 rounded-2xl p-6 backdrop-blur-xl max-h-[85vh] overflow-y-auto" onClick={(e) => e.stopPropagation()}>
             <div className="flex items-center justify-between mb-6 sticky top-0 bg-zinc-900/95 z-10">
               <div className="flex items-center gap-3">
-                <div className={`p-2 rounded-xl border ${isMovie ? "bg-purple-500/10 border-purple-500/20" : isSoftware ? "bg-purple-500/10 border-purple-500/20" : "bg-blue-500/10 border-blue-500/20"}`}>
-                  {isMovie ? <Film size={18} className="text-purple-400" /> : isSoftware ? <Monitor size={18} className="text-purple-400" /> : <Gamepad2 size={18} className="text-blue-400" />}
+                <div className={`p-2 rounded-xl border ${isMovie ? "bg-purple-500/10 border-purple-500/20" : isSoftware ? "bg-purple-500/10 border-purple-500/20" : isOS ? "bg-cyan-500/10 border-cyan-500/20" : "bg-blue-500/10 border-blue-500/20"}`}>
+                  {isMovie ? <Film size={18} className="text-purple-400" /> : isSoftware ? <Monitor size={18} className="text-purple-400" /> : isOS ? <Disc3 size={18} className="text-cyan-400" /> : <Gamepad2 size={18} className="text-blue-400" />}
                 </div>
-                <h2 className="text-lg font-semibold text-white">{isMovie ? "Add New Movie" : isSoftware ? "Add New Software" : "Add New Game"}</h2>
+                <h2 className="text-lg font-semibold text-white">{isMovie ? "Add New Movie" : isSoftware ? "Add New Software" : isOS ? "Add New OS" : "Add New Game"}</h2>
               </div>
               <div className="flex items-center gap-2">
-                {/* Game / Software / Movie Toggle */}
+                {/* Game / Software / Movie / OS Toggle */}
                 <div className="flex rounded-lg bg-zinc-800 border border-zinc-700/50 p-0.5">
                   <button
                     onClick={() => setItemType("game")}
@@ -172,6 +183,12 @@ export function AddGameModal({ isOpen, onClose, onGameAdded, userToken }: AddGam
                   >
                     <Film size={12} /> Movie
                   </button>
+                  <button
+                    onClick={() => setItemType("os")}
+                    className={`px-3 py-1.5 rounded-md text-xs font-medium transition-all flex items-center gap-1.5 ${itemType === "os" ? "bg-cyan-600 text-white shadow-lg" : "text-zinc-400 hover:text-white"}`}
+                  >
+                    <Disc3 size={12} /> OS
+                  </button>
                 </div>
                 <button onClick={onClose} className="p-2 rounded-lg text-zinc-400 hover:text-white hover:bg-zinc-800"><X size={18} /></button>
               </div>
@@ -180,8 +197,8 @@ export function AddGameModal({ isOpen, onClose, onGameAdded, userToken }: AddGam
             <div className="space-y-4">
               {/* Title */}
               <div>
-                <label className="block text-sm font-medium text-zinc-400 mb-2">{isMovie ? "Movie Title" : isSoftware ? "Software Title" : "Game Title"} *</label>
-                <input type="text" value={title} onChange={e => setTitle(e.target.value)} placeholder={isMovie ? "Enter movie name" : isSoftware ? "Enter software name" : "Enter game name"} className="w-full px-4 py-3 rounded-xl bg-zinc-800/50 border border-zinc-700/50 text-white placeholder-zinc-500 text-sm outline-none focus:border-blue-500/50 transition-colors" />
+                <label className="block text-sm font-medium text-zinc-400 mb-2">{isMovie ? "Movie Title" : isSoftware ? "Software Title" : isOS ? "OS Title" : "Game Title"} *</label>
+                <input type="text" value={title} onChange={e => setTitle(e.target.value)} placeholder={isMovie ? "Enter movie name" : isSoftware ? "Enter software name" : isOS ? "e.g. Windows 11 Pro" : "Enter game name"} className="w-full px-4 py-3 rounded-xl bg-zinc-800/50 border border-zinc-700/50 text-white placeholder-zinc-500 text-sm outline-none focus:border-blue-500/50 transition-colors" />
               </div>
 
               {/* Software-specific fields */}
@@ -211,6 +228,40 @@ export function AddGameModal({ isOpen, onClose, onGameAdded, userToken }: AddGam
                 </>
               )}
 
+              {/* OS-specific fields */}
+              {isOS && (
+                <>
+                  <div className="grid grid-cols-2 gap-3">
+                    <div>
+                      <label className="block text-sm font-medium text-zinc-400 mb-2">Version</label>
+                      <div className="flex flex-wrap gap-2">
+                        {osVersions.map(v => (
+                          <button key={v} type="button" onClick={() => setOsVersion(v)}
+                            className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-all border ${osVersion === v ? "bg-cyan-600/20 text-cyan-400 border-cyan-500/30" : "bg-zinc-800/50 text-zinc-400 border-zinc-700/50 hover:border-zinc-500/50"}`}>
+                            {osVersion === v ? "✓ " : ""}{v}
+                          </button>
+                        ))}
+                      </div>
+                    </div>
+                    <div>
+                      <label className="block text-sm font-medium text-zinc-400 mb-2">Build Info</label>
+                      <input type="text" value={osBuildInfo} onChange={e => setOsBuildInfo(e.target.value)} placeholder="e.g. Build 26100.1742" className="w-full px-4 py-3 rounded-xl bg-zinc-800/50 border border-zinc-700/50 text-white placeholder-zinc-500 text-sm outline-none focus:border-cyan-500/50 transition-colors" />
+                    </div>
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium text-zinc-400 mb-2">Category</label>
+                    <div className="flex flex-wrap gap-2">
+                      {osGenres.map(g => (
+                        <button key={g} type="button" onClick={() => toggleGenre(g)}
+                          className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-all border ${selectedGenres.includes(g) ? "bg-cyan-600/20 text-cyan-400 border-cyan-500/30" : "bg-zinc-800/50 text-zinc-400 border-zinc-700/50 hover:border-zinc-500/50"}`}>
+                          {selectedGenres.includes(g) ? "✓ " : ""}{g}
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+                </>
+              )}
+
               {/* Movie-specific fields */}
               {isMovie && (
                 <div className="grid grid-cols-2 gap-3">
@@ -233,7 +284,8 @@ export function AddGameModal({ isOpen, onClose, onGameAdded, userToken }: AddGam
                 </div>
               )}
 
-              {/* Genres - Checkboxes */}
+              {/* Genres - Checkboxes (not for OS) */}
+              {!isOS && (
               <div>
                 <label className="block text-sm font-medium text-zinc-400 mb-2">Genre <span className="text-zinc-600">(select multiple)</span></label>
                 <div className="flex flex-wrap gap-2">
@@ -246,6 +298,7 @@ export function AddGameModal({ isOpen, onClose, onGameAdded, userToken }: AddGam
                 </div>
                 {selectedGenres.length > 0 && <p className="text-[10px] text-zinc-600 mt-1">Selected: {selectedGenres.join(", ")}</p>}
               </div>
+              )}
               {/* Rating */}
               <div>
                 <label className="block text-sm font-medium text-zinc-400 mb-2">Rating (0-10)</label>
@@ -254,7 +307,7 @@ export function AddGameModal({ isOpen, onClose, onGameAdded, userToken }: AddGam
               {/* Description */}
               <div>
                 <label className="block text-sm font-medium text-zinc-400 mb-2">Description</label>
-                <textarea value={description} onChange={e => setDescription(e.target.value)} placeholder={isMovie ? "Describe the movie..." : isSoftware ? "Describe the software..." : "Describe the game..."} rows={3} className="w-full px-4 py-3 rounded-xl bg-zinc-800/50 border border-zinc-700/50 text-white placeholder-zinc-500 text-sm outline-none focus:border-blue-500/50 resize-none" />
+                <textarea value={description} onChange={e => setDescription(e.target.value)} placeholder={isMovie ? "Describe the movie..." : isSoftware ? "Describe the software..." : isOS ? "Describe this Windows release..." : "Describe the game..."} rows={3} className="w-full px-4 py-3 rounded-xl bg-zinc-800/50 border border-zinc-700/50 text-white placeholder-zinc-500 text-sm outline-none focus:border-blue-500/50 resize-none" />
               </div>
               {/* Media */}
               <div className="pt-4 border-t border-zinc-800/50">
@@ -279,8 +332,26 @@ export function AddGameModal({ isOpen, onClose, onGameAdded, userToken }: AddGam
                   <input type="url" value={trailerUrl} onChange={e => setTrailerUrl(e.target.value)} placeholder="https://www.youtube.com/watch?v=..." className="w-full px-4 py-3 rounded-xl bg-zinc-800/50 border border-zinc-700/50 text-white placeholder-zinc-500 text-sm outline-none focus:border-blue-500/50" />
                 </div>
               </div>
-              {/* Install Guide */}
-              {!isMovie && (
+              {/* OS Install Guide */}
+              {isOS && (
+                <div className="pt-4 border-t border-zinc-800/50">
+                  <h3 className="text-sm font-semibold text-white mb-4">Installation Guide</h3>
+                  <div className="mb-3">
+                    <label className="block text-sm font-medium text-zinc-400 mb-2">Installation Instructions</label>
+                    <textarea value={installGuideText} onChange={e => setInstallGuideText(e.target.value)}
+                      placeholder={`Step 1: Download the ISO file.\nStep 2: Create a bootable USB using Rufus.\nStep 3: Boot from USB and follow setup.\nStep 4: Select edition and partition.\nStep 5: Complete installation.`}
+                      rows={5} className="w-full px-4 py-3 rounded-xl bg-zinc-800/50 border border-zinc-700/50 text-white placeholder-zinc-500 text-sm outline-none focus:border-cyan-500/50 resize-none" />
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium text-zinc-400 mb-2">Install Video URL</label>
+                    <input type="url" value={installVideoUrl} onChange={e => setInstallVideoUrl(e.target.value)}
+                      placeholder="https://www.youtube.com/watch?v=..."
+                      className="w-full px-4 py-3 rounded-xl bg-zinc-800/50 border border-zinc-700/50 text-white text-sm outline-none focus:border-cyan-500/50" />
+                  </div>
+                </div>
+              )}
+              {/* Install Guide (for games/software) */}
+              {!isMovie && !isOS && (
                 <div className="pt-4 border-t border-zinc-800/50">
                   <h3 className="text-sm font-semibold text-white mb-4">How to Install</h3>
                   <div className="mb-3">
@@ -300,7 +371,7 @@ export function AddGameModal({ isOpen, onClose, onGameAdded, userToken }: AddGam
                 </div>
               )}
               {/* Hypervisor Guides */}
-              {hasGuideContent && !isMovie && (
+              {hasGuideContent && !isMovie && !isOS && (
                 <div className="pt-4 border-t border-zinc-800/50">
                   <h3 className="text-sm font-semibold text-white mb-4">Hypervisor Guides</h3>
                   <div className="mb-3">
@@ -320,11 +391,11 @@ export function AddGameModal({ isOpen, onClose, onGameAdded, userToken }: AddGam
                   </div>
                 </div>
               )}
-              {!showGuideFields && !usageGuide && !troubleshooting && !hypervisorVideoUrl && !isMovie && (
+              {!showGuideFields && !usageGuide && !troubleshooting && !hypervisorVideoUrl && !isMovie && !isOS && (
                 <button type="button" onClick={() => setShowGuideFields(true)} className="text-xs text-blue-400 hover:text-blue-300 transition-colors">+ Add Hypervisor Guides</button>
               )}
               {/* Repack Features */}
-              {!isMovie && (
+              {!isMovie && !isOS && (
                 <div className="pt-4 border-t border-zinc-800/50">
                   <h3 className="text-sm font-semibold text-white mb-4">{isSoftware ? "Features" : "Repack Features"}</h3>
                   <textarea value={repackFeatures} onChange={e => setRepackFeatures(e.target.value)} placeholder={`• Repack by FitGirl\n• Compressed from 74.4 GB to 49.5 GB\n• Installation takes 15-30 minutes`} rows={4} className="w-full px-4 py-3 rounded-xl bg-zinc-800/50 border border-zinc-700/50 text-white placeholder-zinc-500 text-sm outline-none focus:border-blue-500/50 resize-none" />
@@ -345,8 +416,8 @@ export function AddGameModal({ isOpen, onClose, onGameAdded, userToken }: AddGam
                 <div className="flex gap-2 flex-wrap">{colors.map(c => (<button key={c} onClick={() => setColor(c)} className={`w-8 h-8 rounded-lg transition-all ${color === c ? "ring-2 ring-white ring-offset-2 ring-offset-zinc-900 scale-110" : "hover:scale-105"}`} style={{ backgroundColor: c }} />))}</div>
               </div>
               {/* Submit */}
-              <button onClick={handleSubmit} disabled={loading || !title.trim()} className={`w-full py-3 rounded-xl text-white font-semibold text-sm transition-all flex items-center justify-center gap-2 mt-4 ${isMovie ? "bg-pink-600 hover:bg-pink-500 disabled:bg-zinc-700" : isSoftware ? "bg-purple-600 hover:bg-purple-500 disabled:bg-zinc-700" : "bg-blue-600 hover:bg-blue-500 disabled:bg-zinc-700"}`}>
-                <Plus size={16} /> {loading ? `Adding ${isMovie ? "Movie" : isSoftware ? "Software" : "Game"}...` : `Add ${isMovie ? "Movie" : isSoftware ? "Software" : "Game"}`}
+              <button onClick={handleSubmit} disabled={loading || !title.trim()} className={`w-full py-3 rounded-xl text-white font-semibold text-sm transition-all flex items-center justify-center gap-2 mt-4 ${isMovie ? "bg-pink-600 hover:bg-pink-500 disabled:bg-zinc-700" : isSoftware ? "bg-purple-600 hover:bg-purple-500 disabled:bg-zinc-700" : isOS ? "bg-cyan-600 hover:bg-cyan-500 disabled:bg-zinc-700" : "bg-blue-600 hover:bg-blue-500 disabled:bg-zinc-700"}`}>
+                <Plus size={16} /> {loading ? `Adding ${isMovie ? "Movie" : isSoftware ? "Software" : isOS ? "OS" : "Game"}...` : `Add ${isMovie ? "Movie" : isSoftware ? "Software" : isOS ? "OS" : "Game"}`}
               </button>
             </div>
           </motion.div>

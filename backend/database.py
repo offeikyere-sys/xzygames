@@ -307,6 +307,29 @@ def init_db():
             )
         """)
 
+        cursor.execute("""
+            CREATE TABLE IF NOT EXISTS operating_systems (
+                id SERIAL PRIMARY KEY,
+                title TEXT NOT NULL,
+                version TEXT NOT NULL,
+                build_info TEXT DEFAULT '',
+                genre TEXT NOT NULL,
+                rating REAL DEFAULT 0,
+                downloads INTEGER DEFAULT 0,
+                description TEXT,
+                wallpaper_url TEXT,
+                download_links TEXT DEFAULT '',
+                trailer_url TEXT DEFAULT '',
+                screenshots TEXT DEFAULT '',
+                install_guide_text TEXT DEFAULT '',
+                install_video_url TEXT DEFAULT '',
+                color TEXT DEFAULT '#0078d4',
+                is_new BOOLEAN DEFAULT FALSE,
+                created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+            )
+        """)
+        print("PostgreSQL: Created operating_systems table")
+
         # Add missing columns for PostgreSQL
         cursor.execute("""
             SELECT column_name FROM information_schema.columns 
@@ -575,6 +598,33 @@ def init_db():
             if col not in movie_columns:
                 cursor.execute(f"ALTER TABLE movies ADD COLUMN {col} {col_type}")
                 print(f"Added {col} column to movies table")
+
+        # ---- SQLite schema migration for operating_systems ----
+        cursor.execute("PRAGMA table_info(operating_systems)")
+        os_columns = [col[1] for col in cursor.fetchall()]
+        if not os_columns:
+            cursor.execute("""
+                CREATE TABLE IF NOT EXISTS operating_systems (
+                    id INTEGER PRIMARY KEY AUTOINCREMENT,
+                    title TEXT NOT NULL,
+                    version TEXT NOT NULL,
+                    build_info TEXT DEFAULT '',
+                    genre TEXT NOT NULL,
+                    rating REAL DEFAULT 0,
+                    downloads INTEGER DEFAULT 0,
+                    description TEXT,
+                    wallpaper_url TEXT,
+                    download_links TEXT DEFAULT '',
+                    trailer_url TEXT DEFAULT '',
+                    screenshots TEXT DEFAULT '',
+                    install_guide_text TEXT DEFAULT '',
+                    install_video_url TEXT DEFAULT '',
+                    color TEXT DEFAULT '#0078d4',
+                    is_new INTEGER DEFAULT 0,
+                    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+                )
+            """)
+            print("Created operating_systems table")
 
     conn.commit()
     conn.close()

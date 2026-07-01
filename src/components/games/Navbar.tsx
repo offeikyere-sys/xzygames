@@ -1,12 +1,13 @@
 import { useState, useEffect, useRef } from "react"
 import { motion } from "framer-motion"
-import { Search, Menu, X, Sun, Moon, Droplets, Plus, Heart, Gamepad2, Monitor, Settings, Film, Shield, MessageSquare } from "lucide-react"
+import { Search, Menu, X, Sun, Moon, Droplets, Plus, Heart, Gamepad2, Monitor, Settings, Film, Shield, MessageSquare, Disc3 } from "lucide-react"
 import { useTheme } from "@/lib/ThemeContext"
 import { XzyLogo } from "@/components/ui/XzyLogo"
 
 const gameCategories = ["All", "Action", "RPG", "Strategy", "Racing", "Adventure", "Horror", "Sports", "Sci-Fi", "Simulation", "Puzzle", "Shooter", "Open World", "Survival", "Fighting", "Arcade", "Casual", "Indie", "Hypervisor"]
 const softwareCategories = ["All", "Antivirus & Security", "Browsers", "Design & 3D", "Development Tools", "Multimedia & Audio", "Productivity & Office", "Utilities & System"]
 const movieCategories = ["All", "Action", "Horror", "Adventure", "Thriller", "Music", "Anime", "Series"]
+const osCategories = ["All", "Windows 11", "Windows 10", "22H2", "23H2", "24H2", "25H2", "26H2"]
 
 interface UserInfo {
   id: number
@@ -16,10 +17,10 @@ interface UserInfo {
 }
 
 interface NavbarProps {
-  activeSection: "games" | "software" | "movies"
+  activeSection: "games" | "software" | "movies" | "os"
   activeCategory: string
   onCategoryChange: (cat: string) => void
-  onSectionChange: (section: "games" | "software" | "movies") => void
+  onSectionChange: (section: "games" | "software" | "movies" | "os") => void
   onLogin: () => void
   onSignup: () => void
   onSearch: (query: string) => void
@@ -176,6 +177,17 @@ export function Navbar({ activeSection, activeCategory, onCategoryChange, onSect
             >
               <Film size={14} />
               Movies
+            </button>
+            <button
+              onClick={() => onSectionChange("os")}
+              className={`flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg text-sm font-medium transition-all ${
+                !isHomePage && activeSection === "os"
+                  ? "bg-cyan-600/20 text-cyan-400 border border-cyan-500/30"
+                  : "text-zinc-500 hover:text-white hover:bg-zinc-800/50"
+              }`}
+            >
+              <Disc3 size={14} />
+              OS
             </button>
             {onRequests && (
               <button
@@ -339,7 +351,7 @@ export function Navbar({ activeSection, activeCategory, onCategoryChange, onSect
       {!isHomePage && (
         <div className="hidden md:block border-t border-zinc-800/30 bg-black/60">
           <div className="flex items-center gap-1 overflow-x-auto px-4 py-1.5 scrollbar-thin">
-            {(activeSection === "games" ? gameCategories : activeSection === "movies" ? movieCategories : softwareCategories).map((cat) => (
+            {(activeSection === "games" ? gameCategories : activeSection === "movies" ? movieCategories : activeSection === "os" ? osCategories : softwareCategories).map((cat) => (
               <button
                 key={cat}
                 onClick={() => onCategoryChange(cat)}
@@ -460,12 +472,22 @@ export function Navbar({ activeSection, activeCategory, onCategoryChange, onSect
               >
                 Movies
               </button>
+              <button
+                onClick={() => { onSectionChange("os"); setMenuOpen(false); }}
+                className={`flex-1 py-2 rounded-lg text-sm font-medium transition-all text-center ${
+                  !isHomePage && activeSection === "os"
+                    ? "bg-cyan-600/20 text-cyan-400 border border-cyan-500/30"
+                    : "text-zinc-400 hover:text-white hover:bg-zinc-800/50"
+                }`}
+              >
+                OS
+              </button>
             </div>
           </div>
 
           {/* Categories */}
           <div className="px-4 py-3 space-y-1">
-            {(activeSection === "games" ? gameCategories : activeSection === "movies" ? movieCategories : softwareCategories).map((cat) => (
+            {(activeSection === "games" ? gameCategories : activeSection === "movies" ? movieCategories : activeSection === "os" ? osCategories : softwareCategories).map((cat) => (
               <button
                 key={cat}
                 onClick={() => {

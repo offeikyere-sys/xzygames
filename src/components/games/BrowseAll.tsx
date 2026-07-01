@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef, useCallback, useMemo } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { GameCard } from "./GameCard"
-import { Gamepad2, Monitor, Film, ArrowDown, Compass, Layers, Sparkles, Infinity, ArrowLeft, Search, SortAsc } from "lucide-react"
+import { Gamepad2, Monitor, Film, ArrowDown, Compass, Layers, Sparkles, Infinity, ArrowLeft, Search, SortAsc, Disc3 } from "lucide-react"
 import { apiUrl } from "@/lib/api"
 
 const ITEMS_PER_PAGE = 8
@@ -15,7 +15,7 @@ interface ItemInfo {
   color: string
   wallpaper_url?: string | null
   download_links?: string | null
-  _type: "game" | "software" | "movie"
+  _type: "game" | "software" | "movie" | "os"
 }
 
 interface BrowseAllProps {
@@ -24,16 +24,17 @@ interface BrowseAllProps {
   userToken?: string
   isAdmin?: boolean
   onDeleteGame?: (gameId: number) => void
-  typeFilter?: "game" | "software" | "movie"
+  typeFilter?: "game" | "software" | "movie" | "os"
+  activeCategory?: string
   onBack?: () => void
 }
 
-export function BrowseAll({ onGameClick, refreshKey, userToken: _userToken, isAdmin, onDeleteGame, typeFilter, onBack }: BrowseAllProps) {
+export function BrowseAll({ onGameClick, refreshKey, userToken: _userToken, isAdmin, onDeleteGame, typeFilter, activeCategory, onBack }: BrowseAllProps) {
   const [allItems, setAllItems] = useState<ItemInfo[]>([])
   const [visibleCount, setVisibleCount] = useState(ITEMS_PER_PAGE)
   const [loading, setLoading] = useState(true)
   const [expanded, setExpanded] = useState(true)
-  const [filter, setFilter] = useState<"all" | "game" | "software" | "movie">("all")
+  const [filter, setFilter] = useState<"all" | "game" | "software" | "movie" | "os">("all")
   const [sortBy, setSortBy] = useState<"downloads" | "rating" | "title" | "newest">("downloads")
   const [searchQuery, setSearchQuery] = useState("")
   const bottomRef = useRef<HTMLDivElement>(null)
@@ -107,15 +108,36 @@ export function BrowseAll({ onGameClick, refreshKey, userToken: _userToken, isAd
           setVisibleCount(ITEMS_PER_PAGE)
         })
         .catch(() => { setLoading(false) })
+    } else if (typeFilter === "os") {
+      fetch(apiUrl("/api/os"))
+        .then((r) => r.json())
+        .then((data) => {
+          const osItems: ItemInfo[] = (data || []).map((g: Record<string, unknown>) => ({
+            id: g.id as number,
+            title: g.title as string,
+            genre: `${g.genre as string} ${g.version as string}`,
+            rating: g.rating as number,
+            downloads: g.downloads ? Number(g.downloads) : 0,
+            color: (g.color as string) || "#0078d4",
+            wallpaper_url: g.wallpaper_url as string | undefined,
+            download_links: g.download_links as string | undefined,
+            _type: "os" as const,
+          }))
+          setAllItems(osItems)
+          setLoading(false)
+          setVisibleCount(ITEMS_PER_PAGE)
+        })
+        .catch(() => { setLoading(false) })
     } else {
       Promise.all([
         fetch(apiUrl("/api/games?type=game")).then((r) => r.json()).catch(() => []),
         fetch(apiUrl("/api/games?type=software")).then((r) => r.json()).catch(() => []),
         fetch(apiUrl("/api/movies")).then((r) => r.json()).catch(() => []),
-      ]).then(([gamesData, softwareData, moviesData]) => {
+        fetch(apiUrl("/api/os")).then((r) => r.json()).catch(() => []),
+      ]).then(([gamesData, softwareData, moviesData, osData]) => {
         // Wait for minimum load time
-        return minLoadTime.then(() => ({ gamesData, softwareData, moviesData }))
-      }).then(({ gamesData, softwareData, moviesData }) => {
+        return minLoadTime.then(() => ({ gamesData, softwareData, moviesData, osData }))
+      }).then(({ gamesData, softwareData, moviesData, osData }) => {
         const games: ItemInfo[] = (gamesData || []).map((g: Record<string, unknown>) => ({
           id: g.id as number,
           title: g.title as string,
@@ -150,12 +172,25 @@ export function BrowseAll({ onGameClick, refreshKey, userToken: _userToken, isAd
           _type: "movie" as const,
         }))
 
+        const os: ItemInfo[] = (osData || []).map((g: Record<string, unknown>) => ({
+          id: g.id as number,
+          title: g.title as string,
+          genre: `${g.genre as string} ${g.version as string}`,
+          rating: g.rating as number,
+          downloads: g.downloads ? Number(g.downloads) : 0,
+          color: (g.color as string) || "#0078d4",
+          wallpaper_url: g.wallpaper_url as string | undefined,
+          download_links: g.download_links as string | undefined,
+          _type: "os" as const,
+        }))
+
         const combined: ItemInfo[] = []
-        const maxLen = Math.max(games.length, software.length, movies.length)
+        const maxLen = Math.max(games.length, software.length, movies.length, os.length)
         for (let i = 0; i < maxLen; i++) {
           if (i < games.length) combined.push(games[i])
           if (i < software.length) combined.push(software[i])
           if (i < movies.length) combined.push(movies[i])
+          if (i < os.length) combined.push(os[i])
         }
         setAllItems(combined)
         setLoading(false)
@@ -169,6 +204,7 @@ export function BrowseAll({ onGameClick, refreshKey, userToken: _userToken, isAd
     if (typeFilter === "game") setFilter("game")
     else if (typeFilter === "software") setFilter("software")
     else if (typeFilter === "movie") setFilter("movie")
+    else if (typeFilter === "os") setFilter("os")
     else setFilter("all")
   }, [typeFilter])
 
@@ -181,6 +217,16 @@ export function BrowseAll({ onGameClick, refreshKey, userToken: _userToken, isAd
     let items = allItems
     // Type filter
     if (filter !== "all") items = items.filter((item) => item._type === filter)
+    // Category filter (genre)
+    if (activeCategory && activeCategory !== "All") {
+      const cat = activeCategory.toLowerCase()
+      items = items.filter((item) => {
+        const itemGenre = item.genre.toLowerCase()
+        // For OS items, genre is "Windows 11 24H2", so we check if it contains the category
+        // For games/software/movies, genre is just the category name
+        return itemGenre.includes(cat)
+      })
+    }
     // Search query
     if (searchQuery.trim()) {
       const q = searchQuery.toLowerCase()
@@ -193,7 +239,7 @@ export function BrowseAll({ onGameClick, refreshKey, userToken: _userToken, isAd
     else if (sortBy === "title") sorted.sort((a, b) => a.title.localeCompare(b.title))
     // "newest" keeps default order (by id descending = most recently added first)
     return sorted
-  }, [allItems, filter, sortBy, searchQuery])
+  }, [allItems, filter, sortBy, searchQuery, activeCategory])
 
   const visibleItems = useMemo(() => {
     return filteredItems.slice(0, visibleCount)
@@ -216,6 +262,7 @@ export function BrowseAll({ onGameClick, refreshKey, userToken: _userToken, isAd
   const totalGames = allItems.filter((i) => i._type === "game").length
   const totalSoftware = allItems.filter((i) => i._type === "software").length
   const totalMovies = allItems.filter((i) => i._type === "movie").length
+  const totalOS = allItems.filter((i) => i._type === "os").length
 
   const isFiltered = !!typeFilter
   const title = isFiltered
@@ -226,8 +273,10 @@ export function BrowseAll({ onGameClick, refreshKey, userToken: _userToken, isAd
       ? `Explore all ${totalGames} games in our collection`
       : typeFilter === "software"
         ? `Explore all ${totalSoftware} software titles in our collection`
-        : `Explore all ${totalMovies} movies in our collection`
-    : "Discover our complete collection of games, software, and movies all in one place. Mix, match, and find your next favorite."
+        : typeFilter === "movie"
+          ? `Explore all ${totalMovies} movies in our collection`
+          : `Explore all ${totalOS} operating systems in our collection`
+    : "Discover our complete collection of games, software, movies, and Windows ISOs all in one place."
 
   return (
     <section id="browse-all" className={`relative py-20 bg-black overflow-hidden ${isFiltered ? "pt-28" : ""}`}>
@@ -260,8 +309,8 @@ export function BrowseAll({ onGameClick, refreshKey, userToken: _userToken, isAd
             <Sparkles size={14} className="text-blue-400" />
             <span className="text-xs font-medium text-zinc-300">
               {isFiltered
-                ? `${filteredItems.length} ${typeFilter === "game" ? "Games" : typeFilter === "software" ? "Software" : "Movies"} Available`
-                : `${totalGames} Games, ${totalSoftware} Software & ${totalMovies} Movies Available`
+                ? `${filteredItems.length} ${typeFilter === "game" ? "Games" : typeFilter === "software" ? "Software" : typeFilter === "movie" ? "Movies" : "OS"} Available`
+                : `${totalGames} Games, ${totalSoftware} Software, ${totalMovies} Movies & ${totalOS} OS Available`
               }
             </span>
           </div>
@@ -283,6 +332,7 @@ export function BrowseAll({ onGameClick, refreshKey, userToken: _userToken, isAd
             { key: "game", label: "Games", icon: Gamepad2 },
             { key: "software", label: "Software", icon: Monitor },
             { key: "movie", label: "Movies", icon: Film },
+            { key: "os", label: "OS", icon: Disc3 },
           ].map(({ key, label, icon: Icon }) => (
             <button
               key={key}
@@ -293,7 +343,9 @@ export function BrowseAll({ onGameClick, refreshKey, userToken: _userToken, isAd
                     ? "bg-blue-600/20 text-blue-400 border border-blue-500/30"
                     : key === "software"
                       ? "bg-emerald-600/20 text-emerald-400 border border-emerald-500/30"
-                      : "bg-purple-600/20 text-purple-400 border border-purple-500/30"
+                      : key === "movie"
+                        ? "bg-purple-600/20 text-purple-400 border border-purple-500/30"
+                        : "bg-cyan-600/20 text-cyan-400 border border-cyan-500/30"
                   : "text-zinc-500 hover:text-white hover:bg-zinc-800/50 border border-transparent"
               }`}
             >

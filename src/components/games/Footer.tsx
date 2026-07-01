@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { Gamepad2, Mail, Globe, MessageSquare, Play, X } from "lucide-react"
+import { Gamepad2, Mail, Globe, MessageSquare, Play, X, Monitor } from "lucide-react"
 import { motion, AnimatePresence } from "framer-motion"
 
 interface FooterProps {
@@ -63,6 +63,7 @@ export function Footer({ onNavigate }: FooterProps) {
                 <li><button onClick={() => nav("games-browse")} className="text-sm text-zinc-400 hover:text-blue-400 transition-colors cursor-pointer bg-transparent border-none p-0">Browse Games</button></li>
                 <li><button onClick={() => nav("software-browse")} className="text-sm text-zinc-400 hover:text-blue-400 transition-colors cursor-pointer bg-transparent border-none p-0">Browse Software</button></li>
                 <li><button onClick={() => nav("movies-browse")} className="text-sm text-zinc-400 hover:text-blue-400 transition-colors cursor-pointer bg-transparent border-none p-0">Browse Movies</button></li>
+                <li><button onClick={() => nav("os-browse")} className="text-sm text-zinc-400 hover:text-blue-400 transition-colors cursor-pointer bg-transparent border-none p-0 flex items-center gap-1"><Monitor size={14} /> Windows OS</button></li>
                 <li><button onClick={() => nav("games-view-all")} className="text-sm text-zinc-400 hover:text-blue-400 transition-colors cursor-pointer bg-transparent border-none p-0">Top Downloads</button></li>
               </ul>
             </div>
