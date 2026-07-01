@@ -1,5 +1,5 @@
 -- XZY Games Database Export for PostgreSQL
--- Generated: 2026-06-30 00:19:59
+-- Generated: 2026-07-01 02:21:57
 -- Target: RunSite PostgreSQL Database
 
 BEGIN;
@@ -128,7 +128,7 @@ https://fuckingfast.co/84cmqlvyktjd#fg-optional-spanish.bin', 'https://youtu.be/
 /uploads/af40be307422455a996a87bf2c21ff54.jpg
 /uploads/bc30b552c7494ba2bc60adadf03bdbf4.jpg
 /uploads/572bf2aada9e4fed97a095a04fa05ca5.jpg
-/uploads/5f2e4f99d55e4324bd9c31a2c9f87c5c.jpg', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#3b82f6', 0, 'game', '', '', '', '2026-06-13 13:04:28', 'Repack Features
+/uploads/5f2e4f99d55e4324bd9c31a2c9f87c5c.jpg', 'Windows 11 64-bit', 'Intel Core i7-6700K', '16 GB RAM', 'GTX 1660 / RX 5600 XT', '100 GB', '', '#3b82f6', 0, 'game', '', '', '', '2026-06-13 13:04:28', 'Repack Features
 Based on EA Build v1.0.133.58379 release: 74.4 GB
 Hypervisor Bypass (INTEL & AMD) by DenuvOwO + Goldberg emu applied over
 Many antiviruses, including Windows Defender are now marking HV files as rootkits, rendering games unplayable. To avoid it either turn off AV completely, or add source/target installation folders to exclusions
@@ -180,7 +180,7 @@ https://fuckingfast.co/8a64bd7q9fyo#007_First_Light_CRACKED_--_fitgirl-repacks.s
 /uploads/7d1ea6668d04403c80f265aee74ff8fa.jpg
 /uploads/0651b00032bc42abbdaebec7b2596936.png
 /uploads/73331b77a0114bb3b429b5f9ca8e8f0b.jpg
-/uploads/2b1f1574db85494e8b5387aaf2f1f093.jpg', 'Windows 10/11 64-bit', 'Intel Core i5-2500 or AMD equivalent', '8 GB RAM', 'NVIDIA GeForce GTX 660 or AMD Radeon HD 7870', '53.3 GB', '', '#ca8a04', 0, 'game', '', '', '', '2026-06-13 16:27:18', '', 'Internet Download Manager', 'https://www.internetdownloadmanager.com/download.html', '', '', '', '', '') ON CONFLICT (id) DO NOTHING;
+/uploads/2b1f1574db85494e8b5387aaf2f1f093.jpg', 'Windows 10 64-bit', 'Intel Core i7-4770K', '16 GB RAM', 'GTX 1060 / RX 580', '40 GB', '', '#ca8a04', 0, 'game', '', '', '', '2026-06-13 16:27:18', '', 'Internet Download Manager', 'https://www.internetdownloadmanager.com/download.html', '', '', '', '', '') ON CONFLICT (id) DO NOTHING;
 INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (19, 'Assassin’s Creed Mirage: Master Assassin Edition v1.1.1 + 13 DLCs*', 'Adventure, RPG', 4.5, 0, 'Genres/Tags: Action, Stealth, Open world, Third-person, 3D
 Companies: Ubisoft *, Ubisoft Entertainment
 Languages: RUS/ENG/MULTI14
@@ -636,7 +636,7 @@ INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_u
 https://ffdl.cybar.to/b6vx68scw7xs', 'https://youtu.be/DSznLWimMlU?si=dGtNWY0md1-I0X5p', '/uploads/96ed349ec09e44ccb69a88276b34a9f3.webp
 /uploads/b1834b55ec9d4f9992c021ca4773236b.webp
 /uploads/a0f78f7def6f4a9786d6cd5eb5f3f210.webp
-/uploads/b97dfd8570074ed1abab30e238197d27.webp', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#09090b', 0, 'game', '', '', '', '2026-06-15 02:02:20', 'Repack Features
+/uploads/b97dfd8570074ed1abab30e238197d27.webp', 'Windows 11 64-bit', 'Intel Core i7-10700K', '16 GB RAM', 'RTX 2060 / RX 5700 XT', '80 GB', '', '#09090b', 0, 'game', '', '', '', '2026-06-15 02:02:20', 'Repack Features
 Based on Stellar.Blade-voices38 P2P ISO release: voices38-stellar.blade.iso (62,587,643,904 bytes)
 voices38 crack with Goldberg emu applied over
 Game version: v1.4.1; 7 DLCs are included and activated
@@ -865,7 +865,7 @@ https://fuckingfast.co/ac6bjeb5bbrf#fg-optional-bonus-soundtracks.bin', 'https:/
 /uploads/6132cc9a1b92451e925616e73a4f21ae.jpg
 /uploads/e1cffbde215b40768e31bdd7456cabd2.jpg
 /uploads/9924b9e1bd5d4cb089e6a77ae2531dfc.jpg
-/uploads/53722cb8149c4425aab25c40ca327af9.jpg', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#2563eb', 0, 'game', '', '', '', '2026-06-15 02:06:50', 'Based on Black.Myth.Wukong-voices38 P2P ISO release: voices38-black.myth.wukong.iso (143,660,587,008 bytes)
+/uploads/53722cb8149c4425aab25c40ca327af9.jpg', 'Windows 11 64-bit', 'Intel Core i7-9700K', '16 GB RAM', 'RTX 2060 / RX 5700 XT', '130 GB', '', '#2563eb', 0, 'game', '', '', '', '2026-06-15 02:06:50', 'Based on Black.Myth.Wukong-voices38 P2P ISO release: voices38-black.myth.wukong.iso (143,660,587,008 bytes)
 3 bonus soundtracks (1.1 GB) added, thanks to SittingOnClouds!
 Game version: v1.0.21.23831; 4 DLCs/Bonuses are included
 100% Lossless & MD5 Perfect: all files are identical to originals after installation
@@ -884,7 +884,7 @@ https://ffdl.cybar.to/7he95lkuio66
 https://ffdl.cybar.to/irozhqkh0es2', 'https://youtu.be/p1wFbZwegpk?si=cw_ti-WBL47JwoFh', '/uploads/e12ec53783354ad48c45720ddead9c36.webp
 /uploads/f250327331c04b4f8eb4c418e052734d.webp
 /uploads/0b533b5b52384cc4b51c3a21667bfb0f.webp
-/uploads/4d29e14736aa47d9a33ae8d3d1a195cf.webp', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#a855f7', 0, 'game', '', '', '', '2026-06-15 02:11:13', 'Repack Features
+/uploads/4d29e14736aa47d9a33ae8d3d1a195cf.webp', 'Windows 11 64-bit', 'Intel Core i7-10700K', '16 GB RAM', 'RTX 2060 / RX 5700 XT', '120 GB', '', '#a855f7', 0, 'game', '', '', '', '2026-06-15 02:11:13', 'Repack Features
 Based on Forza.Horizon.6-RUNE ISO release: rune-forza.horizon.6.iso (144,479,354,880 bytes)
 Steam Online Fix by 0xdeadc0de is available in “NoDVD” folder after installation, allowing multiplayer support via Steam (use fake Steam/Microsoft accounts for that). Check “readme.txt” for instructions.
 Game version: v354.221; 10 DLCs are included, but some cars may be locked due to server-checks. Expansions Bundle, Expansion 1, Expansion 2 and Car Pass are either not released or released partially, hence not counted. This is not a Deluxe nor Premium Edition, and it doesn’t matter if other releasers call their packs so, it’s just not truth
@@ -911,7 +911,7 @@ https://ffdl.cybar.to/gkjehkm854a3
 https://ffdl.cybar.to/089ey4yrzofq', 'https://youtu.be/aTS9n_m7TW0?si=8aVY5ssUWXbutEod', '/uploads/23db74ac1bd44aa49381375b685e4ed7.webp
 /uploads/4e08e7191e164124abc7e65924225910.webp
 /uploads/0ccc3440668544db97c5f76c48316c66.webp
-/uploads/263d0f2dc0754d2192528573a052b4c3.webp', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#ffffff', 0, 'game', '', '', '', '2026-06-15 02:13:50', 'Repack Features
+/uploads/263d0f2dc0754d2192528573a052b4c3.webp', 'Windows 10 64-bit', 'Intel Core i7-4770K', '16 GB RAM', 'GTX 1060 6GB / RX 580', '80 GB', '', '#ffffff', 0, 'game', '', '', '', '2026-06-15 02:13:50', 'Repack Features
 Based on Battle.net v1.34.1.15931218 release: 159.1 GB
 .r4v3n+T9 V5 crack applied over. Older V3 & V4 cracks are available in “_Cracks” folder, use them if V5 doesn’t work for you
 Bonus OST in MP3 format (276 MB) added
@@ -951,7 +951,7 @@ Modern Warfare II launches with a globe-trotting single-player campaign, immersi
 https://vikingfile.com/d/oLH6yDpxbt/fg-optional-bonus-soundtracks.bin', 'https://youtu.be/ztjfwecrY8E?si=_QJ3NSYR1PBYjP-C', '/uploads/fa38906221d54321b696106b4dd87115.jpg
 /uploads/1a07043b7652435dae309d6b052421b6.jpg
 /uploads/b42d4850587d473eb1e4d25419f21d4d.jpg
-/uploads/9d82dff333ed4510bbe8bc42c41fc376.webp', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#84cc16', 0, 'game', '', '', '', '2026-06-16 00:11:12', 'Repack Features
+/uploads/9d82dff333ed4510bbe8bc42c41fc376.webp', 'Windows 10 64-bit', 'Intel Core i7-4770K', '16 GB RAM', 'GTX 1060 6GB / RX 590', '125 GB', '', '#84cc16', 0, 'game', '', '', '', '2026-06-16 00:11:12', 'Repack Features
 Based on P2P v9.7.23096551 SP / v9.40.23226476 MP release with all languages and modes: 147.1 GB, thanks to GAMEDRIVE.ORG!
 Crack by r4v3n + Goldberg (alex47exe’s fork) applied over
 Eight bonus soundtracks (785 MB) added
@@ -986,7 +986,7 @@ https://vikingfile.com/d/4WcCinbQSe/cy2077ii.ER-GameDrive.Org.part2.rar', 'https
 /uploads/a1a2f1867b1546d8ab4f961edf25f644.jpg
 /uploads/097434a58eea48ad91095b44da46410d.jpg
 /uploads/a97eb7f6bfe44a42b58a5c57084d7684.jpg
-/uploads/f563457c67d64b15887389172fddaa9b.jpg', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#eab308', 0, 'game', '', '', '', '2026-06-16 00:16:27', 'Repack Features
+/uploads/f563457c67d64b15887389172fddaa9b.jpg', 'Windows 10 64-bit', 'Intel Core i7-4790K', '12 GB RAM', 'GTX 1060 6GB / RX 580', '70 GB SSD', '', '#eab308', 0, 'game', '', '', '', '2026-06-16 00:16:27', 'Repack Features
 Based on Steam Build 19260982 from July 17, 2025: 149.1 GB, thanks to AR-81!
 CODEX crack/emu applier over
 Missing bonus content (3.7 GB) added
@@ -1006,13 +1006,13 @@ https://ffdl.cybar.to/k7r0nx23fdgz
 https://ffdl.cybar.to/kajxy098yppm', 'https://youtu.be/Ob9pYAlIHZM?si=2rDbdJ0hlT6gxcsl', '/uploads/e55fbe0773d64b6c8bf8f8fec601a2fd.webp
 /uploads/b09161cd90e545e4b5df7d8a2f84fa31.webp
 /uploads/5e7568ecb12b4578ae34220cfe15a403.webp
-/uploads/70e258cce84d45dea5d598d7d22e6091.webp', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#ca8a04', 0, 'game', '', '', '', '2026-06-16 00:20:00', 'Repack Features
+/uploads/70e258cce84d45dea5d598d7d22e6091.webp', 'Windows 11 64-bit', 'Intel Core i7-10700K', '16 GB RAM', 'RTX 2060 / RX 5700 XT', '50 GB', '', '#ca8a04', 0, 'game', '', '', '', '2026-06-16 00:20:00', 'Repack Features
 based On my own Steam Files + DenuvoUwU', '', '', '', '', '', '', '') ON CONFLICT (id) DO NOTHING;
 INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (52, 'Far Cry New Dawn (2019) ALL DLC +  HD Textures Pack [Hypervisor', 'Action, RPG, Hypervisor', 4.5, 3, 'Download Far Cry® New Dawn Hypervisor (PC) – Full Game. Plunge into a high-stakes struggle for dominance in a transformed, “super-bloom” post-apocalyptic Hope County, Montana, seventeen years after the nuclear collapse. As the captain of the security forces, you must lead the resistance against the Highwaymen—a ruthless scavenger faction led by the twin sisters, Mickey and Lou. Architect your home base at Prosperity, master a deep “light RPG” crafting system to forge makeshift weaponry, and launch daring expeditions across the shattered United States to secure the world’s last remaining resources and reclaim a future from the neon-soaked ruins.', '/uploads/19571650123b4413ab6a2a3385f7a54a.jpg', '', 'https://ffdl.cybar.to/a9ra7yl12ifd
 https://ffdl.cybar.to/awc8gvmmwhao', 'https://youtu.be/6eLHk2Eug78?si=Y7Nln16dhW3rrgYe', '/uploads/400b9ccb99ff46259f3b1832dc56104a.webp
 /uploads/981faccb14fe474c9b65324e317ccb31.webp
 /uploads/c22ad9c93d6c45b789c0dfef2cc6bdd7.webp
-/uploads/94f3490531b047979c32cde20bbd1621.webp', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#3b82f6', 0, 'game', '', '', '', '2026-06-16 00:22:23', 'Repack Features
+/uploads/94f3490531b047979c32cde20bbd1621.webp', 'Windows 10 64-bit', 'Intel Core i5-2400', '8 GB RAM', 'GTX 960 / RX 470', '30 GB', '', '#3b82f6', 0, 'game', '', '', '', '2026-06-16 00:22:23', 'Repack Features
 based On my own Steam Files + DenuvoUwU', '', '', '', '', '', '', '') ON CONFLICT (id) DO NOTHING;
 INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (53, 'Ghost Of Tsushima DIRECTOR’S CUT', 'Adventure, RPG', 4.5, 0, 'In the late 13th century, the Mongol empire has laid waste to entire nations along their campaign to conquer the East. Tsushima Island is all that stands between mainland Japan and a massive Mongol invasion fleet led by the ruthless and cunning general, Khotun Khan.
 
@@ -1028,7 +1028,7 @@ Pre-Installed Game', '/uploads/369fc1b1f957435ba2bd2e2a3970f40d.webp', '', 'http
 /uploads/0ea8ab3c559e4bb389004ffe3df9c599.jpg
 /uploads/387b1efc344641799142edc681ebfb77.jpg
 /uploads/2517b1ae96934773a8dd4eb5f3e6692a.jpg
-/uploads/0048e236f77b41b2a2c0d3e468050f98.jpg', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#ffffff', 0, 'game', '', '', '', '2026-06-16 00:27:27', 'Repack Features
+/uploads/0048e236f77b41b2a2c0d3e468050f98.jpg', 'Windows 10 64-bit', 'Intel Core i7-6700K', '16 GB RAM', 'GTX 1060 / RX 580', '75 GB', '', '#ffffff', 0, 'game', '', '', '', '2026-06-16 00:27:27', 'Repack Features
 Based on Ghost.of.Tsushima.DIRECTORS.CUT.MULTi26-RUNE ISO release: rune-ghost.of.tsushima.directors.cut.multi26.iso (63,415,713,792 bytes)
 Game version: v1053.0.0515.2048; Pre-purchase Entitlements DLC is included and activated
 Crackpack with TENOKE/CODEX/FLT/ALI213/Goldberg/0xdeadc0de cracks/emus added, thanks to TENOKE, Masquerade & 0xdeadc0de!
@@ -1057,7 +1057,7 @@ Pre-Installed Game', '/uploads/0dbb23116db047479336dd3150cc7392.jpg', '', 'https
 /uploads/02ad7a5068e146dc8ee53b39d7f579c3.jpg
 /uploads/6bab2955f9bc403893529521ed8ddbb9.jpg
 /uploads/a3e33db774a34278ae958f7c97903339.jpg
-/uploads/b225b7515d384e72a5cb987d63672b36.jpg', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#27272a', 0, 'game', '', '', '', '2026-06-16 00:35:22', 'Features
+/uploads/b225b7515d384e72a5cb987d63672b36.jpg', 'Windows 10 64-bit', 'Intel Core i7-4770K', '16 GB RAM', 'GTX 1060 / RX 580', '36 GB', '', '#27272a', 0, 'game', '', '', '', '2026-06-16 00:35:22', 'Features
 High Fidelity Graphics
 Striking visuals enhanced on PC. Enjoy true 4K resolution, on supported devices, [MU1] with unlocked framerates for peak performance. Dial in your settings via a wide range of graphical presets and options including higher resolution shadows, improved screen space reflections, the addition of GTAO and SSDO, and much more.
 NVIDIA DLSS and Reflex Support
@@ -1083,7 +1083,7 @@ https://ffdl.cybar.to/eacqjgifguen', 'https://youtu.be/hfJ4Km46A-0?si=_5Cunt_xfE
 /uploads/a5b2a0fe9ae342eb9100a5e733f8c632.jpg
 /uploads/664e6c6dc3c44ac797d76768c22b94c4.jpg
 /uploads/f214f257f31440d2a5e9ebe5cbaca4c2.webp
-/uploads/01abb7d349fc4dbfb55ae57381d68bb4.webp', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#d4d4d8', 0, 'game', '', '', '', '2026-06-16 00:39:03', 'Repack Features
+/uploads/01abb7d349fc4dbfb55ae57381d68bb4.webp', 'Windows 11 64-bit', 'Intel Core i7-10700K', '16 GB RAM', 'RTX 2060 / RX 5700 XT', '90 GB', '', '#d4d4d8', 0, 'game', '', '', '', '2026-06-16 00:39:03', 'Repack Features
 Based on God.of.War.Ragnarok-RUNE ISO release: rune-god.of.war.ragnarok.iso (121,660,866,560 bytes)
 Three Bonus OSTs in MP3 format and original ArtBook in hi-res JPGs (618 MB) added, thanks to NoeRIη! Original mini ArtBook in PDF format is preserved as well
 All DLCs and Bonuses are included
@@ -1098,7 +1098,7 @@ HDD space after installation: up to 176 GB
 Language can be changed in game settings
 Repack uses XTool library by Razor12911
 At least 2 GB of free RAM (inc. virtual) required for installing this repack', '', '', '', '', '', '', '') ON CONFLICT (id) DO NOTHING;
-INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (56, 'Grand Theft Auto V Enhanced', 'RPG, Open World', 4.5, 0, 'When a young street hustler, a retired bank robber, and a terrifying psychopath find themselves entangled with some of the most frightening and deranged elements of the criminal underworld, the U.S. government, and the entertainment industry, they must pull off a series of dangerous heists to survive in a ruthless city in which they can trust nobody — least of all each other. Sonic Unleashed
+INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (56, 'Grand Theft Auto V Enhanced GTA V', 'RPG, Open World, Action', 4.5, 0, 'When a young street hustler, a retired bank robber, and a terrifying psychopath find themselves entangled with some of the most frightening and deranged elements of the criminal underworld, the U.S. government, and the entertainment industry, they must pull off a series of dangerous heists to survive in a ruthless city in which they can trust nobody — least of all each other. Sonic Unleashed
 
 Current PC players can transfer both GTAV Story Mode progress and GTA Online characters and progression with a one-time migration from the legacy version of GTAV to GTAV Enhanced.
 
@@ -1128,7 +1128,7 @@ https://vikingfile.com/d/QpgVjmFdkB/45gt54g546y.DR-GameDrive.Org.part2.rar', 'ht
 /uploads/f6891fa3538d4f3da2659f2085df0f89.jpg
 /uploads/4bdd70bc73dc419583549bbc343604fa.jpg
 /uploads/cf569a20a2694d1ea17734ec6d5c3e70.jpg
-/uploads/3ee8264395644f14952a07c8b62e8e40.jpg', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#c026d3', 0, 'game', '', '', '', '2026-06-16 00:43:28', 'Repack Features
+/uploads/3ee8264395644f14952a07c8b62e8e40.jpg', 'Windows 10 64-bit', 'Intel Core i7-8700K', '16 GB RAM', 'GTX 1060 6GB / RX 580', '110 GB', '', '#c026d3', 0, 'game', '', '', '', '2026-06-16 00:43:28', 'Repack Features
 Based on Steam BuildID 21197051 version: 118.8 GB, thanks to thanks to AR-81!
 Mr.Goldberg SCE emu applied over
 Bonus Content (Brady Guide, Soundtrack/Radio Stations, Satellite Map, Wallpapers & 3 Bonus OSTs (3.2 GB) added, thanks to dremor8484 & ElAmigos!
@@ -1147,7 +1147,7 @@ ALWAYS run the game from desktop icon and with admin rights or from “PlayGTAV.
 INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (57, 'inZOI (2025) v0.7.5 + Island Getaway DLC', 'RPG, Simulation', 4.5, 0, 'Download inZOI (PC) – Full Game. Step into a high-stakes life simulation where “every life becomes a story” in stunning, hyper-realistic detail. Harness powerful, intuitive tools to architect the life of your dreams—from deep character customization to intricate home building—as you guide your ‘Zois’ through a complex web of emotions and relationships. Experience the next generation of digital living as you observe and influence a world driven by a profound and detailed simulation where every choice crafts a unique narrative legacy.', '/uploads/27716d7784184c89b7281e9b396bde6c.webp', '', 'https://ffdl.cybar.to/jc1g8bfbj0yg', 'https://youtu.be/LNWBSArTQmg?si=PCh8Cuuz67H9oIBr', '/uploads/69066be2a4f84f818ca8a4d055df07b1.webp
 /uploads/f0e70d788c1c4b65bc1d3a6fa9c9572a.webp
 /uploads/90dff71c40434b8fb74b6a8c9cc18d79.webp
-/uploads/4cfd63b07f39498c8c981fc4aaecae16.webp', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#3b82f6', 0, 'game', '', '', '', '2026-06-16 00:47:58', 'Repack Features
+/uploads/4cfd63b07f39498c8c981fc4aaecae16.webp', 'Windows 11 64-bit', 'Intel Core i7-10700K', '16 GB RAM', 'RTX 2060 / RX 5700 XT', '60 GB', '', '#3b82f6', 0, 'game', '', '', '', '2026-06-16 00:47:58', 'Repack Features
 based On MY OWN CSF + Goldberg
 
 Island Getaway added', '', '', '', '', '', 'How to Download, Extract & Play inZOI on PC
@@ -1170,7 +1170,7 @@ Released By: voices38
 Version: Build 20951841
 Pre-Installed Game', '/uploads/2caec86397e547a2a1b1f63c687be9d7.jpg', '', 'https://ts.bzzhr.to/d/3nwmwjvpsgnq?v=JCgJLgPzvw4XAm_EC3OjMxWUA8vJFAUOq4Zh3cL8D7pccvmJeaAVWyrLay52JARH7ZkjUD5mN71ynVDXAgLbMMj8eito0NV7RAElS-xY7T5KvpkBJWZ53YCvBG_Per3VGWZRAkEOj6SentNSxCaC9gF8zg4bXN2LR4WHGvYo9_AwV0UHMsHJ6HPi4iyxcy53jbnMYKybl9NEmdVuDuF33JbmXxeZMMy95i8oa-vxiHIrumEvWMa0Z38', 'https://youtu.be/AMtLTi0koGE?si=5nUWQ-FL4x14AloM', '/uploads/0d442592115e453a81da442cf9b30b51.jpeg
 /uploads/bdf58669d86f4feb9872802483e4fd77.jpg
-/uploads/20d2b4669844476cb010be6b8d2a3784.jpg', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#991b1b', 0, 'game', '', '', '', '2026-06-16 01:04:22', '', '', '', '', '', '', '', '') ON CONFLICT (id) DO NOTHING;
+/uploads/20d2b4669844476cb010be6b8d2a3784.jpg', 'Windows 11 64-bit', 'Intel Core i7-10700K', '16 GB RAM', 'RTX 2060 / RX 5700 XT', '80 GB', '', '#991b1b', 0, 'game', '', '', '', '2026-06-16 01:04:22', '', '', '', '', '', '', '', '') ON CONFLICT (id) DO NOTHING;
 INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (59, 'Marvel’s Spider-Man: Miles Morales', 'RPG, Adventure, Action, Sci-Fi', 4.5, 1, 'Following the events of Marvel’s Spider-Man Remastered, teenager Miles Morales is adjusting to his new home while following in the footsteps of his mentor, Peter Parker, as a new Spider-Man. But when a fierce power struggle threatens to destroy his new home, the aspiring hero realizes that with great power, there must also come great responsibility. To save all of Marvel’s New York, Miles must take up the mantle of Spider-Man and own it. Marvel’s Spider-Man Remastered
 
 The Rise of Miles Morales
@@ -1230,7 +1230,7 @@ Run “VBS.cmd” again and press 3 to revert made changes
 Reboot in the normal, secure mode', '/uploads/7055a49ca0994d2ea97b332f01574f4e.jpg', '', 'https://ffdl.cybar.to/cwfcoeg3ijnj', 'https://youtu.be/l31ey7o1g9s?si=NMClEoyIN_vVtNVO', '/uploads/4f4af9bad5a1490ba54d97454ee83e04.webp
 /uploads/80be0fe88dba4c0faf58de7aa5f644d0.webp
 /uploads/58c444f6a4e14525a8d734f4135158d0.webp
-/uploads/5478d22698f04d0a8c8844634314e21e.webp', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#3b82f6', 0, 'game', '', '', '', '2026-06-16 01:10:21', 'Repack Features
+/uploads/5478d22698f04d0a8c8844634314e21e.webp', 'Windows 11 64-bit', 'Intel Core i7-10700K', '16 GB RAM', 'RTX 2060 / RX 5700 XT', '80 GB', '', '#3b82f6', 0, 'game', '', '', '', '2026-06-16 01:10:21', 'Repack Features
 Based on Steam BuildID 22357085 release: 34.7 GB
 “The Bounded Soundtrack” added
 Hypervisor Bypass (INTEL & AMD) by DenuvOwO + Goldberg emu + SaveFix applied over
@@ -1257,7 +1257,7 @@ Released By: Razor1911
 Version: Build 1491.50 | Ultimate Edition + UE Unlocker
 Pre-Installed Game', '/uploads/b3e0ac02c83b49908d7bc4ee556b59fd.jpg', '', 'https://ts.bzzhr.to/d/ck7nob6r1bcv?v=hN0pWkx29R7B2Eaj5cXgnbbPCjhN1ZQQmsAlgDkvt7ouuR_AuZpiMQY0P42kGV_u5TbCjiP0zzNJ1w_w-eoz772_LnOvPUu1_mfnaPl44mv-ydU79YAXTJ5nkYODsSalwalJAl6I9E7Mz2FmVNrvMzOC91n4MEhihhQUx4cv', 'https://youtu.be/gmA6MrX81z4?si=koYktEEpmC6Qv0dV', '/uploads/4f665d9289b34a8e9c5400f8f3c8e369.jpg
 /uploads/a8ea3977691f40d8b073043f507e3286.jpg
-/uploads/cfb760373f284d37846dde5c3bcf3d94.webp', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#dc2626', 0, 'game', '', '', '', '2026-06-16 01:12:54', 'Repack Features
+/uploads/cfb760373f284d37846dde5c3bcf3d94.webp', 'Windows 10 64-bit', 'Intel Core i7-4770K', '8 GB RAM', 'GTX 1060 / RX 580', '30 GB', '', '#dc2626', 0, 'game', '', '', '', '2026-06-16 01:12:54', 'Repack Features
 Based on Red_Dead_Redemption_2_Ultimate_Edition-Razor1911 ISO release: rzr-reddeadredemption2.iso (128,253,820,928 bytes)
 No-intro Launcher.exe applied over, thanks to machine4578! Original Razor’s one preserved for purists in the root folder
 Game version is Build 1491.50
@@ -1286,7 +1286,7 @@ And the curtain rises on this story of daring rescue and grueling horror where l
 /uploads/c4b44fa22da045cea6ed2c74a67bdffb.webp
 /uploads/d2ccec92e5ef477f9de7aa94f6445931.webp
 /uploads/ed10e85df54b4858bdcfaef71d9f785f.webp
-/uploads/954f3e7a93f8496697b51d16fbcc164e.webp', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#be123c', 0, 'game', '', '', '', '2026-06-16 01:15:28', '', '', '', '', '', '', '', '') ON CONFLICT (id) DO NOTHING;
+/uploads/954f3e7a93f8496697b51d16fbcc164e.webp', 'Windows 10 64-bit', 'Intel Core i7-8700K', '16 GB RAM', 'GTX 1060 / RX 580', '50 GB', '', '#be123c', 0, 'game', '', '', '', '2026-06-16 01:15:28', '', '', '', '', '', '', '', '') ON CONFLICT (id) DO NOTHING;
 INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (63, 'Marvel’s Spider Man 2', 'RPG, Adventure, Sci-Fi, Open World', 4.5, 0, 'Mask-up for more thrilling web-slinging heroics as Marvel’s SpiderMan 2 swings onto PC Developed by Insomniac Games in collaboration with Marvel, and optimized for PC by Nixxes Software.
 
 A city under siege!
@@ -1358,7 +1358,7 @@ https://vikingfile.com/d/C1fyFRQ1O5/g5464hhhhh.ER-GameDrive.Org.part2.rar', 'htt
 /uploads/264b7417ab3c4935a20a89c08e346306.webp
 /uploads/6c668d4029084b66bd2d0b22eadab17a.jpg
 /uploads/ec7ae666e75141ea8d97c9ac14eac02c.jpg
-/uploads/ab2eedd34d6640e6bc79b27a8e1768a3.jpg', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#f97316', 0, 'game', '', '', '', '2026-06-16 01:20:52', 'Repack Features
+/uploads/ab2eedd34d6640e6bc79b27a8e1768a3.jpg', 'Windows 10 64-bit', 'Intel Core i7-6700K', '16 GB RAM', 'GTX 1060 6GB / RX 580', '80 GB', '', '#f97316', 0, 'game', '', '', '', '2026-06-16 01:20:52', 'Repack Features
 Based on Steam BuildID 13777814 release: 78.4 GB, thanks to Ksenia!
 Bonus Content (3 soundtracks, ArtBook, Digital Comic, Unofficial Strategy Guide, 769 MB) added, thanks to NoeRIη!
 CODEX-RUNE crack/emu applied over
@@ -1395,7 +1395,7 @@ Feel the thrilling gameplay in your hands
 Experience haptic feedback and dynamic trigger effects designed for UNCHARTED: Legacy of Thieves Collection by playing with the DualSense controller through a wired connection to your PC. For those that want to brighten things up even more, try out RGB support for Razer Chroma peripherals and Chroma Link compatible devices, as well as for Logitech models. You can also check previous posted game Potionomics.', '/uploads/28db2ea5145f4f0cb2e2218c3f5054f3.jpg', '', 'https://vikingfile.com/d/81Pif0lZTT/sfdf435.ER-GameDrive.Org.rar', 'https://youtu.be/F3Wl-OiZCO4?si=Gx9lfuxspi3nG6Xh', '/uploads/d4523f7b787342bebd6f148a406a41f6.jpg
 /uploads/80a487029029461bac1a75d0b174beba.jpg
 /uploads/b87ac30e4a7546448041040d5063e88f.jpg
-/uploads/70b826e8d46b432dbe9825e7e8696242.jpg', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#eab308', 0, 'game', '', '', '', '2026-06-16 01:24:09', '', '', '', '', '', '', '', '') ON CONFLICT (id) DO NOTHING;
+/uploads/70b826e8d46b432dbe9825e7e8696242.jpg', 'Windows 10 64-bit', 'Intel Core i7-6700K', '16 GB RAM', 'GTX 1060 6GB / RX 580', '80 GB', '', '#eab308', 0, 'game', '', '', '', '2026-06-16 01:24:09', '', '', '', '', '', '', '', '') ON CONFLICT (id) DO NOTHING;
 INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (66, 'Watch Dogs 2', 'RPG, Sci-Fi, Open World', 4.5, 0, 'Play as Marcus Holloway, a brilliant young hacker living in the birthplace of the tech revolution, the San Francisco Bay Area. Team up with Dedsec, a notorious group of hackers, to execute the biggest hack in history; take down ctOS 2.0, an invasive operating system being used by criminal masterminds to monitor and manipulate citizens on a massive scale. Get the upper hand with Tobii Eye Tracking. Volcanoids', '/uploads/8945d26cff604119bca6f558fee3a720.jpg', '', 'https://fuckingfast.co/g1pdp1kuolm5#Watch_Dogs_2_--_fitgirl-repacks.site_--_.part01.rar
 https://fuckingfast.co/w7m35s4qeg8h#Watch_Dogs_2_--_fitgirl-repacks.site_--_.part02.rar
 https://fuckingfast.co/owmc71qpudho#Watch_Dogs_2_--_fitgirl-repacks.site_--_.part03.rar
@@ -1435,7 +1435,7 @@ https://fuckingfast.co/ksuf0zypii0w#Watch_Dogs_2_--_fitgirl-repacks.site_--_.par
 /uploads/49ed2d549dac4592910238e50dc9146f.jpg
 /uploads/510aef75ba044f84a85da103a3f1367a.jpg
 /uploads/b86fff67bb5d4810a3e267090b612419.jpg
-/uploads/112aeb0411c04725b76a4852b46e3f7b.jpg', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#71717a', 0, 'game', '', '', '', '2026-06-16 01:26:53', 'Repack Features
+/uploads/112aeb0411c04725b76a4852b46e3f7b.jpg', 'Windows 10 64-bit', 'Intel Core i5-3470', '8 GB RAM', 'GTX 780 / RX 570', '40 GB', '', '#71717a', 0, 'game', '', '', '', '2026-06-16 01:26:53', 'Repack Features
 Based on Watch.Dogs.2.MULTi16-PLAZA ISO release: plaza-watch.dogs.2.iso (43,604,344,832 bytes)
 Watch.Dogs.2.MULTi16.Update.v1.17-PLAZA (19.2 GB) and missing Russian files (1.6 GB) added
 Bonus content (Soundtrack, Artworks, Wallpapers) added and available as optional download
@@ -1841,7 +1841,7 @@ Download info', '/uploads/5fce4d79cb7943b89b335e9c460a8843.jpg', '', 'https://go
 /uploads/4724eec5a1e94bd5b6d101160d08e90b.webp', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#3b82f6', 0, 'software', '', '', 'Freemium', '2026-06-17 03:46:22', '', '', '', '', '', '', '', '') ON CONFLICT (id) DO NOTHING;
 INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (90, 'Detroit: Become Human Free', 'Action, Adventure', 4.5, 0, 'Detroit: Become Human, the award-winning video game production from Quantic Dream, is finally available on Steam Featuring world-renowned actors including Jesse Williams (Grey’s Anatomy), Clancy Brown (Carnivale), Lance Henriksen (Aliens), Bryan Dechart (True Blood) and Valorie Curry (Twilight). Detroit 2038. Technology has evolved to a point where human like androids are everywhere. They speak, move and behave like human beings, but they are only machines serving humans.', '/uploads/b1ec293716c64d0c9a24cf2c88a44302.jpg', '', 'https://ts.bzzhr.to/d/jm9rg8ae8koj?v=7FJQoEFTIQt81F8_uKbjcjmgWr5N__C9-XmrEdWT3Y6TyReqp9KJA_rz6_p7Xb1qbAxq6iogPBINAGVQ4WRqExNN-bai9rF5XVOnox7A0coQSFgxJcLzLOXAdOX0x1FlTswUOfqwqBfTSaeiMvnGsOTeK4QjPdkItfH5C2eGm-Y6vW_pNAg7Pal7945aPsffCG2iw5hfFhxCM0091C7n', 'https://youtu.be/8a-EObAhYrg?si=wkkV4F6F7zdqHSKo', '/uploads/60283b849b1b43bb8f39c3a85aa1ec97.jpg
 /uploads/eba3d3692aa04aacb57e287b29faddb4.jpg
-/uploads/22435f1ab73d4babb0a9efd433011be1.webp', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#0ea5e9', 0, 'game', '', '', '', '2026-06-17 23:07:26', 'GAME INFO
+/uploads/22435f1ab73d4babb0a9efd433011be1.webp', 'Windows 10 64-bit', 'Intel Core i7-4770K', '16 GB RAM', 'GTX 1060 / RX 580', '55 GB', '', '#0ea5e9', 0, 'game', '', '', '', '2026-06-17 23:07:26', 'GAME INFO
 Genre: Action, Adventure
 Developer: Quantic Dream
 Platform: PC
@@ -1882,7 +1882,7 @@ INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_u
 https://vikingfile.com/d/gB523b1Iav/2369390.B11359732.CSF-Games4U.Org.part2.rar
 https://vikingfile.com/d/nJgt8kVWYa/2369390.B11359732.CSF-Games4U.Org.part3.rar', 'https://youtu.be/-IJuKT1mHO8?si=wtsZMIit2-0fVu02', '/uploads/2335dd965e0644f7aaa138387fe1e8fc.webp
 /uploads/54dec15363b143b3afe950ded655649b.webp
-/uploads/c9061217ca7e4573bc878c3a0886121f.jpg', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#ef4444', 0, 'game', '', '', '', '2026-06-17 23:18:07', 'GAME INFO
+/uploads/c9061217ca7e4573bc878c3a0886121f.jpg', 'Windows 10 64-bit', 'Intel Core i7-7700K', '16 GB RAM', 'GTX 1080 / RX Vega 64', '80 GB', '', '#ef4444', 0, 'game', '', '', '', '2026-06-17 23:18:07', 'GAME INFO
 Genre: Action, Adventure, Indie, RPG, Strategy
 Developer: Ubisoft Toronto
 Platform: PC
@@ -1895,7 +1895,7 @@ INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_u
 By day, Palm City hosts the Speedhunter Showdown, a sanctioned competition where you earn Bank to customize and upgrade your high-performance cars. At night, ramp up the intensity in illicit street races that build your reputation, getting you access to bigger races and better parts. But stay ready – cops are waiting and not all of them play fair.', '/uploads/6894d585c4324ac6becb9428d18498a3.jpg', '', 'https://vikingfile.com/d/K8BLYXDVql/f45fg.ER-GameDrive.Org.rar', '', '/uploads/ce58d91217f84b1f9166ec46ee32b3b6.jpg
 /uploads/4b9921d2fee1487a86256a6d66502784.jpg
 /uploads/1e23908626294743a2288e3b2f1e5bd6.jpg
-/uploads/d6b9c08d04cf4a25a5c032ea12ca11d2.jpg', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#3b82f6', 0, 'game', '', '', '', '2026-06-17 23:23:47', 'GAME INFO
+/uploads/d6b9c08d04cf4a25a5c032ea12ca11d2.jpg', 'Windows 10 64-bit', 'Intel Core i7-6700K', '16 GB RAM', 'GTX 1070 / RX 5700', '50 GB', '', '#3b82f6', 0, 'game', '', '', '', '2026-06-17 23:23:47', 'GAME INFO
 Genre: Action, Adventure, Racing, Sports
 Developer: Ghost Games
 Platform: PC
@@ -1929,7 +1929,7 @@ https://vikingfile.com/d/UBrag3UKEn/ERD.ER-GameDrive.Org.part14.rar
 https://vikingfile.com/d/Ro0kMLRtE0/ERD.ER-GameDrive.Org.part15.rar
 https://vikingfile.com/d/ytqyZMcDSk/ERD.ER-GameDrive.Org.part16.rar
 https://vikingfile.com/d/PT5CxFzN4F/ERD.ER-GameDrive.Org.part17.rar', 'https://youtu.be/E3Huy2cdih0?si=aOtyXnMyXr2sz5O-', '/uploads/24626c3368cc4000a09f623021324519.webp
-/uploads/c36a0de612ba416a93f7a82f81a2795e.webp', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#f59e0b', 0, 'game', '', '', '', '2026-06-17 23:55:08', 'GAME INFO
+/uploads/c36a0de612ba416a93f7a82f81a2795e.webp', 'Windows 10 64-bit', 'Intel Core i7-8700K', '16 GB RAM', 'GTX 1070 / RX 5700', '60 GB', '', '#f59e0b', 0, 'game', '', '', '', '2026-06-17 23:55:08', 'GAME INFO
 Genre: Action, RPG
 Developer: FromSoftware Inc
 Platform: PC
@@ -1944,7 +1944,7 @@ Five years have passed since Ellie and Joel’s perilous trek across a ravaged U
 The Last of Us Part II Remastered elevates the original game with a range of enhancements, taking advantage of modern hardware to deliver an unparalleled experience. Enjoy a host of graphical improvements that breathe new life into the game’s beautiful yet perilous environments, with increased detail and visual fidelity. Experience full integration with the PlayStation DualSense controller, utilizing adaptive triggers and haptic feedback to deepen your connection to the gameplay. As you progress through Ellie and Abby’s intertwined stories, earn and collect exciting achievements on Steam, adding another layer of engagement to this unforgettable journey. The game also offers widescreen and Ultrawide support, providing a more expansive and cinematic view of its haunting world. Elroy and the Aliens', '/uploads/0107fb4497b243938a87c97409198b5a.jpg', '', 'https://ffdl.cybar.to/ekjo7dmmqm1h
 https://ffdl.cybar.to/l4wleerujihu', 'https://youtu.be/-llaUBqovHw?si=tr_MQ4fHvxHHt7ld', '/uploads/a600d141c2474177b7d291950d825d9d.jpg
 /uploads/ae5253370b124f1d8ccd8cd7b11fd8f4.jpg
-/uploads/9c3d5dad9cc946e38f67d8fc215e9dec.jpg', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#27272a', 0, 'game', '', '', '', '2026-06-18 00:02:00', 'GAME INFO
+/uploads/9c3d5dad9cc946e38f67d8fc215e9dec.jpg', 'Windows 10 64-bit', 'Intel Core i7-6700K', '16 GB RAM', 'GTX 1060 6GB / RX 580', '80 GB', '', '#27272a', 0, 'game', '', '', '', '2026-06-18 00:02:00', 'GAME INFO
 Genre: Action, Adventure
 Developer: Naughty Dog LLC, Nixxes Software, Iron Galaxy Studios
 Platform: PC
@@ -1954,7 +1954,7 @@ Version: v1.6.10721.105 (Build 19297819 | Full Version
 Pre-Installed Gam', '', '', '', '', '', '', '') ON CONFLICT (id) DO NOTHING;
 INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (96, 'Watch Dogs Digital Deluxe', 'Action', 4.5, 0, 'All it takes is the swipe of a finger. We connect with friends. We buy the latest gadgets and gear. We find out what’s happening in the world. But with that same simple swipe, we cast an increasingly expansive shadow. With each connection, we leave a digital trail that tracks our every move and milestone, our every like and dislike. And it’s not just people. Today, all major cities are networked. Urban infrastructures are monitored and controlled by complex operating systems. In Watch_Dogs, this system is called the Central Operating System (CTOS) and it controls almost every piece of the city’s technology and holds key information on all of the city’s residents.', '/uploads/d5e68dd49e974d39b85a037f2c65efcb.jpg', '', 'https://vikingfile.com/d/2QYtT6f0qQ/243470-Games4u.Org.rar', 'https://youtu.be/kPNXE8fdleY?si=xiCFfpgTKnSAe8n2', '/uploads/c1a53b9c653d4fd59f05bfa461dc02cd.jpg
 /uploads/485636489c2f4ef898a65c2dab9c30ca.jpg
-/uploads/b952d2c74ee147e18252854c9ab90ca4.jpg', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#52525b', 0, 'game', '', '', '', '2026-06-18 00:10:05', 'GAME INFO
+/uploads/b952d2c74ee147e18252854c9ab90ca4.jpg', 'Windows 10 64-bit', 'Intel Core i5-3470', '8 GB RAM', 'GTX 780 / RX 570', '40 GB', '', '#52525b', 0, 'game', '', '', '', '2026-06-18 00:10:05', 'GAME INFO
 Genre: Action, Adventure
 Developer: Ubisoft
 Platform: PC
@@ -1967,7 +1967,7 @@ https://vikingfile.com/d/GuYzVOj4Aq/English.doi
 https://vikingfile.com/d/4LfOttw4sv/hh5757.DR-GameDrive.Org.part1.rar', '', '/uploads/037d74e8c34143f491c7d33325f39a5f.jpg
 /uploads/a1eb878f600d49d0919de2ac0e424ac2.jpg
 /uploads/375500d0075247bbb8571ef539b806f6.jpg
-/uploads/d983aded5e914c369fc8b334512b31a9.webp', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#7c3aed', 0, 'game', '', '', '', '2026-06-18 23:32:49', 'Features
+/uploads/d983aded5e914c369fc8b334512b31a9.webp', 'Windows 11 64-bit', 'Intel Core i7-3770K', '16 GB RAM', 'RTX 2070 / RX 5700 XT', '110 GB', '', '#7c3aed', 0, 'game', '', '', '', '2026-06-18 23:32:49', 'Features
 An endless kaleidoscope of Horizon adventures. Fascinating trips through the incredibly beautiful and distinctive world of Mexico, driving the greatest cars in history, await you.
 A world full of colors The world of beauty and contrasts will open before you. You will visit deserts, dense jungles, historic cities, lost ruins, pristine beaches, deep gorges and a high, snow-covered volcano.
 A world full of adventure. A massive campaign awaits you with hundreds of challenges for every taste. Meet new characters and go through their storylines to the end.
@@ -1999,7 +1999,7 @@ https://fuckingfast.co/l0vcwq11llyw#Call_of_Duty_-_Black_Ops_2_--_fitgirl-repack
 https://fuckingfast.co/vc89w9z1uc68#fg-selective-english.part1.rar
 https://fuckingfast.co/wf2u054fc8s0#fg-selective-english.part2.rar
 https://fuckingfast.co/83b1f2y35rsp#fg-selective-english.part3.rar', '', '/uploads/dd54cc9b74ad498d813a220ec7876dcc.jpg
-/uploads/d14ad91bee6746ea8b184598b336e251.jpg', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#09090b', 0, 'game', '', '', '', '2026-06-18 23:38:09', 'GAME INFO
+/uploads/d14ad91bee6746ea8b184598b336e251.jpg', 'Windows 10 64-bit', 'Intel Core i5-750', '8 GB RAM', 'GTX 760 / HD 7870', '16 GB', '', '#09090b', 0, 'game', '', '', '', '2026-06-18 23:38:09', 'GAME INFO
 Genre: Action
 Developer: Treyarch
 Platform: PC
@@ -2013,7 +2013,7 @@ Your character is a student who holds the key to an ancient secret that threaten
 https://vikingfile.com/d/beBPGQ0wBi/990080.B20773316.CSF-Games4U.Org.part2.rar', 'https://youtu.be/1O6Qstncpnc?si=A2dgV723bYbgVSF8', '/uploads/bbb4cef8e18748d3b8b481471bd6a945.jpeg
 /uploads/a52121d4a45e4f93a068014ad1888b9c.jpg
 /uploads/17b54c460faa4bfeb0b2c1d200704afb.jpg
-/uploads/9bce99fd70684a64a3b987f6958251cf.jpg', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#bfdbfe', 0, 'game', '', '', '', '2026-06-18 23:42:57', 'GAME INFO
+/uploads/9bce99fd70684a64a3b987f6958251cf.jpg', 'Windows 10 64-bit', 'Intel Core i7-6700K', '16 GB RAM', 'GTX 1070 / RX 5700', '80 GB', '', '#bfdbfe', 0, 'game', '', '', '', '2026-06-18 23:42:57', 'GAME INFO
 Genre: Action, Adventure, RPG
 Developer: Avalanche Software
 Platform: PC
@@ -2048,7 +2048,7 @@ https://vikingfile.com/d/aCaLMCuzBR/fg-optional-bonus-content.bin
 https://vikingfile.com/d/v3CbZxsDhX/fg-selective-english.bin', 'https://youtu.be/rXMX4YJ7Lks?si=j0668sF9SPUrbBvu', '/uploads/334f1f7f14744b56b8c937a8db1fea3b.jpg
 /uploads/1984c8ecbf4341a28a93f5c0548d8140.jpg
 /uploads/698ee459af944eabbc8c59ecffcc0a21.jpg
-/uploads/4bf7f5e3c1464c9a957a7892ed001c59.jpg', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#fed7aa', 0, 'game', '', '', '', '2026-06-18 23:53:34', 'GAME INFO
+/uploads/4bf7f5e3c1464c9a957a7892ed001c59.jpg', 'Windows 10 64-bit', 'Intel Core i5-2500K', '8 GB RAM', 'GTX 970 / RX 570', '25 GB', '', '#fed7aa', 0, 'game', '', '', '', '2026-06-18 23:53:34', 'GAME INFO
 Genre: Action, Adventure
 Developer: FromSoftware
 Platform: PC
@@ -2068,7 +2068,7 @@ While Red Dead Redemption is undoubtedly a classic, its pricing strategy raises 
 /uploads/20fd3b51d0354577b36c1be4d97d6f5a.webp
 /uploads/4bc90dedc7c043509214f9a7a292584c.jpg
 /uploads/76134af76a284689bd1637cec7060ed1.jpg
-/uploads/b1f2e7c5663f4019b2a5c9fc831e85e2.jpg', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#dc2626', 0, 'game', '', '', '', '2026-06-18 23:59:36', 'GAME INFO
+/uploads/b1f2e7c5663f4019b2a5c9fc831e85e2.jpg', 'Windows 10 64-bit', 'Intel Core i7-4770K', '8 GB RAM', 'GTX 1060 / RX 580', '30 GB', '', '#dc2626', 0, 'game', '', '', '', '2026-06-18 23:59:36', 'GAME INFO
 Genre: Action
 Developer: Rockstar Games, Double Eleven
 Platform: PC
@@ -2161,7 +2161,7 @@ https://fuckingfast.co/e0pgh6pew2yn#fg-optional-bonus-osts.bin', 'https://youtu.
 /uploads/96420c72a2634fa9a4e7ea48056cd5d2.jpg
 /uploads/22acda0f23db437abd92eaa51ac80561.jpg
 /uploads/0533bd28bfa04489bd22f63223f0971f.webp
-/uploads/bb2d4d24ee9e4639a367af91c84c09ca.jpg', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#eab308', 0, 'game', '', '', '', '2026-06-19 00:03:47', 'GAME INFO
+/uploads/bb2d4d24ee9e4639a367af91c84c09ca.jpg', 'Windows 11 64-bit', 'Intel Core i7-6700K', '16 GB RAM', 'GTX 1660 / RX 5600 XT', '100 GB', '', '#eab308', 0, 'game', '', '', '', '2026-06-19 00:03:47', 'GAME INFO
 Genre: Simulation, Sports
 Developer: EA Canada & EA Romania
 Platform: PC
@@ -2174,7 +2174,7 @@ GAL GUN', '/uploads/39efb14966c844d29bb74cd67dc163e9.jpg', '', 'https://vikingfi
 https://vikingfile.com/d/uj7q8XZlDj/n546.ER-GameDrive.Org.part2.rar', 'https://youtu.be/5xy4n73WOMM?si=5CqX-4UOglF2BJdL', '/uploads/2a5d8b24f5f2407089d6032eb8149a2e.jpg
 /uploads/61397870ab1c4cfea9168c73de4a229d.webp
 /uploads/5cd6b9fc987f4e01ac9359df3cf53593.jpg
-/uploads/945d850867664972bde68d50a1504825.jpg', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#fed7aa', 0, 'game', '', '', '', '2026-06-19 00:07:54', 'GAME INFO
+/uploads/945d850867664972bde68d50a1504825.jpg', 'Windows 10 64-bit', 'Intel Core i5-7500', '16 GB RAM', 'GTX 970 / RX 570', '80 GB', '', '#fed7aa', 0, 'game', '', '', '', '2026-06-19 00:07:54', 'GAME INFO
 Genre: Racing
 Developer: Playground Games
 Platform: PC
@@ -2188,7 +2188,7 @@ https://vikingfile.com/d/6ZCPmDQkmC/21432456y5.ER-GameDrive.Org.part2.rar', 'htt
 /uploads/0c361748b9134abea88fa7fcf316593d.jpg
 /uploads/0a1c565516e24028b220e90d15b3fdc1.webp
 /uploads/e04c2c4fd49148ad9fbb3af3b4fcaefa.webp
-/uploads/7f803340669c4ab996cab8e306a8ca65.jpg', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#09090b', 0, 'game', '', '', '', '2026-06-19 00:12:10', 'Features
+/uploads/7f803340669c4ab996cab8e306a8ca65.jpg', 'Windows 10 64-bit', 'Intel Core i7-6700K', '16 GB RAM', 'GTX 1060 / RX 580', '80 GB', '', '#09090b', 0, 'game', '', '', '', '2026-06-19 00:12:10', 'Features
 In Hitman 3, the ruthless pro Agent 47 returns for the most important contracts of his career, where every kill changes the world. Embark on an exciting adventure in the World of Assassins and find out how the story of Agent 47 will end. Death awaits.
 Complete contracts around the world on thoughtful maps with countless possibilities. IOI’s legendary Glacier technology will immerse you in the world of Hitman 3, where the story is completely dependent on the player’s actions, and each playthrough is truly unique.
 Hitman 3 is a great excuse to play every part of the World of Assassins trilogy once again. If you already have Hitman 1 and Hitman 2, you can load levels into Hitman 3 from there for free, and your achievements from Hitman 2 will be copied to Hitman 3 immediately after the release of the new part.
@@ -2212,7 +2212,7 @@ https://vikingfile.com/d/Noho9Mh2tR/fg-optional-zombies-selective-english.bin', 
 /uploads/c0dea38b69b74099b32ef92827515053.jpg
 /uploads/3af0d8196d334221ac6b36c347ab69f8.webp
 /uploads/38d1719c3de54f44835dfd9665f0a103.webp
-/uploads/88d84f3871aa4cbeb881529a5b8655c0.jpg', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#09090b', 0, 'game', '', '', '', '2026-06-19 00:16:47', 'Features
+/uploads/88d84f3871aa4cbeb881529a5b8655c0.jpg', 'Windows 10 64-bit', 'Intel Core i5-750', '8 GB RAM', 'GTX 760 / HD 7870', '16 GB', '', '#09090b', 0, 'game', '', '', '', '2026-06-19 00:16:47', 'Features
 20 Vials of Liquid Divinium
 2 All-New Whimsical GobbleGums
 5 Zombies Pack-A-Punch Weapon Camos
@@ -2278,7 +2278,7 @@ https://fuckingfast.co/63al48un5a1d#fg-optional-history-video.bin', 'https://you
 /uploads/887b928471c14e01ac730742ba4535bd.jpg
 /uploads/b5e994ef76dd48a1836897079b95daf0.jpg
 /uploads/cf1f491815554180a63da67872a78e6f.jpg
-/uploads/b674db88de5d4ad393511ec1644cf23f.webp', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#09090b', 0, 'game', '', '', '', '2026-06-19 00:22:03', 'Features
+/uploads/b674db88de5d4ad393511ec1644cf23f.webp', 'Windows 10 64-bit', 'Intel Core i5-4460', '16 GB RAM', 'GTX 1060 / RX 580', '35 GB', '', '#09090b', 0, 'game', '', '', '', '2026-06-19 00:22:03', 'Features
 High octane stylized action – Featuring three playable characters each with a radically different stylish combat play style as they take on the city overrun with demons
 Groundbreaking graphics – Developed with Capcom’s in-house proprietary RE engine, the series continues to achieve new heights in fidelity with graphics that utilize photorealistic character designs and stunning lighting and environmental effects.
 Take down the demonic invasion – Battle against epic bosses in adrenaline fueled fights across the over-run Red Grave City all to the beat of a truly killer soundtrack.
@@ -2288,7 +2288,7 @@ INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_u
 https://vikingfile.com/d/ULLDJuMd1M/Optional-Bonus-Content.doi', 'https://youtu.be/Djtsw5k_DNc?si=rv2r6yPcpJmRLhIr', '/uploads/29b552e4db27487aa7031d135d690f64.png
 /uploads/8c8f9ddaefdf4746b6047c9f32d0b9e0.webp
 /uploads/5ddf7b8aabec483fb441287b0eeb38cc.jpg
-/uploads/d294b1672ab7422394d904cc65d0b7c3.jpg', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#1d4ed8', 0, 'game', '', '', '', '2026-06-19 00:28:29', 'GAME INFO
+/uploads/d294b1672ab7422394d904cc65d0b7c3.jpg', 'Windows 11 64-bit', 'Intel Core i7-10700K', '16 GB RAM', 'RTX 2060 / RX 5700 XT', '60 GB', '', '#1d4ed8', 0, 'game', '', '', '', '2026-06-19 00:28:29', 'GAME INFO
 Genre: Action, RPG
 Developer: FromSoftware, Inc.
 Platform: PC
@@ -2305,7 +2305,7 @@ https://ffdl.cybar.to/1yimpwsa8t1a', 'https://youtu.be/D4Q_XYVescc?si=odRQfW4EQT
 /uploads/f2eaea5ee8e0487cb8837e8fd419044f.webp
 /uploads/104c4059c4234eadba76c22bcefe6be3.webp
 /uploads/e6fd8a902812413b967e1fc837a86635.webp
-/uploads/bd368425fdc94c30b5d8de8335ee876c.jpg', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#27272a', 0, 'game', '', '', '', '2026-06-19 00:35:53', 'GAME INFO
+/uploads/bd368425fdc94c30b5d8de8335ee876c.jpg', 'Windows 10 64-bit', 'Intel Core i5-2400S', '12 GB RAM', 'GTX 1060 6GB / RX 580', '90 GB', '', '#27272a', 0, 'game', '', '', '', '2026-06-19 00:35:53', 'GAME INFO
 Genre: Action
 Developer: Sledgehammer Games, Raven Software
 Platform: PC
@@ -2363,7 +2363,7 @@ https://download2435.mediafire.com/x7xyuewf7x7gHSoRYSDL3vlly0-YHv-9eTMLbgJAdDnnl
 /uploads/419dd2d6ddd24b5bbaa5247c2de124c3.webp
 /uploads/53e60ac8c46c4b4d95e4a5c35cec2b6e.jpg
 /uploads/6453be7c1a4841a895d645952ed07785.webp
-/uploads/4c1f215ede534adf928faf9ce8107b04.webp', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#b91c1c', 0, 'game', '', '', '', '2026-06-19 00:51:35', '', '', '', '', '', '', '', '') ON CONFLICT (id) DO NOTHING;
+/uploads/4c1f215ede534adf928faf9ce8107b04.webp', 'Windows 11 64-bit', 'Intel Core i7-6700K', '16 GB RAM', 'GTX 1660 / RX 5600 XT', '50 GB', '', '#b91c1c', 0, 'game', '', '', '', '2026-06-19 00:51:35', '', '', '', '', '', '', '', '') ON CONFLICT (id) DO NOTHING;
 INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (111, 'TEKKEN 8', 'Action', 4.5, 0, 'GET READY FOR THE NEXT CHAPTER IN THE LEGENDARY FIGHTING GAME FRANCHISE, TEKKEN 8.
 
 Completely redesigned character visuals. Elaborate, highly-detailed models built from the ground and high-fidelity graphics break the limits of new-generation hardware by adding a new weight and atmosphere to TEKKEN’s signature battles. Vivid environments and destructible stages combine to create an overwhelming sense of immersion, creating the ultimate play experience. Cursorblade
@@ -2377,7 +2377,7 @@ https://ffdl.cybar.to/64nduqv8wiy5
 https://ffdl.cybar.to/m9g5go4s5ply', 'https://youtu.be/2hPuRQz6IlM?si=ABwhugio6rKBciFg', '/uploads/d88b2862a66a4056ae11fc991385971b.png
 /uploads/aab098be2dc244caaec3eff750b076fd.webp
 /uploads/701f8269e5614c9bb060be398b85878c.webp
-/uploads/c750ecb2b4f6497093c3cdc2d6fea0a3.jpg', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#27272a', 0, 'game', '', '', '', '2026-06-19 01:08:35', 'GAME INFO
+/uploads/c750ecb2b4f6497093c3cdc2d6fea0a3.jpg', 'Windows 10 64-bit', 'Intel Core i7-7700K', '16 GB RAM', 'GTX 1060 / RX 580', '80 GB', '', '#27272a', 0, 'game', '', '', '', '2026-06-19 01:08:35', 'GAME INFO
 Genre: Action
 Developer: Bandai Namco Studios Inc.
 Platform: PC
@@ -2400,7 +2400,7 @@ https://ffdl.cybar.to/zcuadsgeecn7
 https://ffdl.cybar.to/8xu3rr06dofr', 'https://youtu.be/bH1lHCirCGI?si=7hd9KE49bVvP9p_U', '/uploads/8ede6fcaf7f44acf8840cd213d79f031.jpg
 /uploads/1b3d499fae1644d2810af91cb4e63514.webp
 /uploads/ceee83fae6594045aad127b1d402fd9a.webp
-/uploads/90e0770000c14456a66da2aeb3dfe002.webp', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#3f3f46', 0, 'game', '', '', '', '2026-06-19 01:31:11', 'GAME INFO
+/uploads/90e0770000c14456a66da2aeb3dfe002.webp', 'Windows 10 64-bit', 'Intel Core i7-4770K', '16 GB RAM', 'GTX 1060 6GB / RX 590', '175 GB', '', '#3f3f46', 0, 'game', '', '', '', '2026-06-19 01:31:11', 'GAME INFO
 Genre: Action
 Developer: Infinity Ward, Beenox, High Moon Studios, Raven Software
 Platform: PC
@@ -2453,7 +2453,7 @@ https://fuckingfast.co/d1jqcjtvaiyd#fg-optional-bonus-soundtracks.bin', 'https:/
 /uploads/b402f844a6bb401e94ee2b484700c787.webp
 /uploads/d8c8bdda1a874361bf5afa5403c0a58a.jpg
 /uploads/316fd0b109eb4509b581ea3cfc82ea7f.jpg
-/uploads/f0039d0811d94459ac4eb42ff5fab2e7.jpg', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#09090b', 0, 'game', '', '', '', '2026-06-19 13:04:42', 'Repack Features
+/uploads/f0039d0811d94459ac4eb42ff5fab2e7.jpg', 'Windows 10 64-bit', 'Intel Core i7-6700K', '16 GB RAM', 'GTX 1060 / RX 580', '40 GB', '', '#09090b', 0, 'game', '', '', '', '2026-06-19 13:04:42', 'Repack Features
 Based on Steam BuildID 10792091 release: 35.7 GB
 2 Bonus OSTs (JUDGE EYES & LOST JUDGMENT ORIGINAL SOUND TRACK & Original Soundtrack, 560 MB) added, thanks to SittingOnClouds!
 Russian localization by “The Miracle” (292 MB) is available in “_Russian_Localization” folder after installation
@@ -2475,7 +2475,7 @@ At least 4 GB of free RAM (inc. virtual) required for installing this repack', '
 INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (114, 'Need for Speed Most Wanted Limited Edition', 'Racing', 4.5, 0, 'The open-world action in Need for Speed Most Wanted gives you the freedom to drive your way. Hit jumps and shortcuts, switch cars, lie low, or head for terrain that plays to your vehicle’s unique strengths. Fight your way past cops and rivals using skill, high-end car tech, and tons of nitrous. It’s all about you, your friends, and a wild selection of cars. Let’s see what you can do. Experience nonstop action — No menus, no lobbies, and no restrictions — just intense competition.', '/uploads/fa8fc4eeec494d6aaedaea3256850064.jpg', '', 'https://vikingfile.com/d/WFqbGG1Zp5/rt25797.ER-GameDrive.Org.rar', 'https://youtu.be/L7eHnAS3BDE?si=IGhddRjtkwxeG9_y', '/uploads/89e7b2d90dc140f6b3937e6e3b267068.webp
 /uploads/99a961c75dfd468f8b1430999702b7ff.webp
 /uploads/c2ef4c3ef50d41bd97434d15842009f3.webp
-/uploads/bd3ab842d4434bc79b3ec66a3385db63.jpg', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#ffffff', 0, 'game', '', '', '', '2026-06-19 13:25:09', 'GAME INFO
+/uploads/bd3ab842d4434bc79b3ec66a3385db63.jpg', 'Windows 10 64-bit', 'Intel Core i5-2500K', '8 GB RAM', 'GTX 760 / RX 570', '20 GB', '', '#ffffff', 0, 'game', '', '', '', '2026-06-19 13:25:09', 'GAME INFO
 Genre: Action, Adventure, Racing
 Developer: Criterion Games
 Platform: PC
@@ -2492,7 +2492,7 @@ https://vikingfile.com/d/Uu4bCB35Ll/dfgii.ER-GameDrive.Org.part2.rar', 'https://
 /uploads/7028f1a7861d4ffeae6a687009fdddda.webp
 /uploads/e4f91f5b1d8a4183bf6fd37e9a4ed8e2.jpg
 /uploads/810e14855fab4b1185058b7b04414459.jpg
-/uploads/84cedad05b56431fa82e7addf1808cbf.webp', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#3b82f6', 0, 'game', '', '', '', '2026-06-19 13:33:50', 'GAME INFO
+/uploads/84cedad05b56431fa82e7addf1808cbf.webp', 'Windows 10 64-bit', 'Intel Core i5-2500K', '8 GB RAM', 'GTX 780 / RX 570', '40 GB', '', '#3b82f6', 0, 'game', '', '', '', '2026-06-19 13:33:50', 'GAME INFO
 Genre: Action
 Developer: NetherRealm Studios, QLOC, Shiver
 Platform: PC
@@ -2510,7 +2510,7 @@ Survive as a Team: Play a variety of multiplayer modes as Lara’s Shipmates or 
 /uploads/c4c1858478d8408bb165430fd8d3fb2e.jpg
 /uploads/5254b993ed124f4d8e34366293eddccb.jpg
 /uploads/e390a3ebf0094d7582af010e97fbced4.jpg
-/uploads/8d5c1f0d23474e8a98faade7325208c5.jpg', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#52525b', 0, 'game', '', '', '', '2026-06-19 13:39:40', 'GAME INFO
+/uploads/8d5c1f0d23474e8a98faade7325208c5.jpg', 'Windows 10 64-bit', 'Intel Core i5-2500K', '8 GB RAM', 'GTX 660 / HD 7870', '22 GB', '', '#52525b', 0, 'game', '', '', '', '2026-06-19 13:39:40', 'GAME INFO
 Genre: Action, Adventure
 Developer: Crystal Dynamics, Eidos-Montréal, Feral Interactive (Mac), Nixxes
 Platform: PC
@@ -2522,7 +2522,7 @@ INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_u
 /uploads/4ac3aa11a43b4c82b6d604a1d1e814f2.jpg
 /uploads/23ce9d325ed14e9099cbe46d5a3ae643.webp
 /uploads/2716e556276a4eb98cb9b2594b7082f8.jpg
-/uploads/ed973050e6dc46f29e12e05151220912.jpg', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#09090b', 0, 'game', '', '', '', '2026-06-19 13:45:58', 'GAME INFO
+/uploads/ed973050e6dc46f29e12e05151220912.jpg', 'Windows 10 64-bit', 'Intel Core i5-6600K', '8 GB RAM', 'GTX 1060 / RX 580', '50 GB', '', '#09090b', 0, 'game', '', '', '', '2026-06-19 13:45:58', 'GAME INFO
 Genre: Action, RPG
 Developer: Square Enix
 Platform: PC
@@ -2535,7 +2535,7 @@ INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_u
 /uploads/6e0e0551188f4c9889d865ad31007708.jpg
 /uploads/e16de2a39b684e3f816a7f54541b6975.jpg
 /uploads/92f0e46204174537828e5d693218022e.webp
-/uploads/28402b6d4d2848c3a62d3a305b5c48d0.webp', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#fed7aa', 0, 'game', '', '', '', '2026-06-19 13:51:06', 'Features
+/uploads/28402b6d4d2848c3a62d3a305b5c48d0.webp', 'Windows 10 64-bit', 'Intel Core i5-2500K', '8 GB RAM', 'GTX 760 / RX 570', '20 GB', '', '#fed7aa', 0, 'game', '', '', '', '2026-06-19 13:51:06', 'Features
 A mature, gritty undercover cop drama where a wrong decision can blow your cover at any time.
 Explosive action fuelled by a seamless mix of deadly martial arts, intense gunfights and brutal takedowns.
 Epic high-speed thrills: Burn up the streets or tear up the sea in a vast array of exotic cars, superbikes and speedboats.
@@ -2546,7 +2546,7 @@ When the gauge is completely filled, the guard of these characters will break an
 /uploads/a45754d9a97a459484170068c4bd5e6e.jpg
 /uploads/3538e72657234460b78aab456132ebe6.webp
 /uploads/328867945c8244aabf1325ede8d57603.png
-/uploads/4648cbb2449242498d1c0b62334a513a.webp', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#b91c1c', 0, 'game', '', '', '', '2026-06-19 13:57:00', 'GAME INFO
+/uploads/4648cbb2449242498d1c0b62334a513a.webp', 'Windows 10 64-bit', 'Intel Core i7-6700K', '16 GB RAM', 'GTX 1060 / RX 580', '20 GB', '', '#b91c1c', 0, 'game', '', '', '', '2026-06-19 13:57:00', 'GAME INFO
 Genre: Action, Casual, Indie
 Developer: Sloclap
 Platform: PC
@@ -2596,7 +2596,7 @@ https://fuckingfast.co/5uv77lr14ttl#fg-optional-japanese-videos.part2.rar
 https://fuckingfast.co/91ftk5mb559d#fg-optional-japanese-videos.part3.rar', 'https://youtu.be/gV5rIW1Qums?si=Q8lGQHJl66bnoxX3', '/uploads/98a29d0cd6144b828bf4c174895b5a13.webp
 /uploads/1997ad655e7344bbb16dd415ebc3de8a.png
 /uploads/2582334f1e59489295e4eaec554cf15b.jpg
-/uploads/ed690712ae0e48059c1f49c42c6ea113.webp', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#09090b', 0, 'game', '', '', '', '2026-06-19 14:05:31', 'GAME INFO
+/uploads/ed690712ae0e48059c1f49c42c6ea113.webp', 'Windows 11 64-bit', 'Intel Core i7-10700K', '16 GB RAM', 'RTX 2060 / RX 5700 XT', '170 GB', '', '#09090b', 0, 'game', '', '', '', '2026-06-19 14:05:31', 'GAME INFO
 Genre: Action, RPG
 Developer: Square Enix
 Platform: PC
@@ -2623,7 +2623,7 @@ https://fuckingfast.co/evxwakdzpjfw#Solo_Leveling_ARISE_OVERDRIVE_--_fitgirl-rep
 /uploads/1c9fca6edfc44cae88fa7fd385967689.jpeg
 /uploads/3b5b527fb3c94320980c51c01f87959b.jpg
 /uploads/0a00d88f81454c2f9c500fb73b1604fc.jpg
-/uploads/5a3183ce066647acb2cacca15d8977d8.webp', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#3b82f6', 0, 'game', '', '', '', '2026-06-23 01:33:05', 'Based on Solo.Leveling.ARISE.OVERDRIVE-RUNE ISO release: rune-solo.leveling.arise.overdrive.iso (41,400,958,976 bytes)
+/uploads/5a3183ce066647acb2cacca15d8977d8.webp', 'Windows 11 64-bit', 'Intel Core i7-10700K', '16 GB RAM', 'RTX 2060 / RX 5700 XT', '80 GB', '', '#3b82f6', 0, 'game', '', '', '', '2026-06-23 01:33:05', 'Based on Solo.Leveling.ARISE.OVERDRIVE-RUNE ISO release: rune-solo.leveling.arise.overdrive.iso (41,400,958,976 bytes)
 Game version: v1.1.89; DLCs are NOT working atm
 The game must be installed to a short path, like “D:\SL” to avoid issues related to long filenames
 100% Lossless & MD5 Perfect: all files are identical to originals after installation
@@ -2651,7 +2651,7 @@ https://vikingfile.com/d/Rlo0b7Fmlm/2239550.B10340675-GameDrive.Org.part2.rar', 
 /uploads/7579b68cb8cd4441a1a0e1045fb47375.jpg
 /uploads/63536d701333454a93f97f9374a43d6b.jpg
 /uploads/bf2677fc53344ce3900ec5cea2710d09.jpg
-/uploads/396ce46247974adb8df11cacc82282f9.jpg', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#0ea5e9', 0, 'game', '', '', '', '2026-06-23 01:39:10', 'ased On my own Steam Files + Electrical_Exit + Alex ASSR + skystar
+/uploads/396ce46247974adb8df11cacc82282f9.jpg', 'Windows 10 64-bit', 'Intel Core i7-6700K', '16 GB RAM', 'GTX 1070 / RX 5700', '45 GB', '', '#0ea5e9', 0, 'game', '', '', '', '2026-06-23 01:39:10', 'ased On my own Steam Files + Electrical_Exit + Alex ASSR + skystar
 
 Steam Version
 
@@ -2670,7 +2670,7 @@ https://akirabox.com/RMKGJwpn1m1o/file', 'https://youtu.be/H2Y8XCe7F9E?si=5j-hHc
 /uploads/15bb4a1d1aaf4140922600fd977cee48.jpg
 /uploads/a7537190dacb45b684d5bdb40c2c857f.jpg
 /uploads/0fa93c2a1c6a4a28963bf9881fc9a309.webp
-/uploads/7291778a365f4a1c8cd3a3a8a4744b97.jpg', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#84cc16', 0, 'game', '', '', '', '2026-06-23 01:48:35', 'Repack Features
+/uploads/7291778a365f4a1c8cd3a3a8a4744b97.jpg', 'Windows 11 64-bit', 'Intel Core i7-10700K', '16 GB RAM', 'RTX 2060 / RX 5700 XT', '120 GB', '', '#84cc16', 0, 'game', '', '', '', '2026-06-23 01:48:35', 'Repack Features
 Updated to version 1.0.8.2549 (12.12.2024).
 
 Upload size / to download: 30680MB
@@ -2697,11 +2697,11 @@ Paste the files into the folder. When prompted, click Replace / Yes to All.', '/
 https://ffdl.cybar.to/2d6u8xnwcaqx
 https://akirabox.com/gXeGOBvnNzAa/file', 'https://youtu.be/POz1-EmLsTY?si=FjgiD2a0H6MQpzqu', '/uploads/7bc129bd6dc14949b4145f8480d35bd6.webp
 /uploads/b74c2eefd77044e39ccf4ee7e6577a9b.webp
-/uploads/732a67add579491e9f0bee5228d4f40e.webp', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#09090b', 0, 'game', '', '', '', '2026-06-28 00:18:01', '', '', '', '', '', '', '', '') ON CONFLICT (id) DO NOTHING;
+/uploads/732a67add579491e9f0bee5228d4f40e.webp', 'Windows 11 64-bit', 'Intel Core i7-10700K', '16 GB RAM', 'RTX 2060 / RX 5700 XT', '80 GB', '', '#09090b', 0, 'game', '', '', '', '2026-06-28 00:18:01', '', '', '', '', '', '', '', '') ON CONFLICT (id) DO NOTHING;
 INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (125, 'DEATH STRANDING 2', 'Action, Adventure', 4.5, 0, 'Download Death Stranding 2: On the Beach (PC) – free full game. Join Sam, Fragile, and a new cast of companions on an epic mission to save humanity. Use the direct download from the ElAmigos repack to explore massive open worlds in Australia and Mexico, featuring visceral combat, advanced infrastructure building, and the complete 2026 PC features including DualSense support and enhanced performance.', '/uploads/0c234afce87c402ebc3a88d49daaff26.webp', '', 'https://vikingfile.com/d/aua0CdxxXO/DC2.ER-GameDrive.Org.part1.rar
 https://vikingfile.com/d/TY10qpswHY/DC2.ER-GameDrive.Org.part2.rar', 'https://youtu.be/etOOO9Sq7u8?si=oDtooQzfuYz49mVm', '/uploads/8a38f416d0a449efb1366ecac9b47b86.webp
 /uploads/abc7ce05e4054f72918c53a7bc0015b3.jpg
-/uploads/b9ef90ea9eba4cb6a70c45d01225eee5.webp', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#a5f3fc', 0, 'game', '', '', '', '2026-06-28 00:23:49', 'Repack Features
+/uploads/b9ef90ea9eba4cb6a70c45d01225eee5.webp', 'Windows 11 64-bit', 'Intel Core i7-10700K', '16 GB RAM', 'RTX 2060 / RX 5700 XT', '80 GB', '', '#a5f3fc', 0, 'game', '', '', '', '2026-06-28 00:23:49', 'Repack Features
 game is already cracked after installation (crack by Codex/Rune). Updated to version 1.0.48 (19.03.2026).
 DLC: Digital Deluxe Edition, Pre-Purchase Bonus Content, Soundtrack.
 
@@ -2719,7 +2719,7 @@ Set a few years after the horrifying events in the critically acclaimed Resident
 /uploads/79a657bf081848d8b21a22c4f9e8329e.webp
 /uploads/0c372bc6dbab49e7acd10433e73ff69a.jpg
 /uploads/c584551cdeea4a088dd21853f448fdb5.jpg
-/uploads/f1795ca359f9404b8dbde88fb7edb308.jpg', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#18181b', 0, 'game', '', '', '', '2026-06-28 00:28:02', 'Repack Features
+/uploads/f1795ca359f9404b8dbde88fb7edb308.jpg', 'Windows 10 64-bit', 'Intel Core i7-8700K', '16 GB RAM', 'GTX 1070 / RX 5700', '40 GB', '', '#18181b', 0, 'game', '', '', '', '2026-06-28 00:28:02', 'Repack Features
 game is already cracked after installation (crack by Codex/Rune or FLT). Updated till 10.04.2023;
 included DLC: Winters Expansion, Street Wolf Outfit, Survival Resources Pack, Mr. Raccoon Weapon Charm, Extra Content Shop All Access Voucher, Trauma Pack, Soundtrack (mp3).
 Upload size / to download: 24717MB
@@ -2732,7 +2732,7 @@ INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_u
 https://vikingfile.com/d/cFMBqnmRxO/3681010.ER-GameDrive.Org.part2.rar', 'https://youtu.be/CJf3dQ4ZQLY?si=Qksb4IzzrLQMPwwY', '/uploads/17023e6ce9fe4d73add073d2a4bc7e2e.webp
 /uploads/44f82ef198e0402383b419db1c291124.webp
 /uploads/483a11c9b6a240b6b4b017834e38bbd4.webp
-/uploads/6b32cfe274ac4b548c8ce5d8ab7dee8b.webp', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#3b82f6', 0, 'game', '', '', '', '2026-06-28 00:31:33', 'Repack Features
+/uploads/6b32cfe274ac4b548c8ce5d8ab7dee8b.webp', 'Windows 10 64-bit', 'Intel Core i7-4770K', '16 GB RAM', 'GTX 1060 / RX 580', '40 GB', '', '#3b82f6', 0, 'game', '', '', '', '2026-06-28 00:31:33', 'Repack Features
 game is already cracked after installation (crack by Codex/Rune or Tenoke). Updated to version 1.03 (06.02.2026).
 DLC: Hellfire Equipment Set, Scampuss Furball Netsuke Charm, Hellfrost Equipment Set, Infernal Weapons Set, Kodama Netsuke Charm, Season Pass, Chijiko Netsuke Charm, Kusanagi Netsuke Charm, Youngblood Armor, Lone Wolf’s Armor.
 
@@ -2745,7 +2745,7 @@ Dubbing/Audio: English, Japanese', '', '', '', '', '', '', '') ON CONFLICT (id) 
 INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (128, 'Samson', 'Action', 4.5, 0, 'Download Samson Elamigos Repack (PC) – free full game. Return to the gritty, unforgiving streets of Tyndalston in this high-stakes narrative action game where every decision carries a heavy price. Use the direct download to step into the boots of Samson as he navigates a city designed to break him, earning every escape through brutal combat and desperate maneuvers. With dangerous debt collectors holding his sister’s life in the balance, you must outrun the clock and outfight the underworld, proving that the only way out is to tear through the very people trying to keep you down in this intense story of survival and sacrifice.', '/uploads/7eace31d724c44de98d20b75ba5cebbe.webp', '', 'https://ffdl.cybar.to/a6ljwwgh64u3', 'https://youtu.be/Qh1qeHWYrbo?si=EEmAiX0RB3YgCVp8', '/uploads/a45cd86cbf864342a66950ef5804da1a.webp
 /uploads/e96713d1d433444299f2c860aa630573.jpg
 /uploads/7312a479fa2147a3b31a65aafcca8b5b.png
-/uploads/2fe0a3fb7d5049d0a7f24075932e8002.webp', 'Windows 10/11 64-bit', 'Intel Core i5-8400', '16 GB RAM', 'GTX 1060 / RX 580', '45 GB available', '', '#09090b', 0, 'game', '', '', '', '2026-06-28 00:35:22', 'game is already cracked after installation (crack by Codex/Rune). Updated till 06.05.2026.
+/uploads/2fe0a3fb7d5049d0a7f24075932e8002.webp', 'Windows 10 64-bit', 'Intel Core i7-4770K', '16 GB RAM', 'GTX 1060 / RX 580', '15 GB', '', '#09090b', 0, 'game', '', '', '', '2026-06-28 00:35:22', 'game is already cracked after installation (crack by Codex/Rune). Updated till 06.05.2026.
 
 Upload size / to download: 10953MB
 ISO image size: 10953MB
@@ -2753,6 +2753,239 @@ Number of compressions: only one
 Data recovery: none
 Languages: English, French, Italian, German, Spanish, Turkish
 Dubbing/Audio: English', '', '', '', '', '', '', '') ON CONFLICT (id) DO NOTHING;
+INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (129, 'FIFA 22 (2021) ALL DLC', 'Sports', 4.5, 0, 'About
+Powered by Football™, EA SPORTS™ FIFA 22 brings the game even closer to the real thing with fundamental gameplay advances and a new season of innovation across every mode.', '/uploads/efc91b0327aa411b88b9a772b8bdf63d.jpeg', '', 'https://vikingfile.com/d/B2ij00bgdY/1506830-Games4U.Org.part1.rar
+https://vikingfile.com/d/0gm2SbAmb4/1506830-Games4U.Org.part2.rar', 'https://youtu.be/SYsi5QuOJNE?si=Gl_v70sQhJPrHdxq', '/uploads/622853dda3b943d39af306e93dc60780.jpg
+/uploads/d706cf84255a4c4498e3865fdb83007e.jpg
+/uploads/b96f77e13e3043c9804238250390ec31.webp
+/uploads/08e1d8edadcc41de9bc174dcc84b59c4.jpg', 'Windows 11 64-bit', 'Intel Core i7-6700K', '16 GB RAM', 'GTX 1660 / RX 5600 XT', '100 GB', '', '#0ea5e9', 0, 'game', '', '', '', '2026-06-30 22:22:59', 'Gameplay Features
+FIFA 22 includes:
+
+Career Mode: Player and manager career options with enhanced customization and progression 
+Dexerto
+Dexerto
+.
+Ultimate Team: Free-to-play mode with optional microtransactions to build squads 
+Dexerto
+Dexerto
+.
+VOLTA Football: Street football mode with unique gameplay and soundtrack 
+Fandom
+Fandom
+.
+Pro Clubs: Online team-based mode.
+Offline Modes: Kick-Off, Career Mode, and Tournaments are playable without an internet connection 
+Dexerto
+Dexerto
+.
+Crossplay: Partial crossplay is supported between same-generation consoles 
+Dexerto
+Dexerto
+.
+Content and Sc', '', '', '', '', '', '', '') ON CONFLICT (id) DO NOTHING;
+INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (130, 'Days Gone Remastered', 'Action, Horror', 4.5, 0, 'About
+Fight to survive in the definitive Days Gone experience. Face off against hordes of Freakers in the harsh reality of the Farewell Wilderness.', '/uploads/1a87ca1a2afe463b9a91e030b375fc8c.jpg', '', 'https://vikingfile.com/d/7itD2nOFof/050440.DR-GameDrive.Org.rar
+https://vikingfile.com/d/Koa1hDB0AO/Polish.doi', 'https://youtu.be/FKtaOY9lMvM?si=n181ipTpoED0YPDd', '/uploads/3473ed5851b94a12ad824861cbab1711.jpg
+/uploads/06bf52a1d5d54195a0fff1f0c3129445.jpg
+/uploads/155dd87986b147d183590488d2e9d05a.jpg', 'Windows 10 64-bit', 'Intel Core i7-4770K', '16 GB RAM', 'GTX 1060 / RX 580', '70 GB', '', '#16a34a', 0, 'game', '', '', '', '2026-06-30 22:45:05', 'Repack Features
+Based on : Days.Gone.Broken.Road-RUNE ISO Release
+Game Version: v1.08
+DLC: Broken Road DLC
+Language :
+–Text: English, French, German, Italian, Spanish – Spain, Polish, Russian, Portuguese – Brazil, Portuguese – Portugal, Arabic, Spanish – Latin America, Danish, Dutch, Finnish, Norwegian, Swedish, Hungarian, Czech, Turkish, Greek, Korean, Simplified Chinese, Traditional Chinese
+– Audio: English, French, German, Italian, Spanish – Spain, Polish, Russian, Portuguese – Brazil, Portuguese – Portugal, Arabic, Spanish – Latin America
+– Language can be changed in game settings
+– English Language is enabled by default
+Selective Download Feature : you can skip downloading and installing Language Packs you don’t need
+– English Language is enabled by default, not optional
+Repack Size : From 22.5 GB
+Final Size : 63 GB
+Lossless repack : Nothing removed OR re-encoded
+Install Time : 3 – 15 mins
+Greetings : Razor12911, KaOsKrew
+Repack By DODI', '', '', '', '', '', '', '') ON CONFLICT (id) DO NOTHING;
+INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (131, 'Horizon Zero Dawn', 'Action, RPG, Adventure, Survival', 4.5, 0, 'Experience the critically acclaimed Horizon Zero Dawn™ with stunning new visuals and upgraded features. In a far future where colossal machines roam the Earth, pockets of humanity survive in unique tribes among the lush, overgrown ruins of our long-lost civilization.', '/uploads/4d58d448676e41ee9dba403ff0900331.jpg', '', 'https://vikingfile.com/d/os0Cva8RFM/101iupp.ER-GameDrive.Org.part1.rar
+https://vikingfile.com/d/f26L2EwMcw/101iupp.ER-GameDrive.Org.part2.rar', 'https://youtu.be/u4-FCsiF5x4?si=EhVM9ibJhRap20u1', '/uploads/83f9bd1194cb423aa42fe8f0406c2737.jpg
+/uploads/33685bd57a94453bbbff474794f8eaca.jpg
+/uploads/b80df18ad72f4443885fb057a466f4c7.jpg', 'Windows 10 64-bit', 'Intel Core i7-6700K', '16 GB RAM', 'GTX 1060 / RX 580', '100 GB', '', '#0ea5e9', 0, 'game', '', '', '', '2026-06-30 23:20:10', 'Repack Features
+game is already cracked after installation (crack by Codex/Rune). Updated to version 1.4.63 (12.12.2024).
+Ultrawide movies were replaced with standard 16:9 equivalents (release is 8GB smaller in this way).
+
+Upload size / to download: 70854MB
+ISO image size: 70854MB
+ISO image size with only English audio language: 64999MB (63.48GB)
+Number of compressions: only one
+Data recovery: none
+Languages: English, French, Italian, German, Spanish, Spanish (Mexico), Polish, Russian, Danish, Dutch, Portuguese, Portuguese-Brazil, Finnish, Swedish, Norwegian, Arabic, Japanese, Korean, Chinese Simplified, Chinese Traditional
+Dubbing/Audio: English, French, German, Spanish, Polish', '', '', '', '', '', '', '') ON CONFLICT (id) DO NOTHING;
+INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (132, 'Horizon Forbidden', 'Action, RPG, Adventure, Survival', 4.5, 0, 'About
+Experience the epic Horizon Forbidden West™ in its entirety with bonus content and the Burning Shores expansion included. The Burning Shores add-on contains additional content for Aloy’s adventure, including new storylines, characters, and experiences in a stunning yet hazardous new area.', '/uploads/a9aa51397c644b27b38c35f01813c0f3.jpg', '', 'https://vikingfile.com/d/fUSN2uhsJM/10wqwqwq.ER-GameDrive.Org.part1.rar
+https://vikingfile.com/d/guElaQxgBw/10wqwqwq.ER-GameDrive.Org.part2.rar', 'https://youtu.be/Lq594XmpPBg?si=RCuYiWQngkcGcVrZ', '/uploads/c3944382b2704f87915a9ca775531b3a.webp
+/uploads/c5caabc0070042f2850b7408dbf77bdf.jpg
+/uploads/788735149c6a4b40aba2a5cbab35e4e9.webp
+/uploads/bcfa74c11281438785aacc3b8b81c9e5.jpg
+/uploads/961cf9ab0d4544e4b7ab89f404c2ed9b.webp', 'Windows 11 64-bit', 'Intel Core i7-10700K', '16 GB RAM', 'RTX 2060 / RX 5700 XT', '100 GB', '', '#3b82f6', 0, 'game', '', '', '', '2026-06-30 23:22:27', 'Repack Features
+game is already cracked after installation (crack by Codex/Rune). Updated to version 1.0.37 (21.03.2024).
+DLC: Pre-purchase Entitlements, Soundtrack (mp3), Artbook.
+Upload size / to download: 98200MB
+ISO image size: 98200MB
+ISO image size with only English audio language: 89474MB (87.38GB)
+Number of compressions: only one
+Data recovery: none
+Languages: English, French, Italian, German, Spanish, Spanish (Mexico), Polish, Russian, Portuguese, Portuguese-Brazil, Czech, Greek, Hungarian, Turkish, Danish, Dutch, Finnish, Swedish, Norwegian, Arabic, Japanese, Korean, Chinese Simplified, Chinese Traditional, Thai
+Dubbing/Audio: English, French, German, Spanish, Polish', '', '', '', '', '', '', '') ON CONFLICT (id) DO NOTHING;
+INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (133, 'FIFA 19', 'Sports', 4.5, 0, 'Story
+The story starts out with Alex Hunter, his half-sister Kim, and Danny Williams watching a video of Hunter’s grandfather, Jim Hunter, scoring his 100th career goal for his club in a First Division match at Coventry City. Prior to that (as the calendar flashes back to previous months), they train with their respective teams for the pre-season friendly tournament which is being held in Japan, where in semifinals Danny faces Club América, and Alex is playing against Juventus, who has Cristiano Ronaldo and a mysterious defender (who, in twist of events, is Danny’s brother Terry Williams) – ending with Alex and Danny’s teams facing each other in the tournament’s final (or third place match if Danny’s team loses). After it, Toro says to Alex that he never received his apology. Alex either apologizes and reconciles with his former friends, with Li-Li suggesting that they go to eat some sushi, or either becomes Toro’s arch-rival, with Li-Li explaining that Alex is just not hanging on with Toro, who is looking forward to face Alex in the next game. Kim Hunter trains with the USWNT and forms a partnership with Alex Morgan. Alex Hunter later meets with Beatriz Villanova, the football agent that contacted him at the end of the previous journey – promising to make Alex an icon in world football. She keeps her promise and tells Alex that Real Madrid have offered him a 5-year contract, which he accepts and heads over to Spain to his new club. Alex is yet to make his Champions League debut and gets help from various mentors in the team to help him boost his stats.
+
+Alex and Danny play in the Champions League group stage matches. Alex’s group include Tottenham Hotspur or Manchester United (Hunter faces Manchester United if his Premier League club previously was Tottenham Hotspur; Hunter faces Tottenham Hotspur if he didn’t choose that club in previous games), Olympique de Marseille and Sporting CP while Danny’s group involves his brother Terry’s team Paris Saint-Germain (he moved there from Juventus in the transfer window), Ajax and Shakhtar Donetsk. Both Alex and Danny’s teams make it out of their groups and are drawn at opposite ends of the bracket. By this point Alex has become increasingly caught up in his brand and sponsor duties from his agents demands and the increasing fame is starting to drive a wedge between his family. This is further seen when Kim comes to visit Alex before the World Cup and Alex does not go to pick her up from the airport due to him being too busy with his new clothing brand, much to both Kim and his mother’s dismay. Due to this, Alex is dropped from both the starting XI and substitutes before the second-leg of the first knockout round in the Champions League against Borussia Dortmund, meaning he has to fight his way back to the starting lineup to regain his manager’s trust. At the same time Danny is also having agent issues as his friend Ringo and his agent Michael which results in both agents having an argument over Danny wanting a new house or not, with the player given a choice as to which person he sides with. Alex and Beatriz then go to visit Kim before the first Women’s World Cup knockout game and Beatriz, having been impressed by Kim’s abilities, tells her that she should go pro and not go to college. Back in the Champions League, Alex faces Juventus in the quarterfinal and Manchester United or Manchester City in the semifinal (Hunter only faces Manchester United if his Premier League club previously was Manchester City; Hunter faces Manchester City if he didn’t choose that club in previous games) and Danny faces A.S. Roma in the round of 16, Bayern Munich in quarterfinal and once again, his brother’s side PSG in the semifinal. Both defeat their rivals and progress to the Champions League Final.
+
+Kim and the USA team reach the final of the 2019 FIFA Woman’s World Cup where they face up against their national rivals, Canada, led by Melanie Trembley. If USA win the final, Kim celebrates and is later implied to have signed a professional deal with a club. If the team loses the final Kim returns to college to finish her studies, but still hopes to go pro one day. In the 2019 Champions League Final at the Wanda Metropolitano in Madrid, Real Madrid face Danny’s (Alex’s former) Premier League side. Regardless of who wins the final, the losing character takes their defeat graciously as the other celebrates being crowned the best club team in Europe.[23] Both Danny and Alex reconcile after the final, along with Li-Li and Toro (who was apologized earlier; if Alex was hostile, Toro leaves the pitch). The game ends with Jim telling Alex that he has never been prouder of him and that when he retires, he will be the greatest Hunter of all time, drawing Alex Hunter’s journey to an end. The ending of Danny Williams story mode has either him congratulating Terry or being confronted for his loss.', '/uploads/a7b43a407fb546a2a335826ef81f75cc.webp', '', 'https://vikingfile.com/d/HFBK64ZYTg/FIFA19.ER-GameDrive.Org.rar', 'https://youtu.be/lrr3BnsU1Qs?si=whC0dV9NraE0EI8X', '/uploads/6b45ace52f4441758803657396668351.webp
+/uploads/7110c5b6a73e4b32b02a8c36b39dc287.webp
+/uploads/e016655048ba4d3eaaddcc97fd312111.jpg
+/uploads/17af37d340664c818be34f05c77ccc95.jpg
+/uploads/13f8a0e25f2740f5bab5b7ce5e1ca317.jpg', 'Windows 10 64-bit', 'Intel Core i5-2500K', '8 GB RAM', 'GTX 670 / HD 7970', '50 GB', '', '#0ea5e9', 0, 'game', '', '', '', '2026-07-01 01:43:24', '', '', '', '', '', '', '', '') ON CONFLICT (id) DO NOTHING;
+INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (134, 'Bloodborne + ShadPS4 v0.3.0 + Mods', 'Action, RPG', 4.5, 0, 'An action RPG in which the player embodies a Hunter who, after being transfused with the mysterious blood local to the city of Yharnam, sets off into a “night of the Hunt”, an extended night in which Hunters may phase in and out of dream and reality in order to thin the outbreak of abominable beasts that plague the land and, for the more resilient and insightful Hunters, uncover the answers to the Hunt’s many mysteries.', '/uploads/7fd60d44edaa47cf8136150db512feb2.jpg', '', 'https://download2392.mediafire.com/waojx0otif6gFfeGhCIAzz8o9G8aS727z-IJak1QiYiMXW7l56zGVtScsnyLyyAqgNS4-A2TCDmxF19wklWxO34pHZizhnRxGnxLe3M3Nm8WMol2poHfSEt22F3s1ugaoti8IEbflNy0W0r6AIPSyQWV2_S4TOrB55qu011RBtJJ/cao63a94wtunf0b/BL.DR-GameDrive.Org.part1.rar
+https://download2392.mediafire.com/ier18nqfgfcgDZSq7iuzKrTcgFolV7wu1lNC5txCZe1nuIJxfQH1Q5oJRXh-owWS4Lu3OwQSPp1GXBU-aU916BGs21EU9n80RCOGDVciCVsuZJWaMY0Ri0wvJY4Oe-S1ju9LLZ6X8kzLMxCsZMMPveKgzFQSeteoDqP4Y8-7L5bU/9bwtb56lhv2xu9r/BL.DR-GameDrive.Org.part2.rar
+https://download2392.mediafire.com/kku19ww0rgyg82-lV1mN5EhdtLDxHUnegjubq9DEl6eI-UfQoPFLgDgxgG5945nqUDCZFrH3qHtir_oAoFyjstBsUl2jkaa1ku95eEfUElPLdQl-DlQe7XAdn9zGE0fhSQuz63bd2Tv7cBoGqsRdLlvvXu7LEuVONIHcri8rls4I/u3t84ligbu7bow3/BL.DR-GameDrive.Org.part3.rar
+https://download2392.mediafire.com/gc2stuj6glngqvD6cPsjVgPTAX6oWuUuF32t_5wkrfI4v9uaiqPRA7DLSEMg-tiXAF2Z-ajAbcnkl0PmarlTmqH8bAaRwDK1iCgWG-nSmNupMCJJs_bpxjoM3hU6jvwEU5zIMAJ7yrLypK0A3uqWJx8CmhDc8IlQsSbaEcQ73l6R/x2wmu0r6n2evnn2/BL.DR-GameDrive.Org.part4.rar
+https://download2392.mediafire.com/ogow9dot3oegYhHl6KplNzLxg6oaFbHLI4c4vA0qIqTeFLPncCj9pJs6BPPRNqi7TMJLyE1QaKSNnZVbBu-zLHVxcYgStopUxBn_sDxHhu-bq-TNnbUOa3nv8pK9DTi7PYIFgN6iLcJZJMqGuyq8Ihz3Hbko4_dQ_Cqb8Vc-fYVl/d95wtzxvxkhndak/BL.DR-GameDrive.Org.part5.rar
+https://download2392.mediafire.com/fkvy0bvfzrjgJVr3CwR6Za_C2CStnW_TzYy85IoTMH1JovZ4k1N-mglN72WH_HplsPPvKAL0-_9hXCUANvZcOSmlmTynj9hh1Dj8uV1Tyx5GsFtnKsF6bVxR5tZwfmVIgm7jSJSMjyq8ON6JMQ_wYgrh880_xlK06LzKcXAky9fP/wseg1l05tl8fw7z/BL.DR-GameDrive.Org.part6.rar
+https://download2392.mediafire.com/sb0kjnclbw1gxsk6OkLBz7Gw8UfTqCGaYdYP1MKlspIOEnaPfnoAECDjA9dLL7UT1aZVkXbBRnWKV24PzovQ2b5PUJdOiVhSQiGQUhUOJaMCINJqqaB_Qou4ZfOE8mwQYKvMbc4jTvxXw4STFs_sGmNDc035TJrhRAekcmaHPwMj/dyyczwm764g70bf/BL.DR-GameDrive.Org.part7.rar', 'https://youtu.be/G203e1HhixY?si=ddemK5FUGArw22Rn', '/uploads/1702148260e043e2a62f7441b74b1eb9.jpg
+/uploads/3611203057dc4dbcbe102691dae58e26.webp
+/uploads/84d3f341a4fd4f3b9acff88c4276b66f.jpg
+/uploads/b7a117a242c44119a072adc22812182b.jpg', 'Windows 10 64-bit', 'Intel Core i7-8700K', '16 GB RAM', 'RTX 2060 / RX 5700 XT', '50 GB SSD', '', '#27272a', 0, 'game', '', '', '', '2026-07-01 01:46:29', 'Repack Features
+Based on : Bloodborne + ShadPS4 v0.3.0 + Mods
+Repack Size : 25 GB
+Final Size : 29.7 GB
+Lossless repack : Nothing removed OR re-encoded
+Install Time : 2 – 5 Mins
+Greetings : Razor12911, KaOsKrew
+Repack By DODI', '', '', '', '', '', '', '') ON CONFLICT (id) DO NOTHING;
+INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (135, 'Grand Theft Auto San Andreas Retextured', 'Action, RPG, Open World', 4.5, 0, 'About
+Download Grand Theft Auto San Andreas Retextured for PC – enhanced with GTA IV Graphics & Retextured Mod, HQ roads, HD 4K loading screens, improved vehicles, DirectX 2.0 graphics, and upgraded textures for a modern San Andreas experience.
+Repack Features
+Based on a pre-modded release by GAMETEST
+Mods included
+– GTA San Andreas IV Graphics + IV Retextured Mod
+– Real HQ Roads (+new textures & fixes)
+– Jefferson – Retextured
+– HD_Loadscreens_4K
+– Insane Vehicles Pack by Eddie
+– SA_DIRECTX 2.0 – SINGLE PLAYER FOR GTA SAN ANDREAS
+– Improved Vehicule Features 2.1.1
+Credits : DK22Pac, Hysen, SekiroSF, Urvanfromeecrew, Junior_Djjr, Firefly, Waqar Ahmed Khan
+MENU MOD by UNRATED69
+Language : English , Spanish
+language can be changed in the game settings
+Repack Size : 3.8 GB
+Final Size : 9 GB
+Lossless repack , Nothing removed OR re-encoded
+Install Time : 3 – 5 mins
+– To play the game Run as administrator ‘RUN ADMIN FOR ENB 0.313.bat‘ and wait to load the game
+Repack By DODI', '/uploads/634e79b27e5644719e63b0b5e2f22617.webp', '', 'https://ffdl.cybar.to/8q4i1mclsmxl', 'https://youtu.be/Qo_Ve8nOud8?si=bhjaWmD9ofKXxWru', '', 'Windows 10 64-bit', 'Intel Core i5-2500K', '8 GB RAM', 'GTX 660 / HD 7870', '30 GB', '', '#27272a', 0, 'game', '', '', '', '2026-07-01 01:48:27', '', '', '', '', '', '', '', '') ON CONFLICT (id) DO NOTHING;
+INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (136, 'GTA 5', 'Action, RPG, Open World', 4.5, 0, 'Grand Theft Auto V for PC offers players the option to explore the award-winning world of Los Santos and Blaine County in resolutions of up to 4k and beyond, as well as the chance to experience the game running at 60 frames per second.', '/uploads/0e63bddec46949978c0345df6b31ec69.webp', '', 'https://vikingfile.com/d/fOrtyEUpsi/GTA5.FR-GameDrive.Org.part1.rar
+https://vikingfile.com/d/2IKZ2RiFQT/GTA5.FR-GameDrive.Org.part2.rar
+https://vikingfile.com/d/AdD2bSeNrU/fg-optional-bonus-content.bin', 'https://youtu.be/hvoD7ehZPcM?si=y0JRR1PYDCmGkRGQ', '/uploads/cbf92c3f498d4c339adcbf1968f34b12.jpg
+/uploads/912db3c5a4a54427a6ad74e7278a3346.webp', 'Windows 10 64-bit', 'Intel Core i5-3570K', '8 GB RAM', 'GTX 780 / R9 280X', '72 GB', '', '#84cc16', 0, 'game', '', '', '', '2026-07-01 01:53:15', 'Repack Features
+Based on Steam BuildID 21197051 version: 118.8 GB, thanks to thanks to AR-81!
+Mr.Goldberg SCE emu applied over
+Bonus Content (Brady Guide, Soundtrack/Radio Stations, Satellite Map, Wallpapers & 3 Bonus OSTs (3.2 GB) added, thanks to dremor8484 & ElAmigos!
+Game version is v1.0.3725.0/1.72 Online (NO, multiplayer IS NOT available, it’s just a build number!)
+100% Lossless & MD5 Perfect: all files are identical to originals after installation
+NOTHING ripped, NOTHING re-encoded – ALL MULTIPLAYER & DLC FILES are totally intact, repack is safe for modding
+Selective Download feature: you may skip downloading and installing of Bonus Content
+Significantly smaller archive size (compressed from cumulative 122.2 to 51.2/53.7 GB, depending on selected components)
+Installation takes from ~35 minutes (on 24-threads CPU + SSD) up to 1.5 hours on 8-threads CPU + HDD, depending on selected components
+After-install integrity check so you could make sure that everything installed properly
+HDD space after installation: up to 122.2 GB (up to 134.3 GB during installation)
+Use REG-files in “_Language Switcher” folder to change the game GUI language
+Repack uses XTool library by Razor12911
+At least 6 GB of free RAM (inc. virtual) required for installing this repack
+ALWAYS run the game from desktop icon and with admin rights or from “PlayGTAV.bat” from the game root', '', '', '', '', '', '', '') ON CONFLICT (id) DO NOTHING;
+INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (137, 'Dying Light The Beast', 'Action, Adventure, Horror', 4.5, 0, 'Download Dying Light: The Beast Restored Land (PC) – Full Game. Unleash your primal instincts in this high-stakes survival horror expansion. As Kyle Crane, you must navigate a vast and treacherous wilderness, confront a lethal evolution of the infected, and master the terrifying beastly powers surging within you to survive the ultimate night.', '/uploads/5ef61c25dc9c49539477a10d8440a23f.webp', '', 'https://ffdl.cybar.to/5fswfkdx8osq', 'https://youtu.be/qsqBCs7o5go?si=kW_AD-T232Tpjfil', '/uploads/ce303c5ea4cf47fcbe9d62fa6cf2085a.webp
+/uploads/332d100676204877806e9d840f981bd4.webp
+/uploads/7b57e8414e0f4175b53a49ccde6e5510.webp
+/uploads/3236fe6b686e4d1ab56f087f20e5d990.webp', 'Windows 10 64-bit', 'Intel Core i7-8700K', '16 GB RAM', 'GTX 1070 / RX 5700', '50 GB', '', '#f59e0b', 0, 'game', '', '', '', '2026-07-01 01:56:21', 'game is already cracked after installation (crack by MrGoldberg). Updated to version 1.6.0 (26.03.2026).
+DLC: Restored Land Definitive Upgrade, Discharge Weapon Pack, Fire Lotus Weapon Pack, Hunter Essentials, Action Hero Essentials, Hero of Harran Bundle, Castor Woods Prepper Bundle, Soundtrack, Castor Woods Tourist Map, Deluxe Upgrade.
+
+Upload size / to download: 44271MB
+ISO image size: 44271MB
+Number of compressions: only one
+Data recovery: none
+Languages: English, French, Italian, German, Spanish, Spanish (Mexico), Polish, Czech, Portuguese, Arabic, Turkish, Korean, Traditional Chinese
+Dubbing/Audio: English, French, German, Spanish, Polish', '', '', '', '', '', '', '') ON CONFLICT (id) DO NOTHING;
+INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (138, 'WWE 2K26 [Hypervisor]', 'Hypervisor, Sports', 4.5, 0, 'Download WWE 2K26 (PC) – free full game. Dominate the ring with the complete ElAmigos repack featuring CM Punk’s 2K Showcase and a massive roster of 400+ Superstars. Use the direct download to experience the 2026 definitive edition with new match types like Inferno and Bloodline Rules, updated Universe Mode drafts, and the Joe Hendry expansion pack.', '/uploads/9dc805995531468c96d96c096b663ff3.webp', '', 'https://vikingfile.com/d/Kr2QLi0kpG/6t3rtg45tty.ER-GameDrive.Org.part1.rar
+https://vikingfile.com/d/imQ66hLFG5/6t3rtg45tty.ER-GameDrive.Org.part2.rar
+https://vikingfile.com/d/3DBkSceItM/6t3rtg45tty.ER-GameDrive.Org.part3.rar', 'https://youtu.be/89e7yn7h1NU?si=-_4Z20jWPMQqHb15', '/uploads/99bcc3ddc10447daae39ed88001e4728.webp
+/uploads/55554a0dffb74f56bd652d2137efec97.jpg
+/uploads/551fc75198cc47cb80cb0678740dbd95.png
+/uploads/8f8b3ec1fb7d43c48c9aef7143d7e5cd.webp', 'Windows 10 64-bit', 'Intel Core i7-7700K', '16 GB RAM', 'GTX 1070 / RX 5700', '60 GB', '', '#ef4444', 0, 'game', '', '', '', '2026-07-01 01:58:55', 'Updated to version 1.06 (23.03.2026); 9 DLC are included.
+
+Upload size / to download: 111547MB
+ISO image size: 111547MB
+Number of compressions: only one
+Data recovery: none
+Languages: English, French, Italian, German, Spanish, Arabic
+Dubbing/Audio: English', '', '', '', '', '', '', '') ON CONFLICT (id) DO NOTHING;
+INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (139, 'The Witcher 3 Wild Hunt', 'Action, RPG, Adventure, Horror', 4.5, 0, 'The Witcher 3: Wild Hunt is an action role-playing game with a third-person perspective. Players control Geralt of Rivia, a monster slayer known as a Witcher. Geralt walks, runs, rolls and dodges, and (for the first time in the series) jumps, climbs and swims.', '/uploads/186fca60aef74a78b35266b23f858369.webp', '', 'https://vikingfile.com/d/04vuREppKX/ter54k.ER-GameDrive.Org.rar', 'https://youtu.be/XHrskkHf958?si=e7PZvxscthcSj_dC', '/uploads/637176326ce44cd58f6e0798482a1ee2.webp
+/uploads/7a4f942107fc45a09ce1cc6a88a6b00e.jpg
+/uploads/7eb1708674934adf9b5e0085bc85a52f.webp
+/uploads/92b1c7bafb91499eb86707196c9b90d8.webp
+/uploads/48a9bc6566884990be00cf3209a02ef2.jpg
+/uploads/fed0e3672a52499ebc07c5edc6a9da66.webp', 'Windows 10 64-bit', 'Intel Core i7-3770K', '8 GB RAM', 'GTX 770 / R9 290', '35 GB', '', '#991b1b', 0, 'game', '', '', '', '2026-07-01 02:00:50', 'Repack Features
+game is already cracked after installation (crack by Codex or FLT). Updated to version 4.04 (19.07.2023).
+
+DLC: Blood and Wine, Hearts of Stone, NEW GAME +, New Finisher Animations, Alternative Look for Ciri, New Quest – Where the Cat and Wolf Play…, Skellige Armor Set, New Quest – Contract: Skellige’s Most Wanted, Alternative Look for Triss, New Quest – Scavenger Hunt: Wolf School Gear, New Quest – Fool’s Gold, Ballad Heroes – Neutral Gwent Card Set, Elite Crossbow Set, Nilfgaardian Armor Set, New Contract – Missing Miners, Alternative Look for Yennefer, Temerian Armor Set, Beard and Hairstyle Set, Soundtracks (mp3), Artworks.
+Upload size / to download: 45519MB
+ISO image size: 45519MB
+ISO image size with only English audio language: 34369MB (33.56GB)
+Number of compressions: only one
+Data recovery: none
+Languages: English, French, Italian, German, Spanish, Spanish (Mexico), Polish, Czech, Russian, Hungarian, Portuguese-Brazil, Arabic, Turkish, Japanese, Korean, Simplified Chinese, Traditional Chinese
+Dubbing/Audio: English, French, German, Polish', '', '', '', '', '', '', '') ON CONFLICT (id) DO NOTHING;
+INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (140, 'Directive 8020 Deluxe Edition (2026)', 'Action, Horror', 4.5, 0, 'Directive 8020 (Elamigos Repack) – Full Game. Architect a high-stakes exobiological offensive in this visceral cinematic horror odyssey where professional-grade survival engineering meets the unfiltered lethality of deep-space colonization. Master the lethal logistics of interstellar transit 12 light years from Earth to dominate a high-intensity theater of planetary wreckage, orchestrating surgical salvage maneuvers after the “Cassiopeia” crash lands on the definitive surface of Tau Ceti f. Navigate the biological hazards of an extraterrestrial frontier by utilizing professional-grade stealth protocols and optimized crew management, ensuring your tactical decisions remain definitive as you realize humanity is far from alone in this “sliver of hope.” In this relentless pursuit of species preservation, your ability to execute flawless evasive sequences and manage the psychological weight of a dying home-world determines if you become the supreme architect of the colony’s survival or remain a permanent casualty of the varied forms of death in the void.', '/uploads/7d433ca94f48461f9d159d05ff969b17.webp', '', 'https://vikingfile.com/d/VkXv095xvB/ter54k.ER-GameDrive.Org.rar', 'https://youtu.be/_dH-hFL9zLY?si=L8zXLK0huS9jbqAM', '/uploads/4b78451f2b4645b29f6e45acb4f1b0d2.webp
+/uploads/1f9d4e67d20e425e9b8c58cb76a59ce7.webp
+/uploads/e9fd1c596c0b4e309894dfc671de1a81.webp
+/uploads/5e866ced68934ba49d5fbc5a06933b25.webp', 'Windows 10 64-bit', 'Intel Core i7-9700K', '16 GB RAM', 'RTX 2060 / RX 5700 XT', '60 GB SSD', '', '#0891b2', 0, 'game', '', '', '', '2026-07-01 02:02:44', 'Repack Features
+game is already cracked after installation (crack by Codex/Rune). Updated till 12.05.2026; included DLC: Digital Deluxe Upgrade.
+
+Upload size / to download: 27588MB
+ISO image size: 27588MB
+Number of compressions: only one
+Data recovery: none
+Languages: English, French, Italian, German, Spanish, Spanish (Mexico), Polish, Russian, Portuguese-Brazil, Japanese, Korean, Simplified Chinese, Traditional Chinese
+Dubbing/Audio: English, French, Italian, German, Spanish
+Directive 8020', '', '', '', '', '', '', '') ON CONFLICT (id) DO NOTHING;
+INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (141, 'Clair Obscur Expedition 33 Deluxe Edition', 'RPG', 4.5, 0, 'Lead the members of Expedition 33 on their quest to destroy the Paintress so that she can never paint death again. Explore a world of wonders inspired by Belle Époque France and battle unique enemies in this turn-based RPG with real-time mechanics.
+
+Download Clair Obscur: Expedition 33 PC Game. Here is a direct link to download Clair Obscur Expedition 33 latest version for free. Clair Obscur – Expedition 33 is developed by Sandfall Interactive and published by Kepler Interactive. It was released on 24 Apr, 2025 for Windows PC and is considered one of the best in the Action, and RPG genre.', '/uploads/f978242f618549b79e4053fbd55f7e6d.webp', '', 'https://vikingfile.com/d/XEgqgdOwm8/1903340.ER-GameDrive.Org.rar', 'https://youtu.be/2VaLOc1FpSo?si=vH2KUf0l0IBlI5uM', '/uploads/25dafd81967e45a88e5d1ee865a8243f.jpg
+/uploads/28149972b9d24123aae879fbf9432b27.webp
+/uploads/68830080f2ce485391ca68ae7a35d7e2.webp
+/uploads/70bdf50ccd1f4657893c6dfba73fbf3a.webp', 'Windows 11 64-bit', 'Intel Core i7-10700K', '16 GB RAM', 'RTX 2060 / RX 5700 XT', '80 GB SSD', '', '#3b82f6', 0, 'game', '', '', '', '2026-07-01 02:05:35', 'epack Features
+game is already cracked after installation (crack by Codex/Rune). Updated to version 61339 (12.12.2025); included DLC: Deluxe Edition Upgrade.
+
+Upload size / to download: 41432MB
+ISO image size: 41432MB
+Number of compressions: only one
+Data recovery: none
+Languages: English, French, Italian, German, Spanish, Polish, Portuguese-Brazil, Russian, Japanese, Korean, Simplified Chinese, Traditional Chinese
+Dubbing/Audio: English, French', '', '', '', '', '', '', '') ON CONFLICT (id) DO NOTHING;
+INSERT INTO games (id, title, genre, rating, downloads, description, wallpaper_url, download_url, download_links, trailer_url, screenshots, os, processor, memory, graphics, storage, install_guide, color, is_new, type, developer, version, license_type, created_at, repack_features, download_manager_name, download_manager_url, usage_guide, troubleshooting, hypervisor_video_url, install_guide_text, install_video_url) VALUES (142, 'Call of Duty Vanguard', 'Action', 4.5, 0, 'Call of Duty®: Vanguard includes a deeply engaging single player Campaign, a massive Multiplayer offering featuring over 20 maps including 16 built for core Multiplayer and an exciting new Zombies experience developed by Treyarch.', '/uploads/582b881cd31b40b9b51a45f653514d0b.webp', '', 'https://vikingfile.com/d/gskFXkw6uV/AWZI1.DR-GameDrive.Org.part1.rar
+https://vikingfile.com/d/JsEY3m8pqD/AWZI1.DR-GameDrive.Org.part2.rar', 'https://youtu.be/OQ1CwPhE8KQ?si=ADgeXKx-FX4qIFC_', '/uploads/b9b911e18ed945668c73d4e10054899d.jpg
+/uploads/1626326cf49a4b9fa9b4707ebd5c16cd.jpg
+/uploads/c8a7a3ea2d904ba0a76f4b4516e20d08.webp
+/uploads/c98751c4175f418d804b162c36881835.jpg', 'Windows 10 64-bit', 'Intel Core i7-4770K', '16 GB RAM', 'GTX 1060 6GB / RX 580', '80 GB', '', '#f59e0b', 0, 'game', '', '', '', '2026-07-01 02:07:21', 'Repack Features
+Based on : Call of Duty: Vanguard (Campaign + Zombies) thanks to h00dbyair & Ksenia
+Game Version : v1.26 + CrackFix v2
+Language : English, French, German, Italian, Spanish – Spain, Arabic, Portuguese – Brazil, Polish, Russian, Spanish – Latin America, Korean, Japanese, Traditional Chinese
+– Language can be changed in in config.ini file
+Repack Size : 63.2 GB
+Final Size : 81 GB
+Lossless repack : Nothing removed OR re-encoded
+Install Time : 7 – 25 mins
+Greetings : Razor12911, KaOsKrew
+Repack By DODI
+PLZ SEED , DONT HIT & RUN', '', '', '', '', '', '', '') ON CONFLICT (id) DO NOTHING;
 
 -- Export Movies
 INSERT INTO movies (id, title, genre, year, duration, rating, downloads, description, poster_url, backdrop_url, trailer_url, video_url, download_links, screenshots, director, cast_name, series_name, season, episode, color, type, created_at) VALUES (9, 'Michael 2026', 'Drama, Musical, History, Documentary', 2026, '2hrs 7mins', 4.5, 0, 'The early life of musician Michael Jackson, from the discovery of his talent as the lead of the Jackson Five to the artist whose creative ambition fueled a pursuit to become the biggest ente..', '/uploads/301ac68c78664438b1cac176d4ca161b.png', '', 'https://youtu.be/3zOLzsbOleM?si=mN73n6U6ttOhy4os', '', 'https://file-eu-par-2.gofile.io/download/web/6cccaade-d29a-4207-a788-1be24b4a0a8f/Michael.2026.1080p.WEBRip.x264.AAC5.1-YIFY.rar', '', '', 'Stars: Jaafar Jackson, Nia Long, Colman Domingo', '', 0, 0, '#f59e0b', 'movie', '2026-06-17 18:48:29') ON CONFLICT (id) DO NOTHING;
@@ -3185,6 +3418,34 @@ INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, 
 INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (308, NULL, 'Guest', 'viewed', 'game', 'Internet Download Manager (IDM) 6.42.64', 37, '2026-06-29 18:05:19') ON CONFLICT (id) DO NOTHING;
 INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (309, NULL, 'Guest', 'viewed', 'game', 'CapCut v5.7.0 PC (Pre-Activated)', 76, '2026-06-29 18:05:29') ON CONFLICT (id) DO NOTHING;
 INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (310, NULL, 'Guest', 'viewed', 'game', 'CapCut v5.7.0 PC (Pre-Activated)', 76, '2026-06-29 18:05:29') ON CONFLICT (id) DO NOTHING;
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (311, NULL, 'Guest', 'viewed', 'game', 'HITMAN 3 Free', 105, '2026-06-30 12:31:48') ON CONFLICT (id) DO NOTHING;
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (312, NULL, 'Guest', 'viewed', 'game', 'HITMAN 3 Free', 105, '2026-06-30 12:31:48') ON CONFLICT (id) DO NOTHING;
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (313, NULL, 'Guest', 'viewed', 'game', 'Far Cry 6 Ultimate Edition Free', 92, '2026-06-30 12:32:09') ON CONFLICT (id) DO NOTHING;
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (314, NULL, 'Guest', 'viewed', 'game', 'Far Cry 6 Ultimate Edition Free', 92, '2026-06-30 12:32:09') ON CONFLICT (id) DO NOTHING;
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (315, NULL, 'Guest', 'viewed', 'game', 'Red Dead Redemption', 102, '2026-06-30 12:34:54') ON CONFLICT (id) DO NOTHING;
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (316, NULL, 'Guest', 'viewed', 'game', 'Red Dead Redemption', 102, '2026-06-30 12:34:54') ON CONFLICT (id) DO NOTHING;
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (317, NULL, 'Guest', 'viewed', 'movie', 'Saccharine 2026', 11, '2026-06-30 12:42:43') ON CONFLICT (id) DO NOTHING;
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (318, NULL, 'Guest', 'viewed', 'movie', 'Saccharine 2026', 11, '2026-06-30 12:42:43') ON CONFLICT (id) DO NOTHING;
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (319, NULL, 'Guest', 'viewed', 'movie', 'Citizen Vigilante 2026', 14, '2026-06-30 12:43:20') ON CONFLICT (id) DO NOTHING;
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (320, NULL, 'Guest', 'viewed', 'movie', 'Citizen Vigilante 2026', 14, '2026-06-30 12:43:20') ON CONFLICT (id) DO NOTHING;
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (321, NULL, 'Guest', 'viewed', 'movie', 'Saccharine 2026', 11, '2026-06-30 12:46:57') ON CONFLICT (id) DO NOTHING;
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (322, NULL, 'Guest', 'viewed', 'movie', 'Saccharine 2026', 11, '2026-06-30 12:46:57') ON CONFLICT (id) DO NOTHING;
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (323, NULL, 'Guest', 'viewed', 'game', 'CapCut v5.7.0 PC (Pre-Activated)', 76, '2026-06-30 13:06:54') ON CONFLICT (id) DO NOTHING;
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (324, NULL, 'Guest', 'viewed', 'game', 'CapCut v5.7.0 PC (Pre-Activated)', 76, '2026-06-30 13:06:54') ON CONFLICT (id) DO NOTHING;
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (325, NULL, 'Guest', 'viewed', 'game', 'FIFA 22 (2021) ALL DLC', 129, '2026-06-30 22:45:46') ON CONFLICT (id) DO NOTHING;
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (326, NULL, 'Guest', 'viewed', 'game', 'FIFA 22 (2021) ALL DLC', 129, '2026-06-30 22:45:46') ON CONFLICT (id) DO NOTHING;
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (327, NULL, 'Guest', 'viewed', 'game', 'FIFA 22 (2021) ALL DLC', 129, '2026-06-30 22:46:04') ON CONFLICT (id) DO NOTHING;
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (328, NULL, 'Guest', 'viewed', 'game', 'Grand Theft Auto V Enhanced', 56, '2026-06-30 23:13:02') ON CONFLICT (id) DO NOTHING;
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (329, NULL, 'Guest', 'viewed', 'game', 'Grand Theft Auto V Enhanced', 56, '2026-06-30 23:13:02') ON CONFLICT (id) DO NOTHING;
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (330, NULL, 'Guest', 'viewed', 'game', 'Grand Theft Auto V Enhanced', 56, '2026-06-30 23:13:23') ON CONFLICT (id) DO NOTHING;
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (331, NULL, 'Guest', 'viewed', 'game', 'Days Gone Remastered', 130, '2026-06-30 23:15:16') ON CONFLICT (id) DO NOTHING;
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (332, NULL, 'Guest', 'viewed', 'game', 'Days Gone Remastered', 130, '2026-06-30 23:15:16') ON CONFLICT (id) DO NOTHING;
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (333, NULL, 'Guest', 'viewed', 'game', 'Far Cry New Dawn (2019) ALL DLC +  HD Textures Pack [Hypervisor', 52, '2026-07-01 00:10:36') ON CONFLICT (id) DO NOTHING;
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (334, NULL, 'Guest', 'viewed', 'game', 'Far Cry New Dawn (2019) ALL DLC +  HD Textures Pack [Hypervisor', 52, '2026-07-01 00:10:36') ON CONFLICT (id) DO NOTHING;
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (335, NULL, 'Guest', 'viewed', 'game', 'Far Cry New Dawn (2019) ALL DLC +  HD Textures Pack [Hypervisor', 52, '2026-07-01 00:21:55') ON CONFLICT (id) DO NOTHING;
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (336, NULL, 'Guest', 'viewed', 'game', 'Far Cry New Dawn (2019) ALL DLC +  HD Textures Pack [Hypervisor', 52, '2026-07-01 00:21:55') ON CONFLICT (id) DO NOTHING;
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (337, NULL, 'Guest', 'viewed', 'game', 'HYPERVISOR  EA SPORTS FC 26', 17, '2026-07-01 00:22:32') ON CONFLICT (id) DO NOTHING;
+INSERT INTO activity_log (id, user_id, user_name, action, item_type, item_name, item_id, created_at) VALUES (338, NULL, 'Guest', 'viewed', 'game', 'HYPERVISOR  EA SPORTS FC 26', 17, '2026-07-01 00:22:32') ON CONFLICT (id) DO NOTHING;
 
 -- Export User Badges
 
@@ -3216,5 +3477,6 @@ INSERT INTO category_banners (genre, banner_url, updated_at) VALUES ('admin-user
 INSERT INTO category_banners (genre, banner_url, updated_at) VALUES ('GamesHero', '/uploads/fd57249cac2347a7a062cc92805dc079.png', '2026-06-22 15:39:51') ON CONFLICT (genre) DO NOTHING;
 
 -- Export Requests
+INSERT INTO requests (id, type, title, submitter_name, description, created_at) VALUES (1, 'game', 'solo leveling', 'dan', '', '2026-06-30 22:11:45') ON CONFLICT (id) DO NOTHING;
 
 COMMIT;
