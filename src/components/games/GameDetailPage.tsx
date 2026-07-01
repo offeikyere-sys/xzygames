@@ -480,13 +480,25 @@ export function GameDetailPage({ game, onBack, onGameClick, userToken, isAdmin }
               </h2>
               <button
                 onClick={() => {
-                  window.open("https://download2338.mediafire.com/sp7tyl0ibergPA7V8Fkj82eQXKgjHt9N-LdzjW0YSuXPSSHJmG0xnOZ046DGCL6LnIMT65WivTxqWlxNwUBQqhj6giiq9VHa0LefMLcWJKvtxC43u4uMotWM3BG-WhBMvjYsvrof9WfXWb6ZnSPVDaEsd20G3-dFDRQctFOAG422t-4/hpz3rrch6lcd1qp/Internet+Download+Manager+6.42+Build+64.rar", "_blank")
+                  window.open("https://dl.yasdl.com/2025/Software/IDM.6.42.Build.58.Retail.Final_YasDL.com.rar?qpi", "_blank")
                 }}
                 className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-green-600/20 border border-green-500/30 text-green-400 hover:bg-green-600/30 hover:text-green-300 transition-all text-sm font-medium"
               >
                 <Download size={16} />
-                Internet Download Manager (IDM) 6.42.64
+                Internet Download Manager (IDM) 6.42 Build 58
               </button>
+              <div className="mt-3 p-3 rounded-xl bg-yellow-500/10 border border-yellow-500/20">
+                <p className="text-xs text-yellow-400 font-medium mb-1">Extraction Password:</p>
+                <div className="flex items-center gap-2">
+                  <code className="text-sm text-yellow-300 font-mono bg-yellow-500/10 px-2 py-1 rounded-lg select-all">www.yasdl.com</code>
+                  <button
+                    onClick={() => navigator.clipboard.writeText("www.yasdl.com")}
+                    className="text-[10px] text-yellow-400 hover:text-yellow-300 underline transition-colors shrink-0"
+                  >
+                    Copy
+                  </button>
+                </div>
+              </div>
               <p className="text-xs text-zinc-500 mt-2">Get the fastest download manager to accelerate your downloads.</p>
             </motion.div>
 
