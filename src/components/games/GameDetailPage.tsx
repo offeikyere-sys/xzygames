@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from "framer-motion"
 import { SplineScene } from "@/components/ui/splite"
 import {
   ArrowLeft, Download, Star, Monitor, Cpu, HardDrive, MemoryStick,
-  Shield, MessageSquare, Clock, Users, Share2, Heart, Link, Play, Trash2, Edit, ChevronDown, ChevronUp, Package, DownloadCloud
+  Shield, MessageSquare, Clock, Users, Share2, Heart, Link, Play, Trash2, Edit, ChevronDown, ChevronUp, Package, DownloadCloud, ExternalLink
 } from "lucide-react"
 import { StarRating } from "@/components/ui/StarRating"
 import { TrailerModal } from "@/components/ui/TrailerModal"
@@ -500,6 +500,52 @@ export function GameDetailPage({ game, onBack, onGameClick, userToken, isAdmin }
                 </div>
               </div>
               <p className="text-xs text-zinc-500 mt-2">Get the fastest download manager to accelerate your downloads.</p>
+            </motion.div>
+
+            {/* Recommended Prerequisites - DirectX & Visual C++ */}
+            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.518 }} className="bg-zinc-900/30 border border-zinc-800/30 rounded-2xl p-6">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-10 h-10 rounded-xl bg-orange-600/20 border border-orange-500/30 flex items-center justify-center">
+                  <Package size={18} className="text-orange-400" />
+                </div>
+                <div>
+                  <h2 className="text-lg font-semibold text-white">Recommended Prerequisites</h2>
+                  <p className="text-xs text-zinc-500">Essential runtimes for smooth gaming</p>
+                </div>
+              </div>
+              <div className="space-y-3">
+                <a
+                  href="https://pixeldrain.com/u/b8Ky1gpX"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-3 p-3 rounded-xl bg-zinc-800/40 border border-zinc-700/30 hover:bg-zinc-800/60 hover:border-orange-500/30 transition-all group"
+                >
+                  <div className="w-10 h-10 rounded-lg bg-blue-600/20 border border-blue-500/30 flex items-center justify-center shrink-0">
+                    <Download size={16} className="text-blue-400" />
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <p className="text-sm font-medium text-white group-hover:text-orange-300 transition-colors truncate">DirectX.zip</p>
+                    <p className="text-xs text-zinc-500">DirectX Runtime Libraries</p>
+                  </div>
+                  <ExternalLink size={14} className="text-zinc-600 group-hover:text-orange-400 transition-colors shrink-0" />
+                </a>
+                <a
+                  href="https://pixeldrain.com/u/iLFevEy8"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-3 p-3 rounded-xl bg-zinc-800/40 border border-zinc-700/30 hover:bg-zinc-800/60 hover:border-orange-500/30 transition-all group"
+                >
+                  <div className="w-10 h-10 rounded-lg bg-red-600/20 border border-red-500/30 flex items-center justify-center shrink-0">
+                    <Download size={16} className="text-red-400" />
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <p className="text-sm font-medium text-white group-hover:text-orange-300 transition-colors truncate">Visual-C-AIO(windowsxlite.com).zip</p>
+                    <p className="text-xs text-zinc-500">Visual C++ All-in-One Runtimes</p>
+                  </div>
+                  <ExternalLink size={14} className="text-zinc-600 group-hover:text-orange-400 transition-colors shrink-0" />
+                </a>
+              </div>
+              <p className="text-xs text-zinc-600 mt-3">Install these before running games to avoid missing DLL errors.</p>
             </motion.div>
 
             {/* Hypervisor Usage Guide (collapsible) */}

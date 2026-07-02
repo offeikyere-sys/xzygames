@@ -7,6 +7,7 @@ import {
 import { TrailerModal } from "@/components/ui/TrailerModal"
 import { ImageGallery } from "@/components/ui/ImageGallery"
 import { BlurImage } from "@/components/ui/BlurImage"
+import { EditOSModal } from "@/components/admin/EditOSModal"
 import { apiUrl, logActivity } from "@/lib/api"
 import { isVideoUrl } from "@/lib/media"
 
@@ -53,6 +54,8 @@ export function OSDetailPage({ os, onBack, userToken, isAdmin }: OSDetailPagePro
   const [galleryOpen, setGalleryOpen] = useState(false)
   const [galleryIndex, setGalleryIndex] = useState(0)
   const [buildInfo, setBuildInfo] = useState("")
+  const [editModalOpen, setEditModalOpen] = useState(false)
+  const [refreshKey, setRefreshKey] = useState(0)
 
   useEffect(() => {
     if (os.id) {
@@ -89,7 +92,7 @@ export function OSDetailPage({ os, onBack, userToken, isAdmin }: OSDetailPagePro
         })
         .catch(() => {})
     }
-  }, [os.id])
+  }, [os.id, refreshKey])
 
   const handleDelete = async () => {
     if (!os.id || !userToken) return
@@ -238,6 +241,13 @@ export function OSDetailPage({ os, onBack, userToken, isAdmin }: OSDetailPagePro
               </button>
               {isAdmin && (
                 <>
+                  <button
+                    onClick={() => setEditModalOpen(true)}
+                    className="p-3 rounded-xl border border-zinc-700/50 text-zinc-400 hover:text-cyan-400 hover:border-cyan-500/30 transition-all"
+                    title="Edit OS"
+                  >
+                    <Edit size={18} />
+                  </button>
                   <button
                     onClick={() => setDeleteConfirmOpen(true)}
                     className="p-3 rounded-xl border border-zinc-700/50 text-zinc-400 hover:text-red-400 hover:border-red-500/30 transition-all"
@@ -480,6 +490,30 @@ export function OSDetailPage({ os, onBack, userToken, isAdmin }: OSDetailPagePro
         onClose={() => setInstallVideoOpen(false)}
         title={`${os.title} - Install Guide`}
         videoUrl={installVideoUrl}
+      />
+
+      {/* Edit OS Modal */}
+      <EditOSModal
+        isOpen={editModalOpen}
+        onClose={() => setEditModalOpen(false)}
+        onOSEdited={() => setRefreshKey(k => k + 1)}
+        userToken={userToken || ""}
+        osData={{
+          id: os.id || 0,
+          title: os.title,
+          version: os.version,
+          genre: os.genre,
+          rating: os.rating,
+          description: (fullOSData as any)?.description || null,
+          wallpaper_url: (fullOSData as any)?.wallpaper_url || null,
+          download_links: (fullOSData as any)?.download_links || null,
+          trailer_url: (fullOSData as any)?.trailer_url || null,
+          screenshots: (fullOSData as any)?.screenshots || null,
+          color: os.color,
+          build_info: (fullOSData as any)?.build_info || null,
+          install_guide_text: (fullOSData as any)?.install_guide_text || null,
+          install_video_url: (fullOSData as any)?.install_video_url || null,
+        }}
       />
 
       {/* Delete Confirmation */}
