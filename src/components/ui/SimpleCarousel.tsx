@@ -13,6 +13,23 @@ export function SimpleCarousel({ items, cardWidth, onItemClick, renderCard }: Si
   const [currentIndex, setCurrentIndex] = useState(0)
   const carouselRef = useRef<HTMLDivElement>(null)
   const [containerWidth, setContainerWidth] = useState(0)
+export function SimpleCarousel({
+  items,
+  cardWidth = 300,
+  renderCard,
+  onItemClick,
+  className = "",
+}: SimpleCarouselProps) {
+  const [canScrollLeft, setCanScrollLeft] = useState(false)
+  const [canScrollRight, setCanScrollRight] = useState(true)
+  const scrollRef = useRef<HTMLDivElement>(null)
+
+  const checkScroll = () => {
+    if (!scrollRef.current) return
+    const { scrollLeft, scrollWidth, clientWidth } = scrollRef.current
+    setCanScrollLeft(scrollLeft > 0)
+    setCanScrollRight(scrollLeft + clientWidth < scrollWidth - 1)
+  }
 
   useEffect(() => {
     const measure = () => {
@@ -30,6 +47,7 @@ export function SimpleCarousel({ items, cardWidth, onItemClick, renderCard }: Si
   const gap = 12
   const visibleCount = Math.max(1, Math.floor((containerWidth || window.innerWidth) / (effectiveCardWidth + gap)))
   const maxIndex = Math.max(0, items.length - visibleCount)
+  }, [items])
 
   const scroll = (direction: "left" | "right") => {
     setCurrentIndex((prev) => {
@@ -39,6 +57,7 @@ export function SimpleCarousel({ items, cardWidth, onItemClick, renderCard }: Si
   }
 
   const translateX = currentIndex * (effectiveCardWidth + gap)
+  if (items.length === 0) return null
 
   return (
     <div className="relative">
@@ -59,6 +78,34 @@ export function SimpleCarousel({ items, cardWidth, onItemClick, renderCard }: Si
             </div>
           ))}
         </div>
+          <ChevronLeft size={24} />
+        </button>
+      )}
+
+      {/* Scrollable Container */}
+      <div
+        ref={scrollRef}
+        className="flex gap-5 overflow-x-auto scrollbar-hide py-4 px-2"
+        style={{
+          scrollSnapType: "x mandatory",
+          scrollbarWidth: "none",
+          msOverflowStyle: "none",
+        }}
+      >
+        {items.map((item, index) => (
+          <div
+            key={item.id || index}
+            style={{
+              width: cardWidth,
+              flexShrink: 0,
+              scrollSnapAlign: "start",
+            }}
+            onClick={() => onItemClick?.(item)}
+            className="cursor-pointer"
+          >
+            {renderCard(item, index)}
+          </div>
+        ))}
       </div>
 
       {maxIndex > 0 && (
